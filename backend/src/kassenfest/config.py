@@ -33,6 +33,9 @@ class Settings(BaseSettings):
     llm_timeout_s: float = 180.0
     llm_max_retries: int = 4
 
+    db_path: Path = REPO_ROOT / "var" / "kassenfest.db"
+    blob_dir: Path = REPO_ROOT / "var" / "blobs"
+
 
 @lru_cache
 def get_settings() -> Settings:
