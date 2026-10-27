@@ -8,6 +8,7 @@ Companion docs:
 - [02-RULES-CATALOG.md](02-RULES-CATALOG.md) — every billing rule the engine must encode, with sources, parameters, test cases
 - [03-DATA-AND-INPUTS.md](03-DATA-AND-INPUTS.md) — everything to gather, generate, decide, or get access to
 - [04-RESEARCH-NOTES.md](04-RESEARCH-NOTES.md) — Meta model facts, hackathon rules, problem evidence, competitors (with sources)
+- [05-EXECUTION-PLAN.md](05-EXECUTION-PLAN.md) — **hackathon execution plan: stack, scope tiers, day-by-day. Supersedes §2 (architecture) and §5 (schedule) below for the hackathon build.**
 
 ### Hard dates (Meta Global AI Developer Hackathon, Meta × Cerebral Valley — all ET, Meta may change them)
 

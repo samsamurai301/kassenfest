@@ -1,0 +1,21 @@
+# secrets
+.env
+
+# runtime data: blobs, model cache, call log, sqlite, smoke output
+var/
+
+# python
+__pycache__/
+.venv/
+.pytest_cache/
+.ruff_cache/
+
+# web (more in web/.gitignore)
+node_modules/
+
+# generated synthetic sets; the curated demo set is committed
+data/synthetic/*
+!data/synthetic/demo/
+
+# os
+.DS_Store
