@@ -88,6 +88,7 @@ class Action(BaseModel):
     title: str
     why: str = Field(description="One English sentence: what goes wrong if nobody acts")
     patient_id: str
+    patient_name: str
     claim_id: str | None
     finding_ids: list[str]
     due_date: dt.date
@@ -138,6 +139,7 @@ class MonthBoard(BaseModel):
 
 class ClaimDetail(BaseModel):
     claim: Claim
+    as_of: dt.date
     status: ClaimStatus
     at_risk_cents: int
     patient: Patient

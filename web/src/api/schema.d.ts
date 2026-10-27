@@ -145,6 +145,8 @@ export interface components {
             why: string;
             /** Patient Id */
             patient_id: string;
+            /** Patient Name */
+            patient_name: string;
             /** Claim Id */
             claim_id: string | null;
             /** Finding Ids */
@@ -294,6 +296,11 @@ export interface components {
         /** ClaimDetail */
         ClaimDetail: {
             claim: components["schemas"]["Claim"];
+            /**
+             * As Of
+             * Format: date
+             */
+            as_of: string;
             /**
              * Status
              * @enum {string}

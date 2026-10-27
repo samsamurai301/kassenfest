@@ -112,6 +112,7 @@ def claim_detail(claim_id: str) -> ClaimDetail:
     doc_ids |= {d.id for d in w.documents.values() if d.patient_id == claim.patient_id}
     return ClaimDetail(
         claim=claim,
+        as_of=fixtures.AS_OF,
         status=claim_status(findings),
         at_risk_cents=at_risk_cents(claim, findings),
         patient=w.patients[claim.patient_id],
