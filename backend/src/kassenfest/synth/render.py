@@ -49,6 +49,15 @@ _BOXES_JS = """
 }
 """
 
+# Fonts loaded, then two frames, so the screenshot never catches a half-rastered page.
+_SETTLE_JS = """
+async () => {
+  await document.fonts.ready;
+  await new Promise((r) => requestAnimationFrame(() => requestAnimationFrame(r)));
+  return true;
+}
+"""
+
 templates = Environment(
     loader=PackageLoader("kassenfest.synth", "templates"),
     autoescape=select_autoescape(["html", "j2"]),
@@ -105,7 +114,7 @@ class Renderer:
         )
         try:
             page.set_content(html, wait_until="load")
-            page.evaluate("document.fonts.ready.then(() => true)")
+            page.evaluate(_SETTLE_JS)
             png = page.screenshot(full_page=False)
             boxes = page.evaluate(_BOXES_JS)
         finally:
