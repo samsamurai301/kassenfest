@@ -1,0 +1,116 @@
+[
+ {
+  "family": "Arimo",
+  "role": "print",
+  "path": "arimo/Arimo[wght].ttf",
+  "license": "OFL"
+ },
+ {
+  "family": "Courier Prime",
+  "role": "mono",
+  "path": "courierprime/CourierPrime-Regular.ttf",
+  "license": "OFL"
+ },
+ {
+  "family": "Caveat",
+  "role": "hand_dev",
+  "path": "caveat/Caveat[wght].ttf",
+  "license": "OFL"
+ },
+ {
+  "family": "Kalam",
+  "role": "hand_dev",
+  "path": "kalam/Kalam-Regular.ttf",
+  "license": "OFL"
+ },
+ {
+  "family": "Patrick Hand",
+  "role": "hand_dev",
+  "path": "patrickhand/PatrickHand-Regular.ttf",
+  "license": "OFL"
+ },
+ {
+  "family": "Indie Flower",
+  "role": "hand_dev",
+  "path": "indieflower/IndieFlower-Regular.ttf",
+  "license": "OFL"
+ },
+ {
+  "family": "Gochi Hand",
+  "role": "hand_dev",
+  "path": "gochihand/GochiHand-Regular.ttf",
+  "license": "OFL"
+ },
+ {
+  "family": "Shadows Into Light",
+  "role": "hand_dev",
+  "path": "shadowsintolight/ShadowsIntoLight.ttf",
+  "license": "OFL"
+ },
+ {
+  "family": "Architects Daughter",
+  "role": "hand_dev",
+  "path": "architectsdaughter/ArchitectsDaughter-Regular.ttf",
+  "license": "OFL"
+ },
+ {
+  "family": "Reenie Beanie",
+  "role": "hand_test",
+  "path": "reeniebeanie/ReenieBeanie.ttf",
+  "license": "OFL"
+ },
+ {
+  "family": "Covered By Your Grace",
+  "role": "hand_test",
+  "path": "coveredbyyourgrace/CoveredByYourGrace.ttf",
+  "license": "OFL"
+ },
+ {
+  "family": "Just Another Hand",
+  "role": "hand_test",
+  "path": "justanotherhand/JustAnotherHand-Regular.ttf",
+  "license": "LICENSE"
+ },
+ {
+  "family": "Schoolbell",
+  "role": "hand_test",
+  "path": "schoolbell/Schoolbell-Regular.ttf",
+  "license": "LICENSE"
+ },
+ {
+  "family": "Sue Ellen Francisco",
+  "role": "hand_test",
+  "path": "sueellenfrancisco/SueEllenFrancisco-Regular.ttf",
+  "license": "OFL"
+ },
+ {
+  "family": "Nothing You Could Do",
+  "role": "hand_test",
+  "path": "nothingyoucoulddo/NothingYouCouldDo.ttf",
+  "license": "OFL"
+ },
+ {
+  "family": "Homemade Apple",
+  "role": "signature",
+  "path": "homemadeapple/HomemadeApple-Regular.ttf",
+  "license": "LICENSE"
+ },
+ {
+  "family": "Mr Dafoe",
+  "role": "signature",
+  "path": "mrdafoe/MrDafoe-Regular.ttf",
+  "license": "OFL"
+ },
+ {
+  "family": "Herr Von Muellerhoff",
+  "role": "signature",
+  "path": "herrvonmuellerhoff/HerrVonMuellerhoff-Regular.ttf",
+  "license": "OFL"
+ },
+ {
+  "family": "La Belle Aurore",
+  "role": "signature",
+  "path": "labelleaurore/LaBelleAurore.ttf",
+  "license": "OFL"
+ }
+]
