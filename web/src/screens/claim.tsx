@@ -246,7 +246,7 @@ function LinesTable({
         <table className="w-full text-[13.5px] tabular">
           <thead className="sticky top-0 z-10 bg-sheet text-left text-[12.5px] text-graphite shadow-[0_1px_0_var(--rule)]">
             <tr>
-              <th scope="col" className="w-6 py-2 pl-3">
+              <th scope="col" className="w-10 py-2 pl-3">
                 <span className="sr-only">Status</span>
               </th>
               <th scope="col" className="py-2 pr-2 font-semibold">
@@ -279,7 +279,7 @@ function LinesTable({
                     lit && 'bg-stamp-wash! shadow-[inset_3px_0_0_var(--stamp)]',
                   )}
                 >
-                  <td className="py-1.5 pl-3 align-top">
+                  <td className="py-1.5 pr-2 pl-3 align-top">
                     {severity && <SeverityMark severity={severity} />}
                   </td>
                   <td className="py-1.5 pr-2 align-top whitespace-nowrap">
