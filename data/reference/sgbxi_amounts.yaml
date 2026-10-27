@@ -1,0 +1,46 @@
+# Statutory SGB XI amounts (REF-03), docs/02 §1.1. Integer cents, per month unless noted.
+# Each version is a full snapshot; the engine picks the latest valid_from <= service date.
+# Drafts (not law) are only used when asked for by version id.
+versions:
+  - version: SGBXI-2025-01
+    valid_from: 2025-01-01
+    sources: ["§36, §37, §45a, §45b SGB XI (Anpassung 01.01.2025, +4.5 %)"]
+    sachleistung_36_cents: {1: 0, 2: 79600, 3: 149700, 4: 185900, 5: 229900}
+    pflegegeld_37_cents: {1: 0, 2: 34700, 3: 59900, 4: 80000, 5: 99000}
+    entlastungsbetrag_45b_cents: 13100
+    entlastung_carryover_until: "06-30"   # unused 45b amounts expire on 30 June of the next year
+    umwandlung_45a_max_share: "0.40"
+    gemeinsamer_jahresbetrag_cents: null  # §42a from 2025-07-01
+    pflegegeld_during_stay_weeks: 4
+  - version: SGBXI-2025-07
+    valid_from: 2025-07-01
+    sources: ["§42a SGB XI: Gemeinsamer Jahresbetrag from 2025-07-01"]
+    sachleistung_36_cents: {1: 0, 2: 79600, 3: 149700, 4: 185900, 5: 229900}
+    pflegegeld_37_cents: {1: 0, 2: 34700, 3: 59900, 4: 80000, 5: 99000}
+    entlastungsbetrag_45b_cents: 13100
+    entlastung_carryover_until: "06-30"
+    umwandlung_45a_max_share: "0.40"
+    gemeinsamer_jahresbetrag_cents: 353900
+    pflegegeld_during_stay_weeks: 4
+  - version: SGBXI-2026-01
+    valid_from: 2026-01-01
+    sources: ["BEEP 2026: no benefit increase; §34 Pflegegeld continues 8 weeks during stays"]
+    sachleistung_36_cents: {1: 0, 2: 79600, 3: 149700, 4: 185900, 5: 229900}
+    pflegegeld_37_cents: {1: 0, 2: 34700, 3: 59900, 4: 80000, 5: 99000}
+    entlastungsbetrag_45b_cents: 13100
+    entlastung_carryover_until: "06-30"
+    umwandlung_45a_max_share: "0.40"
+    gemeinsamer_jahresbetrag_cents: 353900
+    pflegegeld_during_stay_weeks: 8
+  - version: PNOG-2027-01-DRAFT
+    valid_from: 2027-01-01
+    draft: true
+    label: "Entwurf – nicht in Kraft (PNOG)"
+    sources: ["PNOG draft [L], docs/02 §1.1"]
+    sachleistung_36_cents: {1: 0, 2: 89000, 3: 159000, 4: 209000, 5: 253000}
+    pflegegeld_37_cents: {1: 0, 2: 34700, 3: 59900, 4: 80000, 5: 99000}
+    entlastungsbetrag_45b_cents: 17500   # Sozialraumbudget, no PG1, no carry-over
+    entlastung_carryover_until: null
+    umwandlung_45a_max_share: "0.40"
+    gemeinsamer_jahresbetrag_cents: 228500  # Überbrückungsbudget
+    pflegegeld_during_stay_weeks: 8

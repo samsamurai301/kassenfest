@@ -1,0 +1,51 @@
+# Stay rules, docs/02 §3. Rule logic: kassenfest/rules/stay.py.
+# admission_day_policy [L]/[N] (docs/02 §1.3, §11.4):
+#   timestamp          compare visit time with admission/discharge time; no time → warn
+#   exclude_edge_days  admission and discharge days are never billable
+#   include_edge_days  admission and discharge days are always billable
+
+- id: STAY-HKP
+  version: 1
+  valid_from: 2026-01-01
+  domain: stay
+  severity: block
+  kasse_codes: ["41003"]
+  defects: [D06]
+  params:
+    stay_kinds: [hospital, rehab, hospice, nursing_home]
+    admission_day_policy: timestamp
+  sources:
+    - "HKP-RL §1(6) (G-BA, i.d.F. 16.10.2025)"
+    - https://www.g-ba.de/downloads/62-492-3999/HKP-RL_2025-10-16_iK-2025-12-12.pdf
+  evidence_required: [hospital_letter.admission_date, hospital_letter.discharge_date, visit_log.entries]
+  message_de: "{n_lines} HKP-Leistungen ({dates}, {amount}) während eines Aufenthalts ({kind}, Aufnahme {admitted}, Entlassung {discharged}): nicht abrechenbar."
+  message_en: "{n_lines} HKP services ({dates}, {amount}) during a {kind} stay (admitted {admitted}, discharged {discharged}): not billable."
+  variants:
+    edge_unclear:
+      severity: warn
+      kasse_codes: []
+      message_de: "{n_lines} Leistungen am Aufnahme- oder Entlassungstag ({dates}) ohne Uhrzeit: nicht prüfbar, ob vor der Aufnahme ({admitted}) bzw. nach der Entlassung ({discharged})."
+      message_en: "{n_lines} services on the admission or discharge day ({dates}) have no time, so we can't tell whether they were before admission ({admitted}) or after discharge ({discharged})."
+
+- id: STAY-XI-SACH
+  version: 1
+  valid_from: 2026-01-01
+  domain: stay
+  severity: block
+  kasse_codes: ["41003"]
+  defects: [D06]
+  params:
+    stay_kinds: [hospital, rehab, hospice, nursing_home, short_term_care]
+    admission_day_policy: timestamp
+  sources:
+    - "§34 Abs. 2 SGB XI (Ruhen der Sachleistung während stationärer Aufenthalte)"
+    - https://www.gesetze-im-internet.de/sgb_11/__34.html
+  evidence_required: [hospital_letter.admission_date, hospital_letter.discharge_date, visit_log.entries]
+  message_de: "{n_lines} Sachleistungen ({dates}, {amount}) während eines Aufenthalts ({kind}, Aufnahme {admitted}, Entlassung {discharged}): Der Anspruch ruht."
+  message_en: "{n_lines} care services ({dates}, {amount}) during a {kind} stay (admitted {admitted}, discharged {discharged}): the entitlement is suspended."
+  variants:
+    edge_unclear:
+      severity: warn
+      kasse_codes: []
+      message_de: "{n_lines} Sachleistungen am Aufnahme- oder Entlassungstag ({dates}) ohne Uhrzeit: nicht prüfbar, ob vor der Aufnahme ({admitted}) bzw. nach der Entlassung ({discharged})."
+      message_en: "{n_lines} care services on the admission or discharge day ({dates}) have no time, so we can't tell whether they were before admission ({admitted}) or after discharge ({discharged})."

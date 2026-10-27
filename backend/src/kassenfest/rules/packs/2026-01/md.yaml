@@ -1,0 +1,36 @@
+# Master-data rules, docs/02 §5. Rule logic: kassenfest/rules/md.py.
+
+- id: MD-KVNR-CHECK
+  version: 1
+  valid_from: 2026-01-01
+  domain: md
+  severity: block
+  defects: [D16]
+  sources:
+    - "Krankenversichertennummer: 1 Buchstabe + 8 Ziffern + Prüfziffer (§290 SGB V)"
+    - https://de.wikipedia.org/wiki/Krankenversichertennummer
+  evidence_required: [patient.kvnr]
+  message_de: "Versichertennummer {kvnr} hat kein gültiges Format (1 Buchstabe + 9 Ziffern). Die Kasse weist die Rechnung ab ({amount})."
+  message_en: "Insurance number {kvnr} has an invalid format (1 letter + 9 digits). The Kasse will reject the bill ({amount})."
+  variants:
+    check_digit:
+      message_de: "Prüfziffer der Versichertennummer {kvnr} stimmt nicht, vermutlich ein Lese- oder Tippfehler. Die Kasse weist die Rechnung ab ({amount})."
+      message_en: "The check digit of insurance number {kvnr} is wrong, probably a reading or typing error. The Kasse will reject the bill ({amount})."
+
+- id: MD-DECEASED
+  version: 1
+  valid_from: 2026-01-01
+  domain: md
+  severity: block
+  defects: [D15]
+  sources:
+    - "TA HKP 1.3.0 §9.8 (Kennzeichen 1: verstorben)"
+    - https://www.gkv-datenaustausch.de/media/dokumente/leistungserbringer_1/sonstige_leistungserbringer/technische_anlagen_aktuell_4/TA_HKP_1.3.0_20260625.pdf
+  evidence_required: [patient.deceased_at, visit_log.entries]
+  message_de: "Versicherte Person verstorben am {deceased_at}; {n_lines} Leistungen danach ({dates}, {amount}) sind nicht abrechenbar. Fehlende Unterschrift mit Kennzeichen 1 begründen."
+  message_en: "The patient died on {deceased_at}; {n_lines} services afterwards ({dates}, {amount}) can't be billed. Mark the missing signature with reason 1."
+  variants:
+    unclear:
+      severity: warn
+      message_de: "{n_lines} Leistungen am Todestag ({dates}) ohne Uhrzeit: nicht prüfbar, ob vor {deceased_at}."
+      message_en: "{n_lines} services on the day of death ({dates}) have no time, so we can't tell whether they were before {deceased_at}."

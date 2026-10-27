@@ -1,0 +1,68 @@
+# Kassen for the synthetic demo world (DAT-03).
+# Names are real Kassen; every IK, fax number and contract value here is FAKE.
+# IKs use region 99 with valid check digits (kassenfest.rules.checkdigits) so they pass
+# format checks without being anyone's real IK. Fax numbers are from the
+# Bundesnetzagentur range reserved for fiction (089 99998 000–999).
+# payment_term_days: Hamburg §132a value as the default [L] (docs/02 §1.2).
+synthetic: true
+kassen:
+  - name: AOK Bayern
+    short: AOK
+    krankenkasse_ik: "109990018"
+    pflegekasse_ik: "189990018"
+    fax: "+49 89 99998 001"
+    payment_term_days: 21
+  - name: Techniker Krankenkasse
+    short: TK
+    krankenkasse_ik: "109990029"
+    pflegekasse_ik: "189990029"
+    fax: "+49 89 99998 002"
+    payment_term_days: 21
+  - name: BARMER
+    short: BARMER
+    krankenkasse_ik: "109990030"
+    pflegekasse_ik: "189990030"
+    fax: "+49 89 99998 003"
+    payment_term_days: 21
+  - name: DAK-Gesundheit
+    short: DAK
+    krankenkasse_ik: "109990041"
+    pflegekasse_ik: "189990041"
+    fax: "+49 89 99998 004"
+    payment_term_days: 21
+  - name: IKK classic
+    short: IKK
+    krankenkasse_ik: "109990052"
+    pflegekasse_ik: "189990052"
+    fax: "+49 89 99998 005"
+    payment_term_days: 21
+  - name: KKH Kaufmännische Krankenkasse
+    short: KKH
+    krankenkasse_ik: "109990063"
+    pflegekasse_ik: "189990063"
+    fax: "+49 89 99998 006"
+    payment_term_days: 21
+  - name: SBK Siemens-Betriebskrankenkasse
+    short: SBK
+    krankenkasse_ik: "109990074"
+    pflegekasse_ik: "189990074"
+    fax: "+49 89 99998 007"
+    payment_term_days: 21
+  - name: BKK firmus
+    short: BKK firmus
+    krankenkasse_ik: "109990085"
+    pflegekasse_ik: "189990085"
+    fax: "+49 89 99998 008"
+    payment_term_days: 21
+  - name: Knappschaft
+    short: KBS
+    krankenkasse_ik: "109990096"
+    pflegekasse_ik: "189990096"
+    fax: "+49 89 99998 009"
+    payment_term_days: 21
+  - name: HEK – Hanseatische Krankenkasse
+    short: HEK
+    krankenkasse_ik: "109990109"
+    pflegekasse_ik: "189990109"
+    fax: "+49 89 99998 010"
+    payment_term_days: 21

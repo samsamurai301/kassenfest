@@ -1,0 +1,91 @@
+# HKP (SGB V §37) positions used in the demo (DAT-04 / REF-04).
+# ILLUSTRATIVE. Positionsnummern follow the 6-digit pattern of the GKV
+# Positionsnummernverzeichnis HKP (18.05.2026): digits 1–2 legal basis (03 = §37(2) S.1),
+# digit 3 care type (1 Grund-, 2 Behandlungspflege, 3 Hauswirtschaft), digits 4–6 the
+# service. The service digits and EVERY PRICE are invented: Bavarian §132a prices
+# are not public (docs/03 §3.2). Prices are integer cents per unit.
+#
+# category: matches extraction MeasureCategory, so a Verordnung measure covers the
+#   positions of its category unless it names a position_no.
+# ancillary: billed alongside a visit (Wegepauschale); needs a valid Verordnung on the
+#   day but is not itself prescribed, approved or frequency-checked.
+synthetic: true
+illustrative: true
+source: "https://www.gkv-datenaustausch.de/media/dokumente/leistungserbringer_1/sonstige_leistungserbringer/positionsnummernverzeichnisse/Haeusliche-Krankenpflege_20260518.pdf"
+positions:
+  "032101":
+    label_de: Medikamentengabe (Verabreichen)
+    label_en: Medication administration
+    category: medikamentengabe
+  "032104":
+    label_de: Medikamente richten (Wochendosette)
+    label_en: Preparing a weekly pill organiser
+    category: medikamentengabe
+  "032110":
+    label_de: Injektion s.c. (z. B. Insulin)
+    label_en: Subcutaneous injection (e.g. insulin)
+    category: injektion
+  "032120":
+    label_de: Blutzuckermessung
+    label_en: Blood glucose measurement
+    category: blutzucker
+  "032130":
+    label_de: Kompressionsstrümpfe anziehen
+    label_en: Putting on compression stockings
+    category: kompression
+  "032131":
+    label_de: Kompressionsstrümpfe ausziehen
+    label_en: Taking off compression stockings
+    category: kompression
+  "032140":
+    label_de: Kompressionsverband anlegen
+    label_en: Applying a compression bandage
+    category: kompression
+  "032150":
+    label_de: Wundversorgung, einfach
+    label_en: Wound care, simple
+    category: wundversorgung
+  "032151":
+    label_de: Wundversorgung, chronische Wunde
+    label_en: Wound care, chronic wound
+    category: wundversorgung
+  "032160":
+    label_de: Positionswechsel zur Dekubitusbehandlung
+    label_en: Repositioning for pressure ulcer care
+    category: positionswechsel
+  "032188":
+    label_de: Wegepauschale
+    label_en: Travel flat rate
+    category: null
+    ancillary: true
+tariffs:
+  - version: HKP-BY-2025-01
+    valid_from: 2025-01-01
+    valid_to: 2025-12-31
+    prices_cents:
+      "032101": 765
+      "032104": 1115
+      "032110": 815
+      "032120": 505
+      "032130": 860
+      "032131": 590
+      "032140": 1300
+      "032150": 1210
+      "032151": 2120
+      "032160": 850
+      "032188": 410
+  - version: HKP-BY-2026-01
+    valid_from: 2026-01-01
+    valid_to: null
+    prices_cents:
+      "032101": 790
+      "032104": 1150
+      "032110": 840
+      "032120": 520
+      "032130": 890
+      "032131": 610
+      "032140": 1340
+      "032150": 1250
+      "032151": 2190
+      "032160": 880
+      "032188": 420
