@@ -7,7 +7,8 @@ from pathlib import Path
 
 import pytest
 
-from kassenfest.schemas.domain import CaseFile
+from kassenfest.rules import run
+from kassenfest.rules.engine import pack_for
 from kassenfest.schemas.paths import flatten
 from kassenfest.synth import catalog, identifiers
 from kassenfest.synth.generate import OUT_ROOT, SETS, case_manifest, coverage, plan_set
@@ -31,7 +32,7 @@ def planned(name: str):
 
 
 def test_check_digits_match_the_documented_examples():
-    from kassenfest.synth.checkdigits_fallback import (
+    from kassenfest.rules.checkdigits import (
         ik_check_digit,
         kvnr_check_digit,
         lanr_check_digit,
@@ -57,97 +58,47 @@ def test_generated_identifiers_are_valid_and_corruption_is_not():
         assert identifiers.is_valid_ik(kasse.pflegekasse_ik)
 
 
-# --- Truth reproduces the labels ----------------------------------------------------------------
+def test_samples_use_valid_identifiers_and_reference_positions():
+    from kassenfest.synth import samples
+
+    for seed in range(30):
+        rng = random.Random(seed)
+        m12, log, letter = (
+            samples.muster12(rng),
+            samples.visit_log_sgbv(rng),
+            samples.approval_letter(rng),
+        )
+        assert identifiers.is_valid_kvnr(m12.kvnr) and identifiers.is_valid_lanr(m12.lanr)
+        assert identifiers.is_valid_ik(m12.payer_ik) and identifiers.is_valid_ik(letter.payer_ik)
+        assert identifiers.is_valid_ik(log.provider_ik)
+        assert {s.position_no for s in log.services} <= set(catalog.HKP_SERVICES)
 
 
-def _visits(cf: CaseFile, domain: str):
-    return [v for log in cf.visit_logs if log.domain == domain for v in log.visits]
-
-
-def _at(v) -> dt.datetime:
-    return dt.datetime.combine(v.date, v.start or dt.time())
-
-
-def truth_defects(cf: CaseFile) -> set[str]:
-    """A minimal reference reading of the Tier-A rules, applied to the truth."""
-    found: set[str] = set()
-    hkp = _visits(cf, "sgbv")
-    xi = _visits(cf, "sgbxi")
-    category = {p: s.category for p, s in catalog.HKP_SERVICES.items()}
-    approved_rx = {a.prescription_id for a in cf.approvals}
-    per_day = Counter((v.code, v.date) for v in hkp)
-
-    for v in hkp:
-        if not any(
-            rx.period_from <= v.date <= rx.period_to
-            and category[v.code] in {s.category for s in rx.services}
-            for rx in cf.prescriptions
-        ):
-            found.add("D01")
-        if v.staff_initials is None:
-            found.add("D05")
-    for rx in cf.prescriptions:
-        if rx.id not in approved_rx:
-            found.add("D02")
-        if rx.submitted_to_payer_at and rx.submitted_to_payer_at > catalog.add_working_days(
-            rx.issue_date, 4
-        ):
-            found.add("D07")
-        if not (rx.doctor_signed and rx.stamp_present):
-            found.add("D09")
-        if rx.kind == "erst" and (rx.period_to - rx.period_from).days + 1 > 14:
-            found.add("D11")
-        died = cf.patient.deceased_at
-        if rx.period_to < MONTH_END and not (died and died.date() <= rx.period_to):
-            successor = [
-                b
-                for b in cf.prescriptions
-                if b.period_from == rx.period_to + dt.timedelta(days=1)
-                and b.issue_date <= rx.period_to
-            ]
-            if not successor:
-                found.add("D08")
-        for s in rx.services:
-            if s.frequency and s.frequency.per == "day":
-                for (code, day), n in per_day.items():
-                    in_period = rx.period_from <= day <= rx.period_to
-                    if code == s.position_no and in_period and n > s.frequency.count:
-                        found.add("D10")
-    for ap in cf.approvals:
-        items = {a.position_no: a for a in ap.approved}
-        for (code, day), n in per_day.items():
-            if not ap.period_from <= day <= ap.period_to:
-                continue
-            item = items.get(code)
-            daily = item and item.frequency and item.frequency.per == "day"
-            if item is None or (daily and n > item.frequency.count):  # type: ignore[union-attr]
-                found.add("D03")
-    for log in cf.visit_logs:
-        if not log.patient_signed and log.missing_signature_reason is None:
-            found.add("D04")
-    for stay in cf.stays:
-        if any(stay.admitted_at < _at(v) < stay.discharged_at for v in hkp + xi):  # type: ignore[operator]
-            found.add("D06")
-    if cf.patient.deceased_at and any(_at(v) >= cf.patient.deceased_at for v in hkp + xi):
-        found.add("D15")
-    grades = sorted(cf.patient.pflegegrad, key=lambda p: p.valid_from)
-    grade = [p.grade for p in grades if p.valid_from <= MONTH_END][-1] if grades else 0
-    cost = sum(catalog.LK[v.code].price_cents for v in xi if v.funding == "sachleistung_36")
-    if xi and cost > catalog.SACHLEISTUNG_CAP_CENTS.get(grade, 0):
-        found.add("D12")
-    if not identifiers.is_valid_kvnr(cf.patient.kvnr):
-        found.add("D16")
-    if any(n > 1 for n in Counter((v.code, v.date, v.start) for v in hkp).values()):
-        found.add("D18")
-    return found
+# --- The rules engine on the truth finds exactly the injected defects ---------------------------
 
 
 @pytest.mark.parametrize("name", ["demo", "dev", "test"])
-def test_rules_on_truth_find_exactly_the_injected_defects(name):
-    _, cases = planned(name)
-    for case, cf in cases:
-        labels = {lab.defect for lab in case.timeline.labels} - {"D19", "D20"}
-        assert truth_defects(cf) == labels, case.case_id
+def test_rules_engine_on_truth_fires_exactly_the_injected_defects(name):
+    """Per patient-month: block/warn findings map to the labelled defects, and each
+    line-level defect affects the same billed lines (date, time, position) as labelled.
+    D19 needs extraction confidences, which the truth doesn't have."""
+    plan, _ = planned(name)
+    defects_of = {spec.id: set(spec.defects) for spec in pack_for(MONTH_START).rules}
+    for case in plan.cases:
+        ids = {d.plan.key: d.doc_id for d in case.docs}
+        result = run(case_file(plan.world, case.timeline, ids))
+        line = {ln.id: (ln.date, ln.time, ln.code) for c in result.claims for ln in c.lines}
+        fired: dict[str, Counter] = {}
+        for f in result.findings:
+            if f.severity in ("block", "warn"):
+                for d in defects_of[f.rule_id]:
+                    fired.setdefault(d, Counter()).update(line[i] for i in f.claim_line_ids)
+        labels = {lab.defect: lab for lab in case.timeline.labels}
+        assert set(fired) == set(labels) - {"D19", "D20"}, case.case_id
+        for d, lab in labels.items():
+            if lab.lines:
+                mine = Counter((r.date, r.when.time(), r.code) for r in lab.lines)
+                assert fired[d] == mine, (case.case_id, d)
 
 
 @pytest.mark.parametrize("name", ["demo", "dev", "test"])
@@ -322,3 +273,78 @@ def test_new_templates_render_marks_and_states():
             if doc_type == "approval_letter" and content.rejected:  # type: ignore[attr-defined]
                 assert gt.fields["decision"].value == "partial"
                 assert gt.fields["rejected_items[#]"].value == 1
+
+
+def _demo_doc_per_type():
+    plan, _ = planned("demo")
+    picked = {}
+    for case in plan.cases:
+        for doc in case.docs:
+            kind = doc.plan.doc_type
+            if kind == "approval_letter":
+                kind += "_" + doc.plan.content.style  # type: ignore[attr-defined]
+            picked.setdefault(kind, doc)
+    return list(picked.values())
+
+
+@pytest.mark.skipif(chromium_missing, reason="run `uv run playwright install chromium`")
+@pytest.mark.parametrize("split", ["dev", "test"])
+def test_fields_stay_inside_their_cells(split):
+    """Handwriting never runs into the next cell or over another field (0.5 mm slack for
+    glyph jitter). Muster 12 seeds 101, 119 and 125 used to overflow the date columns."""
+    from kassenfest.synth import samples
+    from kassenfest.synth.documents import render_document
+    from kassenfest.synth.render import Renderer
+
+    slack = 3.0  # page pixels at 150 dpi
+    docs = [(d.plan.doc_type, d.plan.content, d.seed) for d in _demo_doc_per_type()]
+    docs += [("muster12", samples.muster12(random.Random(s)), s) for s in (101, 119, 125, 7)]
+    with Renderer() as renderer:
+        for doc_type, content, seed in docs:
+            page, _, _ = render_document(
+                renderer, doc_type, content, doc_id="t", seed=seed, split=split
+            )
+            for key, box in page.fields.items():
+                cell = page.cells.get(key)
+                if cell:
+                    inside = (
+                        box[0] >= cell[0] - slack
+                        and box[1] >= cell[1] - slack
+                        and box[2] <= cell[2] + slack
+                        and box[3] <= cell[3] + slack
+                    )
+                    assert inside, (doc_type, seed, key, box, cell)
+            elements = {}  # one box per element; an element may carry several keys
+            for key, box in page.fields.items():
+                elements.setdefault(box, key)
+            boxes = list(elements.items())
+            for i, (a, ka) in enumerate(boxes):
+                for b, kb in boxes[i + 1 :]:
+                    w = min(a[2], b[2]) - max(a[0], b[0])
+                    h = min(a[3], b[3]) - max(a[1], b[1])
+                    assert w <= slack or h <= slack, (doc_type, seed, ka, kb)
+
+
+@pytest.mark.skipif(chromium_missing, reason="run `uv run playwright install chromium`")
+def test_ink_boxes_are_tight_to_the_ink():
+    """Every edge of a signature or stamp box touches ink, so SAM is scored against the
+    mark itself, not its SVG frame or a script font's line box."""
+    import numpy as np
+
+    from kassenfest.synth.documents import render_document
+    from kassenfest.synth.render import INK_THRESHOLD, Renderer
+
+    checked = 0
+    with Renderer() as renderer:
+        for doc in _demo_doc_per_type():
+            page, _, _ = render_document(
+                renderer, doc.plan.doc_type, doc.plan.content, doc_id="t", seed=doc.seed
+            )
+            dark = np.array(page.image).min(axis=2) < INK_THRESHOLD
+            for name, (x0, y0, x1, y1) in page.ink.items():
+                x0, y0, x1, y1 = int(x0), int(y0), int(x1) - 1, int(y1) - 1
+                rows, cols = slice(y0, y1 + 1), slice(x0, x1 + 1)
+                edges = (dark[rows, x0], dark[rows, x1], dark[y0, cols], dark[y1, cols])
+                assert all(e.any() for e in edges), (doc.plan.doc_type, name)
+                checked += 1
+    assert checked >= 6

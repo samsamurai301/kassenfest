@@ -73,7 +73,7 @@ CONFLICTS = [
 CHAIN_FOR = {"D08": "switch", "D11": "new_late", "D01": "new_late"}
 # Structural edits first, then edits that pick among the remaining visits.
 ORDER: list[DefectId] = [
-    "D11", "D08", "D01", "D06", "D15", "D12", "D02", "D03", "D10",
+    "D11", "D08", "D01", "D06", "D15", "D12", "D10", "D02", "D03",
     "D07", "D09", "D18", "D05", "D16", "D04", "D19",
 ]  # fmt: skip
 
@@ -195,6 +195,13 @@ def d06_stay(tl: Timeline, rng: random.Random) -> None:
     """Hospital stay with an Entlassbrief, but the visit log goes on as if at home."""
     admitted, discharged = tl.spec.params.get("stay") or stay_window(tl, rng)
     stay = add_stay(tl, admitted, discharged, rng, clean=False)
+    # The §45b household help did pause; nursing and §36 care stayed on the sheet.
+    margin = dt.timedelta(hours=1)
+    tl.recs = [
+        r
+        for r in tl.recs
+        if not (r.funding == "entlastung_45b" and admitted - margin < r.when < discharged + margin)
+    ]
     lines = [r for r in tl.october if admitted < r.when < discharged]
     docs = [f"hospital_letter:{stay.id}", *sorted({f"visit_log_{r.domain}" for r in lines})]
     _label(
@@ -354,9 +361,13 @@ def d07_late_submission(tl: Timeline, rng: random.Random) -> None:
     rx.submitted_to_payer_at = catalog.add_working_days(rx.issue_date, late)
     ap = tl.approval_for(rx)
     if ap:
-        ap.letter_date = catalog.add_working_days(rx.submitted_to_payer_at, rng.choice([3, 4, 6]))
-    until = ap.letter_date if ap else MONTH_END
+        # Days before the approval letter lose provisional cover: make some of them October's.
+        start = max(rx.submitted_to_payer_at, MONTH_START)
+        ap.letter_date = catalog.add_working_days(start, rng.choice([3, 4, 6]))
+    until = ap.letter_date if ap else MONTH_END + dt.timedelta(days=1)
     lines = [r for r in _hkp_oct(tl) if rx.period_from <= r.date < until and r.date <= rx.period_to]
+    if not lines:
+        raise ValueError(f"{tl.record.id}: D07 leaves no October line at risk")
     _label(
         tl,
         "D07",
@@ -386,7 +397,7 @@ def d18_duplicate(tl: Timeline, rng: random.Random) -> None:
     lines = []
     for first, second in rng.sample(pairs, min(len(pairs), rng.randint(1, 3))):
         second.when, second.staff = first.when, first.staff
-        lines += [first, second]
+        lines.append(second)
     _label(tl, "D18", ["visit_log_sgbv"], "Same position, day and time billed twice", lines)
 
 
