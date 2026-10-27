@@ -1,4 +1,4 @@
-.PHONY: help setup api web dev test lint fmt smoke api-types
+.PHONY: help setup api web dev test lint fmt smoke synth api-types
 
 help: ## list targets
 	@grep -E '^[a-z-]+:.*## ' Makefile | sed 's/:.*## /\t/'
@@ -28,6 +28,9 @@ fmt: ## auto-format backend
 
 smoke: ## Muse Spark + SAM 3.1 end to end against the real API (MODE=replay needs no key)
 	cd backend && uv run kassenfest smoke $(if $(MODE),--mode $(MODE),)
+
+synth: ## synthetic set with ground truth: make synth SET=dev|test|demo (default dev)
+	cd backend && uv run kassenfest synth --set $(or $(SET),dev)
 
 api-types: ## regenerate web/src/api/schema.d.ts from the FastAPI models
 	mkdir -p var
