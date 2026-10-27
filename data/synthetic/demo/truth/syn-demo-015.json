@@ -19,10 +19,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    50.4,
-    295.5,
-    87.5,
-    311.5
+    50.6,
+    311.7,
+    87.7,
+    327.6
    ],
    "handwritten": false
   },
@@ -31,10 +31,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    211.7,
-    288.7,
-    241.9,
-    315.7
+    214.1,
+    307.6,
+    239.9,
+    329.1
    ],
    "handwritten": true
   },
@@ -50,22 +50,22 @@
    "status": "present",
    "page": 0,
    "box": [
-    153.7,
+    163.4,
     223.4,
-    201.1,
-    239.5
+    210.8,
+    239.4
    ],
    "handwritten": false
   },
   "entries[0].service": {
-   "value": "Wundversorgung, chron. Wunde",
+   "value": "Wundversorgung, chronische Wunde",
    "status": "present",
    "page": 0,
    "box": [
-    153.7,
+    163.4,
     223.4,
-    201.1,
-    239.5
+    210.8,
+    239.4
    ],
    "handwritten": false
   },
@@ -81,10 +81,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    363.1,
-    285.7,
-    386.0,
-    313.0
+    364.9,
+    304.5,
+    384.5,
+    326.5
    ],
    "handwritten": true
   },
@@ -100,10 +100,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    363.1,
-    285.7,
-    386.0,
-    313.0
+    364.9,
+    304.5,
+    384.5,
+    326.5
    ],
    "handwritten": false
   },
@@ -112,10 +112,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    51.1,
-    371.9,
-    94.5,
-    387.8
+    51.2,
+    387.8,
+    94.6,
+    403.8
    ],
    "handwritten": false
   },
@@ -124,10 +124,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    206.9,
-    363.0,
-    248.4,
-    391.7
+    210.0,
+    381.9,
+    245.5,
+    405.1
    ],
    "handwritten": true
   },
@@ -143,22 +143,22 @@
    "status": "present",
    "page": 0,
    "box": [
-    153.7,
+    163.4,
     223.4,
-    201.1,
-    239.5
+    210.8,
+    239.4
    ],
    "handwritten": false
   },
   "entries[1].service": {
-   "value": "Wundversorgung, chron. Wunde",
+   "value": "Wundversorgung, chronische Wunde",
    "status": "present",
    "page": 0,
    "box": [
-    153.7,
+    163.4,
     223.4,
-    201.1,
-    239.5
+    210.8,
+    239.4
    ],
    "handwritten": false
   },
@@ -174,10 +174,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    362.5,
-    364.4,
-    387.7,
-    389.7
+    364.5,
+    383.0,
+    386.0,
+    403.0
    ],
    "handwritten": true
   },
@@ -193,10 +193,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    362.5,
-    364.4,
-    387.7,
-    389.7
+    364.5,
+    383.0,
+    386.0,
+    403.0
    ],
    "handwritten": false
   },
@@ -205,10 +205,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    51.5,
-    422.9,
-    90.2,
-    438.8
+    51.6,
+    438.6,
+    90.3,
+    454.6
    ],
    "handwritten": false
   },
@@ -217,10 +217,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    206.6,
-    416.2,
-    248.8,
-    443.6
+    209.8,
+    434.7,
+    246.0,
+    456.6
    ],
    "handwritten": true
   },
@@ -236,22 +236,22 @@
    "status": "present",
    "page": 0,
    "box": [
-    153.7,
+    163.4,
     223.4,
-    201.1,
-    239.5
+    210.8,
+    239.4
    ],
    "handwritten": false
   },
   "entries[2].service": {
-   "value": "Wundversorgung, chron. Wunde",
+   "value": "Wundversorgung, chronische Wunde",
    "status": "present",
    "page": 0,
    "box": [
-    153.7,
+    163.4,
     223.4,
-    201.1,
-    239.5
+    210.8,
+    239.4
    ],
    "handwritten": false
   },
@@ -267,10 +267,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    363.1,
-    415.7,
-    388.3,
-    442.5
+    365.0,
+    434.1,
+    386.6,
+    455.6
    ],
    "handwritten": true
   },
@@ -286,10 +286,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    363.1,
-    415.7,
-    388.3,
-    442.5
+    365.0,
+    434.1,
+    386.6,
+    455.6
    ],
    "handwritten": false
   },
@@ -298,10 +298,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    51.9,
-    473.9,
-    89.1,
-    489.8
+    52.1,
+    489.4,
+    89.2,
+    505.4
    ],
    "handwritten": false
   },
@@ -310,10 +310,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    212.5,
-    465.9,
-    243.7,
-    493.9
+    215.0,
+    484.5,
+    241.6,
+    506.9
    ],
    "handwritten": true
   },
@@ -329,22 +329,22 @@
    "status": "present",
    "page": 0,
    "box": [
-    153.7,
+    163.4,
     223.4,
-    201.1,
-    239.5
+    210.8,
+    239.4
    ],
    "handwritten": false
   },
   "entries[3].service": {
-   "value": "Wundversorgung, chron. Wunde",
+   "value": "Wundversorgung, chronische Wunde",
    "status": "present",
    "page": 0,
    "box": [
-    153.7,
+    163.4,
     223.4,
-    201.1,
-    239.5
+    210.8,
+    239.4
    ],
    "handwritten": false
   },
@@ -360,10 +360,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    364.0,
-    465.9,
-    388.5,
-    491.5
+    365.9,
+    484.3,
+    386.8,
+    504.5
    ],
    "handwritten": true
   },
@@ -379,10 +379,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    364.0,
-    465.9,
-    388.5,
-    491.5
+    365.9,
+    484.3,
+    386.8,
+    504.5
    ],
    "handwritten": false
   },
@@ -391,10 +391,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    52.6,
-    550.2,
-    96.0,
-    566.2
+    52.7,
+    565.6,
+    96.1,
+    581.5
    ],
    "handwritten": false
   },
@@ -403,10 +403,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    208.5,
-    543.4,
-    250.1,
-    570.4
+    211.6,
+    561.5,
+    247.2,
+    583.0
    ],
    "handwritten": true
   },
@@ -422,22 +422,22 @@
    "status": "present",
    "page": 0,
    "box": [
-    153.7,
+    163.4,
     223.4,
-    201.1,
-    239.5
+    210.8,
+    239.4
    ],
    "handwritten": false
   },
   "entries[4].service": {
-   "value": "Wundversorgung, chron. Wunde",
+   "value": "Wundversorgung, chronische Wunde",
    "status": "present",
    "page": 0,
    "box": [
-    153.7,
+    163.4,
     223.4,
-    201.1,
-    239.5
+    210.8,
+    239.4
    ],
    "handwritten": false
   },
@@ -453,10 +453,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    364.3,
-    543.6,
-    389.5,
-    568.5
+    366.2,
+    561.5,
+    387.7,
+    581.1
    ],
    "handwritten": true
   },
@@ -472,10 +472,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    364.3,
-    543.6,
-    389.5,
-    568.5
+    366.2,
+    561.5,
+    387.7,
+    581.1
    ],
    "handwritten": false
   },
@@ -484,10 +484,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    53.0,
-    601.3,
-    91.7,
-    617.2
+    53.1,
+    616.4,
+    91.8,
+    632.3
    ],
    "handwritten": false
   },
@@ -496,10 +496,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    210.5,
-    595.6,
-    248.5,
-    621.3
+    213.3,
+    613.4,
+    245.9,
+    633.6
    ],
    "handwritten": true
   },
@@ -515,22 +515,22 @@
    "status": "present",
    "page": 0,
    "box": [
-    153.7,
+    163.4,
     223.4,
-    201.1,
-    239.5
+    210.8,
+    239.4
    ],
    "handwritten": false
   },
   "entries[5].service": {
-   "value": "Wundversorgung, chron. Wunde",
+   "value": "Wundversorgung, chronische Wunde",
    "status": "present",
    "page": 0,
    "box": [
-    153.7,
+    163.4,
     223.4,
-    201.1,
-    239.5
+    210.8,
+    239.4
    ],
    "handwritten": false
   },
@@ -546,10 +546,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    362.4,
-    594.3,
-    391.3,
-    621.5
+    364.7,
+    612.2,
+    389.4,
+    633.7
    ],
    "handwritten": true
   },
@@ -565,10 +565,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    362.4,
-    594.3,
-    391.3,
-    621.5
+    364.7,
+    612.2,
+    389.4,
+    633.7
    ],
    "handwritten": false
   },
@@ -577,10 +577,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    53.4,
-    652.3,
-    90.6,
-    668.2
+    53.6,
+    667.2,
+    90.7,
+    683.1
    ],
    "handwritten": false
   },
@@ -589,10 +589,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    210.1,
-    645.4,
-    249.9,
-    672.3
+    213.1,
+    663.0,
+    247.2,
+    684.5
    ],
    "handwritten": true
   },
@@ -608,22 +608,22 @@
    "status": "present",
    "page": 0,
    "box": [
-    153.7,
+    163.4,
     223.4,
-    201.1,
-    239.5
+    210.8,
+    239.4
    ],
    "handwritten": false
   },
   "entries[6].service": {
-   "value": "Wundversorgung, chron. Wunde",
+   "value": "Wundversorgung, chronische Wunde",
    "status": "present",
    "page": 0,
    "box": [
-    153.7,
+    163.4,
     223.4,
-    201.1,
-    239.5
+    210.8,
+    239.4
    ],
    "handwritten": false
   },
@@ -639,10 +639,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    364.8,
-    645.1,
-    390.1,
-    670.1
+    366.8,
+    662.6,
+    388.4,
+    682.4
    ],
    "handwritten": true
   },
@@ -658,10 +658,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    364.8,
-    645.1,
-    390.1,
-    670.1
+    366.8,
+    662.6,
+    388.4,
+    682.4
    ],
    "handwritten": false
   },
@@ -670,10 +670,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    54.1,
-    728.6,
-    97.5,
-    744.6
+    54.2,
+    743.3,
+    97.6,
+    759.3
    ],
    "handwritten": false
   },
@@ -682,10 +682,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    215.7,
-    721.4,
-    245.3,
-    748.9
+    218.0,
+    738.6,
+    243.3,
+    760.6
    ],
    "handwritten": true
   },
@@ -701,22 +701,22 @@
    "status": "present",
    "page": 0,
    "box": [
-    153.7,
+    163.4,
     223.4,
-    201.1,
-    239.5
+    210.8,
+    239.4
    ],
    "handwritten": false
   },
   "entries[7].service": {
-   "value": "Wundversorgung, chron. Wunde",
+   "value": "Wundversorgung, chronische Wunde",
    "status": "present",
    "page": 0,
    "box": [
-    153.7,
+    163.4,
     223.4,
-    201.1,
-    239.5
+    210.8,
+    239.4
    ],
    "handwritten": false
   },
@@ -732,10 +732,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    364.8,
-    720.4,
-    389.8,
-    746.9
+    367.0,
+    737.6,
+    388.3,
+    758.8
    ],
    "handwritten": true
   },
@@ -751,10 +751,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    364.8,
-    720.4,
-    389.8,
-    746.9
+    367.0,
+    737.6,
+    388.3,
+    758.8
    ],
    "handwritten": false
   },
@@ -763,10 +763,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    54.5,
-    779.7,
-    93.2,
-    795.6
+    54.6,
+    794.1,
+    93.3,
+    810.1
    ],
    "handwritten": false
   },
@@ -775,10 +775,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    211.1,
-    773.1,
-    250.8,
-    799.5
+    214.1,
+    790.2,
+    248.0,
+    811.1
    ],
    "handwritten": true
   },
@@ -794,22 +794,22 @@
    "status": "present",
    "page": 0,
    "box": [
-    153.7,
+    163.4,
     223.4,
-    201.1,
-    239.5
+    210.8,
+    239.4
    ],
    "handwritten": false
   },
   "entries[8].service": {
-   "value": "Wundversorgung, chron. Wunde",
+   "value": "Wundversorgung, chronische Wunde",
    "status": "present",
    "page": 0,
    "box": [
-    153.7,
+    163.4,
     223.4,
-    201.1,
-    239.5
+    210.8,
+    239.4
    ],
    "handwritten": false
   },
@@ -825,10 +825,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    365.9,
-    770.6,
-    391.7,
-    797.2
+    367.9,
+    787.8,
+    389.9,
+    809.0
    ],
    "handwritten": true
   },
@@ -844,10 +844,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    365.9,
-    770.6,
-    391.7,
-    797.2
+    367.9,
+    787.8,
+    389.9,
+    809.0
    ],
    "handwritten": false
   },
@@ -856,10 +856,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    55.0,
-    830.7,
-    92.1,
-    846.6
+    55.1,
+    844.9,
+    92.2,
+    860.8
    ],
    "handwritten": false
   },
@@ -868,10 +868,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    212.2,
-    824.8,
-    250.2,
-    850.8
+    215.1,
+    841.7,
+    247.6,
+    862.3
    ],
    "handwritten": true
   },
@@ -887,22 +887,22 @@
    "status": "present",
    "page": 0,
    "box": [
-    153.7,
+    163.4,
     223.4,
-    201.1,
-    239.5
+    210.8,
+    239.4
    ],
    "handwritten": false
   },
   "entries[9].service": {
-   "value": "Wundversorgung, chron. Wunde",
+   "value": "Wundversorgung, chronische Wunde",
    "status": "present",
    "page": 0,
    "box": [
-    153.7,
+    163.4,
     223.4,
-    201.1,
-    239.5
+    210.8,
+    239.4
    ],
    "handwritten": false
   },
@@ -918,10 +918,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    365.0,
-    822.8,
-    393.8,
-    849.5
+    367.1,
+    839.7,
+    391.7,
+    860.9
    ],
    "handwritten": true
   },
@@ -937,10 +937,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    365.0,
-    822.8,
-    393.8,
-    849.5
+    367.1,
+    839.7,
+    391.7,
+    860.9
    ],
    "handwritten": false
   },
@@ -949,10 +949,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    55.6,
-    907.0,
-    99.0,
-    923.0
+    55.7,
+    921.0,
+    99.1,
+    937.0
    ],
    "handwritten": false
   },
@@ -961,10 +961,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    221.3,
-    899.6,
-    242.4,
-    926.4
+    223.1,
+    916.3,
+    241.0,
+    937.7
    ],
    "handwritten": true
   },
@@ -980,22 +980,22 @@
    "status": "present",
    "page": 0,
    "box": [
-    153.7,
+    163.4,
     223.4,
-    201.1,
-    239.5
+    210.8,
+    239.4
    ],
    "handwritten": false
   },
   "entries[10].service": {
-   "value": "Wundversorgung, chron. Wunde",
+   "value": "Wundversorgung, chronische Wunde",
    "status": "present",
    "page": 0,
    "box": [
-    153.7,
+    163.4,
     223.4,
-    201.1,
-    239.5
+    210.8,
+    239.4
    ],
    "handwritten": false
   },
@@ -1011,10 +1011,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    367.7,
-    898.6,
-    392.4,
-    925.9
+    369.6,
+    915.3,
+    390.6,
+    937.1
    ],
    "handwritten": true
   },
@@ -1030,10 +1030,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    367.7,
-    898.6,
-    392.4,
-    925.9
+    369.6,
+    915.3,
+    390.6,
+    937.1
    ],
    "handwritten": false
   },
@@ -1042,10 +1042,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    56.0,
-    958.1,
-    94.7,
-    974.0
+    56.2,
+    971.8,
+    94.8,
+    987.8
    ],
    "handwritten": false
   },
@@ -1054,10 +1054,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    212.3,
-    951.2,
-    253.1,
-    977.7
+    215.3,
+    967.8,
+    250.2,
+    988.7
    ],
    "handwritten": true
   },
@@ -1073,22 +1073,22 @@
    "status": "present",
    "page": 0,
    "box": [
-    153.7,
+    163.4,
     223.4,
-    201.1,
-    239.5
+    210.8,
+    239.4
    ],
    "handwritten": false
   },
   "entries[11].service": {
-   "value": "Wundversorgung, chron. Wunde",
+   "value": "Wundversorgung, chronische Wunde",
    "status": "present",
    "page": 0,
    "box": [
-    153.7,
+    163.4,
     223.4,
-    201.1,
-    239.5
+    210.8,
+    239.4
    ],
    "handwritten": false
   },
@@ -1104,10 +1104,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    367.6,
-    951.3,
-    392.5,
-    976.4
+    369.6,
+    967.8,
+    390.8,
+    987.5
    ],
    "handwritten": true
   },
@@ -1123,10 +1123,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    367.6,
-    951.3,
-    392.5,
-    976.4
+    369.6,
+    967.8,
+    390.8,
+    987.5
    ],
    "handwritten": false
   },
@@ -1135,10 +1135,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    56.5,
-    1009.1,
-    93.6,
-    1025.0
+    56.6,
+    1022.6,
+    93.7,
+    1038.6
    ],
    "handwritten": false
   },
@@ -1147,10 +1147,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    218.1,
-    1002.1,
-    247.5,
-    1028.9
+    220.4,
+    1018.3,
+    245.6,
+    1039.9
    ],
    "handwritten": true
   },
@@ -1166,22 +1166,22 @@
    "status": "present",
    "page": 0,
    "box": [
-    153.7,
+    163.4,
     223.4,
-    201.1,
-    239.5
+    210.8,
+    239.4
    ],
    "handwritten": false
   },
   "entries[12].service": {
-   "value": "Wundversorgung, chron. Wunde",
+   "value": "Wundversorgung, chronische Wunde",
    "status": "present",
    "page": 0,
    "box": [
-    153.7,
+    163.4,
     223.4,
-    201.1,
-    239.5
+    210.8,
+    239.4
    ],
    "handwritten": false
   },
@@ -1197,10 +1197,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    368.3,
-    1001.9,
-    392.1,
-    1026.8
+    370.3,
+    1018.1,
+    390.5,
+    1037.6
    ],
    "handwritten": true
   },
@@ -1216,10 +1216,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    368.3,
-    1001.9,
-    392.1,
-    1026.8
+    370.3,
+    1018.1,
+    390.5,
+    1037.6
    ],
    "handwritten": false
   },
@@ -1319,10 +1319,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    374.5,
-    1138.8,
-    487.8,
-    1175.2
+    374.6,
+    1152.2,
+    488.0,
+    1188.7
    ],
    "handwritten": true
   },
@@ -1331,10 +1331,10 @@
    "status": "empty",
    "page": 0,
    "box": [
-    777.0,
-    1083.3,
-    824.5,
-    1107.3
+    777.1,
+    1096.8,
+    824.6,
+    1120.8
    ],
    "handwritten": true
   },
@@ -1350,10 +1350,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    377.2,
-    1087.9,
-    441.8,
-    1154.2
+    375.6,
+    1109.4,
+    447.0,
+    1154.0
    ],
    "handwritten": false
   },
@@ -1362,10 +1362,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    1328.1,
-    1073.9,
-    1536.0,
-    1151.0
+    1327.6,
+    1105.1,
+    1542.1,
+    1161.9
    ],
    "handwritten": false
   }
@@ -1374,20 +1374,20 @@
   "patient_signature": {
    "page": 0,
    "box": [
-    377.2,
-    1087.9,
-    441.8,
-    1154.2
+    375.6,
+    1109.4,
+    447.0,
+    1154.0
    ],
    "state": "present"
   },
   "provider_signature": {
    "page": 0,
    "box": [
-    1328.1,
-    1073.9,
-    1536.0,
-    1151.0
+    1327.6,
+    1105.1,
+    1542.1,
+    1161.9
    ],
    "state": "present"
   }

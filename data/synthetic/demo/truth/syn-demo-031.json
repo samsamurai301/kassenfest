@@ -195,13 +195,13 @@
    "handwritten": false
   },
   "approved_items[0].description": {
-   "value": "Medikamentengabe",
+   "value": "Medikamentengabe (Verabreichen)",
    "status": "present",
    "page": 0,
    "box": [
     233.2,
-    875.1,
-    394.3,
+    874.7,
+    519.6,
     895.9
    ],
    "handwritten": false

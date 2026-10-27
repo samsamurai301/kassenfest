@@ -20,9 +20,9 @@
    "page": 0,
    "box": [
     57.2,
-    264.9,
+    264.8,
     98.9,
-    280.6
+    280.5
    ],
    "handwritten": false
   },
@@ -31,10 +31,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    204.6,
-    258.3,
-    262.3,
-    287.5
+    208.8,
+    261.0,
+    258.2,
+    284.6
    ],
    "handwritten": true
   },
@@ -50,21 +50,21 @@
    "status": "present",
    "page": 0,
    "box": [
-    200.5,
-    219.3,
-    247.8,
+    152.1,
+    219.2,
+    199.4,
     234.9
    ],
    "handwritten": false
   },
   "entries[0].service": {
-   "value": "Medikamentengabe",
+   "value": "Medikamentengabe (Verabreichen)",
    "status": "present",
    "page": 0,
    "box": [
-    200.5,
-    219.3,
-    247.8,
+    152.1,
+    219.2,
+    199.4,
     234.9
    ],
    "handwritten": false
@@ -81,10 +81,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    366.0,
-    257.9,
-    395.8,
-    286.4
+    368.4,
+    260.5,
+    393.7,
+    283.7
    ],
    "handwritten": true
   },
@@ -100,10 +100,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    366.0,
-    257.9,
-    395.8,
-    286.4
+    368.4,
+    260.5,
+    393.7,
+    283.7
    ],
    "handwritten": false
   },
@@ -113,9 +113,9 @@
    "page": 0,
    "box": [
     57.2,
-    264.9,
+    264.8,
     98.9,
-    280.6
+    280.5
    ],
    "handwritten": false
   },
@@ -124,10 +124,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    499.8,
-    257.9,
-    557.6,
-    286.7
+    504.0,
+    260.8,
+    553.4,
+    284.0
    ],
    "handwritten": true
   },
@@ -174,10 +174,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    661.9,
-    259.7,
-    690.6,
-    286.9
+    664.0,
+    262.4,
+    688.5,
+    284.0
    ],
    "handwritten": true
   },
@@ -193,10 +193,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    661.9,
-    259.7,
-    690.6,
-    286.9
+    664.0,
+    262.4,
+    688.5,
+    284.0
    ],
    "handwritten": false
   },
@@ -206,9 +206,9 @@
    "page": 0,
    "box": [
     57.1,
-    290.5,
+    290.2,
     94.1,
-    306.2
+    305.9
    ],
    "handwritten": false
   },
@@ -217,10 +217,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    207.6,
-    285.3,
-    259.3,
-    311.7
+    211.3,
+    287.6,
+    255.6,
+    308.5
    ],
    "handwritten": true
   },
@@ -236,21 +236,21 @@
    "status": "present",
    "page": 0,
    "box": [
-    200.5,
-    219.3,
-    247.8,
+    152.1,
+    219.2,
+    199.4,
     234.9
    ],
    "handwritten": false
   },
   "entries[2].service": {
-   "value": "Medikamentengabe",
+   "value": "Medikamentengabe (Verabreichen)",
    "status": "present",
    "page": 0,
    "box": [
-    200.5,
-    219.3,
-    247.8,
+    152.1,
+    219.2,
+    199.4,
     234.9
    ],
    "handwritten": false
@@ -267,10 +267,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    365.4,
-    284.1,
-    397.5,
-    311.5
+    367.7,
+    286.7,
+    395.1,
+    308.7
    ],
    "handwritten": true
   },
@@ -286,10 +286,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    365.4,
-    284.1,
-    397.5,
-    311.5
+    367.7,
+    286.7,
+    395.1,
+    308.7
    ],
    "handwritten": false
   },
@@ -299,9 +299,9 @@
    "page": 0,
    "box": [
     57.1,
-    290.5,
+    290.2,
     94.1,
-    306.2
+    305.9
    ],
    "handwritten": false
   },
@@ -310,10 +310,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    502.3,
-    283.8,
-    554.9,
-    314.3
+    506.1,
+    286.5,
+    551.1,
+    311.0
    ],
    "handwritten": true
   },
@@ -360,10 +360,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    660.7,
-    285.8,
-    692.1,
-    314.4
+    663.0,
+    288.1,
+    689.8,
+    311.3
    ],
    "handwritten": true
   },
@@ -379,10 +379,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    660.7,
-    285.8,
-    692.1,
-    314.4
+    663.0,
+    288.1,
+    689.8,
+    311.3
    ],
    "handwritten": false
   },
@@ -392,9 +392,9 @@
    "page": 0,
    "box": [
     57.1,
-    316.1,
+    315.6,
     98.1,
-    331.8
+    331.3
    ],
    "handwritten": false
   },
@@ -403,10 +403,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    211.1,
-    311.4,
-    256.2,
-    340.4
+    214.3,
+    313.5,
+    253.0,
+    337.3
    ],
    "handwritten": true
   },
@@ -422,21 +422,21 @@
    "status": "present",
    "page": 0,
    "box": [
-    200.5,
-    219.3,
-    247.8,
+    152.1,
+    219.2,
+    199.4,
     234.9
    ],
    "handwritten": false
   },
   "entries[4].service": {
-   "value": "Medikamentengabe",
+   "value": "Medikamentengabe (Verabreichen)",
    "status": "present",
    "page": 0,
    "box": [
-    200.5,
-    219.3,
-    247.8,
+    152.1,
+    219.2,
+    199.4,
     234.9
    ],
    "handwritten": false
@@ -453,10 +453,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    365.7,
-    308.7,
-    397.0,
-    337.3
+    367.9,
+    310.8,
+    394.6,
+    334.0
    ],
    "handwritten": true
   },
@@ -472,10 +472,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    365.7,
-    308.7,
-    397.0,
-    337.3
+    367.9,
+    310.8,
+    394.6,
+    334.0
    ],
    "handwritten": false
   },
@@ -485,9 +485,9 @@
    "page": 0,
    "box": [
     57.1,
-    316.1,
+    315.6,
     98.1,
-    331.8
+    331.3
    ],
    "handwritten": false
   },
@@ -496,10 +496,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    506.3,
-    310.1,
-    552.3,
-    338.9
+    509.5,
+    312.7,
+    548.9,
+    335.8
    ],
    "handwritten": true
   },
@@ -546,10 +546,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    661.2,
-    312.0,
-    692.1,
-    337.8
+    663.4,
+    314.2,
+    689.8,
+    334.6
    ],
    "handwritten": true
   },
@@ -565,10 +565,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    661.2,
-    312.0,
-    692.1,
-    337.8
+    663.4,
+    314.2,
+    689.8,
+    334.6
    ],
    "handwritten": false
   },
@@ -578,9 +578,9 @@
    "page": 0,
    "box": [
     57.1,
-    341.8,
+    341.0,
     98.1,
-    357.4
+    356.6
    ],
    "handwritten": false
   },
@@ -589,10 +589,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    204.0,
-    333.6,
-    262.8,
-    362.3
+    208.3,
+    335.5,
+    258.6,
+    359.0
    ],
    "handwritten": true
   },
@@ -608,21 +608,21 @@
    "status": "present",
    "page": 0,
    "box": [
-    200.5,
-    219.3,
-    247.8,
+    152.1,
+    219.2,
+    199.4,
     234.9
    ],
    "handwritten": false
   },
   "entries[6].service": {
-   "value": "Medikamentengabe",
+   "value": "Medikamentengabe (Verabreichen)",
    "status": "present",
    "page": 0,
    "box": [
-    200.5,
-    219.3,
-    247.8,
+    152.1,
+    219.2,
+    199.4,
     234.9
    ],
    "handwritten": false
@@ -639,10 +639,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    366.0,
-    336.2,
-    395.3,
-    363.3
+    368.3,
+    338.2,
+    393.3,
+    359.9
    ],
    "handwritten": true
   },
@@ -658,10 +658,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    366.0,
-    336.2,
-    395.3,
-    363.3
+    368.3,
+    338.2,
+    393.3,
+    359.9
    ],
    "handwritten": false
   },
@@ -671,9 +671,9 @@
    "page": 0,
    "box": [
     57.1,
-    341.8,
+    341.0,
     98.1,
-    357.4
+    356.6
    ],
    "handwritten": false
   },
@@ -682,10 +682,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    499.7,
-    334.3,
-    558.5,
-    366.1
+    503.9,
+    336.6,
+    554.3,
+    362.4
    ],
    "handwritten": true
   },
@@ -732,10 +732,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    662.3,
-    337.5,
-    690.1,
-    363.6
+    664.3,
+    339.4,
+    688.1,
+    360.3
    ],
    "handwritten": true
   },
@@ -751,10 +751,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    662.3,
-    337.5,
-    690.1,
-    363.6
+    664.3,
+    339.4,
+    688.1,
+    360.3
    ],
    "handwritten": false
   },
@@ -764,9 +764,9 @@
    "page": 0,
    "box": [
     57.1,
-    367.4,
+    366.4,
     100.4,
-    383.0
+    382.0
    ],
    "handwritten": false
   },
@@ -775,10 +775,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    207.8,
-    360.6,
-    258.7,
-    388.3
+    211.5,
+    362.6,
+    255.0,
+    384.6
    ],
    "handwritten": true
   },
@@ -794,21 +794,21 @@
    "status": "present",
    "page": 0,
    "box": [
-    200.5,
-    219.3,
-    247.8,
+    152.1,
+    219.2,
+    199.4,
     234.9
    ],
    "handwritten": false
   },
   "entries[8].service": {
-   "value": "Medikamentengabe",
+   "value": "Medikamentengabe (Verabreichen)",
    "status": "present",
    "page": 0,
    "box": [
-    200.5,
-    219.3,
-    247.8,
+    152.1,
+    219.2,
+    199.4,
     234.9
    ],
    "handwritten": false
@@ -825,10 +825,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    366.0,
-    362.6,
-    396.6,
-    387.7
+    368.1,
+    364.3,
+    394.3,
+    383.9
    ],
    "handwritten": true
   },
@@ -844,10 +844,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    366.0,
-    362.6,
-    396.6,
-    387.7
+    368.1,
+    364.3,
+    394.3,
+    383.9
    ],
    "handwritten": false
   },
@@ -857,9 +857,9 @@
    "page": 0,
    "box": [
     57.1,
-    367.4,
+    366.4,
     100.4,
-    383.0
+    382.0
    ],
    "handwritten": false
   },
@@ -868,10 +868,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    503.5,
-    361.9,
-    554.0,
-    390.7
+    507.1,
+    363.7,
+    550.3,
+    386.8
    ],
    "handwritten": true
   },
@@ -918,10 +918,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    661.1,
-    360.8,
-    692.5,
-    388.4
+    663.3,
+    362.8,
+    690.1,
+    384.9
    ],
    "handwritten": true
   },
@@ -937,10 +937,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    661.1,
-    360.8,
-    692.5,
-    388.4
+    663.3,
+    362.8,
+    690.1,
+    384.9
    ],
    "handwritten": false
   },
@@ -950,9 +950,9 @@
    "page": 0,
    "box": [
     57.1,
-    393.0,
+    391.8,
     94.1,
-    408.6
+    407.4
    ],
    "handwritten": false
   },
@@ -961,10 +961,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    210.4,
-    387.3,
-    256.2,
-    414.0
+    213.7,
+    388.9,
+    252.9,
+    410.1
    ],
    "handwritten": true
   },
@@ -980,21 +980,21 @@
    "status": "present",
    "page": 0,
    "box": [
-    200.5,
-    219.3,
-    247.8,
+    152.1,
+    219.2,
+    199.4,
     234.9
    ],
    "handwritten": false
   },
   "entries[10].service": {
-   "value": "Medikamentengabe",
+   "value": "Medikamentengabe (Verabreichen)",
    "status": "present",
    "page": 0,
    "box": [
-    200.5,
-    219.3,
-    247.8,
+    152.1,
+    219.2,
+    199.4,
     234.9
    ],
    "handwritten": false
@@ -1011,10 +1011,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    364.8,
-    385.9,
-    396.5,
-    413.0
+    367.2,
+    387.6,
+    394.2,
+    409.1
    ],
    "handwritten": true
   },
@@ -1030,10 +1030,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    364.8,
-    385.9,
-    396.5,
-    413.0
+    367.2,
+    387.6,
+    394.2,
+    409.1
    ],
    "handwritten": false
   },
@@ -1043,9 +1043,9 @@
    "page": 0,
    "box": [
     57.1,
-    393.0,
+    391.8,
     94.1,
-    408.6
+    407.4
    ],
    "handwritten": false
   },
@@ -1054,10 +1054,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    505.9,
-    386.3,
-    551.6,
-    414.1
+    509.2,
+    387.8,
+    548.3,
+    410.1
    ],
    "handwritten": true
   },
@@ -1104,10 +1104,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    660.7,
-    386.3,
-    692.3,
-    413.1
+    663.0,
+    387.9,
+    689.9,
+    409.2
    ],
    "handwritten": true
   },
@@ -1123,10 +1123,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    660.7,
-    386.3,
-    692.3,
-    413.1
+    663.0,
+    387.9,
+    689.9,
+    409.2
    ],
    "handwritten": false
   },
@@ -1136,9 +1136,9 @@
    "page": 0,
    "box": [
     57.1,
-    418.6,
+    417.2,
     95.6,
-    434.2
+    432.8
    ],
    "handwritten": false
   },
@@ -1147,10 +1147,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    210.2,
-    413.6,
-    257.0,
-    439.3
+    213.6,
+    414.8,
+    253.5,
+    435.1
    ],
    "handwritten": true
   },
@@ -1166,21 +1166,21 @@
    "status": "present",
    "page": 0,
    "box": [
-    200.5,
-    219.3,
-    247.8,
+    152.1,
+    219.2,
+    199.4,
     234.9
    ],
    "handwritten": false
   },
   "entries[12].service": {
-   "value": "Medikamentengabe",
+   "value": "Medikamentengabe (Verabreichen)",
    "status": "present",
    "page": 0,
    "box": [
-    200.5,
-    219.3,
-    247.8,
+    152.1,
+    219.2,
+    199.4,
     234.9
    ],
    "handwritten": false
@@ -1197,10 +1197,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    364.2,
-    411.2,
-    396.8,
-    438.8
+    366.7,
+    412.7,
+    394.5,
+    434.7
    ],
    "handwritten": true
   },
@@ -1216,10 +1216,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    364.2,
-    411.2,
-    396.8,
-    438.8
+    366.7,
+    412.7,
+    394.5,
+    434.7
    ],
    "handwritten": false
   },
@@ -1229,9 +1229,9 @@
    "page": 0,
    "box": [
     57.1,
-    418.6,
+    417.2,
     95.6,
-    434.2
+    432.8
    ],
    "handwritten": false
   },
@@ -1240,10 +1240,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    505.7,
-    412.0,
-    551.7,
-    441.2
+    509.0,
+    413.4,
+    548.4,
+    436.8
    ],
    "handwritten": true
   },
@@ -1290,10 +1290,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    659.9,
-    412.9,
-    691.9,
-    438.9
+    662.4,
+    414.2,
+    689.7,
+    434.7
    ],
    "handwritten": true
   },
@@ -1309,10 +1309,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    659.9,
-    412.9,
-    691.9,
-    438.9
+    662.4,
+    414.2,
+    689.7,
+    434.7
    ],
    "handwritten": false
   },
@@ -1322,9 +1322,9 @@
    "page": 0,
    "box": [
     57.1,
-    444.2,
+    442.6,
     98.8,
-    459.8
+    458.2
    ],
    "handwritten": false
   },
@@ -1333,10 +1333,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    207.5,
-    438.0,
-    257.4,
-    467.7
+    211.4,
+    439.3,
+    253.9,
+    463.2
    ],
    "handwritten": true
   },
@@ -1352,21 +1352,21 @@
    "status": "present",
    "page": 0,
    "box": [
-    200.5,
-    219.3,
-    247.8,
+    152.1,
+    219.2,
+    199.4,
     234.9
    ],
    "handwritten": false
   },
   "entries[14].service": {
-   "value": "Medikamentengabe",
+   "value": "Medikamentengabe (Verabreichen)",
    "status": "present",
    "page": 0,
    "box": [
-    200.5,
-    219.3,
-    247.8,
+    152.1,
+    219.2,
+    199.4,
     234.9
    ],
    "handwritten": false
@@ -1383,10 +1383,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    367.1,
-    438.5,
-    396.1,
-    467.6
+    369.1,
+    439.7,
+    393.9,
+    463.2
    ],
    "handwritten": true
   },
@@ -1402,10 +1402,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    367.1,
-    438.5,
-    396.1,
-    467.6
+    369.1,
+    439.7,
+    393.9,
+    463.2
    ],
    "handwritten": false
   },
@@ -1415,9 +1415,9 @@
    "page": 0,
    "box": [
     57.1,
-    444.2,
+    442.6,
     98.8,
-    459.8
+    458.2
    ],
    "handwritten": false
   },
@@ -1426,10 +1426,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    504.5,
-    438.4,
-    552.9,
-    466.1
+    508.0,
+    439.5,
+    549.4,
+    461.7
    ],
    "handwritten": true
   },
@@ -1476,10 +1476,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    661.4,
-    438.0,
-    691.9,
-    466.4
+    663.6,
+    439.2,
+    689.6,
+    461.8
    ],
    "handwritten": true
   },
@@ -1495,10 +1495,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    661.4,
-    438.0,
-    691.9,
-    466.4
+    663.6,
+    439.2,
+    689.6,
+    461.8
    ],
    "handwritten": false
   },
@@ -1508,9 +1508,9 @@
    "page": 0,
    "box": [
     57.1,
-    469.8,
+    468.0,
     94.1,
-    485.4
+    483.6
    ],
    "handwritten": false
   },
@@ -1519,10 +1519,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    203.5,
-    464.8,
-    264.6,
-    492.1
+    207.8,
+    465.7,
+    260.0,
+    487.3
    ],
    "handwritten": true
   },
@@ -1538,21 +1538,21 @@
    "status": "present",
    "page": 0,
    "box": [
-    200.5,
-    219.3,
-    247.8,
+    152.1,
+    219.2,
+    199.4,
     234.9
    ],
    "handwritten": false
   },
   "entries[16].service": {
-   "value": "Medikamentengabe",
+   "value": "Medikamentengabe (Verabreichen)",
    "status": "present",
    "page": 0,
    "box": [
-    200.5,
-    219.3,
-    247.8,
+    152.1,
+    219.2,
+    199.4,
     234.9
    ],
    "handwritten": false
@@ -1569,10 +1569,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    366.4,
-    464.8,
-    395.7,
-    492.2
+    368.5,
+    465.7,
+    393.6,
+    487.5
    ],
    "handwritten": true
   },
@@ -1588,10 +1588,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    366.4,
-    464.8,
-    395.7,
-    492.2
+    368.5,
+    465.7,
+    393.6,
+    487.5
    ],
    "handwritten": false
   },
@@ -1601,9 +1601,9 @@
    "page": 0,
    "box": [
     57.1,
-    469.8,
+    468.0,
     94.1,
-    485.4
+    483.6
    ],
    "handwritten": false
   },
@@ -1612,10 +1612,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    498.6,
-    465.4,
-    559.1,
-    492.7
+    502.9,
+    466.2,
+    554.7,
+    488.1
    ],
    "handwritten": true
   },
@@ -1662,10 +1662,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    662.0,
-    462.5,
-    691.2,
-    489.9
+    664.1,
+    463.7,
+    689.0,
+    485.4
    ],
    "handwritten": true
   },
@@ -1681,10 +1681,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    662.0,
-    462.5,
-    691.2,
-    489.9
+    664.1,
+    463.7,
+    689.0,
+    485.4
    ],
    "handwritten": false
   },
@@ -1694,9 +1694,9 @@
    "page": 0,
    "box": [
     57.1,
-    495.4,
+    493.3,
     98.0,
-    511.1
+    509.0
    ],
    "handwritten": false
   },
@@ -1705,10 +1705,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    207.0,
-    490.1,
-    259.2,
-    518.4
+    210.8,
+    490.9,
+    255.5,
+    513.4
    ],
    "handwritten": true
   },
@@ -1724,21 +1724,21 @@
    "status": "present",
    "page": 0,
    "box": [
-    200.5,
-    219.3,
-    247.8,
+    152.1,
+    219.2,
+    199.4,
     234.9
    ],
    "handwritten": false
   },
   "entries[18].service": {
-   "value": "Medikamentengabe",
+   "value": "Medikamentengabe (Verabreichen)",
    "status": "present",
    "page": 0,
    "box": [
-    200.5,
-    219.3,
-    247.8,
+    152.1,
+    219.2,
+    199.4,
     234.9
    ],
    "handwritten": false
@@ -1755,10 +1755,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    365.8,
-    490.8,
-    396.6,
-    515.4
+    368.0,
+    491.5,
+    394.3,
+    510.7
    ],
    "handwritten": true
   },
@@ -1774,10 +1774,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    365.8,
-    490.8,
-    396.6,
-    515.4
+    368.0,
+    491.5,
+    394.3,
+    510.7
    ],
    "handwritten": false
   },
@@ -1787,9 +1787,9 @@
    "page": 0,
    "box": [
     57.1,
-    495.4,
+    493.3,
     98.0,
-    511.1
+    509.0
    ],
    "handwritten": false
   },
@@ -1798,10 +1798,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    502.7,
-    487.2,
-    556.6,
-    517.6
+    506.5,
+    488.1,
+    552.5,
+    512.5
    ],
    "handwritten": true
   },
@@ -1848,10 +1848,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    660.1,
-    489.6,
-    692.4,
-    517.9
+    662.5,
+    490.1,
+    690.0,
+    512.9
    ],
    "handwritten": true
   },
@@ -1867,10 +1867,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    660.1,
-    489.6,
-    692.4,
-    517.9
+    662.5,
+    490.1,
+    690.0,
+    512.9
    ],
    "handwritten": false
   },
@@ -1880,9 +1880,9 @@
    "page": 0,
    "box": [
     57.0,
-    521.0,
+    518.7,
     96.9,
-    536.7
+    534.4
    ],
    "handwritten": false
   },
@@ -1891,10 +1891,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    209.5,
-    512.8,
-    256.0,
-    544.5
+    213.0,
+    513.5,
+    252.7,
+    539.3
    ],
    "handwritten": true
   },
@@ -1910,21 +1910,21 @@
    "status": "present",
    "page": 0,
    "box": [
-    200.5,
-    219.3,
-    247.8,
+    152.1,
+    219.2,
+    199.4,
     234.9
    ],
    "handwritten": false
   },
   "entries[20].service": {
-   "value": "Medikamentengabe",
+   "value": "Medikamentengabe (Verabreichen)",
    "status": "present",
    "page": 0,
    "box": [
-    200.5,
-    219.3,
-    247.8,
+    152.1,
+    219.2,
+    199.4,
     234.9
    ],
    "handwritten": false
@@ -1941,10 +1941,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    369.1,
-    515.8,
-    392.9,
-    543.5
+    370.9,
+    516.0,
+    391.2,
+    538.3
    ],
    "handwritten": true
   },
@@ -1960,10 +1960,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    369.1,
-    515.8,
-    392.9,
-    543.5
+    370.9,
+    516.0,
+    391.2,
+    538.3
    ],
    "handwritten": false
   },
@@ -1973,9 +1973,9 @@
    "page": 0,
    "box": [
     57.0,
-    521.0,
+    518.7,
     96.9,
-    536.7
+    534.4
    ],
    "handwritten": false
   },
@@ -1984,10 +1984,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    506.4,
-    513.6,
-    551.1,
-    542.1
+    509.6,
+    514.2,
+    547.8,
+    537.3
    ],
    "handwritten": true
   },
@@ -2034,10 +2034,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    664.0,
-    515.6,
-    687.8,
-    542.6
+    665.8,
+    516.1,
+    686.2,
+    537.6
    ],
    "handwritten": true
   },
@@ -2053,10 +2053,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    664.0,
-    515.6,
-    687.8,
-    542.6
+    665.8,
+    516.1,
+    686.2,
+    537.6
    ],
    "handwritten": false
   },
@@ -2066,9 +2066,9 @@
    "page": 0,
    "box": [
     57.0,
-    546.6,
+    544.1,
     100.3,
-    562.3
+    559.8
    ],
    "handwritten": false
   },
@@ -2077,10 +2077,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    204.6,
-    540.3,
-    262.9,
-    566.6
+    208.7,
+    540.5,
+    258.6,
+    561.4
    ],
    "handwritten": true
   },
@@ -2096,21 +2096,21 @@
    "status": "present",
    "page": 0,
    "box": [
-    200.5,
-    219.3,
-    247.8,
+    152.1,
+    219.2,
+    199.4,
     234.9
    ],
    "handwritten": false
   },
   "entries[22].service": {
-   "value": "Medikamentengabe",
+   "value": "Medikamentengabe (Verabreichen)",
    "status": "present",
    "page": 0,
    "box": [
-    200.5,
-    219.3,
-    247.8,
+    152.1,
+    219.2,
+    199.4,
     234.9
    ],
    "handwritten": false
@@ -2127,10 +2127,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    367.4,
+    369.4,
     541.9,
-    394.6,
-    567.8
+    392.7,
+    562.8
    ],
    "handwritten": true
   },
@@ -2146,10 +2146,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    367.4,
+    369.4,
     541.9,
-    394.6,
-    567.8
+    392.7,
+    562.8
    ],
    "handwritten": false
   },
@@ -2159,9 +2159,9 @@
    "page": 0,
    "box": [
     57.0,
-    546.6,
+    544.1,
     100.3,
-    562.3
+    559.8
    ],
    "handwritten": false
   },
@@ -2170,10 +2170,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    499.4,
-    538.5,
-    557.8,
-    566.7
+    503.6,
+    538.8,
+    553.6,
+    561.6
    ],
    "handwritten": true
   },
@@ -2220,10 +2220,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    662.3,
-    542.0,
-    691.2,
-    568.0
+    664.3,
+    542.3,
+    689.0,
+    562.8
    ],
    "handwritten": true
   },
@@ -2239,10 +2239,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    662.3,
-    542.0,
-    691.2,
-    568.0
+    664.3,
+    542.3,
+    689.0,
+    562.8
    ],
    "handwritten": false
   },
@@ -2252,9 +2252,9 @@
    "page": 0,
    "box": [
     57.0,
-    572.3,
+    569.5,
     94.0,
-    587.9
+    585.2
    ],
    "handwritten": false
   },
@@ -2263,10 +2263,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    203.9,
+    208.2,
     566.4,
-    263.5,
-    594.2
+    259.1,
+    588.7
    ],
    "handwritten": true
   },
@@ -2282,21 +2282,21 @@
    "status": "present",
    "page": 0,
    "box": [
-    200.5,
-    219.3,
-    247.8,
+    152.1,
+    219.2,
+    199.4,
     234.9
    ],
    "handwritten": false
   },
   "entries[24].service": {
-   "value": "Medikamentengabe",
+   "value": "Medikamentengabe (Verabreichen)",
    "status": "present",
    "page": 0,
    "box": [
-    200.5,
-    219.3,
-    247.8,
+    152.1,
+    219.2,
+    199.4,
     234.9
    ],
    "handwritten": false
@@ -2313,10 +2313,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    365.0,
-    566.6,
-    395.0,
-    594.5
+    367.5,
+    566.9,
+    393.0,
+    588.7
    ],
    "handwritten": true
   },
@@ -2332,10 +2332,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    365.0,
-    566.6,
-    395.0,
-    594.5
+    367.5,
+    566.9,
+    393.0,
+    588.7
    ],
    "handwritten": false
   },
@@ -2345,9 +2345,9 @@
    "page": 0,
    "box": [
     57.0,
-    572.3,
+    569.5,
     94.0,
-    587.9
+    585.2
    ],
    "handwritten": false
   },
@@ -2356,10 +2356,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    499.2,
-    564.9,
-    557.8,
-    594.9
+    503.5,
+    565.1,
+    553.6,
+    589.4
    ],
    "handwritten": true
   },
@@ -2406,10 +2406,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    662.5,
+    664.4,
     567.8,
-    690.3,
-    593.0
+    688.2,
+    587.6
    ],
    "handwritten": true
   },
@@ -2425,10 +2425,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    662.5,
+    664.4,
     567.8,
-    690.3,
-    593.0
+    688.2,
+    587.6
    ],
    "handwritten": false
   },
@@ -2438,9 +2438,9 @@
    "page": 0,
    "box": [
     57.0,
-    597.9,
+    594.9,
     95.6,
-    613.5
+    610.5
    ],
    "handwritten": false
   },
@@ -2449,10 +2449,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    204.8,
+    208.9,
     592.6,
-    262.0,
-    619.4
+    257.9,
+    613.6
    ],
    "handwritten": true
   },
@@ -2468,21 +2468,21 @@
    "status": "present",
    "page": 0,
    "box": [
-    200.5,
-    219.3,
-    247.8,
+    152.1,
+    219.2,
+    199.4,
     234.9
    ],
    "handwritten": false
   },
   "entries[26].service": {
-   "value": "Medikamentengabe",
+   "value": "Medikamentengabe (Verabreichen)",
    "status": "present",
    "page": 0,
    "box": [
-    200.5,
-    219.3,
-    247.8,
+    152.1,
+    219.2,
+    199.4,
     234.9
    ],
    "handwritten": false
@@ -2499,10 +2499,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    367.2,
-    593.8,
-    395.1,
-    618.7
+    369.2,
+    593.4,
+    393.0,
+    613.1
    ],
    "handwritten": true
   },
@@ -2518,10 +2518,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    367.2,
-    593.8,
-    395.1,
-    618.7
+    369.2,
+    593.4,
+    393.0,
+    613.1
    ],
    "handwritten": false
   },
@@ -2531,9 +2531,9 @@
    "page": 0,
    "box": [
     57.0,
-    597.9,
+    594.9,
     95.6,
-    613.5
+    610.5
    ],
    "handwritten": false
   },
@@ -2542,10 +2542,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    499.4,
-    592.0,
-    557.7,
-    619.6
+    503.7,
+    591.8,
+    553.5,
+    614.0
    ],
    "handwritten": true
   },
@@ -2592,10 +2592,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    661.8,
-    591.1,
-    690.5,
-    620.3
+    663.9,
+    591.0,
+    688.4,
+    614.4
    ],
    "handwritten": true
   },
@@ -2611,10 +2611,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    661.8,
-    591.1,
-    690.5,
-    620.3
+    663.9,
+    591.0,
+    688.4,
+    614.4
    ],
    "handwritten": false
   },
@@ -2624,9 +2624,9 @@
    "page": 0,
    "box": [
     57.0,
-    623.5,
+    620.3,
     98.7,
-    639.1
+    635.9
    ],
    "handwritten": false
   },
@@ -2635,10 +2635,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    208.7,
-    616.2,
-    258.2,
-    645.9
+    212.2,
+    616.1,
+    254.6,
+    640.2
    ],
    "handwritten": true
   },
@@ -2654,21 +2654,21 @@
    "status": "present",
    "page": 0,
    "box": [
-    200.5,
-    219.3,
-    247.8,
+    152.1,
+    219.2,
+    199.4,
     234.9
    ],
    "handwritten": false
   },
   "entries[28].service": {
-   "value": "Medikamentengabe",
+   "value": "Medikamentengabe (Verabreichen)",
    "status": "present",
    "page": 0,
    "box": [
-    200.5,
-    219.3,
-    247.8,
+    152.1,
+    219.2,
+    199.4,
     234.9
    ],
    "handwritten": false
@@ -2685,10 +2685,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    366.8,
-    618.8,
-    394.9,
-    644.8
+    368.9,
+    618.3,
+    392.9,
+    638.9
    ],
    "handwritten": true
   },
@@ -2704,10 +2704,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    366.8,
-    618.8,
-    394.9,
-    644.8
+    368.9,
+    618.3,
+    392.9,
+    638.9
    ],
    "handwritten": false
   },
@@ -2717,9 +2717,9 @@
    "page": 0,
    "box": [
     57.0,
-    623.5,
+    620.3,
     98.7,
-    639.1
+    635.9
    ],
    "handwritten": false
   },
@@ -2728,10 +2728,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    503.9,
-    617.2,
-    554.1,
-    644.7
+    507.5,
+    616.6,
+    550.4,
+    638.9
    ],
    "handwritten": true
   },
@@ -2778,10 +2778,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    661.9,
-    616.1,
-    690.3,
-    645.9
+    664.0,
+    615.7,
+    688.2,
+    639.9
    ],
    "handwritten": true
   },
@@ -2797,10 +2797,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    661.9,
-    616.1,
-    690.3,
-    645.9
+    664.0,
+    615.7,
+    688.2,
+    639.9
    ],
    "handwritten": false
   },
@@ -2810,9 +2810,9 @@
    "page": 0,
    "box": [
     57.0,
-    649.1,
+    645.7,
     94.0,
-    664.7
+    661.3
    ],
    "handwritten": false
   },
@@ -2821,10 +2821,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    206.9,
-    644.5,
-    259.8,
-    670.3
+    210.8,
+    643.8,
+    255.9,
+    664.1
    ],
    "handwritten": true
   },
@@ -2840,21 +2840,21 @@
    "status": "present",
    "page": 0,
    "box": [
-    200.5,
-    219.3,
-    247.8,
+    152.1,
+    219.2,
+    199.4,
     234.9
    ],
    "handwritten": false
   },
   "entries[30].service": {
-   "value": "Medikamentengabe",
+   "value": "Medikamentengabe (Verabreichen)",
    "status": "present",
    "page": 0,
    "box": [
-    200.5,
-    219.3,
-    247.8,
+    152.1,
+    219.2,
+    199.4,
     234.9
    ],
    "handwritten": false
@@ -2871,10 +2871,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    365.6,
-    644.3,
-    396.4,
-    670.3
+    367.8,
+    643.6,
+    394.2,
+    664.2
    ],
    "handwritten": true
   },
@@ -2890,10 +2890,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    365.6,
-    644.3,
-    396.4,
-    670.3
+    367.8,
+    643.6,
+    394.2,
+    664.2
    ],
    "handwritten": false
   },
@@ -2903,9 +2903,9 @@
    "page": 0,
    "box": [
     57.0,
-    649.1,
+    645.7,
     94.0,
-    664.7
+    661.3
    ],
    "handwritten": false
   },
@@ -2914,10 +2914,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    502.5,
-    642.7,
-    554.2,
-    670.8
+    506.3,
+    642.2,
+    550.5,
+    664.7
    ],
    "handwritten": true
   },
@@ -2964,10 +2964,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    660.8,
-    644.9,
-    691.4,
-    669.7
+    663.0,
+    644.1,
+    689.3,
+    663.6
    ],
    "handwritten": true
   },
@@ -2983,10 +2983,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    660.8,
-    644.9,
-    691.4,
-    669.7
+    663.0,
+    644.1,
+    689.3,
+    663.6
    ],
    "handwritten": false
   },
@@ -2996,9 +2996,9 @@
    "page": 0,
    "box": [
     57.0,
-    674.7,
+    671.1,
     97.9,
-    690.3
+    686.7
    ],
    "handwritten": false
   },
@@ -3007,10 +3007,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    210.7,
-    668.2,
-    255.7,
-    695.2
+    214.0,
+    667.4,
+    252.5,
+    688.9
    ],
    "handwritten": true
   },
@@ -3026,21 +3026,21 @@
    "status": "present",
    "page": 0,
    "box": [
-    200.5,
-    219.3,
-    247.8,
+    152.1,
+    219.2,
+    199.4,
     234.9
    ],
    "handwritten": false
   },
   "entries[32].service": {
-   "value": "Medikamentengabe",
+   "value": "Medikamentengabe (Verabreichen)",
    "status": "present",
    "page": 0,
    "box": [
-    200.5,
-    219.3,
-    247.8,
+    152.1,
+    219.2,
+    199.4,
     234.9
    ],
    "handwritten": false
@@ -3057,10 +3057,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    369.2,
-    669.6,
-    392.3,
-    696.7
+    371.0,
+    668.6,
+    390.7,
+    690.4
    ],
    "handwritten": true
   },
@@ -3076,10 +3076,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    369.2,
-    669.6,
-    392.3,
-    696.7
+    371.0,
+    668.6,
+    390.7,
+    690.4
    ],
    "handwritten": false
   },
@@ -3089,9 +3089,9 @@
    "page": 0,
    "box": [
     57.0,
-    674.7,
+    671.1,
     97.9,
-    690.3
+    686.7
    ],
    "handwritten": false
   },
@@ -3100,10 +3100,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    505.9,
-    667.0,
-    551.2,
-    695.6
+    509.2,
+    666.2,
+    547.9,
+    689.4
    ],
    "handwritten": true
   },
@@ -3150,10 +3150,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    664.6,
-    669.6,
-    689.1,
-    696.6
+    666.3,
+    668.6,
+    687.2,
+    690.2
    ],
    "handwritten": true
   },
@@ -3169,10 +3169,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    664.6,
-    669.6,
-    689.1,
-    696.6
+    666.3,
+    668.6,
+    687.2,
+    690.2
    ],
    "handwritten": false
   },
@@ -3182,9 +3182,9 @@
    "page": 0,
    "box": [
     57.0,
-    700.3,
+    696.5,
     97.9,
-    715.9
+    712.1
    ],
    "handwritten": false
   },
@@ -3193,10 +3193,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    210.4,
-    691.7,
-    255.9,
-    720.2
+    213.7,
+    690.7,
+    252.6,
+    713.7
    ],
    "handwritten": true
   },
@@ -3212,21 +3212,21 @@
    "status": "present",
    "page": 0,
    "box": [
-    200.5,
-    219.3,
-    247.8,
+    152.1,
+    219.2,
+    199.4,
     234.9
    ],
    "handwritten": false
   },
   "entries[34].service": {
-   "value": "Medikamentengabe",
+   "value": "Medikamentengabe (Verabreichen)",
    "status": "present",
    "page": 0,
    "box": [
-    200.5,
-    219.3,
-    247.8,
+    152.1,
+    219.2,
+    199.4,
     234.9
    ],
    "handwritten": false
@@ -3243,10 +3243,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    369.4,
-    695.1,
-    392.5,
-    721.1
+    371.1,
+    694.0,
+    390.9,
+    714.6
    ],
    "handwritten": true
   },
@@ -3262,10 +3262,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    369.4,
-    695.1,
-    392.5,
-    721.1
+    371.1,
+    694.0,
+    390.9,
+    714.6
    ],
    "handwritten": false
   },
@@ -3275,9 +3275,9 @@
    "page": 0,
    "box": [
     57.0,
-    700.3,
+    696.5,
     97.9,
-    715.9
+    712.1
    ],
    "handwritten": false
   },
@@ -3286,10 +3286,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    506.1,
-    693.3,
-    551.1,
-    721.2
+    509.3,
+    692.4,
+    547.8,
+    714.8
    ],
    "handwritten": true
   },
@@ -3336,10 +3336,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    663.0,
-    693.8,
-    687.9,
-    721.3
+    665.0,
+    692.9,
+    686.2,
+    715.0
    ],
    "handwritten": true
   },
@@ -3355,10 +3355,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    663.0,
-    693.8,
-    687.9,
-    721.3
+    665.0,
+    692.9,
+    686.2,
+    715.0
    ],
    "handwritten": false
   },
@@ -3368,9 +3368,9 @@
    "page": 0,
    "box": [
     57.0,
-    725.9,
+    721.9,
     100.2,
-    741.6
+    737.5
    ],
    "handwritten": false
   },
@@ -3379,10 +3379,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    207.1,
-    719.9,
-    259.6,
-    747.7
+    210.9,
+    718.6,
+    255.8,
+    740.8
    ],
    "handwritten": true
   },
@@ -3398,21 +3398,21 @@
    "status": "present",
    "page": 0,
    "box": [
-    200.5,
-    219.3,
-    247.8,
+    152.1,
+    219.2,
+    199.4,
     234.9
    ],
    "handwritten": false
   },
   "entries[36].service": {
-   "value": "Medikamentengabe",
+   "value": "Medikamentengabe (Verabreichen)",
    "status": "present",
    "page": 0,
    "box": [
-    200.5,
-    219.3,
-    247.8,
+    152.1,
+    219.2,
+    199.4,
     234.9
    ],
    "handwritten": false
@@ -3429,10 +3429,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    365.7,
-    720.1,
-    396.3,
-    747.8
+    367.9,
+    718.7,
+    394.1,
+    741.1
    ],
    "handwritten": true
   },
@@ -3448,10 +3448,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    365.7,
-    720.1,
-    396.3,
-    747.8
+    367.9,
+    718.7,
+    394.1,
+    741.1
    ],
    "handwritten": false
   },
@@ -3461,9 +3461,9 @@
    "page": 0,
    "box": [
     57.0,
-    725.9,
+    721.9,
     100.2,
-    741.6
+    737.5
    ],
    "handwritten": false
   },
@@ -3472,10 +3472,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    502.7,
-    721.9,
-    555.6,
-    748.6
+    506.4,
+    720.2,
+    551.6,
+    741.8
    ],
    "handwritten": true
   },
@@ -3522,10 +3522,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    660.7,
-    720.7,
-    691.5,
-    746.5
+    663.0,
+    719.0,
+    689.2,
+    739.7
    ],
    "handwritten": true
   },
@@ -3541,10 +3541,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    660.7,
-    720.7,
-    691.5,
-    746.5
+    663.0,
+    719.0,
+    689.2,
+    739.7
    ],
    "handwritten": false
   },
@@ -3554,9 +3554,9 @@
    "page": 0,
    "box": [
     56.9,
-    751.5,
+    747.3,
     93.9,
-    767.2
+    762.9
    ],
    "handwritten": false
   },
@@ -3565,10 +3565,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    209.8,
-    745.6,
-    255.7,
-    771.5
+    213.3,
+    744.1,
+    252.4,
+    764.5
    ],
    "handwritten": true
   },
@@ -3584,21 +3584,21 @@
    "status": "present",
    "page": 0,
    "box": [
-    200.5,
-    219.3,
-    247.8,
+    152.1,
+    219.2,
+    199.4,
     234.9
    ],
    "handwritten": false
   },
   "entries[38].service": {
-   "value": "Medikamentengabe",
+   "value": "Medikamentengabe (Verabreichen)",
    "status": "present",
    "page": 0,
    "box": [
-    200.5,
-    219.3,
-    247.8,
+    152.1,
+    219.2,
+    199.4,
     234.9
    ],
    "handwritten": false
@@ -3615,10 +3615,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    369.1,
-    746.2,
-    393.4,
-    773.6
+    370.9,
+    744.8,
+    391.5,
+    766.8
    ],
    "handwritten": true
   },
@@ -3634,10 +3634,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    369.1,
-    746.2,
-    393.4,
-    773.6
+    370.9,
+    744.8,
+    391.5,
+    766.8
    ],
    "handwritten": false
   },
@@ -3647,9 +3647,9 @@
    "page": 0,
    "box": [
     56.9,
-    751.5,
+    747.3,
     93.9,
-    767.2
+    762.9
    ],
    "handwritten": false
   },
@@ -3658,10 +3658,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    505.6,
-    743.1,
-    551.4,
-    771.7
+    508.9,
+    741.8,
+    548.1,
+    765.0
    ],
    "handwritten": true
   },
@@ -3708,10 +3708,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    664.3,
-    745.7,
-    688.1,
-    772.1
+    666.0,
+    744.3,
+    686.4,
+    765.1
    ],
    "handwritten": true
   },
@@ -3727,10 +3727,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    664.3,
-    745.7,
-    688.1,
-    772.1
+    666.0,
+    744.3,
+    686.4,
+    765.1
    ],
    "handwritten": false
   },
@@ -3740,9 +3740,9 @@
    "page": 0,
    "box": [
     56.9,
-    777.1,
+    772.6,
     95.5,
-    792.8
+    788.3
    ],
    "handwritten": false
   },
@@ -3751,10 +3751,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    209.9,
-    771.0,
-    255.5,
-    799.0
+    213.3,
+    769.2,
+    252.3,
+    791.9
    ],
    "handwritten": true
   },
@@ -3770,21 +3770,21 @@
    "status": "present",
    "page": 0,
    "box": [
-    200.5,
-    219.3,
-    247.8,
+    152.1,
+    219.2,
+    199.4,
     234.9
    ],
    "handwritten": false
   },
   "entries[40].service": {
-   "value": "Medikamentengabe",
+   "value": "Medikamentengabe (Verabreichen)",
    "status": "present",
    "page": 0,
    "box": [
-    200.5,
-    219.3,
-    247.8,
+    152.1,
+    219.2,
+    199.4,
     234.9
    ],
    "handwritten": false
@@ -3801,10 +3801,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    365.3,
-    772.7,
-    396.3,
-    798.6
+    367.5,
+    770.9,
+    394.1,
+    791.3
    ],
    "handwritten": true
   },
@@ -3820,10 +3820,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    365.3,
-    772.7,
-    396.3,
-    798.6
+    367.5,
+    770.9,
+    394.1,
+    791.3
    ],
    "handwritten": false
   },
@@ -3833,9 +3833,9 @@
    "page": 0,
    "box": [
     56.9,
-    777.1,
+    772.6,
     95.5,
-    792.8
+    788.3
    ],
    "handwritten": false
   },
@@ -3844,10 +3844,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    506.5,
-    770.2,
-    551.2,
-    798.5
+    509.7,
+    768.5,
+    547.9,
+    791.3
    ],
    "handwritten": true
   },
@@ -3894,10 +3894,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    660.5,
-    772.1,
-    691.9,
-    798.9
+    662.8,
+    770.4,
+    689.6,
+    791.7
    ],
    "handwritten": true
   },
@@ -3913,10 +3913,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    660.5,
-    772.1,
-    691.9,
-    798.9
+    662.8,
+    770.4,
+    689.6,
+    791.7
    ],
    "handwritten": false
   },
@@ -3926,9 +3926,9 @@
    "page": 0,
    "box": [
     56.9,
-    802.7,
-    98.6,
-    818.4
+    798.0,
+    98.7,
+    813.7
    ],
    "handwritten": false
   },
@@ -3937,10 +3937,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    206.2,
-    795.7,
-    260.1,
-    825.7
+    210.2,
+    793.5,
+    256.2,
+    818.1
    ],
    "handwritten": true
   },
@@ -3956,21 +3956,21 @@
    "status": "present",
    "page": 0,
    "box": [
-    200.5,
-    219.3,
-    247.8,
+    152.1,
+    219.2,
+    199.4,
     234.9
    ],
    "handwritten": false
   },
   "entries[42].service": {
-   "value": "Medikamentengabe",
+   "value": "Medikamentengabe (Verabreichen)",
    "status": "present",
    "page": 0,
    "box": [
-    200.5,
-    219.3,
-    247.8,
+    152.1,
+    219.2,
+    199.4,
     234.9
    ],
    "handwritten": false
@@ -3987,10 +3987,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    365.7,
-    796.4,
-    396.4,
-    822.7
+    367.9,
+    794.5,
+    394.1,
+    815.4
    ],
    "handwritten": true
   },
@@ -4006,10 +4006,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    365.7,
-    796.4,
-    396.4,
-    822.7
+    367.9,
+    794.5,
+    394.1,
+    815.4
    ],
    "handwritten": false
   },
@@ -4019,9 +4019,9 @@
    "page": 0,
    "box": [
     56.9,
-    802.7,
-    98.6,
-    818.4
+    798.0,
+    98.7,
+    813.7
    ],
    "handwritten": false
   },
@@ -4030,10 +4030,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    502.2,
-    797.0,
-    555.0,
-    823.3
+    506.0,
+    794.9,
+    551.2,
+    816.0
    ],
    "handwritten": true
   },
@@ -4080,10 +4080,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    660.9,
-    795.5,
-    691.7,
-    824.6
+    663.1,
+    793.6,
+    689.5,
+    817.1
    ],
    "handwritten": true
   },
@@ -4099,10 +4099,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    660.9,
-    795.5,
-    691.7,
-    824.6
+    663.1,
+    793.6,
+    689.5,
+    817.1
    ],
    "handwritten": false
   },
@@ -4112,9 +4112,9 @@
    "page": 0,
    "box": [
     56.9,
-    828.4,
+    823.4,
     93.9,
-    844.0
+    839.1
    ],
    "handwritten": false
   },
@@ -4123,10 +4123,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    204.6,
-    821.1,
-    261.9,
-    852.3
+    208.8,
+    818.9,
+    257.8,
+    844.4
    ],
    "handwritten": true
   },
@@ -4142,21 +4142,21 @@
    "status": "present",
    "page": 0,
    "box": [
-    200.5,
-    219.3,
-    247.8,
+    152.1,
+    219.2,
+    199.4,
     234.9
    ],
    "handwritten": false
   },
   "entries[44].service": {
-   "value": "Medikamentengabe",
+   "value": "Medikamentengabe (Verabreichen)",
    "status": "present",
    "page": 0,
    "box": [
-    200.5,
-    219.3,
-    247.8,
+    152.1,
+    219.2,
+    199.4,
     234.9
    ],
    "handwritten": false
@@ -4173,10 +4173,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    367.1,
-    824.0,
-    394.6,
-    849.0
+    369.2,
+    821.8,
+    392.7,
+    841.5
    ],
    "handwritten": true
   },
@@ -4192,10 +4192,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    367.1,
-    824.0,
-    394.6,
-    849.0
+    369.2,
+    821.8,
+    392.7,
+    841.5
    ],
    "handwritten": false
   },
@@ -4205,9 +4205,9 @@
    "page": 0,
    "box": [
     56.9,
-    828.4,
+    823.4,
     93.9,
-    844.0
+    839.1
    ],
    "handwritten": false
   },
@@ -4216,10 +4216,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    499.8,
-    824.3,
-    556.5,
-    851.3
+    504.0,
+    822.0,
+    552.5,
+    843.5
    ],
    "handwritten": true
   },
@@ -4266,10 +4266,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    662.4,
-    824.4,
-    690.2,
-    851.9
+    664.3,
+    822.1,
+    688.1,
+    844.3
    ],
    "handwritten": true
   },
@@ -4285,10 +4285,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    662.4,
-    824.4,
-    690.2,
-    851.9
+    664.3,
+    822.1,
+    688.1,
+    844.3
    ],
    "handwritten": false
   },
@@ -4298,9 +4298,9 @@
    "page": 0,
    "box": [
     56.9,
-    854.0,
+    848.8,
     97.8,
-    869.6
+    864.5
    ],
    "handwritten": false
   },
@@ -4309,10 +4309,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    210.4,
-    847.7,
-    256.8,
-    876.2
+    213.7,
+    845.3,
+    253.4,
+    868.4
    ],
    "handwritten": true
   },
@@ -4328,21 +4328,21 @@
    "status": "present",
    "page": 0,
    "box": [
-    200.5,
-    219.3,
-    247.8,
+    152.1,
+    219.2,
+    199.4,
     234.9
    ],
    "handwritten": false
   },
   "entries[46].service": {
-   "value": "Medikamentengabe",
+   "value": "Medikamentengabe (Verabreichen)",
    "status": "present",
    "page": 0,
    "box": [
-    200.5,
-    219.3,
-    247.8,
+    152.1,
+    219.2,
+    199.4,
     234.9
    ],
    "handwritten": false
@@ -4359,10 +4359,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    365.8,
-    849.8,
-    396.1,
-    875.2
+    367.9,
+    847.3,
+    393.9,
+    867.5
    ],
    "handwritten": true
   },
@@ -4378,10 +4378,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    365.8,
-    849.8,
-    396.1,
-    875.2
+    367.9,
+    847.3,
+    393.9,
+    867.5
    ],
    "handwritten": false
   },
@@ -4391,9 +4391,9 @@
    "page": 0,
    "box": [
     56.9,
-    854.0,
+    848.8,
     97.8,
-    869.6
+    864.5
    ],
    "handwritten": false
   },
@@ -4402,10 +4402,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    504.5,
-    846.3,
-    551.5,
-    875.6
+    508.0,
+    843.8,
+    548.2,
+    867.8
    ],
    "handwritten": true
   },
@@ -4452,10 +4452,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    659.1,
-    849.2,
-    692.3,
-    876.4
+    661.7,
+    847.0,
+    690.0,
+    868.4
    ],
    "handwritten": true
   },
@@ -4471,10 +4471,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    659.1,
-    849.2,
-    692.3,
-    876.4
+    661.7,
+    847.0,
+    690.0,
+    868.4
    ],
    "handwritten": false
   },
@@ -4484,9 +4484,9 @@
    "page": 0,
    "box": [
     56.9,
-    879.6,
+    874.2,
     97.8,
-    895.2
+    889.8
    ],
    "handwritten": false
   },
@@ -4495,10 +4495,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    210.7,
-    871.3,
-    256.0,
-    900.9
+    214.0,
+    868.9,
+    252.6,
+    893.1
    ],
    "handwritten": true
   },
@@ -4514,21 +4514,21 @@
    "status": "present",
    "page": 0,
    "box": [
-    200.5,
-    219.3,
-    247.8,
+    152.1,
+    219.2,
+    199.4,
     234.9
    ],
    "handwritten": false
   },
   "entries[48].service": {
-   "value": "Medikamentengabe",
+   "value": "Medikamentengabe (Verabreichen)",
    "status": "present",
    "page": 0,
    "box": [
-    200.5,
-    219.3,
-    247.8,
+    152.1,
+    219.2,
+    199.4,
     234.9
    ],
    "handwritten": false
@@ -4545,10 +4545,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    369.1,
-    874.4,
-    393.4,
-    902.2
+    370.8,
+    871.8,
+    391.6,
+    894.2
    ],
    "handwritten": true
   },
@@ -4564,10 +4564,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    369.1,
-    874.4,
-    393.4,
-    902.2
+    370.8,
+    871.8,
+    391.6,
+    894.2
    ],
    "handwritten": false
   },
@@ -4577,9 +4577,9 @@
    "page": 0,
    "box": [
     56.9,
-    879.6,
+    874.2,
     97.8,
-    895.2
+    889.8
    ],
    "handwritten": false
   },
@@ -4588,10 +4588,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    505.7,
-    870.7,
-    551.1,
-    901.3
+    509.0,
+    868.1,
+    547.8,
+    893.0
    ],
    "handwritten": true
   },
@@ -4638,10 +4638,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    664.2,
-    872.4,
-    688.0,
-    901.4
+    666.0,
+    869.9,
+    686.3,
+    893.5
    ],
    "handwritten": true
   },
@@ -4657,10 +4657,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    664.2,
-    872.4,
-    688.0,
-    901.4
+    666.0,
+    869.9,
+    686.3,
+    893.5
    ],
    "handwritten": false
   },
@@ -4670,9 +4670,9 @@
    "page": 0,
    "box": [
     56.9,
-    905.2,
+    899.6,
     100.2,
-    920.8
+    915.2
    ],
    "handwritten": false
   },
@@ -4681,10 +4681,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    207.8,
-    899.0,
-    259.6,
-    926.7
+    211.5,
+    896.1,
+    255.7,
+    918.2
    ],
    "handwritten": true
   },
@@ -4700,21 +4700,21 @@
    "status": "present",
    "page": 0,
    "box": [
-    200.5,
-    219.3,
-    247.8,
+    152.1,
+    219.2,
+    199.4,
     234.9
    ],
    "handwritten": false
   },
   "entries[50].service": {
-   "value": "Medikamentengabe",
+   "value": "Medikamentengabe (Verabreichen)",
    "status": "present",
    "page": 0,
    "box": [
-    200.5,
-    219.3,
-    247.8,
+    152.1,
+    219.2,
+    199.4,
     234.9
    ],
    "handwritten": false
@@ -4731,10 +4731,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    364.8,
-    900.5,
-    396.0,
-    927.0
+    367.2,
+    897.4,
+    393.9,
+    918.5
    ],
    "handwritten": true
   },
@@ -4750,10 +4750,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    364.8,
-    900.5,
-    396.0,
-    927.0
+    367.2,
+    897.4,
+    393.9,
+    918.5
    ],
    "handwritten": false
   },
@@ -4763,9 +4763,9 @@
    "page": 0,
    "box": [
     56.9,
-    905.2,
+    899.6,
     100.2,
-    920.8
+    915.2
    ],
    "handwritten": false
   },
@@ -4774,10 +4774,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    503.4,
-    899.0,
-    554.7,
-    927.5
+    507.0,
+    896.4,
+    550.9,
+    919.2
    ],
    "handwritten": true
   },
@@ -4824,10 +4824,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    660.8,
-    901.3,
-    691.4,
-    927.4
+    663.0,
+    898.3,
+    689.3,
+    919.4
    ],
    "handwritten": true
   },
@@ -4843,10 +4843,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    660.8,
-    901.3,
-    691.4,
-    927.4
+    663.0,
+    898.3,
+    689.3,
+    919.4
    ],
    "handwritten": false
   },
@@ -4856,9 +4856,9 @@
    "page": 0,
    "box": [
     56.9,
-    930.8,
+    925.0,
     93.9,
-    946.4
+    940.6
    ],
    "handwritten": false
   },
@@ -4867,10 +4867,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    202.8,
-    923.7,
-    262.9,
-    953.4
+    207.2,
+    920.6,
+    258.6,
+    944.8
    ],
    "handwritten": true
   },
@@ -4886,21 +4886,21 @@
    "status": "present",
    "page": 0,
    "box": [
-    200.5,
-    219.3,
-    247.8,
+    152.1,
+    219.2,
+    199.4,
     234.9
    ],
    "handwritten": false
   },
   "entries[52].service": {
-   "value": "Medikamentengabe",
+   "value": "Medikamentengabe (Verabreichen)",
    "status": "present",
    "page": 0,
    "box": [
-    200.5,
-    219.3,
-    247.8,
+    152.1,
+    219.2,
+    199.4,
     234.9
    ],
    "handwritten": false
@@ -4917,10 +4917,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    366.2,
-    923.2,
-    395.1,
-    953.0
+    368.4,
+    920.2,
+    393.0,
+    944.3
    ],
    "handwritten": true
   },
@@ -4936,10 +4936,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    366.2,
-    923.2,
-    395.1,
-    953.0
+    368.4,
+    920.2,
+    393.0,
+    944.3
    ],
    "handwritten": false
   },
@@ -4949,9 +4949,9 @@
    "page": 0,
    "box": [
     56.9,
-    930.8,
+    925.0,
     93.9,
-    946.4
+    940.6
    ],
    "handwritten": false
   },
@@ -4960,10 +4960,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    498.5,
-    924.5,
-    558.4,
-    951.1
+    502.8,
+    921.5,
+    554.1,
+    942.6
    ],
    "handwritten": true
   },
@@ -5010,10 +5010,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    661.6,
-    926.4,
-    690.8,
-    952.6
+    663.8,
+    923.2,
+    688.6,
+    944.0
    ],
    "handwritten": true
   },
@@ -5029,10 +5029,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    661.6,
-    926.4,
-    690.8,
-    952.6
+    663.8,
+    923.2,
+    688.6,
+    944.0
    ],
    "handwritten": false
   },
@@ -5042,9 +5042,9 @@
    "page": 0,
    "box": [
     56.9,
-    956.4,
+    950.4,
     95.4,
-    972.0
+    966.0
    ],
    "handwritten": false
   },
@@ -5053,10 +5053,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    210.2,
-    949.4,
-    255.8,
-    977.1
+    213.6,
+    946.5,
+    252.5,
+    968.6
    ],
    "handwritten": true
   },
@@ -5072,21 +5072,21 @@
    "status": "present",
    "page": 0,
    "box": [
-    200.5,
-    219.3,
-    247.8,
+    152.1,
+    219.2,
+    199.4,
     234.9
    ],
    "handwritten": false
   },
   "entries[54].service": {
-   "value": "Medikamentengabe",
+   "value": "Medikamentengabe (Verabreichen)",
    "status": "present",
    "page": 0,
    "box": [
-    200.5,
-    219.3,
-    247.8,
+    152.1,
+    219.2,
+    199.4,
     234.9
    ],
    "handwritten": false
@@ -5103,10 +5103,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    368.9,
-    951.7,
-    393.0,
-    978.4
+    370.7,
+    948.4,
+    391.3,
+    969.6
    ],
    "handwritten": true
   },
@@ -5122,10 +5122,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    368.9,
-    951.7,
-    393.0,
-    978.4
+    370.7,
+    948.4,
+    391.3,
+    969.6
    ],
    "handwritten": false
   },
@@ -5135,9 +5135,9 @@
    "page": 0,
    "box": [
     56.9,
-    956.4,
+    950.4,
     95.4,
-    972.0
+    966.0
    ],
    "handwritten": false
   },
@@ -5146,10 +5146,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    505.9,
-    949.4,
-    551.0,
-    976.5
+    509.1,
+    946.2,
+    547.7,
+    968.0
    ],
    "handwritten": true
   },
@@ -5196,10 +5196,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    664.6,
-    950.8,
-    688.5,
-    976.5
+    666.3,
+    947.5,
+    686.6,
+    967.8
    ],
    "handwritten": true
   },
@@ -5215,10 +5215,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    664.6,
-    950.8,
-    688.5,
-    976.5
+    666.3,
+    947.5,
+    686.6,
+    967.8
    ],
    "handwritten": false
   },
@@ -5228,9 +5228,9 @@
    "page": 0,
    "box": [
     56.8,
-    982.0,
+    975.8,
     98.6,
-    997.7
+    991.4
    ],
    "handwritten": false
   },
@@ -5239,10 +5239,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    210.5,
-    975.6,
-    255.7,
-    1005.6
+    213.8,
+    972.3,
+    252.4,
+    996.6
    ],
    "handwritten": true
   },
@@ -5258,21 +5258,21 @@
    "status": "present",
    "page": 0,
    "box": [
-    200.5,
-    219.3,
-    247.8,
+    152.1,
+    219.2,
+    199.4,
     234.9
    ],
    "handwritten": false
   },
   "entries[56].service": {
-   "value": "Medikamentengabe",
+   "value": "Medikamentengabe (Verabreichen)",
    "status": "present",
    "page": 0,
    "box": [
-    200.5,
-    219.3,
-    247.8,
+    152.1,
+    219.2,
+    199.4,
     234.9
    ],
    "handwritten": false
@@ -5289,10 +5289,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    368.2,
-    976.5,
-    393.0,
-    1003.0
+    370.1,
+    973.2,
+    391.2,
+    994.1
    ],
    "handwritten": true
   },
@@ -5308,10 +5308,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    368.2,
-    976.5,
-    393.0,
-    1003.0
+    370.1,
+    973.2,
+    391.2,
+    994.1
    ],
    "handwritten": false
   },
@@ -5321,9 +5321,9 @@
    "page": 0,
    "box": [
     56.8,
-    982.0,
+    975.8,
     98.6,
-    997.7
+    991.4
    ],
    "handwritten": false
   },
@@ -5332,10 +5332,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    505.3,
-    974.8,
-    551.0,
-    1002.2
+    508.8,
+    971.7,
+    547.7,
+    993.3
    ],
    "handwritten": true
   },
@@ -5382,10 +5382,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    664.1,
-    977.0,
-    687.8,
-    1004.8
+    665.9,
+    973.6,
+    686.1,
+    995.8
    ],
    "handwritten": true
   },
@@ -5401,10 +5401,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    664.1,
-    977.0,
-    687.8,
-    1004.8
+    665.9,
+    973.6,
+    686.1,
+    995.8
    ],
    "handwritten": false
   },
@@ -5414,9 +5414,9 @@
    "page": 0,
    "box": [
     56.8,
-    1007.6,
+    1001.2,
     93.8,
-    1023.3
+    1016.8
    ],
    "handwritten": false
   },
@@ -5425,10 +5425,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    209.9,
-    1000.4,
-    256.6,
-    1030.4
+    213.2,
+    996.6,
+    253.2,
+    1021.2
    ],
    "handwritten": true
   },
@@ -5444,21 +5444,21 @@
    "status": "present",
    "page": 0,
    "box": [
-    200.5,
-    219.3,
-    247.8,
+    152.1,
+    219.2,
+    199.4,
     234.9
    ],
    "handwritten": false
   },
   "entries[58].service": {
-   "value": "Medikamentengabe",
+   "value": "Medikamentengabe (Verabreichen)",
    "status": "present",
    "page": 0,
    "box": [
-    200.5,
-    219.3,
-    247.8,
+    152.1,
+    219.2,
+    199.4,
     234.9
    ],
    "handwritten": false
@@ -5475,10 +5475,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    367.1,
-    1002.1,
-    395.8,
-    1028.8
+    369.1,
+    998.5,
+    393.6,
+    1019.4
    ],
    "handwritten": true
   },
@@ -5494,10 +5494,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    367.1,
-    1002.1,
-    395.8,
-    1028.8
+    369.1,
+    998.5,
+    393.6,
+    1019.4
    ],
    "handwritten": false
   },
@@ -5507,9 +5507,9 @@
    "page": 0,
    "box": [
     56.8,
-    1007.6,
+    1001.2,
     93.8,
-    1023.3
+    1016.8
    ],
    "handwritten": false
   },
@@ -5518,10 +5518,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    504.2,
-    1001.0,
-    552.3,
-    1031.4
+    507.7,
+    997.2,
+    548.9,
+    1022.0
    ],
    "handwritten": true
   },
@@ -5568,10 +5568,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    662.2,
-    1000.3,
-    690.1,
-    1027.7
+    664.2,
+    996.7,
+    688.1,
+    1018.6
    ],
    "handwritten": true
   },
@@ -5587,10 +5587,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    662.2,
-    1000.3,
-    690.1,
-    1027.7
+    664.2,
+    996.7,
+    688.1,
+    1018.6
    ],
    "handwritten": false
   },
@@ -5600,9 +5600,9 @@
    "page": 0,
    "box": [
     56.8,
-    1033.2,
+    1026.5,
     97.8,
-    1048.9
+    1042.2
    ],
    "handwritten": false
   },
@@ -5611,10 +5611,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    207.6,
-    1028.3,
-    258.4,
-    1055.6
+    211.3,
+    1024.5,
+    254.8,
+    1046.0
    ],
    "handwritten": true
   },
@@ -5630,21 +5630,21 @@
    "status": "present",
    "page": 0,
    "box": [
-    200.5,
-    219.3,
-    247.8,
+    152.1,
+    219.2,
+    199.4,
     234.9
    ],
    "handwritten": false
   },
   "entries[60].service": {
-   "value": "Medikamentengabe",
+   "value": "Medikamentengabe (Verabreichen)",
    "status": "present",
    "page": 0,
    "box": [
-    200.5,
-    219.3,
-    247.8,
+    152.1,
+    219.2,
+    199.4,
     234.9
    ],
    "handwritten": false
@@ -5661,10 +5661,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    364.9,
-    1027.5,
-    397.0,
-    1055.1
+    367.3,
+    1023.6,
+    394.6,
+    1045.6
    ],
    "handwritten": true
   },
@@ -5680,10 +5680,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    364.9,
-    1027.5,
-    397.0,
-    1055.1
+    367.3,
+    1023.6,
+    394.6,
+    1045.6
    ],
    "handwritten": false
   },
@@ -5693,9 +5693,9 @@
    "page": 0,
    "box": [
     56.8,
-    1033.2,
+    1026.5,
     97.8,
-    1048.9
+    1042.2
    ],
    "handwritten": false
   },
@@ -5704,10 +5704,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    503.3,
-    1026.4,
-    554.0,
-    1055.0
+    506.9,
+    1022.6,
+    550.3,
+    1045.5
    ],
    "handwritten": true
   },
@@ -5754,10 +5754,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    659.1,
-    1027.9,
-    692.6,
-    1055.0
+    661.7,
+    1024.0,
+    690.1,
+    1045.4
    ],
    "handwritten": true
   },
@@ -5773,10 +5773,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    659.1,
-    1027.9,
-    692.6,
-    1055.0
+    661.7,
+    1024.0,
+    690.1,
+    1045.4
    ],
    "handwritten": false
   },
@@ -5877,9 +5877,9 @@
    "page": 0,
    "box": [
     374.3,
-    1139.5,
+    1132.7,
     482.6,
-    1175.3
+    1168.5
    ],
    "handwritten": true
   },
@@ -5889,9 +5889,9 @@
    "page": 0,
    "box": [
     776.7,
-    1088.6,
+    1081.8,
     823.9,
-    1112.2
+    1105.4
    ],
    "handwritten": true
   },
@@ -5907,10 +5907,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    246.5,
-    1075.4,
-    571.3,
-    1170.0
+    257.1,
+    1097.3,
+    562.1,
+    1155.4
    ],
    "handwritten": false
   },
@@ -5919,10 +5919,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    1269.0,
-    1075.8,
-    1593.8,
-    1170.4
+    1280.1,
+    1094.7,
+    1558.1,
+    1143.8
    ],
    "handwritten": false
   }
@@ -5931,20 +5931,20 @@
   "patient_signature": {
    "page": 0,
    "box": [
-    246.5,
-    1075.4,
-    571.3,
-    1170.0
+    257.1,
+    1097.3,
+    562.1,
+    1155.4
    ],
    "state": "present"
   },
   "provider_signature": {
    "page": 0,
    "box": [
-    1269.0,
-    1075.8,
-    1593.8,
-    1170.4
+    1280.1,
+    1094.7,
+    1558.1,
+    1143.8
    ],
    "state": "present"
   }

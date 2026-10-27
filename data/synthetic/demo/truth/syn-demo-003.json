@@ -163,10 +163,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    452.8,
-    747.5,
-    536.6,
-    770.3
+    588.1,
+    749.0,
+    671.9,
+    771.9
    ],
    "handwritten": false
   },
@@ -175,10 +175,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    452.8,
-    747.5,
-    536.6,
-    770.3
+    588.1,
+    749.0,
+    671.9,
+    771.9
    ],
    "handwritten": false
   },
@@ -187,22 +187,22 @@
    "status": "present",
    "page": 0,
    "box": [
-    358.2,
-    746.4,
-    424.5,
-    769.0
+    493.5,
+    748.0,
+    559.7,
+    770.6
    ],
    "handwritten": false
   },
   "approved_items[0].description": {
-   "value": "Medikamentengabe",
+   "value": "Medikamentengabe (Verabreichen)",
    "status": "present",
    "page": 0,
    "box": [
     127.3,
     743.8,
-    301.3,
-    767.6
+    436.6,
+    769.2
    ],
    "handwritten": false
   },
@@ -211,10 +211,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    590.3,
-    749.1,
-    689.5,
-    772.1
+    725.5,
+    750.6,
+    824.8,
+    773.6
    ],
    "handwritten": false
   },
@@ -223,10 +223,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    725.6,
-    750.6,
-    824.8,
-    773.6
+    860.8,
+    752.2,
+    960.1,
+    775.2
    ],
    "handwritten": false
   },

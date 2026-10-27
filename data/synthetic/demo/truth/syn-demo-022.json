@@ -163,10 +163,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    400.6,
-    730.4,
-    484.6,
-    754.0
+    521.5,
+    732.9,
+    605.5,
+    756.5
    ],
    "handwritten": false
   },
@@ -175,10 +175,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    400.6,
-    730.4,
-    484.6,
-    754.0
+    521.5,
+    732.9,
+    605.5,
+    756.5
    ],
    "handwritten": false
   },
@@ -187,22 +187,22 @@
    "status": "present",
    "page": 0,
    "box": [
-    307.5,
-    728.5,
-    372.5,
-    751.7
+    428.4,
+    731.0,
+    493.4,
+    754.2
    ],
    "handwritten": false
   },
   "approved_items[0].description": {
-   "value": "Injektion s.c.",
+   "value": "Injektion s.c. (z. B. Insulin)",
    "status": "present",
    "page": 0,
    "box": [
     140.4,
     725.0,
-    250.8,
-    749.2
+    371.7,
+    751.7
    ],
    "handwritten": false
   },
@@ -211,10 +211,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    538.1,
-    733.2,
-    637.5,
-    757.1
+    659.0,
+    735.7,
+    758.4,
+    759.6
    ],
    "handwritten": false
   },
@@ -223,10 +223,10 @@
    "status": "present",
    "page": 0,
    "box": [
-    673.3,
-    736.0,
-    772.8,
-    759.9
+    794.2,
+    738.5,
+    893.7,
+    762.4
    ],
    "handwritten": false
   },

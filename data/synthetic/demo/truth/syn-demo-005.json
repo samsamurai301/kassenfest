@@ -195,13 +195,13 @@
    "handwritten": false
   },
   "approved_items[0].description": {
-   "value": "Wundversorgung, chron. Wunde",
+   "value": "Wundversorgung, chronische Wunde",
    "status": "present",
    "page": 0,
    "box": [
     233.2,
     874.3,
-    496.4,
+    534.1,
     894.7
    ],
    "handwritten": false
