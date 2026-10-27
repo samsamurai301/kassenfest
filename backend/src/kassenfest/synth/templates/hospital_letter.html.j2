@@ -1,0 +1,52 @@
+{% extends "_letter.html.j2" %}
+{% block letter_style %}
+.lh { display: grid; grid-template-columns: 1fr 64mm; border-bottom: 0.4mm solid #444; padding-bottom: 3mm; }
+.lh .name { font-size: 15pt; font-weight: 700; }
+.lh .name .pr { font-size: 15pt; }
+.lh .dept { font-size: 8.5pt; color: #333; line-height: 1.3; }
+.lh .dept .pr { font-size: 8.5pt; }
+.lh .right { text-align: right; font-size: 7.5pt; color: #444; line-height: 1.35; }
+.addr { margin-top: 8mm; min-height: 30mm; display: grid; grid-template-columns: 1fr 50mm; }
+.addr .date { text-align: right; align-self: end; }
+h1 { font-size: 13pt; margin: 4mm 0 3mm; }
+.pat { background: {{ shade }}; padding: 2mm 3mm; margin-bottom: 3.5mm; font-size: 9pt; line-height: 1.5; }
+.sec { font-weight: 700; margin: 3mm 0 1mm; }
+.dxs { display: inline-block; }
+.dx { margin-left: 3mm; }
+.dx .pr { display: inline-block; min-width: 16mm; font-weight: 700; }
+.med { margin: 0 0 0 3mm; padding: 0; list-style: none; }
+.sigrow { margin-top: 3mm; }
+{% endblock %}
+{% block form %}
+<div class="lh">
+  <div>
+    <div class="name">{{ c.hospital_name }}</div>
+    <div class="dept">{{ raw.hospital_lines[0] }}<br>Standortkennzeichen {{ c.hospital_id }}</div>
+  </div>
+  <div class="right">{% for line in raw.hospital_lines[1:] %}{{ line }}<br>{% endfor %}Sekretariat Tel. 0991 999 4410<br>Fax 0991 999 4419</div>
+</div>
+<div class="addr">
+  <div>{% for line in raw.recipient_lines %}{{ line }}<br>{% endfor %}<span class="small">nachrichtlich: Pflegedienst Sonnenschein GmbH, Deggendorf</span></div>
+  <div class="date">Deggendorf, {{ letter_date }}</div>
+</div>
+<h1>Entlassbrief</h1>
+<div class="pat">
+  Patient/in: {{ title }} {{ c.patient_name }}, geb. {{ c.patient_dob }} · Versichertennummer {{ c.kvnr }} · {{ raw.payer_name }}<br>
+  Stationärer Aufenthalt: Aufnahme am {{ c.admission_date }} um {{ c.admission_time }} Uhr – Entlassung am {{ c.discharge_date }} um {{ c.discharge_time }} Uhr
+</div>
+<p>Sehr geehrte Frau Kollegin, sehr geehrter Herr Kollege,</p>
+<p>wir berichten über {{ pronoun }}, die/der sich vom {{ raw.admitted_at.strftime('%d.%m.%Y') }} bis {{ raw.discharged_at.strftime('%d.%m.%Y') }} ({{ los }} Tage) in unserer stationären Behandlung befand.</p>
+<div class="sec">Diagnosen</div>
+<div class="dxs" data-field="discharge_diagnoses">{{ c.diagnoses }}</div>
+<div class="sec">Verlauf</div>
+<p>Die Aufnahme erfolgte über die Zentrale Notaufnahme. Unter der eingeleiteten Therapie zeigte sich ein rascher Rückgang der Beschwerden; die Mobilisation gelang bis zur Entlassung auf Stationsebene. Die/der Patient/in wird in stabilem Allgemeinzustand in die Häuslichkeit entlassen.</p>
+{% if raw.medication %}
+<div class="sec">Medikation bei Entlassung</div>
+<ul class="med">{% for m in raw.medication %}<li>{{ m }}</li>{% endfor %}</ul>
+{% endif %}
+<div class="sec">Empfehlungen und Weiterbehandlung</div>
+<p>{{ c.hkp_recommended }} {{ c.hkp_days }} Wir bitten um Kontrolle der Vitalparameter und Laborwerte in der kommenden Woche.</p>
+<p>Mit freundlichen kollegialen Grüßen</p>
+<div class="sigrow">{{ c.physician_signature }}</div>
+<div>{{ raw.physician }}</div>
+{% endblock %}

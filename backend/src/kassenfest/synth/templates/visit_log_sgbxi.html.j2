@@ -1,0 +1,52 @@
+{% extends "_page.html.j2" %}
+{% block style %}
+.top { display: grid; grid-template-columns: 1.5fr 0.9fr 0.7fr 1.2fr 0.9fr 1.3fr 0.5fr; }
+.top .cell { min-height: 9.5mm; }
+h1 { font-size: 12pt; margin: 0 0 2mm; }
+table.g { width: {{ table_mm }}mm; border-collapse: collapse; margin-top: 2.5mm; table-layout: fixed; }
+table.g th, table.g td { border: 0.22mm solid {{ form_ink }}; text-align: center; padding: 0; }
+table.g th { font-weight: 400; font-size: 6.4pt; background: {{ shade }}; line-height: 1.1; padding: 0.4mm 0; }
+table.g th.we, table.g td.we { background: #f4f4f4; }
+table.g td { height: 8.6mm; overflow: visible; white-space: nowrap; }
+table.g td.lbl { text-align: left; padding-left: 1.2mm; font-size: 6.9pt; color: {{ form_ink }}; }
+table.g tr.time td.lbl { font-style: italic; }
+table.g tr.time td { height: 7.6mm; }
+table.g tr.time td .hw { font-size: 8.2pt !important; }
+table.g tr.lk td .hw { font-size: 11pt !important; }
+table.g tr.sec td { background: {{ shade }}; font-weight: 700; text-align: left; padding-left: 1.2mm; font-size: 7.4pt; height: 5.5mm; }
+.bottom { display: grid; grid-template-columns: 1.3fr 1fr; margin-top: 3mm; }
+.bottom .cell { height: 24mm; }
+.bottom .cell .lbl { position: absolute; bottom: 0.8mm; left: 1.4mm; }
+.hint { font-size: 6.3pt; margin-top: 1.5mm; }
+{% endblock %}
+{% block form %}
+<h1>Leistungsnachweis Pflegeversicherung (SGB XI) — {{ month_label }}</h1>
+<div class="top">
+  <div class="cell"><span class="lbl">Pflegedienst</span><span class="pr">{{ provider_name }}</span></div>
+  <div class="cell"><span class="lbl">IK Pflegedienst</span>{{ c.provider_ik }}</div>
+  <div class="cell"><span class="lbl">Monat</span>{{ c.month }}</div>
+  <div class="cell"><span class="lbl">Versicherte/r</span>{{ c.patient_name }}</div>
+  <div class="cell"><span class="lbl">Versicherten-Nr.</span>{{ c.kvnr }}</div>
+  <div class="cell"><span class="lbl">Pflegekasse</span>{{ c.payer_name }}</div>
+  <div class="cell"><span class="lbl">Pflegegrad</span>{{ c.pflegegrad }}</div>
+</div>
+<table class="g">
+  <colgroup><col style="width: {{ label_mm }}mm">{% for d in days %}<col style="width: {{ day_mm }}mm">{% endfor %}</colgroup>
+  <tr><th rowspan="2">Leistungskomplex</th>{% for d in days %}<th class="{{ 'we' if d.weekend else '' }}">{{ d.label }}</th>{% endfor %}</tr>
+  <tr>{% for d in days %}<th class="{{ 'we' if d.weekend else '' }}">{{ d.weekday }}</th>{% endfor %}</tr>
+  {% for s in sections %}
+  <tr class="sec"><td colspan="{{ days | length + 1 }}">{{ s.title }}</td></tr>
+  {% for row in s.rows %}
+  <tr class="{{ row.kind }}">
+    <td class="lbl">{{ row.label }}</td>
+    {% for cell in row.cells %}<td class="{{ 'we' if days[loop.index0].weekend else '' }}">{{ cell }}</td>{% endfor %}
+  </tr>
+  {% endfor %}
+  {% endfor %}
+</table>
+<div class="hint">Je erbrachtem Leistungskomplex Handzeichen der durchführenden Pflegekraft; Uhrzeit = Beginn des Einsatzes.</div>
+<div class="bottom">
+  <div class="cell">{{ c.patient_signature }}<span class="lbl">Unterschrift Versicherte/r bzw. Bevollmächtigte/r · Datum {{ c.patient_signature_date }}</span></div>
+  <div class="cell" style="border-left: none;">{{ c.provider_signature }}<span class="lbl">Unterschrift / Stempel Pflegedienst</span></div>
+</div>
+{% endblock %}

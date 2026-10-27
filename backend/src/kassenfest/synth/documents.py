@@ -11,7 +11,7 @@ import random
 from dataclasses import dataclass, field
 from typing import Any, Literal
 
-from markupsafe import Markup
+from markupsafe import Markup, escape
 from pydantic import BaseModel
 
 from kassenfest.schemas.common import FieldStatus, MarkState
@@ -46,8 +46,8 @@ class M12Measure(BaseModel):
     category: str
     label: str
     details: str | None = None
-    count: int
-    per: Literal["day", "week", "month"]
+    count: int | None  # None on a Blankoverordnung: the nurse sets the frequency
+    per: Literal["day", "week", "month"] | None
     duration_from: dt.date
     duration_to: dt.date
 
@@ -113,6 +113,99 @@ class VisitLogContent(BaseModel):
     patient_signature_date: dt.date | None = None
     missing_signature_reason: Literal["1", "2", "3", "4"] | None = None
     provider_signed: bool = True
+
+
+class ApprovedLine(BaseModel):
+    position_no: str | None
+    description: str
+    count: int | None = None  # None: "lt. Verordnung", the letter states no frequency
+    per: Literal["day", "week", "month"] | None = None
+    valid_from: dt.date
+    valid_to: dt.date
+
+
+class RejectedLine(BaseModel):
+    description: str
+    reason: str | None
+
+
+class ApprovalLetterContent(BaseModel):
+    style: Literal["a", "b"]  # two payer letter layouts
+    payer_name: str
+    payer_ik: str
+    payer_address: list[str]
+    letter_date: dt.date
+    approval_ref: str
+    patient_name: str
+    patient_dob: dt.date
+    kvnr: str
+    provider_name: str
+    provider_address: list[str]
+    provider_ik: str
+    prescription_issue_date: dt.date
+    decision: Literal["approved", "partial", "rejected"]
+    period_from: dt.date
+    period_to: dt.date
+    approved: list[ApprovedLine]
+    rejected: list[RejectedLine] = []
+    copay_exempt: bool = False
+    clerk: str
+    phone: str
+
+
+class XIEinsatz(BaseModel):
+    """One kind of visit on the SGB XI sheet: a time row plus one row per Leistungskomplex."""
+
+    label: str
+    funding: Literal["sachleistung_36", "entlastung_45b"]
+    lk: list[tuple[str, str]]  # (code, label)
+
+
+class XIVisit(BaseModel):
+    day: int
+    einsatz: int  # index into einsaetze
+    time: dt.time
+    staff: int | None  # index into staff; None = Handzeichen missing
+    lk: list[str]  # codes delivered on this visit, a subset of the Einsatz's
+
+
+class VisitLogXIContent(BaseModel):
+    provider_name: str
+    provider_ik: str
+    patient_name: str
+    kvnr: str
+    payer_name: str
+    pflegegrad: int
+    year: int
+    month: int
+    einsaetze: list[XIEinsatz]
+    staff: list[LNStaff]
+    visits: list[XIVisit]
+    patient_signed: bool = True
+    patient_signature_date: dt.date | None = None
+    provider_signed: bool = True
+
+
+class HospitalLetterContent(BaseModel):
+    hospital_name: str
+    hospital_lines: list[str]
+    hospital_id: str  # Standortkennzeichen 77…
+    letter_date: dt.date
+    recipient_lines: list[str]
+    patient_name: str
+    patient_sex: Literal["f", "m"]
+    patient_dob: dt.date
+    kvnr: str
+    payer_name: str
+    admitted_at: dt.datetime
+    discharged_at: dt.datetime
+    diagnoses: list[tuple[str, str]]  # (ICD code, text)
+    hkp_recommended: bool
+    hkp_text: str | None = None
+    hkp_prescription_days: int | None = None
+    medication: list[str] = []
+    physician: str
+    signed: bool = True
 
 
 # --- Style: who writes what, with which pen ---------------------------------------
@@ -240,18 +333,22 @@ def build_muster12(c: Muster12Content, style: Style) -> tuple[dict[str, Any], Tr
         p = f"measures[{index}]"
         index += 1
         truth.put(f"{p}.category", m.category, hand=loose_by_hand)
-        freq_text = f"{m.count}x {PER_LABEL[m.per]}"
-        truth.put(f"{p}.frequency.count", m.count, hand=loose_by_hand)
-        truth.put(f"{p}.frequency.per", m.per, hand=loose_by_hand)
-        freq_field = f"{p}.frequency.count {p}.frequency.per"
+        if m.count is None or m.per is None:
+            freq_text, freq_field = None, f"{p}.frequency"
+            truth.put(freq_field, None)
+        else:
+            freq_text = f"{m.count}x {PER_LABEL[m.per]}"
+            truth.put(f"{p}.frequency.count", m.count, hand=loose_by_hand)
+            truth.put(f"{p}.frequency.per", m.per, hand=loose_by_hand)
+            freq_field = f"{p}.frequency.count {p}.frequency.per"
         rows.append(
             {
                 "tick": tick(True, f"{p}.category"),
                 "label": label,
                 "details": put(f"{p}.details", m.details, m.details, header_by_hand, 40),
-                "frequency": doctor.write(freq_text, freq_field)
+                "frequency": doctor.write(freq_text, freq_field, 12)
                 if loose_by_hand
-                else printed(freq_text, freq_field),
+                else printed(freq_text, freq_field, 12),
                 "duration_from": put(
                     f"{p}.duration_from",
                     de_date(m.duration_from),
@@ -438,9 +535,336 @@ def build_visit_log_sgbv(c: VisitLogContent, style: Style) -> tuple[dict[str, An
     return context, truth
 
 
+# --- Genehmigung (approval letter) ---------------------------------------------------
+
+DECISION_DE = {"approved": "genehmigt", "partial": "teilweise genehmigt", "rejected": "abgelehnt"}
+PER_DE = {"day": "täglich", "week": "wöchentlich", "month": "monatlich"}
+
+
+def build_approval_letter(
+    c: ApprovalLetterContent, style: Style
+) -> tuple[dict[str, Any], TruthSpec]:
+    truth = TruthSpec()
+
+    def put(path: str, text: str | None, value: Any, min_mm: float = 18) -> Markup:
+        truth.put(path, value)
+        return printed(text, path, min_mm)
+
+    def date(path: str, d: dt.date) -> Markup:
+        return put(path, de_date(d), d.isoformat())
+
+    cells: dict[str, Any] = {
+        "payer_name": put("payer_name", c.payer_name, c.payer_name),
+        "payer_ik": put("payer_ik", c.payer_ik, c.payer_ik),
+        "letter_date": date("letter_date", c.letter_date),
+        "approval_ref": put("approval_ref", c.approval_ref, c.approval_ref),
+        "patient_name": put("patient_name", c.patient_name, c.patient_name),
+        "patient_dob": printed(de_date(c.patient_dob)),
+        "kvnr": put("kvnr", c.kvnr, c.kvnr),
+        "provider_name": put("provider_name", c.provider_name, c.provider_name),
+        "provider_ik": put("provider_ik", c.provider_ik, c.provider_ik),
+        "prescription_issue_date": date("prescription_issue_date", c.prescription_issue_date),
+        "decision": put("decision", DECISION_DE[c.decision], c.decision),
+        "period_from": date("period_from", c.period_from),
+        "period_to": date("period_to", c.period_to),
+    }
+    approved = []
+    for i, a in enumerate(c.approved):
+        p = f"approved_items[{i}]"
+        if a.count is None or a.per is None:
+            truth.put(f"{p}.frequency", None)
+            freq = printed("lt. Verordnung", f"{p}.frequency")
+        else:
+            truth.put(f"{p}.frequency.count", a.count)
+            truth.put(f"{p}.frequency.per", a.per)
+            freq = printed(f"{a.count}x {PER_DE[a.per]}", f"{p}.frequency.count {p}.frequency.per")
+        approved.append(
+            {
+                "position_no": put(f"{p}.position_no", a.position_no, a.position_no, 12),
+                "description": put(f"{p}.description", a.description, a.description),
+                "frequency": freq,
+                "valid_from": date(f"{p}.valid_from", a.valid_from),
+                "valid_to": date(f"{p}.valid_to", a.valid_to),
+            }
+        )
+    truth.put("approved_items[#]", len(c.approved))
+    rejected = []
+    for i, r in enumerate(c.rejected):
+        p = f"rejected_items[{i}]"
+        rejected.append(
+            {
+                "description": put(f"{p}.description", r.description, r.description),
+                "reason": put(f"{p}.reason", r.reason, r.reason),
+            }
+        )
+    truth.put("rejected_items[#]", len(c.rejected))
+    truth.fields["doc_type"] = ("approval_letter", "present", False)
+
+    context = {
+        "template": f"approval_letter_{c.style}.html.j2",
+        "c": cells,
+        "approved": approved,
+        "rejected": rejected,
+        "raw": c,
+        "salutation": "Sehr geehrte Damen und Herren,",
+        "copay": "von der gesetzlichen Zuzahlung befreit"
+        if c.copay_exempt
+        else "zuzahlungspflichtig (10 % der Kosten zzgl. 10 € je Verordnung, max. 28 Tage)",
+        "size_mm": A4_PORTRAIT,
+        "margin_mm": 18,
+    }
+    return context, truth
+
+
+# --- Leistungsnachweis SGB XI ---------------------------------------------------------
+
+
+def build_visit_log_sgbxi(c: VisitLogXIContent, style: Style) -> tuple[dict[str, Any], TruthSpec]:
+    rng = style.rng
+    nurses = [style.hand() for _ in c.staff]
+    truth = TruthSpec()
+    days = calendar.monthrange(c.year, c.month)[1]
+
+    # Entry order: day, then Einsatz, then the Einsatz's LK order.
+    visits = sorted(c.visits, key=lambda v: (v.day, v.einsatz))
+    entries: list[tuple[XIVisit, str]] = []
+    for v in visits:
+        order = [code for code, _ in c.einsaetze[v.einsatz].lk]
+        entries += [(v, code) for code in order if code in v.lk]
+    labels = {code: label for e in c.einsaetze for code, label in e.lk}
+    paths: dict[str, list[str]] = {}  # cell key -> paths, for data-field attributes
+
+    def add(key: str, *names: str) -> None:
+        paths.setdefault(key, []).extend(names)
+
+    for i, (v, code) in enumerate(entries):
+        p = f"entries[{i}]"
+        e = c.einsaetze[v.einsatz]
+        initials = c.staff[v.staff].initials if v.staff is not None else None
+        truth.put(f"{p}.date", dt.date(c.year, c.month, v.day).isoformat())
+        truth.put(f"{p}.time", v.time.strftime("%H:%M"), hand=True)
+        truth.put(f"{p}.lk_code", code)
+        truth.put(f"{p}.lk_label", labels[code])
+        truth.put(f"{p}.count", 1, hand=True)
+        truth.put(f"{p}.funding", e.funding)
+        truth.put(f"{p}.staff_initials", initials, hand=True)
+        truth.put(f"{p}.initials_state", "present" if initials else "absent")
+        add(f"day:{v.day}", f"{p}.date")
+        add(f"time:{v.einsatz}:{v.day}", f"{p}.time")
+        add(f"row:{v.einsatz}:{code}", f"{p}.lk_code", f"{p}.lk_label")
+        add(f"cell:{v.einsatz}:{code}:{v.day}", f"{p}.count", f"{p}.staff_initials")
+        add(f"cell:{v.einsatz}:{code}:{v.day}", f"{p}.initials_state")
+        add(f"funding:{e.funding}", f"{p}.funding")
+    truth.put("entries[#]", len(entries))
+
+    def field(key: str) -> str | None:
+        return " ".join(paths[key]) if key in paths else None
+
+    by_slot = {(v.einsatz, v.day): v for v in visits}
+    sections = []
+    for funding, title in (
+        ("sachleistung_36", "Pflegesachleistung § 36 SGB XI"),
+        ("entlastung_45b", "Entlastungsbetrag § 45b SGB XI"),
+    ):
+        rows = []
+        for ei, e in enumerate(c.einsaetze):
+            if e.funding != funding:
+                continue
+            times = []
+            for day in range(1, days + 1):
+                v = by_slot.get((ei, day))
+                nurse = nurses[v.staff] if v and v.staff is not None else rng.choice(nurses)
+                text = f"{v.time.hour}:{v.time.minute:02d}" if v else None
+                times.append(nurse.write(text, field(f"time:{ei}:{day}"), 4) if v else "")
+            rows.append({"kind": "time", "label": f"{e.label} · Uhrzeit", "cells": times})
+            for code, label in e.lk:
+                cells = []
+                for day in range(1, days + 1):
+                    v = by_slot.get((ei, day))
+                    if v is None or code not in v.lk:
+                        cells.append("")
+                        continue
+                    initials = c.staff[v.staff].initials if v.staff is not None else None
+                    nurse = nurses[v.staff] if v.staff is not None else rng.choice(nurses)
+                    cells.append(nurse.write(initials, field(f"cell:{ei}:{code}:{day}"), 4))
+                rows.append(
+                    {
+                        "kind": "lk",
+                        "label": Markup(
+                            f'<span data-field="{field(f"row:{ei}:{code}") or ""}">'
+                            f"{code} {escape(label)}</span>"
+                        ),
+                        "cells": cells,
+                    }
+                )
+        if rows:
+            sections.append(
+                {
+                    "title": Markup(
+                        f'<span data-field="{field(f"funding:{funding}") or ""}">{title}</span>'
+                    ),
+                    "rows": rows,
+                }
+            )
+
+    header_days = []
+    for day in range(1, days + 1):
+        date = dt.date(c.year, c.month, day)
+        header_days.append(
+            {
+                "label": Markup(f'<span data-field="{field(f"day:{day}") or ""}">{day}</span>'),
+                "weekday": WEEKDAYS[date.weekday()],
+                "weekend": date.weekday() >= 5,
+            }
+        )
+
+    cells: dict[str, Markup] = {}
+    for key, text, value in (
+        ("provider_ik", c.provider_ik, c.provider_ik),
+        ("month", f"{c.month:02d}/{c.year}", f"{c.year}-{c.month:02d}"),
+        ("patient_name", c.patient_name, c.patient_name),
+        ("kvnr", c.kvnr, c.kvnr),
+        ("payer_name", c.payer_name, c.payer_name),
+        ("pflegegrad", str(c.pflegegrad), c.pflegegrad),
+    ):
+        cells[key] = printed(text, key)
+        truth.put(key, value)
+
+    family = style.hand(INKS["blue"])
+    cells["patient_signature"] = signature(
+        c.patient_signed,
+        "patient_signature",
+        rng,
+        ink=family.ink,
+        name=c.patient_name.split(",")[0],
+        font=style.signature_font(),
+    )
+    sig_date = c.patient_signature_date if c.patient_signed else None
+    cells["patient_signature_date"] = family.write(de_date(sig_date) if sig_date else None, None)
+    cells["provider_signature"] = signature(
+        c.provider_signed,
+        "provider_signature",
+        rng,
+        ink=INKS["black"],
+        font=style.signature_font(),
+        name="Pflegedienst",
+    )
+    truth.marks["patient_signature"] = "present" if c.patient_signed else "absent"
+    truth.marks["provider_signature"] = "present" if c.provider_signed else "absent"
+    truth.fields["doc_type"] = ("visit_log_sgbxi", "present", False)
+
+    margin_mm, label_mm = 8, 47
+    day_mm = round((A4_LANDSCAPE[0] - 2 * margin_mm - label_mm) / days, 2)
+    context = {
+        "c": cells,
+        "sections": sections,
+        "days": header_days,
+        "provider_name": c.provider_name,
+        "month_label": f"{GERMAN_MONTHS[c.month - 1]} {c.year}",
+        "size_mm": A4_LANDSCAPE,
+        "margin_mm": margin_mm,
+        "label_mm": label_mm,
+        "day_mm": day_mm,
+        "table_mm": round(label_mm + days * day_mm, 1),
+    }
+    return context, truth
+
+
+# --- Entlassbrief ---------------------------------------------------------------------
+
+
+def build_hospital_letter(
+    c: HospitalLetterContent, style: Style
+) -> tuple[dict[str, Any], TruthSpec]:
+    rng = style.rng
+    truth = TruthSpec()
+
+    def put(path: str, text: str | None, value: Any, min_mm: float = 14) -> Markup:
+        truth.put(path, value)
+        return printed(text, path, min_mm)
+
+    cells: dict[str, Any] = {
+        "hospital_name": put("hospital_name", c.hospital_name, c.hospital_name),
+        "hospital_id": put("hospital_id", c.hospital_id, c.hospital_id),
+        "patient_name": put("patient_name", c.patient_name, c.patient_name),
+        "patient_dob": put("patient_dob", de_date(c.patient_dob), c.patient_dob.isoformat()),
+        "kvnr": put("kvnr", c.kvnr, c.kvnr),
+        "admission_date": put(
+            "admission_date", de_date(c.admitted_at.date()), c.admitted_at.date().isoformat()
+        ),
+        "admission_time": put(
+            "admission_time", c.admitted_at.strftime("%H:%M"), c.admitted_at.strftime("%H:%M")
+        ),
+        "discharge_date": put(
+            "discharge_date", de_date(c.discharged_at.date()), c.discharged_at.date().isoformat()
+        ),
+        "discharge_time": put(
+            "discharge_time",
+            c.discharged_at.strftime("%H:%M"),
+            c.discharged_at.strftime("%H:%M"),
+        ),
+    }
+    truth.put("discharge_diagnoses", [code for code, _ in c.diagnoses])
+    cells["diagnoses"] = Markup("").join(
+        Markup('<div class="dx">{}<span class="dxt"> {}</span></div>').format(printed(code), text)
+        for code, text in c.diagnoses
+    )
+    if c.hkp_recommended:
+        text = c.hkp_text or "Fortführung der häuslichen Krankenpflege empfohlen."
+    else:
+        text = "Häusliche Krankenpflege ist nach Entlassung nicht erforderlich."
+    cells["hkp_recommended"] = Markup('<span data-field="hkp_recommended">{}</span>').format(text)
+    truth.put("hkp_recommended", c.hkp_recommended)
+    days = c.hkp_prescription_days
+    cells["hkp_days"] = (
+        Markup(
+            "Im Rahmen des Entlassmanagements wurde häusliche Krankenpflege für {} Tage verordnet."
+        ).format(printed(str(days), "hkp_prescription_days"))
+        if days
+        else ""
+    )
+    truth.put("hkp_prescription_days", days)
+    cells["physician_signature"] = signature(
+        c.signed,
+        "physician_signature",
+        rng,
+        ink=INKS["blue"] if rng.random() < 0.7 else INKS["black"],
+        name=c.physician.split(",")[0].split()[-1],
+        font=style.signature_font(),
+    )
+    truth.marks["physician_signature"] = "present" if c.signed else "absent"
+    truth.fields["doc_type"] = ("hospital_letter", "present", False)
+
+    los = (c.discharged_at.date() - c.admitted_at.date()).days
+    context = {
+        "c": cells,
+        "raw": c,
+        "title": "Frau" if c.patient_sex == "f" else "Herr",
+        "pronoun": "Ihre Patientin" if c.patient_sex == "f" else "Ihren Patienten",
+        "los": los,
+        "letter_date": de_date(c.letter_date),
+        "size_mm": A4_PORTRAIT,
+        "margin_mm": 18,
+    }
+    return context, truth
+
+
 # --- Render + ground truth --------------------------------------------------------
 
-BUILDERS = {"muster12": build_muster12, "visit_log_sgbv": build_visit_log_sgbv}
+BUILDERS: dict[str, Any] = {
+    "muster12": build_muster12,
+    "visit_log_sgbv": build_visit_log_sgbv,
+    "visit_log_sgbxi": build_visit_log_sgbxi,
+    "approval_letter": build_approval_letter,
+    "hospital_letter": build_hospital_letter,
+}
+# Form colours per document type: (form_ink, shade).
+FORM_COLOURS = {
+    "visit_log_sgbv": ("#2b2b2b", "#efefef"),
+    "visit_log_sgbxi": ("#1f4e5f", "#e8f0f2"),
+    "approval_letter": ("#1d1d1f", "#eef0f3"),
+    "hospital_letter": ("#1d1d1f", "#f1f1f1"),
+}
 
 
 def render_document(
@@ -453,12 +877,13 @@ def render_document(
     split: Literal["dev", "test"] = "dev",
 ) -> tuple[RenderedPage, TruthSpec, dict[str, Any]]:
     style = default_style(seed, split)
-    if doc_type == "visit_log_sgbv":
-        style.form_ink, style.shade = "#2b2b2b", "#efefef"
+    if doc_type in FORM_COLOURS:
+        style.form_ink, style.shade = FORM_COLOURS[doc_type]
     context, truth = BUILDERS[doc_type](content, style)
     # Embed every face of the split: simpler than tracking which ones the dice picked.
     faces = [*load_fonts("print"), *load_fonts("mono"), *style.hands, *style.signatures]
-    html = templates.get_template(f"{doc_type}.html.j2").render(
+    template = context.get("template", f"{doc_type}.html.j2")
+    html = templates.get_template(template).render(
         **context,
         font_css=font_face_css(faces),
         form_ink=style.form_ink,

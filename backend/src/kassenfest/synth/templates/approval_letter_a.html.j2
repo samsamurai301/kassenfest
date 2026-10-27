@@ -1,0 +1,69 @@
+{% extends "_letter.html.j2" %}
+{% block letter_style %}
+.lh { display: flex; justify-content: space-between; align-items: flex-start; border-bottom: 0.6mm solid #2c3e50; padding-bottom: 3mm; }
+.lh .name { font-size: 17pt; font-weight: 700; color: #2c3e50; letter-spacing: 0.2mm; }
+.lh .name .pr { font-size: 17pt; }
+.lh .addr { text-align: right; font-size: 7.5pt; color: #444; line-height: 1.3; }
+.mid { display: grid; grid-template-columns: 88mm 1fr; column-gap: 8mm; margin-top: 9mm; min-height: 42mm; }
+.window .ret { font-size: 6.5pt; color: #555; border-bottom: 0.2mm solid #888; padding-bottom: 0.6mm; margin-bottom: 2mm; }
+.info { font-size: 8pt; display: grid; grid-template-columns: 34mm 1fr; row-gap: 0.8mm; align-content: start; }
+.info .pr { font-size: 8pt; }
+.info .k { color: #555; }
+.subject { font-weight: 700; font-size: 10.5pt; margin: 4mm 0 2mm; }
+.pat { border: 0.25mm solid #999; padding: 2mm 3mm; margin-bottom: 4mm; display: grid; grid-template-columns: 1fr 1fr; row-gap: 1mm; font-size: 9pt; }
+.pat .k { color: #555; font-size: 7.5pt; display: block; }
+.decision .pr { font-weight: 700; }
+.closing { margin-top: 6mm; }
+{% endblock %}
+{% block form %}
+<div class="lh">
+  <div class="name">{{ c.payer_name }}<div class="small" style="font-weight:400; letter-spacing:0">Geschäftsbereich Pflege · Häusliche Krankenpflege</div></div>
+  <div class="addr">{% for line in raw.payer_address %}{{ line }}<br>{% endfor %}Telefon {{ raw.phone }}</div>
+</div>
+<div class="mid">
+  <div class="window">
+    <div class="ret">{{ raw.payer_name }} · {{ raw.payer_address | join(' · ') }}</div>
+    {{ c.provider_name }}<br>
+    z. Hd. Pflegedienstleitung<br>
+    {% for line in raw.provider_address %}{{ line }}<br>{% endfor %}
+  </div>
+  <div class="info">
+    <span class="k">Datum</span><span>{{ c.letter_date }}</span>
+    <span class="k">Genehmigungskennz.</span><span>{{ c.approval_ref }}</span>
+    <span class="k">IK Kostenträger</span><span>{{ c.payer_ik }}</span>
+    <span class="k">Ihr IK</span><span>{{ c.provider_ik }}</span>
+    <span class="k">Ansprechpartner/in</span><span>{{ raw.clerk }}</span>
+  </div>
+</div>
+<div class="subject">Häusliche Krankenpflege nach § 37 SGB V – Entscheidung über die Kostenübernahme</div>
+<div class="pat">
+  <div><span class="k">Versicherte/r</span>{{ c.patient_name }}</div>
+  <div><span class="k">Geburtsdatum</span>{{ c.patient_dob }}</div>
+  <div><span class="k">Versichertennummer</span>{{ c.kvnr }}</div>
+  <div><span class="k">Verordnung vom</span>{{ c.prescription_issue_date }}</div>
+</div>
+<p>{{ salutation }}</p>
+<p class="decision">die oben genannte ärztliche Verordnung haben wir geprüft. Die beantragten Leistungen werden {{ c.decision }}.
+Die Kostenzusage gilt für den Zeitraum vom {{ c.period_from }} bis {{ c.period_to }}.</p>
+{% if approved %}
+<table class="items">
+  <tr><th style="width:20mm">Pos.-Nr.</th><th>Leistung</th><th style="width:28mm">Häufigkeit</th><th style="width:22mm">gültig ab</th><th style="width:22mm">gültig bis</th></tr>
+  {% for a in approved %}
+  <tr><td>{{ a.position_no }}</td><td>{{ a.description }}</td><td>{{ a.frequency }}</td><td>{{ a.valid_from }}</td><td>{{ a.valid_to }}</td></tr>
+  {% endfor %}
+</table>
+{% endif %}
+{% if rejected %}
+<p>Nicht übernommen werden können:</p>
+<table class="items">
+  <tr><th>Leistung</th><th>Begründung</th></tr>
+  {% for r in rejected %}<tr><td>{{ r.description }}</td><td style="white-space:normal">{{ r.reason }}</td></tr>{% endfor %}
+</table>
+<p class="small">Gegen diese Entscheidung kann die/der Versicherte innerhalb eines Monats nach Bekanntgabe Widerspruch erheben.</p>
+{% endif %}
+<p>Die/der Versicherte ist {{ copay }}. Bitte geben Sie bei der Abrechnung das Genehmigungskennzeichen an.</p>
+<div class="closing">
+  <p>Mit freundlichen Grüßen<br>Ihre {{ raw.payer_name }}</p>
+  <p class="small">Dieses Schreiben wurde maschinell erstellt und ist ohne Unterschrift gültig.</p>
+</div>
+{% endblock %}

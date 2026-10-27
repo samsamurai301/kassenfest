@@ -85,7 +85,8 @@ class Renderer:
 
     def __enter__(self) -> "Renderer":
         self._pw = sync_playwright().start()
-        self._browser = self._pw.chromium.launch()
+        # One raster thread: threaded tiles make SVG filters (stamp ink) differ run to run.
+        self._browser = self._pw.chromium.launch(args=["--num-raster-threads=1"])
         return self
 
     def __exit__(

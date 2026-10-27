@@ -1,0 +1,15 @@
+{% extends "_page.html.j2" %}
+{% block style %}
+.form { color: #1d1d1f; font-size: 9.5pt; line-height: 1.38; }
+.pr { font-family: 'Arimo', sans-serif; font-size: 9.5pt; color: inherit; white-space: nowrap; }
+.empty { height: 3.5mm; }
+p { margin: 0 0 2.4mm; }
+h2 { font-size: 11pt; margin: 0 0 3mm; }
+.small { font-size: 7pt; color: #555; }
+table.items { width: 100%; border-collapse: collapse; margin: 1mm 0 3.5mm; font-size: 8.8pt; }
+table.items th { text-align: left; font-weight: 700; border-bottom: 0.35mm solid #333; padding: 1mm 1.5mm; background: {{ shade }}; }
+table.items td { border-bottom: 0.2mm solid #bbb; padding: 1.2mm 1.5mm; vertical-align: top; }
+table.items .pr { font-size: 8.8pt; }
+.sig { height: 18mm; width: 62mm; justify-content: flex-start; }
+{% block letter_style %}{% endblock %}
+{% endblock %}

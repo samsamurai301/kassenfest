@@ -1,0 +1,59 @@
+{% extends "_letter.html.j2" %}
+{% block letter_style %}
+.band { position: absolute; left: -18mm; right: -18mm; top: -18mm; height: 13mm; background: #3a3f47; }
+.band .name { position: absolute; right: 18mm; top: 3mm; color: #fff; font-size: 13pt; font-weight: 700; }
+.band .name .pr { font-size: 13pt; color: #fff; }
+.top { display: grid; grid-template-columns: 1fr 66mm; column-gap: 6mm; margin-top: 4mm; }
+.ret { font-size: 6.5pt; color: #555; margin-bottom: 2mm; }
+.facts { font-size: 7.8pt; border-left: 0.5mm solid #3a3f47; padding-left: 3mm; }
+.facts .pr { font-size: 7.8pt; }
+.facts div { margin-bottom: 1.4mm; }
+.facts .k { display: block; color: #666; font-size: 6.6pt; }
+h1 { font-size: 14pt; margin: 12mm 0 4mm; font-weight: 700; }
+ul.items { margin: 1mm 0 4mm; padding-left: 5mm; }
+ul.items li { margin-bottom: 1.6mm; }
+.period { background: {{ shade }}; padding: 2mm 3mm; margin: 2mm 0 4mm; font-size: 9pt; }
+.foot { position: absolute; bottom: -10mm; left: 0; right: 0; border-top: 0.2mm solid #999; padding-top: 1mm; font-size: 6.6pt; color: #555; }
+.foot .pr { font-size: 6.6pt; color: #555; }
+{% endblock %}
+{% block form %}
+<div class="band"><div class="name">{{ c.payer_name }}</div></div>
+<div class="top">
+  <div>
+    <div class="ret">{{ raw.payer_name }}, {{ raw.payer_address | join(', ') }}</div>
+    {{ c.provider_name }}<br>
+    {% for line in raw.provider_address %}{{ line }}<br>{% endfor %}
+    <div class="small" style="margin-top:2mm">Institutionskennzeichen {{ c.provider_ik }}</div>
+  </div>
+  <div class="facts">
+    <div><span class="k">Datum</span>{{ c.letter_date }}</div>
+    <div><span class="k">Aktenzeichen / Genehmigungskennzeichen</span>{{ c.approval_ref }}</div>
+    <div><span class="k">Versicherte/r</span>{{ c.patient_name }}, geb. {{ c.patient_dob }}</div>
+    <div><span class="k">Versichertennummer</span>{{ c.kvnr }}</div>
+    <div><span class="k">Ihr Ansprechpartner</span>{{ raw.clerk }}, Tel. {{ raw.phone }}</div>
+  </div>
+</div>
+<h1>Genehmigung häuslicher Krankenpflege</h1>
+<p>{{ salutation }}</p>
+<p>uns liegt die Verordnung häuslicher Krankenpflege vom {{ c.prescription_issue_date }} für unsere/n oben genannte/n Versicherte/n vor.
+Nach Prüfung haben wir die verordneten Leistungen {{ c.decision }}.</p>
+<div class="period">Genehmigungszeitraum: {{ c.period_from }} bis {{ c.period_to }}</div>
+{% if approved %}
+<p>Wir übernehmen die Kosten für folgende Leistungen:</p>
+<ul class="items">
+  {% for a in approved %}
+  <li>{{ a.description }} (Pos. {{ a.position_no }}) – {{ a.frequency }}, vom {{ a.valid_from }} bis {{ a.valid_to }}</li>
+  {% endfor %}
+</ul>
+{% endif %}
+{% if rejected %}
+<p>Folgende Leistungen können wir leider nicht übernehmen:</p>
+<ul class="items">
+  {% for r in rejected %}<li>{{ r.description }} – Begründung: <span style="white-space:normal">{{ r.reason }}</span></li>{% endfor %}
+</ul>
+{% endif %}
+<p>Hinweis zur Zuzahlung: Die/der Versicherte ist {{ copay }}.</p>
+<p>Bitte rechnen Sie die Leistungen unter Angabe des Aktenzeichens ab. Bei Fragen erreichen Sie uns unter der oben genannten Rufnummer.</p>
+<p style="margin-top:6mm">Freundliche Grüße<br>{{ raw.clerk }}<br>{{ raw.payer_name }}</p>
+<div class="foot">{{ raw.payer_name }} · Kostenträger-IK {{ c.payer_ik }} · {{ raw.payer_address | join(' · ') }}</div>
+{% endblock %}
