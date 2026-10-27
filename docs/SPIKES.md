@@ -32,4 +32,23 @@ Numbers from real API calls. Each entry: what was tested, result, decision. Samp
 3. S3 must still try other concept phrasings for signatures (`"handwritten signature"`, `"handwriting"`, `"scribble"`, `"ink"`) on realistic signatures before we drop concept mode for them.
 4. At ~$0.005 per Muse Spark page call + ~$0.005 SAM, the whole plan (≈155 docs × a few runs) stays **< $10** — cost is not a constraint; latency (≈4 s/page) is what to parallelize.
 
+## 2026-10-27 — shared schemas vs. the live API (n=1 per schema)
+
+Each model-facing schema in `kassenfest.schemas` sent once with the smoke card, `reasoning_effort=minimal`. Total **$0.057**.
+
+| Schema | Inlined depth / props | Accepted | Latency | Cost | Behaviour on the smoke card |
+|---|---|---|---|---|---|
+| `Muster12` | 4 / 194 | ✓ | 4.0 s | $0.014 | 6 fields `present` (incl. **BSNR read from the stamp**), signature + stamp `present`, nothing invented |
+| `ApprovalLetter` | 4 / 146 | ✓ | 3.4 s | $0.009 | all `empty`, 0 items — no hallucination on the wrong doc type |
+| `VisitLogSGBV` | 4 / 126 | ✓ | 3.1 s | $0.009 | all `empty`, 0 entries, signatures `absent` |
+| `VisitLogSGBXI` | 4 / 95 | ✓ | 2.7 s | $0.008 | all `empty`, 0 entries |
+| `HospitalLetter` | 3 / 130 | ✓ | 3.2 s | $0.010 | all `empty` |
+| `Classification` | 3 / 6 | ✓ | 2.0 s | $0.003 | `muster12`, conf 1.0, **synthetic watermark detected** |
+| `AuditorOutput` | — | ✓ | 2.1 s | $0.002 | ⚠️ given an *empty* claim, still objected with **41002** ("no valid insurance") |
+
+**Decisions:**
+- The strict-subset shape (all keys required, `additionalProperties: false`, no numeric constraints) is accepted as-is; keep it. Unit test `test_llm_schemas_fit_meta_structured_output_limits` guards it.
+- `Mark.state = absent` on a document type that has no such field is expected — rules must only read marks from the right `doc_type`.
+- **The auditor invents objections when there is nothing to object to** → the deterministic resolver (AUD-02) is mandatory, and the auditor prompt must say an empty list is a valid answer. Track this rate in AUD-05.
+
 **Not tested yet (Wednesday):** handwriting, phone-photo degradation, the visit grid (S2), empty-vs-unreadable behaviour, multi-page input, `reasoning_effort=medium` vs `low` accuracy/latency trade-off.
