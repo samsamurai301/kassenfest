@@ -1,0 +1,59 @@
+{% extends "_page.html.j2" %}
+{% block style %}
+.top { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; }
+.top .cell { min-height: 9.5mm; }
+h1 { font-size: 12pt; margin: 0 0 2mm; }
+table.g { width: {{ table_mm }}mm; border-collapse: collapse; margin-top: 2mm; table-layout: fixed; }
+table.g th, table.g td { border: 0.22mm solid {{ form_ink }}; text-align: center; padding: 0; }
+table.g th { font-weight: 400; font-size: 6.3pt; background: {{ shade }}; padding: 0.4mm; line-height: 1.15; }
+table.g th.svc { font-size: 6.8pt; }
+table.g td { height: {{ row_mm }}mm; font-size: 7pt; overflow: visible; white-space: nowrap; }
+table.g td.day { width: 13mm; text-align: left; padding-left: 1mm; font-size: 6.8pt; }
+table.g tr.we td.day { color: #8a8a8a; }
+table.g td .hw { font-size: {{ cell_pt }}pt !important; }
+.bottom { display: grid; grid-template-columns: 1.3fr 0.7fr 1fr; margin-top: 2mm; }
+.bottom .cell { height: 19mm; }
+.bottom .cell .lbl { position: absolute; bottom: 0.8mm; left: 1.4mm; }
+.reason { font-size: 6.3pt; line-height: 1.25; }
+{% endblock %}
+{% block form %}
+<h1>Leistungsnachweis Häusliche Krankenpflege (§ 37 SGB V) — {{ month_label }}</h1>
+<div class="top">
+  <div class="cell"><span class="lbl">Pflegedienst</span><span class="pr">{{ provider_name }}</span></div>
+  <div class="cell"><span class="lbl">IK Pflegedienst</span>{{ c.provider_ik }}</div>
+  <div class="cell"><span class="lbl">Monat</span>{{ c.month }}</div>
+  <div class="cell"><span class="lbl">Genehmigungskennzeichen</span>{{ c.approval_ref }}</div>
+  <div class="cell"><span class="lbl">Versicherte/r</span>{{ c.patient_name }}</div>
+  <div class="cell"><span class="lbl">Versicherten-Nr.</span>{{ c.kvnr }}</div>
+  <div class="cell"><span class="lbl">Krankenkasse</span>{{ c.payer_name }}</div>
+  <div class="cell"><span class="lbl">Verantwortliche Pflegefachkraft</span>{{ c.responsible_nurse }}</div>
+</div>
+<table class="g">
+  <colgroup>
+    <col style="width: {{ day_mm }}mm">
+    {% for s in services %}{% for slot in range(s.slots) %}<col style="width: {{ time_mm }}mm"><col style="width: {{ hz_mm }}mm">{% endfor %}{% endfor %}
+  </colgroup>
+  <tr>
+    <th rowspan="2">Tag</th>
+    {% for s in services %}<th class="svc" colspan="{{ 2 * s.slots }}">{{ s.position_no }} · {{ s.label }}</th>{% endfor %}
+  </tr>
+  <tr>
+    {% for s in services %}{% for slot in range(s.slots) %}<th>Uhrzeit</th><th>Hz.</th>{% endfor %}{% endfor %}
+  </tr>
+  {% for row in grid %}
+  <tr class="{{ 'we' if row.weekend else '' }}">
+    <td class="day">{{ row.label }}</td>
+    {% for cell in row.cells %}<td>{{ cell.time }}</td><td>{{ cell.initials }}</td>{% endfor %}
+  </tr>
+  {% endfor %}
+</table>
+<div class="bottom">
+  <div class="cell">{{ c.patient_signature }}<span class="lbl">Unterschrift Versicherte/r bzw. Angehörige/r · Datum {{ c.patient_signature_date }}</span></div>
+  <div class="cell" style="border-left: none;">
+    <span class="lbl" style="position: static;">Kennzeichen fehlende Unterschrift</span>
+    {{ c.missing_signature_reason }}
+    <div class="reason">1 verstorben · 2 stationär · 3 nicht möglich · 4 sonstiges</div>
+  </div>
+  <div class="cell" style="border-left: none;">{{ c.provider_signature }}<span class="lbl">Unterschrift / Stempel Pflegedienst</span></div>
+</div>
+{% endblock %}

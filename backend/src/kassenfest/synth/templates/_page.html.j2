@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<style>
+{{ font_css | safe }}
+@page { margin: 0; }
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; background: {{ paper }}; }
+body {
+  width: {{ size_mm[0] }}mm; height: {{ size_mm[1] }}mm; overflow: hidden; position: relative;
+  font-family: 'Arimo', sans-serif; color: #1d1d1f; font-size: 8pt;
+}
+.form { position: absolute; inset: {{ margin_mm }}mm; color: {{ form_ink }}; }
+.lbl { font-size: 6.5pt; color: {{ form_ink }}; display: block; line-height: 1.15; }
+.cell { border: 0.25mm solid {{ form_ink }}; padding: 0.8mm 1.4mm; position: relative; }
+.pr { font-family: 'Courier Prime', monospace; font-size: 10pt; color: #141414; white-space: pre; }
+.hw { display: inline-block; white-space: pre; line-height: 1.1; transform-origin: left center; }
+.hw .g { display: inline-block; }
+.hw .sp { width: 0.32em; }
+.empty { display: inline-block; height: 4mm; }
+.cb {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 4.2mm; height: 4.2mm; border: 0.3mm solid {{ form_ink }}; vertical-align: middle;
+  font-family: 'Courier Prime', monospace; font-size: 10pt; line-height: 1; overflow: visible;
+}
+.cb .hw { font-size: 13pt !important; }
+.sig, .stampbox { position: relative; height: 100%; display: flex; align-items: center; justify-content: center; }
+.sigsvg { width: 55mm; height: 16mm; overflow: visible; }
+.sigfont { display: inline-block; font-size: 22pt; white-space: nowrap; }
+.stampsvg { width: 62mm; overflow: visible; opacity: 0.88; }
+.watermark {
+  position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%) rotate(-32deg);
+  font-size: 30pt; font-weight: 700; letter-spacing: 1mm; color: rgba(160, 30, 30, 0.10);
+  white-space: nowrap; pointer-events: none;
+}
+.footer { position: absolute; bottom: 1.5mm; left: {{ margin_mm }}mm; font-size: 6pt; color: #8a8a8a; }
+{% block style %}{% endblock %}
+</style>
+</head>
+<body>
+<div class="form">
+{% block form %}{% endblock %}
+</div>
+<div class="watermark">MUSTER – SYNTHETISCH – KEIN ECHTES DOKUMENT</div>
+<div class="footer">Kassenfest synthetic document · {{ doc_id }} · not a real record</div>
+</body>
+</html>
