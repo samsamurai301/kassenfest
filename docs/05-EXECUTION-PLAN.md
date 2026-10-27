@@ -169,15 +169,16 @@ Each session: start by reading this section's exit criterion; end with a commit 
 - **Exit**: `make smoke` passes against the real API. ✅ Done; results and provisional decisions in `SPIKES.md` (SAM concept "signature" missed → Muse box → SAM refine hit IoU 0.99).
 
 ### Wed Oct 28 — contracts + spikes (3.5 h)
-- [ ] **Shared schemas** (§2.2) for all 5 doc types + GT + Finding/Objection. Merge to `main` — this unblocks Thursday.
-- [ ] Minimal Muster 12 template → Playwright PNG + GT bboxes; phone-photo warp with transformed GT.
-- [ ] **Spike S1** — Muse Spark extraction on Muster 12 (clean / scan / photo, 3 handwriting fonts): field accuracy, empty-vs-unreadable behaviour, `$ref` support.
-- [ ] **Spike S2** — visit grid (31 days × 4 services + Handzeichen): full page vs. 3 row-bands. Pick the winner.
-- [ ] **Spike S3** — SAM 3.1 concept prompts `signature`, `stamp`, `checkbox` vs. box prompts from Muse Spark coordinates: hit rate + IoU vs GT.
-- [ ] **Spike S4** — Muse Spark bbox output: coordinate convention (pixels / 0–1 / 0–1000) and IoU on 10 fields.
-- **Exit**: `docs/SPIKES.md` with numbers and four decisions (extraction granularity, grid strategy, SAM prompt mode, evidence-box source).
+- [x] **Shared schemas** (§2.2) for all 5 doc types + GT + Finding/Objection. Merge to `main` — this unblocks Thursday. *(Oct 27, `d5288c6`; all 7 model-facing schemas accepted by the live API)*
+- [x] Minimal Muster 12 template → Playwright PNG + GT bboxes; phone-photo warp with transformed GT. *(Oct 27, `9bea4b2`: Muster 12 + HKP Leistungsnachweis, 4 degradations, 19 vendored fonts)*
+- [x] **Spike S1** — Muse Spark extraction on Muster 12 (clean / scan / photo, 3 handwriting fonts): field accuracy, empty-vs-unreadable behaviour, `$ref` support.
+- [x] **Spike S2** — visit grid (31 days × 4 services + Handzeichen): full page vs. 3 row-bands. Pick the winner.
+- [x] **Spike S3** — SAM 3.1 concept prompts `signature`, `stamp`, `checkbox` vs. box prompts from Muse Spark coordinates: hit rate + IoU vs GT.
+- [x] **Spike S4** — Muse Spark bbox output: coordinate convention (pixels / 0–1 / 0–1000) and IoU on 10 fields.
+- **Exit**: `docs/SPIKES.md` with numbers and four decisions (extraction granularity, grid strategy, SAM prompt mode, evidence-box source). ✅ Oct 27: whole page at `low` (Muster 12), full-page grid, `"stamp"` concept + Muse box → SAM refine for signatures and text fields; `ING-03` stays Tier B.
 
 ### Thu Oct 29 — three parallel tracks (3.5 h, you review/merge)
+> Started early, Oct 27 night, as separate Claude sessions in worktrees (branches `rules-engine`, `web-ui`, `synth-world`); each ends in a PR against `main`.
 - [ ] **Track A — synth**: world + scenario engine + defect injection; renderers for Genehmigung, HKP LN, XI LN, Entlassbrief; scan + photo degradations; `make synth SET=dev`.
 - [ ] **Track B — rules**: `calendar.py`, `checkdigits.py` (test vectors from `03` §3.1), `tariffs.py` (illustrative prices, cents), engine + YAML pack + 18 rules + all `02` §8 boundary tests.
 - [ ] **Track C — web**: shell, bill board, claim detail, evidence viewer with SVG overlay — against fixture JSON shaped by the shared schemas.
