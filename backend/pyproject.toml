@@ -13,9 +13,12 @@ dependencies = [
     "openai>=3.40.0",
     "opencv-python-headless>=5.0.0.93",
     "pillow>=13.0.0",
+    "pillow-heif>=1.8.1",
     "playwright>=1.64.1",
     "pydantic>=2.14.1",
     "pydantic-settings>=2.16.1",
+    "pypdfium2>=5.14.0",
+    "sqlmodel>=0.0.48",
     "uvicorn[standard]>=0.54.0",
 ]
 

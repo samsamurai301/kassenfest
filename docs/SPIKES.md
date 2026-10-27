@@ -114,3 +114,22 @@ S4b, text fields `kvnr`, `issue_date`, `period_from`, `period_to` (n=32 per vari
 - n = 24 / 8 images; differences of ±1–2 pts between `low` and `medium` are noise.
 
 **Not tested yet:** real handwriting, `bad_photo` and fax variants, empty-vs-unreadable on genuinely illegible ink, multi-page input, the other three document types (rendered by the synth track).
+
+---
+
+## 2026-10-27 — first pipeline run (`kassenfest ingest var/spikes/docs`)
+
+All 32 spike images through ingest → classify → extract → validate → localize → SQLite: **32/32 classified correctly**, 32/32 `done`, 20 s wall time (extraction served from the spike cache), **$0.25** for the new calls (32 classify + 30 SAM refine).
+
+**Ink-density check (SAM-04) calibration**, using Muse Spark's mark boxes as the pipeline does:
+
+| | n | min | median | max |
+|---|---|---|---|---|
+| truly empty fields | 16 | 0.000 | 0.010 | **0.048** (printed label inside the visit-log cell, scan noise) |
+| signed / stamped fields | 48 | **0.000** (model box missed the ink) | 0.057 | 0.287 |
+
+The distributions overlap, while the model's own present/absent call was right **64/64** → **the model decides; ink is a second opinion** that only raises a review issue on strong disagreement (empty but ink > 0.08, or present but ink < 0.0005). Two guards came out of the run:
+- **SAM refine is rejected when it grows the box past 1.4×** or lands on blank paper. In every growth case the model's rough box was already wrong (IoU ≤ 0.3); good refinements shrink to 0.44–1.14×.
+- **Stamps found by SAM's `"stamp"` concept skip the ink veto**: pale, speckled stamp ink on photos scores ~0.002 even inside the true box.
+
+Result: 3 review flags, all the same document (seed 05) where Muse Spark puts the doctor's signature box on blank paper in every variant — a genuine localization miss, now routed to a human instead of drawn wrong. Present marks never trigger findings; the evidence the demo shows is the **empty** field box, which is unaffected.

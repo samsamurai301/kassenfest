@@ -1,4 +1,5 @@
 import json
+from collections.abc import Callable
 from types import SimpleNamespace
 from typing import Any
 
@@ -18,30 +19,42 @@ class FakeResponse:
 
 
 class FakeTransport:
-    """Mimics the parts of AsyncOpenAI the client uses and records every call."""
+    """Mimics the parts of AsyncOpenAI the client uses and records every call.
 
-    def __init__(self, chat_content: dict[str, Any] | None = None, sam_text: str = ""):
+    `chat_content` and `sam_text` may be callables taking the request kwargs, to
+    answer differently per schema or prompt.
+    """
+
+    def __init__(
+        self,
+        chat_content: dict[str, Any] | Callable[[dict[str, Any]], dict[str, Any]] | None = None,
+        sam_text: str | Callable[[dict[str, Any]], str] = "",
+    ):
         self.calls: list[tuple[str, dict[str, Any]]] = []
         self.chat_content = chat_content or {}
         self.sam_text = sam_text
 
         async def chat_create(**kwargs: Any) -> FakeResponse:
             self.calls.append(("chat", kwargs))
+            content = (
+                self.chat_content(kwargs) if callable(self.chat_content) else self.chat_content
+            )
             return FakeResponse(
                 {
-                    "choices": [{"message": {"content": json.dumps(self.chat_content)}}],
+                    "choices": [{"message": {"content": json.dumps(content)}}],
                     "usage": {"prompt_tokens": 1000, "completion_tokens": 200},
                 }
             )
 
         async def responses_create(**kwargs: Any) -> FakeResponse:
             self.calls.append(("responses", kwargs))
+            text = self.sam_text(kwargs) if callable(self.sam_text) else self.sam_text
             return FakeResponse(
                 {
                     "output": [
                         {
                             "type": "message",
-                            "content": [{"type": "output_text", "text": self.sam_text}],
+                            "content": [{"type": "output_text", "text": text}],
                         }
                     ]
                 }

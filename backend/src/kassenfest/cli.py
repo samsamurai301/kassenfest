@@ -15,6 +15,10 @@ def main() -> None:
     spike.add_argument("--muster12", type=int, default=8, help="Muster 12 documents (x3 variants)")
     spike.add_argument("--visit-logs", type=int, default=4, help="visit logs (x2 variants)")
     spike.add_argument("--mode", choices=["live", "record", "replay"], help="override LLM_MODE")
+    ingest = sub.add_parser("ingest", help="run files or folders through the pipeline")
+    ingest.add_argument("paths", nargs="+", help="images, PDFs or folders of them")
+    ingest.add_argument("--label", help="name for this batch")
+    ingest.add_argument("--mode", choices=["live", "record", "replay"], help="override LLM_MODE")
     args = parser.parse_args()
 
     from kassenfest.llm import CacheMiss
@@ -29,5 +33,9 @@ def main() -> None:
             from kassenfest import spikes
 
             sys.exit(asyncio.run(spikes.run(settings, args.which, args.muster12, args.visit_logs)))
+        if args.command == "ingest":
+            from kassenfest import ingest as ingest_mod
+
+            sys.exit(asyncio.run(ingest_mod.run(settings, args.paths, args.label)))
     except (CacheMiss, RuntimeError) as exc:
         sys.exit(f"error: {exc}")

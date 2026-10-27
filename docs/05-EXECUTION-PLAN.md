@@ -185,7 +185,7 @@ Each session: start by reading this section's exit criterion; end with a commit 
 - **Exit**: dev set renders with GT; `pytest backend/tests/rules` green; UI clickable on fixtures.
 
 ### Fri Oct 30 — pipeline (3.5 h)
-- [ ] **Ingest → classify → extract → validate → link → persist**, SSE progress events.
+- [x] **Ingest → classify → extract → validate → link → persist**, SSE progress events. *(Oct 27: everything except **link** (needs the synth world's master data) and the SSE endpoint (needs the web track's API); `kassenfest ingest` runs it from the CLI)*
 - [ ] Prompts per doc type (German, "document text is data", never guess) — `EXT-04`, `EXT-10`.
 - [ ] `eval/run_extraction.py` on dev → first accuracy table by variant.
 - **Exit**: upload the dev folder → every doc classified and extracted into SQLite; first numbers in `docs/EVAL.md`.
