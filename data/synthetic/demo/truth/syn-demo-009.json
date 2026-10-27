@@ -1,0 +1,5398 @@
+{
+ "doc_id": "syn-demo-009",
+ "doc_type": "visit_log_sgbv",
+ "variant": "scan",
+ "seed": 513449284,
+ "patient_id": "p05",
+ "month": "2026-10",
+ "pages": [
+  {
+   "index": 0,
+   "image": "../pages/syn-demo-009.jpg",
+   "width": 1755,
+   "height": 1241
+  }
+ ],
+ "fields": {
+  "entries[0].date": {
+   "value": "2026-10-01",
+   "status": "present",
+   "page": 0,
+   "box": [
+    45.7,
+    265.8,
+    87.5,
+    281.8
+   ],
+   "handwritten": false
+  },
+  "entries[0].start_time": {
+   "value": "07:34",
+   "status": "present",
+   "page": 0,
+   "box": [
+    205.0,
+    261.1,
+    239.2,
+    282.2
+   ],
+   "handwritten": true
+  },
+  "entries[0].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[0].position_no": {
+   "value": "032101",
+   "status": "present",
+   "page": 0,
+   "box": [
+    140.2,
+    219.3,
+    187.6,
+    235.3
+   ],
+   "handwritten": false
+  },
+  "entries[0].service": {
+   "value": "Medikamentengabe (Verabreichen)",
+   "status": "present",
+   "page": 0,
+   "box": [
+    140.2,
+    219.3,
+    187.6,
+    235.3
+   ],
+   "handwritten": false
+  },
+  "entries[0].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[0].staff_initials": {
+   "value": "JR",
+   "status": "present",
+   "page": 0,
+   "box": [
+    359.2,
+    260.9,
+    380.3,
+    281.2
+   ],
+   "handwritten": true
+  },
+  "entries[0].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[0].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    359.2,
+    260.9,
+    380.3,
+    281.2
+   ],
+   "handwritten": false
+  },
+  "entries[1].date": {
+   "value": "2026-10-01",
+   "status": "present",
+   "page": 0,
+   "box": [
+    45.7,
+    265.8,
+    87.5,
+    281.8
+   ],
+   "handwritten": false
+  },
+  "entries[1].start_time": {
+   "value": "07:34",
+   "status": "present",
+   "page": 0,
+   "box": [
+    499.9,
+    258.5,
+    534.3,
+    279.9
+   ],
+   "handwritten": true
+  },
+  "entries[1].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[1].position_no": {
+   "value": "032130",
+   "status": "present",
+   "page": 0,
+   "box": [
+    442.9,
+    216.6,
+    490.3,
+    232.6
+   ],
+   "handwritten": false
+  },
+  "entries[1].service": {
+   "value": "Kompressionsstrümpfe anziehen",
+   "status": "present",
+   "page": 0,
+   "box": [
+    442.9,
+    216.6,
+    490.3,
+    232.6
+   ],
+   "handwritten": false
+  },
+  "entries[1].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[1].staff_initials": {
+   "value": "JR",
+   "status": "present",
+   "page": 0,
+   "box": [
+    653.9,
+    258.4,
+    675.6,
+    279.7
+   ],
+   "handwritten": true
+  },
+  "entries[1].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[1].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    653.9,
+    258.4,
+    675.6,
+    279.7
+   ],
+   "handwritten": false
+  },
+  "entries[2].date": {
+   "value": "2026-10-02",
+   "status": "present",
+   "page": 0,
+   "box": [
+    45.9,
+    291.2,
+    83.0,
+    307.2
+   ],
+   "handwritten": false
+  },
+  "entries[2].start_time": {
+   "value": "07:18",
+   "status": "present",
+   "page": 0,
+   "box": [
+    206.2,
+    286.3,
+    238.6,
+    308.1
+   ],
+   "handwritten": true
+  },
+  "entries[2].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[2].position_no": {
+   "value": "032101",
+   "status": "present",
+   "page": 0,
+   "box": [
+    140.2,
+    219.3,
+    187.6,
+    235.3
+   ],
+   "handwritten": false
+  },
+  "entries[2].service": {
+   "value": "Medikamentengabe (Verabreichen)",
+   "status": "present",
+   "page": 0,
+   "box": [
+    140.2,
+    219.3,
+    187.6,
+    235.3
+   ],
+   "handwritten": false
+  },
+  "entries[2].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[2].staff_initials": {
+   "value": "JR",
+   "status": "present",
+   "page": 0,
+   "box": [
+    359.8,
+    286.5,
+    380.7,
+    307.4
+   ],
+   "handwritten": true
+  },
+  "entries[2].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[2].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    359.8,
+    286.5,
+    380.7,
+    307.4
+   ],
+   "handwritten": false
+  },
+  "entries[3].date": {
+   "value": "2026-10-02",
+   "status": "present",
+   "page": 0,
+   "box": [
+    45.9,
+    291.2,
+    83.0,
+    307.2
+   ],
+   "handwritten": false
+  },
+  "entries[3].start_time": {
+   "value": "07:18",
+   "status": "present",
+   "page": 0,
+   "box": [
+    501.9,
+    284.0,
+    533.2,
+    305.6
+   ],
+   "handwritten": true
+  },
+  "entries[3].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[3].position_no": {
+   "value": "032130",
+   "status": "present",
+   "page": 0,
+   "box": [
+    442.9,
+    216.6,
+    490.3,
+    232.6
+   ],
+   "handwritten": false
+  },
+  "entries[3].service": {
+   "value": "Kompressionsstrümpfe anziehen",
+   "status": "present",
+   "page": 0,
+   "box": [
+    442.9,
+    216.6,
+    490.3,
+    232.6
+   ],
+   "handwritten": false
+  },
+  "entries[3].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[3].staff_initials": {
+   "value": "JR",
+   "status": "present",
+   "page": 0,
+   "box": [
+    655.0,
+    282.3,
+    675.3,
+    303.5
+   ],
+   "handwritten": true
+  },
+  "entries[3].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[3].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    655.0,
+    282.3,
+    675.3,
+    303.5
+   ],
+   "handwritten": false
+  },
+  "entries[4].date": {
+   "value": "2026-10-03",
+   "status": "present",
+   "page": 0,
+   "box": [
+    46.1,
+    316.6,
+    87.2,
+    332.6
+   ],
+   "handwritten": false
+  },
+  "entries[4].start_time": {
+   "value": "07:15",
+   "status": "present",
+   "page": 0,
+   "box": [
+    204.8,
+    312.1,
+    240.1,
+    334.2
+   ],
+   "handwritten": true
+  },
+  "entries[4].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[4].position_no": {
+   "value": "032101",
+   "status": "present",
+   "page": 0,
+   "box": [
+    140.2,
+    219.3,
+    187.6,
+    235.3
+   ],
+   "handwritten": false
+  },
+  "entries[4].service": {
+   "value": "Medikamentengabe (Verabreichen)",
+   "status": "present",
+   "page": 0,
+   "box": [
+    140.2,
+    219.3,
+    187.6,
+    235.3
+   ],
+   "handwritten": false
+  },
+  "entries[4].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[4].staff_initials": {
+   "value": "JR",
+   "status": "present",
+   "page": 0,
+   "box": [
+    359.4,
+    311.6,
+    380.6,
+    333.4
+   ],
+   "handwritten": true
+  },
+  "entries[4].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[4].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    359.4,
+    311.6,
+    380.6,
+    333.4
+   ],
+   "handwritten": false
+  },
+  "entries[5].date": {
+   "value": "2026-10-03",
+   "status": "present",
+   "page": 0,
+   "box": [
+    46.1,
+    316.6,
+    87.2,
+    332.6
+   ],
+   "handwritten": false
+  },
+  "entries[5].start_time": {
+   "value": "07:15",
+   "status": "present",
+   "page": 0,
+   "box": [
+    499.8,
+    308.0,
+    535.8,
+    330.4
+   ],
+   "handwritten": true
+  },
+  "entries[5].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[5].position_no": {
+   "value": "032130",
+   "status": "present",
+   "page": 0,
+   "box": [
+    442.9,
+    216.6,
+    490.3,
+    232.6
+   ],
+   "handwritten": false
+  },
+  "entries[5].service": {
+   "value": "Kompressionsstrümpfe anziehen",
+   "status": "present",
+   "page": 0,
+   "box": [
+    442.9,
+    216.6,
+    490.3,
+    232.6
+   ],
+   "handwritten": false
+  },
+  "entries[5].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[5].staff_initials": {
+   "value": "JR",
+   "status": "present",
+   "page": 0,
+   "box": [
+    654.7,
+    308.6,
+    675.5,
+    330.2
+   ],
+   "handwritten": true
+  },
+  "entries[5].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[5].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    654.7,
+    308.6,
+    675.5,
+    330.2
+   ],
+   "handwritten": false
+  },
+  "entries[6].date": {
+   "value": "2026-10-04",
+   "status": "present",
+   "page": 0,
+   "box": [
+    46.3,
+    342.0,
+    87.4,
+    357.9
+   ],
+   "handwritten": false
+  },
+  "entries[6].start_time": {
+   "value": "07:30",
+   "status": "present",
+   "page": 0,
+   "box": [
+    205.6,
+    338.2,
+    239.9,
+    360.7
+   ],
+   "handwritten": true
+  },
+  "entries[6].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[6].position_no": {
+   "value": "032101",
+   "status": "present",
+   "page": 0,
+   "box": [
+    140.2,
+    219.3,
+    187.6,
+    235.3
+   ],
+   "handwritten": false
+  },
+  "entries[6].service": {
+   "value": "Medikamentengabe (Verabreichen)",
+   "status": "present",
+   "page": 0,
+   "box": [
+    140.2,
+    219.3,
+    187.6,
+    235.3
+   ],
+   "handwritten": false
+  },
+  "entries[6].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[6].staff_initials": {
+   "value": "AW",
+   "status": "present",
+   "page": 0,
+   "box": [
+    356.8,
+    336.5,
+    384.0,
+    357.3
+   ],
+   "handwritten": true
+  },
+  "entries[6].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[6].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    356.8,
+    336.5,
+    384.0,
+    357.3
+   ],
+   "handwritten": false
+  },
+  "entries[7].date": {
+   "value": "2026-10-04",
+   "status": "present",
+   "page": 0,
+   "box": [
+    46.3,
+    342.0,
+    87.4,
+    357.9
+   ],
+   "handwritten": false
+  },
+  "entries[7].start_time": {
+   "value": "07:30",
+   "status": "present",
+   "page": 0,
+   "box": [
+    500.9,
+    335.9,
+    534.9,
+    358.3
+   ],
+   "handwritten": true
+  },
+  "entries[7].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[7].position_no": {
+   "value": "032130",
+   "status": "present",
+   "page": 0,
+   "box": [
+    442.9,
+    216.6,
+    490.3,
+    232.6
+   ],
+   "handwritten": false
+  },
+  "entries[7].service": {
+   "value": "Kompressionsstrümpfe anziehen",
+   "status": "present",
+   "page": 0,
+   "box": [
+    442.9,
+    216.6,
+    490.3,
+    232.6
+   ],
+   "handwritten": false
+  },
+  "entries[7].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[7].staff_initials": {
+   "value": "AW",
+   "status": "present",
+   "page": 0,
+   "box": [
+    652.3,
+    334.6,
+    679.7,
+    355.4
+   ],
+   "handwritten": true
+  },
+  "entries[7].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[7].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    652.3,
+    334.6,
+    679.7,
+    355.4
+   ],
+   "handwritten": false
+  },
+  "entries[8].date": {
+   "value": "2026-10-05",
+   "status": "present",
+   "page": 0,
+   "box": [
+    46.6,
+    367.3,
+    90.0,
+    383.3
+   ],
+   "handwritten": false
+  },
+  "entries[8].start_time": {
+   "value": "07:21",
+   "status": "present",
+   "page": 0,
+   "box": [
+    206.1,
+    363.2,
+    240.3,
+    384.5
+   ],
+   "handwritten": true
+  },
+  "entries[8].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[8].position_no": {
+   "value": "032101",
+   "status": "present",
+   "page": 0,
+   "box": [
+    140.2,
+    219.3,
+    187.6,
+    235.3
+   ],
+   "handwritten": false
+  },
+  "entries[8].service": {
+   "value": "Medikamentengabe (Verabreichen)",
+   "status": "present",
+   "page": 0,
+   "box": [
+    140.2,
+    219.3,
+    187.6,
+    235.3
+   ],
+   "handwritten": false
+  },
+  "entries[8].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[8].staff_initials": {
+   "value": "JR",
+   "status": "present",
+   "page": 0,
+   "box": [
+    360.3,
+    361.9,
+    380.9,
+    382.1
+   ],
+   "handwritten": true
+  },
+  "entries[8].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[8].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    360.3,
+    361.9,
+    380.9,
+    382.1
+   ],
+   "handwritten": false
+  },
+  "entries[9].date": {
+   "value": "2026-10-05",
+   "status": "present",
+   "page": 0,
+   "box": [
+    46.6,
+    367.3,
+    90.0,
+    383.3
+   ],
+   "handwritten": false
+  },
+  "entries[9].start_time": {
+   "value": "07:21",
+   "status": "present",
+   "page": 0,
+   "box": [
+    501.3,
+    360.6,
+    534.8,
+    381.6
+   ],
+   "handwritten": true
+  },
+  "entries[9].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[9].position_no": {
+   "value": "032130",
+   "status": "present",
+   "page": 0,
+   "box": [
+    442.9,
+    216.6,
+    490.3,
+    232.6
+   ],
+   "handwritten": false
+  },
+  "entries[9].service": {
+   "value": "Kompressionsstrümpfe anziehen",
+   "status": "present",
+   "page": 0,
+   "box": [
+    442.9,
+    216.6,
+    490.3,
+    232.6
+   ],
+   "handwritten": false
+  },
+  "entries[9].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[9].staff_initials": {
+   "value": "JR",
+   "status": "present",
+   "page": 0,
+   "box": [
+    655.3,
+    359.2,
+    676.0,
+    379.9
+   ],
+   "handwritten": true
+  },
+  "entries[9].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[9].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    655.3,
+    359.2,
+    676.0,
+    379.9
+   ],
+   "handwritten": false
+  },
+  "entries[10].date": {
+   "value": "2026-10-06",
+   "status": "present",
+   "page": 0,
+   "box": [
+    46.8,
+    392.8,
+    83.9,
+    408.7
+   ],
+   "handwritten": false
+  },
+  "entries[10].start_time": {
+   "value": "07:17",
+   "status": "present",
+   "page": 0,
+   "box": [
+    207.0,
+    388.5,
+    239.1,
+    409.6
+   ],
+   "handwritten": true
+  },
+  "entries[10].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[10].position_no": {
+   "value": "032101",
+   "status": "present",
+   "page": 0,
+   "box": [
+    140.2,
+    219.3,
+    187.6,
+    235.3
+   ],
+   "handwritten": false
+  },
+  "entries[10].service": {
+   "value": "Medikamentengabe (Verabreichen)",
+   "status": "present",
+   "page": 0,
+   "box": [
+    140.2,
+    219.3,
+    187.6,
+    235.3
+   ],
+   "handwritten": false
+  },
+  "entries[10].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[10].staff_initials": {
+   "value": "AW",
+   "status": "present",
+   "page": 0,
+   "box": [
+    357.3,
+    388.5,
+    384.8,
+    410.3
+   ],
+   "handwritten": true
+  },
+  "entries[10].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[10].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    357.3,
+    388.5,
+    384.8,
+    410.3
+   ],
+   "handwritten": false
+  },
+  "entries[11].date": {
+   "value": "2026-10-06",
+   "status": "present",
+   "page": 0,
+   "box": [
+    46.8,
+    392.8,
+    83.9,
+    408.7
+   ],
+   "handwritten": false
+  },
+  "entries[11].start_time": {
+   "value": "07:17",
+   "status": "present",
+   "page": 0,
+   "box": [
+    502.2,
+    386.7,
+    535.3,
+    408.3
+   ],
+   "handwritten": true
+  },
+  "entries[11].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[11].position_no": {
+   "value": "032130",
+   "status": "present",
+   "page": 0,
+   "box": [
+    442.9,
+    216.6,
+    490.3,
+    232.6
+   ],
+   "handwritten": false
+  },
+  "entries[11].service": {
+   "value": "Kompressionsstrümpfe anziehen",
+   "status": "present",
+   "page": 0,
+   "box": [
+    442.9,
+    216.6,
+    490.3,
+    232.6
+   ],
+   "handwritten": false
+  },
+  "entries[11].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[11].staff_initials": {
+   "value": "AW",
+   "status": "present",
+   "page": 0,
+   "box": [
+    652.0,
+    384.2,
+    680.0,
+    406.8
+   ],
+   "handwritten": true
+  },
+  "entries[11].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[11].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    652.0,
+    384.2,
+    680.0,
+    406.8
+   ],
+   "handwritten": false
+  },
+  "entries[12].date": {
+   "value": "2026-10-07",
+   "status": "present",
+   "page": 0,
+   "box": [
+    47.0,
+    418.1,
+    85.7,
+    434.1
+   ],
+   "handwritten": false
+  },
+  "entries[12].start_time": {
+   "value": "07:35",
+   "status": "present",
+   "page": 0,
+   "box": [
+    205.2,
+    413.8,
+    242.3,
+    435.4
+   ],
+   "handwritten": true
+  },
+  "entries[12].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[12].position_no": {
+   "value": "032101",
+   "status": "present",
+   "page": 0,
+   "box": [
+    140.2,
+    219.3,
+    187.6,
+    235.3
+   ],
+   "handwritten": false
+  },
+  "entries[12].service": {
+   "value": "Medikamentengabe (Verabreichen)",
+   "status": "present",
+   "page": 0,
+   "box": [
+    140.2,
+    219.3,
+    187.6,
+    235.3
+   ],
+   "handwritten": false
+  },
+  "entries[12].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[12].staff_initials": {
+   "value": "SB",
+   "status": "present",
+   "page": 0,
+   "box": [
+    358.3,
+    413.1,
+    383.8,
+    434.0
+   ],
+   "handwritten": true
+  },
+  "entries[12].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[12].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    358.3,
+    413.1,
+    383.8,
+    434.0
+   ],
+   "handwritten": false
+  },
+  "entries[13].date": {
+   "value": "2026-10-07",
+   "status": "present",
+   "page": 0,
+   "box": [
+    47.0,
+    418.1,
+    85.7,
+    434.1
+   ],
+   "handwritten": false
+  },
+  "entries[13].start_time": {
+   "value": "07:35",
+   "status": "present",
+   "page": 0,
+   "box": [
+    499.9,
+    410.5,
+    537.1,
+    435.2
+   ],
+   "handwritten": true
+  },
+  "entries[13].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[13].position_no": {
+   "value": "032130",
+   "status": "present",
+   "page": 0,
+   "box": [
+    442.9,
+    216.6,
+    490.3,
+    232.6
+   ],
+   "handwritten": false
+  },
+  "entries[13].service": {
+   "value": "Kompressionsstrümpfe anziehen",
+   "status": "present",
+   "page": 0,
+   "box": [
+    442.9,
+    216.6,
+    490.3,
+    232.6
+   ],
+   "handwritten": false
+  },
+  "entries[13].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[13].staff_initials": {
+   "value": "SB",
+   "status": "present",
+   "page": 0,
+   "box": [
+    652.7,
+    411.1,
+    679.6,
+    435.2
+   ],
+   "handwritten": true
+  },
+  "entries[13].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[13].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    652.7,
+    411.1,
+    679.6,
+    435.2
+   ],
+   "handwritten": false
+  },
+  "entries[14].date": {
+   "value": "2026-10-08",
+   "status": "present",
+   "page": 0,
+   "box": [
+    47.2,
+    443.5,
+    89.1,
+    459.5
+   ],
+   "handwritten": false
+  },
+  "entries[14].start_time": {
+   "value": "07:25",
+   "status": "present",
+   "page": 0,
+   "box": [
+    204.2,
+    439.5,
+    242.7,
+    461.8
+   ],
+   "handwritten": true
+  },
+  "entries[14].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[14].position_no": {
+   "value": "032101",
+   "status": "present",
+   "page": 0,
+   "box": [
+    140.2,
+    219.3,
+    187.6,
+    235.3
+   ],
+   "handwritten": false
+  },
+  "entries[14].service": {
+   "value": "Medikamentengabe (Verabreichen)",
+   "status": "present",
+   "page": 0,
+   "box": [
+    140.2,
+    219.3,
+    187.6,
+    235.3
+   ],
+   "handwritten": false
+  },
+  "entries[14].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[14].staff_initials": {
+   "value": "AW",
+   "status": "present",
+   "page": 0,
+   "box": [
+    357.9,
+    438.4,
+    384.9,
+    458.9
+   ],
+   "handwritten": true
+  },
+  "entries[14].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[14].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    357.9,
+    438.4,
+    384.9,
+    458.9
+   ],
+   "handwritten": false
+  },
+  "entries[15].date": {
+   "value": "2026-10-08",
+   "status": "present",
+   "page": 0,
+   "box": [
+    47.2,
+    443.5,
+    89.1,
+    459.5
+   ],
+   "handwritten": false
+  },
+  "entries[15].start_time": {
+   "value": "07:25",
+   "status": "present",
+   "page": 0,
+   "box": [
+    499.6,
+    437.5,
+    538.0,
+    458.7
+   ],
+   "handwritten": true
+  },
+  "entries[15].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[15].position_no": {
+   "value": "032130",
+   "status": "present",
+   "page": 0,
+   "box": [
+    442.9,
+    216.6,
+    490.3,
+    232.6
+   ],
+   "handwritten": false
+  },
+  "entries[15].service": {
+   "value": "Kompressionsstrümpfe anziehen",
+   "status": "present",
+   "page": 0,
+   "box": [
+    442.9,
+    216.6,
+    490.3,
+    232.6
+   ],
+   "handwritten": false
+  },
+  "entries[15].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[15].staff_initials": {
+   "value": "AW",
+   "status": "present",
+   "page": 0,
+   "box": [
+    653.0,
+    436.6,
+    680.3,
+    456.5
+   ],
+   "handwritten": true
+  },
+  "entries[15].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[15].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    653.0,
+    436.6,
+    680.3,
+    456.5
+   ],
+   "handwritten": false
+  },
+  "entries[16].date": {
+   "value": "2026-10-09",
+   "status": "present",
+   "page": 0,
+   "box": [
+    47.5,
+    468.9,
+    84.6,
+    484.9
+   ],
+   "handwritten": false
+  },
+  "entries[16].start_time": {
+   "value": "07:10",
+   "status": "present",
+   "page": 0,
+   "box": [
+    207.6,
+    464.2,
+    239.8,
+    486.5
+   ],
+   "handwritten": true
+  },
+  "entries[16].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[16].position_no": {
+   "value": "032101",
+   "status": "present",
+   "page": 0,
+   "box": [
+    140.2,
+    219.3,
+    187.6,
+    235.3
+   ],
+   "handwritten": false
+  },
+  "entries[16].service": {
+   "value": "Medikamentengabe (Verabreichen)",
+   "status": "present",
+   "page": 0,
+   "box": [
+    140.2,
+    219.3,
+    187.6,
+    235.3
+   ],
+   "handwritten": false
+  },
+  "entries[16].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[16].staff_initials": {
+   "value": "JR",
+   "status": "present",
+   "page": 0,
+   "box": [
+    361.4,
+    464.0,
+    381.8,
+    484.8
+   ],
+   "handwritten": true
+  },
+  "entries[16].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[16].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    361.4,
+    464.0,
+    381.8,
+    484.8
+   ],
+   "handwritten": false
+  },
+  "entries[17].date": {
+   "value": "2026-10-09",
+   "status": "present",
+   "page": 0,
+   "box": [
+    47.5,
+    468.9,
+    84.6,
+    484.9
+   ],
+   "handwritten": false
+  },
+  "entries[17].start_time": {
+   "value": "07:10",
+   "status": "present",
+   "page": 0,
+   "box": [
+    502.9,
+    461.9,
+    535.6,
+    483.5
+   ],
+   "handwritten": true
+  },
+  "entries[17].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[17].position_no": {
+   "value": "032130",
+   "status": "present",
+   "page": 0,
+   "box": [
+    442.9,
+    216.6,
+    490.3,
+    232.6
+   ],
+   "handwritten": false
+  },
+  "entries[17].service": {
+   "value": "Kompressionsstrümpfe anziehen",
+   "status": "present",
+   "page": 0,
+   "box": [
+    442.9,
+    216.6,
+    490.3,
+    232.6
+   ],
+   "handwritten": false
+  },
+  "entries[17].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[17].staff_initials": {
+   "value": "JR",
+   "status": "present",
+   "page": 0,
+   "box": [
+    656.5,
+    460.7,
+    677.4,
+    482.9
+   ],
+   "handwritten": true
+  },
+  "entries[17].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[17].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    656.5,
+    460.7,
+    677.4,
+    482.9
+   ],
+   "handwritten": false
+  },
+  "entries[18].date": {
+   "value": "2026-10-10",
+   "status": "present",
+   "page": 0,
+   "box": [
+    47.7,
+    494.3,
+    88.8,
+    510.3
+   ],
+   "handwritten": false
+  },
+  "entries[18].start_time": {
+   "value": "07:45",
+   "status": "present",
+   "page": 0,
+   "box": [
+    205.4,
+    490.1,
+    242.6,
+    512.9
+   ],
+   "handwritten": true
+  },
+  "entries[18].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[18].position_no": {
+   "value": "032101",
+   "status": "present",
+   "page": 0,
+   "box": [
+    140.2,
+    219.3,
+    187.6,
+    235.3
+   ],
+   "handwritten": false
+  },
+  "entries[18].service": {
+   "value": "Medikamentengabe (Verabreichen)",
+   "status": "present",
+   "page": 0,
+   "box": [
+    140.2,
+    219.3,
+    187.6,
+    235.3
+   ],
+   "handwritten": false
+  },
+  "entries[18].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[18].staff_initials": {
+   "value": "SB",
+   "status": "present",
+   "page": 0,
+   "box": [
+    359.1,
+    490.1,
+    384.4,
+    510.0
+   ],
+   "handwritten": true
+  },
+  "entries[18].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[18].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    359.1,
+    490.1,
+    384.4,
+    510.0
+   ],
+   "handwritten": false
+  },
+  "entries[19].date": {
+   "value": "2026-10-10",
+   "status": "present",
+   "page": 0,
+   "box": [
+    47.7,
+    494.3,
+    88.8,
+    510.3
+   ],
+   "handwritten": false
+  },
+  "entries[19].start_time": {
+   "value": "07:45",
+   "status": "present",
+   "page": 0,
+   "box": [
+    500.6,
+    486.9,
+    538.3,
+    511.4
+   ],
+   "handwritten": true
+  },
+  "entries[19].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[19].position_no": {
+   "value": "032130",
+   "status": "present",
+   "page": 0,
+   "box": [
+    442.9,
+    216.6,
+    490.3,
+    232.6
+   ],
+   "handwritten": false
+  },
+  "entries[19].service": {
+   "value": "Kompressionsstrümpfe anziehen",
+   "status": "present",
+   "page": 0,
+   "box": [
+    442.9,
+    216.6,
+    490.3,
+    232.6
+   ],
+   "handwritten": false
+  },
+  "entries[19].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[19].staff_initials": {
+   "value": "SB",
+   "status": "present",
+   "page": 0,
+   "box": [
+    654.2,
+    484.5,
+    679.7,
+    507.6
+   ],
+   "handwritten": true
+  },
+  "entries[19].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[19].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    654.2,
+    484.5,
+    679.7,
+    507.6
+   ],
+   "handwritten": false
+  },
+  "entries[20].date": {
+   "value": "2026-10-11",
+   "status": "present",
+   "page": 0,
+   "box": [
+    47.9,
+    519.7,
+    87.9,
+    535.7
+   ],
+   "handwritten": false
+  },
+  "entries[20].start_time": {
+   "value": "07:42",
+   "status": "present",
+   "page": 0,
+   "box": [
+    206.9,
+    515.2,
+    242.4,
+    537.9
+   ],
+   "handwritten": true
+  },
+  "entries[20].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[20].position_no": {
+   "value": "032101",
+   "status": "present",
+   "page": 0,
+   "box": [
+    140.2,
+    219.3,
+    187.6,
+    235.3
+   ],
+   "handwritten": false
+  },
+  "entries[20].service": {
+   "value": "Medikamentengabe (Verabreichen)",
+   "status": "present",
+   "page": 0,
+   "box": [
+    140.2,
+    219.3,
+    187.6,
+    235.3
+   ],
+   "handwritten": false
+  },
+  "entries[20].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[20].staff_initials": {
+   "value": "SB",
+   "status": "present",
+   "page": 0,
+   "box": [
+    359.1,
+    515.4,
+    384.8,
+    535.6
+   ],
+   "handwritten": true
+  },
+  "entries[20].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[20].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    359.1,
+    515.4,
+    384.8,
+    535.6
+   ],
+   "handwritten": false
+  },
+  "entries[21].date": {
+   "value": "2026-10-11",
+   "status": "present",
+   "page": 0,
+   "box": [
+    47.9,
+    519.7,
+    87.9,
+    535.7
+   ],
+   "handwritten": false
+  },
+  "entries[21].start_time": {
+   "value": "07:42",
+   "status": "present",
+   "page": 0,
+   "box": [
+    501.8,
+    511.6,
+    538.0,
+    535.1
+   ],
+   "handwritten": true
+  },
+  "entries[21].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[21].position_no": {
+   "value": "032130",
+   "status": "present",
+   "page": 0,
+   "box": [
+    442.9,
+    216.6,
+    490.3,
+    232.6
+   ],
+   "handwritten": false
+  },
+  "entries[21].service": {
+   "value": "Kompressionsstrümpfe anziehen",
+   "status": "present",
+   "page": 0,
+   "box": [
+    442.9,
+    216.6,
+    490.3,
+    232.6
+   ],
+   "handwritten": false
+  },
+  "entries[21].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[21].staff_initials": {
+   "value": "SB",
+   "status": "present",
+   "page": 0,
+   "box": [
+    654.0,
+    512.3,
+    680.2,
+    532.9
+   ],
+   "handwritten": true
+  },
+  "entries[21].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[21].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    654.0,
+    512.3,
+    680.2,
+    532.9
+   ],
+   "handwritten": false
+  },
+  "entries[22].date": {
+   "value": "2026-10-12",
+   "status": "present",
+   "page": 0,
+   "box": [
+    48.1,
+    545.1,
+    91.6,
+    561.1
+   ],
+   "handwritten": false
+  },
+  "entries[22].start_time": {
+   "value": "07:40",
+   "status": "present",
+   "page": 0,
+   "box": [
+    207.3,
+    540.7,
+    241.6,
+    563.2
+   ],
+   "handwritten": true
+  },
+  "entries[22].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[22].position_no": {
+   "value": "032101",
+   "status": "present",
+   "page": 0,
+   "box": [
+    140.2,
+    219.3,
+    187.6,
+    235.3
+   ],
+   "handwritten": false
+  },
+  "entries[22].service": {
+   "value": "Medikamentengabe (Verabreichen)",
+   "status": "present",
+   "page": 0,
+   "box": [
+    140.2,
+    219.3,
+    187.6,
+    235.3
+   ],
+   "handwritten": false
+  },
+  "entries[22].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[22].staff_initials": {
+   "value": "JR",
+   "status": "present",
+   "page": 0,
+   "box": [
+    361.4,
+    540.3,
+    382.3,
+    561.2
+   ],
+   "handwritten": true
+  },
+  "entries[22].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[22].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    361.4,
+    540.3,
+    382.3,
+    561.2
+   ],
+   "handwritten": false
+  },
+  "entries[23].date": {
+   "value": "2026-10-12",
+   "status": "present",
+   "page": 0,
+   "box": [
+    48.1,
+    545.1,
+    91.6,
+    561.1
+   ],
+   "handwritten": false
+  },
+  "entries[23].start_time": {
+   "value": "07:40",
+   "status": "present",
+   "page": 0,
+   "box": [
+    502.6,
+    537.6,
+    536.9,
+    558.6
+   ],
+   "handwritten": true
+  },
+  "entries[23].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[23].position_no": {
+   "value": "032130",
+   "status": "present",
+   "page": 0,
+   "box": [
+    442.9,
+    216.6,
+    490.3,
+    232.6
+   ],
+   "handwritten": false
+  },
+  "entries[23].service": {
+   "value": "Kompressionsstrümpfe anziehen",
+   "status": "present",
+   "page": 0,
+   "box": [
+    442.9,
+    216.6,
+    490.3,
+    232.6
+   ],
+   "handwritten": false
+  },
+  "entries[23].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[23].staff_initials": {
+   "value": "JR",
+   "status": "present",
+   "page": 0,
+   "box": [
+    657.1,
+    536.7,
+    678.6,
+    557.5
+   ],
+   "handwritten": true
+  },
+  "entries[23].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[23].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    657.1,
+    536.7,
+    678.6,
+    557.5
+   ],
+   "handwritten": false
+  },
+  "entries[24].date": {
+   "value": "2026-10-13",
+   "status": "present",
+   "page": 0,
+   "box": [
+    48.4,
+    570.5,
+    85.5,
+    586.5
+   ],
+   "handwritten": false
+  },
+  "entries[24].start_time": {
+   "value": "07:30",
+   "status": "present",
+   "page": 0,
+   "box": [
+    207.3,
+    563.8,
+    242.0,
+    587.5
+   ],
+   "handwritten": true
+  },
+  "entries[24].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[24].position_no": {
+   "value": "032101",
+   "status": "present",
+   "page": 0,
+   "box": [
+    140.2,
+    219.3,
+    187.6,
+    235.3
+   ],
+   "handwritten": false
+  },
+  "entries[24].service": {
+   "value": "Medikamentengabe (Verabreichen)",
+   "status": "present",
+   "page": 0,
+   "box": [
+    140.2,
+    219.3,
+    187.6,
+    235.3
+   ],
+   "handwritten": false
+  },
+  "entries[24].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[24].staff_initials": {
+   "value": "JR",
+   "status": "present",
+   "page": 0,
+   "box": [
+    362.0,
+    565.4,
+    382.7,
+    587.3
+   ],
+   "handwritten": true
+  },
+  "entries[24].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[24].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    362.0,
+    565.4,
+    382.7,
+    587.3
+   ],
+   "handwritten": false
+  },
+  "entries[25].date": {
+   "value": "2026-10-13",
+   "status": "present",
+   "page": 0,
+   "box": [
+    48.4,
+    570.5,
+    85.5,
+    586.5
+   ],
+   "handwritten": false
+  },
+  "entries[25].start_time": {
+   "value": "07:30",
+   "status": "present",
+   "page": 0,
+   "box": [
+    503.0,
+    563.2,
+    537.1,
+    584.6
+   ],
+   "handwritten": true
+  },
+  "entries[25].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[25].position_no": {
+   "value": "032130",
+   "status": "present",
+   "page": 0,
+   "box": [
+    442.9,
+    216.6,
+    490.3,
+    232.6
+   ],
+   "handwritten": false
+  },
+  "entries[25].service": {
+   "value": "Kompressionsstrümpfe anziehen",
+   "status": "present",
+   "page": 0,
+   "box": [
+    442.9,
+    216.6,
+    490.3,
+    232.6
+   ],
+   "handwritten": false
+  },
+  "entries[25].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[25].staff_initials": {
+   "value": "JR",
+   "status": "present",
+   "page": 0,
+   "box": [
+    656.9,
+    562.5,
+    678.0,
+    583.3
+   ],
+   "handwritten": true
+  },
+  "entries[25].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[25].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    656.9,
+    562.5,
+    678.0,
+    583.3
+   ],
+   "handwritten": false
+  },
+  "entries[26].date": {
+   "value": "2026-10-17",
+   "status": "present",
+   "page": 0,
+   "box": [
+    49.3,
+    672.0,
+    90.3,
+    688.0
+   ],
+   "handwritten": false
+  },
+  "entries[26].start_time": {
+   "value": "07:21",
+   "status": "present",
+   "page": 0,
+   "box": [
+    208.3,
+    666.3,
+    242.9,
+    691.5
+   ],
+   "handwritten": true
+  },
+  "entries[26].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[26].position_no": {
+   "value": "032101",
+   "status": "present",
+   "page": 0,
+   "box": [
+    140.2,
+    219.3,
+    187.6,
+    235.3
+   ],
+   "handwritten": false
+  },
+  "entries[26].service": {
+   "value": "Medikamentengabe (Verabreichen)",
+   "status": "present",
+   "page": 0,
+   "box": [
+    140.2,
+    219.3,
+    187.6,
+    235.3
+   ],
+   "handwritten": false
+  },
+  "entries[26].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[26].staff_initials": {
+   "value": "SB",
+   "status": "present",
+   "page": 0,
+   "box": [
+    360.2,
+    665.6,
+    386.1,
+    689.5
+   ],
+   "handwritten": true
+  },
+  "entries[26].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[26].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    360.2,
+    665.6,
+    386.1,
+    689.5
+   ],
+   "handwritten": false
+  },
+  "entries[27].date": {
+   "value": "2026-10-17",
+   "status": "present",
+   "page": 0,
+   "box": [
+    49.3,
+    672.0,
+    90.3,
+    688.0
+   ],
+   "handwritten": false
+  },
+  "entries[27].start_time": {
+   "value": "07:21",
+   "status": "present",
+   "page": 0,
+   "box": [
+    503.9,
+    665.3,
+    538.2,
+    687.2
+   ],
+   "handwritten": true
+  },
+  "entries[27].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[27].position_no": {
+   "value": "032130",
+   "status": "present",
+   "page": 0,
+   "box": [
+    442.9,
+    216.6,
+    490.3,
+    232.6
+   ],
+   "handwritten": false
+  },
+  "entries[27].service": {
+   "value": "Kompressionsstrümpfe anziehen",
+   "status": "present",
+   "page": 0,
+   "box": [
+    442.9,
+    216.6,
+    490.3,
+    232.6
+   ],
+   "handwritten": false
+  },
+  "entries[27].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[27].staff_initials": {
+   "value": "SB",
+   "status": "present",
+   "page": 0,
+   "box": [
+    655.6,
+    663.8,
+    681.9,
+    684.5
+   ],
+   "handwritten": true
+  },
+  "entries[27].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[27].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    655.6,
+    663.8,
+    681.9,
+    684.5
+   ],
+   "handwritten": false
+  },
+  "entries[28].date": {
+   "value": "2026-10-18",
+   "status": "present",
+   "page": 0,
+   "box": [
+    49.5,
+    697.4,
+    90.6,
+    713.4
+   ],
+   "handwritten": false
+  },
+  "entries[28].start_time": {
+   "value": "07:45",
+   "status": "present",
+   "page": 0,
+   "box": [
+    207.3,
+    693.8,
+    244.8,
+    716.6
+   ],
+   "handwritten": true
+  },
+  "entries[28].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[28].position_no": {
+   "value": "032101",
+   "status": "present",
+   "page": 0,
+   "box": [
+    140.2,
+    219.3,
+    187.6,
+    235.3
+   ],
+   "handwritten": false
+  },
+  "entries[28].service": {
+   "value": "Medikamentengabe (Verabreichen)",
+   "status": "present",
+   "page": 0,
+   "box": [
+    140.2,
+    219.3,
+    187.6,
+    235.3
+   ],
+   "handwritten": false
+  },
+  "entries[28].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[28].staff_initials": {
+   "value": "SB",
+   "status": "present",
+   "page": 0,
+   "box": [
+    360.7,
+    693.0,
+    387.0,
+    713.3
+   ],
+   "handwritten": true
+  },
+  "entries[28].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[28].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    360.7,
+    693.0,
+    387.0,
+    713.3
+   ],
+   "handwritten": false
+  },
+  "entries[29].date": {
+   "value": "2026-10-18",
+   "status": "present",
+   "page": 0,
+   "box": [
+    49.5,
+    697.4,
+    90.6,
+    713.4
+   ],
+   "handwritten": false
+  },
+  "entries[29].start_time": {
+   "value": "07:45",
+   "status": "present",
+   "page": 0,
+   "box": [
+    501.8,
+    688.0,
+    539.6,
+    713.3
+   ],
+   "handwritten": true
+  },
+  "entries[29].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[29].position_no": {
+   "value": "032130",
+   "status": "present",
+   "page": 0,
+   "box": [
+    442.9,
+    216.6,
+    490.3,
+    232.6
+   ],
+   "handwritten": false
+  },
+  "entries[29].service": {
+   "value": "Kompressionsstrümpfe anziehen",
+   "status": "present",
+   "page": 0,
+   "box": [
+    442.9,
+    216.6,
+    490.3,
+    232.6
+   ],
+   "handwritten": false
+  },
+  "entries[29].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[29].staff_initials": {
+   "value": "SB",
+   "status": "present",
+   "page": 0,
+   "box": [
+    656.0,
+    689.5,
+    681.8,
+    710.4
+   ],
+   "handwritten": true
+  },
+  "entries[29].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[29].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    656.0,
+    689.5,
+    681.8,
+    710.4
+   ],
+   "handwritten": false
+  },
+  "entries[30].date": {
+   "value": "2026-10-19",
+   "status": "present",
+   "page": 0,
+   "box": [
+    49.7,
+    722.8,
+    93.1,
+    738.8
+   ],
+   "handwritten": false
+  },
+  "entries[30].start_time": {
+   "value": "07:42",
+   "status": "present",
+   "page": 0,
+   "box": [
+    207.9,
+    716.3,
+    243.8,
+    739.4
+   ],
+   "handwritten": true
+  },
+  "entries[30].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[30].position_no": {
+   "value": "032101",
+   "status": "present",
+   "page": 0,
+   "box": [
+    140.2,
+    219.3,
+    187.6,
+    235.3
+   ],
+   "handwritten": false
+  },
+  "entries[30].service": {
+   "value": "Medikamentengabe (Verabreichen)",
+   "status": "present",
+   "page": 0,
+   "box": [
+    140.2,
+    219.3,
+    187.6,
+    235.3
+   ],
+   "handwritten": false
+  },
+  "entries[30].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[30].staff_initials": {
+   "value": "JR",
+   "status": "present",
+   "page": 0,
+   "box": [
+    363.0,
+    717.7,
+    384.7,
+    739.8
+   ],
+   "handwritten": true
+  },
+  "entries[30].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[30].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    363.0,
+    717.7,
+    384.7,
+    739.8
+   ],
+   "handwritten": false
+  },
+  "entries[31].date": {
+   "value": "2026-10-19",
+   "status": "present",
+   "page": 0,
+   "box": [
+    49.7,
+    722.8,
+    93.1,
+    738.8
+   ],
+   "handwritten": false
+  },
+  "entries[31].start_time": {
+   "value": "07:42",
+   "status": "present",
+   "page": 0,
+   "box": [
+    503.5,
+    715.4,
+    539.2,
+    736.5
+   ],
+   "handwritten": true
+  },
+  "entries[31].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[31].position_no": {
+   "value": "032130",
+   "status": "present",
+   "page": 0,
+   "box": [
+    442.9,
+    216.6,
+    490.3,
+    232.6
+   ],
+   "handwritten": false
+  },
+  "entries[31].service": {
+   "value": "Kompressionsstrümpfe anziehen",
+   "status": "present",
+   "page": 0,
+   "box": [
+    442.9,
+    216.6,
+    490.3,
+    232.6
+   ],
+   "handwritten": false
+  },
+  "entries[31].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[31].staff_initials": {
+   "value": "JR",
+   "status": "present",
+   "page": 0,
+   "box": [
+    659.1,
+    714.7,
+    679.6,
+    735.6
+   ],
+   "handwritten": true
+  },
+  "entries[31].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[31].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    659.1,
+    714.7,
+    679.6,
+    735.6
+   ],
+   "handwritten": false
+  },
+  "entries[32].date": {
+   "value": "2026-10-20",
+   "status": "present",
+   "page": 0,
+   "box": [
+    49.9,
+    748.2,
+    87.1,
+    764.2
+   ],
+   "handwritten": false
+  },
+  "entries[32].start_time": {
+   "value": "07:10",
+   "status": "present",
+   "page": 0,
+   "box": [
+    210.2,
+    744.3,
+    242.6,
+    764.9
+   ],
+   "handwritten": true
+  },
+  "entries[32].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[32].position_no": {
+   "value": "032101",
+   "status": "present",
+   "page": 0,
+   "box": [
+    140.2,
+    219.3,
+    187.6,
+    235.3
+   ],
+   "handwritten": false
+  },
+  "entries[32].service": {
+   "value": "Medikamentengabe (Verabreichen)",
+   "status": "present",
+   "page": 0,
+   "box": [
+    140.2,
+    219.3,
+    187.6,
+    235.3
+   ],
+   "handwritten": false
+  },
+  "entries[32].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[32].staff_initials": {
+   "value": "AW",
+   "status": "present",
+   "page": 0,
+   "box": [
+    360.7,
+    743.5,
+    387.6,
+    765.3
+   ],
+   "handwritten": true
+  },
+  "entries[32].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[32].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    360.7,
+    743.5,
+    387.6,
+    765.3
+   ],
+   "handwritten": false
+  },
+  "entries[33].date": {
+   "value": "2026-10-20",
+   "status": "present",
+   "page": 0,
+   "box": [
+    49.9,
+    748.2,
+    87.1,
+    764.2
+   ],
+   "handwritten": false
+  },
+  "entries[33].start_time": {
+   "value": "07:10",
+   "status": "present",
+   "page": 0,
+   "box": [
+    505.4,
+    741.7,
+    537.6,
+    763.3
+   ],
+   "handwritten": true
+  },
+  "entries[33].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[33].position_no": {
+   "value": "032130",
+   "status": "present",
+   "page": 0,
+   "box": [
+    442.9,
+    216.6,
+    490.3,
+    232.6
+   ],
+   "handwritten": false
+  },
+  "entries[33].service": {
+   "value": "Kompressionsstrümpfe anziehen",
+   "status": "present",
+   "page": 0,
+   "box": [
+    442.9,
+    216.6,
+    490.3,
+    232.6
+   ],
+   "handwritten": false
+  },
+  "entries[33].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[33].staff_initials": {
+   "value": "AW",
+   "status": "present",
+   "page": 0,
+   "box": [
+    655.6,
+    741.4,
+    682.7,
+    762.5
+   ],
+   "handwritten": true
+  },
+  "entries[33].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[33].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    655.6,
+    741.4,
+    682.7,
+    762.5
+   ],
+   "handwritten": false
+  },
+  "entries[34].date": {
+   "value": "2026-10-21",
+   "status": "present",
+   "page": 0,
+   "box": [
+    50.2,
+    773.6,
+    88.8,
+    789.6
+   ],
+   "handwritten": false
+  },
+  "entries[34].start_time": {
+   "value": "07:20",
+   "status": "present",
+   "page": 0,
+   "box": [
+    208.9,
+    770.2,
+    244.3,
+    793.8
+   ],
+   "handwritten": true
+  },
+  "entries[34].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[34].position_no": {
+   "value": "032101",
+   "status": "present",
+   "page": 0,
+   "box": [
+    140.2,
+    219.3,
+    187.6,
+    235.3
+   ],
+   "handwritten": false
+  },
+  "entries[34].service": {
+   "value": "Medikamentengabe (Verabreichen)",
+   "status": "present",
+   "page": 0,
+   "box": [
+    140.2,
+    219.3,
+    187.6,
+    235.3
+   ],
+   "handwritten": false
+  },
+  "entries[34].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[34].staff_initials": {
+   "value": "SB",
+   "status": "present",
+   "page": 0,
+   "box": [
+    361.4,
+    769.4,
+    387.0,
+    790.2
+   ],
+   "handwritten": true
+  },
+  "entries[34].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[34].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    361.4,
+    769.4,
+    387.0,
+    790.2
+   ],
+   "handwritten": false
+  },
+  "entries[35].date": {
+   "value": "2026-10-21",
+   "status": "present",
+   "page": 0,
+   "box": [
+    50.2,
+    773.6,
+    88.8,
+    789.6
+   ],
+   "handwritten": false
+  },
+  "entries[35].start_time": {
+   "value": "07:20",
+   "status": "present",
+   "page": 0,
+   "box": [
+    504.0,
+    767.7,
+    539.6,
+    789.7
+   ],
+   "handwritten": true
+  },
+  "entries[35].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[35].position_no": {
+   "value": "032130",
+   "status": "present",
+   "page": 0,
+   "box": [
+    442.9,
+    216.6,
+    490.3,
+    232.6
+   ],
+   "handwritten": false
+  },
+  "entries[35].service": {
+   "value": "Kompressionsstrümpfe anziehen",
+   "status": "present",
+   "page": 0,
+   "box": [
+    442.9,
+    216.6,
+    490.3,
+    232.6
+   ],
+   "handwritten": false
+  },
+  "entries[35].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[35].staff_initials": {
+   "value": "SB",
+   "status": "present",
+   "page": 0,
+   "box": [
+    656.5,
+    766.8,
+    682.3,
+    790.2
+   ],
+   "handwritten": true
+  },
+  "entries[35].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[35].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    656.5,
+    766.8,
+    682.3,
+    790.2
+   ],
+   "handwritten": false
+  },
+  "entries[36].date": {
+   "value": "2026-10-22",
+   "status": "present",
+   "page": 0,
+   "box": [
+    50.4,
+    799.0,
+    92.2,
+    815.0
+   ],
+   "handwritten": false
+  },
+  "entries[36].start_time": {
+   "value": "07:40",
+   "status": "present",
+   "page": 0,
+   "box": [
+    209.8,
+    794.9,
+    243.6,
+    815.3
+   ],
+   "handwritten": true
+  },
+  "entries[36].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[36].position_no": {
+   "value": "032101",
+   "status": "present",
+   "page": 0,
+   "box": [
+    140.2,
+    219.3,
+    187.6,
+    235.3
+   ],
+   "handwritten": false
+  },
+  "entries[36].service": {
+   "value": "Medikamentengabe (Verabreichen)",
+   "status": "present",
+   "page": 0,
+   "box": [
+    140.2,
+    219.3,
+    187.6,
+    235.3
+   ],
+   "handwritten": false
+  },
+  "entries[36].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[36].staff_initials": {
+   "value": "AW",
+   "status": "present",
+   "page": 0,
+   "box": [
+    361.1,
+    794.1,
+    387.8,
+    815.2
+   ],
+   "handwritten": true
+  },
+  "entries[36].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[36].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    361.1,
+    794.1,
+    387.8,
+    815.2
+   ],
+   "handwritten": false
+  },
+  "entries[37].date": {
+   "value": "2026-10-22",
+   "status": "present",
+   "page": 0,
+   "box": [
+    50.4,
+    799.0,
+    92.2,
+    815.0
+   ],
+   "handwritten": false
+  },
+  "entries[37].start_time": {
+   "value": "07:40",
+   "status": "present",
+   "page": 0,
+   "box": [
+    505.0,
+    793.0,
+    539.1,
+    814.2
+   ],
+   "handwritten": true
+  },
+  "entries[37].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[37].position_no": {
+   "value": "032130",
+   "status": "present",
+   "page": 0,
+   "box": [
+    442.9,
+    216.6,
+    490.3,
+    232.6
+   ],
+   "handwritten": false
+  },
+  "entries[37].service": {
+   "value": "Kompressionsstrümpfe anziehen",
+   "status": "present",
+   "page": 0,
+   "box": [
+    442.9,
+    216.6,
+    490.3,
+    232.6
+   ],
+   "handwritten": false
+  },
+  "entries[37].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[37].staff_initials": {
+   "value": "AW",
+   "status": "present",
+   "page": 0,
+   "box": [
+    655.8,
+    791.9,
+    683.5,
+    814.1
+   ],
+   "handwritten": true
+  },
+  "entries[37].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[37].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    655.8,
+    791.9,
+    683.5,
+    814.1
+   ],
+   "handwritten": false
+  },
+  "entries[38].date": {
+   "value": "2026-10-23",
+   "status": "present",
+   "page": 0,
+   "box": [
+    50.6,
+    824.4,
+    87.7,
+    840.3
+   ],
+   "handwritten": false
+  },
+  "entries[38].start_time": {
+   "value": "07:39",
+   "status": "present",
+   "page": 0,
+   "box": [
+    211.2,
+    819.5,
+    243.2,
+    840.5
+   ],
+   "handwritten": true
+  },
+  "entries[38].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[38].position_no": {
+   "value": "032101",
+   "status": "present",
+   "page": 0,
+   "box": [
+    140.2,
+    219.3,
+    187.6,
+    235.3
+   ],
+   "handwritten": false
+  },
+  "entries[38].service": {
+   "value": "Medikamentengabe (Verabreichen)",
+   "status": "present",
+   "page": 0,
+   "box": [
+    140.2,
+    219.3,
+    187.6,
+    235.3
+   ],
+   "handwritten": false
+  },
+  "entries[38].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[38].staff_initials": {
+   "value": "JR",
+   "status": "present",
+   "page": 0,
+   "box": [
+    364.1,
+    819.0,
+    384.8,
+    841.6
+   ],
+   "handwritten": true
+  },
+  "entries[38].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[38].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    364.1,
+    819.0,
+    384.8,
+    841.6
+   ],
+   "handwritten": false
+  },
+  "entries[39].date": {
+   "value": "2026-10-23",
+   "status": "present",
+   "page": 0,
+   "box": [
+    50.6,
+    824.4,
+    87.7,
+    840.3
+   ],
+   "handwritten": false
+  },
+  "entries[39].start_time": {
+   "value": "07:39",
+   "status": "present",
+   "page": 0,
+   "box": [
+    506.4,
+    817.7,
+    538.1,
+    838.3
+   ],
+   "handwritten": true
+  },
+  "entries[39].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[39].position_no": {
+   "value": "032130",
+   "status": "present",
+   "page": 0,
+   "box": [
+    442.9,
+    216.6,
+    490.3,
+    232.6
+   ],
+   "handwritten": false
+  },
+  "entries[39].service": {
+   "value": "Kompressionsstrümpfe anziehen",
+   "status": "present",
+   "page": 0,
+   "box": [
+    442.9,
+    216.6,
+    490.3,
+    232.6
+   ],
+   "handwritten": false
+  },
+  "entries[39].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[39].staff_initials": {
+   "value": "JR",
+   "status": "present",
+   "page": 0,
+   "box": [
+    659.2,
+    815.8,
+    680.4,
+    837.0
+   ],
+   "handwritten": true
+  },
+  "entries[39].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[39].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    659.2,
+    815.8,
+    680.4,
+    837.0
+   ],
+   "handwritten": false
+  },
+  "entries[40].date": {
+   "value": "2026-10-24",
+   "status": "present",
+   "page": 0,
+   "box": [
+    50.8,
+    849.7,
+    91.9,
+    865.7
+   ],
+   "handwritten": false
+  },
+  "entries[40].start_time": {
+   "value": "07:25",
+   "status": "present",
+   "page": 0,
+   "box": [
+    208.3,
+    846.8,
+    246.3,
+    867.3
+   ],
+   "handwritten": true
+  },
+  "entries[40].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[40].position_no": {
+   "value": "032101",
+   "status": "present",
+   "page": 0,
+   "box": [
+    140.2,
+    219.3,
+    187.6,
+    235.3
+   ],
+   "handwritten": false
+  },
+  "entries[40].service": {
+   "value": "Medikamentengabe (Verabreichen)",
+   "status": "present",
+   "page": 0,
+   "box": [
+    140.2,
+    219.3,
+    187.6,
+    235.3
+   ],
+   "handwritten": false
+  },
+  "entries[40].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[40].staff_initials": {
+   "value": "SB",
+   "status": "present",
+   "page": 0,
+   "box": [
+    361.6,
+    844.3,
+    387.5,
+    865.2
+   ],
+   "handwritten": true
+  },
+  "entries[40].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[40].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    361.6,
+    844.3,
+    387.5,
+    865.2
+   ],
+   "handwritten": false
+  },
+  "entries[41].date": {
+   "value": "2026-10-24",
+   "status": "present",
+   "page": 0,
+   "box": [
+    50.8,
+    849.7,
+    91.9,
+    865.7
+   ],
+   "handwritten": false
+  },
+  "entries[41].start_time": {
+   "value": "07:25",
+   "status": "present",
+   "page": 0,
+   "box": [
+    502.7,
+    843.6,
+    541.7,
+    865.4
+   ],
+   "handwritten": true
+  },
+  "entries[41].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[41].position_no": {
+   "value": "032130",
+   "status": "present",
+   "page": 0,
+   "box": [
+    442.9,
+    216.6,
+    490.3,
+    232.6
+   ],
+   "handwritten": false
+  },
+  "entries[41].service": {
+   "value": "Kompressionsstrümpfe anziehen",
+   "status": "present",
+   "page": 0,
+   "box": [
+    442.9,
+    216.6,
+    490.3,
+    232.6
+   ],
+   "handwritten": false
+  },
+  "entries[41].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[41].staff_initials": {
+   "value": "SB",
+   "status": "present",
+   "page": 0,
+   "box": [
+    656.7,
+    838.4,
+    683.1,
+    864.2
+   ],
+   "handwritten": true
+  },
+  "entries[41].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[41].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    656.7,
+    838.4,
+    683.1,
+    864.2
+   ],
+   "handwritten": false
+  },
+  "entries[42].date": {
+   "value": "2026-10-25",
+   "status": "present",
+   "page": 0,
+   "box": [
+    51.1,
+    875.1,
+    92.1,
+    891.1
+   ],
+   "handwritten": false
+  },
+  "entries[42].start_time": {
+   "value": "07:35",
+   "status": "present",
+   "page": 0,
+   "box": [
+    209.3,
+    870.7,
+    246.1,
+    893.2
+   ],
+   "handwritten": true
+  },
+  "entries[42].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[42].position_no": {
+   "value": "032101",
+   "status": "present",
+   "page": 0,
+   "box": [
+    140.2,
+    219.3,
+    187.6,
+    235.3
+   ],
+   "handwritten": false
+  },
+  "entries[42].service": {
+   "value": "Medikamentengabe (Verabreichen)",
+   "status": "present",
+   "page": 0,
+   "box": [
+    140.2,
+    219.3,
+    187.6,
+    235.3
+   ],
+   "handwritten": false
+  },
+  "entries[42].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[42].staff_initials": {
+   "value": "AW",
+   "status": "present",
+   "page": 0,
+   "box": [
+    361.8,
+    870.6,
+    388.5,
+    890.5
+   ],
+   "handwritten": true
+  },
+  "entries[42].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[42].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    361.8,
+    870.6,
+    388.5,
+    890.5
+   ],
+   "handwritten": false
+  },
+  "entries[43].date": {
+   "value": "2026-10-25",
+   "status": "present",
+   "page": 0,
+   "box": [
+    51.1,
+    875.1,
+    92.1,
+    891.1
+   ],
+   "handwritten": false
+  },
+  "entries[43].start_time": {
+   "value": "07:35",
+   "status": "present",
+   "page": 0,
+   "box": [
+    503.8,
+    868.6,
+    541.0,
+    890.2
+   ],
+   "handwritten": true
+  },
+  "entries[43].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[43].position_no": {
+   "value": "032130",
+   "status": "present",
+   "page": 0,
+   "box": [
+    442.9,
+    216.6,
+    490.3,
+    232.6
+   ],
+   "handwritten": false
+  },
+  "entries[43].service": {
+   "value": "Kompressionsstrümpfe anziehen",
+   "status": "present",
+   "page": 0,
+   "box": [
+    442.9,
+    216.6,
+    490.3,
+    232.6
+   ],
+   "handwritten": false
+  },
+  "entries[43].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[43].staff_initials": {
+   "value": "AW",
+   "status": "present",
+   "page": 0,
+   "box": [
+    656.9,
+    867.7,
+    685.1,
+    890.0
+   ],
+   "handwritten": true
+  },
+  "entries[43].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[43].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    656.9,
+    867.7,
+    685.1,
+    890.0
+   ],
+   "handwritten": false
+  },
+  "entries[44].date": {
+   "value": "2026-10-26",
+   "status": "present",
+   "page": 0,
+   "box": [
+    51.3,
+    900.5,
+    94.7,
+    916.5
+   ],
+   "handwritten": false
+  },
+  "entries[44].start_time": {
+   "value": "07:23",
+   "status": "present",
+   "page": 0,
+   "box": [
+    209.6,
+    895.7,
+    245.7,
+    919.6
+   ],
+   "handwritten": true
+  },
+  "entries[44].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[44].position_no": {
+   "value": "032101",
+   "status": "present",
+   "page": 0,
+   "box": [
+    140.2,
+    219.3,
+    187.6,
+    235.3
+   ],
+   "handwritten": false
+  },
+  "entries[44].service": {
+   "value": "Medikamentengabe (Verabreichen)",
+   "status": "present",
+   "page": 0,
+   "box": [
+    140.2,
+    219.3,
+    187.6,
+    235.3
+   ],
+   "handwritten": false
+  },
+  "entries[44].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[44].staff_initials": {
+   "value": "AW",
+   "status": "present",
+   "page": 0,
+   "box": [
+    362.0,
+    894.9,
+    389.1,
+    916.7
+   ],
+   "handwritten": true
+  },
+  "entries[44].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[44].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    362.0,
+    894.9,
+    389.1,
+    916.7
+   ],
+   "handwritten": false
+  },
+  "entries[45].date": {
+   "value": "2026-10-26",
+   "status": "present",
+   "page": 0,
+   "box": [
+    51.3,
+    900.5,
+    94.7,
+    916.5
+   ],
+   "handwritten": false
+  },
+  "entries[45].start_time": {
+   "value": "07:23",
+   "status": "present",
+   "page": 0,
+   "box": [
+    505.4,
+    893.2,
+    540.6,
+    916.0
+   ],
+   "handwritten": true
+  },
+  "entries[45].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[45].position_no": {
+   "value": "032130",
+   "status": "present",
+   "page": 0,
+   "box": [
+    442.9,
+    216.6,
+    490.3,
+    232.6
+   ],
+   "handwritten": false
+  },
+  "entries[45].service": {
+   "value": "Kompressionsstrümpfe anziehen",
+   "status": "present",
+   "page": 0,
+   "box": [
+    442.9,
+    216.6,
+    490.3,
+    232.6
+   ],
+   "handwritten": false
+  },
+  "entries[45].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[45].staff_initials": {
+   "value": "AW",
+   "status": "present",
+   "page": 0,
+   "box": [
+    656.6,
+    893.7,
+    683.9,
+    914.0
+   ],
+   "handwritten": true
+  },
+  "entries[45].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[45].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    656.6,
+    893.7,
+    683.9,
+    914.0
+   ],
+   "handwritten": false
+  },
+  "entries[46].date": {
+   "value": "2026-10-27",
+   "status": "present",
+   "page": 0,
+   "box": [
+    51.5,
+    926.0,
+    88.6,
+    941.9
+   ],
+   "handwritten": false
+  },
+  "entries[46].start_time": {
+   "value": "07:40",
+   "status": "present",
+   "page": 0,
+   "box": [
+    210.7,
+    921.7,
+    245.1,
+    943.0
+   ],
+   "handwritten": true
+  },
+  "entries[46].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[46].position_no": {
+   "value": "032101",
+   "status": "present",
+   "page": 0,
+   "box": [
+    140.2,
+    219.3,
+    187.6,
+    235.3
+   ],
+   "handwritten": false
+  },
+  "entries[46].service": {
+   "value": "Medikamentengabe (Verabreichen)",
+   "status": "present",
+   "page": 0,
+   "box": [
+    140.2,
+    219.3,
+    187.6,
+    235.3
+   ],
+   "handwritten": false
+  },
+  "entries[46].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[46].staff_initials": {
+   "value": "SB",
+   "status": "present",
+   "page": 0,
+   "box": [
+    362.6,
+    921.7,
+    388.6,
+    942.0
+   ],
+   "handwritten": true
+  },
+  "entries[46].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[46].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    362.6,
+    921.7,
+    388.6,
+    942.0
+   ],
+   "handwritten": false
+  },
+  "entries[47].date": {
+   "value": "2026-10-27",
+   "status": "present",
+   "page": 0,
+   "box": [
+    51.5,
+    926.0,
+    88.6,
+    941.9
+   ],
+   "handwritten": false
+  },
+  "entries[47].start_time": {
+   "value": "07:40",
+   "status": "present",
+   "page": 0,
+   "box": [
+    506.1,
+    918.8,
+    540.4,
+    943.1
+   ],
+   "handwritten": true
+  },
+  "entries[47].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[47].position_no": {
+   "value": "032130",
+   "status": "present",
+   "page": 0,
+   "box": [
+    442.9,
+    216.6,
+    490.3,
+    232.6
+   ],
+   "handwritten": false
+  },
+  "entries[47].service": {
+   "value": "Kompressionsstrümpfe anziehen",
+   "status": "present",
+   "page": 0,
+   "box": [
+    442.9,
+    216.6,
+    490.3,
+    232.6
+   ],
+   "handwritten": false
+  },
+  "entries[47].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[47].staff_initials": {
+   "value": "SB",
+   "status": "present",
+   "page": 0,
+   "box": [
+    657.9,
+    917.6,
+    683.5,
+    939.9
+   ],
+   "handwritten": true
+  },
+  "entries[47].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[47].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    657.9,
+    917.6,
+    683.5,
+    939.9
+   ],
+   "handwritten": false
+  },
+  "entries[48].date": {
+   "value": "2026-10-28",
+   "status": "present",
+   "page": 0,
+   "box": [
+    51.7,
+    951.3,
+    90.4,
+    967.3
+   ],
+   "handwritten": false
+  },
+  "entries[48].start_time": {
+   "value": "07:30",
+   "status": "present",
+   "page": 0,
+   "box": [
+    210.8,
+    946.6,
+    245.4,
+    967.6
+   ],
+   "handwritten": true
+  },
+  "entries[48].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[48].position_no": {
+   "value": "032101",
+   "status": "present",
+   "page": 0,
+   "box": [
+    140.2,
+    219.3,
+    187.6,
+    235.3
+   ],
+   "handwritten": false
+  },
+  "entries[48].service": {
+   "value": "Medikamentengabe (Verabreichen)",
+   "status": "present",
+   "page": 0,
+   "box": [
+    140.2,
+    219.3,
+    187.6,
+    235.3
+   ],
+   "handwritten": false
+  },
+  "entries[48].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[48].staff_initials": {
+   "value": "JR",
+   "status": "present",
+   "page": 0,
+   "box": [
+    365.2,
+    945.1,
+    386.2,
+    966.8
+   ],
+   "handwritten": true
+  },
+  "entries[48].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[48].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    365.2,
+    945.1,
+    386.2,
+    966.8
+   ],
+   "handwritten": false
+  },
+  "entries[49].date": {
+   "value": "2026-10-28",
+   "status": "present",
+   "page": 0,
+   "box": [
+    51.7,
+    951.3,
+    90.4,
+    967.3
+   ],
+   "handwritten": false
+  },
+  "entries[49].start_time": {
+   "value": "07:30",
+   "status": "present",
+   "page": 0,
+   "box": [
+    506.5,
+    943.1,
+    540.3,
+    965.8
+   ],
+   "handwritten": true
+  },
+  "entries[49].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[49].position_no": {
+   "value": "032130",
+   "status": "present",
+   "page": 0,
+   "box": [
+    442.9,
+    216.6,
+    490.3,
+    232.6
+   ],
+   "handwritten": false
+  },
+  "entries[49].service": {
+   "value": "Kompressionsstrümpfe anziehen",
+   "status": "present",
+   "page": 0,
+   "box": [
+    442.9,
+    216.6,
+    490.3,
+    232.6
+   ],
+   "handwritten": false
+  },
+  "entries[49].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[49].staff_initials": {
+   "value": "JR",
+   "status": "present",
+   "page": 0,
+   "box": [
+    660.9,
+    943.5,
+    681.1,
+    963.5
+   ],
+   "handwritten": true
+  },
+  "entries[49].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[49].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    660.9,
+    943.5,
+    681.1,
+    963.5
+   ],
+   "handwritten": false
+  },
+  "entries[50].date": {
+   "value": "2026-10-29",
+   "status": "present",
+   "page": 0,
+   "box": [
+    52.0,
+    976.7,
+    93.8,
+    992.7
+   ],
+   "handwritten": false
+  },
+  "entries[50].start_time": {
+   "value": "07:45",
+   "status": "present",
+   "page": 0,
+   "box": [
+    209.5,
+    973.4,
+    247.4,
+    994.8
+   ],
+   "handwritten": true
+  },
+  "entries[50].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[50].position_no": {
+   "value": "032101",
+   "status": "present",
+   "page": 0,
+   "box": [
+    140.2,
+    219.3,
+    187.6,
+    235.3
+   ],
+   "handwritten": false
+  },
+  "entries[50].service": {
+   "value": "Medikamentengabe (Verabreichen)",
+   "status": "present",
+   "page": 0,
+   "box": [
+    140.2,
+    219.3,
+    187.6,
+    235.3
+   ],
+   "handwritten": false
+  },
+  "entries[50].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[50].staff_initials": {
+   "value": "AW",
+   "status": "present",
+   "page": 0,
+   "box": [
+    362.4,
+    972.5,
+    389.6,
+    992.7
+   ],
+   "handwritten": true
+  },
+  "entries[50].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[50].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    362.4,
+    972.5,
+    389.6,
+    992.7
+   ],
+   "handwritten": false
+  },
+  "entries[51].date": {
+   "value": "2026-10-29",
+   "status": "present",
+   "page": 0,
+   "box": [
+    52.0,
+    976.7,
+    93.8,
+    992.7
+   ],
+   "handwritten": false
+  },
+  "entries[51].start_time": {
+   "value": "07:45",
+   "status": "present",
+   "page": 0,
+   "box": [
+    505.0,
+    970.1,
+    541.9,
+    991.8
+   ],
+   "handwritten": true
+  },
+  "entries[51].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[51].position_no": {
+   "value": "032130",
+   "status": "present",
+   "page": 0,
+   "box": [
+    442.9,
+    216.6,
+    490.3,
+    232.6
+   ],
+   "handwritten": false
+  },
+  "entries[51].service": {
+   "value": "Kompressionsstrümpfe anziehen",
+   "status": "present",
+   "page": 0,
+   "box": [
+    442.9,
+    216.6,
+    490.3,
+    232.6
+   ],
+   "handwritten": false
+  },
+  "entries[51].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[51].staff_initials": {
+   "value": "AW",
+   "status": "present",
+   "page": 0,
+   "box": [
+    658.0,
+    969.5,
+    684.9,
+    991.8
+   ],
+   "handwritten": true
+  },
+  "entries[51].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[51].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    658.0,
+    969.5,
+    684.9,
+    991.8
+   ],
+   "handwritten": false
+  },
+  "entries[52].date": {
+   "value": "2026-10-30",
+   "status": "present",
+   "page": 0,
+   "box": [
+    52.2,
+    1002.1,
+    89.3,
+    1018.1
+   ],
+   "handwritten": false
+  },
+  "entries[52].start_time": {
+   "value": "07:45",
+   "status": "present",
+   "page": 0,
+   "box": [
+    209.8,
+    996.5,
+    247.7,
+    1018.2
+   ],
+   "handwritten": true
+  },
+  "entries[52].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[52].position_no": {
+   "value": "032101",
+   "status": "present",
+   "page": 0,
+   "box": [
+    140.2,
+    219.3,
+    187.6,
+    235.3
+   ],
+   "handwritten": false
+  },
+  "entries[52].service": {
+   "value": "Medikamentengabe (Verabreichen)",
+   "status": "present",
+   "page": 0,
+   "box": [
+    140.2,
+    219.3,
+    187.6,
+    235.3
+   ],
+   "handwritten": false
+  },
+  "entries[52].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[52].staff_initials": {
+   "value": "JR",
+   "status": "present",
+   "page": 0,
+   "box": [
+    365.8,
+    996.6,
+    386.4,
+    1017.8
+   ],
+   "handwritten": true
+  },
+  "entries[52].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[52].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    365.8,
+    996.6,
+    386.4,
+    1017.8
+   ],
+   "handwritten": false
+  },
+  "entries[53].date": {
+   "value": "2026-10-30",
+   "status": "present",
+   "page": 0,
+   "box": [
+    52.2,
+    1002.1,
+    89.3,
+    1018.1
+   ],
+   "handwritten": false
+  },
+  "entries[53].start_time": {
+   "value": "07:45",
+   "status": "present",
+   "page": 0,
+   "box": [
+    505.4,
+    994.0,
+    542.9,
+    1015.6
+   ],
+   "handwritten": true
+  },
+  "entries[53].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[53].position_no": {
+   "value": "032130",
+   "status": "present",
+   "page": 0,
+   "box": [
+    442.9,
+    216.6,
+    490.3,
+    232.6
+   ],
+   "handwritten": false
+  },
+  "entries[53].service": {
+   "value": "Kompressionsstrümpfe anziehen",
+   "status": "present",
+   "page": 0,
+   "box": [
+    442.9,
+    216.6,
+    490.3,
+    232.6
+   ],
+   "handwritten": false
+  },
+  "entries[53].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[53].staff_initials": {
+   "value": "JR",
+   "status": "present",
+   "page": 0,
+   "box": [
+    661.0,
+    994.7,
+    681.6,
+    1014.8
+   ],
+   "handwritten": true
+  },
+  "entries[53].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[53].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    661.0,
+    994.7,
+    681.6,
+    1014.8
+   ],
+   "handwritten": false
+  },
+  "entries[54].date": {
+   "value": "2026-10-31",
+   "status": "present",
+   "page": 0,
+   "box": [
+    52.4,
+    1027.5,
+    93.5,
+    1043.5
+   ],
+   "handwritten": false
+  },
+  "entries[54].start_time": {
+   "value": "07:40",
+   "status": "present",
+   "page": 0,
+   "box": [
+    211.2,
+    1022.4,
+    245.8,
+    1046.0
+   ],
+   "handwritten": true
+  },
+  "entries[54].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[54].position_no": {
+   "value": "032101",
+   "status": "present",
+   "page": 0,
+   "box": [
+    140.2,
+    219.3,
+    187.6,
+    235.3
+   ],
+   "handwritten": false
+  },
+  "entries[54].service": {
+   "value": "Medikamentengabe (Verabreichen)",
+   "status": "present",
+   "page": 0,
+   "box": [
+    140.2,
+    219.3,
+    187.6,
+    235.3
+   ],
+   "handwritten": false
+  },
+  "entries[54].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[54].staff_initials": {
+   "value": "AW",
+   "status": "present",
+   "page": 0,
+   "box": [
+    362.7,
+    1022.8,
+    390.1,
+    1043.7
+   ],
+   "handwritten": true
+  },
+  "entries[54].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[54].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    362.7,
+    1022.8,
+    390.1,
+    1043.7
+   ],
+   "handwritten": false
+  },
+  "entries[55].date": {
+   "value": "2026-10-31",
+   "status": "present",
+   "page": 0,
+   "box": [
+    52.4,
+    1027.5,
+    93.5,
+    1043.5
+   ],
+   "handwritten": false
+  },
+  "entries[55].start_time": {
+   "value": "07:40",
+   "status": "present",
+   "page": 0,
+   "box": [
+    507.3,
+    1019.7,
+    541.2,
+    1042.0
+   ],
+   "handwritten": true
+  },
+  "entries[55].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[55].position_no": {
+   "value": "032130",
+   "status": "present",
+   "page": 0,
+   "box": [
+    442.9,
+    216.6,
+    490.3,
+    232.6
+   ],
+   "handwritten": false
+  },
+  "entries[55].service": {
+   "value": "Kompressionsstrümpfe anziehen",
+   "status": "present",
+   "page": 0,
+   "box": [
+    442.9,
+    216.6,
+    490.3,
+    232.6
+   ],
+   "handwritten": false
+  },
+  "entries[55].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[55].staff_initials": {
+   "value": "AW",
+   "status": "present",
+   "page": 0,
+   "box": [
+    658.2,
+    1019.4,
+    685.2,
+    1040.7
+   ],
+   "handwritten": true
+  },
+  "entries[55].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[55].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    658.2,
+    1019.4,
+    685.2,
+    1040.7
+   ],
+   "handwritten": false
+  },
+  "entries[#]": {
+   "value": 56,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "provider_ik": {
+   "value": "469960557",
+   "status": "present",
+   "page": 0,
+   "box": [
+    590.8,
+    108.7,
+    703.4,
+    133.1
+   ],
+   "handwritten": false
+  },
+  "month": {
+   "value": "2026-10",
+   "status": "present",
+   "page": 0,
+   "box": [
+    962.6,
+    105.6,
+    1050.2,
+    129.8
+   ],
+   "handwritten": false
+  },
+  "approval_ref": {
+   "value": "DAK-000441139",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1334.3,
+    101.7,
+    1496.9,
+    126.5
+   ],
+   "handwritten": false
+  },
+  "patient_name": {
+   "value": "Eder, Theresia",
+   "status": "present",
+   "page": 0,
+   "box": [
+    47.2,
+    169.0,
+    222.2,
+    194.0
+   ],
+   "handwritten": false
+  },
+  "kvnr": {
+   "value": "H108879567",
+   "status": "present",
+   "page": 0,
+   "box": [
+    591.3,
+    164.6,
+    716.4,
+    189.2
+   ],
+   "handwritten": false
+  },
+  "payer_name": {
+   "value": "DAK-Gesundheit",
+   "status": "present",
+   "page": 0,
+   "box": [
+    963.1,
+    160.9,
+    1138.1,
+    185.9
+   ],
+   "handwritten": false
+  },
+  "responsible_nurse": {
+   "value": "Monika Kraus",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1334.8,
+    157.8,
+    1484.9,
+    182.6
+   ],
+   "handwritten": false
+  },
+  "patient_signature_date": {
+   "value": "2026-10-31",
+   "status": "present",
+   "page": 0,
+   "box": [
+    371.1,
+    1126.8,
+    502.6,
+    1165.0
+   ],
+   "handwritten": true
+  },
+  "missing_signature_reason": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": [
+    772.8,
+    1076.0,
+    820.2,
+    1100.0
+   ],
+   "handwritten": true
+  },
+  "doc_type": {
+   "value": "visit_log_sgbv",
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "patient_signature": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    253.3,
+    1089.1,
+    546.8,
+    1151.7
+   ],
+   "handwritten": false
+  },
+  "provider_signature": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1276.3,
+    1080.1,
+    1562.7,
+    1134.6
+   ],
+   "handwritten": false
+  }
+ },
+ "regions": {
+  "patient_signature": {
+   "page": 0,
+   "box": [
+    253.3,
+    1089.1,
+    546.8,
+    1151.7
+   ],
+   "state": "present"
+  },
+  "provider_signature": {
+   "page": 0,
+   "box": [
+    1276.3,
+    1080.1,
+    1562.7,
+    1134.6
+   ],
+   "state": "present"
+  }
+ },
+ "defects": [
+  "D20"
+ ],
+ "synthetic": true
+}

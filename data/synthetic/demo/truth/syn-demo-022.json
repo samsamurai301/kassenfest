@@ -1,0 +1,330 @@
+{
+ "doc_id": "syn-demo-022",
+ "doc_type": "approval_letter",
+ "variant": "scan",
+ "seed": 2366448319,
+ "patient_id": "p03",
+ "month": "2026-10",
+ "pages": [
+  {
+   "index": 0,
+   "image": "../pages/syn-demo-022.jpg",
+   "width": 1241,
+   "height": 1755
+  }
+ ],
+ "fields": {
+  "payer_name": {
+   "value": "BARMER",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1034.0,
+    21.9,
+    1153.5,
+    55.6
+   ],
+   "handwritten": false
+  },
+  "payer_ik": {
+   "value": "109990030",
+   "status": "present",
+   "page": 0,
+   "box": [
+    262.7,
+    1676.4,
+    331.8,
+    1693.4
+   ],
+   "handwritten": false
+  },
+  "letter_date": {
+   "value": "2026-10-14",
+   "status": "present",
+   "page": 0,
+   "box": [
+    780.1,
+    147.9,
+    861.7,
+    166.7
+   ],
+   "handwritten": false
+  },
+  "approval_ref": {
+   "value": "B-HKP 00751149",
+   "status": "present",
+   "page": 0,
+   "box": [
+    779.0,
+    197.5,
+    904.4,
+    217.2
+   ],
+   "handwritten": false
+  },
+  "patient_name": {
+   "value": "Christl, Maria",
+   "status": "present",
+   "page": 0,
+   "box": [
+    778.0,
+    247.1,
+    874.1,
+    266.3
+   ],
+   "handwritten": false
+  },
+  "kvnr": {
+   "value": "Z574957008",
+   "status": "present",
+   "page": 0,
+   "box": [
+    777.0,
+    296.7,
+    868.6,
+    315.8
+   ],
+   "handwritten": false
+  },
+  "provider_name": {
+   "value": "Pflegedienst Sonnenschein GmbH",
+   "status": "present",
+   "page": 0,
+   "box": [
+    122.8,
+    145.9,
+    425.6,
+    174.0
+   ],
+   "handwritten": false
+  },
+  "provider_ik": {
+   "value": "469960557",
+   "status": "present",
+   "page": 0,
+   "box": [
+    276.5,
+    242.8,
+    375.9,
+    266.7
+   ],
+   "handwritten": false
+  },
+  "prescription_issue_date": {
+   "value": "2026-09-29",
+   "status": "present",
+   "page": 0,
+   "box": [
+    605.1,
+    549.8,
+    704.5,
+    573.7
+   ],
+   "handwritten": false
+  },
+  "decision": {
+   "value": "approved",
+   "status": "present",
+   "page": 0,
+   "box": [
+    577.0,
+    576.5,
+    669.8,
+    600.3
+   ],
+   "handwritten": false
+  },
+  "period_from": {
+   "value": "2026-10-01",
+   "status": "present",
+   "page": 0,
+   "box": [
+    340.2,
+    624.9,
+    439.6,
+    648.8
+   ],
+   "handwritten": false
+  },
+  "period_to": {
+   "value": "2026-12-15",
+   "status": "present",
+   "page": 0,
+   "box": [
+    473.6,
+    627.7,
+    573.0,
+    651.6
+   ],
+   "handwritten": false
+  },
+  "approved_items[0].frequency.count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    521.5,
+    732.9,
+    605.5,
+    756.5
+   ],
+   "handwritten": false
+  },
+  "approved_items[0].frequency.per": {
+   "value": "day",
+   "status": "present",
+   "page": 0,
+   "box": [
+    521.5,
+    732.9,
+    605.5,
+    756.5
+   ],
+   "handwritten": false
+  },
+  "approved_items[0].position_no": {
+   "value": "032110",
+   "status": "present",
+   "page": 0,
+   "box": [
+    428.4,
+    731.0,
+    493.4,
+    754.2
+   ],
+   "handwritten": false
+  },
+  "approved_items[0].description": {
+   "value": "Injektion s.c. (z. B. Insulin)",
+   "status": "present",
+   "page": 0,
+   "box": [
+    140.4,
+    725.0,
+    371.7,
+    751.7
+   ],
+   "handwritten": false
+  },
+  "approved_items[0].valid_from": {
+   "value": "2026-10-01",
+   "status": "present",
+   "page": 0,
+   "box": [
+    659.0,
+    735.7,
+    758.4,
+    759.6
+   ],
+   "handwritten": false
+  },
+  "approved_items[0].valid_to": {
+   "value": "2026-12-15",
+   "status": "present",
+   "page": 0,
+   "box": [
+    794.2,
+    738.5,
+    893.7,
+    762.4
+   ],
+   "handwritten": false
+  },
+  "approved_items[1].frequency.count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    464.0,
+    768.5,
+    548.0,
+    792.1
+   ],
+   "handwritten": false
+  },
+  "approved_items[1].frequency.per": {
+   "value": "day",
+   "status": "present",
+   "page": 0,
+   "box": [
+    464.0,
+    768.5,
+    548.0,
+    792.1
+   ],
+   "handwritten": false
+  },
+  "approved_items[1].position_no": {
+   "value": "032120",
+   "status": "present",
+   "page": 0,
+   "box": [
+    369.4,
+    766.5,
+    435.9,
+    789.7
+   ],
+   "handwritten": false
+  },
+  "approved_items[1].description": {
+   "value": "Blutzuckermessung",
+   "status": "present",
+   "page": 0,
+   "box": [
+    139.7,
+    761.8,
+    312.7,
+    787.2
+   ],
+   "handwritten": false
+  },
+  "approved_items[1].valid_from": {
+   "value": "2026-10-01",
+   "status": "present",
+   "page": 0,
+   "box": [
+    601.4,
+    771.3,
+    700.9,
+    795.2
+   ],
+   "handwritten": false
+  },
+  "approved_items[1].valid_to": {
+   "value": "2026-12-15",
+   "status": "present",
+   "page": 0,
+   "box": [
+    736.7,
+    774.1,
+    836.1,
+    798.0
+   ],
+   "handwritten": false
+  },
+  "approved_items[#]": {
+   "value": 2,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "rejected_items[#]": {
+   "value": 0,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "doc_type": {
+   "value": "approval_letter",
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  }
+ },
+ "regions": {},
+ "defects": [],
+ "synthetic": true
+}

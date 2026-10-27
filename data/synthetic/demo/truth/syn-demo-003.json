@@ -1,0 +1,332 @@
+{
+ "doc_id": "syn-demo-003",
+ "doc_type": "approval_letter",
+ "variant": "scan",
+ "seed": 777567224,
+ "patient_id": "p05",
+ "month": "2026-10",
+ "pages": [
+  {
+   "index": 0,
+   "image": "../pages/syn-demo-003.jpg",
+   "width": 1241,
+   "height": 1755
+  }
+ ],
+ "fields": {
+  "payer_name": {
+   "value": "DAK-Gesundheit",
+   "status": "present",
+   "page": 0,
+   "box": [
+    916.8,
+    31.4,
+    1133.8,
+    65.1
+   ],
+   "handwritten": false
+  },
+  "payer_ik": {
+   "value": "109990041",
+   "status": "present",
+   "page": 0,
+   "box": [
+    302.6,
+    1694.5,
+    371.6,
+    1710.9
+   ],
+   "handwritten": false
+  },
+  "letter_date": {
+   "value": "2026-10-09",
+   "status": "present",
+   "page": 0,
+   "box": [
+    761.6,
+    160.8,
+    843.1,
+    178.9
+   ],
+   "handwritten": false
+  },
+  "approval_ref": {
+   "value": "DAK-000441139",
+   "status": "present",
+   "page": 0,
+   "box": [
+    761.0,
+    210.4,
+    880.2,
+    229.0
+   ],
+   "handwritten": false
+  },
+  "patient_name": {
+   "value": "Eder, Theresia",
+   "status": "present",
+   "page": 0,
+   "box": [
+    760.5,
+    260.0,
+    866.1,
+    278.4
+   ],
+   "handwritten": false
+  },
+  "kvnr": {
+   "value": "H108879567",
+   "status": "present",
+   "page": 0,
+   "box": [
+    759.9,
+    309.7,
+    853.2,
+    327.9
+   ],
+   "handwritten": false
+  },
+  "provider_name": {
+   "value": "Pflegedienst Sonnenschein GmbH",
+   "status": "present",
+   "page": 0,
+   "box": [
+    104.4,
+    164.8,
+    407.0,
+    190.1
+   ],
+   "handwritten": false
+  },
+  "provider_ik": {
+   "value": "469960557",
+   "status": "present",
+   "page": 0,
+   "box": [
+    258.9,
+    260.3,
+    358.2,
+    283.3
+   ],
+   "handwritten": false
+  },
+  "prescription_issue_date": {
+   "value": "2026-09-29",
+   "status": "present",
+   "page": 0,
+   "box": [
+    590.3,
+    564.3,
+    689.6,
+    587.3
+   ],
+   "handwritten": false
+  },
+  "decision": {
+   "value": "approved",
+   "status": "present",
+   "page": 0,
+   "box": [
+    562.6,
+    591.3,
+    655.2,
+    614.2
+   ],
+   "handwritten": false
+  },
+  "period_from": {
+   "value": "2026-10-01",
+   "status": "present",
+   "page": 0,
+   "box": [
+    326.2,
+    641.8,
+    425.4,
+    664.9
+   ],
+   "handwritten": false
+  },
+  "period_to": {
+   "value": "2026-12-15",
+   "status": "present",
+   "page": 0,
+   "box": [
+    459.6,
+    643.4,
+    558.9,
+    666.4
+   ],
+   "handwritten": false
+  },
+  "approved_items[0].frequency.count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    588.1,
+    749.0,
+    671.9,
+    771.9
+   ],
+   "handwritten": false
+  },
+  "approved_items[0].frequency.per": {
+   "value": "day",
+   "status": "present",
+   "page": 0,
+   "box": [
+    588.1,
+    749.0,
+    671.9,
+    771.9
+   ],
+   "handwritten": false
+  },
+  "approved_items[0].position_no": {
+   "value": "032101",
+   "status": "present",
+   "page": 0,
+   "box": [
+    493.5,
+    748.0,
+    559.7,
+    770.6
+   ],
+   "handwritten": false
+  },
+  "approved_items[0].description": {
+   "value": "Medikamentengabe (Verabreichen)",
+   "status": "present",
+   "page": 0,
+   "box": [
+    127.3,
+    743.8,
+    436.6,
+    769.2
+   ],
+   "handwritten": false
+  },
+  "approved_items[0].valid_from": {
+   "value": "2026-10-01",
+   "status": "present",
+   "page": 0,
+   "box": [
+    725.5,
+    750.6,
+    824.8,
+    773.6
+   ],
+   "handwritten": false
+  },
+  "approved_items[0].valid_to": {
+   "value": "2026-12-15",
+   "status": "present",
+   "page": 0,
+   "box": [
+    860.8,
+    752.2,
+    960.1,
+    775.2
+   ],
+   "handwritten": false
+  },
+  "approved_items[1].frequency.count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    566.7,
+    785.6,
+    650.5,
+    808.4
+   ],
+   "handwritten": false
+  },
+  "approved_items[1].frequency.per": {
+   "value": "day",
+   "status": "present",
+   "page": 0,
+   "box": [
+    566.7,
+    785.6,
+    650.5,
+    808.4
+   ],
+   "handwritten": false
+  },
+  "approved_items[1].position_no": {
+   "value": "032130",
+   "status": "present",
+   "page": 0,
+   "box": [
+    472.1,
+    784.5,
+    538.4,
+    807.1
+   ],
+   "handwritten": false
+  },
+  "approved_items[1].description": {
+   "value": "Kompressionsstrümpfe anziehen",
+   "status": "present",
+   "page": 0,
+   "box": [
+    126.9,
+    780.6,
+    415.2,
+    805.7
+   ],
+   "handwritten": false
+  },
+  "approved_items[1].valid_from": {
+   "value": "2026-10-01",
+   "status": "present",
+   "page": 0,
+   "box": [
+    704.2,
+    787.1,
+    803.4,
+    810.1
+   ],
+   "handwritten": false
+  },
+  "approved_items[1].valid_to": {
+   "value": "2026-12-15",
+   "status": "present",
+   "page": 0,
+   "box": [
+    839.5,
+    788.7,
+    938.7,
+    811.7
+   ],
+   "handwritten": false
+  },
+  "approved_items[#]": {
+   "value": 2,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "rejected_items[#]": {
+   "value": 0,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "doc_type": {
+   "value": "approval_letter",
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  }
+ },
+ "regions": {},
+ "defects": [
+  "D20"
+ ],
+ "synthetic": true
+}

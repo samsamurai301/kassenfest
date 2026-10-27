@@ -19,7 +19,16 @@ def main() -> None:
     ingest.add_argument("paths", nargs="+", help="images, PDFs or folders of them")
     ingest.add_argument("--label", help="name for this batch")
     ingest.add_argument("--mode", choices=["live", "record", "replay"], help="override LLM_MODE")
+    synth = sub.add_parser("synth", help="generate a synthetic document set with ground truth")
+    synth.add_argument("--set", required=True, choices=["demo", "dev", "test"], dest="set_name")
+    synth.add_argument("--out", help="output directory (default data/synthetic/<set>)")
     args = parser.parse_args()
+
+    if args.command == "synth":  # no model calls, no settings
+        from kassenfest.synth import generate
+
+        generate.main(args.set_name, args.out)
+        return
 
     from kassenfest.llm import CacheMiss
 

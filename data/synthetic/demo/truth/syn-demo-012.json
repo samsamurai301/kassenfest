@@ -1,0 +1,352 @@
+{
+ "doc_id": "syn-demo-012",
+ "doc_type": "muster12",
+ "variant": "scan",
+ "seed": 3266625732,
+ "patient_id": "p14",
+ "month": "2026-10",
+ "pages": [
+  {
+   "index": 0,
+   "image": "../pages/syn-demo-012.jpg",
+   "width": 1241,
+   "height": 1755
+  }
+ ],
+ "fields": {
+  "payer_name": {
+   "value": "KKH Kaufmännische Krankenkasse",
+   "status": "present",
+   "page": 0,
+   "box": [
+    68.0,
+    81.6,
+    442.7,
+    105.8
+   ],
+   "handwritten": false
+  },
+  "patient_name": {
+   "value": "Kerscher, Max",
+   "status": "present",
+   "page": 0,
+   "box": [
+    68.2,
+    173.1,
+    230.6,
+    196.9
+   ],
+   "handwritten": false
+  },
+  "patient_dob": {
+   "value": "1942-05-03",
+   "status": "present",
+   "page": 0,
+   "box": [
+    664.6,
+    172.0,
+    789.6,
+    195.7
+   ],
+   "handwritten": false
+  },
+  "payer_ik": {
+   "value": "109990063",
+   "status": "present",
+   "page": 0,
+   "box": [
+    68.3,
+    264.3,
+    180.8,
+    288.0
+   ],
+   "handwritten": false
+  },
+  "kvnr": {
+   "value": "D723768442",
+   "status": "present",
+   "page": 0,
+   "box": [
+    366.6,
+    263.7,
+    491.5,
+    287.4
+   ],
+   "handwritten": false
+  },
+  "bsnr": {
+   "value": "712020561",
+   "status": "present",
+   "page": 0,
+   "box": [
+    68.5,
+    355.4,
+    181.0,
+    379.1
+   ],
+   "handwritten": false
+  },
+  "lanr": {
+   "value": "626385001",
+   "status": "present",
+   "page": 0,
+   "box": [
+    366.8,
+    354.8,
+    479.2,
+    378.5
+   ],
+   "handwritten": false
+  },
+  "issue_date": {
+   "value": "2026-10-08",
+   "status": "present",
+   "page": 0,
+   "box": [
+    665.0,
+    354.2,
+    790.0,
+    377.8
+   ],
+   "handwritten": false
+  },
+  "period_from": {
+   "value": "2026-10-08",
+   "status": "present",
+   "page": 0,
+   "box": [
+    885.4,
+    318.1,
+    1010.4,
+    341.8
+   ],
+   "handwritten": false
+  },
+  "period_to": {
+   "value": "2026-10-29",
+   "status": "present",
+   "page": 0,
+   "box": [
+    885.5,
+    365.3,
+    1010.5,
+    389.0
+   ],
+   "handwritten": false
+  },
+  "icd_codes": {
+   "value": [
+    "I83.0",
+    "I50.9"
+   ],
+   "status": "present",
+   "page": 0,
+   "box": [
+    69.9,
+    447.2,
+    219.8,
+    471.0
+   ],
+   "handwritten": false
+  },
+  "further_notes": {
+   "value": "Medikamente nach beiliegendem Plan",
+   "status": "present",
+   "page": 0,
+   "box": [
+    71.3,
+    1133.3,
+    496.0,
+    1157.6
+   ],
+   "handwritten": false
+  },
+  "prescription_kind": {
+   "value": "erst",
+   "status": "present",
+   "page": 0,
+   "box": [
+    832.0,
+    173.3,
+    856.8,
+    198.1
+   ],
+   "handwritten": false
+  },
+  "accident": {
+   "value": false,
+   "status": "present",
+   "page": 0,
+   "box": [
+    832.1,
+    241.8,
+    857.0,
+    266.6
+   ],
+   "handwritten": false
+  },
+  "blank_prescription": {
+   "value": false,
+   "status": "present",
+   "page": 0,
+   "box": [
+    832.2,
+    276.0,
+    857.0,
+    300.8
+   ],
+   "handwritten": false
+  },
+  "measures[0].category": {
+   "value": "kompression",
+   "status": "present",
+   "page": 0,
+   "box": [
+    67.2,
+    844.4,
+    92.0,
+    869.2
+   ],
+   "handwritten": false
+  },
+  "measures[0].frequency.count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    757.8,
+    845.1,
+    836.5,
+    865.6
+   ],
+   "handwritten": false
+  },
+  "measures[0].frequency.per": {
+   "value": "day",
+   "status": "present",
+   "page": 0,
+   "box": [
+    757.8,
+    845.1,
+    836.5,
+    865.6
+   ],
+   "handwritten": false
+  },
+  "measures[0].details": {
+   "value": "Kompressionsstrümpfe Kl. II beidseits",
+   "status": "present",
+   "page": 0,
+   "box": [
+    327.0,
+    835.3,
+    641.9,
+    876.6
+   ],
+   "handwritten": false
+  },
+  "measures[0].duration_from": {
+   "value": "2026-10-08",
+   "status": "present",
+   "page": 0,
+   "box": [
+    885.6,
+    844.8,
+    998.1,
+    865.3
+   ],
+   "handwritten": false
+  },
+  "measures[0].duration_to": {
+   "value": "2026-10-29",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1045.1,
+    844.4,
+    1157.5,
+    865.0
+   ],
+   "handwritten": false
+  },
+  "measures[#]": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "corrections_present": {
+   "value": false,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "doc_type": {
+   "value": "muster12",
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "practice_stamp": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    165.4,
+    1186.5,
+    544.8,
+    1407.3
+   ],
+   "handwritten": false
+  },
+  "doctor_signature": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    863.5,
+    1265.7,
+    941.6,
+    1304.9
+   ],
+   "handwritten": false
+  },
+  "corrections_initialled": {
+   "value": "absent",
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  }
+ },
+ "regions": {
+  "practice_stamp": {
+   "page": 0,
+   "box": [
+    165.4,
+    1186.5,
+    544.8,
+    1407.3
+   ],
+   "state": "present"
+  },
+  "doctor_signature": {
+   "page": 0,
+   "box": [
+    863.5,
+    1265.7,
+    941.6,
+    1304.9
+   ],
+   "state": "present"
+  }
+ },
+ "defects": [
+  "D02",
+  "D11"
+ ],
+ "synthetic": true
+}

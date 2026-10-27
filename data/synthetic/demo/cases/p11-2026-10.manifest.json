@@ -1,0 +1,59 @@
+{
+ "case_id": "p11-2026-10",
+ "patient_id": "p11",
+ "patient_name": "Pfeffer, Siegfried",
+ "month": "2026-10",
+ "kind": "xi",
+ "hero": null,
+ "events": [],
+ "defects": [
+  {
+   "id": "D15",
+   "rules": [
+    "MD-DECEASED"
+   ],
+   "documents": [
+    "syn-demo-032"
+   ],
+   "note": "Died 21.10.2026 12:40; visits billed afterwards",
+   "lines": [
+    {
+     "date": "2026-10-22",
+     "time": "06:40",
+     "code": "LK01",
+     "domain": "sgbxi",
+     "document_id": "syn-demo-032",
+     "entry_index": 30
+    },
+    {
+     "date": "2026-10-22",
+     "time": "06:40",
+     "code": "LK07",
+     "domain": "sgbxi",
+     "document_id": "syn-demo-032",
+     "entry_index": 31
+    },
+    {
+     "date": "2026-10-23",
+     "time": "07:10",
+     "code": "LK01",
+     "domain": "sgbxi",
+     "document_id": "syn-demo-032",
+     "entry_index": 32
+    },
+    {
+     "date": "2026-10-23",
+     "time": "07:10",
+     "code": "LK07",
+     "domain": "sgbxi",
+     "document_id": "syn-demo-032",
+     "entry_index": 33
+    }
+   ]
+  }
+ ],
+ "documents": [
+  "syn-demo-032"
+ ],
+ "casefile": "p11-2026-10.json"
+}

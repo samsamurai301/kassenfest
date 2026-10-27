@@ -1,0 +1,33 @@
+{
+ "case_id": "p07-2026-10",
+ "patient_id": "p07",
+ "patient_name": "Weiß, Elfriede",
+ "month": "2026-10",
+ "kind": "hkp",
+ "hero": null,
+ "events": [
+  "kassenwechsel",
+  "stay"
+ ],
+ "defects": [
+  {
+   "id": "D20",
+   "rules": [],
+   "documents": [
+    "syn-demo-036",
+    "syn-demo-030",
+    "syn-demo-024",
+    "syn-demo-018"
+   ],
+   "note": "Clean patient-month",
+   "lines": []
+  }
+ ],
+ "documents": [
+  "syn-demo-018",
+  "syn-demo-024",
+  "syn-demo-030",
+  "syn-demo-036"
+ ],
+ "casefile": "p07-2026-10.json"
+}

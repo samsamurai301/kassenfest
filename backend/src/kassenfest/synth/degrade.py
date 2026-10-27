@@ -4,6 +4,7 @@ Geometry is a single 3x3 matrix per output, so ground-truth boxes move exactly
 with the page; everything else (noise, blur, lighting, JPEG) is pixel-only.
 """
 
+import datetime as dt
 import io
 import random
 from collections.abc import Callable
@@ -68,7 +69,8 @@ def scan(img: Image.Image, rnd: random.Random) -> Degraded:
     return Degraded(Image.fromarray(_jpeg(arr, quality)), np.vstack([m, [0, 0, 1]]), quality)
 
 
-def fax(img: Image.Image, rnd: random.Random) -> Degraded:
+def fax(img: Image.Image, rnd: random.Random, *, sent: dt.datetime | None = None) -> Degraded:
+    """Fine-mode fax; the header line carries the sending machine's date and time."""
     rng = np.random.default_rng(rnd.getrandbits(32))
     gray = cv2.cvtColor(np.array(img), cv2.COLOR_RGB2GRAY)
     h, w = gray.shape
@@ -88,7 +90,8 @@ def fax(img: Image.Image, rnd: random.Random) -> Degraded:
         binary[y : y + 1, :] = np.minimum(
             binary[y : y + 1, :], np.where(rng.random(w) < 0.5, 0, 255)
         )
-    header = f"FAX  27.10.2026 08:{rnd.randint(10, 59)}  +49 991 {rnd.randint(1000, 9999)}  S. 01"
+    sent = sent or dt.datetime(2026, 10, 27, 8, rnd.randint(10, 59))
+    header = f"FAX  {sent:%d.%m.%Y %H:%M}  +49 991 {rnd.randint(1000, 9999)}  S. 01"
     cv2.putText(binary, header, (20, 22), cv2.FONT_HERSHEY_SIMPLEX, 0.55, 0, 1, cv2.LINE_AA)
     rgb = cv2.cvtColor(binary, cv2.COLOR_GRAY2RGB)
     return Degraded(Image.fromarray(rgb), np.vstack([m, [0, 0, 1]]), None)

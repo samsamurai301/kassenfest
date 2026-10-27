@@ -1,0 +1,195 @@
+{
+ "doc_id": "syn-demo-037",
+ "doc_type": "hospital_letter",
+ "variant": "photo",
+ "seed": 529886363,
+ "patient_id": "p02",
+ "month": "2026-10",
+ "pages": [
+  {
+   "index": 0,
+   "image": "../pages/syn-demo-037.jpg",
+   "width": 1414,
+   "height": 2000
+  }
+ ],
+ "fields": {
+  "hospital_name": {
+   "value": "Klinikum Donautal Deggendorf",
+   "status": "present",
+   "page": 0,
+   "box": [
+    182.1,
+    310.4,
+    625.2,
+    346.6
+   ],
+   "handwritten": false
+  },
+  "hospital_id": {
+   "value": "770183239",
+   "status": "present",
+   "page": 0,
+   "box": [
+    347.2,
+    374.6,
+    432.9,
+    393.3
+   ],
+   "handwritten": false
+  },
+  "patient_name": {
+   "value": "Brandl, Josef",
+   "status": "present",
+   "page": 0,
+   "box": [
+    330.2,
+    721.9,
+    441.3,
+    743.6
+   ],
+   "handwritten": false
+  },
+  "patient_dob": {
+   "value": "1947-06-03",
+   "status": "present",
+   "page": 0,
+   "box": [
+    491.2,
+    722.8,
+    587.4,
+    744.5
+   ],
+   "handwritten": false
+  },
+  "kvnr": {
+   "value": "N688550400",
+   "status": "present",
+   "page": 0,
+   "box": [
+    777.3,
+    724.2,
+    889.0,
+    746.2
+   ],
+   "handwritten": false
+  },
+  "admission_date": {
+   "value": "2026-10-12",
+   "status": "present",
+   "page": 0,
+   "box": [
+    505.0,
+    751.5,
+    601.1,
+    773.3
+   ],
+   "handwritten": false
+  },
+  "admission_time": {
+   "value": "10:30",
+   "status": "present",
+   "page": 0,
+   "box": [
+    636.3,
+    752.3,
+    684.8,
+    773.8
+   ],
+   "handwritten": false
+  },
+  "discharge_date": {
+   "value": "2026-10-16",
+   "status": "present",
+   "page": 0,
+   "box": [
+    866.5,
+    753.7,
+    964.6,
+    775.6
+   ],
+   "handwritten": false
+  },
+  "discharge_time": {
+   "value": "11:15",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1000.6,
+    754.4,
+    1048.5,
+    776.2
+   ],
+   "handwritten": false
+  },
+  "discharge_diagnoses": {
+   "value": [
+    "J18.9",
+    "I50.9"
+   ],
+   "status": "present",
+   "page": 0,
+   "box": [
+    193.1,
+    946.6,
+    641.4,
+    1004.5
+   ],
+   "handwritten": false
+  },
+  "hkp_recommended": {
+   "value": true,
+   "status": "present",
+   "page": 0,
+   "box": [
+    199.2,
+    1300.6,
+    1170.9,
+    1369.3
+   ],
+   "handwritten": false
+  },
+  "hkp_prescription_days": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "doc_type": {
+   "value": "hospital_letter",
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "physician_signature": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    211.6,
+    1437.4,
+    487.5,
+    1497.6
+   ],
+   "handwritten": false
+  }
+ },
+ "regions": {
+  "physician_signature": {
+   "page": 0,
+   "box": [
+    211.6,
+    1437.4,
+    487.5,
+    1497.6
+   ],
+   "state": "present"
+  }
+ },
+ "defects": [
+  "D06"
+ ],
+ "synthetic": true
+}

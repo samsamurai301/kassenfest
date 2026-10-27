@@ -1,0 +1,313 @@
+{
+ "case_id": "p01-2026-10",
+ "patient_id": "p01",
+ "patient_name": "Albers, Erika",
+ "month": "2026-10",
+ "kind": "hkp",
+ "hero": "Frau Albers",
+ "events": [],
+ "defects": [
+  {
+   "id": "D08",
+   "rules": [
+    "HKP-FOLGE-WINDOW"
+   ],
+   "documents": [
+    "syn-demo-021"
+   ],
+   "note": "Verordnung ended 2026-10-14, no Folgeverordnung",
+   "lines": []
+  },
+  {
+   "id": "D01",
+   "rules": [
+    "HKP-RX-REQUIRED"
+   ],
+   "documents": [
+    "syn-demo-021",
+    "syn-demo-013"
+   ],
+   "note": "Visits after 2026-10-14 without Verordnung",
+   "lines": [
+    {
+     "date": "2026-10-15",
+     "time": "07:14",
+     "code": "032101",
+     "domain": "sgbv",
+     "document_id": "syn-demo-013",
+     "entry_index": 28
+    },
+    {
+     "date": "2026-10-15",
+     "time": "07:14",
+     "code": "032130",
+     "domain": "sgbv",
+     "document_id": "syn-demo-013",
+     "entry_index": 29
+    },
+    {
+     "date": "2026-10-16",
+     "time": "07:45",
+     "code": "032101",
+     "domain": "sgbv",
+     "document_id": "syn-demo-013",
+     "entry_index": 30
+    },
+    {
+     "date": "2026-10-16",
+     "time": "07:45",
+     "code": "032130",
+     "domain": "sgbv",
+     "document_id": "syn-demo-013",
+     "entry_index": 31
+    },
+    {
+     "date": "2026-10-17",
+     "time": "07:25",
+     "code": "032101",
+     "domain": "sgbv",
+     "document_id": "syn-demo-013",
+     "entry_index": 32
+    },
+    {
+     "date": "2026-10-17",
+     "time": "07:25",
+     "code": "032130",
+     "domain": "sgbv",
+     "document_id": "syn-demo-013",
+     "entry_index": 33
+    },
+    {
+     "date": "2026-10-18",
+     "time": "07:25",
+     "code": "032101",
+     "domain": "sgbv",
+     "document_id": "syn-demo-013",
+     "entry_index": 34
+    },
+    {
+     "date": "2026-10-18",
+     "time": "07:25",
+     "code": "032130",
+     "domain": "sgbv",
+     "document_id": "syn-demo-013",
+     "entry_index": 35
+    },
+    {
+     "date": "2026-10-19",
+     "time": "07:23",
+     "code": "032101",
+     "domain": "sgbv",
+     "document_id": "syn-demo-013",
+     "entry_index": 36
+    },
+    {
+     "date": "2026-10-19",
+     "time": "07:23",
+     "code": "032130",
+     "domain": "sgbv",
+     "document_id": "syn-demo-013",
+     "entry_index": 37
+    },
+    {
+     "date": "2026-10-20",
+     "time": "07:35",
+     "code": "032101",
+     "domain": "sgbv",
+     "document_id": "syn-demo-013",
+     "entry_index": 38
+    },
+    {
+     "date": "2026-10-20",
+     "time": "07:35",
+     "code": "032130",
+     "domain": "sgbv",
+     "document_id": "syn-demo-013",
+     "entry_index": 39
+    },
+    {
+     "date": "2026-10-21",
+     "time": "07:19",
+     "code": "032101",
+     "domain": "sgbv",
+     "document_id": "syn-demo-013",
+     "entry_index": 40
+    },
+    {
+     "date": "2026-10-21",
+     "time": "07:19",
+     "code": "032130",
+     "domain": "sgbv",
+     "document_id": "syn-demo-013",
+     "entry_index": 41
+    },
+    {
+     "date": "2026-10-22",
+     "time": "07:38",
+     "code": "032101",
+     "domain": "sgbv",
+     "document_id": "syn-demo-013",
+     "entry_index": 42
+    },
+    {
+     "date": "2026-10-22",
+     "time": "07:38",
+     "code": "032130",
+     "domain": "sgbv",
+     "document_id": "syn-demo-013",
+     "entry_index": 43
+    },
+    {
+     "date": "2026-10-23",
+     "time": "07:37",
+     "code": "032101",
+     "domain": "sgbv",
+     "document_id": "syn-demo-013",
+     "entry_index": 44
+    },
+    {
+     "date": "2026-10-23",
+     "time": "07:37",
+     "code": "032130",
+     "domain": "sgbv",
+     "document_id": "syn-demo-013",
+     "entry_index": 45
+    },
+    {
+     "date": "2026-10-24",
+     "time": "07:15",
+     "code": "032101",
+     "domain": "sgbv",
+     "document_id": "syn-demo-013",
+     "entry_index": 46
+    },
+    {
+     "date": "2026-10-24",
+     "time": "07:15",
+     "code": "032130",
+     "domain": "sgbv",
+     "document_id": "syn-demo-013",
+     "entry_index": 47
+    },
+    {
+     "date": "2026-10-25",
+     "time": "07:10",
+     "code": "032101",
+     "domain": "sgbv",
+     "document_id": "syn-demo-013",
+     "entry_index": 48
+    },
+    {
+     "date": "2026-10-25",
+     "time": "07:10",
+     "code": "032130",
+     "domain": "sgbv",
+     "document_id": "syn-demo-013",
+     "entry_index": 49
+    },
+    {
+     "date": "2026-10-26",
+     "time": "07:30",
+     "code": "032101",
+     "domain": "sgbv",
+     "document_id": "syn-demo-013",
+     "entry_index": 50
+    },
+    {
+     "date": "2026-10-26",
+     "time": "07:30",
+     "code": "032130",
+     "domain": "sgbv",
+     "document_id": "syn-demo-013",
+     "entry_index": 51
+    },
+    {
+     "date": "2026-10-27",
+     "time": "07:25",
+     "code": "032101",
+     "domain": "sgbv",
+     "document_id": "syn-demo-013",
+     "entry_index": 52
+    },
+    {
+     "date": "2026-10-27",
+     "time": "07:25",
+     "code": "032130",
+     "domain": "sgbv",
+     "document_id": "syn-demo-013",
+     "entry_index": 53
+    },
+    {
+     "date": "2026-10-28",
+     "time": "07:20",
+     "code": "032101",
+     "domain": "sgbv",
+     "document_id": "syn-demo-013",
+     "entry_index": 54
+    },
+    {
+     "date": "2026-10-28",
+     "time": "07:20",
+     "code": "032130",
+     "domain": "sgbv",
+     "document_id": "syn-demo-013",
+     "entry_index": 55
+    },
+    {
+     "date": "2026-10-29",
+     "time": "07:30",
+     "code": "032101",
+     "domain": "sgbv",
+     "document_id": "syn-demo-013",
+     "entry_index": 56
+    },
+    {
+     "date": "2026-10-29",
+     "time": "07:30",
+     "code": "032130",
+     "domain": "sgbv",
+     "document_id": "syn-demo-013",
+     "entry_index": 57
+    },
+    {
+     "date": "2026-10-30",
+     "time": "07:21",
+     "code": "032101",
+     "domain": "sgbv",
+     "document_id": "syn-demo-013",
+     "entry_index": 58
+    },
+    {
+     "date": "2026-10-30",
+     "time": "07:21",
+     "code": "032130",
+     "domain": "sgbv",
+     "document_id": "syn-demo-013",
+     "entry_index": 59
+    },
+    {
+     "date": "2026-10-31",
+     "time": "07:30",
+     "code": "032101",
+     "domain": "sgbv",
+     "document_id": "syn-demo-013",
+     "entry_index": 60
+    },
+    {
+     "date": "2026-10-31",
+     "time": "07:30",
+     "code": "032130",
+     "domain": "sgbv",
+     "document_id": "syn-demo-013",
+     "entry_index": 61
+    }
+   ]
+  }
+ ],
+ "documents": [
+  "syn-demo-013",
+  "syn-demo-021",
+  "syn-demo-023"
+ ],
+ "casefile": "p01-2026-10.json"
+}

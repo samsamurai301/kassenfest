@@ -1,0 +1,1399 @@
+{
+ "doc_id": "syn-demo-015",
+ "doc_type": "visit_log_sgbv",
+ "variant": "scan",
+ "seed": 1693177233,
+ "patient_id": "p08",
+ "month": "2026-10",
+ "pages": [
+  {
+   "index": 0,
+   "image": "../pages/syn-demo-015.jpg",
+   "width": 1755,
+   "height": 1241
+  }
+ ],
+ "fields": {
+  "entries[0].date": {
+   "value": "2026-10-02",
+   "status": "present",
+   "page": 0,
+   "box": [
+    50.6,
+    311.7,
+    87.7,
+    327.6
+   ],
+   "handwritten": false
+  },
+  "entries[0].start_time": {
+   "value": "11:45",
+   "status": "present",
+   "page": 0,
+   "box": [
+    214.1,
+    307.6,
+    239.9,
+    329.1
+   ],
+   "handwritten": true
+  },
+  "entries[0].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[0].position_no": {
+   "value": "032151",
+   "status": "present",
+   "page": 0,
+   "box": [
+    163.4,
+    223.4,
+    210.8,
+    239.4
+   ],
+   "handwritten": false
+  },
+  "entries[0].service": {
+   "value": "Wundversorgung, chronische Wunde",
+   "status": "present",
+   "page": 0,
+   "box": [
+    163.4,
+    223.4,
+    210.8,
+    239.4
+   ],
+   "handwritten": false
+  },
+  "entries[0].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[0].staff_initials": {
+   "value": "TH",
+   "status": "present",
+   "page": 0,
+   "box": [
+    364.9,
+    304.5,
+    384.5,
+    326.5
+   ],
+   "handwritten": true
+  },
+  "entries[0].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[0].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    364.9,
+    304.5,
+    384.5,
+    326.5
+   ],
+   "handwritten": false
+  },
+  "entries[1].date": {
+   "value": "2026-10-05",
+   "status": "present",
+   "page": 0,
+   "box": [
+    51.2,
+    387.8,
+    94.6,
+    403.8
+   ],
+   "handwritten": false
+  },
+  "entries[1].start_time": {
+   "value": "11:30",
+   "status": "present",
+   "page": 0,
+   "box": [
+    210.0,
+    381.9,
+    245.5,
+    405.1
+   ],
+   "handwritten": true
+  },
+  "entries[1].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[1].position_no": {
+   "value": "032151",
+   "status": "present",
+   "page": 0,
+   "box": [
+    163.4,
+    223.4,
+    210.8,
+    239.4
+   ],
+   "handwritten": false
+  },
+  "entries[1].service": {
+   "value": "Wundversorgung, chronische Wunde",
+   "status": "present",
+   "page": 0,
+   "box": [
+    163.4,
+    223.4,
+    210.8,
+    239.4
+   ],
+   "handwritten": false
+  },
+  "entries[1].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[1].staff_initials": {
+   "value": "MK",
+   "status": "present",
+   "page": 0,
+   "box": [
+    364.5,
+    383.0,
+    386.0,
+    403.0
+   ],
+   "handwritten": true
+  },
+  "entries[1].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[1].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    364.5,
+    383.0,
+    386.0,
+    403.0
+   ],
+   "handwritten": false
+  },
+  "entries[2].date": {
+   "value": "2026-10-07",
+   "status": "present",
+   "page": 0,
+   "box": [
+    51.6,
+    438.6,
+    90.3,
+    454.6
+   ],
+   "handwritten": false
+  },
+  "entries[2].start_time": {
+   "value": "11:32",
+   "status": "present",
+   "page": 0,
+   "box": [
+    209.8,
+    434.7,
+    246.0,
+    456.6
+   ],
+   "handwritten": true
+  },
+  "entries[2].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[2].position_no": {
+   "value": "032151",
+   "status": "present",
+   "page": 0,
+   "box": [
+    163.4,
+    223.4,
+    210.8,
+    239.4
+   ],
+   "handwritten": false
+  },
+  "entries[2].service": {
+   "value": "Wundversorgung, chronische Wunde",
+   "status": "present",
+   "page": 0,
+   "box": [
+    163.4,
+    223.4,
+    210.8,
+    239.4
+   ],
+   "handwritten": false
+  },
+  "entries[2].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[2].staff_initials": {
+   "value": "MK",
+   "status": "present",
+   "page": 0,
+   "box": [
+    365.0,
+    434.1,
+    386.6,
+    455.6
+   ],
+   "handwritten": true
+  },
+  "entries[2].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[2].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    365.0,
+    434.1,
+    386.6,
+    455.6
+   ],
+   "handwritten": false
+  },
+  "entries[3].date": {
+   "value": "2026-10-09",
+   "status": "present",
+   "page": 0,
+   "box": [
+    52.1,
+    489.4,
+    89.2,
+    505.4
+   ],
+   "handwritten": false
+  },
+  "entries[3].start_time": {
+   "value": "11:45",
+   "status": "present",
+   "page": 0,
+   "box": [
+    215.0,
+    484.5,
+    241.6,
+    506.9
+   ],
+   "handwritten": true
+  },
+  "entries[3].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[3].position_no": {
+   "value": "032151",
+   "status": "present",
+   "page": 0,
+   "box": [
+    163.4,
+    223.4,
+    210.8,
+    239.4
+   ],
+   "handwritten": false
+  },
+  "entries[3].service": {
+   "value": "Wundversorgung, chronische Wunde",
+   "status": "present",
+   "page": 0,
+   "box": [
+    163.4,
+    223.4,
+    210.8,
+    239.4
+   ],
+   "handwritten": false
+  },
+  "entries[3].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[3].staff_initials": {
+   "value": "TH",
+   "status": "present",
+   "page": 0,
+   "box": [
+    365.9,
+    484.3,
+    386.8,
+    504.5
+   ],
+   "handwritten": true
+  },
+  "entries[3].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[3].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    365.9,
+    484.3,
+    386.8,
+    504.5
+   ],
+   "handwritten": false
+  },
+  "entries[4].date": {
+   "value": "2026-10-12",
+   "status": "present",
+   "page": 0,
+   "box": [
+    52.7,
+    565.6,
+    96.1,
+    581.5
+   ],
+   "handwritten": false
+  },
+  "entries[4].start_time": {
+   "value": "11:25",
+   "status": "present",
+   "page": 0,
+   "box": [
+    211.6,
+    561.5,
+    247.2,
+    583.0
+   ],
+   "handwritten": true
+  },
+  "entries[4].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[4].position_no": {
+   "value": "032151",
+   "status": "present",
+   "page": 0,
+   "box": [
+    163.4,
+    223.4,
+    210.8,
+    239.4
+   ],
+   "handwritten": false
+  },
+  "entries[4].service": {
+   "value": "Wundversorgung, chronische Wunde",
+   "status": "present",
+   "page": 0,
+   "box": [
+    163.4,
+    223.4,
+    210.8,
+    239.4
+   ],
+   "handwritten": false
+  },
+  "entries[4].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[4].staff_initials": {
+   "value": "MK",
+   "status": "present",
+   "page": 0,
+   "box": [
+    366.2,
+    561.5,
+    387.7,
+    581.1
+   ],
+   "handwritten": true
+  },
+  "entries[4].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[4].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    366.2,
+    561.5,
+    387.7,
+    581.1
+   ],
+   "handwritten": false
+  },
+  "entries[5].date": {
+   "value": "2026-10-14",
+   "status": "present",
+   "page": 0,
+   "box": [
+    53.1,
+    616.4,
+    91.8,
+    632.3
+   ],
+   "handwritten": false
+  },
+  "entries[5].start_time": {
+   "value": "11:25",
+   "status": "present",
+   "page": 0,
+   "box": [
+    213.3,
+    613.4,
+    245.9,
+    633.6
+   ],
+   "handwritten": true
+  },
+  "entries[5].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[5].position_no": {
+   "value": "032151",
+   "status": "present",
+   "page": 0,
+   "box": [
+    163.4,
+    223.4,
+    210.8,
+    239.4
+   ],
+   "handwritten": false
+  },
+  "entries[5].service": {
+   "value": "Wundversorgung, chronische Wunde",
+   "status": "present",
+   "page": 0,
+   "box": [
+    163.4,
+    223.4,
+    210.8,
+    239.4
+   ],
+   "handwritten": false
+  },
+  "entries[5].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[5].staff_initials": {
+   "value": "JR",
+   "status": "present",
+   "page": 0,
+   "box": [
+    364.7,
+    612.2,
+    389.4,
+    633.7
+   ],
+   "handwritten": true
+  },
+  "entries[5].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[5].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    364.7,
+    612.2,
+    389.4,
+    633.7
+   ],
+   "handwritten": false
+  },
+  "entries[6].date": {
+   "value": "2026-10-16",
+   "status": "present",
+   "page": 0,
+   "box": [
+    53.6,
+    667.2,
+    90.7,
+    683.1
+   ],
+   "handwritten": false
+  },
+  "entries[6].start_time": {
+   "value": "11:40",
+   "status": "present",
+   "page": 0,
+   "box": [
+    213.1,
+    663.0,
+    247.2,
+    684.5
+   ],
+   "handwritten": true
+  },
+  "entries[6].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[6].position_no": {
+   "value": "032151",
+   "status": "present",
+   "page": 0,
+   "box": [
+    163.4,
+    223.4,
+    210.8,
+    239.4
+   ],
+   "handwritten": false
+  },
+  "entries[6].service": {
+   "value": "Wundversorgung, chronische Wunde",
+   "status": "present",
+   "page": 0,
+   "box": [
+    163.4,
+    223.4,
+    210.8,
+    239.4
+   ],
+   "handwritten": false
+  },
+  "entries[6].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[6].staff_initials": {
+   "value": "MK",
+   "status": "present",
+   "page": 0,
+   "box": [
+    366.8,
+    662.6,
+    388.4,
+    682.4
+   ],
+   "handwritten": true
+  },
+  "entries[6].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[6].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    366.8,
+    662.6,
+    388.4,
+    682.4
+   ],
+   "handwritten": false
+  },
+  "entries[7].date": {
+   "value": "2026-10-19",
+   "status": "present",
+   "page": 0,
+   "box": [
+    54.2,
+    743.3,
+    97.6,
+    759.3
+   ],
+   "handwritten": false
+  },
+  "entries[7].start_time": {
+   "value": "11:47",
+   "status": "present",
+   "page": 0,
+   "box": [
+    218.0,
+    738.6,
+    243.3,
+    760.6
+   ],
+   "handwritten": true
+  },
+  "entries[7].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[7].position_no": {
+   "value": "032151",
+   "status": "present",
+   "page": 0,
+   "box": [
+    163.4,
+    223.4,
+    210.8,
+    239.4
+   ],
+   "handwritten": false
+  },
+  "entries[7].service": {
+   "value": "Wundversorgung, chronische Wunde",
+   "status": "present",
+   "page": 0,
+   "box": [
+    163.4,
+    223.4,
+    210.8,
+    239.4
+   ],
+   "handwritten": false
+  },
+  "entries[7].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[7].staff_initials": {
+   "value": "TH",
+   "status": "present",
+   "page": 0,
+   "box": [
+    367.0,
+    737.6,
+    388.3,
+    758.8
+   ],
+   "handwritten": true
+  },
+  "entries[7].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[7].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    367.0,
+    737.6,
+    388.3,
+    758.8
+   ],
+   "handwritten": false
+  },
+  "entries[8].date": {
+   "value": "2026-10-21",
+   "status": "present",
+   "page": 0,
+   "box": [
+    54.6,
+    794.1,
+    93.3,
+    810.1
+   ],
+   "handwritten": false
+  },
+  "entries[8].start_time": {
+   "value": "11:45",
+   "status": "present",
+   "page": 0,
+   "box": [
+    214.1,
+    790.2,
+    248.0,
+    811.1
+   ],
+   "handwritten": true
+  },
+  "entries[8].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[8].position_no": {
+   "value": "032151",
+   "status": "present",
+   "page": 0,
+   "box": [
+    163.4,
+    223.4,
+    210.8,
+    239.4
+   ],
+   "handwritten": false
+  },
+  "entries[8].service": {
+   "value": "Wundversorgung, chronische Wunde",
+   "status": "present",
+   "page": 0,
+   "box": [
+    163.4,
+    223.4,
+    210.8,
+    239.4
+   ],
+   "handwritten": false
+  },
+  "entries[8].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[8].staff_initials": {
+   "value": "MK",
+   "status": "present",
+   "page": 0,
+   "box": [
+    367.9,
+    787.8,
+    389.9,
+    809.0
+   ],
+   "handwritten": true
+  },
+  "entries[8].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[8].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    367.9,
+    787.8,
+    389.9,
+    809.0
+   ],
+   "handwritten": false
+  },
+  "entries[9].date": {
+   "value": "2026-10-23",
+   "status": "present",
+   "page": 0,
+   "box": [
+    55.1,
+    844.9,
+    92.2,
+    860.8
+   ],
+   "handwritten": false
+  },
+  "entries[9].start_time": {
+   "value": "11:24",
+   "status": "present",
+   "page": 0,
+   "box": [
+    215.1,
+    841.7,
+    247.6,
+    862.3
+   ],
+   "handwritten": true
+  },
+  "entries[9].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[9].position_no": {
+   "value": "032151",
+   "status": "present",
+   "page": 0,
+   "box": [
+    163.4,
+    223.4,
+    210.8,
+    239.4
+   ],
+   "handwritten": false
+  },
+  "entries[9].service": {
+   "value": "Wundversorgung, chronische Wunde",
+   "status": "present",
+   "page": 0,
+   "box": [
+    163.4,
+    223.4,
+    210.8,
+    239.4
+   ],
+   "handwritten": false
+  },
+  "entries[9].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[9].staff_initials": {
+   "value": "JR",
+   "status": "present",
+   "page": 0,
+   "box": [
+    367.1,
+    839.7,
+    391.7,
+    860.9
+   ],
+   "handwritten": true
+  },
+  "entries[9].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[9].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    367.1,
+    839.7,
+    391.7,
+    860.9
+   ],
+   "handwritten": false
+  },
+  "entries[10].date": {
+   "value": "2026-10-26",
+   "status": "present",
+   "page": 0,
+   "box": [
+    55.7,
+    921.0,
+    99.1,
+    937.0
+   ],
+   "handwritten": false
+  },
+  "entries[10].start_time": {
+   "value": "11:16",
+   "status": "present",
+   "page": 0,
+   "box": [
+    223.1,
+    916.3,
+    241.0,
+    937.7
+   ],
+   "handwritten": true
+  },
+  "entries[10].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[10].position_no": {
+   "value": "032151",
+   "status": "present",
+   "page": 0,
+   "box": [
+    163.4,
+    223.4,
+    210.8,
+    239.4
+   ],
+   "handwritten": false
+  },
+  "entries[10].service": {
+   "value": "Wundversorgung, chronische Wunde",
+   "status": "present",
+   "page": 0,
+   "box": [
+    163.4,
+    223.4,
+    210.8,
+    239.4
+   ],
+   "handwritten": false
+  },
+  "entries[10].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[10].staff_initials": {
+   "value": "TH",
+   "status": "present",
+   "page": 0,
+   "box": [
+    369.6,
+    915.3,
+    390.6,
+    937.1
+   ],
+   "handwritten": true
+  },
+  "entries[10].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[10].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    369.6,
+    915.3,
+    390.6,
+    937.1
+   ],
+   "handwritten": false
+  },
+  "entries[11].date": {
+   "value": "2026-10-28",
+   "status": "present",
+   "page": 0,
+   "box": [
+    56.2,
+    971.8,
+    94.8,
+    987.8
+   ],
+   "handwritten": false
+  },
+  "entries[11].start_time": {
+   "value": "11:35",
+   "status": "present",
+   "page": 0,
+   "box": [
+    215.3,
+    967.8,
+    250.2,
+    988.7
+   ],
+   "handwritten": true
+  },
+  "entries[11].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[11].position_no": {
+   "value": "032151",
+   "status": "present",
+   "page": 0,
+   "box": [
+    163.4,
+    223.4,
+    210.8,
+    239.4
+   ],
+   "handwritten": false
+  },
+  "entries[11].service": {
+   "value": "Wundversorgung, chronische Wunde",
+   "status": "present",
+   "page": 0,
+   "box": [
+    163.4,
+    223.4,
+    210.8,
+    239.4
+   ],
+   "handwritten": false
+  },
+  "entries[11].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[11].staff_initials": {
+   "value": "MK",
+   "status": "present",
+   "page": 0,
+   "box": [
+    369.6,
+    967.8,
+    390.8,
+    987.5
+   ],
+   "handwritten": true
+  },
+  "entries[11].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[11].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    369.6,
+    967.8,
+    390.8,
+    987.5
+   ],
+   "handwritten": false
+  },
+  "entries[12].date": {
+   "value": "2026-10-30",
+   "status": "present",
+   "page": 0,
+   "box": [
+    56.6,
+    1022.6,
+    93.7,
+    1038.6
+   ],
+   "handwritten": false
+  },
+  "entries[12].start_time": {
+   "value": "11:27",
+   "status": "present",
+   "page": 0,
+   "box": [
+    220.4,
+    1018.3,
+    245.6,
+    1039.9
+   ],
+   "handwritten": true
+  },
+  "entries[12].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[12].position_no": {
+   "value": "032151",
+   "status": "present",
+   "page": 0,
+   "box": [
+    163.4,
+    223.4,
+    210.8,
+    239.4
+   ],
+   "handwritten": false
+  },
+  "entries[12].service": {
+   "value": "Wundversorgung, chronische Wunde",
+   "status": "present",
+   "page": 0,
+   "box": [
+    163.4,
+    223.4,
+    210.8,
+    239.4
+   ],
+   "handwritten": false
+  },
+  "entries[12].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[12].staff_initials": {
+   "value": "TH",
+   "status": "present",
+   "page": 0,
+   "box": [
+    370.3,
+    1018.1,
+    390.5,
+    1037.6
+   ],
+   "handwritten": true
+  },
+  "entries[12].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[12].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    370.3,
+    1018.1,
+    390.5,
+    1037.6
+   ],
+   "handwritten": false
+  },
+  "entries[#]": {
+   "value": 13,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "provider_ik": {
+   "value": "469960557",
+   "status": "present",
+   "page": 0,
+   "box": [
+    595.4,
+    113.1,
+    708.0,
+    137.5
+   ],
+   "handwritten": false
+  },
+  "month": {
+   "value": "2026-10",
+   "status": "present",
+   "page": 0,
+   "box": [
+    967.2,
+    110.2,
+    1054.8,
+    134.4
+   ],
+   "handwritten": false
+  },
+  "approval_ref": {
+   "value": "HKP-2026-264313",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1338.9,
+    106.2,
+    1526.5,
+    131.2
+   ],
+   "handwritten": false
+  },
+  "patient_name": {
+   "value": "Loibl, Johanna",
+   "status": "present",
+   "page": 0,
+   "box": [
+    51.8,
+    173.3,
+    226.8,
+    198.2
+   ],
+   "handwritten": false
+  },
+  "kvnr": {
+   "value": "S925815007",
+   "status": "present",
+   "page": 0,
+   "box": [
+    595.9,
+    169.1,
+    721.0,
+    193.6
+   ],
+   "handwritten": false
+  },
+  "payer_name": {
+   "value": "AOK Bayern",
+   "status": "present",
+   "page": 0,
+   "box": [
+    967.7,
+    166.0,
+    1092.8,
+    190.5
+   ],
+   "handwritten": false
+  },
+  "responsible_nurse": {
+   "value": "Monika Kraus",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1339.4,
+    162.6,
+    1489.5,
+    187.3
+   ],
+   "handwritten": false
+  },
+  "patient_signature_date": {
+   "value": "2026-10-30",
+   "status": "present",
+   "page": 0,
+   "box": [
+    374.6,
+    1152.2,
+    488.0,
+    1188.7
+   ],
+   "handwritten": true
+  },
+  "missing_signature_reason": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": [
+    777.1,
+    1096.8,
+    824.6,
+    1120.8
+   ],
+   "handwritten": true
+  },
+  "doc_type": {
+   "value": "visit_log_sgbv",
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "patient_signature": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    375.6,
+    1109.4,
+    447.0,
+    1154.0
+   ],
+   "handwritten": false
+  },
+  "provider_signature": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1327.6,
+    1105.1,
+    1542.1,
+    1161.9
+   ],
+   "handwritten": false
+  }
+ },
+ "regions": {
+  "patient_signature": {
+   "page": 0,
+   "box": [
+    375.6,
+    1109.4,
+    447.0,
+    1154.0
+   ],
+   "state": "present"
+  },
+  "provider_signature": {
+   "page": 0,
+   "box": [
+    1327.6,
+    1105.1,
+    1542.1,
+    1161.9
+   ],
+   "state": "present"
+  }
+ },
+ "defects": [
+  "D20"
+ ],
+ "synthetic": true
+}

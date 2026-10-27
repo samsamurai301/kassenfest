@@ -1,0 +1,420 @@
+{
+ "doc_id": "syn-demo-026",
+ "doc_type": "muster12",
+ "variant": "photo",
+ "seed": 4048314206,
+ "patient_id": "p03",
+ "month": "2026-10",
+ "pages": [
+  {
+   "index": 0,
+   "image": "../pages/syn-demo-026.jpg",
+   "width": 1414,
+   "height": 2000
+  }
+ ],
+ "fields": {
+  "payer_name": {
+   "value": "BARMER",
+   "status": "present",
+   "page": 0,
+   "box": [
+    197.9,
+    185.8,
+    272.6,
+    213.2
+   ],
+   "handwritten": false
+  },
+  "patient_name": {
+   "value": "Christl, Maria",
+   "status": "present",
+   "page": 0,
+   "box": [
+    195.5,
+    272.9,
+    368.3,
+    306.4
+   ],
+   "handwritten": false
+  },
+  "patient_dob": {
+   "value": "1955-12-22",
+   "status": "present",
+   "page": 0,
+   "box": [
+    773.5,
+    310.4,
+    891.9,
+    339.9
+   ],
+   "handwritten": false
+  },
+  "payer_ik": {
+   "value": "109990030",
+   "status": "present",
+   "page": 0,
+   "box": [
+    193.2,
+    360.1,
+    304.7,
+    389.3
+   ],
+   "handwritten": false
+  },
+  "kvnr": {
+   "value": "Z574957008",
+   "status": "present",
+   "page": 0,
+   "box": [
+    485.5,
+    378.1,
+    606.6,
+    407.6
+   ],
+   "handwritten": false
+  },
+  "bsnr": {
+   "value": "719097089",
+   "status": "present",
+   "page": 0,
+   "box": [
+    190.8,
+    447.3,
+    302.4,
+    476.1
+   ],
+   "handwritten": false
+  },
+  "lanr": {
+   "value": "283320323",
+   "status": "present",
+   "page": 0,
+   "box": [
+    483.3,
+    464.4,
+    592.4,
+    492.8
+   ],
+   "handwritten": false
+  },
+  "issue_date": {
+   "value": "2026-09-29",
+   "status": "present",
+   "page": 0,
+   "box": [
+    768.7,
+    479.5,
+    881.9,
+    514.1
+   ],
+   "handwritten": true
+  },
+  "period_from": {
+   "value": "2026-10-01",
+   "status": "present",
+   "page": 0,
+   "box": [
+    976.5,
+    458.1,
+    1101.7,
+    497.0
+   ],
+   "handwritten": true
+  },
+  "period_to": {
+   "value": "2026-12-15",
+   "status": "present",
+   "page": 0,
+   "box": [
+    975.9,
+    502.3,
+    1097.4,
+    540.6
+   ],
+   "handwritten": true
+  },
+  "icd_codes": {
+   "value": [
+    "E11.9"
+   ],
+   "status": "present",
+   "page": 0,
+   "box": [
+    189.6,
+    535.5,
+    252.0,
+    561.3
+   ],
+   "handwritten": false
+  },
+  "further_notes": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": [
+    171.7,
+    1195.0,
+    520.1,
+    1227.6
+   ],
+   "handwritten": false
+  },
+  "prescription_kind": {
+   "value": "folge",
+   "status": "present",
+   "page": 0,
+   "box": [
+    930.2,
+    351.0,
+    954.1,
+    380.7
+   ],
+   "handwritten": true
+  },
+  "accident": {
+   "value": false,
+   "status": "present",
+   "page": 0,
+   "box": [
+    929.5,
+    385.7,
+    953.2,
+    410.2
+   ],
+   "handwritten": true
+  },
+  "blank_prescription": {
+   "value": false,
+   "status": "present",
+   "page": 0,
+   "box": [
+    928.7,
+    417.5,
+    952.4,
+    442.0
+   ],
+   "handwritten": true
+  },
+  "measures[0].category": {
+   "value": "injektion",
+   "status": "present",
+   "page": 0,
+   "box": [
+    179.2,
+    782.8,
+    204.5,
+    813.0
+   ],
+   "handwritten": true
+  },
+  "measures[0].frequency.count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    847.1,
+    812.1,
+    923.3,
+    847.6
+   ],
+   "handwritten": true
+  },
+  "measures[0].frequency.per": {
+   "value": "day",
+   "status": "present",
+   "page": 0,
+   "box": [
+    847.1,
+    812.1,
+    923.3,
+    847.6
+   ],
+   "handwritten": true
+  },
+  "measures[0].details": {
+   "value": "Clexane 40 mg s.c.",
+   "status": "present",
+   "page": 0,
+   "box": [
+    434.9,
+    799.4,
+    631.0,
+    827.4
+   ],
+   "handwritten": false
+  },
+  "measures[0].duration_from": {
+   "value": "2026-10-01",
+   "status": "present",
+   "page": 0,
+   "box": [
+    962.0,
+    815.7,
+    1078.6,
+    852.3
+   ],
+   "handwritten": true
+  },
+  "measures[0].duration_to": {
+   "value": "2026-12-15",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1110.4,
+    824.0,
+    1224.5,
+    859.1
+   ],
+   "handwritten": true
+  },
+  "measures[1].category": {
+   "value": "blutzucker",
+   "status": "present",
+   "page": 0,
+   "box": [
+    177.4,
+    848.0,
+    202.8,
+    878.2
+   ],
+   "handwritten": true
+  },
+  "measures[1].frequency.count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    845.5,
+    875.2,
+    921.3,
+    909.9
+   ],
+   "handwritten": true
+  },
+  "measures[1].frequency.per": {
+   "value": "day",
+   "status": "present",
+   "page": 0,
+   "box": [
+    845.5,
+    875.2,
+    921.3,
+    909.9
+   ],
+   "handwritten": true
+  },
+  "measures[1].details": {
+   "value": "BZ vor Insulingabe",
+   "status": "present",
+   "page": 0,
+   "box": [
+    433.2,
+    864.0,
+    629.3,
+    891.5
+   ],
+   "handwritten": false
+  },
+  "measures[1].duration_from": {
+   "value": "2026-10-01",
+   "status": "present",
+   "page": 0,
+   "box": [
+    960.3,
+    879.6,
+    1077.1,
+    915.9
+   ],
+   "handwritten": true
+  },
+  "measures[1].duration_to": {
+   "value": "2026-12-15",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1108.8,
+    886.3,
+    1223.5,
+    921.5
+   ],
+   "handwritten": true
+  },
+  "measures[#]": {
+   "value": 2,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "corrections_present": {
+   "value": false,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "doc_type": {
+   "value": "muster12",
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "practice_stamp": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    238.5,
+    1258.8,
+    610.8,
+    1468.6
+   ],
+   "handwritten": false
+  },
+  "doctor_signature": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    825.3,
+    1344.1,
+    1086.6,
+    1395.0
+   ],
+   "handwritten": false
+  },
+  "corrections_initialled": {
+   "value": "absent",
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  }
+ },
+ "regions": {
+  "practice_stamp": {
+   "page": 0,
+   "box": [
+    238.5,
+    1258.8,
+    610.8,
+    1468.6
+   ],
+   "state": "present"
+  },
+  "doctor_signature": {
+   "page": 0,
+   "box": [
+    825.3,
+    1344.1,
+    1086.6,
+    1395.0
+   ],
+   "state": "present"
+  }
+ },
+ "defects": [],
+ "synthetic": true
+}

@@ -1,0 +1,2522 @@
+{
+ "set": "demo",
+ "seed": 4211,
+ "handwriting": "hand_dev",
+ "month": "2026-10",
+ "synthetic": true,
+ "documents": [
+  {
+   "doc_id": "syn-demo-001",
+   "doc_type": "visit_log_sgbxi",
+   "variant": "scan",
+   "image": "pages/syn-demo-001.jpg",
+   "truth": "truth/syn-demo-001.json",
+   "case_id": "p05-2026-10",
+   "patient_id": "p05",
+   "defects": [
+    "D20"
+   ]
+  },
+  {
+   "doc_id": "syn-demo-002",
+   "doc_type": "visit_log_sgbv",
+   "variant": "photo",
+   "image": "pages/syn-demo-002.jpg",
+   "truth": "truth/syn-demo-002.json",
+   "case_id": "p14-2026-10",
+   "patient_id": "p14",
+   "defects": [
+    "D02"
+   ]
+  },
+  {
+   "doc_id": "syn-demo-003",
+   "doc_type": "approval_letter",
+   "variant": "scan",
+   "image": "pages/syn-demo-003.jpg",
+   "truth": "truth/syn-demo-003.json",
+   "case_id": "p05-2026-10",
+   "patient_id": "p05",
+   "defects": [
+    "D20"
+   ]
+  },
+  {
+   "doc_id": "syn-demo-004",
+   "doc_type": "muster12",
+   "variant": "photo",
+   "image": "pages/syn-demo-004.jpg",
+   "truth": "truth/syn-demo-004.json",
+   "case_id": "p08-2026-10",
+   "patient_id": "p08",
+   "defects": [
+    "D20"
+   ]
+  },
+  {
+   "doc_id": "syn-demo-005",
+   "doc_type": "approval_letter",
+   "variant": "clean",
+   "image": "pages/syn-demo-005.png",
+   "truth": "truth/syn-demo-005.json",
+   "case_id": "p08-2026-10",
+   "patient_id": "p08",
+   "defects": [
+    "D20"
+   ]
+  },
+  {
+   "doc_id": "syn-demo-006",
+   "doc_type": "approval_letter",
+   "variant": "photo",
+   "image": "pages/syn-demo-006.jpg",
+   "truth": "truth/syn-demo-006.json",
+   "case_id": "p02-2026-10",
+   "patient_id": "p02",
+   "defects": []
+  },
+  {
+   "doc_id": "syn-demo-007",
+   "doc_type": "muster12",
+   "variant": "fax",
+   "image": "pages/syn-demo-007.png",
+   "truth": "truth/syn-demo-007.json",
+   "case_id": "p12-2026-10",
+   "patient_id": "p12",
+   "defects": [
+    "D10"
+   ]
+  },
+  {
+   "doc_id": "syn-demo-008",
+   "doc_type": "visit_log_sgbv",
+   "variant": "photo",
+   "image": "pages/syn-demo-008.jpg",
+   "truth": "truth/syn-demo-008.json",
+   "case_id": "p03-2026-10",
+   "patient_id": "p03",
+   "defects": [
+    "D04"
+   ]
+  },
+  {
+   "doc_id": "syn-demo-009",
+   "doc_type": "visit_log_sgbv",
+   "variant": "scan",
+   "image": "pages/syn-demo-009.jpg",
+   "truth": "truth/syn-demo-009.json",
+   "case_id": "p05-2026-10",
+   "patient_id": "p05",
+   "defects": [
+    "D20"
+   ]
+  },
+  {
+   "doc_id": "syn-demo-010",
+   "doc_type": "approval_letter",
+   "variant": "scan",
+   "image": "pages/syn-demo-010.jpg",
+   "truth": "truth/syn-demo-010.json",
+   "case_id": "p04-2026-10",
+   "patient_id": "p04",
+   "defects": []
+  },
+  {
+   "doc_id": "syn-demo-011",
+   "doc_type": "muster12",
+   "variant": "photo",
+   "image": "pages/syn-demo-011.jpg",
+   "truth": "truth/syn-demo-011.json",
+   "case_id": "p04-2026-10",
+   "patient_id": "p04",
+   "defects": []
+  },
+  {
+   "doc_id": "syn-demo-012",
+   "doc_type": "muster12",
+   "variant": "scan",
+   "image": "pages/syn-demo-012.jpg",
+   "truth": "truth/syn-demo-012.json",
+   "case_id": "p14-2026-10",
+   "patient_id": "p14",
+   "defects": [
+    "D02",
+    "D11"
+   ]
+  },
+  {
+   "doc_id": "syn-demo-013",
+   "doc_type": "visit_log_sgbv",
+   "variant": "scan",
+   "image": "pages/syn-demo-013.jpg",
+   "truth": "truth/syn-demo-013.json",
+   "case_id": "p01-2026-10",
+   "patient_id": "p01",
+   "defects": [
+    "D01"
+   ]
+  },
+  {
+   "doc_id": "syn-demo-014",
+   "doc_type": "muster12",
+   "variant": "clean",
+   "image": "pages/syn-demo-014.png",
+   "truth": "truth/syn-demo-014.json",
+   "case_id": "p09-2026-10",
+   "patient_id": "p09",
+   "defects": []
+  },
+  {
+   "doc_id": "syn-demo-015",
+   "doc_type": "visit_log_sgbv",
+   "variant": "scan",
+   "image": "pages/syn-demo-015.jpg",
+   "truth": "truth/syn-demo-015.json",
+   "case_id": "p08-2026-10",
+   "patient_id": "p08",
+   "defects": [
+    "D20"
+   ]
+  },
+  {
+   "doc_id": "syn-demo-016",
+   "doc_type": "visit_log_sgbxi",
+   "variant": "scan",
+   "image": "pages/syn-demo-016.jpg",
+   "truth": "truth/syn-demo-016.json",
+   "case_id": "p06-2026-10",
+   "patient_id": "p06",
+   "defects": [
+    "D12"
+   ]
+  },
+  {
+   "doc_id": "syn-demo-017",
+   "doc_type": "muster12",
+   "variant": "photo",
+   "image": "pages/syn-demo-017.jpg",
+   "truth": "truth/syn-demo-017.json",
+   "case_id": "p04-2026-10",
+   "patient_id": "p04",
+   "defects": [
+    "D07",
+    "D09"
+   ]
+  },
+  {
+   "doc_id": "syn-demo-018",
+   "doc_type": "hospital_letter",
+   "variant": "photo",
+   "image": "pages/syn-demo-018.jpg",
+   "truth": "truth/syn-demo-018.json",
+   "case_id": "p07-2026-10",
+   "patient_id": "p07",
+   "defects": [
+    "D20"
+   ]
+  },
+  {
+   "doc_id": "syn-demo-019",
+   "doc_type": "hospital_letter",
+   "variant": "scan",
+   "image": "pages/syn-demo-019.jpg",
+   "truth": "truth/syn-demo-019.json",
+   "case_id": "p10-2026-10",
+   "patient_id": "p10",
+   "defects": [
+    "D20"
+   ]
+  },
+  {
+   "doc_id": "syn-demo-020",
+   "doc_type": "approval_letter",
+   "variant": "fax",
+   "image": "pages/syn-demo-020.png",
+   "truth": "truth/syn-demo-020.json",
+   "case_id": "p14-2026-10",
+   "patient_id": "p14",
+   "defects": []
+  },
+  {
+   "doc_id": "syn-demo-021",
+   "doc_type": "muster12",
+   "variant": "photo",
+   "image": "pages/syn-demo-021.jpg",
+   "truth": "truth/syn-demo-021.json",
+   "case_id": "p01-2026-10",
+   "patient_id": "p01",
+   "defects": [
+    "D01",
+    "D08"
+   ]
+  },
+  {
+   "doc_id": "syn-demo-022",
+   "doc_type": "approval_letter",
+   "variant": "scan",
+   "image": "pages/syn-demo-022.jpg",
+   "truth": "truth/syn-demo-022.json",
+   "case_id": "p03-2026-10",
+   "patient_id": "p03",
+   "defects": []
+  },
+  {
+   "doc_id": "syn-demo-023",
+   "doc_type": "approval_letter",
+   "variant": "clean",
+   "image": "pages/syn-demo-023.png",
+   "truth": "truth/syn-demo-023.json",
+   "case_id": "p01-2026-10",
+   "patient_id": "p01",
+   "defects": []
+  },
+  {
+   "doc_id": "syn-demo-024",
+   "doc_type": "visit_log_sgbv",
+   "variant": "photo",
+   "image": "pages/syn-demo-024.jpg",
+   "truth": "truth/syn-demo-024.json",
+   "case_id": "p07-2026-10",
+   "patient_id": "p07",
+   "defects": [
+    "D20"
+   ]
+  },
+  {
+   "doc_id": "syn-demo-025",
+   "doc_type": "visit_log_sgbv",
+   "variant": "photo",
+   "image": "pages/syn-demo-025.jpg",
+   "truth": "truth/syn-demo-025.json",
+   "case_id": "p09-2026-10",
+   "patient_id": "p09",
+   "defects": [
+    "D03",
+    "D05",
+    "D18"
+   ]
+  },
+  {
+   "doc_id": "syn-demo-026",
+   "doc_type": "muster12",
+   "variant": "photo",
+   "image": "pages/syn-demo-026.jpg",
+   "truth": "truth/syn-demo-026.json",
+   "case_id": "p03-2026-10",
+   "patient_id": "p03",
+   "defects": []
+  },
+  {
+   "doc_id": "syn-demo-027",
+   "doc_type": "muster12",
+   "variant": "photo",
+   "image": "pages/syn-demo-027.jpg",
+   "truth": "truth/syn-demo-027.json",
+   "case_id": "p05-2026-10",
+   "patient_id": "p05",
+   "defects": [
+    "D20"
+   ]
+  },
+  {
+   "doc_id": "syn-demo-028",
+   "doc_type": "hospital_letter",
+   "variant": "photo",
+   "image": "pages/syn-demo-028.jpg",
+   "truth": "truth/syn-demo-028.json",
+   "case_id": "p05-2026-10",
+   "patient_id": "p05",
+   "defects": [
+    "D20"
+   ]
+  },
+  {
+   "doc_id": "syn-demo-029",
+   "doc_type": "muster12",
+   "variant": "fax",
+   "image": "pages/syn-demo-029.png",
+   "truth": "truth/syn-demo-029.json",
+   "case_id": "p14-2026-10",
+   "patient_id": "p14",
+   "defects": []
+  },
+  {
+   "doc_id": "syn-demo-030",
+   "doc_type": "approval_letter",
+   "variant": "fax",
+   "image": "pages/syn-demo-030.png",
+   "truth": "truth/syn-demo-030.json",
+   "case_id": "p07-2026-10",
+   "patient_id": "p07",
+   "defects": [
+    "D20"
+   ]
+  },
+  {
+   "doc_id": "syn-demo-031",
+   "doc_type": "approval_letter",
+   "variant": "fax",
+   "image": "pages/syn-demo-031.png",
+   "truth": "truth/syn-demo-031.json",
+   "case_id": "p04-2026-10",
+   "patient_id": "p04",
+   "defects": []
+  },
+  {
+   "doc_id": "syn-demo-032",
+   "doc_type": "visit_log_sgbxi",
+   "variant": "scan",
+   "image": "pages/syn-demo-032.jpg",
+   "truth": "truth/syn-demo-032.json",
+   "case_id": "p11-2026-10",
+   "patient_id": "p11",
+   "defects": [
+    "D15"
+   ]
+  },
+  {
+   "doc_id": "syn-demo-033",
+   "doc_type": "visit_log_sgbv",
+   "variant": "scan",
+   "image": "pages/syn-demo-033.jpg",
+   "truth": "truth/syn-demo-033.json",
+   "case_id": "p12-2026-10",
+   "patient_id": "p12",
+   "defects": [
+    "D10"
+   ]
+  },
+  {
+   "doc_id": "syn-demo-034",
+   "doc_type": "approval_letter",
+   "variant": "clean",
+   "image": "pages/syn-demo-034.png",
+   "truth": "truth/syn-demo-034.json",
+   "case_id": "p09-2026-10",
+   "patient_id": "p09",
+   "defects": [
+    "D03"
+   ]
+  },
+  {
+   "doc_id": "syn-demo-035",
+   "doc_type": "visit_log_sgbxi",
+   "variant": "scan",
+   "image": "pages/syn-demo-035.jpg",
+   "truth": "truth/syn-demo-035.json",
+   "case_id": "p10-2026-10",
+   "patient_id": "p10",
+   "defects": [
+    "D20"
+   ]
+  },
+  {
+   "doc_id": "syn-demo-036",
+   "doc_type": "muster12",
+   "variant": "clean",
+   "image": "pages/syn-demo-036.png",
+   "truth": "truth/syn-demo-036.json",
+   "case_id": "p07-2026-10",
+   "patient_id": "p07",
+   "defects": [
+    "D20"
+   ]
+  },
+  {
+   "doc_id": "syn-demo-037",
+   "doc_type": "hospital_letter",
+   "variant": "photo",
+   "image": "pages/syn-demo-037.jpg",
+   "truth": "truth/syn-demo-037.json",
+   "case_id": "p02-2026-10",
+   "patient_id": "p02",
+   "defects": [
+    "D06"
+   ]
+  },
+  {
+   "doc_id": "syn-demo-038",
+   "doc_type": "approval_letter",
+   "variant": "bad_photo",
+   "image": "pages/syn-demo-038.jpg",
+   "truth": "truth/syn-demo-038.json",
+   "case_id": "p12-2026-10",
+   "patient_id": "p12",
+   "defects": [
+    "D19"
+   ]
+  },
+  {
+   "doc_id": "syn-demo-039",
+   "doc_type": "visit_log_sgbv",
+   "variant": "photo",
+   "image": "pages/syn-demo-039.jpg",
+   "truth": "truth/syn-demo-039.json",
+   "case_id": "p02-2026-10",
+   "patient_id": "p02",
+   "defects": [
+    "D06"
+   ]
+  },
+  {
+   "doc_id": "syn-demo-040",
+   "doc_type": "visit_log_sgbv",
+   "variant": "photo",
+   "image": "pages/syn-demo-040.jpg",
+   "truth": "truth/syn-demo-040.json",
+   "case_id": "p04-2026-10",
+   "patient_id": "p04",
+   "defects": []
+  },
+  {
+   "doc_id": "syn-demo-041",
+   "doc_type": "visit_log_sgbxi",
+   "variant": "photo",
+   "image": "pages/syn-demo-041.jpg",
+   "truth": "truth/syn-demo-041.json",
+   "case_id": "p13-2026-10",
+   "patient_id": "p13",
+   "defects": [
+    "D16"
+   ]
+  },
+  {
+   "doc_id": "syn-demo-042",
+   "doc_type": "muster12",
+   "variant": "photo",
+   "image": "pages/syn-demo-042.jpg",
+   "truth": "truth/syn-demo-042.json",
+   "case_id": "p02-2026-10",
+   "patient_id": "p02",
+   "defects": []
+  }
+ ],
+ "cases": [
+  {
+   "case_id": "p01-2026-10",
+   "patient_id": "p01",
+   "patient_name": "Albers, Erika",
+   "month": "2026-10",
+   "kind": "hkp",
+   "hero": "Frau Albers",
+   "events": [],
+   "defects": [
+    {
+     "id": "D08",
+     "rules": [
+      "HKP-FOLGE-WINDOW"
+     ],
+     "documents": [
+      "syn-demo-021"
+     ],
+     "note": "Verordnung ended 2026-10-14, no Folgeverordnung",
+     "lines": []
+    },
+    {
+     "id": "D01",
+     "rules": [
+      "HKP-RX-REQUIRED"
+     ],
+     "documents": [
+      "syn-demo-021",
+      "syn-demo-013"
+     ],
+     "note": "Visits after 2026-10-14 without Verordnung",
+     "lines": [
+      {
+       "date": "2026-10-15",
+       "time": "07:14",
+       "code": "032101",
+       "domain": "sgbv",
+       "document_id": "syn-demo-013",
+       "entry_index": 28
+      },
+      {
+       "date": "2026-10-15",
+       "time": "07:14",
+       "code": "032130",
+       "domain": "sgbv",
+       "document_id": "syn-demo-013",
+       "entry_index": 29
+      },
+      {
+       "date": "2026-10-16",
+       "time": "07:45",
+       "code": "032101",
+       "domain": "sgbv",
+       "document_id": "syn-demo-013",
+       "entry_index": 30
+      },
+      {
+       "date": "2026-10-16",
+       "time": "07:45",
+       "code": "032130",
+       "domain": "sgbv",
+       "document_id": "syn-demo-013",
+       "entry_index": 31
+      },
+      {
+       "date": "2026-10-17",
+       "time": "07:25",
+       "code": "032101",
+       "domain": "sgbv",
+       "document_id": "syn-demo-013",
+       "entry_index": 32
+      },
+      {
+       "date": "2026-10-17",
+       "time": "07:25",
+       "code": "032130",
+       "domain": "sgbv",
+       "document_id": "syn-demo-013",
+       "entry_index": 33
+      },
+      {
+       "date": "2026-10-18",
+       "time": "07:25",
+       "code": "032101",
+       "domain": "sgbv",
+       "document_id": "syn-demo-013",
+       "entry_index": 34
+      },
+      {
+       "date": "2026-10-18",
+       "time": "07:25",
+       "code": "032130",
+       "domain": "sgbv",
+       "document_id": "syn-demo-013",
+       "entry_index": 35
+      },
+      {
+       "date": "2026-10-19",
+       "time": "07:23",
+       "code": "032101",
+       "domain": "sgbv",
+       "document_id": "syn-demo-013",
+       "entry_index": 36
+      },
+      {
+       "date": "2026-10-19",
+       "time": "07:23",
+       "code": "032130",
+       "domain": "sgbv",
+       "document_id": "syn-demo-013",
+       "entry_index": 37
+      },
+      {
+       "date": "2026-10-20",
+       "time": "07:35",
+       "code": "032101",
+       "domain": "sgbv",
+       "document_id": "syn-demo-013",
+       "entry_index": 38
+      },
+      {
+       "date": "2026-10-20",
+       "time": "07:35",
+       "code": "032130",
+       "domain": "sgbv",
+       "document_id": "syn-demo-013",
+       "entry_index": 39
+      },
+      {
+       "date": "2026-10-21",
+       "time": "07:19",
+       "code": "032101",
+       "domain": "sgbv",
+       "document_id": "syn-demo-013",
+       "entry_index": 40
+      },
+      {
+       "date": "2026-10-21",
+       "time": "07:19",
+       "code": "032130",
+       "domain": "sgbv",
+       "document_id": "syn-demo-013",
+       "entry_index": 41
+      },
+      {
+       "date": "2026-10-22",
+       "time": "07:38",
+       "code": "032101",
+       "domain": "sgbv",
+       "document_id": "syn-demo-013",
+       "entry_index": 42
+      },
+      {
+       "date": "2026-10-22",
+       "time": "07:38",
+       "code": "032130",
+       "domain": "sgbv",
+       "document_id": "syn-demo-013",
+       "entry_index": 43
+      },
+      {
+       "date": "2026-10-23",
+       "time": "07:37",
+       "code": "032101",
+       "domain": "sgbv",
+       "document_id": "syn-demo-013",
+       "entry_index": 44
+      },
+      {
+       "date": "2026-10-23",
+       "time": "07:37",
+       "code": "032130",
+       "domain": "sgbv",
+       "document_id": "syn-demo-013",
+       "entry_index": 45
+      },
+      {
+       "date": "2026-10-24",
+       "time": "07:15",
+       "code": "032101",
+       "domain": "sgbv",
+       "document_id": "syn-demo-013",
+       "entry_index": 46
+      },
+      {
+       "date": "2026-10-24",
+       "time": "07:15",
+       "code": "032130",
+       "domain": "sgbv",
+       "document_id": "syn-demo-013",
+       "entry_index": 47
+      },
+      {
+       "date": "2026-10-25",
+       "time": "07:10",
+       "code": "032101",
+       "domain": "sgbv",
+       "document_id": "syn-demo-013",
+       "entry_index": 48
+      },
+      {
+       "date": "2026-10-25",
+       "time": "07:10",
+       "code": "032130",
+       "domain": "sgbv",
+       "document_id": "syn-demo-013",
+       "entry_index": 49
+      },
+      {
+       "date": "2026-10-26",
+       "time": "07:30",
+       "code": "032101",
+       "domain": "sgbv",
+       "document_id": "syn-demo-013",
+       "entry_index": 50
+      },
+      {
+       "date": "2026-10-26",
+       "time": "07:30",
+       "code": "032130",
+       "domain": "sgbv",
+       "document_id": "syn-demo-013",
+       "entry_index": 51
+      },
+      {
+       "date": "2026-10-27",
+       "time": "07:25",
+       "code": "032101",
+       "domain": "sgbv",
+       "document_id": "syn-demo-013",
+       "entry_index": 52
+      },
+      {
+       "date": "2026-10-27",
+       "time": "07:25",
+       "code": "032130",
+       "domain": "sgbv",
+       "document_id": "syn-demo-013",
+       "entry_index": 53
+      },
+      {
+       "date": "2026-10-28",
+       "time": "07:20",
+       "code": "032101",
+       "domain": "sgbv",
+       "document_id": "syn-demo-013",
+       "entry_index": 54
+      },
+      {
+       "date": "2026-10-28",
+       "time": "07:20",
+       "code": "032130",
+       "domain": "sgbv",
+       "document_id": "syn-demo-013",
+       "entry_index": 55
+      },
+      {
+       "date": "2026-10-29",
+       "time": "07:30",
+       "code": "032101",
+       "domain": "sgbv",
+       "document_id": "syn-demo-013",
+       "entry_index": 56
+      },
+      {
+       "date": "2026-10-29",
+       "time": "07:30",
+       "code": "032130",
+       "domain": "sgbv",
+       "document_id": "syn-demo-013",
+       "entry_index": 57
+      },
+      {
+       "date": "2026-10-30",
+       "time": "07:21",
+       "code": "032101",
+       "domain": "sgbv",
+       "document_id": "syn-demo-013",
+       "entry_index": 58
+      },
+      {
+       "date": "2026-10-30",
+       "time": "07:21",
+       "code": "032130",
+       "domain": "sgbv",
+       "document_id": "syn-demo-013",
+       "entry_index": 59
+      },
+      {
+       "date": "2026-10-31",
+       "time": "07:30",
+       "code": "032101",
+       "domain": "sgbv",
+       "document_id": "syn-demo-013",
+       "entry_index": 60
+      },
+      {
+       "date": "2026-10-31",
+       "time": "07:30",
+       "code": "032130",
+       "domain": "sgbv",
+       "document_id": "syn-demo-013",
+       "entry_index": 61
+      }
+     ]
+    }
+   ],
+   "documents": [
+    "syn-demo-013",
+    "syn-demo-021",
+    "syn-demo-023"
+   ],
+   "casefile": "p01-2026-10.json"
+  },
+  {
+   "case_id": "p02-2026-10",
+   "patient_id": "p02",
+   "patient_name": "Brandl, Josef",
+   "month": "2026-10",
+   "kind": "hkp",
+   "hero": "Herr Brandl",
+   "events": [],
+   "defects": [
+    {
+     "id": "D06",
+     "rules": [
+      "STAY-HKP",
+      "STAY-XI-SACH"
+     ],
+     "documents": [
+      "syn-demo-037",
+      "syn-demo-039"
+     ],
+     "note": "Visits billed during the stay 12.10. 10:30–16.10. 11:15",
+     "lines": [
+      {
+       "date": "2026-10-12",
+       "time": "18:25",
+       "code": "032101",
+       "domain": "sgbv",
+       "document_id": "syn-demo-039",
+       "entry_index": 23
+      },
+      {
+       "date": "2026-10-13",
+       "time": "07:25",
+       "code": "032101",
+       "domain": "sgbv",
+       "document_id": "syn-demo-039",
+       "entry_index": 24
+      },
+      {
+       "date": "2026-10-13",
+       "time": "18:05",
+       "code": "032101",
+       "domain": "sgbv",
+       "document_id": "syn-demo-039",
+       "entry_index": 25
+      },
+      {
+       "date": "2026-10-14",
+       "time": "07:40",
+       "code": "032101",
+       "domain": "sgbv",
+       "document_id": "syn-demo-039",
+       "entry_index": 26
+      },
+      {
+       "date": "2026-10-14",
+       "time": "18:05",
+       "code": "032101",
+       "domain": "sgbv",
+       "document_id": "syn-demo-039",
+       "entry_index": 27
+      },
+      {
+       "date": "2026-10-15",
+       "time": "07:22",
+       "code": "032101",
+       "domain": "sgbv",
+       "document_id": "syn-demo-039",
+       "entry_index": 28
+      },
+      {
+       "date": "2026-10-15",
+       "time": "18:30",
+       "code": "032101",
+       "domain": "sgbv",
+       "document_id": "syn-demo-039",
+       "entry_index": 29
+      },
+      {
+       "date": "2026-10-16",
+       "time": "07:44",
+       "code": "032101",
+       "domain": "sgbv",
+       "document_id": "syn-demo-039",
+       "entry_index": 30
+      }
+     ]
+    }
+   ],
+   "documents": [
+    "syn-demo-006",
+    "syn-demo-037",
+    "syn-demo-039",
+    "syn-demo-042"
+   ],
+   "casefile": "p02-2026-10.json"
+  },
+  {
+   "case_id": "p03-2026-10",
+   "patient_id": "p03",
+   "patient_name": "Christl, Maria",
+   "month": "2026-10",
+   "kind": "hkp",
+   "hero": "Frau Christl",
+   "events": [],
+   "defects": [
+    {
+     "id": "D04",
+     "rules": [
+      "HKP-LN-SIGNATURE",
+      "XI-LN-SIGNATURE"
+     ],
+     "documents": [
+      "syn-demo-008"
+     ],
+     "note": "Leistungsnachweis not signed by the patient, no reason",
+     "lines": []
+    }
+   ],
+   "documents": [
+    "syn-demo-008",
+    "syn-demo-022",
+    "syn-demo-026"
+   ],
+   "casefile": "p03-2026-10.json"
+  },
+  {
+   "case_id": "p04-2026-10",
+   "patient_id": "p04",
+   "patient_name": "Dengler, Franz",
+   "month": "2026-10",
+   "kind": "hkp",
+   "hero": "Herr Dengler",
+   "events": [],
+   "defects": [
+    {
+     "id": "D07",
+     "rules": [
+      "HKP-SUBMIT-4WD"
+     ],
+     "documents": [
+      "syn-demo-017"
+     ],
+     "note": "Issued 2026-10-01, reached the Kasse 2026-10-08 (5th working day)",
+     "lines": [
+      {
+       "date": "2026-10-01",
+       "time": "07:23",
+       "code": "032101",
+       "domain": "sgbv",
+       "document_id": "syn-demo-040",
+       "entry_index": 0
+      },
+      {
+       "date": "2026-10-01",
+       "time": "18:05",
+       "code": "032101",
+       "domain": "sgbv",
+       "document_id": "syn-demo-040",
+       "entry_index": 1
+      },
+      {
+       "date": "2026-10-02",
+       "time": "07:45",
+       "code": "032101",
+       "domain": "sgbv",
+       "document_id": "syn-demo-040",
+       "entry_index": 2
+      },
+      {
+       "date": "2026-10-02",
+       "time": "18:05",
+       "code": "032101",
+       "domain": "sgbv",
+       "document_id": "syn-demo-040",
+       "entry_index": 3
+      },
+      {
+       "date": "2026-10-03",
+       "time": "07:27",
+       "code": "032101",
+       "domain": "sgbv",
+       "document_id": "syn-demo-040",
+       "entry_index": 4
+      },
+      {
+       "date": "2026-10-03",
+       "time": "18:05",
+       "code": "032101",
+       "domain": "sgbv",
+       "document_id": "syn-demo-040",
+       "entry_index": 5
+      },
+      {
+       "date": "2026-10-04",
+       "time": "07:40",
+       "code": "032101",
+       "domain": "sgbv",
+       "document_id": "syn-demo-040",
+       "entry_index": 6
+      },
+      {
+       "date": "2026-10-04",
+       "time": "18:18",
+       "code": "032101",
+       "domain": "sgbv",
+       "document_id": "syn-demo-040",
+       "entry_index": 7
+      },
+      {
+       "date": "2026-10-05",
+       "time": "07:40",
+       "code": "032101",
+       "domain": "sgbv",
+       "document_id": "syn-demo-040",
+       "entry_index": 8
+      },
+      {
+       "date": "2026-10-05",
+       "time": "18:15",
+       "code": "032101",
+       "domain": "sgbv",
+       "document_id": "syn-demo-040",
+       "entry_index": 9
+      },
+      {
+       "date": "2026-10-06",
+       "time": "07:40",
+       "code": "032101",
+       "domain": "sgbv",
+       "document_id": "syn-demo-040",
+       "entry_index": 10
+      },
+      {
+       "date": "2026-10-06",
+       "time": "18:10",
+       "code": "032101",
+       "domain": "sgbv",
+       "document_id": "syn-demo-040",
+       "entry_index": 11
+      },
+      {
+       "date": "2026-10-07",
+       "time": "07:15",
+       "code": "032101",
+       "domain": "sgbv",
+       "document_id": "syn-demo-040",
+       "entry_index": 12
+      },
+      {
+       "date": "2026-10-07",
+       "time": "18:00",
+       "code": "032101",
+       "domain": "sgbv",
+       "document_id": "syn-demo-040",
+       "entry_index": 13
+      },
+      {
+       "date": "2026-10-08",
+       "time": "07:30",
+       "code": "032101",
+       "domain": "sgbv",
+       "document_id": "syn-demo-040",
+       "entry_index": 14
+      },
+      {
+       "date": "2026-10-08",
+       "time": "17:56",
+       "code": "032101",
+       "domain": "sgbv",
+       "document_id": "syn-demo-040",
+       "entry_index": 15
+      },
+      {
+       "date": "2026-10-09",
+       "time": "07:40",
+       "code": "032101",
+       "domain": "sgbv",
+       "document_id": "syn-demo-040",
+       "entry_index": 16
+      },
+      {
+       "date": "2026-10-09",
+       "time": "18:15",
+       "code": "032101",
+       "domain": "sgbv",
+       "document_id": "syn-demo-040",
+       "entry_index": 17
+      },
+      {
+       "date": "2026-10-10",
+       "time": "07:15",
+       "code": "032101",
+       "domain": "sgbv",
+       "document_id": "syn-demo-040",
+       "entry_index": 18
+      },
+      {
+       "date": "2026-10-10",
+       "time": "18:26",
+       "code": "032101",
+       "domain": "sgbv",
+       "document_id": "syn-demo-040",
+       "entry_index": 19
+      },
+      {
+       "date": "2026-10-11",
+       "time": "07:14",
+       "code": "032101",
+       "domain": "sgbv",
+       "document_id": "syn-demo-040",
+       "entry_index": 20
+      },
+      {
+       "date": "2026-10-11",
+       "time": "17:55",
+       "code": "032101",
+       "domain": "sgbv",
+       "document_id": "syn-demo-040",
+       "entry_index": 21
+      },
+      {
+       "date": "2026-10-12",
+       "time": "07:45",
+       "code": "032101",
+       "domain": "sgbv",
+       "document_id": "syn-demo-040",
+       "entry_index": 22
+      },
+      {
+       "date": "2026-10-12",
+       "time": "18:20",
+       "code": "032101",
+       "domain": "sgbv",
+       "document_id": "syn-demo-040",
+       "entry_index": 23
+      }
+     ]
+    },
+    {
+     "id": "D09",
+     "rules": [
+      "HKP-RX-SIGNED"
+     ],
+     "documents": [
+      "syn-demo-017"
+     ],
+     "note": "Muster 12 without doctor stamp",
+     "lines": []
+    }
+   ],
+   "documents": [
+    "syn-demo-010",
+    "syn-demo-011",
+    "syn-demo-017",
+    "syn-demo-031",
+    "syn-demo-040"
+   ],
+   "casefile": "p04-2026-10.json"
+  },
+  {
+   "case_id": "p05-2026-10",
+   "patient_id": "p05",
+   "patient_name": "Eder, Theresia",
+   "month": "2026-10",
+   "kind": "both",
+   "hero": "Frau Eder",
+   "events": [
+    "pg_change",
+    "stay"
+   ],
+   "defects": [
+    {
+     "id": "D20",
+     "rules": [],
+     "documents": [
+      "syn-demo-027",
+      "syn-demo-003",
+      "syn-demo-009",
+      "syn-demo-001",
+      "syn-demo-028"
+     ],
+     "note": "Clean patient-month",
+     "lines": []
+    }
+   ],
+   "documents": [
+    "syn-demo-001",
+    "syn-demo-003",
+    "syn-demo-009",
+    "syn-demo-027",
+    "syn-demo-028"
+   ],
+   "casefile": "p05-2026-10.json"
+  },
+  {
+   "case_id": "p06-2026-10",
+   "patient_id": "p06",
+   "patient_name": "Fischer, Helmut",
+   "month": "2026-10",
+   "kind": "xi",
+   "hero": "Herr Fischer (second SGB XI patient)",
+   "events": [],
+   "defects": [
+    {
+     "id": "D12",
+     "rules": [
+      "XI-36-BUDGET"
+     ],
+     "documents": [
+      "syn-demo-016"
+     ],
+     "note": "§36 services 1329.76 € > cap 796.00 € (PG 2)",
+     "lines": [
+      {
+       "date": "2026-10-19",
+       "time": "12:00",
+       "code": "LK04",
+       "domain": "sgbxi",
+       "document_id": "syn-demo-016",
+       "entry_index": 38
+      },
+      {
+       "date": "2026-10-20",
+       "time": "06:40",
+       "code": "LK02",
+       "domain": "sgbxi",
+       "document_id": "syn-demo-016",
+       "entry_index": 39
+      },
+      {
+       "date": "2026-10-20",
+       "time": "06:40",
+       "code": "LK07",
+       "domain": "sgbxi",
+       "document_id": "syn-demo-016",
+       "entry_index": 40
+      },
+      {
+       "date": "2026-10-20",
+       "time": "11:40",
+       "code": "LK04",
+       "domain": "sgbxi",
+       "document_id": "syn-demo-016",
+       "entry_index": 41
+      },
+      {
+       "date": "2026-10-21",
+       "time": "06:39",
+       "code": "LK02",
+       "domain": "sgbxi",
+       "document_id": "syn-demo-016",
+       "entry_index": 42
+      },
+      {
+       "date": "2026-10-21",
+       "time": "06:39",
+       "code": "LK07",
+       "domain": "sgbxi",
+       "document_id": "syn-demo-016",
+       "entry_index": 43
+      },
+      {
+       "date": "2026-10-21",
+       "time": "12:00",
+       "code": "LK04",
+       "domain": "sgbxi",
+       "document_id": "syn-demo-016",
+       "entry_index": 44
+      },
+      {
+       "date": "2026-10-22",
+       "time": "06:45",
+       "code": "LK02",
+       "domain": "sgbxi",
+       "document_id": "syn-demo-016",
+       "entry_index": 45
+      },
+      {
+       "date": "2026-10-22",
+       "time": "06:45",
+       "code": "LK07",
+       "domain": "sgbxi",
+       "document_id": "syn-demo-016",
+       "entry_index": 46
+      },
+      {
+       "date": "2026-10-22",
+       "time": "11:35",
+       "code": "LK04",
+       "domain": "sgbxi",
+       "document_id": "syn-demo-016",
+       "entry_index": 47
+      },
+      {
+       "date": "2026-10-23",
+       "time": "11:45",
+       "code": "LK04",
+       "domain": "sgbxi",
+       "document_id": "syn-demo-016",
+       "entry_index": 48
+      },
+      {
+       "date": "2026-10-24",
+       "time": "12:04",
+       "code": "LK04",
+       "domain": "sgbxi",
+       "document_id": "syn-demo-016",
+       "entry_index": 49
+      },
+      {
+       "date": "2026-10-25",
+       "time": "11:59",
+       "code": "LK04",
+       "domain": "sgbxi",
+       "document_id": "syn-demo-016",
+       "entry_index": 50
+      },
+      {
+       "date": "2026-10-26",
+       "time": "06:42",
+       "code": "LK02",
+       "domain": "sgbxi",
+       "document_id": "syn-demo-016",
+       "entry_index": 51
+      },
+      {
+       "date": "2026-10-26",
+       "time": "06:42",
+       "code": "LK07",
+       "domain": "sgbxi",
+       "document_id": "syn-demo-016",
+       "entry_index": 52
+      },
+      {
+       "date": "2026-10-26",
+       "time": "11:46",
+       "code": "LK04",
+       "domain": "sgbxi",
+       "document_id": "syn-demo-016",
+       "entry_index": 53
+      },
+      {
+       "date": "2026-10-27",
+       "time": "07:10",
+       "code": "LK02",
+       "domain": "sgbxi",
+       "document_id": "syn-demo-016",
+       "entry_index": 54
+      },
+      {
+       "date": "2026-10-27",
+       "time": "07:10",
+       "code": "LK07",
+       "domain": "sgbxi",
+       "document_id": "syn-demo-016",
+       "entry_index": 55
+      },
+      {
+       "date": "2026-10-27",
+       "time": "11:55",
+       "code": "LK04",
+       "domain": "sgbxi",
+       "document_id": "syn-demo-016",
+       "entry_index": 56
+      },
+      {
+       "date": "2026-10-28",
+       "time": "06:45",
+       "code": "LK02",
+       "domain": "sgbxi",
+       "document_id": "syn-demo-016",
+       "entry_index": 57
+      },
+      {
+       "date": "2026-10-28",
+       "time": "06:45",
+       "code": "LK07",
+       "domain": "sgbxi",
+       "document_id": "syn-demo-016",
+       "entry_index": 58
+      },
+      {
+       "date": "2026-10-28",
+       "time": "11:48",
+       "code": "LK04",
+       "domain": "sgbxi",
+       "document_id": "syn-demo-016",
+       "entry_index": 59
+      },
+      {
+       "date": "2026-10-29",
+       "time": "06:55",
+       "code": "LK02",
+       "domain": "sgbxi",
+       "document_id": "syn-demo-016",
+       "entry_index": 60
+      },
+      {
+       "date": "2026-10-29",
+       "time": "06:55",
+       "code": "LK07",
+       "domain": "sgbxi",
+       "document_id": "syn-demo-016",
+       "entry_index": 61
+      },
+      {
+       "date": "2026-10-29",
+       "time": "11:35",
+       "code": "LK04",
+       "domain": "sgbxi",
+       "document_id": "syn-demo-016",
+       "entry_index": 62
+      },
+      {
+       "date": "2026-10-30",
+       "time": "11:57",
+       "code": "LK04",
+       "domain": "sgbxi",
+       "document_id": "syn-demo-016",
+       "entry_index": 63
+      },
+      {
+       "date": "2026-10-31",
+       "time": "11:39",
+       "code": "LK04",
+       "domain": "sgbxi",
+       "document_id": "syn-demo-016",
+       "entry_index": 64
+      }
+     ]
+    }
+   ],
+   "documents": [
+    "syn-demo-016"
+   ],
+   "casefile": "p06-2026-10.json"
+  },
+  {
+   "case_id": "p07-2026-10",
+   "patient_id": "p07",
+   "patient_name": "Weiß, Elfriede",
+   "month": "2026-10",
+   "kind": "hkp",
+   "hero": null,
+   "events": [
+    "kassenwechsel",
+    "stay"
+   ],
+   "defects": [
+    {
+     "id": "D20",
+     "rules": [],
+     "documents": [
+      "syn-demo-036",
+      "syn-demo-030",
+      "syn-demo-024",
+      "syn-demo-018"
+     ],
+     "note": "Clean patient-month",
+     "lines": []
+    }
+   ],
+   "documents": [
+    "syn-demo-018",
+    "syn-demo-024",
+    "syn-demo-030",
+    "syn-demo-036"
+   ],
+   "casefile": "p07-2026-10.json"
+  },
+  {
+   "case_id": "p08-2026-10",
+   "patient_id": "p08",
+   "patient_name": "Loibl, Johanna",
+   "month": "2026-10",
+   "kind": "hkp",
+   "hero": null,
+   "events": [],
+   "defects": [
+    {
+     "id": "D20",
+     "rules": [],
+     "documents": [
+      "syn-demo-004",
+      "syn-demo-005",
+      "syn-demo-015"
+     ],
+     "note": "Clean patient-month",
+     "lines": []
+    }
+   ],
+   "documents": [
+    "syn-demo-004",
+    "syn-demo-005",
+    "syn-demo-015"
+   ],
+   "casefile": "p08-2026-10.json"
+  },
+  {
+   "case_id": "p09-2026-10",
+   "patient_id": "p09",
+   "patient_name": "Unertl, Theresia",
+   "month": "2026-10",
+   "kind": "hkp",
+   "hero": null,
+   "events": [],
+   "defects": [
+    {
+     "id": "D03",
+     "rules": [
+      "HKP-APPROVAL-SCOPE"
+     ],
+     "documents": [
+      "syn-demo-034",
+      "syn-demo-025"
+     ],
+     "note": "Approval rejects 032120, billed anyway",
+     "lines": [
+      {
+       "date": "2026-10-01",
+       "time": "07:14",
+       "code": "032120",
+       "domain": "sgbv",
+       "document_id": "syn-demo-025",
+       "entry_index": 3
+      },
+      {
+       "date": "2026-10-02",
+       "time": "07:20",
+       "code": "032120",
+       "domain": "sgbv",
+       "document_id": "syn-demo-025",
+       "entry_index": 7
+      },
+      {
+       "date": "2026-10-03",
+       "time": "07:15",
+       "code": "032120",
+       "domain": "sgbv",
+       "document_id": "syn-demo-025",
+       "entry_index": 11
+      },
+      {
+       "date": "2026-10-04",
+       "time": "07:11",
+       "code": "032120",
+       "domain": "sgbv",
+       "document_id": "syn-demo-025",
+       "entry_index": 15
+      },
+      {
+       "date": "2026-10-05",
+       "time": "07:13",
+       "code": "032120",
+       "domain": "sgbv",
+       "document_id": "syn-demo-025",
+       "entry_index": 19
+      },
+      {
+       "date": "2026-10-06",
+       "time": "07:30",
+       "code": "032120",
+       "domain": "sgbv",
+       "document_id": "syn-demo-025",
+       "entry_index": 23
+      },
+      {
+       "date": "2026-10-07",
+       "time": "07:20",
+       "code": "032120",
+       "domain": "sgbv",
+       "document_id": "syn-demo-025",
+       "entry_index": 27
+      },
+      {
+       "date": "2026-10-08",
+       "time": "07:17",
+       "code": "032120",
+       "domain": "sgbv",
+       "document_id": "syn-demo-025",
+       "entry_index": 31
+      },
+      {
+       "date": "2026-10-09",
+       "time": "07:15",
+       "code": "032120",
+       "domain": "sgbv",
+       "document_id": "syn-demo-025",
+       "entry_index": 35
+      },
+      {
+       "date": "2026-10-10",
+       "time": "07:30",
+       "code": "032120",
+       "domain": "sgbv",
+       "document_id": "syn-demo-025",
+       "entry_index": 39
+      },
+      {
+       "date": "2026-10-11",
+       "time": "07:34",
+       "code": "032120",
+       "domain": "sgbv",
+       "document_id": "syn-demo-025",
+       "entry_index": 43
+      },
+      {
+       "date": "2026-10-12",
+       "time": "07:25",
+       "code": "032120",
+       "domain": "sgbv",
+       "document_id": "syn-demo-025",
+       "entry_index": 47
+      },
+      {
+       "date": "2026-10-13",
+       "time": "07:25",
+       "code": "032120",
+       "domain": "sgbv",
+       "document_id": "syn-demo-025",
+       "entry_index": 51
+      },
+      {
+       "date": "2026-10-14",
+       "time": "07:31",
+       "code": "032120",
+       "domain": "sgbv",
+       "document_id": "syn-demo-025",
+       "entry_index": 55
+      },
+      {
+       "date": "2026-10-15",
+       "time": "07:20",
+       "code": "032120",
+       "domain": "sgbv",
+       "document_id": "syn-demo-025",
+       "entry_index": 59
+      },
+      {
+       "date": "2026-10-16",
+       "time": "07:10",
+       "code": "032120",
+       "domain": "sgbv",
+       "document_id": "syn-demo-025",
+       "entry_index": 63
+      },
+      {
+       "date": "2026-10-17",
+       "time": "07:35",
+       "code": "032120",
+       "domain": "sgbv",
+       "document_id": "syn-demo-025",
+       "entry_index": 67
+      },
+      {
+       "date": "2026-10-18",
+       "time": "07:45",
+       "code": "032120",
+       "domain": "sgbv",
+       "document_id": "syn-demo-025",
+       "entry_index": 71
+      },
+      {
+       "date": "2026-10-19",
+       "time": "07:45",
+       "code": "032120",
+       "domain": "sgbv",
+       "document_id": "syn-demo-025",
+       "entry_index": 75
+      },
+      {
+       "date": "2026-10-20",
+       "time": "07:35",
+       "code": "032120",
+       "domain": "sgbv",
+       "document_id": "syn-demo-025",
+       "entry_index": 79
+      },
+      {
+       "date": "2026-10-21",
+       "time": "07:30",
+       "code": "032120",
+       "domain": "sgbv",
+       "document_id": "syn-demo-025",
+       "entry_index": 83
+      },
+      {
+       "date": "2026-10-22",
+       "time": "07:25",
+       "code": "032120",
+       "domain": "sgbv",
+       "document_id": "syn-demo-025",
+       "entry_index": 87
+      },
+      {
+       "date": "2026-10-23",
+       "time": "07:35",
+       "code": "032120",
+       "domain": "sgbv",
+       "document_id": "syn-demo-025",
+       "entry_index": 91
+      },
+      {
+       "date": "2026-10-24",
+       "time": "07:30",
+       "code": "032120",
+       "domain": "sgbv",
+       "document_id": "syn-demo-025",
+       "entry_index": 95
+      },
+      {
+       "date": "2026-10-25",
+       "time": "07:30",
+       "code": "032120",
+       "domain": "sgbv",
+       "document_id": "syn-demo-025",
+       "entry_index": 99
+      },
+      {
+       "date": "2026-10-26",
+       "time": "07:14",
+       "code": "032120",
+       "domain": "sgbv",
+       "document_id": "syn-demo-025",
+       "entry_index": 103
+      },
+      {
+       "date": "2026-10-27",
+       "time": "07:45",
+       "code": "032120",
+       "domain": "sgbv",
+       "document_id": "syn-demo-025",
+       "entry_index": 107
+      },
+      {
+       "date": "2026-10-28",
+       "time": "07:25",
+       "code": "032120",
+       "domain": "sgbv",
+       "document_id": "syn-demo-025",
+       "entry_index": 111
+      },
+      {
+       "date": "2026-10-29",
+       "time": "07:18",
+       "code": "032120",
+       "domain": "sgbv",
+       "document_id": "syn-demo-025",
+       "entry_index": 115
+      },
+      {
+       "date": "2026-10-30",
+       "time": "07:38",
+       "code": "032120",
+       "domain": "sgbv",
+       "document_id": "syn-demo-025",
+       "entry_index": 119
+      },
+      {
+       "date": "2026-10-31",
+       "time": "07:20",
+       "code": "032120",
+       "domain": "sgbv",
+       "document_id": "syn-demo-025",
+       "entry_index": 123
+      }
+     ]
+    },
+    {
+     "id": "D18",
+     "rules": [
+      "HKP-DUPLICATE"
+     ],
+     "documents": [
+      "syn-demo-025"
+     ],
+     "note": "Same position, day and time billed twice",
+     "lines": [
+      {
+       "date": "2026-10-25",
+       "time": "07:30",
+       "code": "032101",
+       "domain": "sgbv",
+       "document_id": "syn-demo-025",
+       "entry_index": 97
+      }
+     ]
+    },
+    {
+     "id": "D05",
+     "rules": [
+      "HKP-STAFF-INITIALS"
+     ],
+     "documents": [
+      "syn-demo-025"
+     ],
+     "note": "Visit entries without Handzeichen",
+     "lines": [
+      {
+       "date": "2026-10-31",
+       "time": "18:20",
+       "code": "032101",
+       "domain": "sgbv",
+       "document_id": "syn-demo-025",
+       "entry_index": 121
+      },
+      {
+       "date": "2026-10-12",
+       "time": "18:05",
+       "code": "032101",
+       "domain": "sgbv",
+       "document_id": "syn-demo-025",
+       "entry_index": 45
+      },
+      {
+       "date": "2026-10-26",
+       "time": "07:14",
+       "code": "032110",
+       "domain": "sgbv",
+       "document_id": "syn-demo-025",
+       "entry_index": 102
+      },
+      {
+       "date": "2026-10-13",
+       "time": "18:15",
+       "code": "032101",
+       "domain": "sgbv",
+       "document_id": "syn-demo-025",
+       "entry_index": 49
+      },
+      {
+       "date": "2026-10-16",
+       "time": "07:10",
+       "code": "032120",
+       "domain": "sgbv",
+       "document_id": "syn-demo-025",
+       "entry_index": 63
+      }
+     ]
+    }
+   ],
+   "documents": [
+    "syn-demo-014",
+    "syn-demo-025",
+    "syn-demo-034"
+   ],
+   "casefile": "p09-2026-10.json"
+  },
+  {
+   "case_id": "p10-2026-10",
+   "patient_id": "p10",
+   "patient_name": "Jäger, Renate",
+   "month": "2026-10",
+   "kind": "xi",
+   "hero": null,
+   "events": [
+    "stay"
+   ],
+   "defects": [
+    {
+     "id": "D20",
+     "rules": [],
+     "documents": [
+      "syn-demo-035",
+      "syn-demo-019"
+     ],
+     "note": "Clean patient-month",
+     "lines": []
+    }
+   ],
+   "documents": [
+    "syn-demo-019",
+    "syn-demo-035"
+   ],
+   "casefile": "p10-2026-10.json"
+  },
+  {
+   "case_id": "p11-2026-10",
+   "patient_id": "p11",
+   "patient_name": "Pfeffer, Siegfried",
+   "month": "2026-10",
+   "kind": "xi",
+   "hero": null,
+   "events": [],
+   "defects": [
+    {
+     "id": "D15",
+     "rules": [
+      "MD-DECEASED"
+     ],
+     "documents": [
+      "syn-demo-032"
+     ],
+     "note": "Died 21.10.2026 12:40; visits billed afterwards",
+     "lines": [
+      {
+       "date": "2026-10-22",
+       "time": "06:40",
+       "code": "LK01",
+       "domain": "sgbxi",
+       "document_id": "syn-demo-032",
+       "entry_index": 30
+      },
+      {
+       "date": "2026-10-22",
+       "time": "06:40",
+       "code": "LK07",
+       "domain": "sgbxi",
+       "document_id": "syn-demo-032",
+       "entry_index": 31
+      },
+      {
+       "date": "2026-10-23",
+       "time": "07:10",
+       "code": "LK01",
+       "domain": "sgbxi",
+       "document_id": "syn-demo-032",
+       "entry_index": 32
+      },
+      {
+       "date": "2026-10-23",
+       "time": "07:10",
+       "code": "LK07",
+       "domain": "sgbxi",
+       "document_id": "syn-demo-032",
+       "entry_index": 33
+      }
+     ]
+    }
+   ],
+   "documents": [
+    "syn-demo-032"
+   ],
+   "casefile": "p11-2026-10.json"
+  },
+  {
+   "case_id": "p12-2026-10",
+   "patient_id": "p12",
+   "patient_name": "Hölzl, Helmut",
+   "month": "2026-10",
+   "kind": "hkp",
+   "hero": null,
+   "events": [],
+   "defects": [
+    {
+     "id": "D10",
+     "rules": [
+      "HKP-FREQ-RX"
+     ],
+     "documents": [
+      "syn-demo-007",
+      "syn-demo-033"
+     ],
+     "note": "Verordnung 032101 1x/day, billed 2x/day",
+     "lines": [
+      {
+       "date": "2026-10-01",
+       "time": "18:16",
+       "code": "032101",
+       "domain": "sgbv",
+       "document_id": "syn-demo-033",
+       "entry_index": 1
+      },
+      {
+       "date": "2026-10-02",
+       "time": "18:10",
+       "code": "032101",
+       "domain": "sgbv",
+       "document_id": "syn-demo-033",
+       "entry_index": 3
+      },
+      {
+       "date": "2026-10-03",
+       "time": "18:25",
+       "code": "032101",
+       "domain": "sgbv",
+       "document_id": "syn-demo-033",
+       "entry_index": 5
+      },
+      {
+       "date": "2026-10-04",
+       "time": "18:30",
+       "code": "032101",
+       "domain": "sgbv",
+       "document_id": "syn-demo-033",
+       "entry_index": 7
+      },
+      {
+       "date": "2026-10-05",
+       "time": "18:10",
+       "code": "032101",
+       "domain": "sgbv",
+       "document_id": "syn-demo-033",
+       "entry_index": 9
+      },
+      {
+       "date": "2026-10-06",
+       "time": "18:15",
+       "code": "032101",
+       "domain": "sgbv",
+       "document_id": "syn-demo-033",
+       "entry_index": 11
+      },
+      {
+       "date": "2026-10-07",
+       "time": "18:40",
+       "code": "032101",
+       "domain": "sgbv",
+       "document_id": "syn-demo-033",
+       "entry_index": 13
+      },
+      {
+       "date": "2026-10-08",
+       "time": "18:15",
+       "code": "032101",
+       "domain": "sgbv",
+       "document_id": "syn-demo-033",
+       "entry_index": 15
+      },
+      {
+       "date": "2026-10-09",
+       "time": "18:16",
+       "code": "032101",
+       "domain": "sgbv",
+       "document_id": "syn-demo-033",
+       "entry_index": 17
+      },
+      {
+       "date": "2026-10-10",
+       "time": "18:20",
+       "code": "032101",
+       "domain": "sgbv",
+       "document_id": "syn-demo-033",
+       "entry_index": 19
+      },
+      {
+       "date": "2026-10-11",
+       "time": "18:30",
+       "code": "032101",
+       "domain": "sgbv",
+       "document_id": "syn-demo-033",
+       "entry_index": 21
+      },
+      {
+       "date": "2026-10-12",
+       "time": "18:30",
+       "code": "032101",
+       "domain": "sgbv",
+       "document_id": "syn-demo-033",
+       "entry_index": 23
+      },
+      {
+       "date": "2026-10-13",
+       "time": "18:19",
+       "code": "032101",
+       "domain": "sgbv",
+       "document_id": "syn-demo-033",
+       "entry_index": 25
+      },
+      {
+       "date": "2026-10-14",
+       "time": "18:30",
+       "code": "032101",
+       "domain": "sgbv",
+       "document_id": "syn-demo-033",
+       "entry_index": 27
+      },
+      {
+       "date": "2026-10-15",
+       "time": "18:23",
+       "code": "032101",
+       "domain": "sgbv",
+       "document_id": "syn-demo-033",
+       "entry_index": 29
+      },
+      {
+       "date": "2026-10-16",
+       "time": "18:25",
+       "code": "032101",
+       "domain": "sgbv",
+       "document_id": "syn-demo-033",
+       "entry_index": 31
+      },
+      {
+       "date": "2026-10-17",
+       "time": "18:35",
+       "code": "032101",
+       "domain": "sgbv",
+       "document_id": "syn-demo-033",
+       "entry_index": 33
+      },
+      {
+       "date": "2026-10-18",
+       "time": "18:05",
+       "code": "032101",
+       "domain": "sgbv",
+       "document_id": "syn-demo-033",
+       "entry_index": 35
+      },
+      {
+       "date": "2026-10-19",
+       "time": "18:38",
+       "code": "032101",
+       "domain": "sgbv",
+       "document_id": "syn-demo-033",
+       "entry_index": 37
+      },
+      {
+       "date": "2026-10-20",
+       "time": "18:35",
+       "code": "032101",
+       "domain": "sgbv",
+       "document_id": "syn-demo-033",
+       "entry_index": 39
+      },
+      {
+       "date": "2026-10-21",
+       "time": "18:30",
+       "code": "032101",
+       "domain": "sgbv",
+       "document_id": "syn-demo-033",
+       "entry_index": 41
+      },
+      {
+       "date": "2026-10-22",
+       "time": "18:30",
+       "code": "032101",
+       "domain": "sgbv",
+       "document_id": "syn-demo-033",
+       "entry_index": 43
+      },
+      {
+       "date": "2026-10-23",
+       "time": "18:15",
+       "code": "032101",
+       "domain": "sgbv",
+       "document_id": "syn-demo-033",
+       "entry_index": 45
+      },
+      {
+       "date": "2026-10-24",
+       "time": "18:27",
+       "code": "032101",
+       "domain": "sgbv",
+       "document_id": "syn-demo-033",
+       "entry_index": 47
+      },
+      {
+       "date": "2026-10-25",
+       "time": "18:20",
+       "code": "032101",
+       "domain": "sgbv",
+       "document_id": "syn-demo-033",
+       "entry_index": 49
+      },
+      {
+       "date": "2026-10-26",
+       "time": "18:40",
+       "code": "032101",
+       "domain": "sgbv",
+       "document_id": "syn-demo-033",
+       "entry_index": 51
+      },
+      {
+       "date": "2026-10-27",
+       "time": "18:20",
+       "code": "032101",
+       "domain": "sgbv",
+       "document_id": "syn-demo-033",
+       "entry_index": 53
+      },
+      {
+       "date": "2026-10-28",
+       "time": "18:05",
+       "code": "032101",
+       "domain": "sgbv",
+       "document_id": "syn-demo-033",
+       "entry_index": 55
+      },
+      {
+       "date": "2026-10-29",
+       "time": "18:20",
+       "code": "032101",
+       "domain": "sgbv",
+       "document_id": "syn-demo-033",
+       "entry_index": 57
+      },
+      {
+       "date": "2026-10-30",
+       "time": "18:35",
+       "code": "032101",
+       "domain": "sgbv",
+       "document_id": "syn-demo-033",
+       "entry_index": 59
+      },
+      {
+       "date": "2026-10-31",
+       "time": "18:19",
+       "code": "032101",
+       "domain": "sgbv",
+       "document_id": "syn-demo-033",
+       "entry_index": 61
+      }
+     ]
+    },
+    {
+     "id": "D19",
+     "rules": [
+      "DOC-READABLE"
+     ],
+     "documents": [
+      "syn-demo-038"
+     ],
+     "note": "Photo too blurred to read",
+     "lines": []
+    }
+   ],
+   "documents": [
+    "syn-demo-007",
+    "syn-demo-033",
+    "syn-demo-038"
+   ],
+   "casefile": "p12-2026-10.json"
+  },
+  {
+   "case_id": "p13-2026-10",
+   "patient_id": "p13",
+   "patient_name": "Haslinger, Johanna",
+   "month": "2026-10",
+   "kind": "xi",
+   "hero": null,
+   "events": [],
+   "defects": [
+    {
+     "id": "D16",
+     "rules": [
+      "MD-KVNR-CHECK"
+     ],
+     "documents": [
+      "syn-demo-041"
+     ],
+     "note": "Provider has KVNR L811091960 on file, card says L811091969",
+     "lines": []
+    }
+   ],
+   "documents": [
+    "syn-demo-041"
+   ],
+   "casefile": "p13-2026-10.json"
+  },
+  {
+   "case_id": "p14-2026-10",
+   "patient_id": "p14",
+   "patient_name": "Kerscher, Max",
+   "month": "2026-10",
+   "kind": "hkp",
+   "hero": null,
+   "events": [],
+   "defects": [
+    {
+     "id": "D11",
+     "rules": [
+      "HKP-ERST-14D"
+     ],
+     "documents": [
+      "syn-demo-012"
+     ],
+     "note": "Erstverordnung covers 22 days",
+     "lines": []
+    },
+    {
+     "id": "D02",
+     "rules": [
+      "HKP-APPROVAL-EXISTS"
+     ],
+     "documents": [
+      "syn-demo-012",
+      "syn-demo-002"
+     ],
+     "note": "No Genehmigung for the Verordnung of 2026-10-08",
+     "lines": [
+      {
+       "date": "2026-10-08",
+       "time": "07:30",
+       "code": "032130",
+       "domain": "sgbv",
+       "document_id": "syn-demo-002",
+       "entry_index": 0
+      },
+      {
+       "date": "2026-10-09",
+       "time": "07:25",
+       "code": "032130",
+       "domain": "sgbv",
+       "document_id": "syn-demo-002",
+       "entry_index": 1
+      },
+      {
+       "date": "2026-10-10",
+       "time": "07:15",
+       "code": "032130",
+       "domain": "sgbv",
+       "document_id": "syn-demo-002",
+       "entry_index": 2
+      },
+      {
+       "date": "2026-10-11",
+       "time": "07:45",
+       "code": "032130",
+       "domain": "sgbv",
+       "document_id": "syn-demo-002",
+       "entry_index": 3
+      },
+      {
+       "date": "2026-10-12",
+       "time": "07:25",
+       "code": "032130",
+       "domain": "sgbv",
+       "document_id": "syn-demo-002",
+       "entry_index": 4
+      },
+      {
+       "date": "2026-10-13",
+       "time": "07:37",
+       "code": "032130",
+       "domain": "sgbv",
+       "document_id": "syn-demo-002",
+       "entry_index": 5
+      },
+      {
+       "date": "2026-10-14",
+       "time": "07:45",
+       "code": "032130",
+       "domain": "sgbv",
+       "document_id": "syn-demo-002",
+       "entry_index": 6
+      },
+      {
+       "date": "2026-10-15",
+       "time": "07:45",
+       "code": "032130",
+       "domain": "sgbv",
+       "document_id": "syn-demo-002",
+       "entry_index": 7
+      },
+      {
+       "date": "2026-10-16",
+       "time": "07:35",
+       "code": "032130",
+       "domain": "sgbv",
+       "document_id": "syn-demo-002",
+       "entry_index": 8
+      },
+      {
+       "date": "2026-10-17",
+       "time": "07:40",
+       "code": "032130",
+       "domain": "sgbv",
+       "document_id": "syn-demo-002",
+       "entry_index": 9
+      },
+      {
+       "date": "2026-10-18",
+       "time": "07:10",
+       "code": "032130",
+       "domain": "sgbv",
+       "document_id": "syn-demo-002",
+       "entry_index": 10
+      },
+      {
+       "date": "2026-10-19",
+       "time": "07:40",
+       "code": "032130",
+       "domain": "sgbv",
+       "document_id": "syn-demo-002",
+       "entry_index": 11
+      },
+      {
+       "date": "2026-10-20",
+       "time": "07:25",
+       "code": "032130",
+       "domain": "sgbv",
+       "document_id": "syn-demo-002",
+       "entry_index": 12
+      },
+      {
+       "date": "2026-10-21",
+       "time": "07:40",
+       "code": "032130",
+       "domain": "sgbv",
+       "document_id": "syn-demo-002",
+       "entry_index": 13
+      },
+      {
+       "date": "2026-10-22",
+       "time": "07:15",
+       "code": "032130",
+       "domain": "sgbv",
+       "document_id": "syn-demo-002",
+       "entry_index": 14
+      },
+      {
+       "date": "2026-10-23",
+       "time": "07:43",
+       "code": "032130",
+       "domain": "sgbv",
+       "document_id": "syn-demo-002",
+       "entry_index": 15
+      },
+      {
+       "date": "2026-10-24",
+       "time": "07:10",
+       "code": "032130",
+       "domain": "sgbv",
+       "document_id": "syn-demo-002",
+       "entry_index": 16
+      },
+      {
+       "date": "2026-10-25",
+       "time": "07:25",
+       "code": "032130",
+       "domain": "sgbv",
+       "document_id": "syn-demo-002",
+       "entry_index": 17
+      },
+      {
+       "date": "2026-10-26",
+       "time": "07:42",
+       "code": "032130",
+       "domain": "sgbv",
+       "document_id": "syn-demo-002",
+       "entry_index": 18
+      },
+      {
+       "date": "2026-10-27",
+       "time": "07:30",
+       "code": "032130",
+       "domain": "sgbv",
+       "document_id": "syn-demo-002",
+       "entry_index": 19
+      },
+      {
+       "date": "2026-10-28",
+       "time": "07:40",
+       "code": "032130",
+       "domain": "sgbv",
+       "document_id": "syn-demo-002",
+       "entry_index": 20
+      },
+      {
+       "date": "2026-10-29",
+       "time": "07:20",
+       "code": "032130",
+       "domain": "sgbv",
+       "document_id": "syn-demo-002",
+       "entry_index": 21
+      }
+     ]
+    }
+   ],
+   "documents": [
+    "syn-demo-002",
+    "syn-demo-012",
+    "syn-demo-020",
+    "syn-demo-029"
+   ],
+   "casefile": "p14-2026-10.json"
+  }
+ ],
+ "coverage": {
+  "D01": 1,
+  "D02": 1,
+  "D03": 1,
+  "D04": 1,
+  "D05": 1,
+  "D06": 1,
+  "D07": 1,
+  "D08": 1,
+  "D09": 1,
+  "D10": 1,
+  "D11": 1,
+  "D12": 1,
+  "D15": 1,
+  "D16": 1,
+  "D18": 1,
+  "D19": 1,
+  "D20": 4
+ },
+ "coverage_docs": {
+  "D01": 2,
+  "D02": 2,
+  "D03": 2,
+  "D04": 1,
+  "D05": 1,
+  "D06": 2,
+  "D07": 1,
+  "D08": 1,
+  "D09": 1,
+  "D10": 2,
+  "D11": 1,
+  "D12": 1,
+  "D15": 1,
+  "D16": 1,
+  "D18": 1,
+  "D19": 1,
+  "D20": 14
+ },
+ "variants": {
+  "bad_photo": 1,
+  "clean": 5,
+  "fax": 5,
+  "photo": 18,
+  "scan": 13
+ }
+}

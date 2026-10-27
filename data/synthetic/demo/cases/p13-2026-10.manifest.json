@@ -1,0 +1,26 @@
+{
+ "case_id": "p13-2026-10",
+ "patient_id": "p13",
+ "patient_name": "Haslinger, Johanna",
+ "month": "2026-10",
+ "kind": "xi",
+ "hero": null,
+ "events": [],
+ "defects": [
+  {
+   "id": "D16",
+   "rules": [
+    "MD-KVNR-CHECK"
+   ],
+   "documents": [
+    "syn-demo-041"
+   ],
+   "note": "Provider has KVNR L811091960 on file, card says L811091969",
+   "lines": []
+  }
+ ],
+ "documents": [
+  "syn-demo-041"
+ ],
+ "casefile": "p13-2026-10.json"
+}

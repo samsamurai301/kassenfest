@@ -1,0 +1,243 @@
+{
+ "case_id": "p06-2026-10",
+ "patient_id": "p06",
+ "patient_name": "Fischer, Helmut",
+ "month": "2026-10",
+ "kind": "xi",
+ "hero": "Herr Fischer (second SGB XI patient)",
+ "events": [],
+ "defects": [
+  {
+   "id": "D12",
+   "rules": [
+    "XI-36-BUDGET"
+   ],
+   "documents": [
+    "syn-demo-016"
+   ],
+   "note": "§36 services 1329.76 € > cap 796.00 € (PG 2)",
+   "lines": [
+    {
+     "date": "2026-10-19",
+     "time": "12:00",
+     "code": "LK04",
+     "domain": "sgbxi",
+     "document_id": "syn-demo-016",
+     "entry_index": 38
+    },
+    {
+     "date": "2026-10-20",
+     "time": "06:40",
+     "code": "LK02",
+     "domain": "sgbxi",
+     "document_id": "syn-demo-016",
+     "entry_index": 39
+    },
+    {
+     "date": "2026-10-20",
+     "time": "06:40",
+     "code": "LK07",
+     "domain": "sgbxi",
+     "document_id": "syn-demo-016",
+     "entry_index": 40
+    },
+    {
+     "date": "2026-10-20",
+     "time": "11:40",
+     "code": "LK04",
+     "domain": "sgbxi",
+     "document_id": "syn-demo-016",
+     "entry_index": 41
+    },
+    {
+     "date": "2026-10-21",
+     "time": "06:39",
+     "code": "LK02",
+     "domain": "sgbxi",
+     "document_id": "syn-demo-016",
+     "entry_index": 42
+    },
+    {
+     "date": "2026-10-21",
+     "time": "06:39",
+     "code": "LK07",
+     "domain": "sgbxi",
+     "document_id": "syn-demo-016",
+     "entry_index": 43
+    },
+    {
+     "date": "2026-10-21",
+     "time": "12:00",
+     "code": "LK04",
+     "domain": "sgbxi",
+     "document_id": "syn-demo-016",
+     "entry_index": 44
+    },
+    {
+     "date": "2026-10-22",
+     "time": "06:45",
+     "code": "LK02",
+     "domain": "sgbxi",
+     "document_id": "syn-demo-016",
+     "entry_index": 45
+    },
+    {
+     "date": "2026-10-22",
+     "time": "06:45",
+     "code": "LK07",
+     "domain": "sgbxi",
+     "document_id": "syn-demo-016",
+     "entry_index": 46
+    },
+    {
+     "date": "2026-10-22",
+     "time": "11:35",
+     "code": "LK04",
+     "domain": "sgbxi",
+     "document_id": "syn-demo-016",
+     "entry_index": 47
+    },
+    {
+     "date": "2026-10-23",
+     "time": "11:45",
+     "code": "LK04",
+     "domain": "sgbxi",
+     "document_id": "syn-demo-016",
+     "entry_index": 48
+    },
+    {
+     "date": "2026-10-24",
+     "time": "12:04",
+     "code": "LK04",
+     "domain": "sgbxi",
+     "document_id": "syn-demo-016",
+     "entry_index": 49
+    },
+    {
+     "date": "2026-10-25",
+     "time": "11:59",
+     "code": "LK04",
+     "domain": "sgbxi",
+     "document_id": "syn-demo-016",
+     "entry_index": 50
+    },
+    {
+     "date": "2026-10-26",
+     "time": "06:42",
+     "code": "LK02",
+     "domain": "sgbxi",
+     "document_id": "syn-demo-016",
+     "entry_index": 51
+    },
+    {
+     "date": "2026-10-26",
+     "time": "06:42",
+     "code": "LK07",
+     "domain": "sgbxi",
+     "document_id": "syn-demo-016",
+     "entry_index": 52
+    },
+    {
+     "date": "2026-10-26",
+     "time": "11:46",
+     "code": "LK04",
+     "domain": "sgbxi",
+     "document_id": "syn-demo-016",
+     "entry_index": 53
+    },
+    {
+     "date": "2026-10-27",
+     "time": "07:10",
+     "code": "LK02",
+     "domain": "sgbxi",
+     "document_id": "syn-demo-016",
+     "entry_index": 54
+    },
+    {
+     "date": "2026-10-27",
+     "time": "07:10",
+     "code": "LK07",
+     "domain": "sgbxi",
+     "document_id": "syn-demo-016",
+     "entry_index": 55
+    },
+    {
+     "date": "2026-10-27",
+     "time": "11:55",
+     "code": "LK04",
+     "domain": "sgbxi",
+     "document_id": "syn-demo-016",
+     "entry_index": 56
+    },
+    {
+     "date": "2026-10-28",
+     "time": "06:45",
+     "code": "LK02",
+     "domain": "sgbxi",
+     "document_id": "syn-demo-016",
+     "entry_index": 57
+    },
+    {
+     "date": "2026-10-28",
+     "time": "06:45",
+     "code": "LK07",
+     "domain": "sgbxi",
+     "document_id": "syn-demo-016",
+     "entry_index": 58
+    },
+    {
+     "date": "2026-10-28",
+     "time": "11:48",
+     "code": "LK04",
+     "domain": "sgbxi",
+     "document_id": "syn-demo-016",
+     "entry_index": 59
+    },
+    {
+     "date": "2026-10-29",
+     "time": "06:55",
+     "code": "LK02",
+     "domain": "sgbxi",
+     "document_id": "syn-demo-016",
+     "entry_index": 60
+    },
+    {
+     "date": "2026-10-29",
+     "time": "06:55",
+     "code": "LK07",
+     "domain": "sgbxi",
+     "document_id": "syn-demo-016",
+     "entry_index": 61
+    },
+    {
+     "date": "2026-10-29",
+     "time": "11:35",
+     "code": "LK04",
+     "domain": "sgbxi",
+     "document_id": "syn-demo-016",
+     "entry_index": 62
+    },
+    {
+     "date": "2026-10-30",
+     "time": "11:57",
+     "code": "LK04",
+     "domain": "sgbxi",
+     "document_id": "syn-demo-016",
+     "entry_index": 63
+    },
+    {
+     "date": "2026-10-31",
+     "time": "11:39",
+     "code": "LK04",
+     "domain": "sgbxi",
+     "document_id": "syn-demo-016",
+     "entry_index": 64
+    }
+   ]
+  }
+ ],
+ "documents": [
+  "syn-demo-016"
+ ],
+ "casefile": "p06-2026-10.json"
+}

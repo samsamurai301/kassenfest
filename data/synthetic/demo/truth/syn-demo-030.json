@@ -1,0 +1,260 @@
+{
+ "doc_id": "syn-demo-030",
+ "doc_type": "approval_letter",
+ "variant": "fax",
+ "seed": 954318834,
+ "patient_id": "p07",
+ "month": "2026-10",
+ "pages": [
+  {
+   "index": 0,
+   "image": "../pages/syn-demo-030.png",
+   "width": 1241,
+   "height": 1755
+  }
+ ],
+ "fields": {
+  "payer_name": {
+   "value": "AOK Bayern",
+   "status": "present",
+   "page": 0,
+   "box": [
+    101.1,
+    111.4,
+    321.7,
+    153.6
+   ],
+   "handwritten": false
+  },
+  "payer_ik": {
+   "value": "109990018",
+   "status": "present",
+   "page": 0,
+   "box": [
+    870.1,
+    303.9,
+    953.6,
+    323.3
+   ],
+   "handwritten": false
+  },
+  "letter_date": {
+   "value": "2026-10-12",
+   "status": "present",
+   "page": 0,
+   "box": [
+    869.7,
+    248.5,
+    953.2,
+    267.8
+   ],
+   "handwritten": false
+  },
+  "approval_ref": {
+   "value": "HKP-2026-627224",
+   "status": "present",
+   "page": 0,
+   "box": [
+    869.9,
+    275.9,
+    1008.0,
+    295.5
+   ],
+   "handwritten": false
+  },
+  "patient_name": {
+   "value": "Weiß, Elfriede",
+   "status": "present",
+   "page": 0,
+   "box": [
+    123.7,
+    601.9,
+    247.7,
+    624.6
+   ],
+   "handwritten": false
+  },
+  "kvnr": {
+   "value": "J363632897",
+   "status": "present",
+   "page": 0,
+   "box": [
+    124.0,
+    656.7,
+    233.1,
+    679.3
+   ],
+   "handwritten": false
+  },
+  "provider_name": {
+   "value": "Pflegedienst Sonnenschein GmbH",
+   "status": "present",
+   "page": 0,
+   "box": [
+    102.3,
+    287.8,
+    404.8,
+    311.8
+   ],
+   "handwritten": false
+  },
+  "provider_ik": {
+   "value": "469960557",
+   "status": "present",
+   "page": 0,
+   "box": [
+    870.3,
+    331.6,
+    953.8,
+    351.0
+   ],
+   "handwritten": false
+  },
+  "prescription_issue_date": {
+   "value": "2026-09-29",
+   "status": "present",
+   "page": 0,
+   "box": [
+    618.5,
+    653.4,
+    717.7,
+    676.0
+   ],
+   "handwritten": false
+  },
+  "decision": {
+   "value": "approved",
+   "status": "present",
+   "page": 0,
+   "box": [
+    944.6,
+    756.9,
+    1044.8,
+    779.5
+   ],
+   "handwritten": false
+  },
+  "period_from": {
+   "value": "2026-10-01",
+   "status": "present",
+   "page": 0,
+   "box": [
+    460.8,
+    787.6,
+    560.0,
+    810.1
+   ],
+   "handwritten": false
+  },
+  "period_to": {
+   "value": "2026-12-30",
+   "status": "present",
+   "page": 0,
+   "box": [
+    596.1,
+    786.6,
+    695.3,
+    809.2
+   ],
+   "handwritten": false
+  },
+  "approved_items[0].frequency.count": {
+   "value": 2,
+   "status": "present",
+   "page": 0,
+   "box": [
+    717.5,
+    873.1,
+    795.1,
+    894.0
+   ],
+   "handwritten": false
+  },
+  "approved_items[0].frequency.per": {
+   "value": "day",
+   "status": "present",
+   "page": 0,
+   "box": [
+    717.5,
+    873.1,
+    795.1,
+    894.0
+   ],
+   "handwritten": false
+  },
+  "approved_items[0].position_no": {
+   "value": "032101",
+   "status": "present",
+   "page": 0,
+   "box": [
+    115.1,
+    877.4,
+    176.4,
+    898.1
+   ],
+   "handwritten": false
+  },
+  "approved_items[0].description": {
+   "value": "Medikamentengabe (Verabreichen)",
+   "status": "present",
+   "page": 0,
+   "box": [
+    233.2,
+    875.0,
+    519.7,
+    897.3
+   ],
+   "handwritten": false
+  },
+  "approved_items[0].valid_from": {
+   "value": "2026-10-01",
+   "status": "present",
+   "page": 0,
+   "box": [
+    882.8,
+    871.9,
+    974.7,
+    892.9
+   ],
+   "handwritten": false
+  },
+  "approved_items[0].valid_to": {
+   "value": "2026-12-30",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1012.7,
+    871.0,
+    1104.6,
+    892.0
+   ],
+   "handwritten": false
+  },
+  "approved_items[#]": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "rejected_items[#]": {
+   "value": 0,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "doc_type": {
+   "value": "approval_letter",
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  }
+ },
+ "regions": {},
+ "defects": [
+  "D20"
+ ],
+ "synthetic": true
+}

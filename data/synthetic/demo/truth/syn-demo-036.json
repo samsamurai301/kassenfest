@@ -1,0 +1,351 @@
+{
+ "doc_id": "syn-demo-036",
+ "doc_type": "muster12",
+ "variant": "clean",
+ "seed": 1899496773,
+ "patient_id": "p07",
+ "month": "2026-10",
+ "pages": [
+  {
+   "index": 0,
+   "image": "../pages/syn-demo-036.png",
+   "width": 1241,
+   "height": 1755
+  }
+ ],
+ "fields": {
+  "payer_name": {
+   "value": "AOK Bayern",
+   "status": "present",
+   "page": 0,
+   "box": [
+    68.8,
+    80.9,
+    193.8,
+    104.3
+   ],
+   "handwritten": false
+  },
+  "patient_name": {
+   "value": "Weiß, Elfriede",
+   "status": "present",
+   "page": 0,
+   "box": [
+    68.8,
+    172.0,
+    243.7,
+    195.4
+   ],
+   "handwritten": false
+  },
+  "patient_dob": {
+   "value": "1932-11-22",
+   "status": "present",
+   "page": 0,
+   "box": [
+    665.3,
+    172.0,
+    790.2,
+    195.4
+   ],
+   "handwritten": false
+  },
+  "payer_ik": {
+   "value": "109990018",
+   "status": "present",
+   "page": 0,
+   "box": [
+    68.8,
+    263.1,
+    181.2,
+    286.5
+   ],
+   "handwritten": false
+  },
+  "kvnr": {
+   "value": "J363632897",
+   "status": "present",
+   "page": 0,
+   "box": [
+    367.1,
+    263.1,
+    492.0,
+    286.5
+   ],
+   "handwritten": false
+  },
+  "bsnr": {
+   "value": "717989371",
+   "status": "present",
+   "page": 0,
+   "box": [
+    68.8,
+    354.2,
+    181.2,
+    377.6
+   ],
+   "handwritten": false
+  },
+  "lanr": {
+   "value": "783581201",
+   "status": "present",
+   "page": 0,
+   "box": [
+    367.1,
+    354.2,
+    479.5,
+    377.6
+   ],
+   "handwritten": false
+  },
+  "issue_date": {
+   "value": "2026-09-29",
+   "status": "present",
+   "page": 0,
+   "box": [
+    665.3,
+    354.2,
+    790.2,
+    377.6
+   ],
+   "handwritten": false
+  },
+  "period_from": {
+   "value": "2026-10-01",
+   "status": "present",
+   "page": 0,
+   "box": [
+    885.8,
+    318.6,
+    1010.7,
+    342.0
+   ],
+   "handwritten": false
+  },
+  "period_to": {
+   "value": "2026-12-30",
+   "status": "present",
+   "page": 0,
+   "box": [
+    885.8,
+    365.8,
+    1010.7,
+    389.2
+   ],
+   "handwritten": false
+  },
+  "icd_codes": {
+   "value": [
+    "I50.9",
+    "I10.00"
+   ],
+   "status": "present",
+   "page": 0,
+   "box": [
+    70.0,
+    446.1,
+    232.4,
+    469.5
+   ],
+   "handwritten": false
+  },
+  "further_notes": {
+   "value": "Bitte BZ-Werte dokumentieren",
+   "status": "present",
+   "page": 0,
+   "box": [
+    70.0,
+    1132.7,
+    419.8,
+    1156.2
+   ],
+   "handwritten": false
+  },
+  "prescription_kind": {
+   "value": "folge",
+   "status": "present",
+   "page": 0,
+   "box": [
+    832.7,
+    207.7,
+    857.4,
+    232.4
+   ],
+   "handwritten": false
+  },
+  "accident": {
+   "value": false,
+   "status": "present",
+   "page": 0,
+   "box": [
+    832.7,
+    241.9,
+    857.4,
+    266.7
+   ],
+   "handwritten": false
+  },
+  "blank_prescription": {
+   "value": false,
+   "status": "present",
+   "page": 0,
+   "box": [
+    832.7,
+    276.1,
+    857.4,
+    300.9
+   ],
+   "handwritten": false
+  },
+  "measures[0].category": {
+   "value": "medikamentengabe",
+   "status": "present",
+   "page": 0,
+   "box": [
+    66.5,
+    639.3,
+    91.3,
+    664.1
+   ],
+   "handwritten": false
+  },
+  "measures[0].frequency.count": {
+   "value": 2,
+   "status": "present",
+   "page": 0,
+   "box": [
+    757.1,
+    641.5,
+    835.8,
+    661.8
+   ],
+   "handwritten": false
+  },
+  "measures[0].frequency.per": {
+   "value": "day",
+   "status": "present",
+   "page": 0,
+   "box": [
+    757.1,
+    641.5,
+    835.8,
+    661.8
+   ],
+   "handwritten": false
+  },
+  "measures[0].details": {
+   "value": "Bisoprolol 5 mg, Apixaban 5 mg",
+   "status": "present",
+   "page": 0,
+   "box": [
+    326.3,
+    641.5,
+    663.6,
+    661.8
+   ],
+   "handwritten": false
+  },
+  "measures[0].duration_from": {
+   "value": "2026-10-01",
+   "status": "present",
+   "page": 0,
+   "box": [
+    884.9,
+    641.5,
+    997.4,
+    661.8
+   ],
+   "handwritten": false
+  },
+  "measures[0].duration_to": {
+   "value": "2026-12-30",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1044.4,
+    641.5,
+    1156.8,
+    661.8
+   ],
+   "handwritten": false
+  },
+  "measures[#]": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "corrections_present": {
+   "value": false,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "doc_type": {
+   "value": "muster12",
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "practice_stamp": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    128.0,
+    1175.0,
+    538.0,
+    1398.0
+   ],
+   "handwritten": false
+  },
+  "doctor_signature": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    770.0,
+    1260.0,
+    1032.0,
+    1301.0
+   ],
+   "handwritten": false
+  },
+  "corrections_initialled": {
+   "value": "absent",
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  }
+ },
+ "regions": {
+  "practice_stamp": {
+   "page": 0,
+   "box": [
+    128.0,
+    1175.0,
+    538.0,
+    1398.0
+   ],
+   "state": "present"
+  },
+  "doctor_signature": {
+   "page": 0,
+   "box": [
+    770.0,
+    1260.0,
+    1032.0,
+    1301.0
+   ],
+   "state": "present"
+  }
+ },
+ "defects": [
+  "D20"
+ ],
+ "synthetic": true
+}
