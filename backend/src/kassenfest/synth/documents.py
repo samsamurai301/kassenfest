@@ -229,6 +229,7 @@ class Style:
             rng=self.rng,
             jitter=self.rng.uniform(0.6, 1.4),
             tilt=self.rng.gauss(0, 1.0),
+            font_file=face.file,
         )
 
     def signature_font(self) -> str | None:
@@ -267,6 +268,16 @@ M12_ROWS = [
 ]
 
 
+# Inner widths (mm) of the Muster 12 cells, from muster12.html.j2: handwriting that would
+# not fit is written smaller instead of running into the next cell.
+M12_CELL_MM = {
+    "payer_name": 124, "patient_name": 97, "patient_dob": 23, "payer_ik": 47, "kvnr": 47,
+    "bsnr": 47, "lanr": 47, "issue_date": 23, "period_from": 44, "period_to": 44,
+    "icd_codes": 185, "limitations": 185, "further_notes": 185,
+    "details": 66, "frequency": 19, "duration_from": 24, "duration_to": 24,
+}  # fmt: skip
+
+
 def build_muster12(c: Muster12Content, style: Style) -> tuple[dict[str, Any], TruthSpec]:
     rng = style.rng
     mode = rng.choices(["printed", "mixed", "handwritten"], weights=[0.35, 0.4, 0.25])[0]
@@ -275,7 +286,9 @@ def build_muster12(c: Muster12Content, style: Style) -> tuple[dict[str, Any], Tr
 
     def put(path: str, text: str | None, value: Any, by_hand: bool, min_mm: float = 18) -> Markup:
         truth.put(path, value, hand=by_hand and text is not None)
-        return doctor.write(text, path, min_mm) if by_hand else printed(text, path, min_mm)
+        if not by_hand:
+            return printed(text, path, min_mm)
+        return doctor.write(text, path, min_mm, M12_CELL_MM[path.rsplit(".", 1)[-1]])
 
     header_by_hand = mode == "handwritten"
     loose_by_hand = mode != "printed"  # dates, ticks, frequencies
@@ -298,7 +311,9 @@ def build_muster12(c: Muster12Content, style: Style) -> tuple[dict[str, Any], Tr
         ),
         "period_to": put("period_to", de_date(c.period_to), c.period_to.isoformat(), loose_by_hand),
         "icd_codes": put("icd_codes", ", ".join(c.icd_codes), c.icd_codes, header_by_hand, 40),
-        "limitations": doctor.write(c.limitations) if header_by_hand else printed(c.limitations),
+        "limitations": doctor.write(c.limitations, max_mm=M12_CELL_MM["limitations"])
+        if header_by_hand
+        else printed(c.limitations),
         "further_notes": put("further_notes", c.further_notes, c.further_notes, loose_by_hand, 60),
     }
 
@@ -346,7 +361,7 @@ def build_muster12(c: Muster12Content, style: Style) -> tuple[dict[str, Any], Tr
                 "tick": tick(True, f"{p}.category"),
                 "label": label,
                 "details": put(f"{p}.details", m.details, m.details, header_by_hand, 40),
-                "frequency": doctor.write(freq_text, freq_field, 12)
+                "frequency": doctor.write(freq_text, freq_field, 12, M12_CELL_MM["frequency"])
                 if loose_by_hand
                 else printed(freq_text, freq_field, 12),
                 "duration_from": put(
@@ -526,7 +541,7 @@ def build_visit_log_sgbv(c: VisitLogContent, style: Style) -> tuple[dict[str, An
         "size_mm": A4_LANDSCAPE,
         "margin_mm": 8,
         "row_mm": 4.3,
-        "cell_pt": 9.5 if slots > 4 else 10.5,
+        "cell_pt": 8.5 if slots > 4 else 9.0,
         "day_mm": day_mm,
         "time_mm": round(time_mm, 1),
         "hz_mm": round(hz_mm, 1),

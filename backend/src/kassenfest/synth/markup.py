@@ -1,9 +1,13 @@
 """Markup helpers templates call to put ink on the form, all seeded and reproducible."""
 
+import math
 import random
 from dataclasses import dataclass, field
+from functools import cache
+from pathlib import Path
 
 from markupsafe import Markup, escape
+from PIL import ImageFont
 
 INKS = {"blue": "#1f3a93", "black": "#1b1b1f", "royal": "#2643c4"}
 STAMP_INKS = ["#5b3fa8", "#3d4fb0", "#6a3a9c"]
@@ -11,6 +15,19 @@ STAMP_INKS = ["#5b3fa8", "#3d4fb0", "#6a3a9c"]
 
 def _attrs(**attrs: str | None) -> str:
     return "".join(f' {k.replace("_", "-")}="{escape(v)}"' for k, v in attrs.items() if v)
+
+
+PT_TO_MM = 25.4 / 72
+
+
+@cache
+def _font(path: Path) -> ImageFont.FreeTypeFont:
+    return ImageFont.truetype(str(path), size=100)
+
+
+def text_width_mm(path: Path, text: str, size_pt: float) -> float:
+    """Advance width of `text` set in the font at `path`, before jitter."""
+    return _font(path).getlength(text) / 100 * size_pt * PT_TO_MM
 
 
 @dataclass
@@ -23,13 +40,26 @@ class Hand:
     rng: random.Random
     jitter: float = 1.0
     tilt: float = field(default=0.0)
+    font_file: Path | None = None  # to fit text into a cell
 
-    def write(self, text: str | None, field: str | None = None, min_mm: float = 18) -> Markup:
+    def write(
+        self,
+        text: str | None,
+        field: str | None = None,
+        min_mm: float = 18,
+        max_mm: float | None = None,
+    ) -> Markup:
+        """Handwritten text; with `max_mm`, written smaller if it would not fit the cell."""
         if not text:
             return Markup(
                 f'<span class="hw empty"{_attrs(data_field=field)} '
                 f'style="min-width:{min_mm}mm"></span>'
             )
+        size, width = self.size_pt, None
+        if self.font_file:
+            width = text_width_mm(self.font_file, text, size) * 1.15  # glyph jitter headroom
+            if max_mm and width > max_mm:
+                size, width = size * max_mm / width, max_mm
         rng, j = self.rng, self.jitter
         glyphs = []
         for ch in text:
@@ -43,8 +73,11 @@ class Hand:
                 f'rotate({rot:.1f}deg) scale({scale:.3f})">{escape(ch)}</span>'
             )
         tilt = self.tilt + rng.gauss(0, 0.8 * j)
+        if width:  # people keep a long line level: its end rises or drops at most 1 mm
+            limit = math.degrees(math.atan(1.0 / width))
+            tilt = max(-limit, min(limit, tilt))
         style = (
-            f"font-family:'{self.family}';color:{self.ink};font-size:{self.size_pt:.1f}pt;"
+            f"font-family:'{self.family}';color:{self.ink};font-size:{size:.1f}pt;"
             f"transform:rotate({tilt:.2f}deg)"
         )
         return Markup(
