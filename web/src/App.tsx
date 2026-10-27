@@ -1,36 +1,73 @@
-import { useQuery } from '@tanstack/react-query'
-import { api } from '@/api/client'
+import { useEffect } from 'react'
+import { DEMO_MONTH, Page, Shell } from '@/components/shell'
+import { Link, match, navigate, useLocation } from '@/lib/router'
+import { ActionsScreen } from '@/screens/actions'
+import { BoardScreen } from '@/screens/board'
+import { ClaimScreen } from '@/screens/claim'
+import { EvidenceScreen } from '@/screens/evidence'
+import { TimelineScreen } from '@/screens/timeline'
 
-// Placeholder shell: confirms web ↔ API wiring. The real screens land in Track C (docs/05 §5).
 export default function App() {
-  const health = useQuery({ queryKey: ['health'], queryFn: api.health })
+  const { path, query } = useLocation()
 
+  useEffect(() => {
+    if (path === '/') navigate(`/months/${DEMO_MONTH}`, { replace: true })
+  }, [path])
+
+  let params: Record<string, string> | null
+  if ((params = match('/months/:month', path))) {
+    return (
+      <Shell section="bills">
+        <BoardScreen month={params.month} filter={query.get('status')} />
+      </Shell>
+    )
+  }
+  if ((params = match('/months/:month/actions', path))) {
+    return (
+      <Shell section="actions">
+        <ActionsScreen month={params.month} selected={query.get('a')} />
+      </Shell>
+    )
+  }
+  if ((params = match('/claims/:id', path))) {
+    return (
+      <Shell section="bills">
+        <ClaimScreen id={params.id} />
+      </Shell>
+    )
+  }
+  if ((params = match('/documents/:id', path))) {
+    return (
+      <Shell section="bills">
+        <EvidenceScreen
+          id={params.id}
+          page={Number(query.get('page') ?? 0)}
+          findingId={query.get('finding')}
+          claimId={query.get('claim')}
+        />
+      </Shell>
+    )
+  }
+  if ((params = match('/patients/:id', path))) {
+    return (
+      <Shell section="bills">
+        <TimelineScreen id={params.id} />
+      </Shell>
+    )
+  }
   return (
-    <main className="mx-auto max-w-3xl px-6 py-16">
-      <h1 className="text-3xl font-semibold tracking-tight">Kassenfest</h1>
-      <p className="mt-2 text-muted-foreground">
-        Checks every home-care bill before it goes to the Kasse.
-      </p>
-
-      <section className="mt-10 rounded-lg border p-5 text-sm">
-        <h2 className="font-medium">Backend</h2>
-        {health.isPending && <p className="mt-2 text-muted-foreground">Connecting…</p>}
-        {health.isError && (
-          <p className="mt-2 text-destructive">
-            API unreachable ({health.error.message}). Is <code>make api</code> running?
+    <Shell section={null}>
+      {path !== '/' && (
+        <Page>
+          <h1 className="text-[24px] font-bold">Nothing here</h1>
+          <p className="mt-2 text-graphite">
+            This address doesn't match a screen.{' '}
+            <Link to={`/months/${DEMO_MONTH}`} className="font-semibold text-stamp underline">
+              Go to the October bills
+            </Link>
           </p>
-        )}
-        {health.data && (
-          <dl className="mt-3 grid grid-cols-[max-content_1fr] gap-x-6 gap-y-1">
-            <dt className="text-muted-foreground">Status</dt>
-            <dd>{health.data.status}</dd>
-            <dt className="text-muted-foreground">Model mode</dt>
-            <dd>{health.data.llm_mode}</dd>
-            <dt className="text-muted-foreground">API key</dt>
-            <dd>{health.data.api_key_configured ? 'configured' : 'missing (replay only)'}</dd>
-          </dl>
-        )}
-      </section>
-    </main>
+        </Page>
+      )}
+    </Shell>
   )
 }

@@ -1,0 +1,12 @@
+# Rule pack in force from 2026-01-01 (BEEP; no SGB XI benefit increase). docs/02 §10.
+# The engine picks a pack by the billing month's first day, never by today's date.
+id: "2026-01"
+label: "Regelstand 01.01.2026 / rules as of 2026-01-01"
+valid_from: 2026-01-01
+valid_to: null
+draft: false
+calendar:
+  # Heiligabend and Silvester are working days by law; many practices and Kassen are
+  # closed. "closed" makes deadlines skip them [L] (docs/02 §8).
+  heiligabend: working_day
+  silvester: working_day

@@ -1,0 +1,32 @@
+# SGB XI Leistungskomplexe, Bayern (DAT-05 / REF-05).
+# ILLUSTRATIVE. The structure (points × Punktwert of the provider's §89 contract)
+# follows the AOK Bayern contracts (docs/03 §3.2); the LK selection, labels and points
+# are invented for the demo. price_cents = round_half_up(points × punktwert_eur × 100).
+synthetic: true
+illustrative: true
+source: "https://www.aok.de/gp/fileadmin/user_upload/Pflege/Ambulante_Pflege/Verguetung/BRK/20260101_by_pflege_brk_vertrag.pdf"
+leistungskomplexe:
+  LK01: {label_de: Ganzkörperwäsche, label_en: Full body wash, points: 420}
+  LK02: {label_de: Teilwäsche, label_en: Partial wash, points: 250}
+  LK03: {label_de: Hilfe bei Ausscheidungen, label_en: Help with toileting, points: 180}
+  LK04: {label_de: Hilfe bei der Nahrungsaufnahme, label_en: Help with eating, points: 250}
+  LK05: {label_de: Lagern und Betten, label_en: Positioning and bed making, points: 100}
+  LK06: {label_de: Mobilisation, label_en: Mobilisation, points: 150}
+  LK07: {label_de: An- und Auskleiden, label_en: Dressing and undressing, points: 120}
+  LK08: {label_de: Verlassen und Wiederaufsuchen der Wohnung, label_en: Leaving and returning home, points: 120}
+  LK09: {label_de: Begleitung außer Haus, label_en: Accompaniment outside the home, points: 380}
+  LK10: {label_de: Reinigen der Wohnung, label_en: Cleaning the home, points: 400}
+  LK11: {label_de: Wechseln und Waschen der Wäsche, label_en: Changing and washing laundry, points: 300}
+  LK12: {label_de: Einkaufen, label_en: Shopping, points: 250}
+  LK13: {label_de: Zubereitung einer warmen Mahlzeit, label_en: Preparing a hot meal, points: 300}
+  LK15: {label_de: Erstbesuch, label_en: First visit, points: 900}
+punktwerte:
+  # 2025: AWO/BRK Bayern value as reported in docs/03 §3.2 [L]; 2026: invented.
+  - version: XI-BY-2025-01
+    valid_from: 2025-01-01
+    valid_to: 2025-12-31
+    punktwert_eur: "0.0909"
+  - version: XI-BY-2026-01
+    valid_from: 2026-01-01
+    valid_to: null
+    punktwert_eur: "0.0947"
