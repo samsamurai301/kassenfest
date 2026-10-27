@@ -1,9 +1,11 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
 
+from kassenfest.api.routes import router
 from kassenfest.config import LlmMode, get_settings
 
 app = FastAPI(title="Kassenfest API", version="0.1.0")
+app.include_router(router)
 
 
 class Health(BaseModel):

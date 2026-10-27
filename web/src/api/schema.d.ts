@@ -4,6 +4,108 @@
  */
 
 export interface paths {
+    "/api/months/{month}/board": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** Month Board */
+        get: operations["month_board_api_months__month__board_get"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/months/{month}/actions": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** Month Actions */
+        get: operations["month_actions_api_months__month__actions_get"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/claims/{claim_id}": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** Claim Detail */
+        get: operations["claim_detail_api_claims__claim_id__get"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/patients/{patient_id}/timeline": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** Patient Timeline */
+        get: operations["patient_timeline_api_patients__patient_id__timeline_get"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/documents/{document_id}": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** Document Detail */
+        get: operations["document_detail_api_documents__document_id__get"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/documents/{document_id}/pages/{index}": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** Document Page */
+        get: operations["document_page_api_documents__document_id__pages__index__get"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/health": {
         parameters: {
             query?: never;
@@ -25,6 +127,391 @@ export interface paths {
 export type webhooks = Record<string, never>;
 export interface components {
     schemas: {
+        /** Action */
+        Action: {
+            /** Id */
+            id: string;
+            /**
+             * Kind
+             * @enum {string}
+             */
+            kind: "folgeverordnung_request" | "stamp_request" | "signature_request" | "kasse_letter" | "eigenanteil_notice" | "claim_correction" | "staff_followup";
+            /** Title */
+            title: string;
+            /**
+             * Why
+             * @description One English sentence: what goes wrong if nobody acts
+             */
+            why: string;
+            /** Patient Id */
+            patient_id: string;
+            /** Claim Id */
+            claim_id: string | null;
+            /** Finding Ids */
+            finding_ids: string[];
+            /**
+             * Due Date
+             * Format: date
+             */
+            due_date: string;
+            /**
+             * Amount Cents
+             * @description Money on the linked findings
+             */
+            amount_cents: number;
+            /**
+             * Status
+             * @enum {string}
+             */
+            status: "draft" | "open";
+            letter: components["schemas"]["Letter"];
+        };
+        /** ActionList */
+        ActionList: {
+            /** Month */
+            month: string;
+            /**
+             * As Of
+             * Format: date
+             * @description 'Today' in the demo world; countdowns count from here
+             */
+            as_of: string;
+            /** Actions */
+            actions: components["schemas"]["Action"][];
+        };
+        /**
+         * Approval
+         * @description Genehmigung of the Krankenkasse for a Verordnung.
+         */
+        Approval: {
+            /** Id */
+            id: string;
+            /** Patient Id */
+            patient_id: string;
+            /** Payer Ik */
+            payer_ik: string;
+            /** Provider Ik */
+            provider_ik: string;
+            /** Approval Ref */
+            approval_ref: string;
+            /**
+             * Letter Date
+             * Format: date
+             */
+            letter_date: string;
+            /**
+             * Decision
+             * @enum {string}
+             */
+            decision: "approved" | "partial" | "rejected";
+            /**
+             * Period From
+             * Format: date
+             */
+            period_from: string;
+            /**
+             * Period To
+             * Format: date
+             */
+            period_to: string;
+            /** Approved */
+            approved: components["schemas"]["ApprovedService"][];
+            /** Prescription Id */
+            prescription_id?: string | null;
+            /** Document Id */
+            document_id?: string | null;
+        };
+        /** ApprovedService */
+        ApprovedService: {
+            /** Position No */
+            position_no: string;
+            frequency?: components["schemas"]["Frequency"] | null;
+            /**
+             * Valid From
+             * Format: date
+             */
+            valid_from: string;
+            /**
+             * Valid To
+             * Format: date
+             */
+            valid_to: string;
+        };
+        /** BoardCard */
+        BoardCard: {
+            /** Claim Id */
+            claim_id: string;
+            /** Patient Id */
+            patient_id: string;
+            /** Patient Name */
+            patient_name: string;
+            payer: components["schemas"]["Payer"];
+            /**
+             * Domain
+             * @enum {string}
+             */
+            domain: "sgbv" | "sgbxi";
+            /**
+             * Status
+             * @enum {string}
+             */
+            status: "green" | "orange" | "red";
+            /** Total Cents */
+            total_cents: number;
+            /** At Risk Cents */
+            at_risk_cents: number;
+            /** Line Count */
+            line_count: number;
+            /** Finding Count */
+            finding_count: number;
+            top_finding: components["schemas"]["Finding"] | null;
+        };
+        /** Claim */
+        Claim: {
+            /** Id */
+            id: string;
+            /** Patient Id */
+            patient_id: string;
+            /** Payer Ik */
+            payer_ik: string;
+            /**
+             * Month
+             * @description YYYY-MM
+             */
+            month: string;
+            /**
+             * Domain
+             * @enum {string}
+             */
+            domain: "sgbv" | "sgbxi";
+            /** Lines */
+            lines: components["schemas"]["ClaimLine"][];
+            /** Tariff Version */
+            tariff_version: string;
+            /** Total Cents */
+            readonly total_cents: number;
+        };
+        /** ClaimDetail */
+        ClaimDetail: {
+            claim: components["schemas"]["Claim"];
+            /**
+             * Status
+             * @enum {string}
+             */
+            status: "green" | "orange" | "red";
+            /** At Risk Cents */
+            at_risk_cents: number;
+            patient: components["schemas"]["Patient"];
+            payer: components["schemas"]["Payer"];
+            /** Findings */
+            findings: components["schemas"]["Finding"][];
+            /** Documents */
+            documents: components["schemas"]["DocumentInfo"][];
+            /** Actions */
+            actions: components["schemas"]["Action"][];
+            /**
+             * Code Labels
+             * @description Positionsnummer / LK -> German label
+             */
+            code_labels: {
+                [key: string]: string;
+            };
+            /** Tariff Note */
+            tariff_note: string;
+        };
+        /** ClaimLine */
+        ClaimLine: {
+            /** Id */
+            id: string;
+            /**
+             * Date
+             * Format: date
+             */
+            date: string;
+            /** Time */
+            time?: string | null;
+            /** Code */
+            code: string;
+            /** Quantity */
+            quantity: number;
+            /** Unit Price Cents */
+            unit_price_cents: number;
+            /**
+             * Funding
+             * @default hkp
+             * @enum {string}
+             */
+            funding: "hkp" | "sachleistung_36" | "entlastung_45b";
+            /** Visit Log Id */
+            visit_log_id?: string | null;
+            /** Entry Index */
+            entry_index?: number | null;
+            /** Amount Cents */
+            readonly amount_cents: number;
+        };
+        /** DocumentDetail */
+        DocumentDetail: {
+            document: components["schemas"]["DocumentInfo"];
+            /** Fields */
+            fields: components["schemas"]["DocumentField"][];
+            /**
+             * Findings
+             * @description Findings with evidence on this document
+             */
+            findings: components["schemas"]["Finding"][];
+            /** Claim Ids */
+            claim_ids: string[];
+        };
+        /**
+         * DocumentField
+         * @description A field as read from the page, with where it is: drives the viewer's field list.
+         */
+        DocumentField: {
+            /**
+             * Path
+             * @description flatten() path, e.g. 'period_to'
+             */
+            path: string;
+            /**
+             * Label
+             * @description Label as printed on the form (German)
+             */
+            label: string;
+            /** Value */
+            value: string | null;
+            /**
+             * Status
+             * @enum {string}
+             */
+            status: "present" | "empty" | "unreadable";
+            /**
+             * Page
+             * @default 0
+             */
+            page: number;
+            /** Box */
+            box: [
+                number,
+                number,
+                number,
+                number
+            ];
+        };
+        /** DocumentInfo */
+        DocumentInfo: {
+            /** Id */
+            id: string;
+            /**
+             * Doc Type
+             * @enum {string}
+             */
+            doc_type: "muster12" | "approval_letter" | "visit_log_sgbv" | "visit_log_sgbxi" | "hospital_letter" | "other";
+            /**
+             * Title
+             * @description Short English title, e.g. 'Muster 12, issued 1 Oct'
+             */
+            title: string;
+            /** Patient Id */
+            patient_id: string | null;
+            /** Received On */
+            received_on?: string | null;
+            /** Pages */
+            pages: components["schemas"]["PageInfo"][];
+        };
+        /** Evidence */
+        Evidence: {
+            /** Document Id */
+            document_id: string;
+            /**
+             * Page
+             * @default 0
+             */
+            page: number;
+            /**
+             * Field Path
+             * @description flatten() path, e.g. 'period_to'
+             */
+            field_path?: string | null;
+            /** Box */
+            box?: [
+                number,
+                number,
+                number,
+                number
+            ] | null;
+            /**
+             * Mask Ref
+             * @description Blob key of a SAM mask, if any
+             */
+            mask_ref?: string | null;
+            /** Note */
+            note?: string | null;
+        };
+        /** Finding */
+        Finding: {
+            /** Id */
+            id: string;
+            /** Rule Id */
+            rule_id: string;
+            /** Rule Version */
+            rule_version: number;
+            /**
+             * Severity
+             * @enum {string}
+             */
+            severity: "block" | "warn" | "info";
+            /** Patient Id */
+            patient_id: string;
+            /** Claim Id */
+            claim_id?: string | null;
+            /**
+             * Claim Line Ids
+             * @default []
+             */
+            claim_line_ids: string[];
+            /** Message De */
+            message_de: string;
+            /** Message En */
+            message_en: string;
+            /**
+             * Sources
+             * @description Legal sources, e.g. 'HKP-RL §6(5)'
+             */
+            sources: string[];
+            /**
+             * Evidence
+             * @default []
+             */
+            evidence: components["schemas"]["Evidence"][];
+            /**
+             * Kasse Codes
+             * @default []
+             */
+            kasse_codes: ("41002" | "41003" | "42002" | "42003" | "42004" | "42005" | "42006" | "42007" | "42008" | "42009" | "43001" | "43002" | "43003" | "43004" | "43005" | "44001" | "44003" | "44004")[];
+            /**
+             * Amount At Risk Cents
+             * @default 0
+             */
+            amount_at_risk_cents: number;
+        };
+        /** Frequency */
+        Frequency: {
+            /**
+             * Count
+             * @description How many times per period, e.g. 3 for '3x tgl.'
+             */
+            count: number;
+            /**
+             * Per
+             * @enum {string}
+             */
+            per: "day" | "week" | "month";
+        };
+        /** HTTPValidationError */
+        HTTPValidationError: {
+            /** Detail */
+            detail?: components["schemas"]["ValidationError"][];
+        };
         /** Health */
         Health: {
             /** Status */
@@ -37,6 +524,429 @@ export interface components {
             /** Api Key Configured */
             api_key_configured: boolean;
         };
+        /** Holiday */
+        Holiday: {
+            /**
+             * Date
+             * Format: date
+             */
+            date: string;
+            /** Name */
+            name: string;
+        };
+        /** InsurancePeriod */
+        InsurancePeriod: {
+            /** Krankenkasse Ik */
+            krankenkasse_ik: string;
+            /** Pflegekasse Ik */
+            pflegekasse_ik: string;
+            /**
+             * Valid From
+             * Format: date
+             */
+            valid_from: string;
+            /** Valid To */
+            valid_to?: string | null;
+        };
+        /**
+         * Letter
+         * @description A drafted letter or note (German); never sent by Kassenfest itself.
+         */
+        Letter: {
+            /**
+             * Channel
+             * @enum {string}
+             */
+            channel: "fax" | "post" | "handover" | "internal";
+            /**
+             * Recipient
+             * @description Address block, one line per item
+             */
+            recipient: string[];
+            /** Subject */
+            subject: string;
+            /** Body */
+            body: string;
+        };
+        /** MonthBoard */
+        MonthBoard: {
+            /** Month */
+            month: string;
+            /**
+             * As Of
+             * Format: date
+             */
+            as_of: string;
+            provider: components["schemas"]["Provider"];
+            /** Total Cents */
+            total_cents: number;
+            /** At Risk Cents */
+            at_risk_cents: number;
+            /** By Status */
+            by_status: components["schemas"]["StatusTotal"][];
+            /** Cards */
+            cards: components["schemas"]["BoardCard"][];
+        };
+        /** PageInfo */
+        PageInfo: {
+            /** Index */
+            index: number;
+            /** Width */
+            width: number;
+            /** Height */
+            height: number;
+        };
+        /** Patient */
+        Patient: {
+            /** Id */
+            id: string;
+            /**
+             * Name
+             * @description 'Nachname, Vorname'
+             */
+            name: string;
+            /**
+             * Dob
+             * Format: date
+             */
+            dob: string;
+            /** Kvnr */
+            kvnr: string;
+            /** Insurance */
+            insurance: components["schemas"]["InsurancePeriod"][];
+            /**
+             * Pflegegrad
+             * @default []
+             */
+            pflegegrad: components["schemas"]["PflegegradPeriod"][];
+            /** Deceased At */
+            deceased_at?: string | null;
+            /**
+             * Copay Exempt
+             * @default false
+             */
+            copay_exempt: boolean;
+        };
+        /** PatientTimeline */
+        PatientTimeline: {
+            patient: components["schemas"]["Patient"];
+            /** Month */
+            month: string;
+            /**
+             * First Day
+             * Format: date
+             */
+            first_day: string;
+            /**
+             * Last Day
+             * Format: date
+             */
+            last_day: string;
+            /** Holidays */
+            holidays: components["schemas"]["Holiday"][];
+            /** Physicians */
+            physicians: components["schemas"]["Physician"][];
+            /** Payers */
+            payers: components["schemas"]["Payer"][];
+            /** Prescriptions */
+            prescriptions: components["schemas"]["Prescription"][];
+            /** Approvals */
+            approvals: components["schemas"]["Approval"][];
+            /** Stays */
+            stays: components["schemas"]["Stay"][];
+            /** Visit Logs */
+            visit_logs: components["schemas"]["VisitLog"][];
+            /** Claims */
+            claims: components["schemas"]["Claim"][];
+            /** Findings */
+            findings: components["schemas"]["Finding"][];
+            /** Documents */
+            documents: components["schemas"]["DocumentInfo"][];
+            /** Code Labels */
+            code_labels: {
+                [key: string]: string;
+            };
+        };
+        /** Payer */
+        Payer: {
+            /** Name */
+            name: string;
+            /** Ik */
+            ik: string;
+            /**
+             * Kind
+             * @enum {string}
+             */
+            kind: "krankenkasse" | "pflegekasse";
+            /**
+             * Payment Term Days
+             * @default 21
+             */
+            payment_term_days: number;
+            /**
+             * Synthetic
+             * @default true
+             */
+            synthetic: boolean;
+        };
+        /** PflegegradPeriod */
+        PflegegradPeriod: {
+            /** Grade */
+            grade: number;
+            /**
+             * Valid From
+             * Format: date
+             */
+            valid_from: string;
+        };
+        /** Physician */
+        Physician: {
+            /** Name */
+            name: string;
+            /** Lanr */
+            lanr: string;
+            /** Bsnr */
+            bsnr: string;
+        };
+        /** PrescribedService */
+        PrescribedService: {
+            /**
+             * Category
+             * @description MeasureCategory, e.g. 'medikamentengabe'
+             */
+            category: string;
+            /** Position No */
+            position_no?: string | null;
+            frequency?: components["schemas"]["Frequency"] | null;
+            /** Details */
+            details?: string | null;
+        };
+        /**
+         * Prescription
+         * @description Verordnung (Muster 12).
+         */
+        Prescription: {
+            /** Id */
+            id: string;
+            /** Patient Id */
+            patient_id: string;
+            /** Physician Lanr */
+            physician_lanr: string;
+            /**
+             * Kind
+             * @enum {string}
+             */
+            kind: "erst" | "folge";
+            /**
+             * Issue Date
+             * Format: date
+             */
+            issue_date: string;
+            /**
+             * Period From
+             * Format: date
+             */
+            period_from: string;
+            /**
+             * Period To
+             * Format: date
+             */
+            period_to: string;
+            /**
+             * Blank
+             * @default false
+             */
+            blank: boolean;
+            /** Services */
+            services: components["schemas"]["PrescribedService"][];
+            /**
+             * Icd Codes
+             * @default []
+             */
+            icd_codes: string[];
+            /** Doctor Signed */
+            doctor_signed: boolean;
+            /** Stamp Present */
+            stamp_present: boolean;
+            /**
+             * Corrections Present
+             * @default false
+             */
+            corrections_present: boolean;
+            /**
+             * Corrections Initialled
+             * @default false
+             */
+            corrections_initialled: boolean;
+            /** Submitted To Payer At */
+            submitted_to_payer_at?: string | null;
+            /** Document Id */
+            document_id?: string | null;
+        };
+        /** Provider */
+        Provider: {
+            /** Name */
+            name: string;
+            /** Ik */
+            ik: string;
+            /**
+             * Bundesland
+             * @default BY
+             */
+            bundesland: string;
+            /**
+             * Municipality
+             * @description Drives the holiday calendar, e.g. Mariä Himmelfahrt
+             */
+            municipality: string;
+            /**
+             * Staff
+             * @default []
+             */
+            staff: components["schemas"]["Staff"][];
+        };
+        /** Staff */
+        Staff: {
+            /**
+             * Employee No
+             * @description Beschäftigtennummer (LBNR), 9 digits
+             */
+            employee_no: string;
+            /**
+             * Initials
+             * @description Handzeichen, 2-3 letters
+             */
+            initials: string;
+            /** Name */
+            name: string;
+            /**
+             * Qualification
+             * @enum {string}
+             */
+            qualification: "pflegefachkraft" | "pflegehilfskraft" | "auszubildende";
+        };
+        /** StatusTotal */
+        StatusTotal: {
+            /**
+             * Status
+             * @enum {string}
+             */
+            status: "green" | "orange" | "red";
+            /** Count */
+            count: number;
+            /** Total Cents */
+            total_cents: number;
+            /** At Risk Cents */
+            at_risk_cents: number;
+        };
+        /** Stay */
+        Stay: {
+            /** Id */
+            id: string;
+            /** Patient Id */
+            patient_id: string;
+            /**
+             * Kind
+             * @enum {string}
+             */
+            kind: "hospital" | "rehab" | "short_term_care" | "hospice" | "nursing_home";
+            /**
+             * Admitted At
+             * Format: date-time
+             */
+            admitted_at: string;
+            /** Discharged At */
+            discharged_at?: string | null;
+            /** Document Id */
+            document_id?: string | null;
+        };
+        /** ValidationError */
+        ValidationError: {
+            /** Location */
+            loc: (string | number)[];
+            /** Message */
+            msg: string;
+            /** Error Type */
+            type: string;
+            /** Input */
+            input?: unknown;
+            /** Context */
+            ctx?: Record<string, never>;
+        };
+        /**
+         * Visit
+         * @description One delivered service on one visit, as billed from the Leistungsnachweis.
+         */
+        Visit: {
+            /**
+             * Date
+             * Format: date
+             */
+            date: string;
+            /** Start */
+            start?: string | null;
+            /** End */
+            end?: string | null;
+            /**
+             * Code
+             * @description HKP Positionsnummer (SGB V) or LK number (SGB XI)
+             */
+            code: string;
+            /**
+             * Quantity
+             * @default 1
+             */
+            quantity: number;
+            /**
+             * Funding
+             * @default hkp
+             * @enum {string}
+             */
+            funding: "hkp" | "sachleistung_36" | "entlastung_45b";
+            /** Employee No */
+            employee_no?: string | null;
+            /** Staff Initials */
+            staff_initials?: string | null;
+            /** Document Id */
+            document_id?: string | null;
+            /** Entry Index */
+            entry_index?: number | null;
+        };
+        /**
+         * VisitLog
+         * @description Leistungsnachweis for one patient, payer and month.
+         */
+        VisitLog: {
+            /** Id */
+            id: string;
+            /** Patient Id */
+            patient_id: string;
+            /** Payer Ik */
+            payer_ik: string;
+            /**
+             * Month
+             * @description YYYY-MM
+             */
+            month: string;
+            /**
+             * Domain
+             * @enum {string}
+             */
+            domain: "sgbv" | "sgbxi";
+            /** Visits */
+            visits: components["schemas"]["Visit"][];
+            /** Patient Signed */
+            patient_signed: boolean;
+            /** Missing Signature Reason */
+            missing_signature_reason?: (1 | 2 | 3 | 4) | null;
+            /**
+             * Provider Signed
+             * @default true
+             */
+            provider_signed: boolean;
+            /** Document Id */
+            document_id?: string | null;
+        };
     };
     responses: never;
     parameters: never;
@@ -46,6 +956,195 @@ export interface components {
 }
 export type $defs = Record<string, never>;
 export interface operations {
+    month_board_api_months__month__board_get: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                month: string;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["MonthBoard"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    month_actions_api_months__month__actions_get: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                month: string;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ActionList"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    claim_detail_api_claims__claim_id__get: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                claim_id: string;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ClaimDetail"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    patient_timeline_api_patients__patient_id__timeline_get: {
+        parameters: {
+            query?: {
+                month?: string;
+            };
+            header?: never;
+            path: {
+                patient_id: string;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["PatientTimeline"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    document_detail_api_documents__document_id__get: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                document_id: string;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["DocumentDetail"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    document_page_api_documents__document_id__pages__index__get: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                document_id: string;
+                index: number;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description The page as PNG */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "image/png": unknown;
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
     health_api_health_get: {
         parameters: {
             query?: never;
