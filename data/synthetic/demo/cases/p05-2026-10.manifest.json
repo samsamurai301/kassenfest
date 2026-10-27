@@ -1,0 +1,35 @@
+{
+ "case_id": "p05-2026-10",
+ "patient_id": "p05",
+ "patient_name": "Eder, Theresia",
+ "month": "2026-10",
+ "kind": "both",
+ "hero": "Frau Eder",
+ "events": [
+  "pg_change",
+  "stay"
+ ],
+ "defects": [
+  {
+   "id": "D20",
+   "rules": [],
+   "documents": [
+    "syn-demo-027",
+    "syn-demo-003",
+    "syn-demo-009",
+    "syn-demo-001",
+    "syn-demo-028"
+   ],
+   "note": "Clean patient-month",
+   "lines": []
+  }
+ ],
+ "documents": [
+  "syn-demo-001",
+  "syn-demo-003",
+  "syn-demo-009",
+  "syn-demo-027",
+  "syn-demo-028"
+ ],
+ "casefile": "p05-2026-10.json"
+}

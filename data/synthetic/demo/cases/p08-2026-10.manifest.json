@@ -1,0 +1,28 @@
+{
+ "case_id": "p08-2026-10",
+ "patient_id": "p08",
+ "patient_name": "Loibl, Johanna",
+ "month": "2026-10",
+ "kind": "hkp",
+ "hero": null,
+ "events": [],
+ "defects": [
+  {
+   "id": "D20",
+   "rules": [],
+   "documents": [
+    "syn-demo-004",
+    "syn-demo-005",
+    "syn-demo-015"
+   ],
+   "note": "Clean patient-month",
+   "lines": []
+  }
+ ],
+ "documents": [
+  "syn-demo-004",
+  "syn-demo-005",
+  "syn-demo-015"
+ ],
+ "casefile": "p08-2026-10.json"
+}

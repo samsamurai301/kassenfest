@@ -1,0 +1,356 @@
+{
+ "doc_id": "syn-demo-034",
+ "doc_type": "approval_letter",
+ "variant": "clean",
+ "seed": 1662819903,
+ "patient_id": "p09",
+ "month": "2026-10",
+ "pages": [
+  {
+   "index": 0,
+   "image": "../pages/syn-demo-034.png",
+   "width": 1241,
+   "height": 1755
+  }
+ ],
+ "fields": {
+  "payer_name": {
+   "value": "AOK Bayern",
+   "status": "present",
+   "page": 0,
+   "box": [
+    106.3,
+    109.4,
+    326.7,
+    150.0
+   ],
+   "handwritten": false
+  },
+  "payer_ik": {
+   "value": "109990018",
+   "status": "present",
+   "page": 0,
+   "box": [
+    874.0,
+    306.2,
+    957.4,
+    325.0
+   ],
+   "handwritten": false
+  },
+  "letter_date": {
+   "value": "2026-09-29",
+   "status": "present",
+   "page": 0,
+   "box": [
+    874.0,
+    250.8,
+    957.4,
+    269.6
+   ],
+   "handwritten": false
+  },
+  "approval_ref": {
+   "value": "HKP-2026-808842",
+   "status": "present",
+   "page": 0,
+   "box": [
+    874.0,
+    278.5,
+    1012.0,
+    297.3
+   ],
+   "handwritten": false
+  },
+  "patient_name": {
+   "value": "Unertl, Theresia",
+   "status": "present",
+   "page": 0,
+   "box": [
+    125.6,
+    599.3,
+    265.9,
+    621.2
+   ],
+   "handwritten": false
+  },
+  "kvnr": {
+   "value": "L771158141",
+   "status": "present",
+   "page": 0,
+   "box": [
+    125.6,
+    654.1,
+    234.1,
+    676.0
+   ],
+   "handwritten": false
+  },
+  "provider_name": {
+   "value": "Pflegedienst Sonnenschein GmbH",
+   "status": "present",
+   "page": 0,
+   "box": [
+    106.3,
+    286.4,
+    408.7,
+    308.3
+   ],
+   "handwritten": false
+  },
+  "provider_ik": {
+   "value": "469960557",
+   "status": "present",
+   "page": 0,
+   "box": [
+    874.0,
+    333.9,
+    957.4,
+    352.7
+   ],
+   "handwritten": false
+  },
+  "prescription_issue_date": {
+   "value": "2026-09-15",
+   "status": "present",
+   "page": 0,
+   "box": [
+    620.1,
+    654.1,
+    719.1,
+    676.0
+   ],
+   "handwritten": false
+  },
+  "decision": {
+   "value": "partial",
+   "status": "present",
+   "page": 0,
+   "box": [
+    106.3,
+    787.2,
+    294.3,
+    809.0
+   ],
+   "handwritten": false
+  },
+  "period_from": {
+   "value": "2026-09-18",
+   "status": "present",
+   "page": 0,
+   "box": [
+    695.6,
+    787.2,
+    794.6,
+    809.0
+   ],
+   "handwritten": false
+  },
+  "period_to": {
+   "value": "2026-12-02",
+   "status": "present",
+   "page": 0,
+   "box": [
+    830.9,
+    787.2,
+    929.9,
+    809.0
+   ],
+   "handwritten": false
+  },
+  "approved_items[0].frequency.count": {
+   "value": 2,
+   "status": "present",
+   "page": 0,
+   "box": [
+    717.5,
+    874.3,
+    795.0,
+    894.7
+   ],
+   "handwritten": false
+  },
+  "approved_items[0].frequency.per": {
+   "value": "day",
+   "status": "present",
+   "page": 0,
+   "box": [
+    717.5,
+    874.3,
+    795.0,
+    894.7
+   ],
+   "handwritten": false
+  },
+  "approved_items[0].position_no": {
+   "value": "032101",
+   "status": "present",
+   "page": 0,
+   "box": [
+    115.1,
+    874.3,
+    176.3,
+    894.7
+   ],
+   "handwritten": false
+  },
+  "approved_items[0].description": {
+   "value": "Medikamentengabe",
+   "status": "present",
+   "page": 0,
+   "box": [
+    233.2,
+    874.3,
+    394.2,
+    894.7
+   ],
+   "handwritten": false
+  },
+  "approved_items[0].valid_from": {
+   "value": "2026-09-18",
+   "status": "present",
+   "page": 0,
+   "box": [
+    882.9,
+    874.3,
+    974.6,
+    894.7
+   ],
+   "handwritten": false
+  },
+  "approved_items[0].valid_to": {
+   "value": "2026-12-02",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1012.8,
+    874.3,
+    1104.5,
+    894.7
+   ],
+   "handwritten": false
+  },
+  "approved_items[1].frequency.count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    717.5,
+    915.4,
+    795.0,
+    935.7
+   ],
+   "handwritten": false
+  },
+  "approved_items[1].frequency.per": {
+   "value": "day",
+   "status": "present",
+   "page": 0,
+   "box": [
+    717.5,
+    915.4,
+    795.0,
+    935.7
+   ],
+   "handwritten": false
+  },
+  "approved_items[1].position_no": {
+   "value": "032110",
+   "status": "present",
+   "page": 0,
+   "box": [
+    115.1,
+    915.4,
+    175.0,
+    935.7
+   ],
+   "handwritten": false
+  },
+  "approved_items[1].description": {
+   "value": "Injektion s.c.",
+   "status": "present",
+   "page": 0,
+   "box": [
+    233.2,
+    915.4,
+    335.1,
+    935.7
+   ],
+   "handwritten": false
+  },
+  "approved_items[1].valid_from": {
+   "value": "2026-09-18",
+   "status": "present",
+   "page": 0,
+   "box": [
+    882.9,
+    915.4,
+    974.6,
+    935.7
+   ],
+   "handwritten": false
+  },
+  "approved_items[1].valid_to": {
+   "value": "2026-12-02",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1012.8,
+    915.4,
+    1104.5,
+    935.7
+   ],
+   "handwritten": false
+  },
+  "approved_items[#]": {
+   "value": 2,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "rejected_items[0].description": {
+   "value": "Blutzuckermessung",
+   "status": "present",
+   "page": 0,
+   "box": [
+    115.1,
+    1057.1,
+    275.1,
+    1077.4
+   ],
+   "handwritten": false
+  },
+  "rejected_items[0].reason": {
+   "value": "Medizinische Notwendigkeit nicht ausreichend begründet",
+   "status": "present",
+   "page": 0,
+   "box": [
+    392.6,
+    1057.1,
+    855.1,
+    1077.4
+   ],
+   "handwritten": false
+  },
+  "rejected_items[#]": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "doc_type": {
+   "value": "approval_letter",
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  }
+ },
+ "regions": {},
+ "defects": [
+  "D03"
+ ],
+ "synthetic": true
+}

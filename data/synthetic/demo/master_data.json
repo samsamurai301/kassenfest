@@ -1,0 +1,506 @@
+{
+ "synthetic": true,
+ "month": "2026-10",
+ "provider": {
+  "name": "Pflegedienst Sonnenschein GmbH",
+  "ik": "469960557",
+  "bundesland": "BY",
+  "municipality": "Deggendorf",
+  "staff": [
+   {
+    "employee_no": "436448642",
+    "initials": "MK",
+    "name": "Monika Kraus",
+    "qualification": "pflegefachkraft"
+   },
+   {
+    "employee_no": "432633832",
+    "initials": "SB",
+    "name": "Stefan Bauer",
+    "qualification": "pflegefachkraft"
+   },
+   {
+    "employee_no": "885723102",
+    "initials": "AW",
+    "name": "Andrea Wimmer",
+    "qualification": "pflegefachkraft"
+   },
+   {
+    "employee_no": "549069574",
+    "initials": "TH",
+    "name": "Tobias Huber",
+    "qualification": "pflegefachkraft"
+   },
+   {
+    "employee_no": "481625390",
+    "initials": "JR",
+    "name": "Julia Reiter",
+    "qualification": "pflegefachkraft"
+   },
+   {
+    "employee_no": "194544002",
+    "initials": "LF",
+    "name": "Lena Fuchs",
+    "qualification": "pflegehilfskraft"
+   },
+   {
+    "employee_no": "214268221",
+    "initials": "CG",
+    "name": "Claudia Gruber",
+    "qualification": "pflegehilfskraft"
+   },
+   {
+    "employee_no": "642060591",
+    "initials": "PMa",
+    "name": "Petra Mayerhofer",
+    "qualification": "auszubildende"
+   }
+  ]
+ },
+ "patients": [
+  {
+   "id": "p01",
+   "name": "Albers, Erika",
+   "dob": "1947-08-21",
+   "kvnr": "X785676317",
+   "insurance": [
+    {
+     "krankenkasse_ik": "109990018",
+     "pflegekasse_ik": "189990018",
+     "valid_from": "2016-01-01",
+     "valid_to": null
+    }
+   ],
+   "pflegegrad": [
+    {
+     "grade": 2,
+     "valid_from": "2021-11-01"
+    }
+   ],
+   "deceased_at": null,
+   "copay_exempt": false
+  },
+  {
+   "id": "p02",
+   "name": "Brandl, Josef",
+   "dob": "1947-06-03",
+   "kvnr": "N688550400",
+   "insurance": [
+    {
+     "krankenkasse_ik": "109990029",
+     "pflegekasse_ik": "189990029",
+     "valid_from": "2005-01-01",
+     "valid_to": null
+    }
+   ],
+   "pflegegrad": [
+    {
+     "grade": 2,
+     "valid_from": "2022-05-01"
+    }
+   ],
+   "deceased_at": null,
+   "copay_exempt": false
+  },
+  {
+   "id": "p03",
+   "name": "Christl, Maria",
+   "dob": "1955-12-22",
+   "kvnr": "Z574957008",
+   "insurance": [
+    {
+     "krankenkasse_ik": "109990030",
+     "pflegekasse_ik": "189990030",
+     "valid_from": "2012-01-01",
+     "valid_to": null
+    }
+   ],
+   "pflegegrad": [
+    {
+     "grade": 2,
+     "valid_from": "2024-12-01"
+    }
+   ],
+   "deceased_at": null,
+   "copay_exempt": false
+  },
+  {
+   "id": "p04",
+   "name": "Dengler, Franz",
+   "dob": "1938-08-23",
+   "kvnr": "A144611140",
+   "insurance": [
+    {
+     "krankenkasse_ik": "109990018",
+     "pflegekasse_ik": "189990018",
+     "valid_from": "2008-01-01",
+     "valid_to": null
+    }
+   ],
+   "pflegegrad": [
+    {
+     "grade": 2,
+     "valid_from": "2019-10-01"
+    }
+   ],
+   "deceased_at": null,
+   "copay_exempt": false
+  },
+  {
+   "id": "p05",
+   "name": "Eder, Theresia",
+   "dob": "1932-09-25",
+   "kvnr": "H108879567",
+   "insurance": [
+    {
+     "krankenkasse_ik": "109990041",
+     "pflegekasse_ik": "189990041",
+     "valid_from": "2005-01-01",
+     "valid_to": null
+    }
+   ],
+   "pflegegrad": [
+    {
+     "grade": 2,
+     "valid_from": "2024-10-01"
+    },
+    {
+     "grade": 3,
+     "valid_from": "2026-10-01"
+    }
+   ],
+   "deceased_at": null,
+   "copay_exempt": false
+  },
+  {
+   "id": "p06",
+   "name": "Fischer, Helmut",
+   "dob": "1959-05-02",
+   "kvnr": "D506232392",
+   "insurance": [
+    {
+     "krankenkasse_ik": "109990041",
+     "pflegekasse_ik": "189990041",
+     "valid_from": "1996-01-01",
+     "valid_to": null
+    }
+   ],
+   "pflegegrad": [
+    {
+     "grade": 2,
+     "valid_from": "2019-02-01"
+    }
+   ],
+   "deceased_at": null,
+   "copay_exempt": false
+  },
+  {
+   "id": "p07",
+   "name": "Weiß, Elfriede",
+   "dob": "1932-11-22",
+   "kvnr": "J363632897",
+   "insurance": [
+    {
+     "krankenkasse_ik": "109990063",
+     "pflegekasse_ik": "189990063",
+     "valid_from": "2020-01-01",
+     "valid_to": "2026-09-30"
+    },
+    {
+     "krankenkasse_ik": "109990018",
+     "pflegekasse_ik": "189990018",
+     "valid_from": "2026-10-01",
+     "valid_to": null
+    }
+   ],
+   "pflegegrad": [
+    {
+     "grade": 3,
+     "valid_from": "2022-11-01"
+    }
+   ],
+   "deceased_at": null,
+   "copay_exempt": true
+  },
+  {
+   "id": "p08",
+   "name": "Loibl, Johanna",
+   "dob": "1944-05-21",
+   "kvnr": "S925815007",
+   "insurance": [
+    {
+     "krankenkasse_ik": "109990018",
+     "pflegekasse_ik": "189990018",
+     "valid_from": "1997-01-01",
+     "valid_to": null
+    }
+   ],
+   "pflegegrad": [],
+   "deceased_at": null,
+   "copay_exempt": false
+  },
+  {
+   "id": "p09",
+   "name": "Unertl, Theresia",
+   "dob": "1939-12-19",
+   "kvnr": "L771158141",
+   "insurance": [
+    {
+     "krankenkasse_ik": "109990018",
+     "pflegekasse_ik": "189990018",
+     "valid_from": "1999-01-01",
+     "valid_to": null
+    }
+   ],
+   "pflegegrad": [
+    {
+     "grade": 3,
+     "valid_from": "2021-05-01"
+    }
+   ],
+   "deceased_at": null,
+   "copay_exempt": false
+  },
+  {
+   "id": "p10",
+   "name": "Jäger, Renate",
+   "dob": "1956-05-16",
+   "kvnr": "H986862929",
+   "insurance": [
+    {
+     "krankenkasse_ik": "109990018",
+     "pflegekasse_ik": "189990018",
+     "valid_from": "2020-01-01",
+     "valid_to": null
+    }
+   ],
+   "pflegegrad": [
+    {
+     "grade": 4,
+     "valid_from": "2020-03-01"
+    }
+   ],
+   "deceased_at": null,
+   "copay_exempt": false
+  },
+  {
+   "id": "p11",
+   "name": "Pfeffer, Siegfried",
+   "dob": "1951-11-14",
+   "kvnr": "Z100009904",
+   "insurance": [
+    {
+     "krankenkasse_ik": "109990052",
+     "pflegekasse_ik": "189990052",
+     "valid_from": "1999-01-01",
+     "valid_to": null
+    }
+   ],
+   "pflegegrad": [
+    {
+     "grade": 3,
+     "valid_from": "2024-08-01"
+    }
+   ],
+   "deceased_at": "2026-10-21T12:40:00",
+   "copay_exempt": true
+  },
+  {
+   "id": "p12",
+   "name": "Hölzl, Helmut",
+   "dob": "1948-06-02",
+   "kvnr": "P486696297",
+   "insurance": [
+    {
+     "krankenkasse_ik": "109990018",
+     "pflegekasse_ik": "189990018",
+     "valid_from": "2014-01-01",
+     "valid_to": null
+    }
+   ],
+   "pflegegrad": [
+    {
+     "grade": 2,
+     "valid_from": "2023-05-01"
+    }
+   ],
+   "deceased_at": null,
+   "copay_exempt": true
+  },
+  {
+   "id": "p13",
+   "name": "Haslinger, Johanna",
+   "dob": "1944-07-11",
+   "kvnr": "L811091960",
+   "insurance": [
+    {
+     "krankenkasse_ik": "109990029",
+     "pflegekasse_ik": "189990029",
+     "valid_from": "2006-01-01",
+     "valid_to": null
+    }
+   ],
+   "pflegegrad": [
+    {
+     "grade": 2,
+     "valid_from": "2019-08-01"
+    }
+   ],
+   "deceased_at": null,
+   "copay_exempt": false
+  },
+  {
+   "id": "p14",
+   "name": "Kerscher, Max",
+   "dob": "1942-05-03",
+   "kvnr": "D723768442",
+   "insurance": [
+    {
+     "krankenkasse_ik": "109990063",
+     "pflegekasse_ik": "189990063",
+     "valid_from": "2004-01-01",
+     "valid_to": null
+    }
+   ],
+   "pflegegrad": [],
+   "deceased_at": null,
+   "copay_exempt": false
+  }
+ ],
+ "physicians": [
+  {
+   "name": "Dr. med. Sabine Hartl",
+   "lanr": "143699701",
+   "bsnr": "718549302"
+  },
+  {
+   "name": "Dr. med. Thomas Rieger",
+   "lanr": "283320323",
+   "bsnr": "719097089"
+  },
+  {
+   "name": "Dr. med. Ursula Fröhlich",
+   "lanr": "824646001",
+   "bsnr": "717620859"
+  },
+  {
+   "name": "Dr. med. Markus Ederer",
+   "lanr": "626385001",
+   "bsnr": "712020561"
+  },
+  {
+   "name": "Dr. med. Claudia Wenninger",
+   "lanr": "239654923",
+   "bsnr": "715810901"
+  },
+  {
+   "name": "Dr. med. Florian Aschenbrenner",
+   "lanr": "783581201",
+   "bsnr": "717989371"
+  }
+ ],
+ "payers": [
+  {
+   "name": "AOK Bayern",
+   "ik": "109990018",
+   "kind": "krankenkasse",
+   "payment_term_days": 21,
+   "synthetic": true
+  },
+  {
+   "name": "Techniker Krankenkasse",
+   "ik": "109990029",
+   "kind": "krankenkasse",
+   "payment_term_days": 21,
+   "synthetic": true
+  },
+  {
+   "name": "BARMER",
+   "ik": "109990030",
+   "kind": "krankenkasse",
+   "payment_term_days": 21,
+   "synthetic": true
+  },
+  {
+   "name": "DAK-Gesundheit",
+   "ik": "109990041",
+   "kind": "krankenkasse",
+   "payment_term_days": 21,
+   "synthetic": true
+  },
+  {
+   "name": "IKK classic",
+   "ik": "109990052",
+   "kind": "krankenkasse",
+   "payment_term_days": 21,
+   "synthetic": true
+  },
+  {
+   "name": "KKH Kaufmännische Krankenkasse",
+   "ik": "109990063",
+   "kind": "krankenkasse",
+   "payment_term_days": 21,
+   "synthetic": true
+  },
+  {
+   "name": "Knappschaft",
+   "ik": "109990096",
+   "kind": "krankenkasse",
+   "payment_term_days": 21,
+   "synthetic": true
+  },
+  {
+   "name": "AOK Bayern – Pflegekasse",
+   "ik": "189990018",
+   "kind": "pflegekasse",
+   "payment_term_days": 21,
+   "synthetic": true
+  },
+  {
+   "name": "Techniker Krankenkasse – Pflegekasse",
+   "ik": "189990029",
+   "kind": "pflegekasse",
+   "payment_term_days": 21,
+   "synthetic": true
+  },
+  {
+   "name": "BARMER – Pflegekasse",
+   "ik": "189990030",
+   "kind": "pflegekasse",
+   "payment_term_days": 21,
+   "synthetic": true
+  },
+  {
+   "name": "DAK-Gesundheit – Pflegekasse",
+   "ik": "189990041",
+   "kind": "pflegekasse",
+   "payment_term_days": 21,
+   "synthetic": true
+  },
+  {
+   "name": "IKK classic – Pflegekasse",
+   "ik": "189990052",
+   "kind": "pflegekasse",
+   "payment_term_days": 21,
+   "synthetic": true
+  },
+  {
+   "name": "KKH Kaufmännische Krankenkasse – Pflegekasse",
+   "ik": "189990063",
+   "kind": "pflegekasse",
+   "payment_term_days": 21,
+   "synthetic": true
+  },
+  {
+   "name": "Knappschaft – Pflegekasse",
+   "ik": "189990096",
+   "kind": "pflegekasse",
+   "payment_term_days": 21,
+   "synthetic": true
+  }
+ ],
+ "hospital": {
+  "name": "Klinikum Donautal Deggendorf",
+  "location_code": "770183239"
+ }
+}

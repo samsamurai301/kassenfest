@@ -1,0 +1,424 @@
+{
+ "doc_id": "syn-demo-027",
+ "doc_type": "muster12",
+ "variant": "photo",
+ "seed": 2138911199,
+ "patient_id": "p05",
+ "month": "2026-10",
+ "pages": [
+  {
+   "index": 0,
+   "image": "../pages/syn-demo-027.jpg",
+   "width": 1414,
+   "height": 2000
+  }
+ ],
+ "fields": {
+  "payer_name": {
+   "value": "DAK-Gesundheit",
+   "status": "present",
+   "page": 0,
+   "box": [
+    139.5,
+    215.8,
+    324.8,
+    262.8
+   ],
+   "handwritten": true
+  },
+  "patient_name": {
+   "value": "Eder, Theresia",
+   "status": "present",
+   "page": 0,
+   "box": [
+    140.4,
+    300.1,
+    307.1,
+    343.9
+   ],
+   "handwritten": true
+  },
+  "patient_dob": {
+   "value": "1932-09-25",
+   "status": "present",
+   "page": 0,
+   "box": [
+    715.7,
+    327.5,
+    846.3,
+    373.5
+   ],
+   "handwritten": true
+  },
+  "payer_ik": {
+   "value": "109990041",
+   "status": "present",
+   "page": 0,
+   "box": [
+    140.7,
+    385.9,
+    263.0,
+    426.2
+   ],
+   "handwritten": true
+  },
+  "kvnr": {
+   "value": "H108879567",
+   "status": "present",
+   "page": 0,
+   "box": [
+    428.2,
+    393.6,
+    572.4,
+    440.5
+   ],
+   "handwritten": true
+  },
+  "bsnr": {
+   "value": "719097089",
+   "status": "present",
+   "page": 0,
+   "box": [
+    142.3,
+    465.0,
+    268.4,
+    507.9
+   ],
+   "handwritten": true
+  },
+  "lanr": {
+   "value": "283320323",
+   "status": "present",
+   "page": 0,
+   "box": [
+    428.8,
+    483.7,
+    558.1,
+    525.2
+   ],
+   "handwritten": true
+  },
+  "issue_date": {
+   "value": "2026-09-29",
+   "status": "present",
+   "page": 0,
+   "box": [
+    719.7,
+    497.5,
+    851.1,
+    541.2
+   ],
+   "handwritten": true
+  },
+  "period_from": {
+   "value": "2026-10-01",
+   "status": "present",
+   "page": 0,
+   "box": [
+    935.2,
+    482.9,
+    1063.8,
+    524.8
+   ],
+   "handwritten": true
+  },
+  "period_to": {
+   "value": "2026-12-15",
+   "status": "present",
+   "page": 0,
+   "box": [
+    935.7,
+    530.4,
+    1061.4,
+    572.0
+   ],
+   "handwritten": true
+  },
+  "icd_codes": {
+   "value": [
+    "I50.9",
+    "I10.00",
+    "I83.0"
+   ],
+   "status": "present",
+   "page": 0,
+   "box": [
+    143.0,
+    541.8,
+    368.1,
+    596.0
+   ],
+   "handwritten": true
+  },
+  "further_notes": {
+   "value": "Rücksprache bei Wundverschlechterung",
+   "status": "present",
+   "page": 0,
+   "box": [
+    150.8,
+    1176.3,
+    588.8,
+    1253.3
+   ],
+   "handwritten": true
+  },
+  "prescription_kind": {
+   "value": "folge",
+   "status": "present",
+   "page": 0,
+   "box": [
+    882.3,
+    377.9,
+    907.0,
+    407.9
+   ],
+   "handwritten": true
+  },
+  "accident": {
+   "value": false,
+   "status": "present",
+   "page": 0,
+   "box": [
+    882.7,
+    413.1,
+    907.3,
+    437.8
+   ],
+   "handwritten": true
+  },
+  "blank_prescription": {
+   "value": false,
+   "status": "present",
+   "page": 0,
+   "box": [
+    883.0,
+    445.4,
+    907.6,
+    470.1
+   ],
+   "handwritten": true
+  },
+  "measures[0].category": {
+   "value": "medikamentengabe",
+   "status": "present",
+   "page": 0,
+   "box": [
+    143.5,
+    730.3,
+    167.6,
+    762.2
+   ],
+   "handwritten": true
+  },
+  "measures[0].frequency.count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    858.7,
+    771.8,
+    936.2,
+    810.6
+   ],
+   "handwritten": true
+  },
+  "measures[0].frequency.per": {
+   "value": "day",
+   "status": "present",
+   "page": 0,
+   "box": [
+    858.7,
+    771.8,
+    936.2,
+    810.6
+   ],
+   "handwritten": true
+  },
+  "measures[0].details": {
+   "value": "Metformin 1000 mg, Ramipril 5 mg",
+   "status": "present",
+   "page": 0,
+   "box": [
+    393.2,
+    738.4,
+    790.5,
+    801.1
+   ],
+   "handwritten": true
+  },
+  "measures[0].duration_from": {
+   "value": "2026-10-01",
+   "status": "present",
+   "page": 0,
+   "box": [
+    965.7,
+    772.3,
+    1096.5,
+    818.5
+   ],
+   "handwritten": true
+  },
+  "measures[0].duration_to": {
+   "value": "2026-12-15",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1099.3,
+    784.3,
+    1227.4,
+    828.7
+   ],
+   "handwritten": true
+  },
+  "measures[1].category": {
+   "value": "kompression",
+   "status": "present",
+   "page": 0,
+   "box": [
+    145.6,
+    921.2,
+    169.6,
+    952.9
+   ],
+   "handwritten": true
+  },
+  "measures[1].frequency.count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    861.1,
+    963.4,
+    940.4,
+    1003.1
+   ],
+   "handwritten": true
+  },
+  "measures[1].frequency.per": {
+   "value": "day",
+   "status": "present",
+   "page": 0,
+   "box": [
+    861.1,
+    963.4,
+    940.4,
+    1003.1
+   ],
+   "handwritten": true
+  },
+  "measures[1].details": {
+   "value": "Kompressionsstrümpfe Kl. II beidseits",
+   "status": "present",
+   "page": 0,
+   "box": [
+    395.0,
+    923.7,
+    812.6,
+    993.9
+   ],
+   "handwritten": true
+  },
+  "measures[1].duration_from": {
+   "value": "2026-10-01",
+   "status": "present",
+   "page": 0,
+   "box": [
+    969.9,
+    971.9,
+    1098.0,
+    1013.2
+   ],
+   "handwritten": true
+  },
+  "measures[1].duration_to": {
+   "value": "2026-12-15",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1103.0,
+    975.4,
+    1229.8,
+    1021.0
+   ],
+   "handwritten": true
+  },
+  "measures[#]": {
+   "value": 2,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "corrections_present": {
+   "value": false,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "doc_type": {
+   "value": "muster12",
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "practice_stamp": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    217.8,
+    1251.6,
+    591.2,
+    1475.5
+   ],
+   "handwritten": false
+  },
+  "doctor_signature": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    799.6,
+    1343.5,
+    1120.3,
+    1455.4
+   ],
+   "handwritten": false
+  },
+  "corrections_initialled": {
+   "value": "absent",
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  }
+ },
+ "regions": {
+  "practice_stamp": {
+   "page": 0,
+   "box": [
+    217.8,
+    1251.6,
+    591.2,
+    1475.5
+   ],
+   "state": "present"
+  },
+  "doctor_signature": {
+   "page": 0,
+   "box": [
+    799.6,
+    1343.5,
+    1120.3,
+    1455.4
+   ],
+   "state": "present"
+  }
+ },
+ "defects": [
+  "D20"
+ ],
+ "synthetic": true
+}

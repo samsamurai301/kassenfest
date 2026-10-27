@@ -1,0 +1,5338 @@
+{
+ "doc_id": "syn-demo-035",
+ "doc_type": "visit_log_sgbxi",
+ "variant": "scan",
+ "seed": 3332582019,
+ "patient_id": "p10",
+ "month": "2026-10",
+ "pages": [
+  {
+   "index": 0,
+   "image": "../pages/syn-demo-035.jpg",
+   "width": 1755,
+   "height": 1241
+  }
+ ],
+ "fields": {
+  "entries[0].date": {
+   "value": "2026-10-01",
+   "status": "present",
+   "page": 0,
+   "box": [
+    341.9,
+    167.8,
+    349.6,
+    183.6
+   ],
+   "handwritten": false
+  },
+  "entries[0].time": {
+   "value": "06:50",
+   "status": "present",
+   "page": 0,
+   "box": [
+    333.8,
+    252.6,
+    361.0,
+    275.6
+   ],
+   "handwritten": true
+  },
+  "entries[0].lk_code": {
+   "value": "LK01",
+   "status": "present",
+   "page": 0,
+   "box": [
+    56.6,
+    290.1,
+    218.3,
+    308.6
+   ],
+   "handwritten": false
+  },
+  "entries[0].lk_label": {
+   "value": "Ganzkörperwäsche",
+   "status": "present",
+   "page": 0,
+   "box": [
+    56.6,
+    290.1,
+    218.3,
+    308.6
+   ],
+   "handwritten": false
+  },
+  "entries[0].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    335.0,
+    296.5,
+    361.8,
+    325.2
+   ],
+   "handwritten": true
+  },
+  "entries[0].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    54.5,
+    216.9,
+    286.0,
+    238.2
+   ],
+   "handwritten": false
+  },
+  "entries[0].staff_initials": {
+   "value": "JR",
+   "status": "present",
+   "page": 0,
+   "box": [
+    335.0,
+    296.5,
+    361.8,
+    325.2
+   ],
+   "handwritten": true
+  },
+  "entries[0].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    335.0,
+    296.5,
+    361.8,
+    325.2
+   ],
+   "handwritten": false
+  },
+  "entries[1].date": {
+   "value": "2026-10-01",
+   "status": "present",
+   "page": 0,
+   "box": [
+    341.9,
+    167.8,
+    349.6,
+    183.6
+   ],
+   "handwritten": false
+  },
+  "entries[1].time": {
+   "value": "06:50",
+   "status": "present",
+   "page": 0,
+   "box": [
+    333.8,
+    252.6,
+    361.0,
+    275.6
+   ],
+   "handwritten": true
+  },
+  "entries[1].lk_code": {
+   "value": "LK03",
+   "status": "present",
+   "page": 0,
+   "box": [
+    57.5,
+    340.2,
+    256.7,
+    359.4
+   ],
+   "handwritten": false
+  },
+  "entries[1].lk_label": {
+   "value": "Hilfe bei Ausscheidungen",
+   "status": "present",
+   "page": 0,
+   "box": [
+    57.5,
+    340.2,
+    256.7,
+    359.4
+   ],
+   "handwritten": false
+  },
+  "entries[1].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    336.0,
+    348.1,
+    362.1,
+    379.3
+   ],
+   "handwritten": true
+  },
+  "entries[1].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    54.5,
+    216.9,
+    286.0,
+    238.2
+   ],
+   "handwritten": false
+  },
+  "entries[1].staff_initials": {
+   "value": "JR",
+   "status": "present",
+   "page": 0,
+   "box": [
+    336.0,
+    348.1,
+    362.1,
+    379.3
+   ],
+   "handwritten": true
+  },
+  "entries[1].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    336.0,
+    348.1,
+    362.1,
+    379.3
+   ],
+   "handwritten": false
+  },
+  "entries[2].date": {
+   "value": "2026-10-01",
+   "status": "present",
+   "page": 0,
+   "box": [
+    341.9,
+    167.8,
+    349.6,
+    183.6
+   ],
+   "handwritten": false
+  },
+  "entries[2].time": {
+   "value": "06:50",
+   "status": "present",
+   "page": 0,
+   "box": [
+    333.8,
+    252.6,
+    361.0,
+    275.6
+   ],
+   "handwritten": true
+  },
+  "entries[2].lk_code": {
+   "value": "LK07",
+   "status": "present",
+   "page": 0,
+   "box": [
+    58.4,
+    391.7,
+    219.3,
+    410.2
+   ],
+   "handwritten": false
+  },
+  "entries[2].lk_label": {
+   "value": "An- und Auskleiden",
+   "status": "present",
+   "page": 0,
+   "box": [
+    58.4,
+    391.7,
+    219.3,
+    410.2
+   ],
+   "handwritten": false
+  },
+  "entries[2].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    336.0,
+    399.8,
+    363.0,
+    429.4
+   ],
+   "handwritten": true
+  },
+  "entries[2].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    54.5,
+    216.9,
+    286.0,
+    238.2
+   ],
+   "handwritten": false
+  },
+  "entries[2].staff_initials": {
+   "value": "JR",
+   "status": "present",
+   "page": 0,
+   "box": [
+    336.0,
+    399.8,
+    363.0,
+    429.4
+   ],
+   "handwritten": true
+  },
+  "entries[2].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    336.0,
+    399.8,
+    363.0,
+    429.4
+   ],
+   "handwritten": false
+  },
+  "entries[3].date": {
+   "value": "2026-10-02",
+   "status": "present",
+   "page": 0,
+   "box": [
+    386.4,
+    167.0,
+    394.1,
+    182.8
+   ],
+   "handwritten": false
+  },
+  "entries[3].time": {
+   "value": "06:44",
+   "status": "present",
+   "page": 0,
+   "box": [
+    374.9,
+    250.7,
+    408.8,
+    273.5
+   ],
+   "handwritten": true
+  },
+  "entries[3].lk_code": {
+   "value": "LK01",
+   "status": "present",
+   "page": 0,
+   "box": [
+    56.6,
+    290.1,
+    218.3,
+    308.6
+   ],
+   "handwritten": false
+  },
+  "entries[3].lk_label": {
+   "value": "Ganzkörperwäsche",
+   "status": "present",
+   "page": 0,
+   "box": [
+    56.6,
+    290.1,
+    218.3,
+    308.6
+   ],
+   "handwritten": false
+  },
+  "entries[3].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    378.2,
+    296.7,
+    408.5,
+    326.0
+   ],
+   "handwritten": true
+  },
+  "entries[3].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    54.5,
+    216.9,
+    286.0,
+    238.2
+   ],
+   "handwritten": false
+  },
+  "entries[3].staff_initials": {
+   "value": "TH",
+   "status": "present",
+   "page": 0,
+   "box": [
+    378.2,
+    296.7,
+    408.5,
+    326.0
+   ],
+   "handwritten": true
+  },
+  "entries[3].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    378.2,
+    296.7,
+    408.5,
+    326.0
+   ],
+   "handwritten": false
+  },
+  "entries[4].date": {
+   "value": "2026-10-02",
+   "status": "present",
+   "page": 0,
+   "box": [
+    386.4,
+    167.0,
+    394.1,
+    182.8
+   ],
+   "handwritten": false
+  },
+  "entries[4].time": {
+   "value": "06:44",
+   "status": "present",
+   "page": 0,
+   "box": [
+    374.9,
+    250.7,
+    408.8,
+    273.5
+   ],
+   "handwritten": true
+  },
+  "entries[4].lk_code": {
+   "value": "LK03",
+   "status": "present",
+   "page": 0,
+   "box": [
+    57.5,
+    340.2,
+    256.7,
+    359.4
+   ],
+   "handwritten": false
+  },
+  "entries[4].lk_label": {
+   "value": "Hilfe bei Ausscheidungen",
+   "status": "present",
+   "page": 0,
+   "box": [
+    57.5,
+    340.2,
+    256.7,
+    359.4
+   ],
+   "handwritten": false
+  },
+  "entries[4].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    378.1,
+    346.7,
+    408.2,
+    374.5
+   ],
+   "handwritten": true
+  },
+  "entries[4].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    54.5,
+    216.9,
+    286.0,
+    238.2
+   ],
+   "handwritten": false
+  },
+  "entries[4].staff_initials": {
+   "value": "TH",
+   "status": "present",
+   "page": 0,
+   "box": [
+    378.1,
+    346.7,
+    408.2,
+    374.5
+   ],
+   "handwritten": true
+  },
+  "entries[4].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    378.1,
+    346.7,
+    408.2,
+    374.5
+   ],
+   "handwritten": false
+  },
+  "entries[5].date": {
+   "value": "2026-10-02",
+   "status": "present",
+   "page": 0,
+   "box": [
+    386.4,
+    167.0,
+    394.1,
+    182.8
+   ],
+   "handwritten": false
+  },
+  "entries[5].time": {
+   "value": "06:44",
+   "status": "present",
+   "page": 0,
+   "box": [
+    374.9,
+    250.7,
+    408.8,
+    273.5
+   ],
+   "handwritten": true
+  },
+  "entries[5].lk_code": {
+   "value": "LK07",
+   "status": "present",
+   "page": 0,
+   "box": [
+    58.4,
+    391.7,
+    219.3,
+    410.2
+   ],
+   "handwritten": false
+  },
+  "entries[5].lk_label": {
+   "value": "An- und Auskleiden",
+   "status": "present",
+   "page": 0,
+   "box": [
+    58.4,
+    391.7,
+    219.3,
+    410.2
+   ],
+   "handwritten": false
+  },
+  "entries[5].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    379.0,
+    398.0,
+    408.9,
+    426.6
+   ],
+   "handwritten": true
+  },
+  "entries[5].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    54.5,
+    216.9,
+    286.0,
+    238.2
+   ],
+   "handwritten": false
+  },
+  "entries[5].staff_initials": {
+   "value": "TH",
+   "status": "present",
+   "page": 0,
+   "box": [
+    379.0,
+    398.0,
+    408.9,
+    426.6
+   ],
+   "handwritten": true
+  },
+  "entries[5].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    379.0,
+    398.0,
+    408.9,
+    426.6
+   ],
+   "handwritten": false
+  },
+  "entries[6].date": {
+   "value": "2026-10-12",
+   "status": "present",
+   "page": 0,
+   "box": [
+    828.5,
+    159.0,
+    843.6,
+    174.9
+   ],
+   "handwritten": false
+  },
+  "entries[6].time": {
+   "value": "07:10",
+   "status": "present",
+   "page": 0,
+   "box": [
+    826.1,
+    243.4,
+    848.7,
+    266.4
+   ],
+   "handwritten": true
+  },
+  "entries[6].lk_code": {
+   "value": "LK01",
+   "status": "present",
+   "page": 0,
+   "box": [
+    56.6,
+    290.1,
+    218.3,
+    308.6
+   ],
+   "handwritten": false
+  },
+  "entries[6].lk_label": {
+   "value": "Ganzkörperwäsche",
+   "status": "present",
+   "page": 0,
+   "box": [
+    56.6,
+    290.1,
+    218.3,
+    308.6
+   ],
+   "handwritten": false
+  },
+  "entries[6].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    825.6,
+    289.8,
+    851.1,
+    316.7
+   ],
+   "handwritten": true
+  },
+  "entries[6].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    54.5,
+    216.9,
+    286.0,
+    238.2
+   ],
+   "handwritten": false
+  },
+  "entries[6].staff_initials": {
+   "value": "JR",
+   "status": "present",
+   "page": 0,
+   "box": [
+    825.6,
+    289.8,
+    851.1,
+    316.7
+   ],
+   "handwritten": true
+  },
+  "entries[6].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    825.6,
+    289.8,
+    851.1,
+    316.7
+   ],
+   "handwritten": false
+  },
+  "entries[7].date": {
+   "value": "2026-10-12",
+   "status": "present",
+   "page": 0,
+   "box": [
+    828.5,
+    159.0,
+    843.6,
+    174.9
+   ],
+   "handwritten": false
+  },
+  "entries[7].time": {
+   "value": "07:10",
+   "status": "present",
+   "page": 0,
+   "box": [
+    826.1,
+    243.4,
+    848.7,
+    266.4
+   ],
+   "handwritten": true
+  },
+  "entries[7].lk_code": {
+   "value": "LK03",
+   "status": "present",
+   "page": 0,
+   "box": [
+    57.5,
+    340.2,
+    256.7,
+    359.4
+   ],
+   "handwritten": false
+  },
+  "entries[7].lk_label": {
+   "value": "Hilfe bei Ausscheidungen",
+   "status": "present",
+   "page": 0,
+   "box": [
+    57.5,
+    340.2,
+    256.7,
+    359.4
+   ],
+   "handwritten": false
+  },
+  "entries[7].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    826.6,
+    339.0,
+    852.1,
+    366.7
+   ],
+   "handwritten": true
+  },
+  "entries[7].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    54.5,
+    216.9,
+    286.0,
+    238.2
+   ],
+   "handwritten": false
+  },
+  "entries[7].staff_initials": {
+   "value": "JR",
+   "status": "present",
+   "page": 0,
+   "box": [
+    826.6,
+    339.0,
+    852.1,
+    366.7
+   ],
+   "handwritten": true
+  },
+  "entries[7].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    826.6,
+    339.0,
+    852.1,
+    366.7
+   ],
+   "handwritten": false
+  },
+  "entries[8].date": {
+   "value": "2026-10-12",
+   "status": "present",
+   "page": 0,
+   "box": [
+    828.5,
+    159.0,
+    843.6,
+    174.9
+   ],
+   "handwritten": false
+  },
+  "entries[8].time": {
+   "value": "07:10",
+   "status": "present",
+   "page": 0,
+   "box": [
+    826.1,
+    243.4,
+    848.7,
+    266.4
+   ],
+   "handwritten": true
+  },
+  "entries[8].lk_code": {
+   "value": "LK07",
+   "status": "present",
+   "page": 0,
+   "box": [
+    58.4,
+    391.7,
+    219.3,
+    410.2
+   ],
+   "handwritten": false
+  },
+  "entries[8].lk_label": {
+   "value": "An- und Auskleiden",
+   "status": "present",
+   "page": 0,
+   "box": [
+    58.4,
+    391.7,
+    219.3,
+    410.2
+   ],
+   "handwritten": false
+  },
+  "entries[8].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    827.5,
+    391.7,
+    853.0,
+    420.8
+   ],
+   "handwritten": true
+  },
+  "entries[8].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    54.5,
+    216.9,
+    286.0,
+    238.2
+   ],
+   "handwritten": false
+  },
+  "entries[8].staff_initials": {
+   "value": "JR",
+   "status": "present",
+   "page": 0,
+   "box": [
+    827.5,
+    391.7,
+    853.0,
+    420.8
+   ],
+   "handwritten": true
+  },
+  "entries[8].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    827.5,
+    391.7,
+    853.0,
+    420.8
+   ],
+   "handwritten": false
+  },
+  "entries[9].date": {
+   "value": "2026-10-13",
+   "status": "present",
+   "page": 0,
+   "box": [
+    873.0,
+    158.2,
+    888.2,
+    174.1
+   ],
+   "handwritten": false
+  },
+  "entries[9].time": {
+   "value": "06:50",
+   "status": "present",
+   "page": 0,
+   "box": [
+    868.6,
+    245.0,
+    896.1,
+    265.9
+   ],
+   "handwritten": true
+  },
+  "entries[9].lk_code": {
+   "value": "LK01",
+   "status": "present",
+   "page": 0,
+   "box": [
+    56.6,
+    290.1,
+    218.3,
+    308.6
+   ],
+   "handwritten": false
+  },
+  "entries[9].lk_label": {
+   "value": "Ganzkörperwäsche",
+   "status": "present",
+   "page": 0,
+   "box": [
+    56.6,
+    290.1,
+    218.3,
+    308.6
+   ],
+   "handwritten": false
+  },
+  "entries[9].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    866.4,
+    288.8,
+    899.7,
+    316.7
+   ],
+   "handwritten": true
+  },
+  "entries[9].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    54.5,
+    216.9,
+    286.0,
+    238.2
+   ],
+   "handwritten": false
+  },
+  "entries[9].staff_initials": {
+   "value": "SB",
+   "status": "present",
+   "page": 0,
+   "box": [
+    866.4,
+    288.8,
+    899.7,
+    316.7
+   ],
+   "handwritten": true
+  },
+  "entries[9].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    866.4,
+    288.8,
+    899.7,
+    316.7
+   ],
+   "handwritten": false
+  },
+  "entries[10].date": {
+   "value": "2026-10-13",
+   "status": "present",
+   "page": 0,
+   "box": [
+    873.0,
+    158.2,
+    888.2,
+    174.1
+   ],
+   "handwritten": false
+  },
+  "entries[10].time": {
+   "value": "06:50",
+   "status": "present",
+   "page": 0,
+   "box": [
+    868.6,
+    245.0,
+    896.1,
+    265.9
+   ],
+   "handwritten": true
+  },
+  "entries[10].lk_code": {
+   "value": "LK03",
+   "status": "present",
+   "page": 0,
+   "box": [
+    57.5,
+    340.2,
+    256.7,
+    359.4
+   ],
+   "handwritten": false
+  },
+  "entries[10].lk_label": {
+   "value": "Hilfe bei Ausscheidungen",
+   "status": "present",
+   "page": 0,
+   "box": [
+    57.5,
+    340.2,
+    256.7,
+    359.4
+   ],
+   "handwritten": false
+  },
+  "entries[10].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    868.3,
+    339.5,
+    900.1,
+    366.7
+   ],
+   "handwritten": true
+  },
+  "entries[10].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    54.5,
+    216.9,
+    286.0,
+    238.2
+   ],
+   "handwritten": false
+  },
+  "entries[10].staff_initials": {
+   "value": "SB",
+   "status": "present",
+   "page": 0,
+   "box": [
+    868.3,
+    339.5,
+    900.1,
+    366.7
+   ],
+   "handwritten": true
+  },
+  "entries[10].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    868.3,
+    339.5,
+    900.1,
+    366.7
+   ],
+   "handwritten": false
+  },
+  "entries[11].date": {
+   "value": "2026-10-13",
+   "status": "present",
+   "page": 0,
+   "box": [
+    873.0,
+    158.2,
+    888.2,
+    174.1
+   ],
+   "handwritten": false
+  },
+  "entries[11].time": {
+   "value": "06:50",
+   "status": "present",
+   "page": 0,
+   "box": [
+    868.6,
+    245.0,
+    896.1,
+    265.9
+   ],
+   "handwritten": true
+  },
+  "entries[11].lk_code": {
+   "value": "LK07",
+   "status": "present",
+   "page": 0,
+   "box": [
+    58.4,
+    391.7,
+    219.3,
+    410.2
+   ],
+   "handwritten": false
+  },
+  "entries[11].lk_label": {
+   "value": "An- und Auskleiden",
+   "status": "present",
+   "page": 0,
+   "box": [
+    58.4,
+    391.7,
+    219.3,
+    410.2
+   ],
+   "handwritten": false
+  },
+  "entries[11].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    868.6,
+    389.3,
+    900.3,
+    417.3
+   ],
+   "handwritten": true
+  },
+  "entries[11].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    54.5,
+    216.9,
+    286.0,
+    238.2
+   ],
+   "handwritten": false
+  },
+  "entries[11].staff_initials": {
+   "value": "SB",
+   "status": "present",
+   "page": 0,
+   "box": [
+    868.6,
+    389.3,
+    900.3,
+    417.3
+   ],
+   "handwritten": true
+  },
+  "entries[11].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    868.6,
+    389.3,
+    900.3,
+    417.3
+   ],
+   "handwritten": false
+  },
+  "entries[12].date": {
+   "value": "2026-10-13",
+   "status": "present",
+   "page": 0,
+   "box": [
+    873.0,
+    158.2,
+    888.2,
+    174.1
+   ],
+   "handwritten": false
+  },
+  "entries[12].time": {
+   "value": "10:10",
+   "status": "present",
+   "page": 0,
+   "box": [
+    872.0,
+    475.6,
+    900.9,
+    497.0
+   ],
+   "handwritten": true
+  },
+  "entries[12].lk_code": {
+   "value": "LK12",
+   "status": "present",
+   "page": 0,
+   "box": [
+    60.7,
+    522.4,
+    162.5,
+    539.8
+   ],
+   "handwritten": false
+  },
+  "entries[12].lk_label": {
+   "value": "Einkaufen",
+   "status": "present",
+   "page": 0,
+   "box": [
+    60.7,
+    522.4,
+    162.5,
+    539.8
+   ],
+   "handwritten": false
+  },
+  "entries[12].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    871.2,
+    519.6,
+    903.5,
+    547.6
+   ],
+   "handwritten": true
+  },
+  "entries[12].funding": {
+   "value": "entlastung_45b",
+   "status": "present",
+   "page": 0,
+   "box": [
+    58.6,
+    448.0,
+    294.4,
+    469.4
+   ],
+   "handwritten": false
+  },
+  "entries[12].staff_initials": {
+   "value": "SB",
+   "status": "present",
+   "page": 0,
+   "box": [
+    871.2,
+    519.6,
+    903.5,
+    547.6
+   ],
+   "handwritten": true
+  },
+  "entries[12].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    871.2,
+    519.6,
+    903.5,
+    547.6
+   ],
+   "handwritten": false
+  },
+  "entries[13].date": {
+   "value": "2026-10-14",
+   "status": "present",
+   "page": 0,
+   "box": [
+    917.6,
+    157.4,
+    932.7,
+    173.3
+   ],
+   "handwritten": false
+  },
+  "entries[13].time": {
+   "value": "07:10",
+   "status": "present",
+   "page": 0,
+   "box": [
+    915.5,
+    242.8,
+    938.0,
+    264.2
+   ],
+   "handwritten": true
+  },
+  "entries[13].lk_code": {
+   "value": "LK01",
+   "status": "present",
+   "page": 0,
+   "box": [
+    56.6,
+    290.1,
+    218.3,
+    308.6
+   ],
+   "handwritten": false
+  },
+  "entries[13].lk_label": {
+   "value": "Ganzkörperwäsche",
+   "status": "present",
+   "page": 0,
+   "box": [
+    56.6,
+    290.1,
+    218.3,
+    308.6
+   ],
+   "handwritten": false
+  },
+  "entries[13].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    911.7,
+    288.4,
+    943.5,
+    315.8
+   ],
+   "handwritten": true
+  },
+  "entries[13].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    54.5,
+    216.9,
+    286.0,
+    238.2
+   ],
+   "handwritten": false
+  },
+  "entries[13].staff_initials": {
+   "value": "SB",
+   "status": "present",
+   "page": 0,
+   "box": [
+    911.7,
+    288.4,
+    943.5,
+    315.8
+   ],
+   "handwritten": true
+  },
+  "entries[13].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    911.7,
+    288.4,
+    943.5,
+    315.8
+   ],
+   "handwritten": false
+  },
+  "entries[14].date": {
+   "value": "2026-10-14",
+   "status": "present",
+   "page": 0,
+   "box": [
+    917.6,
+    157.4,
+    932.7,
+    173.3
+   ],
+   "handwritten": false
+  },
+  "entries[14].time": {
+   "value": "07:10",
+   "status": "present",
+   "page": 0,
+   "box": [
+    915.5,
+    242.8,
+    938.0,
+    264.2
+   ],
+   "handwritten": true
+  },
+  "entries[14].lk_code": {
+   "value": "LK03",
+   "status": "present",
+   "page": 0,
+   "box": [
+    57.5,
+    340.2,
+    256.7,
+    359.4
+   ],
+   "handwritten": false
+  },
+  "entries[14].lk_label": {
+   "value": "Hilfe bei Ausscheidungen",
+   "status": "present",
+   "page": 0,
+   "box": [
+    57.5,
+    340.2,
+    256.7,
+    359.4
+   ],
+   "handwritten": false
+  },
+  "entries[14].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    911.5,
+    337.6,
+    944.2,
+    366.1
+   ],
+   "handwritten": true
+  },
+  "entries[14].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    54.5,
+    216.9,
+    286.0,
+    238.2
+   ],
+   "handwritten": false
+  },
+  "entries[14].staff_initials": {
+   "value": "SB",
+   "status": "present",
+   "page": 0,
+   "box": [
+    911.5,
+    337.6,
+    944.2,
+    366.1
+   ],
+   "handwritten": true
+  },
+  "entries[14].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    911.5,
+    337.6,
+    944.2,
+    366.1
+   ],
+   "handwritten": false
+  },
+  "entries[15].date": {
+   "value": "2026-10-14",
+   "status": "present",
+   "page": 0,
+   "box": [
+    917.6,
+    157.4,
+    932.7,
+    173.3
+   ],
+   "handwritten": false
+  },
+  "entries[15].time": {
+   "value": "07:10",
+   "status": "present",
+   "page": 0,
+   "box": [
+    915.5,
+    242.8,
+    938.0,
+    264.2
+   ],
+   "handwritten": true
+  },
+  "entries[15].lk_code": {
+   "value": "LK07",
+   "status": "present",
+   "page": 0,
+   "box": [
+    58.4,
+    391.7,
+    219.3,
+    410.2
+   ],
+   "handwritten": false
+  },
+  "entries[15].lk_label": {
+   "value": "An- und Auskleiden",
+   "status": "present",
+   "page": 0,
+   "box": [
+    58.4,
+    391.7,
+    219.3,
+    410.2
+   ],
+   "handwritten": false
+  },
+  "entries[15].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    913.3,
+    389.4,
+    945.8,
+    417.3
+   ],
+   "handwritten": true
+  },
+  "entries[15].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    54.5,
+    216.9,
+    286.0,
+    238.2
+   ],
+   "handwritten": false
+  },
+  "entries[15].staff_initials": {
+   "value": "SB",
+   "status": "present",
+   "page": 0,
+   "box": [
+    913.3,
+    389.4,
+    945.8,
+    417.3
+   ],
+   "handwritten": true
+  },
+  "entries[15].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    913.3,
+    389.4,
+    945.8,
+    417.3
+   ],
+   "handwritten": false
+  },
+  "entries[16].date": {
+   "value": "2026-10-15",
+   "status": "present",
+   "page": 0,
+   "box": [
+    962.2,
+    156.6,
+    977.3,
+    172.5
+   ],
+   "handwritten": false
+  },
+  "entries[16].time": {
+   "value": "07:10",
+   "status": "present",
+   "page": 0,
+   "box": [
+    957.7,
+    242.4,
+    984.9,
+    263.6
+   ],
+   "handwritten": true
+  },
+  "entries[16].lk_code": {
+   "value": "LK01",
+   "status": "present",
+   "page": 0,
+   "box": [
+    56.6,
+    290.1,
+    218.3,
+    308.6
+   ],
+   "handwritten": false
+  },
+  "entries[16].lk_label": {
+   "value": "Ganzkörperwäsche",
+   "status": "present",
+   "page": 0,
+   "box": [
+    56.6,
+    290.1,
+    218.3,
+    308.6
+   ],
+   "handwritten": false
+  },
+  "entries[16].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    957.7,
+    285.2,
+    986.6,
+    313.3
+   ],
+   "handwritten": true
+  },
+  "entries[16].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    54.5,
+    216.9,
+    286.0,
+    238.2
+   ],
+   "handwritten": false
+  },
+  "entries[16].staff_initials": {
+   "value": "TH",
+   "status": "present",
+   "page": 0,
+   "box": [
+    957.7,
+    285.2,
+    986.6,
+    313.3
+   ],
+   "handwritten": true
+  },
+  "entries[16].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    957.7,
+    285.2,
+    986.6,
+    313.3
+   ],
+   "handwritten": false
+  },
+  "entries[17].date": {
+   "value": "2026-10-15",
+   "status": "present",
+   "page": 0,
+   "box": [
+    962.2,
+    156.6,
+    977.3,
+    172.5
+   ],
+   "handwritten": false
+  },
+  "entries[17].time": {
+   "value": "07:10",
+   "status": "present",
+   "page": 0,
+   "box": [
+    957.7,
+    242.4,
+    984.9,
+    263.6
+   ],
+   "handwritten": true
+  },
+  "entries[17].lk_code": {
+   "value": "LK03",
+   "status": "present",
+   "page": 0,
+   "box": [
+    57.5,
+    340.2,
+    256.7,
+    359.4
+   ],
+   "handwritten": false
+  },
+  "entries[17].lk_label": {
+   "value": "Hilfe bei Ausscheidungen",
+   "status": "present",
+   "page": 0,
+   "box": [
+    57.5,
+    340.2,
+    256.7,
+    359.4
+   ],
+   "handwritten": false
+  },
+  "entries[17].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    958.5,
+    334.3,
+    987.6,
+    366.3
+   ],
+   "handwritten": true
+  },
+  "entries[17].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    54.5,
+    216.9,
+    286.0,
+    238.2
+   ],
+   "handwritten": false
+  },
+  "entries[17].staff_initials": {
+   "value": "TH",
+   "status": "present",
+   "page": 0,
+   "box": [
+    958.5,
+    334.3,
+    987.6,
+    366.3
+   ],
+   "handwritten": true
+  },
+  "entries[17].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    958.5,
+    334.3,
+    987.6,
+    366.3
+   ],
+   "handwritten": false
+  },
+  "entries[18].date": {
+   "value": "2026-10-15",
+   "status": "present",
+   "page": 0,
+   "box": [
+    962.2,
+    156.6,
+    977.3,
+    172.5
+   ],
+   "handwritten": false
+  },
+  "entries[18].time": {
+   "value": "07:10",
+   "status": "present",
+   "page": 0,
+   "box": [
+    957.7,
+    242.4,
+    984.9,
+    263.6
+   ],
+   "handwritten": true
+  },
+  "entries[18].lk_code": {
+   "value": "LK07",
+   "status": "present",
+   "page": 0,
+   "box": [
+    58.4,
+    391.7,
+    219.3,
+    410.2
+   ],
+   "handwritten": false
+  },
+  "entries[18].lk_label": {
+   "value": "An- und Auskleiden",
+   "status": "present",
+   "page": 0,
+   "box": [
+    58.4,
+    391.7,
+    219.3,
+    410.2
+   ],
+   "handwritten": false
+  },
+  "entries[18].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    959.6,
+    387.7,
+    988.5,
+    415.5
+   ],
+   "handwritten": true
+  },
+  "entries[18].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    54.5,
+    216.9,
+    286.0,
+    238.2
+   ],
+   "handwritten": false
+  },
+  "entries[18].staff_initials": {
+   "value": "TH",
+   "status": "present",
+   "page": 0,
+   "box": [
+    959.6,
+    387.7,
+    988.5,
+    415.5
+   ],
+   "handwritten": true
+  },
+  "entries[18].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    959.6,
+    387.7,
+    988.5,
+    415.5
+   ],
+   "handwritten": false
+  },
+  "entries[19].date": {
+   "value": "2026-10-16",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1006.8,
+    155.8,
+    1021.9,
+    171.7
+   ],
+   "handwritten": false
+  },
+  "entries[19].time": {
+   "value": "07:05",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1002.6,
+    242.5,
+    1029.4,
+    263.6
+   ],
+   "handwritten": true
+  },
+  "entries[19].lk_code": {
+   "value": "LK01",
+   "status": "present",
+   "page": 0,
+   "box": [
+    56.6,
+    290.1,
+    218.3,
+    308.6
+   ],
+   "handwritten": false
+  },
+  "entries[19].lk_label": {
+   "value": "Ganzkörperwäsche",
+   "status": "present",
+   "page": 0,
+   "box": [
+    56.6,
+    290.1,
+    218.3,
+    308.6
+   ],
+   "handwritten": false
+  },
+  "entries[19].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    1001.2,
+    286.8,
+    1032.5,
+    313.6
+   ],
+   "handwritten": true
+  },
+  "entries[19].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    54.5,
+    216.9,
+    286.0,
+    238.2
+   ],
+   "handwritten": false
+  },
+  "entries[19].staff_initials": {
+   "value": "SB",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1001.2,
+    286.8,
+    1032.5,
+    313.6
+   ],
+   "handwritten": true
+  },
+  "entries[19].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1001.2,
+    286.8,
+    1032.5,
+    313.6
+   ],
+   "handwritten": false
+  },
+  "entries[20].date": {
+   "value": "2026-10-16",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1006.8,
+    155.8,
+    1021.9,
+    171.7
+   ],
+   "handwritten": false
+  },
+  "entries[20].time": {
+   "value": "07:05",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1002.6,
+    242.5,
+    1029.4,
+    263.6
+   ],
+   "handwritten": true
+  },
+  "entries[20].lk_code": {
+   "value": "LK03",
+   "status": "present",
+   "page": 0,
+   "box": [
+    57.5,
+    340.2,
+    256.7,
+    359.4
+   ],
+   "handwritten": false
+  },
+  "entries[20].lk_label": {
+   "value": "Hilfe bei Ausscheidungen",
+   "status": "present",
+   "page": 0,
+   "box": [
+    57.5,
+    340.2,
+    256.7,
+    359.4
+   ],
+   "handwritten": false
+  },
+  "entries[20].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    1001.9,
+    337.6,
+    1033.4,
+    365.0
+   ],
+   "handwritten": true
+  },
+  "entries[20].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    54.5,
+    216.9,
+    286.0,
+    238.2
+   ],
+   "handwritten": false
+  },
+  "entries[20].staff_initials": {
+   "value": "SB",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1001.9,
+    337.6,
+    1033.4,
+    365.0
+   ],
+   "handwritten": true
+  },
+  "entries[20].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1001.9,
+    337.6,
+    1033.4,
+    365.0
+   ],
+   "handwritten": false
+  },
+  "entries[21].date": {
+   "value": "2026-10-16",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1006.8,
+    155.8,
+    1021.9,
+    171.7
+   ],
+   "handwritten": false
+  },
+  "entries[21].time": {
+   "value": "07:05",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1002.6,
+    242.5,
+    1029.4,
+    263.6
+   ],
+   "handwritten": true
+  },
+  "entries[21].lk_code": {
+   "value": "LK07",
+   "status": "present",
+   "page": 0,
+   "box": [
+    58.4,
+    391.7,
+    219.3,
+    410.2
+   ],
+   "handwritten": false
+  },
+  "entries[21].lk_label": {
+   "value": "An- und Auskleiden",
+   "status": "present",
+   "page": 0,
+   "box": [
+    58.4,
+    391.7,
+    219.3,
+    410.2
+   ],
+   "handwritten": false
+  },
+  "entries[21].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    1002.6,
+    388.8,
+    1034.5,
+    416.9
+   ],
+   "handwritten": true
+  },
+  "entries[21].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    54.5,
+    216.9,
+    286.0,
+    238.2
+   ],
+   "handwritten": false
+  },
+  "entries[21].staff_initials": {
+   "value": "SB",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1002.6,
+    388.8,
+    1034.5,
+    416.9
+   ],
+   "handwritten": true
+  },
+  "entries[21].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1002.6,
+    388.8,
+    1034.5,
+    416.9
+   ],
+   "handwritten": false
+  },
+  "entries[22].date": {
+   "value": "2026-10-19",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1140.5,
+    153.5,
+    1155.6,
+    169.3
+   ],
+   "handwritten": false
+  },
+  "entries[22].time": {
+   "value": "07:00",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1137.6,
+    239.7,
+    1161.9,
+    260.5
+   ],
+   "handwritten": true
+  },
+  "entries[22].lk_code": {
+   "value": "LK01",
+   "status": "present",
+   "page": 0,
+   "box": [
+    56.6,
+    290.1,
+    218.3,
+    308.6
+   ],
+   "handwritten": false
+  },
+  "entries[22].lk_label": {
+   "value": "Ganzkörperwäsche",
+   "status": "present",
+   "page": 0,
+   "box": [
+    56.6,
+    290.1,
+    218.3,
+    308.6
+   ],
+   "handwritten": false
+  },
+  "entries[22].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    1137.6,
+    282.8,
+    1164.8,
+    311.5
+   ],
+   "handwritten": true
+  },
+  "entries[22].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    54.5,
+    216.9,
+    286.0,
+    238.2
+   ],
+   "handwritten": false
+  },
+  "entries[22].staff_initials": {
+   "value": "JR",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1137.6,
+    282.8,
+    1164.8,
+    311.5
+   ],
+   "handwritten": true
+  },
+  "entries[22].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1137.6,
+    282.8,
+    1164.8,
+    311.5
+   ],
+   "handwritten": false
+  },
+  "entries[23].date": {
+   "value": "2026-10-19",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1140.5,
+    153.5,
+    1155.6,
+    169.3
+   ],
+   "handwritten": false
+  },
+  "entries[23].time": {
+   "value": "07:00",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1137.6,
+    239.7,
+    1161.9,
+    260.5
+   ],
+   "handwritten": true
+  },
+  "entries[23].lk_code": {
+   "value": "LK03",
+   "status": "present",
+   "page": 0,
+   "box": [
+    57.5,
+    340.2,
+    256.7,
+    359.4
+   ],
+   "handwritten": false
+  },
+  "entries[23].lk_label": {
+   "value": "Hilfe bei Ausscheidungen",
+   "status": "present",
+   "page": 0,
+   "box": [
+    57.5,
+    340.2,
+    256.7,
+    359.4
+   ],
+   "handwritten": false
+  },
+  "entries[23].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    1138.9,
+    334.6,
+    1164.0,
+    362.7
+   ],
+   "handwritten": true
+  },
+  "entries[23].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    54.5,
+    216.9,
+    286.0,
+    238.2
+   ],
+   "handwritten": false
+  },
+  "entries[23].staff_initials": {
+   "value": "JR",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1138.9,
+    334.6,
+    1164.0,
+    362.7
+   ],
+   "handwritten": true
+  },
+  "entries[23].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1138.9,
+    334.6,
+    1164.0,
+    362.7
+   ],
+   "handwritten": false
+  },
+  "entries[24].date": {
+   "value": "2026-10-19",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1140.5,
+    153.5,
+    1155.6,
+    169.3
+   ],
+   "handwritten": false
+  },
+  "entries[24].time": {
+   "value": "07:00",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1137.6,
+    239.7,
+    1161.9,
+    260.5
+   ],
+   "handwritten": true
+  },
+  "entries[24].lk_code": {
+   "value": "LK07",
+   "status": "present",
+   "page": 0,
+   "box": [
+    58.4,
+    391.7,
+    219.3,
+    410.2
+   ],
+   "handwritten": false
+  },
+  "entries[24].lk_label": {
+   "value": "An- und Auskleiden",
+   "status": "present",
+   "page": 0,
+   "box": [
+    58.4,
+    391.7,
+    219.3,
+    410.2
+   ],
+   "handwritten": false
+  },
+  "entries[24].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    1139.0,
+    384.5,
+    1165.7,
+    412.6
+   ],
+   "handwritten": true
+  },
+  "entries[24].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    54.5,
+    216.9,
+    286.0,
+    238.2
+   ],
+   "handwritten": false
+  },
+  "entries[24].staff_initials": {
+   "value": "JR",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1139.0,
+    384.5,
+    1165.7,
+    412.6
+   ],
+   "handwritten": true
+  },
+  "entries[24].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1139.0,
+    384.5,
+    1165.7,
+    412.6
+   ],
+   "handwritten": false
+  },
+  "entries[25].date": {
+   "value": "2026-10-20",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1185.1,
+    152.7,
+    1200.2,
+    168.5
+   ],
+   "handwritten": false
+  },
+  "entries[25].time": {
+   "value": "06:45",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1177.2,
+    237.0,
+    1211.1,
+    261.9
+   ],
+   "handwritten": true
+  },
+  "entries[25].lk_code": {
+   "value": "LK01",
+   "status": "present",
+   "page": 0,
+   "box": [
+    56.6,
+    290.1,
+    218.3,
+    308.6
+   ],
+   "handwritten": false
+  },
+  "entries[25].lk_label": {
+   "value": "Ganzkörperwäsche",
+   "status": "present",
+   "page": 0,
+   "box": [
+    56.6,
+    290.1,
+    218.3,
+    308.6
+   ],
+   "handwritten": false
+  },
+  "entries[25].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    1180.2,
+    281.8,
+    1209.3,
+    309.6
+   ],
+   "handwritten": true
+  },
+  "entries[25].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    54.5,
+    216.9,
+    286.0,
+    238.2
+   ],
+   "handwritten": false
+  },
+  "entries[25].staff_initials": {
+   "value": "TH",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1180.2,
+    281.8,
+    1209.3,
+    309.6
+   ],
+   "handwritten": true
+  },
+  "entries[25].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1180.2,
+    281.8,
+    1209.3,
+    309.6
+   ],
+   "handwritten": false
+  },
+  "entries[26].date": {
+   "value": "2026-10-20",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1185.1,
+    152.7,
+    1200.2,
+    168.5
+   ],
+   "handwritten": false
+  },
+  "entries[26].time": {
+   "value": "06:45",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1177.2,
+    237.0,
+    1211.1,
+    261.9
+   ],
+   "handwritten": true
+  },
+  "entries[26].lk_code": {
+   "value": "LK03",
+   "status": "present",
+   "page": 0,
+   "box": [
+    57.5,
+    340.2,
+    256.7,
+    359.4
+   ],
+   "handwritten": false
+  },
+  "entries[26].lk_label": {
+   "value": "Hilfe bei Ausscheidungen",
+   "status": "present",
+   "page": 0,
+   "box": [
+    57.5,
+    340.2,
+    256.7,
+    359.4
+   ],
+   "handwritten": false
+  },
+  "entries[26].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    1180.5,
+    330.5,
+    1210.9,
+    360.1
+   ],
+   "handwritten": true
+  },
+  "entries[26].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    54.5,
+    216.9,
+    286.0,
+    238.2
+   ],
+   "handwritten": false
+  },
+  "entries[26].staff_initials": {
+   "value": "TH",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1180.5,
+    330.5,
+    1210.9,
+    360.1
+   ],
+   "handwritten": true
+  },
+  "entries[26].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1180.5,
+    330.5,
+    1210.9,
+    360.1
+   ],
+   "handwritten": false
+  },
+  "entries[27].date": {
+   "value": "2026-10-20",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1185.1,
+    152.7,
+    1200.2,
+    168.5
+   ],
+   "handwritten": false
+  },
+  "entries[27].time": {
+   "value": "06:45",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1177.2,
+    237.0,
+    1211.1,
+    261.9
+   ],
+   "handwritten": true
+  },
+  "entries[27].lk_code": {
+   "value": "LK07",
+   "status": "present",
+   "page": 0,
+   "box": [
+    58.4,
+    391.7,
+    219.3,
+    410.2
+   ],
+   "handwritten": false
+  },
+  "entries[27].lk_label": {
+   "value": "An- und Auskleiden",
+   "status": "present",
+   "page": 0,
+   "box": [
+    58.4,
+    391.7,
+    219.3,
+    410.2
+   ],
+   "handwritten": false
+  },
+  "entries[27].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    1182.2,
+    382.4,
+    1211.7,
+    412.7
+   ],
+   "handwritten": true
+  },
+  "entries[27].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    54.5,
+    216.9,
+    286.0,
+    238.2
+   ],
+   "handwritten": false
+  },
+  "entries[27].staff_initials": {
+   "value": "TH",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1182.2,
+    382.4,
+    1211.7,
+    412.7
+   ],
+   "handwritten": true
+  },
+  "entries[27].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1182.2,
+    382.4,
+    1211.7,
+    412.7
+   ],
+   "handwritten": false
+  },
+  "entries[28].date": {
+   "value": "2026-10-20",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1185.1,
+    152.7,
+    1200.2,
+    168.5
+   ],
+   "handwritten": false
+  },
+  "entries[28].time": {
+   "value": "10:30",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1183.7,
+    469.7,
+    1213.2,
+    494.2
+   ],
+   "handwritten": true
+  },
+  "entries[28].lk_code": {
+   "value": "LK12",
+   "status": "present",
+   "page": 0,
+   "box": [
+    60.7,
+    522.4,
+    162.5,
+    539.8
+   ],
+   "handwritten": false
+  },
+  "entries[28].lk_label": {
+   "value": "Einkaufen",
+   "status": "present",
+   "page": 0,
+   "box": [
+    60.7,
+    522.4,
+    162.5,
+    539.8
+   ],
+   "handwritten": false
+  },
+  "entries[28].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    1186.7,
+    512.1,
+    1212.9,
+    541.2
+   ],
+   "handwritten": true
+  },
+  "entries[28].funding": {
+   "value": "entlastung_45b",
+   "status": "present",
+   "page": 0,
+   "box": [
+    58.6,
+    448.0,
+    294.4,
+    469.4
+   ],
+   "handwritten": false
+  },
+  "entries[28].staff_initials": {
+   "value": "JR",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1186.7,
+    512.1,
+    1212.9,
+    541.2
+   ],
+   "handwritten": true
+  },
+  "entries[28].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1186.7,
+    512.1,
+    1212.9,
+    541.2
+   ],
+   "handwritten": false
+  },
+  "entries[29].date": {
+   "value": "2026-10-21",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1229.6,
+    151.9,
+    1244.7,
+    167.7
+   ],
+   "handwritten": false
+  },
+  "entries[29].time": {
+   "value": "06:45",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1225.4,
+    237.6,
+    1252.2,
+    258.6
+   ],
+   "handwritten": true
+  },
+  "entries[29].lk_code": {
+   "value": "LK01",
+   "status": "present",
+   "page": 0,
+   "box": [
+    56.6,
+    290.1,
+    218.3,
+    308.6
+   ],
+   "handwritten": false
+  },
+  "entries[29].lk_label": {
+   "value": "Ganzkörperwäsche",
+   "status": "present",
+   "page": 0,
+   "box": [
+    56.6,
+    290.1,
+    218.3,
+    308.6
+   ],
+   "handwritten": false
+  },
+  "entries[29].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    1224.0,
+    282.3,
+    1255.7,
+    309.3
+   ],
+   "handwritten": true
+  },
+  "entries[29].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    54.5,
+    216.9,
+    286.0,
+    238.2
+   ],
+   "handwritten": false
+  },
+  "entries[29].staff_initials": {
+   "value": "SB",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1224.0,
+    282.3,
+    1255.7,
+    309.3
+   ],
+   "handwritten": true
+  },
+  "entries[29].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1224.0,
+    282.3,
+    1255.7,
+    309.3
+   ],
+   "handwritten": false
+  },
+  "entries[30].date": {
+   "value": "2026-10-21",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1229.6,
+    151.9,
+    1244.7,
+    167.7
+   ],
+   "handwritten": false
+  },
+  "entries[30].time": {
+   "value": "06:45",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1225.4,
+    237.6,
+    1252.2,
+    258.6
+   ],
+   "handwritten": true
+  },
+  "entries[30].lk_code": {
+   "value": "LK03",
+   "status": "present",
+   "page": 0,
+   "box": [
+    57.5,
+    340.2,
+    256.7,
+    359.4
+   ],
+   "handwritten": false
+  },
+  "entries[30].lk_label": {
+   "value": "Hilfe bei Ausscheidungen",
+   "status": "present",
+   "page": 0,
+   "box": [
+    57.5,
+    340.2,
+    256.7,
+    359.4
+   ],
+   "handwritten": false
+  },
+  "entries[30].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    1224.5,
+    333.6,
+    1256.3,
+    360.6
+   ],
+   "handwritten": true
+  },
+  "entries[30].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    54.5,
+    216.9,
+    286.0,
+    238.2
+   ],
+   "handwritten": false
+  },
+  "entries[30].staff_initials": {
+   "value": "SB",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1224.5,
+    333.6,
+    1256.3,
+    360.6
+   ],
+   "handwritten": true
+  },
+  "entries[30].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1224.5,
+    333.6,
+    1256.3,
+    360.6
+   ],
+   "handwritten": false
+  },
+  "entries[31].date": {
+   "value": "2026-10-21",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1229.6,
+    151.9,
+    1244.7,
+    167.7
+   ],
+   "handwritten": false
+  },
+  "entries[31].time": {
+   "value": "06:45",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1225.4,
+    237.6,
+    1252.2,
+    258.6
+   ],
+   "handwritten": true
+  },
+  "entries[31].lk_code": {
+   "value": "LK07",
+   "status": "present",
+   "page": 0,
+   "box": [
+    58.4,
+    391.7,
+    219.3,
+    410.2
+   ],
+   "handwritten": false
+  },
+  "entries[31].lk_label": {
+   "value": "An- und Auskleiden",
+   "status": "present",
+   "page": 0,
+   "box": [
+    58.4,
+    391.7,
+    219.3,
+    410.2
+   ],
+   "handwritten": false
+  },
+  "entries[31].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    1225.6,
+    384.8,
+    1257.2,
+    412.2
+   ],
+   "handwritten": true
+  },
+  "entries[31].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    54.5,
+    216.9,
+    286.0,
+    238.2
+   ],
+   "handwritten": false
+  },
+  "entries[31].staff_initials": {
+   "value": "SB",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1225.6,
+    384.8,
+    1257.2,
+    412.2
+   ],
+   "handwritten": true
+  },
+  "entries[31].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1225.6,
+    384.8,
+    1257.2,
+    412.2
+   ],
+   "handwritten": false
+  },
+  "entries[32].date": {
+   "value": "2026-10-22",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1274.2,
+    151.1,
+    1289.3,
+    167.0
+   ],
+   "handwritten": false
+  },
+  "entries[32].time": {
+   "value": "06:50",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1266.9,
+    236.0,
+    1300.1,
+    258.3
+   ],
+   "handwritten": true
+  },
+  "entries[32].lk_code": {
+   "value": "LK01",
+   "status": "present",
+   "page": 0,
+   "box": [
+    56.6,
+    290.1,
+    218.3,
+    308.6
+   ],
+   "handwritten": false
+  },
+  "entries[32].lk_label": {
+   "value": "Ganzkörperwäsche",
+   "status": "present",
+   "page": 0,
+   "box": [
+    56.6,
+    290.1,
+    218.3,
+    308.6
+   ],
+   "handwritten": false
+  },
+  "entries[32].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    1269.2,
+    281.2,
+    1298.6,
+    309.0
+   ],
+   "handwritten": true
+  },
+  "entries[32].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    54.5,
+    216.9,
+    286.0,
+    238.2
+   ],
+   "handwritten": false
+  },
+  "entries[32].staff_initials": {
+   "value": "TH",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1269.2,
+    281.2,
+    1298.6,
+    309.0
+   ],
+   "handwritten": true
+  },
+  "entries[32].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1269.2,
+    281.2,
+    1298.6,
+    309.0
+   ],
+   "handwritten": false
+  },
+  "entries[33].date": {
+   "value": "2026-10-22",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1274.2,
+    151.1,
+    1289.3,
+    167.0
+   ],
+   "handwritten": false
+  },
+  "entries[33].time": {
+   "value": "06:50",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1266.9,
+    236.0,
+    1300.1,
+    258.3
+   ],
+   "handwritten": true
+  },
+  "entries[33].lk_code": {
+   "value": "LK03",
+   "status": "present",
+   "page": 0,
+   "box": [
+    57.5,
+    340.2,
+    256.7,
+    359.4
+   ],
+   "handwritten": false
+  },
+  "entries[33].lk_label": {
+   "value": "Hilfe bei Ausscheidungen",
+   "status": "present",
+   "page": 0,
+   "box": [
+    57.5,
+    340.2,
+    256.7,
+    359.4
+   ],
+   "handwritten": false
+  },
+  "entries[33].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    1270.4,
+    330.6,
+    1299.5,
+    359.0
+   ],
+   "handwritten": true
+  },
+  "entries[33].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    54.5,
+    216.9,
+    286.0,
+    238.2
+   ],
+   "handwritten": false
+  },
+  "entries[33].staff_initials": {
+   "value": "TH",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1270.4,
+    330.6,
+    1299.5,
+    359.0
+   ],
+   "handwritten": true
+  },
+  "entries[33].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1270.4,
+    330.6,
+    1299.5,
+    359.0
+   ],
+   "handwritten": false
+  },
+  "entries[34].date": {
+   "value": "2026-10-22",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1274.2,
+    151.1,
+    1289.3,
+    167.0
+   ],
+   "handwritten": false
+  },
+  "entries[34].time": {
+   "value": "06:50",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1266.9,
+    236.0,
+    1300.1,
+    258.3
+   ],
+   "handwritten": true
+  },
+  "entries[34].lk_code": {
+   "value": "LK07",
+   "status": "present",
+   "page": 0,
+   "box": [
+    58.4,
+    391.7,
+    219.3,
+    410.2
+   ],
+   "handwritten": false
+  },
+  "entries[34].lk_label": {
+   "value": "An- und Auskleiden",
+   "status": "present",
+   "page": 0,
+   "box": [
+    58.4,
+    391.7,
+    219.3,
+    410.2
+   ],
+   "handwritten": false
+  },
+  "entries[34].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    1271.6,
+    382.7,
+    1300.8,
+    409.7
+   ],
+   "handwritten": true
+  },
+  "entries[34].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    54.5,
+    216.9,
+    286.0,
+    238.2
+   ],
+   "handwritten": false
+  },
+  "entries[34].staff_initials": {
+   "value": "TH",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1271.6,
+    382.7,
+    1300.8,
+    409.7
+   ],
+   "handwritten": true
+  },
+  "entries[34].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1271.6,
+    382.7,
+    1300.8,
+    409.7
+   ],
+   "handwritten": false
+  },
+  "entries[35].date": {
+   "value": "2026-10-23",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1318.8,
+    150.3,
+    1333.9,
+    166.2
+   ],
+   "handwritten": false
+  },
+  "entries[35].time": {
+   "value": "06:36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1310.7,
+    232.8,
+    1345.2,
+    257.8
+   ],
+   "handwritten": true
+  },
+  "entries[35].lk_code": {
+   "value": "LK01",
+   "status": "present",
+   "page": 0,
+   "box": [
+    56.6,
+    290.1,
+    218.3,
+    308.6
+   ],
+   "handwritten": false
+  },
+  "entries[35].lk_label": {
+   "value": "Ganzkörperwäsche",
+   "status": "present",
+   "page": 0,
+   "box": [
+    56.6,
+    290.1,
+    218.3,
+    308.6
+   ],
+   "handwritten": false
+  },
+  "entries[35].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    1314.1,
+    280.1,
+    1343.1,
+    309.2
+   ],
+   "handwritten": true
+  },
+  "entries[35].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    54.5,
+    216.9,
+    286.0,
+    238.2
+   ],
+   "handwritten": false
+  },
+  "entries[35].staff_initials": {
+   "value": "TH",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1314.1,
+    280.1,
+    1343.1,
+    309.2
+   ],
+   "handwritten": true
+  },
+  "entries[35].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1314.1,
+    280.1,
+    1343.1,
+    309.2
+   ],
+   "handwritten": false
+  },
+  "entries[36].date": {
+   "value": "2026-10-23",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1318.8,
+    150.3,
+    1333.9,
+    166.2
+   ],
+   "handwritten": false
+  },
+  "entries[36].time": {
+   "value": "06:36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1310.7,
+    232.8,
+    1345.2,
+    257.8
+   ],
+   "handwritten": true
+  },
+  "entries[36].lk_code": {
+   "value": "LK03",
+   "status": "present",
+   "page": 0,
+   "box": [
+    57.5,
+    340.2,
+    256.7,
+    359.4
+   ],
+   "handwritten": false
+  },
+  "entries[36].lk_label": {
+   "value": "Hilfe bei Ausscheidungen",
+   "status": "present",
+   "page": 0,
+   "box": [
+    57.5,
+    340.2,
+    256.7,
+    359.4
+   ],
+   "handwritten": false
+  },
+  "entries[36].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    1315.0,
+    330.7,
+    1345.2,
+    358.5
+   ],
+   "handwritten": true
+  },
+  "entries[36].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    54.5,
+    216.9,
+    286.0,
+    238.2
+   ],
+   "handwritten": false
+  },
+  "entries[36].staff_initials": {
+   "value": "TH",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1315.0,
+    330.7,
+    1345.2,
+    358.5
+   ],
+   "handwritten": true
+  },
+  "entries[36].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1315.0,
+    330.7,
+    1345.2,
+    358.5
+   ],
+   "handwritten": false
+  },
+  "entries[37].date": {
+   "value": "2026-10-23",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1318.8,
+    150.3,
+    1333.9,
+    166.2
+   ],
+   "handwritten": false
+  },
+  "entries[37].time": {
+   "value": "06:36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1310.7,
+    232.8,
+    1345.2,
+    257.8
+   ],
+   "handwritten": true
+  },
+  "entries[37].lk_code": {
+   "value": "LK07",
+   "status": "present",
+   "page": 0,
+   "box": [
+    58.4,
+    391.7,
+    219.3,
+    410.2
+   ],
+   "handwritten": false
+  },
+  "entries[37].lk_label": {
+   "value": "An- und Auskleiden",
+   "status": "present",
+   "page": 0,
+   "box": [
+    58.4,
+    391.7,
+    219.3,
+    410.2
+   ],
+   "handwritten": false
+  },
+  "entries[37].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    1315.1,
+    381.2,
+    1344.9,
+    410.4
+   ],
+   "handwritten": true
+  },
+  "entries[37].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    54.5,
+    216.9,
+    286.0,
+    238.2
+   ],
+   "handwritten": false
+  },
+  "entries[37].staff_initials": {
+   "value": "TH",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1315.1,
+    381.2,
+    1344.9,
+    410.4
+   ],
+   "handwritten": true
+  },
+  "entries[37].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1315.1,
+    381.2,
+    1344.9,
+    410.4
+   ],
+   "handwritten": false
+  },
+  "entries[38].date": {
+   "value": "2026-10-26",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1452.5,
+    147.9,
+    1467.6,
+    163.8
+   ],
+   "handwritten": false
+  },
+  "entries[38].time": {
+   "value": "06:45",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1444.3,
+    232.7,
+    1478.8,
+    256.4
+   ],
+   "handwritten": true
+  },
+  "entries[38].lk_code": {
+   "value": "LK01",
+   "status": "present",
+   "page": 0,
+   "box": [
+    56.6,
+    290.1,
+    218.3,
+    308.6
+   ],
+   "handwritten": false
+  },
+  "entries[38].lk_label": {
+   "value": "Ganzkörperwäsche",
+   "status": "present",
+   "page": 0,
+   "box": [
+    56.6,
+    290.1,
+    218.3,
+    308.6
+   ],
+   "handwritten": false
+  },
+  "entries[38].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    1447.8,
+    276.9,
+    1477.1,
+    304.6
+   ],
+   "handwritten": true
+  },
+  "entries[38].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    54.5,
+    216.9,
+    286.0,
+    238.2
+   ],
+   "handwritten": false
+  },
+  "entries[38].staff_initials": {
+   "value": "TH",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1447.8,
+    276.9,
+    1477.1,
+    304.6
+   ],
+   "handwritten": true
+  },
+  "entries[38].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1447.8,
+    276.9,
+    1477.1,
+    304.6
+   ],
+   "handwritten": false
+  },
+  "entries[39].date": {
+   "value": "2026-10-26",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1452.5,
+    147.9,
+    1467.6,
+    163.8
+   ],
+   "handwritten": false
+  },
+  "entries[39].time": {
+   "value": "06:45",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1444.3,
+    232.7,
+    1478.8,
+    256.4
+   ],
+   "handwritten": true
+  },
+  "entries[39].lk_code": {
+   "value": "LK03",
+   "status": "present",
+   "page": 0,
+   "box": [
+    57.5,
+    340.2,
+    256.7,
+    359.4
+   ],
+   "handwritten": false
+  },
+  "entries[39].lk_label": {
+   "value": "Hilfe bei Ausscheidungen",
+   "status": "present",
+   "page": 0,
+   "box": [
+    57.5,
+    340.2,
+    256.7,
+    359.4
+   ],
+   "handwritten": false
+  },
+  "entries[39].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    1448.8,
+    328.4,
+    1478.5,
+    357.1
+   ],
+   "handwritten": true
+  },
+  "entries[39].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    54.5,
+    216.9,
+    286.0,
+    238.2
+   ],
+   "handwritten": false
+  },
+  "entries[39].staff_initials": {
+   "value": "TH",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1448.8,
+    328.4,
+    1478.5,
+    357.1
+   ],
+   "handwritten": true
+  },
+  "entries[39].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1448.8,
+    328.4,
+    1478.5,
+    357.1
+   ],
+   "handwritten": false
+  },
+  "entries[40].date": {
+   "value": "2026-10-26",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1452.5,
+    147.9,
+    1467.6,
+    163.8
+   ],
+   "handwritten": false
+  },
+  "entries[40].time": {
+   "value": "06:45",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1444.3,
+    232.7,
+    1478.8,
+    256.4
+   ],
+   "handwritten": true
+  },
+  "entries[40].lk_code": {
+   "value": "LK07",
+   "status": "present",
+   "page": 0,
+   "box": [
+    58.4,
+    391.7,
+    219.3,
+    410.2
+   ],
+   "handwritten": false
+  },
+  "entries[40].lk_label": {
+   "value": "An- und Auskleiden",
+   "status": "present",
+   "page": 0,
+   "box": [
+    58.4,
+    391.7,
+    219.3,
+    410.2
+   ],
+   "handwritten": false
+  },
+  "entries[40].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    1450.1,
+    379.3,
+    1479.2,
+    409.1
+   ],
+   "handwritten": true
+  },
+  "entries[40].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    54.5,
+    216.9,
+    286.0,
+    238.2
+   ],
+   "handwritten": false
+  },
+  "entries[40].staff_initials": {
+   "value": "TH",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1450.1,
+    379.3,
+    1479.2,
+    409.1
+   ],
+   "handwritten": true
+  },
+  "entries[40].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1450.1,
+    379.3,
+    1479.2,
+    409.1
+   ],
+   "handwritten": false
+  },
+  "entries[41].date": {
+   "value": "2026-10-27",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1497.1,
+    147.1,
+    1512.2,
+    163.0
+   ],
+   "handwritten": false
+  },
+  "entries[41].time": {
+   "value": "06:56",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1492.7,
+    230.2,
+    1520.4,
+    253.7
+   ],
+   "handwritten": true
+  },
+  "entries[41].lk_code": {
+   "value": "LK01",
+   "status": "present",
+   "page": 0,
+   "box": [
+    56.6,
+    290.1,
+    218.3,
+    308.6
+   ],
+   "handwritten": false
+  },
+  "entries[41].lk_label": {
+   "value": "Ganzkörperwäsche",
+   "status": "present",
+   "page": 0,
+   "box": [
+    56.6,
+    290.1,
+    218.3,
+    308.6
+   ],
+   "handwritten": false
+  },
+  "entries[41].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    1494.2,
+    276.7,
+    1520.8,
+    306.5
+   ],
+   "handwritten": true
+  },
+  "entries[41].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    54.5,
+    216.9,
+    286.0,
+    238.2
+   ],
+   "handwritten": false
+  },
+  "entries[41].staff_initials": {
+   "value": "JR",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1494.2,
+    276.7,
+    1520.8,
+    306.5
+   ],
+   "handwritten": true
+  },
+  "entries[41].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1494.2,
+    276.7,
+    1520.8,
+    306.5
+   ],
+   "handwritten": false
+  },
+  "entries[42].date": {
+   "value": "2026-10-27",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1497.1,
+    147.1,
+    1512.2,
+    163.0
+   ],
+   "handwritten": false
+  },
+  "entries[42].time": {
+   "value": "06:56",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1492.7,
+    230.2,
+    1520.4,
+    253.7
+   ],
+   "handwritten": true
+  },
+  "entries[42].lk_code": {
+   "value": "LK03",
+   "status": "present",
+   "page": 0,
+   "box": [
+    57.5,
+    340.2,
+    256.7,
+    359.4
+   ],
+   "handwritten": false
+  },
+  "entries[42].lk_label": {
+   "value": "Hilfe bei Ausscheidungen",
+   "status": "present",
+   "page": 0,
+   "box": [
+    57.5,
+    340.2,
+    256.7,
+    359.4
+   ],
+   "handwritten": false
+  },
+  "entries[42].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    1495.5,
+    328.9,
+    1521.4,
+    358.8
+   ],
+   "handwritten": true
+  },
+  "entries[42].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    54.5,
+    216.9,
+    286.0,
+    238.2
+   ],
+   "handwritten": false
+  },
+  "entries[42].staff_initials": {
+   "value": "JR",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1495.5,
+    328.9,
+    1521.4,
+    358.8
+   ],
+   "handwritten": true
+  },
+  "entries[42].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1495.5,
+    328.9,
+    1521.4,
+    358.8
+   ],
+   "handwritten": false
+  },
+  "entries[43].date": {
+   "value": "2026-10-27",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1497.1,
+    147.1,
+    1512.2,
+    163.0
+   ],
+   "handwritten": false
+  },
+  "entries[43].time": {
+   "value": "06:56",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1492.7,
+    230.2,
+    1520.4,
+    253.7
+   ],
+   "handwritten": true
+  },
+  "entries[43].lk_code": {
+   "value": "LK07",
+   "status": "present",
+   "page": 0,
+   "box": [
+    58.4,
+    391.7,
+    219.3,
+    410.2
+   ],
+   "handwritten": false
+  },
+  "entries[43].lk_label": {
+   "value": "An- und Auskleiden",
+   "status": "present",
+   "page": 0,
+   "box": [
+    58.4,
+    391.7,
+    219.3,
+    410.2
+   ],
+   "handwritten": false
+  },
+  "entries[43].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    1496.3,
+    379.2,
+    1521.8,
+    407.9
+   ],
+   "handwritten": true
+  },
+  "entries[43].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    54.5,
+    216.9,
+    286.0,
+    238.2
+   ],
+   "handwritten": false
+  },
+  "entries[43].staff_initials": {
+   "value": "JR",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1496.3,
+    379.2,
+    1521.8,
+    407.9
+   ],
+   "handwritten": true
+  },
+  "entries[43].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1496.3,
+    379.2,
+    1521.8,
+    407.9
+   ],
+   "handwritten": false
+  },
+  "entries[44].date": {
+   "value": "2026-10-27",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1497.1,
+    147.1,
+    1512.2,
+    163.0
+   ],
+   "handwritten": false
+  },
+  "entries[44].time": {
+   "value": "10:30",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1492.7,
+    463.5,
+    1527.3,
+    485.1
+   ],
+   "handwritten": true
+  },
+  "entries[44].lk_code": {
+   "value": "LK12",
+   "status": "present",
+   "page": 0,
+   "box": [
+    60.7,
+    522.4,
+    162.5,
+    539.8
+   ],
+   "handwritten": false
+  },
+  "entries[44].lk_label": {
+   "value": "Einkaufen",
+   "status": "present",
+   "page": 0,
+   "box": [
+    60.7,
+    522.4,
+    162.5,
+    539.8
+   ],
+   "handwritten": false
+  },
+  "entries[44].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    1502.1,
+    508.9,
+    1520.6,
+    536.3
+   ],
+   "handwritten": true
+  },
+  "entries[44].funding": {
+   "value": "entlastung_45b",
+   "status": "present",
+   "page": 0,
+   "box": [
+    58.6,
+    448.0,
+    294.4,
+    469.4
+   ],
+   "handwritten": false
+  },
+  "entries[44].staff_initials": {
+   "value": "LF",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1502.1,
+    508.9,
+    1520.6,
+    536.3
+   ],
+   "handwritten": true
+  },
+  "entries[44].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1502.1,
+    508.9,
+    1520.6,
+    536.3
+   ],
+   "handwritten": false
+  },
+  "entries[45].date": {
+   "value": "2026-10-28",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1541.6,
+    146.3,
+    1556.8,
+    162.2
+   ],
+   "handwritten": false
+  },
+  "entries[45].time": {
+   "value": "06:50",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1537.4,
+    229.6,
+    1563.9,
+    252.3
+   ],
+   "handwritten": true
+  },
+  "entries[45].lk_code": {
+   "value": "LK01",
+   "status": "present",
+   "page": 0,
+   "box": [
+    56.6,
+    290.1,
+    218.3,
+    308.6
+   ],
+   "handwritten": false
+  },
+  "entries[45].lk_label": {
+   "value": "Ganzkörperwäsche",
+   "status": "present",
+   "page": 0,
+   "box": [
+    56.6,
+    290.1,
+    218.3,
+    308.6
+   ],
+   "handwritten": false
+  },
+  "entries[45].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    1542.2,
+    275.8,
+    1560.7,
+    303.8
+   ],
+   "handwritten": true
+  },
+  "entries[45].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    54.5,
+    216.9,
+    286.0,
+    238.2
+   ],
+   "handwritten": false
+  },
+  "entries[45].staff_initials": {
+   "value": "LF",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1542.2,
+    275.8,
+    1560.7,
+    303.8
+   ],
+   "handwritten": true
+  },
+  "entries[45].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1542.2,
+    275.8,
+    1560.7,
+    303.8
+   ],
+   "handwritten": false
+  },
+  "entries[46].date": {
+   "value": "2026-10-28",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1541.6,
+    146.3,
+    1556.8,
+    162.2
+   ],
+   "handwritten": false
+  },
+  "entries[46].time": {
+   "value": "06:50",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1537.4,
+    229.6,
+    1563.9,
+    252.3
+   ],
+   "handwritten": true
+  },
+  "entries[46].lk_code": {
+   "value": "LK03",
+   "status": "present",
+   "page": 0,
+   "box": [
+    57.5,
+    340.2,
+    256.7,
+    359.4
+   ],
+   "handwritten": false
+  },
+  "entries[46].lk_label": {
+   "value": "Hilfe bei Ausscheidungen",
+   "status": "present",
+   "page": 0,
+   "box": [
+    57.5,
+    340.2,
+    256.7,
+    359.4
+   ],
+   "handwritten": false
+  },
+  "entries[46].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    1543.7,
+    328.2,
+    1562.1,
+    355.4
+   ],
+   "handwritten": true
+  },
+  "entries[46].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    54.5,
+    216.9,
+    286.0,
+    238.2
+   ],
+   "handwritten": false
+  },
+  "entries[46].staff_initials": {
+   "value": "LF",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1543.7,
+    328.2,
+    1562.1,
+    355.4
+   ],
+   "handwritten": true
+  },
+  "entries[46].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1543.7,
+    328.2,
+    1562.1,
+    355.4
+   ],
+   "handwritten": false
+  },
+  "entries[47].date": {
+   "value": "2026-10-28",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1541.6,
+    146.3,
+    1556.8,
+    162.2
+   ],
+   "handwritten": false
+  },
+  "entries[47].time": {
+   "value": "06:50",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1537.4,
+    229.6,
+    1563.9,
+    252.3
+   ],
+   "handwritten": true
+  },
+  "entries[47].lk_code": {
+   "value": "LK07",
+   "status": "present",
+   "page": 0,
+   "box": [
+    58.4,
+    391.7,
+    219.3,
+    410.2
+   ],
+   "handwritten": false
+  },
+  "entries[47].lk_label": {
+   "value": "An- und Auskleiden",
+   "status": "present",
+   "page": 0,
+   "box": [
+    58.4,
+    391.7,
+    219.3,
+    410.2
+   ],
+   "handwritten": false
+  },
+  "entries[47].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    1544.4,
+    379.0,
+    1562.3,
+    405.2
+   ],
+   "handwritten": true
+  },
+  "entries[47].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    54.5,
+    216.9,
+    286.0,
+    238.2
+   ],
+   "handwritten": false
+  },
+  "entries[47].staff_initials": {
+   "value": "LF",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1544.4,
+    379.0,
+    1562.3,
+    405.2
+   ],
+   "handwritten": true
+  },
+  "entries[47].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1544.4,
+    379.0,
+    1562.3,
+    405.2
+   ],
+   "handwritten": false
+  },
+  "entries[48].date": {
+   "value": "2026-10-29",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1586.2,
+    145.5,
+    1601.3,
+    161.4
+   ],
+   "handwritten": false
+  },
+  "entries[48].time": {
+   "value": "06:55",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1580.4,
+    232.3,
+    1610.4,
+    253.0
+   ],
+   "handwritten": true
+  },
+  "entries[48].lk_code": {
+   "value": "LK01",
+   "status": "present",
+   "page": 0,
+   "box": [
+    56.6,
+    290.1,
+    218.3,
+    308.6
+   ],
+   "handwritten": false
+  },
+  "entries[48].lk_label": {
+   "value": "Ganzkörperwäsche",
+   "status": "present",
+   "page": 0,
+   "box": [
+    56.6,
+    290.1,
+    218.3,
+    308.6
+   ],
+   "handwritten": false
+  },
+  "entries[48].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    1580.5,
+    276.5,
+    1612.1,
+    303.5
+   ],
+   "handwritten": true
+  },
+  "entries[48].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    54.5,
+    216.9,
+    286.0,
+    238.2
+   ],
+   "handwritten": false
+  },
+  "entries[48].staff_initials": {
+   "value": "SB",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1580.5,
+    276.5,
+    1612.1,
+    303.5
+   ],
+   "handwritten": true
+  },
+  "entries[48].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1580.5,
+    276.5,
+    1612.1,
+    303.5
+   ],
+   "handwritten": false
+  },
+  "entries[49].date": {
+   "value": "2026-10-29",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1586.2,
+    145.5,
+    1601.3,
+    161.4
+   ],
+   "handwritten": false
+  },
+  "entries[49].time": {
+   "value": "06:55",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1580.4,
+    232.3,
+    1610.4,
+    253.0
+   ],
+   "handwritten": true
+  },
+  "entries[49].lk_code": {
+   "value": "LK03",
+   "status": "present",
+   "page": 0,
+   "box": [
+    57.5,
+    340.2,
+    256.7,
+    359.4
+   ],
+   "handwritten": false
+  },
+  "entries[49].lk_label": {
+   "value": "Hilfe bei Ausscheidungen",
+   "status": "present",
+   "page": 0,
+   "box": [
+    57.5,
+    340.2,
+    256.7,
+    359.4
+   ],
+   "handwritten": false
+  },
+  "entries[49].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    1581.2,
+    327.3,
+    1613.0,
+    355.4
+   ],
+   "handwritten": true
+  },
+  "entries[49].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    54.5,
+    216.9,
+    286.0,
+    238.2
+   ],
+   "handwritten": false
+  },
+  "entries[49].staff_initials": {
+   "value": "SB",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1581.2,
+    327.3,
+    1613.0,
+    355.4
+   ],
+   "handwritten": true
+  },
+  "entries[49].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1581.2,
+    327.3,
+    1613.0,
+    355.4
+   ],
+   "handwritten": false
+  },
+  "entries[50].date": {
+   "value": "2026-10-29",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1586.2,
+    145.5,
+    1601.3,
+    161.4
+   ],
+   "handwritten": false
+  },
+  "entries[50].time": {
+   "value": "06:55",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1580.4,
+    232.3,
+    1610.4,
+    253.0
+   ],
+   "handwritten": true
+  },
+  "entries[50].lk_code": {
+   "value": "LK07",
+   "status": "present",
+   "page": 0,
+   "box": [
+    58.4,
+    391.7,
+    219.3,
+    410.2
+   ],
+   "handwritten": false
+  },
+  "entries[50].lk_label": {
+   "value": "An- und Auskleiden",
+   "status": "present",
+   "page": 0,
+   "box": [
+    58.4,
+    391.7,
+    219.3,
+    410.2
+   ],
+   "handwritten": false
+  },
+  "entries[50].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    1581.4,
+    377.5,
+    1613.9,
+    406.9
+   ],
+   "handwritten": true
+  },
+  "entries[50].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    54.5,
+    216.9,
+    286.0,
+    238.2
+   ],
+   "handwritten": false
+  },
+  "entries[50].staff_initials": {
+   "value": "SB",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1581.4,
+    377.5,
+    1613.9,
+    406.9
+   ],
+   "handwritten": true
+  },
+  "entries[50].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1581.4,
+    377.5,
+    1613.9,
+    406.9
+   ],
+   "handwritten": false
+  },
+  "entries[51].date": {
+   "value": "2026-10-30",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1630.8,
+    144.7,
+    1645.9,
+    160.6
+   ],
+   "handwritten": false
+  },
+  "entries[51].time": {
+   "value": "06:50",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1626.5,
+    230.4,
+    1653.6,
+    253.9
+   ],
+   "handwritten": true
+  },
+  "entries[51].lk_code": {
+   "value": "LK01",
+   "status": "present",
+   "page": 0,
+   "box": [
+    56.6,
+    290.1,
+    218.3,
+    308.6
+   ],
+   "handwritten": false
+  },
+  "entries[51].lk_label": {
+   "value": "Ganzkörperwäsche",
+   "status": "present",
+   "page": 0,
+   "box": [
+    56.6,
+    290.1,
+    218.3,
+    308.6
+   ],
+   "handwritten": false
+  },
+  "entries[51].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    1628.2,
+    273.8,
+    1653.7,
+    305.3
+   ],
+   "handwritten": true
+  },
+  "entries[51].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    54.5,
+    216.9,
+    286.0,
+    238.2
+   ],
+   "handwritten": false
+  },
+  "entries[51].staff_initials": {
+   "value": "JR",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1628.2,
+    273.8,
+    1653.7,
+    305.3
+   ],
+   "handwritten": true
+  },
+  "entries[51].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1628.2,
+    273.8,
+    1653.7,
+    305.3
+   ],
+   "handwritten": false
+  },
+  "entries[52].date": {
+   "value": "2026-10-30",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1630.8,
+    144.7,
+    1645.9,
+    160.6
+   ],
+   "handwritten": false
+  },
+  "entries[52].time": {
+   "value": "06:50",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1626.5,
+    230.4,
+    1653.6,
+    253.9
+   ],
+   "handwritten": true
+  },
+  "entries[52].lk_code": {
+   "value": "LK03",
+   "status": "present",
+   "page": 0,
+   "box": [
+    57.5,
+    340.2,
+    256.7,
+    359.4
+   ],
+   "handwritten": false
+  },
+  "entries[52].lk_label": {
+   "value": "Hilfe bei Ausscheidungen",
+   "status": "present",
+   "page": 0,
+   "box": [
+    57.5,
+    340.2,
+    256.7,
+    359.4
+   ],
+   "handwritten": false
+  },
+  "entries[52].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    1629.3,
+    324.9,
+    1654.1,
+    352.5
+   ],
+   "handwritten": true
+  },
+  "entries[52].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    54.5,
+    216.9,
+    286.0,
+    238.2
+   ],
+   "handwritten": false
+  },
+  "entries[52].staff_initials": {
+   "value": "JR",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1629.3,
+    324.9,
+    1654.1,
+    352.5
+   ],
+   "handwritten": true
+  },
+  "entries[52].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1629.3,
+    324.9,
+    1654.1,
+    352.5
+   ],
+   "handwritten": false
+  },
+  "entries[53].date": {
+   "value": "2026-10-30",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1630.8,
+    144.7,
+    1645.9,
+    160.6
+   ],
+   "handwritten": false
+  },
+  "entries[53].time": {
+   "value": "06:50",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1626.5,
+    230.4,
+    1653.6,
+    253.9
+   ],
+   "handwritten": true
+  },
+  "entries[53].lk_code": {
+   "value": "LK07",
+   "status": "present",
+   "page": 0,
+   "box": [
+    58.4,
+    391.7,
+    219.3,
+    410.2
+   ],
+   "handwritten": false
+  },
+  "entries[53].lk_label": {
+   "value": "An- und Auskleiden",
+   "status": "present",
+   "page": 0,
+   "box": [
+    58.4,
+    391.7,
+    219.3,
+    410.2
+   ],
+   "handwritten": false
+  },
+  "entries[53].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    1629.9,
+    377.6,
+    1655.2,
+    404.6
+   ],
+   "handwritten": true
+  },
+  "entries[53].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    54.5,
+    216.9,
+    286.0,
+    238.2
+   ],
+   "handwritten": false
+  },
+  "entries[53].staff_initials": {
+   "value": "JR",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1629.9,
+    377.6,
+    1655.2,
+    404.6
+   ],
+   "handwritten": true
+  },
+  "entries[53].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1629.9,
+    377.6,
+    1655.2,
+    404.6
+   ],
+   "handwritten": false
+  },
+  "entries[#]": {
+   "value": 54,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "provider_ik": {
+   "value": "469960557",
+   "status": "present",
+   "page": 0,
+   "box": [
+    598.0,
+    110.1,
+    710.8,
+    135.5
+   ],
+   "handwritten": false
+  },
+  "month": {
+   "value": "2026-10",
+   "status": "present",
+   "page": 0,
+   "box": [
+    768.5,
+    107.5,
+    856.3,
+    132.5
+   ],
+   "handwritten": false
+  },
+  "patient_name": {
+   "value": "Jäger, Renate",
+   "status": "present",
+   "page": 0,
+   "box": [
+    901.1,
+    103.8,
+    1063.9,
+    130.1
+   ],
+   "handwritten": false
+  },
+  "kvnr": {
+   "value": "H986862929",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1128.5,
+    100.4,
+    1253.8,
+    126.0
+   ],
+   "handwritten": false
+  },
+  "payer_name": {
+   "value": "AOK Bayern – Pflegekasse",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1299.0,
+    94.2,
+    1599.1,
+    123.0
+   ],
+   "handwritten": false
+  },
+  "pflegegrad": {
+   "value": 4,
+   "status": "present",
+   "page": 0,
+   "box": [
+    1618.3,
+    93.6,
+    1631.3,
+    117.3
+   ],
+   "handwritten": false
+  },
+  "doc_type": {
+   "value": "visit_log_sgbxi",
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "patient_signature": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    477.5,
+    645.0,
+    568.6,
+    713.0
+   ],
+   "handwritten": false
+  },
+  "provider_signature": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1189.0,
+    600.1,
+    1514.8,
+    728.3
+   ],
+   "handwritten": false
+  }
+ },
+ "regions": {
+  "patient_signature": {
+   "page": 0,
+   "box": [
+    477.5,
+    645.0,
+    568.6,
+    713.0
+   ],
+   "state": "present"
+  },
+  "provider_signature": {
+   "page": 0,
+   "box": [
+    1189.0,
+    600.1,
+    1514.8,
+    728.3
+   ],
+   "state": "present"
+  }
+ },
+ "defects": [
+  "D20"
+ ],
+ "synthetic": true
+}

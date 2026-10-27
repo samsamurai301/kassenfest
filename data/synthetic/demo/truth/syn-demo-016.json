@@ -1,0 +1,6394 @@
+{
+ "doc_id": "syn-demo-016",
+ "doc_type": "visit_log_sgbxi",
+ "variant": "scan",
+ "seed": 2313081753,
+ "patient_id": "p06",
+ "month": "2026-10",
+ "pages": [
+  {
+   "index": 0,
+   "image": "../pages/syn-demo-016.jpg",
+   "width": 1755,
+   "height": 1241
+  }
+ ],
+ "fields": {
+  "entries[0].date": {
+   "value": "2026-10-01",
+   "status": "present",
+   "page": 0,
+   "box": [
+    361.9,
+    139.5,
+    369.7,
+    155.3
+   ],
+   "handwritten": false
+  },
+  "entries[0].time": {
+   "value": "07:05",
+   "status": "present",
+   "page": 0,
+   "box": [
+    349.7,
+    224.6,
+    377.9,
+    247.0
+   ],
+   "handwritten": true
+  },
+  "entries[0].lk_code": {
+   "value": "LK02",
+   "status": "present",
+   "page": 0,
+   "box": [
+    71.7,
+    252.7,
+    179.6,
+    270.8
+   ],
+   "handwritten": false
+  },
+  "entries[0].lk_label": {
+   "value": "Teilwäsche",
+   "status": "present",
+   "page": 0,
+   "box": [
+    71.7,
+    252.7,
+    179.6,
+    270.8
+   ],
+   "handwritten": false
+  },
+  "entries[0].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    349.6,
+    269.5,
+    374.6,
+    298.2
+   ],
+   "handwritten": true
+  },
+  "entries[0].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    72.5,
+    180.7,
+    304.1,
+    203.2
+   ],
+   "handwritten": false
+  },
+  "entries[0].staff_initials": {
+   "value": "SB",
+   "status": "present",
+   "page": 0,
+   "box": [
+    349.6,
+    269.5,
+    374.6,
+    298.2
+   ],
+   "handwritten": true
+  },
+  "entries[0].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    349.6,
+    269.5,
+    374.6,
+    298.2
+   ],
+   "handwritten": false
+  },
+  "entries[1].date": {
+   "value": "2026-10-01",
+   "status": "present",
+   "page": 0,
+   "box": [
+    361.9,
+    139.5,
+    369.7,
+    155.3
+   ],
+   "handwritten": false
+  },
+  "entries[1].time": {
+   "value": "07:05",
+   "status": "present",
+   "page": 0,
+   "box": [
+    349.7,
+    224.6,
+    377.9,
+    247.0
+   ],
+   "handwritten": true
+  },
+  "entries[1].lk_code": {
+   "value": "LK07",
+   "status": "present",
+   "page": 0,
+   "box": [
+    70.5,
+    303.5,
+    231.5,
+    322.8
+   ],
+   "handwritten": false
+  },
+  "entries[1].lk_label": {
+   "value": "An- und Auskleiden",
+   "status": "present",
+   "page": 0,
+   "box": [
+    70.5,
+    303.5,
+    231.5,
+    322.8
+   ],
+   "handwritten": false
+  },
+  "entries[1].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    349.3,
+    319.2,
+    373.8,
+    347.3
+   ],
+   "handwritten": true
+  },
+  "entries[1].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    72.5,
+    180.7,
+    304.1,
+    203.2
+   ],
+   "handwritten": false
+  },
+  "entries[1].staff_initials": {
+   "value": "SB",
+   "status": "present",
+   "page": 0,
+   "box": [
+    349.3,
+    319.2,
+    373.8,
+    347.3
+   ],
+   "handwritten": true
+  },
+  "entries[1].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    349.3,
+    319.2,
+    373.8,
+    347.3
+   ],
+   "handwritten": false
+  },
+  "entries[2].date": {
+   "value": "2026-10-01",
+   "status": "present",
+   "page": 0,
+   "box": [
+    361.9,
+    139.5,
+    369.7,
+    155.3
+   ],
+   "handwritten": false
+  },
+  "entries[2].time": {
+   "value": "11:45",
+   "status": "present",
+   "page": 0,
+   "box": [
+    341.9,
+    372.1,
+    379.2,
+    394.8
+   ],
+   "handwritten": true
+  },
+  "entries[2].lk_code": {
+   "value": "LK04",
+   "status": "present",
+   "page": 0,
+   "box": [
+    68.3,
+    399.1,
+    313.1,
+    420.4
+   ],
+   "handwritten": false
+  },
+  "entries[2].lk_label": {
+   "value": "Hilfe bei der Nahrungsaufnahme",
+   "status": "present",
+   "page": 0,
+   "box": [
+    68.3,
+    399.1,
+    313.1,
+    420.4
+   ],
+   "handwritten": false
+  },
+  "entries[2].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    342.0,
+    415.5,
+    376.9,
+    442.8
+   ],
+   "handwritten": true
+  },
+  "entries[2].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    72.5,
+    180.7,
+    304.1,
+    203.2
+   ],
+   "handwritten": false
+  },
+  "entries[2].staff_initials": {
+   "value": "AW",
+   "status": "present",
+   "page": 0,
+   "box": [
+    342.0,
+    415.5,
+    376.9,
+    442.8
+   ],
+   "handwritten": true
+  },
+  "entries[2].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    342.0,
+    415.5,
+    376.9,
+    442.8
+   ],
+   "handwritten": false
+  },
+  "entries[3].date": {
+   "value": "2026-10-02",
+   "status": "present",
+   "page": 0,
+   "box": [
+    406.4,
+    140.6,
+    414.2,
+    156.3
+   ],
+   "handwritten": false
+  },
+  "entries[3].time": {
+   "value": "11:50",
+   "status": "present",
+   "page": 0,
+   "box": [
+    385.3,
+    373.6,
+    424.1,
+    395.1
+   ],
+   "handwritten": true
+  },
+  "entries[3].lk_code": {
+   "value": "LK04",
+   "status": "present",
+   "page": 0,
+   "box": [
+    68.3,
+    399.1,
+    313.1,
+    420.4
+   ],
+   "handwritten": false
+  },
+  "entries[3].lk_label": {
+   "value": "Hilfe bei der Nahrungsaufnahme",
+   "status": "present",
+   "page": 0,
+   "box": [
+    68.3,
+    399.1,
+    313.1,
+    420.4
+   ],
+   "handwritten": false
+  },
+  "entries[3].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    386.5,
+    415.5,
+    421.9,
+    444.4
+   ],
+   "handwritten": true
+  },
+  "entries[3].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    72.5,
+    180.7,
+    304.1,
+    203.2
+   ],
+   "handwritten": false
+  },
+  "entries[3].staff_initials": {
+   "value": "AW",
+   "status": "present",
+   "page": 0,
+   "box": [
+    386.5,
+    415.5,
+    421.9,
+    444.4
+   ],
+   "handwritten": true
+  },
+  "entries[3].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    386.5,
+    415.5,
+    421.9,
+    444.4
+   ],
+   "handwritten": false
+  },
+  "entries[4].date": {
+   "value": "2026-10-03",
+   "status": "present",
+   "page": 0,
+   "box": [
+    451.0,
+    141.6,
+    458.8,
+    157.4
+   ],
+   "handwritten": false
+  },
+  "entries[4].time": {
+   "value": "12:05",
+   "status": "present",
+   "page": 0,
+   "box": [
+    431.6,
+    373.7,
+    467.0,
+    398.4
+   ],
+   "handwritten": true
+  },
+  "entries[4].lk_code": {
+   "value": "LK04",
+   "status": "present",
+   "page": 0,
+   "box": [
+    68.3,
+    399.1,
+    313.1,
+    420.4
+   ],
+   "handwritten": false
+  },
+  "entries[4].lk_label": {
+   "value": "Hilfe bei der Nahrungsaufnahme",
+   "status": "present",
+   "page": 0,
+   "box": [
+    68.3,
+    399.1,
+    313.1,
+    420.4
+   ],
+   "handwritten": false
+  },
+  "entries[4].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    436.0,
+    418.9,
+    460.4,
+    446.4
+   ],
+   "handwritten": true
+  },
+  "entries[4].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    72.5,
+    180.7,
+    304.1,
+    203.2
+   ],
+   "handwritten": false
+  },
+  "entries[4].staff_initials": {
+   "value": "SB",
+   "status": "present",
+   "page": 0,
+   "box": [
+    436.0,
+    418.9,
+    460.4,
+    446.4
+   ],
+   "handwritten": true
+  },
+  "entries[4].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    436.0,
+    418.9,
+    460.4,
+    446.4
+   ],
+   "handwritten": false
+  },
+  "entries[5].date": {
+   "value": "2026-10-04",
+   "status": "present",
+   "page": 0,
+   "box": [
+    495.6,
+    142.6,
+    503.4,
+    158.4
+   ],
+   "handwritten": false
+  },
+  "entries[5].time": {
+   "value": "11:55",
+   "status": "present",
+   "page": 0,
+   "box": [
+    475.1,
+    375.7,
+    513.1,
+    397.5
+   ],
+   "handwritten": true
+  },
+  "entries[5].lk_code": {
+   "value": "LK04",
+   "status": "present",
+   "page": 0,
+   "box": [
+    68.3,
+    399.1,
+    313.1,
+    420.4
+   ],
+   "handwritten": false
+  },
+  "entries[5].lk_label": {
+   "value": "Hilfe bei der Nahrungsaufnahme",
+   "status": "present",
+   "page": 0,
+   "box": [
+    68.3,
+    399.1,
+    313.1,
+    420.4
+   ],
+   "handwritten": false
+  },
+  "entries[5].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    475.0,
+    418.6,
+    510.7,
+    446.7
+   ],
+   "handwritten": true
+  },
+  "entries[5].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    72.5,
+    180.7,
+    304.1,
+    203.2
+   ],
+   "handwritten": false
+  },
+  "entries[5].staff_initials": {
+   "value": "AW",
+   "status": "present",
+   "page": 0,
+   "box": [
+    475.0,
+    418.6,
+    510.7,
+    446.7
+   ],
+   "handwritten": true
+  },
+  "entries[5].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    475.0,
+    418.6,
+    510.7,
+    446.7
+   ],
+   "handwritten": false
+  },
+  "entries[6].date": {
+   "value": "2026-10-05",
+   "status": "present",
+   "page": 0,
+   "box": [
+    540.1,
+    143.7,
+    547.9,
+    159.5
+   ],
+   "handwritten": false
+  },
+  "entries[6].time": {
+   "value": "07:05",
+   "status": "present",
+   "page": 0,
+   "box": [
+    529.0,
+    228.5,
+    554.6,
+    250.2
+   ],
+   "handwritten": true
+  },
+  "entries[6].lk_code": {
+   "value": "LK02",
+   "status": "present",
+   "page": 0,
+   "box": [
+    71.7,
+    252.7,
+    179.6,
+    270.8
+   ],
+   "handwritten": false
+  },
+  "entries[6].lk_label": {
+   "value": "Teilwäsche",
+   "status": "present",
+   "page": 0,
+   "box": [
+    71.7,
+    252.7,
+    179.6,
+    270.8
+   ],
+   "handwritten": false
+  },
+  "entries[6].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    529.5,
+    271.9,
+    552.8,
+    300.8
+   ],
+   "handwritten": true
+  },
+  "entries[6].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    72.5,
+    180.7,
+    304.1,
+    203.2
+   ],
+   "handwritten": false
+  },
+  "entries[6].staff_initials": {
+   "value": "LF",
+   "status": "present",
+   "page": 0,
+   "box": [
+    529.5,
+    271.9,
+    552.8,
+    300.8
+   ],
+   "handwritten": true
+  },
+  "entries[6].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    529.5,
+    271.9,
+    552.8,
+    300.8
+   ],
+   "handwritten": false
+  },
+  "entries[7].date": {
+   "value": "2026-10-05",
+   "status": "present",
+   "page": 0,
+   "box": [
+    540.1,
+    143.7,
+    547.9,
+    159.5
+   ],
+   "handwritten": false
+  },
+  "entries[7].time": {
+   "value": "07:05",
+   "status": "present",
+   "page": 0,
+   "box": [
+    529.0,
+    228.5,
+    554.6,
+    250.2
+   ],
+   "handwritten": true
+  },
+  "entries[7].lk_code": {
+   "value": "LK07",
+   "status": "present",
+   "page": 0,
+   "box": [
+    70.5,
+    303.5,
+    231.5,
+    322.8
+   ],
+   "handwritten": false
+  },
+  "entries[7].lk_label": {
+   "value": "An- und Auskleiden",
+   "status": "present",
+   "page": 0,
+   "box": [
+    70.5,
+    303.5,
+    231.5,
+    322.8
+   ],
+   "handwritten": false
+  },
+  "entries[7].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    527.0,
+    323.4,
+    551.5,
+    352.0
+   ],
+   "handwritten": true
+  },
+  "entries[7].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    72.5,
+    180.7,
+    304.1,
+    203.2
+   ],
+   "handwritten": false
+  },
+  "entries[7].staff_initials": {
+   "value": "LF",
+   "status": "present",
+   "page": 0,
+   "box": [
+    527.0,
+    323.4,
+    551.5,
+    352.0
+   ],
+   "handwritten": true
+  },
+  "entries[7].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    527.0,
+    323.4,
+    551.5,
+    352.0
+   ],
+   "handwritten": false
+  },
+  "entries[8].date": {
+   "value": "2026-10-05",
+   "status": "present",
+   "page": 0,
+   "box": [
+    540.1,
+    143.7,
+    547.9,
+    159.5
+   ],
+   "handwritten": false
+  },
+  "entries[8].time": {
+   "value": "11:35",
+   "status": "present",
+   "page": 0,
+   "box": [
+    520.7,
+    375.8,
+    556.3,
+    398.5
+   ],
+   "handwritten": true
+  },
+  "entries[8].lk_code": {
+   "value": "LK04",
+   "status": "present",
+   "page": 0,
+   "box": [
+    68.3,
+    399.1,
+    313.1,
+    420.4
+   ],
+   "handwritten": false
+  },
+  "entries[8].lk_label": {
+   "value": "Hilfe bei der Nahrungsaufnahme",
+   "status": "present",
+   "page": 0,
+   "box": [
+    68.3,
+    399.1,
+    313.1,
+    420.4
+   ],
+   "handwritten": false
+  },
+  "entries[8].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    524.6,
+    421.0,
+    550.0,
+    447.6
+   ],
+   "handwritten": true
+  },
+  "entries[8].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    72.5,
+    180.7,
+    304.1,
+    203.2
+   ],
+   "handwritten": false
+  },
+  "entries[8].staff_initials": {
+   "value": "JR",
+   "status": "present",
+   "page": 0,
+   "box": [
+    524.6,
+    421.0,
+    550.0,
+    447.6
+   ],
+   "handwritten": true
+  },
+  "entries[8].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    524.6,
+    421.0,
+    550.0,
+    447.6
+   ],
+   "handwritten": false
+  },
+  "entries[9].date": {
+   "value": "2026-10-06",
+   "status": "present",
+   "page": 0,
+   "box": [
+    584.7,
+    144.7,
+    592.5,
+    160.5
+   ],
+   "handwritten": false
+  },
+  "entries[9].time": {
+   "value": "07:05",
+   "status": "present",
+   "page": 0,
+   "box": [
+    572.6,
+    228.8,
+    600.5,
+    253.3
+   ],
+   "handwritten": true
+  },
+  "entries[9].lk_code": {
+   "value": "LK02",
+   "status": "present",
+   "page": 0,
+   "box": [
+    71.7,
+    252.7,
+    179.6,
+    270.8
+   ],
+   "handwritten": false
+  },
+  "entries[9].lk_label": {
+   "value": "Teilwäsche",
+   "status": "present",
+   "page": 0,
+   "box": [
+    71.7,
+    252.7,
+    179.6,
+    270.8
+   ],
+   "handwritten": false
+  },
+  "entries[9].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    573.1,
+    275.5,
+    597.7,
+    301.6
+   ],
+   "handwritten": true
+  },
+  "entries[9].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    72.5,
+    180.7,
+    304.1,
+    203.2
+   ],
+   "handwritten": false
+  },
+  "entries[9].staff_initials": {
+   "value": "SB",
+   "status": "present",
+   "page": 0,
+   "box": [
+    573.1,
+    275.5,
+    597.7,
+    301.6
+   ],
+   "handwritten": true
+  },
+  "entries[9].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    573.1,
+    275.5,
+    597.7,
+    301.6
+   ],
+   "handwritten": false
+  },
+  "entries[10].date": {
+   "value": "2026-10-06",
+   "status": "present",
+   "page": 0,
+   "box": [
+    584.7,
+    144.7,
+    592.5,
+    160.5
+   ],
+   "handwritten": false
+  },
+  "entries[10].time": {
+   "value": "07:05",
+   "status": "present",
+   "page": 0,
+   "box": [
+    572.6,
+    228.8,
+    600.5,
+    253.3
+   ],
+   "handwritten": true
+  },
+  "entries[10].lk_code": {
+   "value": "LK07",
+   "status": "present",
+   "page": 0,
+   "box": [
+    70.5,
+    303.5,
+    231.5,
+    322.8
+   ],
+   "handwritten": false
+  },
+  "entries[10].lk_label": {
+   "value": "An- und Auskleiden",
+   "status": "present",
+   "page": 0,
+   "box": [
+    70.5,
+    303.5,
+    231.5,
+    322.8
+   ],
+   "handwritten": false
+  },
+  "entries[10].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    571.6,
+    325.6,
+    596.2,
+    352.3
+   ],
+   "handwritten": true
+  },
+  "entries[10].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    72.5,
+    180.7,
+    304.1,
+    203.2
+   ],
+   "handwritten": false
+  },
+  "entries[10].staff_initials": {
+   "value": "SB",
+   "status": "present",
+   "page": 0,
+   "box": [
+    571.6,
+    325.6,
+    596.2,
+    352.3
+   ],
+   "handwritten": true
+  },
+  "entries[10].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    571.6,
+    325.6,
+    596.2,
+    352.3
+   ],
+   "handwritten": false
+  },
+  "entries[11].date": {
+   "value": "2026-10-06",
+   "status": "present",
+   "page": 0,
+   "box": [
+    584.7,
+    144.7,
+    592.5,
+    160.5
+   ],
+   "handwritten": false
+  },
+  "entries[11].time": {
+   "value": "11:45",
+   "status": "present",
+   "page": 0,
+   "box": [
+    564.7,
+    377.5,
+    600.8,
+    401.1
+   ],
+   "handwritten": true
+  },
+  "entries[11].lk_code": {
+   "value": "LK04",
+   "status": "present",
+   "page": 0,
+   "box": [
+    68.3,
+    399.1,
+    313.1,
+    420.4
+   ],
+   "handwritten": false
+  },
+  "entries[11].lk_label": {
+   "value": "Hilfe bei der Nahrungsaufnahme",
+   "status": "present",
+   "page": 0,
+   "box": [
+    68.3,
+    399.1,
+    313.1,
+    420.4
+   ],
+   "handwritten": false
+  },
+  "entries[11].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    569.8,
+    421.8,
+    594.9,
+    450.4
+   ],
+   "handwritten": true
+  },
+  "entries[11].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    72.5,
+    180.7,
+    304.1,
+    203.2
+   ],
+   "handwritten": false
+  },
+  "entries[11].staff_initials": {
+   "value": "SB",
+   "status": "present",
+   "page": 0,
+   "box": [
+    569.8,
+    421.8,
+    594.9,
+    450.4
+   ],
+   "handwritten": true
+  },
+  "entries[11].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    569.8,
+    421.8,
+    594.9,
+    450.4
+   ],
+   "handwritten": false
+  },
+  "entries[12].date": {
+   "value": "2026-10-07",
+   "status": "present",
+   "page": 0,
+   "box": [
+    629.3,
+    145.7,
+    637.1,
+    161.5
+   ],
+   "handwritten": false
+  },
+  "entries[12].time": {
+   "value": "06:55",
+   "status": "present",
+   "page": 0,
+   "box": [
+    614.1,
+    232.1,
+    647.6,
+    254.5
+   ],
+   "handwritten": true
+  },
+  "entries[12].lk_code": {
+   "value": "LK02",
+   "status": "present",
+   "page": 0,
+   "box": [
+    71.7,
+    252.7,
+    179.6,
+    270.8
+   ],
+   "handwritten": false
+  },
+  "entries[12].lk_label": {
+   "value": "Teilwäsche",
+   "status": "present",
+   "page": 0,
+   "box": [
+    71.7,
+    252.7,
+    179.6,
+    270.8
+   ],
+   "handwritten": false
+  },
+  "entries[12].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    612.9,
+    274.8,
+    647.0,
+    302.9
+   ],
+   "handwritten": true
+  },
+  "entries[12].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    72.5,
+    180.7,
+    304.1,
+    203.2
+   ],
+   "handwritten": false
+  },
+  "entries[12].staff_initials": {
+   "value": "AW",
+   "status": "present",
+   "page": 0,
+   "box": [
+    612.9,
+    274.8,
+    647.0,
+    302.9
+   ],
+   "handwritten": true
+  },
+  "entries[12].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    612.9,
+    274.8,
+    647.0,
+    302.9
+   ],
+   "handwritten": false
+  },
+  "entries[13].date": {
+   "value": "2026-10-07",
+   "status": "present",
+   "page": 0,
+   "box": [
+    629.3,
+    145.7,
+    637.1,
+    161.5
+   ],
+   "handwritten": false
+  },
+  "entries[13].time": {
+   "value": "06:55",
+   "status": "present",
+   "page": 0,
+   "box": [
+    614.1,
+    232.1,
+    647.6,
+    254.5
+   ],
+   "handwritten": true
+  },
+  "entries[13].lk_code": {
+   "value": "LK07",
+   "status": "present",
+   "page": 0,
+   "box": [
+    70.5,
+    303.5,
+    231.5,
+    322.8
+   ],
+   "handwritten": false
+  },
+  "entries[13].lk_label": {
+   "value": "An- und Auskleiden",
+   "status": "present",
+   "page": 0,
+   "box": [
+    70.5,
+    303.5,
+    231.5,
+    322.8
+   ],
+   "handwritten": false
+  },
+  "entries[13].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    611.8,
+    325.5,
+    646.0,
+    353.4
+   ],
+   "handwritten": true
+  },
+  "entries[13].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    72.5,
+    180.7,
+    304.1,
+    203.2
+   ],
+   "handwritten": false
+  },
+  "entries[13].staff_initials": {
+   "value": "AW",
+   "status": "present",
+   "page": 0,
+   "box": [
+    611.8,
+    325.5,
+    646.0,
+    353.4
+   ],
+   "handwritten": true
+  },
+  "entries[13].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    611.8,
+    325.5,
+    646.0,
+    353.4
+   ],
+   "handwritten": false
+  },
+  "entries[14].date": {
+   "value": "2026-10-07",
+   "status": "present",
+   "page": 0,
+   "box": [
+    629.3,
+    145.7,
+    637.1,
+    161.5
+   ],
+   "handwritten": false
+  },
+  "entries[14].time": {
+   "value": "11:42",
+   "status": "present",
+   "page": 0,
+   "box": [
+    609.2,
+    378.4,
+    645.9,
+    401.0
+   ],
+   "handwritten": true
+  },
+  "entries[14].lk_code": {
+   "value": "LK04",
+   "status": "present",
+   "page": 0,
+   "box": [
+    68.3,
+    399.1,
+    313.1,
+    420.4
+   ],
+   "handwritten": false
+  },
+  "entries[14].lk_label": {
+   "value": "Hilfe bei der Nahrungsaufnahme",
+   "status": "present",
+   "page": 0,
+   "box": [
+    68.3,
+    399.1,
+    313.1,
+    420.4
+   ],
+   "handwritten": false
+  },
+  "entries[14].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    609.6,
+    421.8,
+    643.9,
+    448.9
+   ],
+   "handwritten": true
+  },
+  "entries[14].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    72.5,
+    180.7,
+    304.1,
+    203.2
+   ],
+   "handwritten": false
+  },
+  "entries[14].staff_initials": {
+   "value": "AW",
+   "status": "present",
+   "page": 0,
+   "box": [
+    609.6,
+    421.8,
+    643.9,
+    448.9
+   ],
+   "handwritten": true
+  },
+  "entries[14].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    609.6,
+    421.8,
+    643.9,
+    448.9
+   ],
+   "handwritten": false
+  },
+  "entries[15].date": {
+   "value": "2026-10-08",
+   "status": "present",
+   "page": 0,
+   "box": [
+    673.9,
+    146.8,
+    681.6,
+    162.6
+   ],
+   "handwritten": false
+  },
+  "entries[15].time": {
+   "value": "06:39",
+   "status": "present",
+   "page": 0,
+   "box": [
+    662.9,
+    231.9,
+    688.4,
+    253.3
+   ],
+   "handwritten": true
+  },
+  "entries[15].lk_code": {
+   "value": "LK02",
+   "status": "present",
+   "page": 0,
+   "box": [
+    71.7,
+    252.7,
+    179.6,
+    270.8
+   ],
+   "handwritten": false
+  },
+  "entries[15].lk_label": {
+   "value": "Teilwäsche",
+   "status": "present",
+   "page": 0,
+   "box": [
+    71.7,
+    252.7,
+    179.6,
+    270.8
+   ],
+   "handwritten": false
+  },
+  "entries[15].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    662.6,
+    276.7,
+    687.5,
+    304.7
+   ],
+   "handwritten": true
+  },
+  "entries[15].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    72.5,
+    180.7,
+    304.1,
+    203.2
+   ],
+   "handwritten": false
+  },
+  "entries[15].staff_initials": {
+   "value": "LF",
+   "status": "present",
+   "page": 0,
+   "box": [
+    662.6,
+    276.7,
+    687.5,
+    304.7
+   ],
+   "handwritten": true
+  },
+  "entries[15].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    662.6,
+    276.7,
+    687.5,
+    304.7
+   ],
+   "handwritten": false
+  },
+  "entries[16].date": {
+   "value": "2026-10-08",
+   "status": "present",
+   "page": 0,
+   "box": [
+    673.9,
+    146.8,
+    681.6,
+    162.6
+   ],
+   "handwritten": false
+  },
+  "entries[16].time": {
+   "value": "06:39",
+   "status": "present",
+   "page": 0,
+   "box": [
+    662.9,
+    231.9,
+    688.4,
+    253.3
+   ],
+   "handwritten": true
+  },
+  "entries[16].lk_code": {
+   "value": "LK07",
+   "status": "present",
+   "page": 0,
+   "box": [
+    70.5,
+    303.5,
+    231.5,
+    322.8
+   ],
+   "handwritten": false
+  },
+  "entries[16].lk_label": {
+   "value": "An- und Auskleiden",
+   "status": "present",
+   "page": 0,
+   "box": [
+    70.5,
+    303.5,
+    231.5,
+    322.8
+   ],
+   "handwritten": false
+  },
+  "entries[16].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    661.1,
+    327.5,
+    685.4,
+    357.4
+   ],
+   "handwritten": true
+  },
+  "entries[16].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    72.5,
+    180.7,
+    304.1,
+    203.2
+   ],
+   "handwritten": false
+  },
+  "entries[16].staff_initials": {
+   "value": "LF",
+   "status": "present",
+   "page": 0,
+   "box": [
+    661.1,
+    327.5,
+    685.4,
+    357.4
+   ],
+   "handwritten": true
+  },
+  "entries[16].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    661.1,
+    327.5,
+    685.4,
+    357.4
+   ],
+   "handwritten": false
+  },
+  "entries[17].date": {
+   "value": "2026-10-08",
+   "status": "present",
+   "page": 0,
+   "box": [
+    673.9,
+    146.8,
+    681.6,
+    162.6
+   ],
+   "handwritten": false
+  },
+  "entries[17].time": {
+   "value": "11:45",
+   "status": "present",
+   "page": 0,
+   "box": [
+    654.9,
+    379.5,
+    689.5,
+    400.6
+   ],
+   "handwritten": true
+  },
+  "entries[17].lk_code": {
+   "value": "LK04",
+   "status": "present",
+   "page": 0,
+   "box": [
+    68.3,
+    399.1,
+    313.1,
+    420.4
+   ],
+   "handwritten": false
+  },
+  "entries[17].lk_label": {
+   "value": "Hilfe bei der Nahrungsaufnahme",
+   "status": "present",
+   "page": 0,
+   "box": [
+    68.3,
+    399.1,
+    313.1,
+    420.4
+   ],
+   "handwritten": false
+  },
+  "entries[17].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    658.2,
+    422.0,
+    685.1,
+    451.2
+   ],
+   "handwritten": true
+  },
+  "entries[17].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    72.5,
+    180.7,
+    304.1,
+    203.2
+   ],
+   "handwritten": false
+  },
+  "entries[17].staff_initials": {
+   "value": "JR",
+   "status": "present",
+   "page": 0,
+   "box": [
+    658.2,
+    422.0,
+    685.1,
+    451.2
+   ],
+   "handwritten": true
+  },
+  "entries[17].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    658.2,
+    422.0,
+    685.1,
+    451.2
+   ],
+   "handwritten": false
+  },
+  "entries[18].date": {
+   "value": "2026-10-09",
+   "status": "present",
+   "page": 0,
+   "box": [
+    718.4,
+    147.8,
+    726.2,
+    163.6
+   ],
+   "handwritten": false
+  },
+  "entries[18].time": {
+   "value": "11:35",
+   "status": "present",
+   "page": 0,
+   "box": [
+    697.9,
+    380.5,
+    735.7,
+    402.9
+   ],
+   "handwritten": true
+  },
+  "entries[18].lk_code": {
+   "value": "LK04",
+   "status": "present",
+   "page": 0,
+   "box": [
+    68.3,
+    399.1,
+    313.1,
+    420.4
+   ],
+   "handwritten": false
+  },
+  "entries[18].lk_label": {
+   "value": "Hilfe bei der Nahrungsaufnahme",
+   "status": "present",
+   "page": 0,
+   "box": [
+    68.3,
+    399.1,
+    313.1,
+    420.4
+   ],
+   "handwritten": false
+  },
+  "entries[18].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    698.8,
+    424.6,
+    733.4,
+    452.8
+   ],
+   "handwritten": true
+  },
+  "entries[18].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    72.5,
+    180.7,
+    304.1,
+    203.2
+   ],
+   "handwritten": false
+  },
+  "entries[18].staff_initials": {
+   "value": "AW",
+   "status": "present",
+   "page": 0,
+   "box": [
+    698.8,
+    424.6,
+    733.4,
+    452.8
+   ],
+   "handwritten": true
+  },
+  "entries[18].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    698.8,
+    424.6,
+    733.4,
+    452.8
+   ],
+   "handwritten": false
+  },
+  "entries[19].date": {
+   "value": "2026-10-10",
+   "status": "present",
+   "page": 0,
+   "box": [
+    759.3,
+    148.8,
+    774.5,
+    164.7
+   ],
+   "handwritten": false
+  },
+  "entries[19].time": {
+   "value": "11:50",
+   "status": "present",
+   "page": 0,
+   "box": [
+    741.5,
+    380.3,
+    780.7,
+    402.6
+   ],
+   "handwritten": true
+  },
+  "entries[19].lk_code": {
+   "value": "LK04",
+   "status": "present",
+   "page": 0,
+   "box": [
+    68.3,
+    399.1,
+    313.1,
+    420.4
+   ],
+   "handwritten": false
+  },
+  "entries[19].lk_label": {
+   "value": "Hilfe bei der Nahrungsaufnahme",
+   "status": "present",
+   "page": 0,
+   "box": [
+    68.3,
+    399.1,
+    313.1,
+    420.4
+   ],
+   "handwritten": false
+  },
+  "entries[19].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    742.6,
+    426.0,
+    777.3,
+    454.1
+   ],
+   "handwritten": true
+  },
+  "entries[19].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    72.5,
+    180.7,
+    304.1,
+    203.2
+   ],
+   "handwritten": false
+  },
+  "entries[19].staff_initials": {
+   "value": "AW",
+   "status": "present",
+   "page": 0,
+   "box": [
+    742.6,
+    426.0,
+    777.3,
+    454.1
+   ],
+   "handwritten": true
+  },
+  "entries[19].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    742.6,
+    426.0,
+    777.3,
+    454.1
+   ],
+   "handwritten": false
+  },
+  "entries[20].date": {
+   "value": "2026-10-11",
+   "status": "present",
+   "page": 0,
+   "box": [
+    804.3,
+    149.8,
+    818.5,
+    165.8
+   ],
+   "handwritten": false
+  },
+  "entries[20].time": {
+   "value": "11:35",
+   "status": "present",
+   "page": 0,
+   "box": [
+    786.8,
+    382.3,
+    825.2,
+    405.0
+   ],
+   "handwritten": true
+  },
+  "entries[20].lk_code": {
+   "value": "LK04",
+   "status": "present",
+   "page": 0,
+   "box": [
+    68.3,
+    399.1,
+    313.1,
+    420.4
+   ],
+   "handwritten": false
+  },
+  "entries[20].lk_label": {
+   "value": "Hilfe bei der Nahrungsaufnahme",
+   "status": "present",
+   "page": 0,
+   "box": [
+    68.3,
+    399.1,
+    313.1,
+    420.4
+   ],
+   "handwritten": false
+  },
+  "entries[20].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    787.9,
+    426.2,
+    822.3,
+    454.7
+   ],
+   "handwritten": true
+  },
+  "entries[20].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    72.5,
+    180.7,
+    304.1,
+    203.2
+   ],
+   "handwritten": false
+  },
+  "entries[20].staff_initials": {
+   "value": "AW",
+   "status": "present",
+   "page": 0,
+   "box": [
+    787.9,
+    426.2,
+    822.3,
+    454.7
+   ],
+   "handwritten": true
+  },
+  "entries[20].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    787.9,
+    426.2,
+    822.3,
+    454.7
+   ],
+   "handwritten": false
+  },
+  "entries[21].date": {
+   "value": "2026-10-12",
+   "status": "present",
+   "page": 0,
+   "box": [
+    848.4,
+    150.8,
+    863.6,
+    166.8
+   ],
+   "handwritten": false
+  },
+  "entries[21].time": {
+   "value": "06:55",
+   "status": "present",
+   "page": 0,
+   "box": [
+    840.1,
+    237.0,
+    868.0,
+    260.4
+   ],
+   "handwritten": true
+  },
+  "entries[21].lk_code": {
+   "value": "LK02",
+   "status": "present",
+   "page": 0,
+   "box": [
+    71.7,
+    252.7,
+    179.6,
+    270.8
+   ],
+   "handwritten": false
+  },
+  "entries[21].lk_label": {
+   "value": "Teilwäsche",
+   "status": "present",
+   "page": 0,
+   "box": [
+    71.7,
+    252.7,
+    179.6,
+    270.8
+   ],
+   "handwritten": false
+  },
+  "entries[21].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    840.4,
+    279.7,
+    865.4,
+    308.6
+   ],
+   "handwritten": true
+  },
+  "entries[21].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    72.5,
+    180.7,
+    304.1,
+    203.2
+   ],
+   "handwritten": false
+  },
+  "entries[21].staff_initials": {
+   "value": "SB",
+   "status": "present",
+   "page": 0,
+   "box": [
+    840.4,
+    279.7,
+    865.4,
+    308.6
+   ],
+   "handwritten": true
+  },
+  "entries[21].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    840.4,
+    279.7,
+    865.4,
+    308.6
+   ],
+   "handwritten": false
+  },
+  "entries[22].date": {
+   "value": "2026-10-12",
+   "status": "present",
+   "page": 0,
+   "box": [
+    848.4,
+    150.8,
+    863.6,
+    166.8
+   ],
+   "handwritten": false
+  },
+  "entries[22].time": {
+   "value": "06:55",
+   "status": "present",
+   "page": 0,
+   "box": [
+    840.1,
+    237.0,
+    868.0,
+    260.4
+   ],
+   "handwritten": true
+  },
+  "entries[22].lk_code": {
+   "value": "LK07",
+   "status": "present",
+   "page": 0,
+   "box": [
+    70.5,
+    303.5,
+    231.5,
+    322.8
+   ],
+   "handwritten": false
+  },
+  "entries[22].lk_label": {
+   "value": "An- und Auskleiden",
+   "status": "present",
+   "page": 0,
+   "box": [
+    70.5,
+    303.5,
+    231.5,
+    322.8
+   ],
+   "handwritten": false
+  },
+  "entries[22].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    838.8,
+    331.8,
+    863.9,
+    358.9
+   ],
+   "handwritten": true
+  },
+  "entries[22].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    72.5,
+    180.7,
+    304.1,
+    203.2
+   ],
+   "handwritten": false
+  },
+  "entries[22].staff_initials": {
+   "value": "SB",
+   "status": "present",
+   "page": 0,
+   "box": [
+    838.8,
+    331.8,
+    863.9,
+    358.9
+   ],
+   "handwritten": true
+  },
+  "entries[22].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    838.8,
+    331.8,
+    863.9,
+    358.9
+   ],
+   "handwritten": false
+  },
+  "entries[23].date": {
+   "value": "2026-10-12",
+   "status": "present",
+   "page": 0,
+   "box": [
+    848.4,
+    150.8,
+    863.6,
+    166.8
+   ],
+   "handwritten": false
+  },
+  "entries[23].time": {
+   "value": "11:40",
+   "status": "present",
+   "page": 0,
+   "box": [
+    831.3,
+    384.7,
+    869.2,
+    406.4
+   ],
+   "handwritten": true
+  },
+  "entries[23].lk_code": {
+   "value": "LK04",
+   "status": "present",
+   "page": 0,
+   "box": [
+    68.3,
+    399.1,
+    313.1,
+    420.4
+   ],
+   "handwritten": false
+  },
+  "entries[23].lk_label": {
+   "value": "Hilfe bei der Nahrungsaufnahme",
+   "status": "present",
+   "page": 0,
+   "box": [
+    68.3,
+    399.1,
+    313.1,
+    420.4
+   ],
+   "handwritten": false
+  },
+  "entries[23].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    832.3,
+    426.6,
+    867.4,
+    455.2
+   ],
+   "handwritten": true
+  },
+  "entries[23].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    72.5,
+    180.7,
+    304.1,
+    203.2
+   ],
+   "handwritten": false
+  },
+  "entries[23].staff_initials": {
+   "value": "AW",
+   "status": "present",
+   "page": 0,
+   "box": [
+    832.3,
+    426.6,
+    867.4,
+    455.2
+   ],
+   "handwritten": true
+  },
+  "entries[23].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    832.3,
+    426.6,
+    867.4,
+    455.2
+   ],
+   "handwritten": false
+  },
+  "entries[24].date": {
+   "value": "2026-10-13",
+   "status": "present",
+   "page": 0,
+   "box": [
+    893.0,
+    151.9,
+    908.2,
+    167.8
+   ],
+   "handwritten": false
+  },
+  "entries[24].time": {
+   "value": "06:54",
+   "status": "present",
+   "page": 0,
+   "box": [
+    884.5,
+    235.2,
+    912.8,
+    258.2
+   ],
+   "handwritten": true
+  },
+  "entries[24].lk_code": {
+   "value": "LK02",
+   "status": "present",
+   "page": 0,
+   "box": [
+    71.7,
+    252.7,
+    179.6,
+    270.8
+   ],
+   "handwritten": false
+  },
+  "entries[24].lk_label": {
+   "value": "Teilwäsche",
+   "status": "present",
+   "page": 0,
+   "box": [
+    71.7,
+    252.7,
+    179.6,
+    270.8
+   ],
+   "handwritten": false
+  },
+  "entries[24].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    884.4,
+    282.9,
+    911.9,
+    313.8
+   ],
+   "handwritten": true
+  },
+  "entries[24].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    72.5,
+    180.7,
+    304.1,
+    203.2
+   ],
+   "handwritten": false
+  },
+  "entries[24].staff_initials": {
+   "value": "SB",
+   "status": "present",
+   "page": 0,
+   "box": [
+    884.4,
+    282.9,
+    911.9,
+    313.8
+   ],
+   "handwritten": true
+  },
+  "entries[24].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    884.4,
+    282.9,
+    911.9,
+    313.8
+   ],
+   "handwritten": false
+  },
+  "entries[25].date": {
+   "value": "2026-10-13",
+   "status": "present",
+   "page": 0,
+   "box": [
+    893.0,
+    151.9,
+    908.2,
+    167.8
+   ],
+   "handwritten": false
+  },
+  "entries[25].time": {
+   "value": "06:54",
+   "status": "present",
+   "page": 0,
+   "box": [
+    884.5,
+    235.2,
+    912.8,
+    258.2
+   ],
+   "handwritten": true
+  },
+  "entries[25].lk_code": {
+   "value": "LK07",
+   "status": "present",
+   "page": 0,
+   "box": [
+    70.5,
+    303.5,
+    231.5,
+    322.8
+   ],
+   "handwritten": false
+  },
+  "entries[25].lk_label": {
+   "value": "An- und Auskleiden",
+   "status": "present",
+   "page": 0,
+   "box": [
+    70.5,
+    303.5,
+    231.5,
+    322.8
+   ],
+   "handwritten": false
+  },
+  "entries[25].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    883.9,
+    333.3,
+    908.6,
+    363.1
+   ],
+   "handwritten": true
+  },
+  "entries[25].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    72.5,
+    180.7,
+    304.1,
+    203.2
+   ],
+   "handwritten": false
+  },
+  "entries[25].staff_initials": {
+   "value": "SB",
+   "status": "present",
+   "page": 0,
+   "box": [
+    883.9,
+    333.3,
+    908.6,
+    363.1
+   ],
+   "handwritten": true
+  },
+  "entries[25].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    883.9,
+    333.3,
+    908.6,
+    363.1
+   ],
+   "handwritten": false
+  },
+  "entries[26].date": {
+   "value": "2026-10-13",
+   "status": "present",
+   "page": 0,
+   "box": [
+    893.0,
+    151.9,
+    908.2,
+    167.8
+   ],
+   "handwritten": false
+  },
+  "entries[26].time": {
+   "value": "11:35",
+   "status": "present",
+   "page": 0,
+   "box": [
+    876.3,
+    384.6,
+    914.0,
+    406.8
+   ],
+   "handwritten": true
+  },
+  "entries[26].lk_code": {
+   "value": "LK04",
+   "status": "present",
+   "page": 0,
+   "box": [
+    68.3,
+    399.1,
+    313.1,
+    420.4
+   ],
+   "handwritten": false
+  },
+  "entries[26].lk_label": {
+   "value": "Hilfe bei der Nahrungsaufnahme",
+   "status": "present",
+   "page": 0,
+   "box": [
+    68.3,
+    399.1,
+    313.1,
+    420.4
+   ],
+   "handwritten": false
+  },
+  "entries[26].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    877.1,
+    428.5,
+    911.4,
+    456.2
+   ],
+   "handwritten": true
+  },
+  "entries[26].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    72.5,
+    180.7,
+    304.1,
+    203.2
+   ],
+   "handwritten": false
+  },
+  "entries[26].staff_initials": {
+   "value": "AW",
+   "status": "present",
+   "page": 0,
+   "box": [
+    877.1,
+    428.5,
+    911.4,
+    456.2
+   ],
+   "handwritten": true
+  },
+  "entries[26].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    877.1,
+    428.5,
+    911.4,
+    456.2
+   ],
+   "handwritten": false
+  },
+  "entries[27].date": {
+   "value": "2026-10-14",
+   "status": "present",
+   "page": 0,
+   "box": [
+    937.6,
+    152.9,
+    952.8,
+    168.9
+   ],
+   "handwritten": false
+  },
+  "entries[27].time": {
+   "value": "07:00",
+   "status": "present",
+   "page": 0,
+   "box": [
+    925.5,
+    239.6,
+    961.1,
+    260.8
+   ],
+   "handwritten": true
+  },
+  "entries[27].lk_code": {
+   "value": "LK02",
+   "status": "present",
+   "page": 0,
+   "box": [
+    71.7,
+    252.7,
+    179.6,
+    270.8
+   ],
+   "handwritten": false
+  },
+  "entries[27].lk_label": {
+   "value": "Teilwäsche",
+   "status": "present",
+   "page": 0,
+   "box": [
+    71.7,
+    252.7,
+    179.6,
+    270.8
+   ],
+   "handwritten": false
+  },
+  "entries[27].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    924.9,
+    283.6,
+    959.1,
+    310.7
+   ],
+   "handwritten": true
+  },
+  "entries[27].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    72.5,
+    180.7,
+    304.1,
+    203.2
+   ],
+   "handwritten": false
+  },
+  "entries[27].staff_initials": {
+   "value": "AW",
+   "status": "present",
+   "page": 0,
+   "box": [
+    924.9,
+    283.6,
+    959.1,
+    310.7
+   ],
+   "handwritten": true
+  },
+  "entries[27].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    924.9,
+    283.6,
+    959.1,
+    310.7
+   ],
+   "handwritten": false
+  },
+  "entries[28].date": {
+   "value": "2026-10-14",
+   "status": "present",
+   "page": 0,
+   "box": [
+    937.6,
+    152.9,
+    952.8,
+    168.9
+   ],
+   "handwritten": false
+  },
+  "entries[28].time": {
+   "value": "07:00",
+   "status": "present",
+   "page": 0,
+   "box": [
+    925.5,
+    239.6,
+    961.1,
+    260.8
+   ],
+   "handwritten": true
+  },
+  "entries[28].lk_code": {
+   "value": "LK07",
+   "status": "present",
+   "page": 0,
+   "box": [
+    70.5,
+    303.5,
+    231.5,
+    322.8
+   ],
+   "handwritten": false
+  },
+  "entries[28].lk_label": {
+   "value": "An- und Auskleiden",
+   "status": "present",
+   "page": 0,
+   "box": [
+    70.5,
+    303.5,
+    231.5,
+    322.8
+   ],
+   "handwritten": false
+  },
+  "entries[28].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    923.6,
+    334.6,
+    957.9,
+    362.8
+   ],
+   "handwritten": true
+  },
+  "entries[28].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    72.5,
+    180.7,
+    304.1,
+    203.2
+   ],
+   "handwritten": false
+  },
+  "entries[28].staff_initials": {
+   "value": "AW",
+   "status": "present",
+   "page": 0,
+   "box": [
+    923.6,
+    334.6,
+    957.9,
+    362.8
+   ],
+   "handwritten": true
+  },
+  "entries[28].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    923.6,
+    334.6,
+    957.9,
+    362.8
+   ],
+   "handwritten": false
+  },
+  "entries[29].date": {
+   "value": "2026-10-14",
+   "status": "present",
+   "page": 0,
+   "box": [
+    937.6,
+    152.9,
+    952.8,
+    168.9
+   ],
+   "handwritten": false
+  },
+  "entries[29].time": {
+   "value": "11:53",
+   "status": "present",
+   "page": 0,
+   "box": [
+    927.8,
+    383.5,
+    951.2,
+    405.5
+   ],
+   "handwritten": true
+  },
+  "entries[29].lk_code": {
+   "value": "LK04",
+   "status": "present",
+   "page": 0,
+   "box": [
+    68.3,
+    399.1,
+    313.1,
+    420.4
+   ],
+   "handwritten": false
+  },
+  "entries[29].lk_label": {
+   "value": "Hilfe bei der Nahrungsaufnahme",
+   "status": "present",
+   "page": 0,
+   "box": [
+    68.3,
+    399.1,
+    313.1,
+    420.4
+   ],
+   "handwritten": false
+  },
+  "entries[29].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    926.3,
+    429.6,
+    950.5,
+    456.7
+   ],
+   "handwritten": true
+  },
+  "entries[29].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    72.5,
+    180.7,
+    304.1,
+    203.2
+   ],
+   "handwritten": false
+  },
+  "entries[29].staff_initials": {
+   "value": "LF",
+   "status": "present",
+   "page": 0,
+   "box": [
+    926.3,
+    429.6,
+    950.5,
+    456.7
+   ],
+   "handwritten": true
+  },
+  "entries[29].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    926.3,
+    429.6,
+    950.5,
+    456.7
+   ],
+   "handwritten": false
+  },
+  "entries[30].date": {
+   "value": "2026-10-15",
+   "status": "present",
+   "page": 0,
+   "box": [
+    982.1,
+    153.9,
+    997.3,
+    169.9
+   ],
+   "handwritten": false
+  },
+  "entries[30].time": {
+   "value": "06:40",
+   "status": "present",
+   "page": 0,
+   "box": [
+    970.8,
+    240.6,
+    1004.8,
+    261.5
+   ],
+   "handwritten": true
+  },
+  "entries[30].lk_code": {
+   "value": "LK02",
+   "status": "present",
+   "page": 0,
+   "box": [
+    71.7,
+    252.7,
+    179.6,
+    270.8
+   ],
+   "handwritten": false
+  },
+  "entries[30].lk_label": {
+   "value": "Teilwäsche",
+   "status": "present",
+   "page": 0,
+   "box": [
+    71.7,
+    252.7,
+    179.6,
+    270.8
+   ],
+   "handwritten": false
+  },
+  "entries[30].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    973.9,
+    284.4,
+    999.8,
+    312.0
+   ],
+   "handwritten": true
+  },
+  "entries[30].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    72.5,
+    180.7,
+    304.1,
+    203.2
+   ],
+   "handwritten": false
+  },
+  "entries[30].staff_initials": {
+   "value": "JR",
+   "status": "present",
+   "page": 0,
+   "box": [
+    973.9,
+    284.4,
+    999.8,
+    312.0
+   ],
+   "handwritten": true
+  },
+  "entries[30].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    973.9,
+    284.4,
+    999.8,
+    312.0
+   ],
+   "handwritten": false
+  },
+  "entries[31].date": {
+   "value": "2026-10-15",
+   "status": "present",
+   "page": 0,
+   "box": [
+    982.1,
+    153.9,
+    997.3,
+    169.9
+   ],
+   "handwritten": false
+  },
+  "entries[31].time": {
+   "value": "06:40",
+   "status": "present",
+   "page": 0,
+   "box": [
+    970.8,
+    240.6,
+    1004.8,
+    261.5
+   ],
+   "handwritten": true
+  },
+  "entries[31].lk_code": {
+   "value": "LK07",
+   "status": "present",
+   "page": 0,
+   "box": [
+    70.5,
+    303.5,
+    231.5,
+    322.8
+   ],
+   "handwritten": false
+  },
+  "entries[31].lk_label": {
+   "value": "An- und Auskleiden",
+   "status": "present",
+   "page": 0,
+   "box": [
+    70.5,
+    303.5,
+    231.5,
+    322.8
+   ],
+   "handwritten": false
+  },
+  "entries[31].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    972.4,
+    335.2,
+    998.8,
+    362.8
+   ],
+   "handwritten": true
+  },
+  "entries[31].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    72.5,
+    180.7,
+    304.1,
+    203.2
+   ],
+   "handwritten": false
+  },
+  "entries[31].staff_initials": {
+   "value": "JR",
+   "status": "present",
+   "page": 0,
+   "box": [
+    972.4,
+    335.2,
+    998.8,
+    362.8
+   ],
+   "handwritten": true
+  },
+  "entries[31].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    972.4,
+    335.2,
+    998.8,
+    362.8
+   ],
+   "handwritten": false
+  },
+  "entries[32].date": {
+   "value": "2026-10-15",
+   "status": "present",
+   "page": 0,
+   "box": [
+    982.1,
+    153.9,
+    997.3,
+    169.9
+   ],
+   "handwritten": false
+  },
+  "entries[32].time": {
+   "value": "11:53",
+   "status": "present",
+   "page": 0,
+   "box": [
+    966.5,
+    384.4,
+    1002.6,
+    408.6
+   ],
+   "handwritten": true
+  },
+  "entries[32].lk_code": {
+   "value": "LK04",
+   "status": "present",
+   "page": 0,
+   "box": [
+    68.3,
+    399.1,
+    313.1,
+    420.4
+   ],
+   "handwritten": false
+  },
+  "entries[32].lk_label": {
+   "value": "Hilfe bei der Nahrungsaufnahme",
+   "status": "present",
+   "page": 0,
+   "box": [
+    68.3,
+    399.1,
+    313.1,
+    420.4
+   ],
+   "handwritten": false
+  },
+  "entries[32].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    970.2,
+    430.7,
+    996.1,
+    458.2
+   ],
+   "handwritten": true
+  },
+  "entries[32].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    72.5,
+    180.7,
+    304.1,
+    203.2
+   ],
+   "handwritten": false
+  },
+  "entries[32].staff_initials": {
+   "value": "SB",
+   "status": "present",
+   "page": 0,
+   "box": [
+    970.2,
+    430.7,
+    996.1,
+    458.2
+   ],
+   "handwritten": true
+  },
+  "entries[32].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    970.2,
+    430.7,
+    996.1,
+    458.2
+   ],
+   "handwritten": false
+  },
+  "entries[33].date": {
+   "value": "2026-10-16",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1026.7,
+    155.0,
+    1041.9,
+    170.9
+   ],
+   "handwritten": false
+  },
+  "entries[33].time": {
+   "value": "11:50",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1012.0,
+    387.0,
+    1045.5,
+    410.1
+   ],
+   "handwritten": true
+  },
+  "entries[33].lk_code": {
+   "value": "LK04",
+   "status": "present",
+   "page": 0,
+   "box": [
+    68.3,
+    399.1,
+    313.1,
+    420.4
+   ],
+   "handwritten": false
+  },
+  "entries[33].lk_label": {
+   "value": "Hilfe bei der Nahrungsaufnahme",
+   "status": "present",
+   "page": 0,
+   "box": [
+    68.3,
+    399.1,
+    313.1,
+    420.4
+   ],
+   "handwritten": false
+  },
+  "entries[33].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    1014.9,
+    432.4,
+    1040.3,
+    460.6
+   ],
+   "handwritten": true
+  },
+  "entries[33].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    72.5,
+    180.7,
+    304.1,
+    203.2
+   ],
+   "handwritten": false
+  },
+  "entries[33].staff_initials": {
+   "value": "JR",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1014.9,
+    432.4,
+    1040.3,
+    460.6
+   ],
+   "handwritten": true
+  },
+  "entries[33].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1014.9,
+    432.4,
+    1040.3,
+    460.6
+   ],
+   "handwritten": false
+  },
+  "entries[34].date": {
+   "value": "2026-10-17",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1071.3,
+    156.0,
+    1086.5,
+    172.0
+   ],
+   "handwritten": false
+  },
+  "entries[34].time": {
+   "value": "11:55",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1053.9,
+    388.6,
+    1092.6,
+    411.4
+   ],
+   "handwritten": true
+  },
+  "entries[34].lk_code": {
+   "value": "LK04",
+   "status": "present",
+   "page": 0,
+   "box": [
+    68.3,
+    399.1,
+    313.1,
+    420.4
+   ],
+   "handwritten": false
+  },
+  "entries[34].lk_label": {
+   "value": "Hilfe bei der Nahrungsaufnahme",
+   "status": "present",
+   "page": 0,
+   "box": [
+    68.3,
+    399.1,
+    313.1,
+    420.4
+   ],
+   "handwritten": false
+  },
+  "entries[34].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    1055.2,
+    432.5,
+    1089.7,
+    461.0
+   ],
+   "handwritten": true
+  },
+  "entries[34].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    72.5,
+    180.7,
+    304.1,
+    203.2
+   ],
+   "handwritten": false
+  },
+  "entries[34].staff_initials": {
+   "value": "AW",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1055.2,
+    432.5,
+    1089.7,
+    461.0
+   ],
+   "handwritten": true
+  },
+  "entries[34].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1055.2,
+    432.5,
+    1089.7,
+    461.0
+   ],
+   "handwritten": false
+  },
+  "entries[35].date": {
+   "value": "2026-10-18",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1115.8,
+    157.1,
+    1131.0,
+    173.0
+   ],
+   "handwritten": false
+  },
+  "entries[35].time": {
+   "value": "11:40",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1099.2,
+    390.4,
+    1136.9,
+    410.9
+   ],
+   "handwritten": true
+  },
+  "entries[35].lk_code": {
+   "value": "LK04",
+   "status": "present",
+   "page": 0,
+   "box": [
+    68.3,
+    399.1,
+    313.1,
+    420.4
+   ],
+   "handwritten": false
+  },
+  "entries[35].lk_label": {
+   "value": "Hilfe bei der Nahrungsaufnahme",
+   "status": "present",
+   "page": 0,
+   "box": [
+    68.3,
+    399.1,
+    313.1,
+    420.4
+   ],
+   "handwritten": false
+  },
+  "entries[35].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    1099.7,
+    433.3,
+    1134.0,
+    461.0
+   ],
+   "handwritten": true
+  },
+  "entries[35].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    72.5,
+    180.7,
+    304.1,
+    203.2
+   ],
+   "handwritten": false
+  },
+  "entries[35].staff_initials": {
+   "value": "AW",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1099.7,
+    433.3,
+    1134.0,
+    461.0
+   ],
+   "handwritten": true
+  },
+  "entries[35].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1099.7,
+    433.3,
+    1134.0,
+    461.0
+   ],
+   "handwritten": false
+  },
+  "entries[36].date": {
+   "value": "2026-10-19",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1160.4,
+    158.1,
+    1175.6,
+    174.1
+   ],
+   "handwritten": false
+  },
+  "entries[36].time": {
+   "value": "07:05",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1150.5,
+    243.7,
+    1181.6,
+    265.8
+   ],
+   "handwritten": true
+  },
+  "entries[36].lk_code": {
+   "value": "LK02",
+   "status": "present",
+   "page": 0,
+   "box": [
+    71.7,
+    252.7,
+    179.6,
+    270.8
+   ],
+   "handwritten": false
+  },
+  "entries[36].lk_label": {
+   "value": "Teilwäsche",
+   "status": "present",
+   "page": 0,
+   "box": [
+    71.7,
+    252.7,
+    179.6,
+    270.8
+   ],
+   "handwritten": false
+  },
+  "entries[36].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    1151.8,
+    288.8,
+    1177.6,
+    317.0
+   ],
+   "handwritten": true
+  },
+  "entries[36].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    72.5,
+    180.7,
+    304.1,
+    203.2
+   ],
+   "handwritten": false
+  },
+  "entries[36].staff_initials": {
+   "value": "JR",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1151.8,
+    288.8,
+    1177.6,
+    317.0
+   ],
+   "handwritten": true
+  },
+  "entries[36].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1151.8,
+    288.8,
+    1177.6,
+    317.0
+   ],
+   "handwritten": false
+  },
+  "entries[37].date": {
+   "value": "2026-10-19",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1160.4,
+    158.1,
+    1175.6,
+    174.1
+   ],
+   "handwritten": false
+  },
+  "entries[37].time": {
+   "value": "07:05",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1150.5,
+    243.7,
+    1181.6,
+    265.8
+   ],
+   "handwritten": true
+  },
+  "entries[37].lk_code": {
+   "value": "LK07",
+   "status": "present",
+   "page": 0,
+   "box": [
+    70.5,
+    303.5,
+    231.5,
+    322.8
+   ],
+   "handwritten": false
+  },
+  "entries[37].lk_label": {
+   "value": "An- und Auskleiden",
+   "status": "present",
+   "page": 0,
+   "box": [
+    70.5,
+    303.5,
+    231.5,
+    322.8
+   ],
+   "handwritten": false
+  },
+  "entries[37].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    1151.1,
+    339.2,
+    1176.3,
+    366.6
+   ],
+   "handwritten": true
+  },
+  "entries[37].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    72.5,
+    180.7,
+    304.1,
+    203.2
+   ],
+   "handwritten": false
+  },
+  "entries[37].staff_initials": {
+   "value": "JR",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1151.1,
+    339.2,
+    1176.3,
+    366.6
+   ],
+   "handwritten": true
+  },
+  "entries[37].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1151.1,
+    339.2,
+    1176.3,
+    366.6
+   ],
+   "handwritten": false
+  },
+  "entries[38].date": {
+   "value": "2026-10-19",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1160.4,
+    158.1,
+    1175.6,
+    174.1
+   ],
+   "handwritten": false
+  },
+  "entries[38].time": {
+   "value": "12:00",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1141.7,
+    390.3,
+    1182.9,
+    412.2
+   ],
+   "handwritten": true
+  },
+  "entries[38].lk_code": {
+   "value": "LK04",
+   "status": "present",
+   "page": 0,
+   "box": [
+    68.3,
+    399.1,
+    313.1,
+    420.4
+   ],
+   "handwritten": false
+  },
+  "entries[38].lk_label": {
+   "value": "Hilfe bei der Nahrungsaufnahme",
+   "status": "present",
+   "page": 0,
+   "box": [
+    68.3,
+    399.1,
+    313.1,
+    420.4
+   ],
+   "handwritten": false
+  },
+  "entries[38].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    1144.1,
+    434.6,
+    1178.4,
+    461.4
+   ],
+   "handwritten": true
+  },
+  "entries[38].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    72.5,
+    180.7,
+    304.1,
+    203.2
+   ],
+   "handwritten": false
+  },
+  "entries[38].staff_initials": {
+   "value": "AW",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1144.1,
+    434.6,
+    1178.4,
+    461.4
+   ],
+   "handwritten": true
+  },
+  "entries[38].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1144.1,
+    434.6,
+    1178.4,
+    461.4
+   ],
+   "handwritten": false
+  },
+  "entries[39].date": {
+   "value": "2026-10-20",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1205.0,
+    159.1,
+    1220.2,
+    175.1
+   ],
+   "handwritten": false
+  },
+  "entries[39].time": {
+   "value": "06:40",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1194.2,
+    244.8,
+    1227.1,
+    266.6
+   ],
+   "handwritten": true
+  },
+  "entries[39].lk_code": {
+   "value": "LK02",
+   "status": "present",
+   "page": 0,
+   "box": [
+    71.7,
+    252.7,
+    179.6,
+    270.8
+   ],
+   "handwritten": false
+  },
+  "entries[39].lk_label": {
+   "value": "Teilwäsche",
+   "status": "present",
+   "page": 0,
+   "box": [
+    71.7,
+    252.7,
+    179.6,
+    270.8
+   ],
+   "handwritten": false
+  },
+  "entries[39].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    1196.7,
+    289.1,
+    1222.4,
+    316.4
+   ],
+   "handwritten": true
+  },
+  "entries[39].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    72.5,
+    180.7,
+    304.1,
+    203.2
+   ],
+   "handwritten": false
+  },
+  "entries[39].staff_initials": {
+   "value": "JR",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1196.7,
+    289.1,
+    1222.4,
+    316.4
+   ],
+   "handwritten": true
+  },
+  "entries[39].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1196.7,
+    289.1,
+    1222.4,
+    316.4
+   ],
+   "handwritten": false
+  },
+  "entries[40].date": {
+   "value": "2026-10-20",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1205.0,
+    159.1,
+    1220.2,
+    175.1
+   ],
+   "handwritten": false
+  },
+  "entries[40].time": {
+   "value": "06:40",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1194.2,
+    244.8,
+    1227.1,
+    266.6
+   ],
+   "handwritten": true
+  },
+  "entries[40].lk_code": {
+   "value": "LK07",
+   "status": "present",
+   "page": 0,
+   "box": [
+    70.5,
+    303.5,
+    231.5,
+    322.8
+   ],
+   "handwritten": false
+  },
+  "entries[40].lk_label": {
+   "value": "An- und Auskleiden",
+   "status": "present",
+   "page": 0,
+   "box": [
+    70.5,
+    303.5,
+    231.5,
+    322.8
+   ],
+   "handwritten": false
+  },
+  "entries[40].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    1194.6,
+    339.5,
+    1220.8,
+    367.2
+   ],
+   "handwritten": true
+  },
+  "entries[40].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    72.5,
+    180.7,
+    304.1,
+    203.2
+   ],
+   "handwritten": false
+  },
+  "entries[40].staff_initials": {
+   "value": "JR",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1194.6,
+    339.5,
+    1220.8,
+    367.2
+   ],
+   "handwritten": true
+  },
+  "entries[40].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1194.6,
+    339.5,
+    1220.8,
+    367.2
+   ],
+   "handwritten": false
+  },
+  "entries[41].date": {
+   "value": "2026-10-20",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1205.0,
+    159.1,
+    1220.2,
+    175.1
+   ],
+   "handwritten": false
+  },
+  "entries[41].time": {
+   "value": "11:40",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1189.3,
+    392.6,
+    1225.3,
+    416.3
+   ],
+   "handwritten": true
+  },
+  "entries[41].lk_code": {
+   "value": "LK04",
+   "status": "present",
+   "page": 0,
+   "box": [
+    68.3,
+    399.1,
+    313.1,
+    420.4
+   ],
+   "handwritten": false
+  },
+  "entries[41].lk_label": {
+   "value": "Hilfe bei der Nahrungsaufnahme",
+   "status": "present",
+   "page": 0,
+   "box": [
+    68.3,
+    399.1,
+    313.1,
+    420.4
+   ],
+   "handwritten": false
+  },
+  "entries[41].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    1193.8,
+    436.5,
+    1218.0,
+    462.7
+   ],
+   "handwritten": true
+  },
+  "entries[41].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    72.5,
+    180.7,
+    304.1,
+    203.2
+   ],
+   "handwritten": false
+  },
+  "entries[41].staff_initials": {
+   "value": "SB",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1193.8,
+    436.5,
+    1218.0,
+    462.7
+   ],
+   "handwritten": true
+  },
+  "entries[41].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1193.8,
+    436.5,
+    1218.0,
+    462.7
+   ],
+   "handwritten": false
+  },
+  "entries[42].date": {
+   "value": "2026-10-21",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1249.5,
+    160.2,
+    1264.7,
+    176.1
+   ],
+   "handwritten": false
+  },
+  "entries[42].time": {
+   "value": "06:39",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1240.5,
+    245.8,
+    1268.7,
+    266.8
+   ],
+   "handwritten": true
+  },
+  "entries[42].lk_code": {
+   "value": "LK02",
+   "status": "present",
+   "page": 0,
+   "box": [
+    71.7,
+    252.7,
+    179.6,
+    270.8
+   ],
+   "handwritten": false
+  },
+  "entries[42].lk_label": {
+   "value": "Teilwäsche",
+   "status": "present",
+   "page": 0,
+   "box": [
+    71.7,
+    252.7,
+    179.6,
+    270.8
+   ],
+   "handwritten": false
+  },
+  "entries[42].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    1240.7,
+    288.6,
+    1266.7,
+    319.2
+   ],
+   "handwritten": true
+  },
+  "entries[42].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    72.5,
+    180.7,
+    304.1,
+    203.2
+   ],
+   "handwritten": false
+  },
+  "entries[42].staff_initials": {
+   "value": "SB",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1240.7,
+    288.6,
+    1266.7,
+    319.2
+   ],
+   "handwritten": true
+  },
+  "entries[42].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1240.7,
+    288.6,
+    1266.7,
+    319.2
+   ],
+   "handwritten": false
+  },
+  "entries[43].date": {
+   "value": "2026-10-21",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1249.5,
+    160.2,
+    1264.7,
+    176.1
+   ],
+   "handwritten": false
+  },
+  "entries[43].time": {
+   "value": "06:39",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1240.5,
+    245.8,
+    1268.7,
+    266.8
+   ],
+   "handwritten": true
+  },
+  "entries[43].lk_code": {
+   "value": "LK07",
+   "status": "present",
+   "page": 0,
+   "box": [
+    70.5,
+    303.5,
+    231.5,
+    322.8
+   ],
+   "handwritten": false
+  },
+  "entries[43].lk_label": {
+   "value": "An- und Auskleiden",
+   "status": "present",
+   "page": 0,
+   "box": [
+    70.5,
+    303.5,
+    231.5,
+    322.8
+   ],
+   "handwritten": false
+  },
+  "entries[43].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    1240.4,
+    340.1,
+    1265.9,
+    370.5
+   ],
+   "handwritten": true
+  },
+  "entries[43].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    72.5,
+    180.7,
+    304.1,
+    203.2
+   ],
+   "handwritten": false
+  },
+  "entries[43].staff_initials": {
+   "value": "SB",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1240.4,
+    340.1,
+    1265.9,
+    370.5
+   ],
+   "handwritten": true
+  },
+  "entries[43].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1240.4,
+    340.1,
+    1265.9,
+    370.5
+   ],
+   "handwritten": false
+  },
+  "entries[44].date": {
+   "value": "2026-10-21",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1249.5,
+    160.2,
+    1264.7,
+    176.1
+   ],
+   "handwritten": false
+  },
+  "entries[44].time": {
+   "value": "12:00",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1233.8,
+    392.5,
+    1269.9,
+    415.9
+   ],
+   "handwritten": true
+  },
+  "entries[44].lk_code": {
+   "value": "LK04",
+   "status": "present",
+   "page": 0,
+   "box": [
+    68.3,
+    399.1,
+    313.1,
+    420.4
+   ],
+   "handwritten": false
+  },
+  "entries[44].lk_label": {
+   "value": "Hilfe bei der Nahrungsaufnahme",
+   "status": "present",
+   "page": 0,
+   "box": [
+    68.3,
+    399.1,
+    313.1,
+    420.4
+   ],
+   "handwritten": false
+  },
+  "entries[44].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    1237.0,
+    432.4,
+    1262.7,
+    463.3
+   ],
+   "handwritten": true
+  },
+  "entries[44].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    72.5,
+    180.7,
+    304.1,
+    203.2
+   ],
+   "handwritten": false
+  },
+  "entries[44].staff_initials": {
+   "value": "SB",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1237.0,
+    432.4,
+    1262.7,
+    463.3
+   ],
+   "handwritten": true
+  },
+  "entries[44].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1237.0,
+    432.4,
+    1262.7,
+    463.3
+   ],
+   "handwritten": false
+  },
+  "entries[45].date": {
+   "value": "2026-10-22",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1294.1,
+    161.2,
+    1309.3,
+    177.2
+   ],
+   "handwritten": false
+  },
+  "entries[45].time": {
+   "value": "06:45",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1282.6,
+    247.3,
+    1316.4,
+    269.8
+   ],
+   "handwritten": true
+  },
+  "entries[45].lk_code": {
+   "value": "LK02",
+   "status": "present",
+   "page": 0,
+   "box": [
+    71.7,
+    252.7,
+    179.6,
+    270.8
+   ],
+   "handwritten": false
+  },
+  "entries[45].lk_label": {
+   "value": "Teilwäsche",
+   "status": "present",
+   "page": 0,
+   "box": [
+    71.7,
+    252.7,
+    179.6,
+    270.8
+   ],
+   "handwritten": false
+  },
+  "entries[45].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    1285.7,
+    292.2,
+    1311.4,
+    319.7
+   ],
+   "handwritten": true
+  },
+  "entries[45].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    72.5,
+    180.7,
+    304.1,
+    203.2
+   ],
+   "handwritten": false
+  },
+  "entries[45].staff_initials": {
+   "value": "JR",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1285.7,
+    292.2,
+    1311.4,
+    319.7
+   ],
+   "handwritten": true
+  },
+  "entries[45].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1285.7,
+    292.2,
+    1311.4,
+    319.7
+   ],
+   "handwritten": false
+  },
+  "entries[46].date": {
+   "value": "2026-10-22",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1294.1,
+    161.2,
+    1309.3,
+    177.2
+   ],
+   "handwritten": false
+  },
+  "entries[46].time": {
+   "value": "06:45",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1282.6,
+    247.3,
+    1316.4,
+    269.8
+   ],
+   "handwritten": true
+  },
+  "entries[46].lk_code": {
+   "value": "LK07",
+   "status": "present",
+   "page": 0,
+   "box": [
+    70.5,
+    303.5,
+    231.5,
+    322.8
+   ],
+   "handwritten": false
+  },
+  "entries[46].lk_label": {
+   "value": "An- und Auskleiden",
+   "status": "present",
+   "page": 0,
+   "box": [
+    70.5,
+    303.5,
+    231.5,
+    322.8
+   ],
+   "handwritten": false
+  },
+  "entries[46].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    1284.1,
+    340.9,
+    1310.2,
+    369.6
+   ],
+   "handwritten": true
+  },
+  "entries[46].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    72.5,
+    180.7,
+    304.1,
+    203.2
+   ],
+   "handwritten": false
+  },
+  "entries[46].staff_initials": {
+   "value": "JR",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1284.1,
+    340.9,
+    1310.2,
+    369.6
+   ],
+   "handwritten": true
+  },
+  "entries[46].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1284.1,
+    340.9,
+    1310.2,
+    369.6
+   ],
+   "handwritten": false
+  },
+  "entries[47].date": {
+   "value": "2026-10-22",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1294.1,
+    161.2,
+    1309.3,
+    177.2
+   ],
+   "handwritten": false
+  },
+  "entries[47].time": {
+   "value": "11:35",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1276.8,
+    393.6,
+    1315.0,
+    416.7
+   ],
+   "handwritten": true
+  },
+  "entries[47].lk_code": {
+   "value": "LK04",
+   "status": "present",
+   "page": 0,
+   "box": [
+    68.3,
+    399.1,
+    313.1,
+    420.4
+   ],
+   "handwritten": false
+  },
+  "entries[47].lk_label": {
+   "value": "Hilfe bei der Nahrungsaufnahme",
+   "status": "present",
+   "page": 0,
+   "box": [
+    68.3,
+    399.1,
+    313.1,
+    420.4
+   ],
+   "handwritten": false
+  },
+  "entries[47].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    1278.1,
+    438.0,
+    1312.3,
+    466.7
+   ],
+   "handwritten": true
+  },
+  "entries[47].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    72.5,
+    180.7,
+    304.1,
+    203.2
+   ],
+   "handwritten": false
+  },
+  "entries[47].staff_initials": {
+   "value": "AW",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1278.1,
+    438.0,
+    1312.3,
+    466.7
+   ],
+   "handwritten": true
+  },
+  "entries[47].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1278.1,
+    438.0,
+    1312.3,
+    466.7
+   ],
+   "handwritten": false
+  },
+  "entries[48].date": {
+   "value": "2026-10-23",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1338.7,
+    162.2,
+    1353.9,
+    178.2
+   ],
+   "handwritten": false
+  },
+  "entries[48].time": {
+   "value": "11:45",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1323.4,
+    395.5,
+    1358.1,
+    416.5
+   ],
+   "handwritten": true
+  },
+  "entries[48].lk_code": {
+   "value": "LK04",
+   "status": "present",
+   "page": 0,
+   "box": [
+    68.3,
+    399.1,
+    313.1,
+    420.4
+   ],
+   "handwritten": false
+  },
+  "entries[48].lk_label": {
+   "value": "Hilfe bei der Nahrungsaufnahme",
+   "status": "present",
+   "page": 0,
+   "box": [
+    68.3,
+    399.1,
+    313.1,
+    420.4
+   ],
+   "handwritten": false
+  },
+  "entries[48].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    1327.1,
+    437.9,
+    1353.1,
+    467.1
+   ],
+   "handwritten": true
+  },
+  "entries[48].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    72.5,
+    180.7,
+    304.1,
+    203.2
+   ],
+   "handwritten": false
+  },
+  "entries[48].staff_initials": {
+   "value": "JR",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1327.1,
+    437.9,
+    1353.1,
+    467.1
+   ],
+   "handwritten": true
+  },
+  "entries[48].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1327.1,
+    437.9,
+    1353.1,
+    467.1
+   ],
+   "handwritten": false
+  },
+  "entries[49].date": {
+   "value": "2026-10-24",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1383.2,
+    163.3,
+    1398.4,
+    179.2
+   ],
+   "handwritten": false
+  },
+  "entries[49].time": {
+   "value": "12:04",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1365.7,
+    397.0,
+    1405.3,
+    418.1
+   ],
+   "handwritten": true
+  },
+  "entries[49].lk_code": {
+   "value": "LK04",
+   "status": "present",
+   "page": 0,
+   "box": [
+    68.3,
+    399.1,
+    313.1,
+    420.4
+   ],
+   "handwritten": false
+  },
+  "entries[49].lk_label": {
+   "value": "Hilfe bei der Nahrungsaufnahme",
+   "status": "present",
+   "page": 0,
+   "box": [
+    68.3,
+    399.1,
+    313.1,
+    420.4
+   ],
+   "handwritten": false
+  },
+  "entries[49].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    1366.9,
+    439.8,
+    1401.7,
+    467.2
+   ],
+   "handwritten": true
+  },
+  "entries[49].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    72.5,
+    180.7,
+    304.1,
+    203.2
+   ],
+   "handwritten": false
+  },
+  "entries[49].staff_initials": {
+   "value": "AW",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1366.9,
+    439.8,
+    1401.7,
+    467.2
+   ],
+   "handwritten": true
+  },
+  "entries[49].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1366.9,
+    439.8,
+    1401.7,
+    467.2
+   ],
+   "handwritten": false
+  },
+  "entries[50].date": {
+   "value": "2026-10-25",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1427.8,
+    164.3,
+    1443.0,
+    180.3
+   ],
+   "handwritten": false
+  },
+  "entries[50].time": {
+   "value": "11:59",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1412.0,
+    397.8,
+    1448.4,
+    421.3
+   ],
+   "handwritten": true
+  },
+  "entries[50].lk_code": {
+   "value": "LK04",
+   "status": "present",
+   "page": 0,
+   "box": [
+    68.3,
+    399.1,
+    313.1,
+    420.4
+   ],
+   "handwritten": false
+  },
+  "entries[50].lk_label": {
+   "value": "Hilfe bei der Nahrungsaufnahme",
+   "status": "present",
+   "page": 0,
+   "box": [
+    68.3,
+    399.1,
+    313.1,
+    420.4
+   ],
+   "handwritten": false
+  },
+  "entries[50].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    1416.5,
+    439.7,
+    1441.3,
+    468.4
+   ],
+   "handwritten": true
+  },
+  "entries[50].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    72.5,
+    180.7,
+    304.1,
+    203.2
+   ],
+   "handwritten": false
+  },
+  "entries[50].staff_initials": {
+   "value": "SB",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1416.5,
+    439.7,
+    1441.3,
+    468.4
+   ],
+   "handwritten": true
+  },
+  "entries[50].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1416.5,
+    439.7,
+    1441.3,
+    468.4
+   ],
+   "handwritten": false
+  },
+  "entries[51].date": {
+   "value": "2026-10-26",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1472.4,
+    165.3,
+    1487.6,
+    181.3
+   ],
+   "handwritten": false
+  },
+  "entries[51].time": {
+   "value": "06:42",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1460.5,
+    251.8,
+    1495.2,
+    274.8
+   ],
+   "handwritten": true
+  },
+  "entries[51].lk_code": {
+   "value": "LK02",
+   "status": "present",
+   "page": 0,
+   "box": [
+    71.7,
+    252.7,
+    179.6,
+    270.8
+   ],
+   "handwritten": false
+  },
+  "entries[51].lk_label": {
+   "value": "Teilwäsche",
+   "status": "present",
+   "page": 0,
+   "box": [
+    71.7,
+    252.7,
+    179.6,
+    270.8
+   ],
+   "handwritten": false
+  },
+  "entries[51].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    1464.4,
+    293.8,
+    1489.5,
+    322.1
+   ],
+   "handwritten": true
+  },
+  "entries[51].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    72.5,
+    180.7,
+    304.1,
+    203.2
+   ],
+   "handwritten": false
+  },
+  "entries[51].staff_initials": {
+   "value": "JR",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1464.4,
+    293.8,
+    1489.5,
+    322.1
+   ],
+   "handwritten": true
+  },
+  "entries[51].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1464.4,
+    293.8,
+    1489.5,
+    322.1
+   ],
+   "handwritten": false
+  },
+  "entries[52].date": {
+   "value": "2026-10-26",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1472.4,
+    165.3,
+    1487.6,
+    181.3
+   ],
+   "handwritten": false
+  },
+  "entries[52].time": {
+   "value": "06:42",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1460.5,
+    251.8,
+    1495.2,
+    274.8
+   ],
+   "handwritten": true
+  },
+  "entries[52].lk_code": {
+   "value": "LK07",
+   "status": "present",
+   "page": 0,
+   "box": [
+    70.5,
+    303.5,
+    231.5,
+    322.8
+   ],
+   "handwritten": false
+  },
+  "entries[52].lk_label": {
+   "value": "An- und Auskleiden",
+   "status": "present",
+   "page": 0,
+   "box": [
+    70.5,
+    303.5,
+    231.5,
+    322.8
+   ],
+   "handwritten": false
+  },
+  "entries[52].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    1462.5,
+    347.0,
+    1488.2,
+    373.4
+   ],
+   "handwritten": true
+  },
+  "entries[52].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    72.5,
+    180.7,
+    304.1,
+    203.2
+   ],
+   "handwritten": false
+  },
+  "entries[52].staff_initials": {
+   "value": "JR",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1462.5,
+    347.0,
+    1488.2,
+    373.4
+   ],
+   "handwritten": true
+  },
+  "entries[52].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1462.5,
+    347.0,
+    1488.2,
+    373.4
+   ],
+   "handwritten": false
+  },
+  "entries[53].date": {
+   "value": "2026-10-26",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1472.4,
+    165.3,
+    1487.6,
+    181.3
+   ],
+   "handwritten": false
+  },
+  "entries[53].time": {
+   "value": "11:46",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1463.6,
+    396.1,
+    1485.7,
+    419.1
+   ],
+   "handwritten": true
+  },
+  "entries[53].lk_code": {
+   "value": "LK04",
+   "status": "present",
+   "page": 0,
+   "box": [
+    68.3,
+    399.1,
+    313.1,
+    420.4
+   ],
+   "handwritten": false
+  },
+  "entries[53].lk_label": {
+   "value": "Hilfe bei der Nahrungsaufnahme",
+   "status": "present",
+   "page": 0,
+   "box": [
+    68.3,
+    399.1,
+    313.1,
+    420.4
+   ],
+   "handwritten": false
+  },
+  "entries[53].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    1461.6,
+    438.9,
+    1486.3,
+    468.5
+   ],
+   "handwritten": true
+  },
+  "entries[53].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    72.5,
+    180.7,
+    304.1,
+    203.2
+   ],
+   "handwritten": false
+  },
+  "entries[53].staff_initials": {
+   "value": "LF",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1461.6,
+    438.9,
+    1486.3,
+    468.5
+   ],
+   "handwritten": true
+  },
+  "entries[53].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1461.6,
+    438.9,
+    1486.3,
+    468.5
+   ],
+   "handwritten": false
+  },
+  "entries[54].date": {
+   "value": "2026-10-27",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1516.9,
+    166.4,
+    1532.1,
+    182.4
+   ],
+   "handwritten": false
+  },
+  "entries[54].time": {
+   "value": "07:10",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1513.3,
+    251.3,
+    1531.4,
+    272.9
+   ],
+   "handwritten": true
+  },
+  "entries[54].lk_code": {
+   "value": "LK02",
+   "status": "present",
+   "page": 0,
+   "box": [
+    71.7,
+    252.7,
+    179.6,
+    270.8
+   ],
+   "handwritten": false
+  },
+  "entries[54].lk_label": {
+   "value": "Teilwäsche",
+   "status": "present",
+   "page": 0,
+   "box": [
+    71.7,
+    252.7,
+    179.6,
+    270.8
+   ],
+   "handwritten": false
+  },
+  "entries[54].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    1508.8,
+    296.6,
+    1532.8,
+    324.2
+   ],
+   "handwritten": true
+  },
+  "entries[54].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    72.5,
+    180.7,
+    304.1,
+    203.2
+   ],
+   "handwritten": false
+  },
+  "entries[54].staff_initials": {
+   "value": "LF",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1508.8,
+    296.6,
+    1532.8,
+    324.2
+   ],
+   "handwritten": true
+  },
+  "entries[54].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1508.8,
+    296.6,
+    1532.8,
+    324.2
+   ],
+   "handwritten": false
+  },
+  "entries[55].date": {
+   "value": "2026-10-27",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1516.9,
+    166.4,
+    1532.1,
+    182.4
+   ],
+   "handwritten": false
+  },
+  "entries[55].time": {
+   "value": "07:10",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1513.3,
+    251.3,
+    1531.4,
+    272.9
+   ],
+   "handwritten": true
+  },
+  "entries[55].lk_code": {
+   "value": "LK07",
+   "status": "present",
+   "page": 0,
+   "box": [
+    70.5,
+    303.5,
+    231.5,
+    322.8
+   ],
+   "handwritten": false
+  },
+  "entries[55].lk_label": {
+   "value": "An- und Auskleiden",
+   "status": "present",
+   "page": 0,
+   "box": [
+    70.5,
+    303.5,
+    231.5,
+    322.8
+   ],
+   "handwritten": false
+  },
+  "entries[55].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    1507.9,
+    348.1,
+    1532.0,
+    375.6
+   ],
+   "handwritten": true
+  },
+  "entries[55].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    72.5,
+    180.7,
+    304.1,
+    203.2
+   ],
+   "handwritten": false
+  },
+  "entries[55].staff_initials": {
+   "value": "LF",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1507.9,
+    348.1,
+    1532.0,
+    375.6
+   ],
+   "handwritten": true
+  },
+  "entries[55].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1507.9,
+    348.1,
+    1532.0,
+    375.6
+   ],
+   "handwritten": false
+  },
+  "entries[56].date": {
+   "value": "2026-10-27",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1516.9,
+    166.4,
+    1532.1,
+    182.4
+   ],
+   "handwritten": false
+  },
+  "entries[56].time": {
+   "value": "11:55",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1499.6,
+    398.9,
+    1538.1,
+    420.9
+   ],
+   "handwritten": true
+  },
+  "entries[56].lk_code": {
+   "value": "LK04",
+   "status": "present",
+   "page": 0,
+   "box": [
+    68.3,
+    399.1,
+    313.1,
+    420.4
+   ],
+   "handwritten": false
+  },
+  "entries[56].lk_label": {
+   "value": "Hilfe bei der Nahrungsaufnahme",
+   "status": "present",
+   "page": 0,
+   "box": [
+    68.3,
+    399.1,
+    313.1,
+    420.4
+   ],
+   "handwritten": false
+  },
+  "entries[56].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    1500.3,
+    442.7,
+    1535.6,
+    470.5
+   ],
+   "handwritten": true
+  },
+  "entries[56].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    72.5,
+    180.7,
+    304.1,
+    203.2
+   ],
+   "handwritten": false
+  },
+  "entries[56].staff_initials": {
+   "value": "AW",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1500.3,
+    442.7,
+    1535.6,
+    470.5
+   ],
+   "handwritten": true
+  },
+  "entries[56].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1500.3,
+    442.7,
+    1535.6,
+    470.5
+   ],
+   "handwritten": false
+  },
+  "entries[57].date": {
+   "value": "2026-10-28",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1561.5,
+    167.4,
+    1576.7,
+    183.4
+   ],
+   "handwritten": false
+  },
+  "entries[57].time": {
+   "value": "06:45",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1549.7,
+    252.6,
+    1583.7,
+    275.4
+   ],
+   "handwritten": true
+  },
+  "entries[57].lk_code": {
+   "value": "LK02",
+   "status": "present",
+   "page": 0,
+   "box": [
+    71.7,
+    252.7,
+    179.6,
+    270.8
+   ],
+   "handwritten": false
+  },
+  "entries[57].lk_label": {
+   "value": "Teilwäsche",
+   "status": "present",
+   "page": 0,
+   "box": [
+    71.7,
+    252.7,
+    179.6,
+    270.8
+   ],
+   "handwritten": false
+  },
+  "entries[57].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    1553.1,
+    296.3,
+    1579.3,
+    324.9
+   ],
+   "handwritten": true
+  },
+  "entries[57].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    72.5,
+    180.7,
+    304.1,
+    203.2
+   ],
+   "handwritten": false
+  },
+  "entries[57].staff_initials": {
+   "value": "JR",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1553.1,
+    296.3,
+    1579.3,
+    324.9
+   ],
+   "handwritten": true
+  },
+  "entries[57].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1553.1,
+    296.3,
+    1579.3,
+    324.9
+   ],
+   "handwritten": false
+  },
+  "entries[58].date": {
+   "value": "2026-10-28",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1561.5,
+    167.4,
+    1576.7,
+    183.4
+   ],
+   "handwritten": false
+  },
+  "entries[58].time": {
+   "value": "06:45",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1549.7,
+    252.6,
+    1583.7,
+    275.4
+   ],
+   "handwritten": true
+  },
+  "entries[58].lk_code": {
+   "value": "LK07",
+   "status": "present",
+   "page": 0,
+   "box": [
+    70.5,
+    303.5,
+    231.5,
+    322.8
+   ],
+   "handwritten": false
+  },
+  "entries[58].lk_label": {
+   "value": "An- und Auskleiden",
+   "status": "present",
+   "page": 0,
+   "box": [
+    70.5,
+    303.5,
+    231.5,
+    322.8
+   ],
+   "handwritten": false
+  },
+  "entries[58].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    1552.1,
+    348.2,
+    1577.9,
+    375.2
+   ],
+   "handwritten": true
+  },
+  "entries[58].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    72.5,
+    180.7,
+    304.1,
+    203.2
+   ],
+   "handwritten": false
+  },
+  "entries[58].staff_initials": {
+   "value": "JR",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1552.1,
+    348.2,
+    1577.9,
+    375.2
+   ],
+   "handwritten": true
+  },
+  "entries[58].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1552.1,
+    348.2,
+    1577.9,
+    375.2
+   ],
+   "handwritten": false
+  },
+  "entries[59].date": {
+   "value": "2026-10-28",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1561.5,
+    167.4,
+    1576.7,
+    183.4
+   ],
+   "handwritten": false
+  },
+  "entries[59].time": {
+   "value": "11:48",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1545.4,
+    400.2,
+    1582.2,
+    421.5
+   ],
+   "handwritten": true
+  },
+  "entries[59].lk_code": {
+   "value": "LK04",
+   "status": "present",
+   "page": 0,
+   "box": [
+    68.3,
+    399.1,
+    313.1,
+    420.4
+   ],
+   "handwritten": false
+  },
+  "entries[59].lk_label": {
+   "value": "Hilfe bei der Nahrungsaufnahme",
+   "status": "present",
+   "page": 0,
+   "box": [
+    68.3,
+    399.1,
+    313.1,
+    420.4
+   ],
+   "handwritten": false
+  },
+  "entries[59].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    1549.7,
+    444.8,
+    1575.5,
+    472.7
+   ],
+   "handwritten": true
+  },
+  "entries[59].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    72.5,
+    180.7,
+    304.1,
+    203.2
+   ],
+   "handwritten": false
+  },
+  "entries[59].staff_initials": {
+   "value": "JR",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1549.7,
+    444.8,
+    1575.5,
+    472.7
+   ],
+   "handwritten": true
+  },
+  "entries[59].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1549.7,
+    444.8,
+    1575.5,
+    472.7
+   ],
+   "handwritten": false
+  },
+  "entries[60].date": {
+   "value": "2026-10-29",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1606.1,
+    168.5,
+    1621.3,
+    184.4
+   ],
+   "handwritten": false
+  },
+  "entries[60].time": {
+   "value": "06:55",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1597.9,
+    251.7,
+    1625.8,
+    276.3
+   ],
+   "handwritten": true
+  },
+  "entries[60].lk_code": {
+   "value": "LK02",
+   "status": "present",
+   "page": 0,
+   "box": [
+    71.7,
+    252.7,
+    179.6,
+    270.8
+   ],
+   "handwritten": false
+  },
+  "entries[60].lk_label": {
+   "value": "Teilwäsche",
+   "status": "present",
+   "page": 0,
+   "box": [
+    71.7,
+    252.7,
+    179.6,
+    270.8
+   ],
+   "handwritten": false
+  },
+  "entries[60].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    1597.8,
+    299.5,
+    1622.7,
+    327.5
+   ],
+   "handwritten": true
+  },
+  "entries[60].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    72.5,
+    180.7,
+    304.1,
+    203.2
+   ],
+   "handwritten": false
+  },
+  "entries[60].staff_initials": {
+   "value": "SB",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1597.8,
+    299.5,
+    1622.7,
+    327.5
+   ],
+   "handwritten": true
+  },
+  "entries[60].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1597.8,
+    299.5,
+    1622.7,
+    327.5
+   ],
+   "handwritten": false
+  },
+  "entries[61].date": {
+   "value": "2026-10-29",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1606.1,
+    168.5,
+    1621.3,
+    184.4
+   ],
+   "handwritten": false
+  },
+  "entries[61].time": {
+   "value": "06:55",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1597.9,
+    251.7,
+    1625.8,
+    276.3
+   ],
+   "handwritten": true
+  },
+  "entries[61].lk_code": {
+   "value": "LK07",
+   "status": "present",
+   "page": 0,
+   "box": [
+    70.5,
+    303.5,
+    231.5,
+    322.8
+   ],
+   "handwritten": false
+  },
+  "entries[61].lk_label": {
+   "value": "An- und Auskleiden",
+   "status": "present",
+   "page": 0,
+   "box": [
+    70.5,
+    303.5,
+    231.5,
+    322.8
+   ],
+   "handwritten": false
+  },
+  "entries[61].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    1596.9,
+    347.9,
+    1622.5,
+    376.2
+   ],
+   "handwritten": true
+  },
+  "entries[61].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    72.5,
+    180.7,
+    304.1,
+    203.2
+   ],
+   "handwritten": false
+  },
+  "entries[61].staff_initials": {
+   "value": "SB",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1596.9,
+    347.9,
+    1622.5,
+    376.2
+   ],
+   "handwritten": true
+  },
+  "entries[61].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1596.9,
+    347.9,
+    1622.5,
+    376.2
+   ],
+   "handwritten": false
+  },
+  "entries[62].date": {
+   "value": "2026-10-29",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1606.1,
+    168.5,
+    1621.3,
+    184.4
+   ],
+   "handwritten": false
+  },
+  "entries[62].time": {
+   "value": "11:35",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1588.7,
+    402.1,
+    1627.1,
+    423.1
+   ],
+   "handwritten": true
+  },
+  "entries[62].lk_code": {
+   "value": "LK04",
+   "status": "present",
+   "page": 0,
+   "box": [
+    68.3,
+    399.1,
+    313.1,
+    420.4
+   ],
+   "handwritten": false
+  },
+  "entries[62].lk_label": {
+   "value": "Hilfe bei der Nahrungsaufnahme",
+   "status": "present",
+   "page": 0,
+   "box": [
+    68.3,
+    399.1,
+    313.1,
+    420.4
+   ],
+   "handwritten": false
+  },
+  "entries[62].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    1589.9,
+    444.8,
+    1624.2,
+    471.7
+   ],
+   "handwritten": true
+  },
+  "entries[62].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    72.5,
+    180.7,
+    304.1,
+    203.2
+   ],
+   "handwritten": false
+  },
+  "entries[62].staff_initials": {
+   "value": "AW",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1589.9,
+    444.8,
+    1624.2,
+    471.7
+   ],
+   "handwritten": true
+  },
+  "entries[62].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1589.9,
+    444.8,
+    1624.2,
+    471.7
+   ],
+   "handwritten": false
+  },
+  "entries[63].date": {
+   "value": "2026-10-30",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1650.6,
+    169.5,
+    1665.8,
+    185.5
+   ],
+   "handwritten": false
+  },
+  "entries[63].time": {
+   "value": "11:57",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1633.3,
+    403.4,
+    1671.7,
+    423.9
+   ],
+   "handwritten": true
+  },
+  "entries[63].lk_code": {
+   "value": "LK04",
+   "status": "present",
+   "page": 0,
+   "box": [
+    68.3,
+    399.1,
+    313.1,
+    420.4
+   ],
+   "handwritten": false
+  },
+  "entries[63].lk_label": {
+   "value": "Hilfe bei der Nahrungsaufnahme",
+   "status": "present",
+   "page": 0,
+   "box": [
+    68.3,
+    399.1,
+    313.1,
+    420.4
+   ],
+   "handwritten": false
+  },
+  "entries[63].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    1634.6,
+    446.1,
+    1668.7,
+    472.8
+   ],
+   "handwritten": true
+  },
+  "entries[63].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    72.5,
+    180.7,
+    304.1,
+    203.2
+   ],
+   "handwritten": false
+  },
+  "entries[63].staff_initials": {
+   "value": "AW",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1634.6,
+    446.1,
+    1668.7,
+    472.8
+   ],
+   "handwritten": true
+  },
+  "entries[63].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1634.6,
+    446.1,
+    1668.7,
+    472.8
+   ],
+   "handwritten": false
+  },
+  "entries[64].date": {
+   "value": "2026-10-31",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1695.2,
+    170.5,
+    1710.4,
+    186.5
+   ],
+   "handwritten": false
+  },
+  "entries[64].time": {
+   "value": "11:39",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1678.5,
+    403.7,
+    1716.2,
+    424.8
+   ],
+   "handwritten": true
+  },
+  "entries[64].lk_code": {
+   "value": "LK04",
+   "status": "present",
+   "page": 0,
+   "box": [
+    68.3,
+    399.1,
+    313.1,
+    420.4
+   ],
+   "handwritten": false
+  },
+  "entries[64].lk_label": {
+   "value": "Hilfe bei der Nahrungsaufnahme",
+   "status": "present",
+   "page": 0,
+   "box": [
+    68.3,
+    399.1,
+    313.1,
+    420.4
+   ],
+   "handwritten": false
+  },
+  "entries[64].count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    1679.4,
+    447.1,
+    1713.9,
+    475.1
+   ],
+   "handwritten": true
+  },
+  "entries[64].funding": {
+   "value": "sachleistung_36",
+   "status": "present",
+   "page": 0,
+   "box": [
+    72.5,
+    180.7,
+    304.1,
+    203.2
+   ],
+   "handwritten": false
+  },
+  "entries[64].staff_initials": {
+   "value": "AW",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1679.4,
+    447.1,
+    1713.9,
+    475.1
+   ],
+   "handwritten": true
+  },
+  "entries[64].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1679.4,
+    447.1,
+    1713.9,
+    475.1
+   ],
+   "handwritten": false
+  },
+  "entries[#]": {
+   "value": 65,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "provider_ik": {
+   "value": "469960557",
+   "status": "present",
+   "page": 0,
+   "box": [
+    619.9,
+    94.2,
+    732.8,
+    120.2
+   ],
+   "handwritten": false
+  },
+  "month": {
+   "value": "2026-10",
+   "status": "present",
+   "page": 0,
+   "box": [
+    779.7,
+    97.9,
+    867.6,
+    123.4
+   ],
+   "handwritten": false
+  },
+  "patient_name": {
+   "value": "Fischer, Helmut",
+   "status": "present",
+   "page": 0,
+   "box": [
+    904.0,
+    100.8,
+    1091.8,
+    128.6
+   ],
+   "handwritten": false
+  },
+  "kvnr": {
+   "value": "D506232392",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1117.1,
+    105.8,
+    1242.5,
+    132.1
+   ],
+   "handwritten": false
+  },
+  "payer_name": {
+   "value": "DAK-Gesundheit – Pflegekasse",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1276.8,
+    109.5,
+    1627.0,
+    141.0
+   ],
+   "handwritten": false
+  },
+  "pflegegrad": {
+   "value": 2,
+   "status": "present",
+   "page": 0,
+   "box": [
+    1646.1,
+    118.1,
+    1659.1,
+    141.8
+   ],
+   "handwritten": false
+  },
+  "doc_type": {
+   "value": "visit_log_sgbxi",
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "patient_signature": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    360.8,
+    521.8,
+    687.7,
+    623.8
+   ],
+   "handwritten": false
+  },
+  "provider_signature": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1248.2,
+    541.1,
+    1457.8,
+    643.0
+   ],
+   "handwritten": false
+  }
+ },
+ "regions": {
+  "patient_signature": {
+   "page": 0,
+   "box": [
+    360.8,
+    521.8,
+    687.7,
+    623.8
+   ],
+   "state": "present"
+  },
+  "provider_signature": {
+   "page": 0,
+   "box": [
+    1248.2,
+    541.1,
+    1457.8,
+    643.0
+   ],
+   "state": "present"
+  }
+ },
+ "defects": [
+  "D12"
+ ],
+ "synthetic": true
+}

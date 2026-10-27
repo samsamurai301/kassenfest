@@ -1,0 +1,979 @@
+{
+ "month": "2026-10",
+ "provider": {
+  "name": "Pflegedienst Sonnenschein GmbH",
+  "ik": "469960557",
+  "bundesland": "BY",
+  "municipality": "Deggendorf",
+  "staff": [
+   {
+    "employee_no": "436448642",
+    "initials": "MK",
+    "name": "Monika Kraus",
+    "qualification": "pflegefachkraft"
+   },
+   {
+    "employee_no": "432633832",
+    "initials": "SB",
+    "name": "Stefan Bauer",
+    "qualification": "pflegefachkraft"
+   },
+   {
+    "employee_no": "885723102",
+    "initials": "AW",
+    "name": "Andrea Wimmer",
+    "qualification": "pflegefachkraft"
+   },
+   {
+    "employee_no": "549069574",
+    "initials": "TH",
+    "name": "Tobias Huber",
+    "qualification": "pflegefachkraft"
+   },
+   {
+    "employee_no": "481625390",
+    "initials": "JR",
+    "name": "Julia Reiter",
+    "qualification": "pflegefachkraft"
+   },
+   {
+    "employee_no": "194544002",
+    "initials": "LF",
+    "name": "Lena Fuchs",
+    "qualification": "pflegehilfskraft"
+   },
+   {
+    "employee_no": "214268221",
+    "initials": "CG",
+    "name": "Claudia Gruber",
+    "qualification": "pflegehilfskraft"
+   },
+   {
+    "employee_no": "642060591",
+    "initials": "PMa",
+    "name": "Petra Mayerhofer",
+    "qualification": "auszubildende"
+   }
+  ]
+ },
+ "patient": {
+  "id": "p04",
+  "name": "Dengler, Franz",
+  "dob": "1938-08-23",
+  "kvnr": "A144611140",
+  "insurance": [
+   {
+    "krankenkasse_ik": "109990018",
+    "pflegekasse_ik": "189990018",
+    "valid_from": "2008-01-01",
+    "valid_to": null
+   }
+  ],
+  "pflegegrad": [
+   {
+    "grade": 2,
+    "valid_from": "2019-10-01"
+   }
+  ],
+  "deceased_at": null,
+  "copay_exempt": false
+ },
+ "payers": {
+  "109990018": {
+   "name": "AOK Bayern",
+   "ik": "109990018",
+   "kind": "krankenkasse",
+   "payment_term_days": 21,
+   "synthetic": true
+  },
+  "189990018": {
+   "name": "AOK Bayern – Pflegekasse",
+   "ik": "189990018",
+   "kind": "pflegekasse",
+   "payment_term_days": 21,
+   "synthetic": true
+  }
+ },
+ "physicians": {
+  "283320323": {
+   "name": "Dr. med. Thomas Rieger",
+   "lanr": "283320323",
+   "bsnr": "719097089"
+  }
+ },
+ "prescriptions": [
+  {
+   "id": "p04-rx1",
+   "patient_id": "p04",
+   "physician_lanr": "283320323",
+   "kind": "erst",
+   "issue_date": "2026-10-01",
+   "period_from": "2026-10-01",
+   "period_to": "2026-10-14",
+   "blank": false,
+   "services": [
+    {
+     "category": "medikamentengabe",
+     "position_no": "032101",
+     "frequency": {
+      "count": 2,
+      "per": "day"
+     },
+     "details": "Metformin 1000 mg, Ramipril 5 mg"
+    }
+   ],
+   "icd_codes": [
+    "I50.9",
+    "I10.00"
+   ],
+   "doctor_signed": true,
+   "stamp_present": false,
+   "corrections_present": false,
+   "corrections_initialled": false,
+   "submitted_to_payer_at": "2026-10-08",
+   "document_id": "syn-demo-017"
+  },
+  {
+   "id": "p04-rx2",
+   "patient_id": "p04",
+   "physician_lanr": "283320323",
+   "kind": "folge",
+   "issue_date": "2026-10-13",
+   "period_from": "2026-10-15",
+   "period_to": "2026-12-14",
+   "blank": false,
+   "services": [
+    {
+     "category": "medikamentengabe",
+     "position_no": "032101",
+     "frequency": {
+      "count": 2,
+      "per": "day"
+     },
+     "details": "Metformin 1000 mg, Ramipril 5 mg"
+    }
+   ],
+   "icd_codes": [
+    "I50.9",
+    "I10.00"
+   ],
+   "doctor_signed": true,
+   "stamp_present": true,
+   "corrections_present": false,
+   "corrections_initialled": false,
+   "submitted_to_payer_at": "2026-10-15",
+   "document_id": "syn-demo-011"
+  }
+ ],
+ "approvals": [
+  {
+   "id": "p04-ap1",
+   "patient_id": "p04",
+   "payer_ik": "109990018",
+   "provider_ik": "469960557",
+   "approval_ref": "HKP-2026-469552",
+   "letter_date": "2026-10-13",
+   "decision": "approved",
+   "period_from": "2026-10-01",
+   "period_to": "2026-10-14",
+   "approved": [
+    {
+     "position_no": "032101",
+     "frequency": {
+      "count": 2,
+      "per": "day"
+     },
+     "valid_from": "2026-10-01",
+     "valid_to": "2026-10-14"
+    }
+   ],
+   "prescription_id": "p04-rx1",
+   "document_id": "syn-demo-010"
+  },
+  {
+   "id": "p04-ap2",
+   "patient_id": "p04",
+   "payer_ik": "109990018",
+   "provider_ik": "469960557",
+   "approval_ref": "HKP-2026-601600",
+   "letter_date": "2026-10-28",
+   "decision": "approved",
+   "period_from": "2026-10-15",
+   "period_to": "2026-12-14",
+   "approved": [
+    {
+     "position_no": "032101",
+     "frequency": {
+      "count": 2,
+      "per": "day"
+     },
+     "valid_from": "2026-10-15",
+     "valid_to": "2026-12-14"
+    }
+   ],
+   "prescription_id": "p04-rx2",
+   "document_id": "syn-demo-031"
+  }
+ ],
+ "visit_logs": [
+  {
+   "id": "p04-2026-10-sgbv",
+   "patient_id": "p04",
+   "payer_ik": "109990018",
+   "month": "2026-10",
+   "domain": "sgbv",
+   "visits": [
+    {
+     "date": "2026-10-01",
+     "start": "07:23:00",
+     "end": null,
+     "code": "032101",
+     "quantity": 1,
+     "funding": "hkp",
+     "employee_no": "549069574",
+     "staff_initials": "TH",
+     "document_id": "syn-demo-040",
+     "entry_index": 0
+    },
+    {
+     "date": "2026-10-01",
+     "start": "18:05:00",
+     "end": null,
+     "code": "032101",
+     "quantity": 1,
+     "funding": "hkp",
+     "employee_no": "481625390",
+     "staff_initials": "JR",
+     "document_id": "syn-demo-040",
+     "entry_index": 1
+    },
+    {
+     "date": "2026-10-02",
+     "start": "07:45:00",
+     "end": null,
+     "code": "032101",
+     "quantity": 1,
+     "funding": "hkp",
+     "employee_no": "885723102",
+     "staff_initials": "AW",
+     "document_id": "syn-demo-040",
+     "entry_index": 2
+    },
+    {
+     "date": "2026-10-02",
+     "start": "18:05:00",
+     "end": null,
+     "code": "032101",
+     "quantity": 1,
+     "funding": "hkp",
+     "employee_no": "481625390",
+     "staff_initials": "JR",
+     "document_id": "syn-demo-040",
+     "entry_index": 3
+    },
+    {
+     "date": "2026-10-03",
+     "start": "07:27:00",
+     "end": null,
+     "code": "032101",
+     "quantity": 1,
+     "funding": "hkp",
+     "employee_no": "885723102",
+     "staff_initials": "AW",
+     "document_id": "syn-demo-040",
+     "entry_index": 4
+    },
+    {
+     "date": "2026-10-03",
+     "start": "18:05:00",
+     "end": null,
+     "code": "032101",
+     "quantity": 1,
+     "funding": "hkp",
+     "employee_no": "481625390",
+     "staff_initials": "JR",
+     "document_id": "syn-demo-040",
+     "entry_index": 5
+    },
+    {
+     "date": "2026-10-04",
+     "start": "07:40:00",
+     "end": null,
+     "code": "032101",
+     "quantity": 1,
+     "funding": "hkp",
+     "employee_no": "885723102",
+     "staff_initials": "AW",
+     "document_id": "syn-demo-040",
+     "entry_index": 6
+    },
+    {
+     "date": "2026-10-04",
+     "start": "18:18:00",
+     "end": null,
+     "code": "032101",
+     "quantity": 1,
+     "funding": "hkp",
+     "employee_no": "549069574",
+     "staff_initials": "TH",
+     "document_id": "syn-demo-040",
+     "entry_index": 7
+    },
+    {
+     "date": "2026-10-05",
+     "start": "07:40:00",
+     "end": null,
+     "code": "032101",
+     "quantity": 1,
+     "funding": "hkp",
+     "employee_no": "481625390",
+     "staff_initials": "JR",
+     "document_id": "syn-demo-040",
+     "entry_index": 8
+    },
+    {
+     "date": "2026-10-05",
+     "start": "18:15:00",
+     "end": null,
+     "code": "032101",
+     "quantity": 1,
+     "funding": "hkp",
+     "employee_no": "549069574",
+     "staff_initials": "TH",
+     "document_id": "syn-demo-040",
+     "entry_index": 9
+    },
+    {
+     "date": "2026-10-06",
+     "start": "07:40:00",
+     "end": null,
+     "code": "032101",
+     "quantity": 1,
+     "funding": "hkp",
+     "employee_no": "885723102",
+     "staff_initials": "AW",
+     "document_id": "syn-demo-040",
+     "entry_index": 10
+    },
+    {
+     "date": "2026-10-06",
+     "start": "18:10:00",
+     "end": null,
+     "code": "032101",
+     "quantity": 1,
+     "funding": "hkp",
+     "employee_no": "481625390",
+     "staff_initials": "JR",
+     "document_id": "syn-demo-040",
+     "entry_index": 11
+    },
+    {
+     "date": "2026-10-07",
+     "start": "07:15:00",
+     "end": null,
+     "code": "032101",
+     "quantity": 1,
+     "funding": "hkp",
+     "employee_no": "549069574",
+     "staff_initials": "TH",
+     "document_id": "syn-demo-040",
+     "entry_index": 12
+    },
+    {
+     "date": "2026-10-07",
+     "start": "18:00:00",
+     "end": null,
+     "code": "032101",
+     "quantity": 1,
+     "funding": "hkp",
+     "employee_no": "885723102",
+     "staff_initials": "AW",
+     "document_id": "syn-demo-040",
+     "entry_index": 13
+    },
+    {
+     "date": "2026-10-08",
+     "start": "07:30:00",
+     "end": null,
+     "code": "032101",
+     "quantity": 1,
+     "funding": "hkp",
+     "employee_no": "549069574",
+     "staff_initials": "TH",
+     "document_id": "syn-demo-040",
+     "entry_index": 14
+    },
+    {
+     "date": "2026-10-08",
+     "start": "17:56:00",
+     "end": null,
+     "code": "032101",
+     "quantity": 1,
+     "funding": "hkp",
+     "employee_no": "481625390",
+     "staff_initials": "JR",
+     "document_id": "syn-demo-040",
+     "entry_index": 15
+    },
+    {
+     "date": "2026-10-09",
+     "start": "07:40:00",
+     "end": null,
+     "code": "032101",
+     "quantity": 1,
+     "funding": "hkp",
+     "employee_no": "885723102",
+     "staff_initials": "AW",
+     "document_id": "syn-demo-040",
+     "entry_index": 16
+    },
+    {
+     "date": "2026-10-09",
+     "start": "18:15:00",
+     "end": null,
+     "code": "032101",
+     "quantity": 1,
+     "funding": "hkp",
+     "employee_no": "481625390",
+     "staff_initials": "JR",
+     "document_id": "syn-demo-040",
+     "entry_index": 17
+    },
+    {
+     "date": "2026-10-10",
+     "start": "07:15:00",
+     "end": null,
+     "code": "032101",
+     "quantity": 1,
+     "funding": "hkp",
+     "employee_no": "885723102",
+     "staff_initials": "AW",
+     "document_id": "syn-demo-040",
+     "entry_index": 18
+    },
+    {
+     "date": "2026-10-10",
+     "start": "18:26:00",
+     "end": null,
+     "code": "032101",
+     "quantity": 1,
+     "funding": "hkp",
+     "employee_no": "549069574",
+     "staff_initials": "TH",
+     "document_id": "syn-demo-040",
+     "entry_index": 19
+    },
+    {
+     "date": "2026-10-11",
+     "start": "07:14:00",
+     "end": null,
+     "code": "032101",
+     "quantity": 1,
+     "funding": "hkp",
+     "employee_no": "481625390",
+     "staff_initials": "JR",
+     "document_id": "syn-demo-040",
+     "entry_index": 20
+    },
+    {
+     "date": "2026-10-11",
+     "start": "17:55:00",
+     "end": null,
+     "code": "032101",
+     "quantity": 1,
+     "funding": "hkp",
+     "employee_no": "481625390",
+     "staff_initials": "JR",
+     "document_id": "syn-demo-040",
+     "entry_index": 21
+    },
+    {
+     "date": "2026-10-12",
+     "start": "07:45:00",
+     "end": null,
+     "code": "032101",
+     "quantity": 1,
+     "funding": "hkp",
+     "employee_no": "481625390",
+     "staff_initials": "JR",
+     "document_id": "syn-demo-040",
+     "entry_index": 22
+    },
+    {
+     "date": "2026-10-12",
+     "start": "18:20:00",
+     "end": null,
+     "code": "032101",
+     "quantity": 1,
+     "funding": "hkp",
+     "employee_no": "549069574",
+     "staff_initials": "TH",
+     "document_id": "syn-demo-040",
+     "entry_index": 23
+    },
+    {
+     "date": "2026-10-13",
+     "start": "07:20:00",
+     "end": null,
+     "code": "032101",
+     "quantity": 1,
+     "funding": "hkp",
+     "employee_no": "549069574",
+     "staff_initials": "TH",
+     "document_id": "syn-demo-040",
+     "entry_index": 24
+    },
+    {
+     "date": "2026-10-13",
+     "start": "18:25:00",
+     "end": null,
+     "code": "032101",
+     "quantity": 1,
+     "funding": "hkp",
+     "employee_no": "549069574",
+     "staff_initials": "TH",
+     "document_id": "syn-demo-040",
+     "entry_index": 25
+    },
+    {
+     "date": "2026-10-14",
+     "start": "07:37:00",
+     "end": null,
+     "code": "032101",
+     "quantity": 1,
+     "funding": "hkp",
+     "employee_no": "549069574",
+     "staff_initials": "TH",
+     "document_id": "syn-demo-040",
+     "entry_index": 26
+    },
+    {
+     "date": "2026-10-14",
+     "start": "18:11:00",
+     "end": null,
+     "code": "032101",
+     "quantity": 1,
+     "funding": "hkp",
+     "employee_no": "481625390",
+     "staff_initials": "JR",
+     "document_id": "syn-demo-040",
+     "entry_index": 27
+    },
+    {
+     "date": "2026-10-15",
+     "start": "07:37:00",
+     "end": null,
+     "code": "032101",
+     "quantity": 1,
+     "funding": "hkp",
+     "employee_no": "549069574",
+     "staff_initials": "TH",
+     "document_id": "syn-demo-040",
+     "entry_index": 28
+    },
+    {
+     "date": "2026-10-15",
+     "start": "18:11:00",
+     "end": null,
+     "code": "032101",
+     "quantity": 1,
+     "funding": "hkp",
+     "employee_no": "481625390",
+     "staff_initials": "JR",
+     "document_id": "syn-demo-040",
+     "entry_index": 29
+    },
+    {
+     "date": "2026-10-16",
+     "start": "07:15:00",
+     "end": null,
+     "code": "032101",
+     "quantity": 1,
+     "funding": "hkp",
+     "employee_no": "885723102",
+     "staff_initials": "AW",
+     "document_id": "syn-demo-040",
+     "entry_index": 30
+    },
+    {
+     "date": "2026-10-16",
+     "start": "18:22:00",
+     "end": null,
+     "code": "032101",
+     "quantity": 1,
+     "funding": "hkp",
+     "employee_no": "885723102",
+     "staff_initials": "AW",
+     "document_id": "syn-demo-040",
+     "entry_index": 31
+    },
+    {
+     "date": "2026-10-17",
+     "start": "07:40:00",
+     "end": null,
+     "code": "032101",
+     "quantity": 1,
+     "funding": "hkp",
+     "employee_no": "549069574",
+     "staff_initials": "TH",
+     "document_id": "syn-demo-040",
+     "entry_index": 32
+    },
+    {
+     "date": "2026-10-17",
+     "start": "18:23:00",
+     "end": null,
+     "code": "032101",
+     "quantity": 1,
+     "funding": "hkp",
+     "employee_no": "481625390",
+     "staff_initials": "JR",
+     "document_id": "syn-demo-040",
+     "entry_index": 33
+    },
+    {
+     "date": "2026-10-18",
+     "start": "07:26:00",
+     "end": null,
+     "code": "032101",
+     "quantity": 1,
+     "funding": "hkp",
+     "employee_no": "481625390",
+     "staff_initials": "JR",
+     "document_id": "syn-demo-040",
+     "entry_index": 34
+    },
+    {
+     "date": "2026-10-18",
+     "start": "18:10:00",
+     "end": null,
+     "code": "032101",
+     "quantity": 1,
+     "funding": "hkp",
+     "employee_no": "549069574",
+     "staff_initials": "TH",
+     "document_id": "syn-demo-040",
+     "entry_index": 35
+    },
+    {
+     "date": "2026-10-19",
+     "start": "07:30:00",
+     "end": null,
+     "code": "032101",
+     "quantity": 1,
+     "funding": "hkp",
+     "employee_no": "481625390",
+     "staff_initials": "JR",
+     "document_id": "syn-demo-040",
+     "entry_index": 36
+    },
+    {
+     "date": "2026-10-19",
+     "start": "17:56:00",
+     "end": null,
+     "code": "032101",
+     "quantity": 1,
+     "funding": "hkp",
+     "employee_no": "481625390",
+     "staff_initials": "JR",
+     "document_id": "syn-demo-040",
+     "entry_index": 37
+    },
+    {
+     "date": "2026-10-20",
+     "start": "07:25:00",
+     "end": null,
+     "code": "032101",
+     "quantity": 1,
+     "funding": "hkp",
+     "employee_no": "481625390",
+     "staff_initials": "JR",
+     "document_id": "syn-demo-040",
+     "entry_index": 38
+    },
+    {
+     "date": "2026-10-20",
+     "start": "18:15:00",
+     "end": null,
+     "code": "032101",
+     "quantity": 1,
+     "funding": "hkp",
+     "employee_no": "481625390",
+     "staff_initials": "JR",
+     "document_id": "syn-demo-040",
+     "entry_index": 39
+    },
+    {
+     "date": "2026-10-21",
+     "start": "07:15:00",
+     "end": null,
+     "code": "032101",
+     "quantity": 1,
+     "funding": "hkp",
+     "employee_no": "549069574",
+     "staff_initials": "TH",
+     "document_id": "syn-demo-040",
+     "entry_index": 40
+    },
+    {
+     "date": "2026-10-21",
+     "start": "18:09:00",
+     "end": null,
+     "code": "032101",
+     "quantity": 1,
+     "funding": "hkp",
+     "employee_no": "885723102",
+     "staff_initials": "AW",
+     "document_id": "syn-demo-040",
+     "entry_index": 41
+    },
+    {
+     "date": "2026-10-22",
+     "start": "07:15:00",
+     "end": null,
+     "code": "032101",
+     "quantity": 1,
+     "funding": "hkp",
+     "employee_no": "549069574",
+     "staff_initials": "TH",
+     "document_id": "syn-demo-040",
+     "entry_index": 42
+    },
+    {
+     "date": "2026-10-22",
+     "start": "18:18:00",
+     "end": null,
+     "code": "032101",
+     "quantity": 1,
+     "funding": "hkp",
+     "employee_no": "885723102",
+     "staff_initials": "AW",
+     "document_id": "syn-demo-040",
+     "entry_index": 43
+    },
+    {
+     "date": "2026-10-23",
+     "start": "07:20:00",
+     "end": null,
+     "code": "032101",
+     "quantity": 1,
+     "funding": "hkp",
+     "employee_no": "481625390",
+     "staff_initials": "JR",
+     "document_id": "syn-demo-040",
+     "entry_index": 44
+    },
+    {
+     "date": "2026-10-23",
+     "start": "18:30:00",
+     "end": null,
+     "code": "032101",
+     "quantity": 1,
+     "funding": "hkp",
+     "employee_no": "481625390",
+     "staff_initials": "JR",
+     "document_id": "syn-demo-040",
+     "entry_index": 45
+    },
+    {
+     "date": "2026-10-24",
+     "start": "07:25:00",
+     "end": null,
+     "code": "032101",
+     "quantity": 1,
+     "funding": "hkp",
+     "employee_no": "481625390",
+     "staff_initials": "JR",
+     "document_id": "syn-demo-040",
+     "entry_index": 46
+    },
+    {
+     "date": "2026-10-24",
+     "start": "17:55:00",
+     "end": null,
+     "code": "032101",
+     "quantity": 1,
+     "funding": "hkp",
+     "employee_no": "481625390",
+     "staff_initials": "JR",
+     "document_id": "syn-demo-040",
+     "entry_index": 47
+    },
+    {
+     "date": "2026-10-25",
+     "start": "07:34:00",
+     "end": null,
+     "code": "032101",
+     "quantity": 1,
+     "funding": "hkp",
+     "employee_no": "549069574",
+     "staff_initials": "TH",
+     "document_id": "syn-demo-040",
+     "entry_index": 48
+    },
+    {
+     "date": "2026-10-25",
+     "start": "18:10:00",
+     "end": null,
+     "code": "032101",
+     "quantity": 1,
+     "funding": "hkp",
+     "employee_no": "481625390",
+     "staff_initials": "JR",
+     "document_id": "syn-demo-040",
+     "entry_index": 49
+    },
+    {
+     "date": "2026-10-26",
+     "start": "07:40:00",
+     "end": null,
+     "code": "032101",
+     "quantity": 1,
+     "funding": "hkp",
+     "employee_no": "481625390",
+     "staff_initials": "JR",
+     "document_id": "syn-demo-040",
+     "entry_index": 50
+    },
+    {
+     "date": "2026-10-26",
+     "start": "18:25:00",
+     "end": null,
+     "code": "032101",
+     "quantity": 1,
+     "funding": "hkp",
+     "employee_no": "885723102",
+     "staff_initials": "AW",
+     "document_id": "syn-demo-040",
+     "entry_index": 51
+    },
+    {
+     "date": "2026-10-27",
+     "start": "07:20:00",
+     "end": null,
+     "code": "032101",
+     "quantity": 1,
+     "funding": "hkp",
+     "employee_no": "885723102",
+     "staff_initials": "AW",
+     "document_id": "syn-demo-040",
+     "entry_index": 52
+    },
+    {
+     "date": "2026-10-27",
+     "start": "18:00:00",
+     "end": null,
+     "code": "032101",
+     "quantity": 1,
+     "funding": "hkp",
+     "employee_no": "549069574",
+     "staff_initials": "TH",
+     "document_id": "syn-demo-040",
+     "entry_index": 53
+    },
+    {
+     "date": "2026-10-28",
+     "start": "07:21:00",
+     "end": null,
+     "code": "032101",
+     "quantity": 1,
+     "funding": "hkp",
+     "employee_no": "885723102",
+     "staff_initials": "AW",
+     "document_id": "syn-demo-040",
+     "entry_index": 54
+    },
+    {
+     "date": "2026-10-28",
+     "start": "18:20:00",
+     "end": null,
+     "code": "032101",
+     "quantity": 1,
+     "funding": "hkp",
+     "employee_no": "885723102",
+     "staff_initials": "AW",
+     "document_id": "syn-demo-040",
+     "entry_index": 55
+    },
+    {
+     "date": "2026-10-29",
+     "start": "07:20:00",
+     "end": null,
+     "code": "032101",
+     "quantity": 1,
+     "funding": "hkp",
+     "employee_no": "481625390",
+     "staff_initials": "JR",
+     "document_id": "syn-demo-040",
+     "entry_index": 56
+    },
+    {
+     "date": "2026-10-29",
+     "start": "18:15:00",
+     "end": null,
+     "code": "032101",
+     "quantity": 1,
+     "funding": "hkp",
+     "employee_no": "549069574",
+     "staff_initials": "TH",
+     "document_id": "syn-demo-040",
+     "entry_index": 57
+    },
+    {
+     "date": "2026-10-30",
+     "start": "07:25:00",
+     "end": null,
+     "code": "032101",
+     "quantity": 1,
+     "funding": "hkp",
+     "employee_no": "885723102",
+     "staff_initials": "AW",
+     "document_id": "syn-demo-040",
+     "entry_index": 58
+    },
+    {
+     "date": "2026-10-30",
+     "start": "18:23:00",
+     "end": null,
+     "code": "032101",
+     "quantity": 1,
+     "funding": "hkp",
+     "employee_no": "885723102",
+     "staff_initials": "AW",
+     "document_id": "syn-demo-040",
+     "entry_index": 59
+    },
+    {
+     "date": "2026-10-31",
+     "start": "07:40:00",
+     "end": null,
+     "code": "032101",
+     "quantity": 1,
+     "funding": "hkp",
+     "employee_no": "481625390",
+     "staff_initials": "JR",
+     "document_id": "syn-demo-040",
+     "entry_index": 60
+    },
+    {
+     "date": "2026-10-31",
+     "start": "18:10:00",
+     "end": null,
+     "code": "032101",
+     "quantity": 1,
+     "funding": "hkp",
+     "employee_no": "549069574",
+     "staff_initials": "TH",
+     "document_id": "syn-demo-040",
+     "entry_index": 61
+    }
+   ],
+   "patient_signed": true,
+   "missing_signature_reason": null,
+   "provider_signed": true,
+   "document_id": "syn-demo-040"
+  }
+ ],
+ "stays": [],
+ "prior_claims": []
+}

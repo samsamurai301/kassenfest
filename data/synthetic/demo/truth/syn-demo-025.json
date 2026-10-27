@@ -1,0 +1,11724 @@
+{
+ "doc_id": "syn-demo-025",
+ "doc_type": "visit_log_sgbv",
+ "variant": "photo",
+ "seed": 2845658737,
+ "patient_id": "p09",
+ "month": "2026-10",
+ "pages": [
+  {
+   "index": 0,
+   "image": "../pages/syn-demo-025.jpg",
+   "width": 2000,
+   "height": 1414
+  }
+ ],
+ "fields": {
+  "entries[0].date": {
+   "value": "2026-10-01",
+   "status": "present",
+   "page": 0,
+   "box": [
+    196.8,
+    355.4,
+    237.4,
+    369.9
+   ],
+   "handwritten": false
+  },
+  "entries[0].start_time": {
+   "value": "07:14",
+   "status": "present",
+   "page": 0,
+   "box": [
+    345.3,
+    349.9,
+    383.7,
+    374.6
+   ],
+   "handwritten": true
+  },
+  "entries[0].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[0].position_no": {
+   "value": "032101",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[0].service": {
+   "value": "Medikamentengabe",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[0].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[0].staff_initials": {
+   "value": "AW",
+   "status": "present",
+   "page": 0,
+   "box": [
+    489.3,
+    349.7,
+    521.7,
+    374.0
+   ],
+   "handwritten": true
+  },
+  "entries[0].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[0].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    489.3,
+    349.7,
+    521.7,
+    374.0
+   ],
+   "handwritten": false
+  },
+  "entries[1].date": {
+   "value": "2026-10-01",
+   "status": "present",
+   "page": 0,
+   "box": [
+    196.8,
+    355.4,
+    237.4,
+    369.9
+   ],
+   "handwritten": false
+  },
+  "entries[1].start_time": {
+   "value": "18:07",
+   "status": "present",
+   "page": 0,
+   "box": [
+    621.5,
+    348.5,
+    669.6,
+    372.4
+   ],
+   "handwritten": true
+  },
+  "entries[1].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[1].position_no": {
+   "value": "032101",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[1].service": {
+   "value": "Medikamentengabe",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[1].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[1].staff_initials": {
+   "value": "JR",
+   "status": "present",
+   "page": 0,
+   "box": [
+    774.4,
+    348.4,
+    799.0,
+    371.6
+   ],
+   "handwritten": true
+  },
+  "entries[1].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[1].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    774.4,
+    348.4,
+    799.0,
+    371.6
+   ],
+   "handwritten": false
+  },
+  "entries[2].date": {
+   "value": "2026-10-01",
+   "status": "present",
+   "page": 0,
+   "box": [
+    196.8,
+    355.4,
+    237.4,
+    369.9
+   ],
+   "handwritten": false
+  },
+  "entries[2].start_time": {
+   "value": "07:14",
+   "status": "present",
+   "page": 0,
+   "box": [
+    909.2,
+    347.5,
+    946.7,
+    371.8
+   ],
+   "handwritten": true
+  },
+  "entries[2].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[2].position_no": {
+   "value": "032110",
+   "status": "present",
+   "page": 0,
+   "box": [
+    914.3,
+    310.0,
+    959.8,
+    324.6
+   ],
+   "handwritten": false
+  },
+  "entries[2].service": {
+   "value": "Injektion s.c.",
+   "status": "present",
+   "page": 0,
+   "box": [
+    914.3,
+    310.0,
+    959.8,
+    324.6
+   ],
+   "handwritten": false
+  },
+  "entries[2].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[2].staff_initials": {
+   "value": "AW",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1053.5,
+    347.6,
+    1085.3,
+    371.3
+   ],
+   "handwritten": true
+  },
+  "entries[2].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[2].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1053.5,
+    347.6,
+    1085.3,
+    371.3
+   ],
+   "handwritten": false
+  },
+  "entries[3].date": {
+   "value": "2026-10-01",
+   "status": "present",
+   "page": 0,
+   "box": [
+    196.8,
+    355.4,
+    237.4,
+    369.9
+   ],
+   "handwritten": false
+  },
+  "entries[3].start_time": {
+   "value": "07:14",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1192.2,
+    345.6,
+    1230.0,
+    369.9
+   ],
+   "handwritten": true
+  },
+  "entries[3].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[3].position_no": {
+   "value": "032120",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1175.3,
+    308.7,
+    1221.9,
+    323.3
+   ],
+   "handwritten": false
+  },
+  "entries[3].service": {
+   "value": "Blutzuckermessung",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1175.3,
+    308.7,
+    1221.9,
+    323.3
+   ],
+   "handwritten": false
+  },
+  "entries[3].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[3].staff_initials": {
+   "value": "AW",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1336.4,
+    346.1,
+    1369.3,
+    370.8
+   ],
+   "handwritten": true
+  },
+  "entries[3].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[3].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1336.4,
+    346.1,
+    1369.3,
+    370.8
+   ],
+   "handwritten": false
+  },
+  "entries[4].date": {
+   "value": "2026-10-02",
+   "status": "present",
+   "page": 0,
+   "box": [
+    198.5,
+    378.9,
+    234.6,
+    393.3
+   ],
+   "handwritten": false
+  },
+  "entries[4].start_time": {
+   "value": "07:20",
+   "status": "present",
+   "page": 0,
+   "box": [
+    345.9,
+    374.1,
+    387.2,
+    398.4
+   ],
+   "handwritten": true
+  },
+  "entries[4].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[4].position_no": {
+   "value": "032101",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[4].service": {
+   "value": "Medikamentengabe",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[4].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[4].staff_initials": {
+   "value": "AW",
+   "status": "present",
+   "page": 0,
+   "box": [
+    491.3,
+    373.2,
+    522.7,
+    396.3
+   ],
+   "handwritten": true
+  },
+  "entries[4].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[4].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    491.3,
+    373.2,
+    522.7,
+    396.3
+   ],
+   "handwritten": false
+  },
+  "entries[5].date": {
+   "value": "2026-10-02",
+   "status": "present",
+   "page": 0,
+   "box": [
+    198.5,
+    378.9,
+    234.6,
+    393.3
+   ],
+   "handwritten": false
+  },
+  "entries[5].start_time": {
+   "value": "18:20",
+   "status": "present",
+   "page": 0,
+   "box": [
+    625.9,
+    372.5,
+    669.2,
+    396.6
+   ],
+   "handwritten": true
+  },
+  "entries[5].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[5].position_no": {
+   "value": "032101",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[5].service": {
+   "value": "Medikamentengabe",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[5].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[5].staff_initials": {
+   "value": "SB",
+   "status": "present",
+   "page": 0,
+   "box": [
+    776.9,
+    371.8,
+    799.9,
+    395.5
+   ],
+   "handwritten": true
+  },
+  "entries[5].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[5].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    776.9,
+    371.8,
+    799.9,
+    395.5
+   ],
+   "handwritten": false
+  },
+  "entries[6].date": {
+   "value": "2026-10-02",
+   "status": "present",
+   "page": 0,
+   "box": [
+    198.5,
+    378.9,
+    234.6,
+    393.3
+   ],
+   "handwritten": false
+  },
+  "entries[6].start_time": {
+   "value": "07:20",
+   "status": "present",
+   "page": 0,
+   "box": [
+    909.0,
+    371.7,
+    950.8,
+    395.5
+   ],
+   "handwritten": true
+  },
+  "entries[6].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[6].position_no": {
+   "value": "032110",
+   "status": "present",
+   "page": 0,
+   "box": [
+    914.3,
+    310.0,
+    959.8,
+    324.6
+   ],
+   "handwritten": false
+  },
+  "entries[6].service": {
+   "value": "Injektion s.c.",
+   "status": "present",
+   "page": 0,
+   "box": [
+    914.3,
+    310.0,
+    959.8,
+    324.6
+   ],
+   "handwritten": false
+  },
+  "entries[6].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[6].staff_initials": {
+   "value": "AW",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1055.6,
+    370.3,
+    1087.7,
+    393.7
+   ],
+   "handwritten": true
+  },
+  "entries[6].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[6].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1055.6,
+    370.3,
+    1087.7,
+    393.7
+   ],
+   "handwritten": false
+  },
+  "entries[7].date": {
+   "value": "2026-10-02",
+   "status": "present",
+   "page": 0,
+   "box": [
+    198.5,
+    378.9,
+    234.6,
+    393.3
+   ],
+   "handwritten": false
+  },
+  "entries[7].start_time": {
+   "value": "07:20",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1192.2,
+    370.4,
+    1234.5,
+    394.6
+   ],
+   "handwritten": true
+  },
+  "entries[7].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[7].position_no": {
+   "value": "032120",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1175.3,
+    308.7,
+    1221.9,
+    323.3
+   ],
+   "handwritten": false
+  },
+  "entries[7].service": {
+   "value": "Blutzuckermessung",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1175.3,
+    308.7,
+    1221.9,
+    323.3
+   ],
+   "handwritten": false
+  },
+  "entries[7].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[7].staff_initials": {
+   "value": "AW",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1338.4,
+    368.8,
+    1372.1,
+    394.2
+   ],
+   "handwritten": true
+  },
+  "entries[7].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[7].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1338.4,
+    368.8,
+    1372.1,
+    394.2
+   ],
+   "handwritten": false
+  },
+  "entries[8].date": {
+   "value": "2026-10-03",
+   "status": "present",
+   "page": 0,
+   "box": [
+    200.2,
+    402.3,
+    240.1,
+    416.7
+   ],
+   "handwritten": false
+  },
+  "entries[8].start_time": {
+   "value": "07:15",
+   "status": "present",
+   "page": 0,
+   "box": [
+    345.6,
+    395.8,
+    391.2,
+    422.0
+   ],
+   "handwritten": true
+  },
+  "entries[8].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[8].position_no": {
+   "value": "032101",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[8].service": {
+   "value": "Medikamentengabe",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[8].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[8].staff_initials": {
+   "value": "JR",
+   "status": "present",
+   "page": 0,
+   "box": [
+    496.6,
+    396.1,
+    521.5,
+    422.4
+   ],
+   "handwritten": true
+  },
+  "entries[8].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[8].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    496.6,
+    396.1,
+    521.5,
+    422.4
+   ],
+   "handwritten": false
+  },
+  "entries[9].date": {
+   "value": "2026-10-03",
+   "status": "present",
+   "page": 0,
+   "box": [
+    200.2,
+    402.3,
+    240.1,
+    416.7
+   ],
+   "handwritten": false
+  },
+  "entries[9].start_time": {
+   "value": "17:55",
+   "status": "present",
+   "page": 0,
+   "box": [
+    627.7,
+    395.7,
+    671.7,
+    420.2
+   ],
+   "handwritten": true
+  },
+  "entries[9].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[9].position_no": {
+   "value": "032101",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[9].service": {
+   "value": "Medikamentengabe",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[9].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[9].staff_initials": {
+   "value": "AW",
+   "status": "present",
+   "page": 0,
+   "box": [
+    774.3,
+    395.8,
+    806.6,
+    419.2
+   ],
+   "handwritten": true
+  },
+  "entries[9].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[9].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    774.3,
+    395.8,
+    806.6,
+    419.2
+   ],
+   "handwritten": false
+  },
+  "entries[10].date": {
+   "value": "2026-10-03",
+   "status": "present",
+   "page": 0,
+   "box": [
+    200.2,
+    402.3,
+    240.1,
+    416.7
+   ],
+   "handwritten": false
+  },
+  "entries[10].start_time": {
+   "value": "07:15",
+   "status": "present",
+   "page": 0,
+   "box": [
+    908.6,
+    392.8,
+    954.7,
+    418.9
+   ],
+   "handwritten": true
+  },
+  "entries[10].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[10].position_no": {
+   "value": "032110",
+   "status": "present",
+   "page": 0,
+   "box": [
+    914.3,
+    310.0,
+    959.8,
+    324.6
+   ],
+   "handwritten": false
+  },
+  "entries[10].service": {
+   "value": "Injektion s.c.",
+   "status": "present",
+   "page": 0,
+   "box": [
+    914.3,
+    310.0,
+    959.8,
+    324.6
+   ],
+   "handwritten": false
+  },
+  "entries[10].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[10].staff_initials": {
+   "value": "JR",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1061.0,
+    394.7,
+    1086.7,
+    417.8
+   ],
+   "handwritten": true
+  },
+  "entries[10].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[10].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1061.0,
+    394.7,
+    1086.7,
+    417.8
+   ],
+   "handwritten": false
+  },
+  "entries[11].date": {
+   "value": "2026-10-03",
+   "status": "present",
+   "page": 0,
+   "box": [
+    200.2,
+    402.3,
+    240.1,
+    416.7
+   ],
+   "handwritten": false
+  },
+  "entries[11].start_time": {
+   "value": "07:15",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1190.7,
+    391.4,
+    1239.0,
+    417.5
+   ],
+   "handwritten": true
+  },
+  "entries[11].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[11].position_no": {
+   "value": "032120",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1175.3,
+    308.7,
+    1221.9,
+    323.3
+   ],
+   "handwritten": false
+  },
+  "entries[11].service": {
+   "value": "Blutzuckermessung",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1175.3,
+    308.7,
+    1221.9,
+    323.3
+   ],
+   "handwritten": false
+  },
+  "entries[11].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[11].staff_initials": {
+   "value": "JR",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1345.3,
+    392.8,
+    1370.1,
+    416.0
+   ],
+   "handwritten": true
+  },
+  "entries[11].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[11].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1345.3,
+    392.8,
+    1370.1,
+    416.0
+   ],
+   "handwritten": false
+  },
+  "entries[12].date": {
+   "value": "2026-10-04",
+   "status": "present",
+   "page": 0,
+   "box": [
+    201.9,
+    425.7,
+    241.8,
+    440.2
+   ],
+   "handwritten": false
+  },
+  "entries[12].start_time": {
+   "value": "07:11",
+   "status": "present",
+   "page": 0,
+   "box": [
+    352.6,
+    421.2,
+    387.4,
+    444.3
+   ],
+   "handwritten": true
+  },
+  "entries[12].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[12].position_no": {
+   "value": "032101",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[12].service": {
+   "value": "Medikamentengabe",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[12].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[12].staff_initials": {
+   "value": "AW",
+   "status": "present",
+   "page": 0,
+   "box": [
+    493.8,
+    418.6,
+    526.3,
+    443.6
+   ],
+   "handwritten": true
+  },
+  "entries[12].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[12].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    493.8,
+    418.6,
+    526.3,
+    443.6
+   ],
+   "handwritten": false
+  },
+  "entries[13].date": {
+   "value": "2026-10-04",
+   "status": "present",
+   "page": 0,
+   "box": [
+    201.9,
+    425.7,
+    241.8,
+    440.2
+   ],
+   "handwritten": false
+  },
+  "entries[13].start_time": {
+   "value": "18:20",
+   "status": "present",
+   "page": 0,
+   "box": [
+    626.3,
+    417.5,
+    676.5,
+    444.0
+   ],
+   "handwritten": true
+  },
+  "entries[13].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[13].position_no": {
+   "value": "032101",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[13].service": {
+   "value": "Medikamentengabe",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[13].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[13].staff_initials": {
+   "value": "JR",
+   "status": "present",
+   "page": 0,
+   "box": [
+    780.1,
+    419.5,
+    804.9,
+    444.1
+   ],
+   "handwritten": true
+  },
+  "entries[13].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[13].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    780.1,
+    419.5,
+    804.9,
+    444.1
+   ],
+   "handwritten": false
+  },
+  "entries[14].date": {
+   "value": "2026-10-04",
+   "status": "present",
+   "page": 0,
+   "box": [
+    201.9,
+    425.7,
+    241.8,
+    440.2
+   ],
+   "handwritten": false
+  },
+  "entries[14].start_time": {
+   "value": "07:11",
+   "status": "present",
+   "page": 0,
+   "box": [
+    915.8,
+    418.2,
+    951.5,
+    442.4
+   ],
+   "handwritten": true
+  },
+  "entries[14].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[14].position_no": {
+   "value": "032110",
+   "status": "present",
+   "page": 0,
+   "box": [
+    914.3,
+    310.0,
+    959.8,
+    324.6
+   ],
+   "handwritten": false
+  },
+  "entries[14].service": {
+   "value": "Injektion s.c.",
+   "status": "present",
+   "page": 0,
+   "box": [
+    914.3,
+    310.0,
+    959.8,
+    324.6
+   ],
+   "handwritten": false
+  },
+  "entries[14].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[14].staff_initials": {
+   "value": "AW",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1059.7,
+    417.8,
+    1091.9,
+    441.4
+   ],
+   "handwritten": true
+  },
+  "entries[14].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[14].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1059.7,
+    417.8,
+    1091.9,
+    441.4
+   ],
+   "handwritten": false
+  },
+  "entries[15].date": {
+   "value": "2026-10-04",
+   "status": "present",
+   "page": 0,
+   "box": [
+    201.9,
+    425.7,
+    241.8,
+    440.2
+   ],
+   "handwritten": false
+  },
+  "entries[15].start_time": {
+   "value": "07:11",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1199.6,
+    417.6,
+    1235.7,
+    440.8
+   ],
+   "handwritten": true
+  },
+  "entries[15].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[15].position_no": {
+   "value": "032120",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1175.3,
+    308.7,
+    1221.9,
+    323.3
+   ],
+   "handwritten": false
+  },
+  "entries[15].service": {
+   "value": "Blutzuckermessung",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1175.3,
+    308.7,
+    1221.9,
+    323.3
+   ],
+   "handwritten": false
+  },
+  "entries[15].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[15].staff_initials": {
+   "value": "AW",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1343.5,
+    416.5,
+    1376.2,
+    440.5
+   ],
+   "handwritten": true
+  },
+  "entries[15].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[15].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1343.5,
+    416.5,
+    1376.2,
+    440.5
+   ],
+   "handwritten": false
+  },
+  "entries[16].date": {
+   "value": "2026-10-05",
+   "status": "present",
+   "page": 0,
+   "box": [
+    203.6,
+    449.2,
+    245.7,
+    463.7
+   ],
+   "handwritten": false
+  },
+  "entries[16].start_time": {
+   "value": "07:13",
+   "status": "present",
+   "page": 0,
+   "box": [
+    349.3,
+    443.3,
+    394.3,
+    469.1
+   ],
+   "handwritten": true
+  },
+  "entries[16].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[16].position_no": {
+   "value": "032101",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[16].service": {
+   "value": "Medikamentengabe",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[16].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[16].staff_initials": {
+   "value": "SB",
+   "status": "present",
+   "page": 0,
+   "box": [
+    501.3,
+    443.5,
+    523.7,
+    466.7
+   ],
+   "handwritten": true
+  },
+  "entries[16].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[16].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    501.3,
+    443.5,
+    523.7,
+    466.7
+   ],
+   "handwritten": false
+  },
+  "entries[17].date": {
+   "value": "2026-10-05",
+   "status": "present",
+   "page": 0,
+   "box": [
+    203.6,
+    449.2,
+    245.7,
+    463.7
+   ],
+   "handwritten": false
+  },
+  "entries[17].start_time": {
+   "value": "18:19",
+   "status": "present",
+   "page": 0,
+   "box": [
+    637.4,
+    442.4,
+    669.2,
+    466.9
+   ],
+   "handwritten": true
+  },
+  "entries[17].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[17].position_no": {
+   "value": "032101",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[17].service": {
+   "value": "Medikamentengabe",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[17].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[17].staff_initials": {
+   "value": "AW",
+   "status": "present",
+   "page": 0,
+   "box": [
+    778.5,
+    442.1,
+    810.4,
+    466.0
+   ],
+   "handwritten": true
+  },
+  "entries[17].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[17].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    778.5,
+    442.1,
+    810.4,
+    466.0
+   ],
+   "handwritten": false
+  },
+  "entries[18].date": {
+   "value": "2026-10-05",
+   "status": "present",
+   "page": 0,
+   "box": [
+    203.6,
+    449.2,
+    245.7,
+    463.7
+   ],
+   "handwritten": false
+  },
+  "entries[18].start_time": {
+   "value": "07:13",
+   "status": "present",
+   "page": 0,
+   "box": [
+    913.7,
+    442.4,
+    958.5,
+    466.8
+   ],
+   "handwritten": true
+  },
+  "entries[18].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[18].position_no": {
+   "value": "032110",
+   "status": "present",
+   "page": 0,
+   "box": [
+    914.3,
+    310.0,
+    959.8,
+    324.6
+   ],
+   "handwritten": false
+  },
+  "entries[18].service": {
+   "value": "Injektion s.c.",
+   "status": "present",
+   "page": 0,
+   "box": [
+    914.3,
+    310.0,
+    959.8,
+    324.6
+   ],
+   "handwritten": false
+  },
+  "entries[18].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[18].staff_initials": {
+   "value": "SB",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1066.1,
+    441.9,
+    1089.4,
+    467.2
+   ],
+   "handwritten": true
+  },
+  "entries[18].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[18].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1066.1,
+    441.9,
+    1089.4,
+    467.2
+   ],
+   "handwritten": false
+  },
+  "entries[19].date": {
+   "value": "2026-10-05",
+   "status": "present",
+   "page": 0,
+   "box": [
+    203.6,
+    449.2,
+    245.7,
+    463.7
+   ],
+   "handwritten": false
+  },
+  "entries[19].start_time": {
+   "value": "07:13",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1197.0,
+    439.8,
+    1242.3,
+    465.7
+   ],
+   "handwritten": true
+  },
+  "entries[19].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[19].position_no": {
+   "value": "032120",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1175.3,
+    308.7,
+    1221.9,
+    323.3
+   ],
+   "handwritten": false
+  },
+  "entries[19].service": {
+   "value": "Blutzuckermessung",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1175.3,
+    308.7,
+    1221.9,
+    323.3
+   ],
+   "handwritten": false
+  },
+  "entries[19].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[19].staff_initials": {
+   "value": "SB",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1350.8,
+    440.7,
+    1373.5,
+    463.7
+   ],
+   "handwritten": true
+  },
+  "entries[19].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[19].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1350.8,
+    440.7,
+    1373.5,
+    463.7
+   ],
+   "handwritten": false
+  },
+  "entries[20].date": {
+   "value": "2026-10-06",
+   "status": "present",
+   "page": 0,
+   "box": [
+    205.3,
+    472.7,
+    241.5,
+    487.2
+   ],
+   "handwritten": false
+  },
+  "entries[20].start_time": {
+   "value": "07:30",
+   "status": "present",
+   "page": 0,
+   "box": [
+    348.7,
+    466.7,
+    398.6,
+    492.6
+   ],
+   "handwritten": true
+  },
+  "entries[20].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[20].position_no": {
+   "value": "032101",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[20].service": {
+   "value": "Medikamentengabe",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[20].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[20].staff_initials": {
+   "value": "JR",
+   "status": "present",
+   "page": 0,
+   "box": [
+    501.5,
+    467.0,
+    526.3,
+    490.7
+   ],
+   "handwritten": true
+  },
+  "entries[20].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[20].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    501.5,
+    467.0,
+    526.3,
+    490.7
+   ],
+   "handwritten": false
+  },
+  "entries[21].date": {
+   "value": "2026-10-06",
+   "status": "present",
+   "page": 0,
+   "box": [
+    205.3,
+    472.7,
+    241.5,
+    487.2
+   ],
+   "handwritten": false
+  },
+  "entries[21].start_time": {
+   "value": "18:20",
+   "status": "present",
+   "page": 0,
+   "box": [
+    633.7,
+    466.6,
+    677.1,
+    493.3
+   ],
+   "handwritten": true
+  },
+  "entries[21].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[21].position_no": {
+   "value": "032101",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[21].service": {
+   "value": "Medikamentengabe",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[21].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[21].staff_initials": {
+   "value": "SB",
+   "status": "present",
+   "page": 0,
+   "box": [
+    785.2,
+    466.4,
+    807.8,
+    489.3
+   ],
+   "handwritten": true
+  },
+  "entries[21].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[21].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    785.2,
+    466.4,
+    807.8,
+    489.3
+   ],
+   "handwritten": false
+  },
+  "entries[22].date": {
+   "value": "2026-10-06",
+   "status": "present",
+   "page": 0,
+   "box": [
+    205.3,
+    472.7,
+    241.5,
+    487.2
+   ],
+   "handwritten": false
+  },
+  "entries[22].start_time": {
+   "value": "07:30",
+   "status": "present",
+   "page": 0,
+   "box": [
+    912.4,
+    465.4,
+    964.1,
+    490.8
+   ],
+   "handwritten": true
+  },
+  "entries[22].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[22].position_no": {
+   "value": "032110",
+   "status": "present",
+   "page": 0,
+   "box": [
+    914.3,
+    310.0,
+    959.8,
+    324.6
+   ],
+   "handwritten": false
+  },
+  "entries[22].service": {
+   "value": "Injektion s.c.",
+   "status": "present",
+   "page": 0,
+   "box": [
+    914.3,
+    310.0,
+    959.8,
+    324.6
+   ],
+   "handwritten": false
+  },
+  "entries[22].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[22].staff_initials": {
+   "value": "JR",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1067.1,
+    462.7,
+    1093.0,
+    488.9
+   ],
+   "handwritten": true
+  },
+  "entries[22].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[22].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1067.1,
+    462.7,
+    1093.0,
+    488.9
+   ],
+   "handwritten": false
+  },
+  "entries[23].date": {
+   "value": "2026-10-06",
+   "status": "present",
+   "page": 0,
+   "box": [
+    205.3,
+    472.7,
+    241.5,
+    487.2
+   ],
+   "handwritten": false
+  },
+  "entries[23].start_time": {
+   "value": "07:30",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1196.4,
+    463.0,
+    1247.4,
+    488.7
+   ],
+   "handwritten": true
+  },
+  "entries[23].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[23].position_no": {
+   "value": "032120",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1175.3,
+    308.7,
+    1221.9,
+    323.3
+   ],
+   "handwritten": false
+  },
+  "entries[23].service": {
+   "value": "Blutzuckermessung",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1175.3,
+    308.7,
+    1221.9,
+    323.3
+   ],
+   "handwritten": false
+  },
+  "entries[23].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[23].staff_initials": {
+   "value": "JR",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1351.6,
+    462.5,
+    1377.0,
+    487.2
+   ],
+   "handwritten": true
+  },
+  "entries[23].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[23].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1351.6,
+    462.5,
+    1377.0,
+    487.2
+   ],
+   "handwritten": false
+  },
+  "entries[24].date": {
+   "value": "2026-10-07",
+   "status": "present",
+   "page": 0,
+   "box": [
+    207.0,
+    496.2,
+    244.7,
+    510.7
+   ],
+   "handwritten": false
+  },
+  "entries[24].start_time": {
+   "value": "07:20",
+   "status": "present",
+   "page": 0,
+   "box": [
+    352.2,
+    491.8,
+    398.5,
+    516.9
+   ],
+   "handwritten": true
+  },
+  "entries[24].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[24].position_no": {
+   "value": "032101",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[24].service": {
+   "value": "Medikamentengabe",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[24].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[24].staff_initials": {
+   "value": "SB",
+   "status": "present",
+   "page": 0,
+   "box": [
+    504.7,
+    490.1,
+    527.6,
+    514.4
+   ],
+   "handwritten": true
+  },
+  "entries[24].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[24].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    504.7,
+    490.1,
+    527.6,
+    514.4
+   ],
+   "handwritten": false
+  },
+  "entries[25].date": {
+   "value": "2026-10-07",
+   "status": "present",
+   "page": 0,
+   "box": [
+    207.0,
+    496.2,
+    244.7,
+    510.7
+   ],
+   "handwritten": false
+  },
+  "entries[25].start_time": {
+   "value": "18:10",
+   "status": "present",
+   "page": 0,
+   "box": [
+    635.1,
+    488.8,
+    679.1,
+    514.9
+   ],
+   "handwritten": true
+  },
+  "entries[25].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[25].position_no": {
+   "value": "032101",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[25].service": {
+   "value": "Medikamentengabe",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[25].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[25].staff_initials": {
+   "value": "JR",
+   "status": "present",
+   "page": 0,
+   "box": [
+    785.6,
+    489.6,
+    811.0,
+    513.6
+   ],
+   "handwritten": true
+  },
+  "entries[25].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[25].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    785.6,
+    489.6,
+    811.0,
+    513.6
+   ],
+   "handwritten": false
+  },
+  "entries[26].date": {
+   "value": "2026-10-07",
+   "status": "present",
+   "page": 0,
+   "box": [
+    207.0,
+    496.2,
+    244.7,
+    510.7
+   ],
+   "handwritten": false
+  },
+  "entries[26].start_time": {
+   "value": "07:20",
+   "status": "present",
+   "page": 0,
+   "box": [
+    916.6,
+    489.5,
+    964.1,
+    514.6
+   ],
+   "handwritten": true
+  },
+  "entries[26].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[26].position_no": {
+   "value": "032110",
+   "status": "present",
+   "page": 0,
+   "box": [
+    914.3,
+    310.0,
+    959.8,
+    324.6
+   ],
+   "handwritten": false
+  },
+  "entries[26].service": {
+   "value": "Injektion s.c.",
+   "status": "present",
+   "page": 0,
+   "box": [
+    914.3,
+    310.0,
+    959.8,
+    324.6
+   ],
+   "handwritten": false
+  },
+  "entries[26].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[26].staff_initials": {
+   "value": "SB",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1070.2,
+    487.9,
+    1093.5,
+    513.0
+   ],
+   "handwritten": true
+  },
+  "entries[26].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[26].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1070.2,
+    487.9,
+    1093.5,
+    513.0
+   ],
+   "handwritten": false
+  },
+  "entries[27].date": {
+   "value": "2026-10-07",
+   "status": "present",
+   "page": 0,
+   "box": [
+    207.0,
+    496.2,
+    244.7,
+    510.7
+   ],
+   "handwritten": false
+  },
+  "entries[27].start_time": {
+   "value": "07:20",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1200.7,
+    484.7,
+    1247.9,
+    511.1
+   ],
+   "handwritten": true
+  },
+  "entries[27].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[27].position_no": {
+   "value": "032120",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1175.3,
+    308.7,
+    1221.9,
+    323.3
+   ],
+   "handwritten": false
+  },
+  "entries[27].service": {
+   "value": "Blutzuckermessung",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1175.3,
+    308.7,
+    1221.9,
+    323.3
+   ],
+   "handwritten": false
+  },
+  "entries[27].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[27].staff_initials": {
+   "value": "SB",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1355.2,
+    487.7,
+    1378.4,
+    511.1
+   ],
+   "handwritten": true
+  },
+  "entries[27].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[27].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1355.2,
+    487.7,
+    1378.4,
+    511.1
+   ],
+   "handwritten": false
+  },
+  "entries[28].date": {
+   "value": "2026-10-08",
+   "status": "present",
+   "page": 0,
+   "box": [
+    208.7,
+    519.7,
+    249.4,
+    534.3
+   ],
+   "handwritten": false
+  },
+  "entries[28].start_time": {
+   "value": "07:17",
+   "status": "present",
+   "page": 0,
+   "box": [
+    354.8,
+    515.4,
+    399.5,
+    538.9
+   ],
+   "handwritten": true
+  },
+  "entries[28].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[28].position_no": {
+   "value": "032101",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[28].service": {
+   "value": "Medikamentengabe",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[28].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[28].staff_initials": {
+   "value": "SB",
+   "status": "present",
+   "page": 0,
+   "box": [
+    506.5,
+    514.6,
+    529.3,
+    537.7
+   ],
+   "handwritten": true
+  },
+  "entries[28].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[28].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    506.5,
+    514.6,
+    529.3,
+    537.7
+   ],
+   "handwritten": false
+  },
+  "entries[29].date": {
+   "value": "2026-10-08",
+   "status": "present",
+   "page": 0,
+   "box": [
+    208.7,
+    519.7,
+    249.4,
+    534.3
+   ],
+   "handwritten": false
+  },
+  "entries[29].start_time": {
+   "value": "18:07",
+   "status": "present",
+   "page": 0,
+   "box": [
+    635.6,
+    514.3,
+    682.8,
+    538.8
+   ],
+   "handwritten": true
+  },
+  "entries[29].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[29].position_no": {
+   "value": "032101",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[29].service": {
+   "value": "Medikamentengabe",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[29].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[29].staff_initials": {
+   "value": "JR",
+   "status": "present",
+   "page": 0,
+   "box": [
+    787.8,
+    512.4,
+    813.9,
+    537.1
+   ],
+   "handwritten": true
+  },
+  "entries[29].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[29].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    787.8,
+    512.4,
+    813.9,
+    537.1
+   ],
+   "handwritten": false
+  },
+  "entries[30].date": {
+   "value": "2026-10-08",
+   "status": "present",
+   "page": 0,
+   "box": [
+    208.7,
+    519.7,
+    249.4,
+    534.3
+   ],
+   "handwritten": false
+  },
+  "entries[30].start_time": {
+   "value": "07:17",
+   "status": "present",
+   "page": 0,
+   "box": [
+    919.4,
+    512.8,
+    965.0,
+    538.2
+   ],
+   "handwritten": true
+  },
+  "entries[30].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[30].position_no": {
+   "value": "032110",
+   "status": "present",
+   "page": 0,
+   "box": [
+    914.3,
+    310.0,
+    959.8,
+    324.6
+   ],
+   "handwritten": false
+  },
+  "entries[30].service": {
+   "value": "Injektion s.c.",
+   "status": "present",
+   "page": 0,
+   "box": [
+    914.3,
+    310.0,
+    959.8,
+    324.6
+   ],
+   "handwritten": false
+  },
+  "entries[30].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[30].staff_initials": {
+   "value": "SB",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1072.4,
+    512.6,
+    1095.8,
+    536.3
+   ],
+   "handwritten": true
+  },
+  "entries[30].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[30].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1072.4,
+    512.6,
+    1095.8,
+    536.3
+   ],
+   "handwritten": false
+  },
+  "entries[31].date": {
+   "value": "2026-10-08",
+   "status": "present",
+   "page": 0,
+   "box": [
+    208.7,
+    519.7,
+    249.4,
+    534.3
+   ],
+   "handwritten": false
+  },
+  "entries[31].start_time": {
+   "value": "07:17",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1203.6,
+    510.7,
+    1249.1,
+    536.1
+   ],
+   "handwritten": true
+  },
+  "entries[31].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[31].position_no": {
+   "value": "032120",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1175.3,
+    308.7,
+    1221.9,
+    323.3
+   ],
+   "handwritten": false
+  },
+  "entries[31].service": {
+   "value": "Blutzuckermessung",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1175.3,
+    308.7,
+    1221.9,
+    323.3
+   ],
+   "handwritten": false
+  },
+  "entries[31].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[31].staff_initials": {
+   "value": "SB",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1357.2,
+    511.2,
+    1380.5,
+    534.7
+   ],
+   "handwritten": true
+  },
+  "entries[31].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[31].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1357.2,
+    511.2,
+    1380.5,
+    534.7
+   ],
+   "handwritten": false
+  },
+  "entries[32].date": {
+   "value": "2026-10-09",
+   "status": "present",
+   "page": 0,
+   "box": [
+    210.4,
+    543.3,
+    246.7,
+    557.8
+   ],
+   "handwritten": false
+  },
+  "entries[32].start_time": {
+   "value": "07:15",
+   "status": "present",
+   "page": 0,
+   "box": [
+    356.4,
+    537.0,
+    401.4,
+    561.9
+   ],
+   "handwritten": true
+  },
+  "entries[32].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[32].position_no": {
+   "value": "032101",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[32].service": {
+   "value": "Medikamentengabe",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[32].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[32].staff_initials": {
+   "value": "JR",
+   "status": "present",
+   "page": 0,
+   "box": [
+    506.8,
+    537.7,
+    532.0,
+    561.3
+   ],
+   "handwritten": true
+  },
+  "entries[32].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[32].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    506.8,
+    537.7,
+    532.0,
+    561.3
+   ],
+   "handwritten": false
+  },
+  "entries[33].date": {
+   "value": "2026-10-09",
+   "status": "present",
+   "page": 0,
+   "box": [
+    210.4,
+    543.3,
+    246.7,
+    557.8
+   ],
+   "handwritten": false
+  },
+  "entries[33].start_time": {
+   "value": "18:21",
+   "status": "present",
+   "page": 0,
+   "box": [
+    640.2,
+    537.8,
+    683.2,
+    562.1
+   ],
+   "handwritten": true
+  },
+  "entries[33].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[33].position_no": {
+   "value": "032101",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[33].service": {
+   "value": "Medikamentengabe",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[33].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[33].staff_initials": {
+   "value": "SB",
+   "status": "present",
+   "page": 0,
+   "box": [
+    791.1,
+    537.1,
+    813.9,
+    560.2
+   ],
+   "handwritten": true
+  },
+  "entries[33].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[33].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    791.1,
+    537.1,
+    813.9,
+    560.2
+   ],
+   "handwritten": false
+  },
+  "entries[34].date": {
+   "value": "2026-10-09",
+   "status": "present",
+   "page": 0,
+   "box": [
+    210.4,
+    543.3,
+    246.7,
+    557.8
+   ],
+   "handwritten": false
+  },
+  "entries[34].start_time": {
+   "value": "07:15",
+   "status": "present",
+   "page": 0,
+   "box": [
+    921.3,
+    536.3,
+    967.9,
+    560.5
+   ],
+   "handwritten": true
+  },
+  "entries[34].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[34].position_no": {
+   "value": "032110",
+   "status": "present",
+   "page": 0,
+   "box": [
+    914.3,
+    310.0,
+    959.8,
+    324.6
+   ],
+   "handwritten": false
+  },
+  "entries[34].service": {
+   "value": "Injektion s.c.",
+   "status": "present",
+   "page": 0,
+   "box": [
+    914.3,
+    310.0,
+    959.8,
+    324.6
+   ],
+   "handwritten": false
+  },
+  "entries[34].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[34].staff_initials": {
+   "value": "JR",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1074.0,
+    535.8,
+    1099.4,
+    559.7
+   ],
+   "handwritten": true
+  },
+  "entries[34].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[34].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1074.0,
+    535.8,
+    1099.4,
+    559.7
+   ],
+   "handwritten": false
+  },
+  "entries[35].date": {
+   "value": "2026-10-09",
+   "status": "present",
+   "page": 0,
+   "box": [
+    210.4,
+    543.3,
+    246.7,
+    557.8
+   ],
+   "handwritten": false
+  },
+  "entries[35].start_time": {
+   "value": "07:15",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1203.9,
+    533.4,
+    1252.3,
+    560.7
+   ],
+   "handwritten": true
+  },
+  "entries[35].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[35].position_no": {
+   "value": "032120",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1175.3,
+    308.7,
+    1221.9,
+    323.3
+   ],
+   "handwritten": false
+  },
+  "entries[35].service": {
+   "value": "Blutzuckermessung",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1175.3,
+    308.7,
+    1221.9,
+    323.3
+   ],
+   "handwritten": false
+  },
+  "entries[35].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[35].staff_initials": {
+   "value": "JR",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1358.8,
+    535.6,
+    1384.4,
+    559.7
+   ],
+   "handwritten": true
+  },
+  "entries[35].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[35].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1358.8,
+    535.6,
+    1384.4,
+    559.7
+   ],
+   "handwritten": false
+  },
+  "entries[36].date": {
+   "value": "2026-10-10",
+   "status": "present",
+   "page": 0,
+   "box": [
+    212.1,
+    566.9,
+    252.2,
+    581.4
+   ],
+   "handwritten": false
+  },
+  "entries[36].start_time": {
+   "value": "07:30",
+   "status": "present",
+   "page": 0,
+   "box": [
+    360.7,
+    561.8,
+    400.4,
+    585.9
+   ],
+   "handwritten": true
+  },
+  "entries[36].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[36].position_no": {
+   "value": "032101",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[36].service": {
+   "value": "Medikamentengabe",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[36].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[36].staff_initials": {
+   "value": "AW",
+   "status": "present",
+   "page": 0,
+   "box": [
+    505.8,
+    561.5,
+    538.0,
+    585.7
+   ],
+   "handwritten": true
+  },
+  "entries[36].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[36].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    505.8,
+    561.5,
+    538.0,
+    585.7
+   ],
+   "handwritten": false
+  },
+  "entries[37].date": {
+   "value": "2026-10-10",
+   "status": "present",
+   "page": 0,
+   "box": [
+    212.1,
+    566.9,
+    252.2,
+    581.4
+   ],
+   "handwritten": false
+  },
+  "entries[37].start_time": {
+   "value": "18:20",
+   "status": "present",
+   "page": 0,
+   "box": [
+    643.2,
+    561.4,
+    682.6,
+    585.1
+   ],
+   "handwritten": true
+  },
+  "entries[37].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[37].position_no": {
+   "value": "032101",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[37].service": {
+   "value": "Medikamentengabe",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[37].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[37].staff_initials": {
+   "value": "AW",
+   "status": "present",
+   "page": 0,
+   "box": [
+    788.6,
+    560.6,
+    820.3,
+    584.1
+   ],
+   "handwritten": true
+  },
+  "entries[37].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[37].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    788.6,
+    560.6,
+    820.3,
+    584.1
+   ],
+   "handwritten": false
+  },
+  "entries[38].date": {
+   "value": "2026-10-10",
+   "status": "present",
+   "page": 0,
+   "box": [
+    212.1,
+    566.9,
+    252.2,
+    581.4
+   ],
+   "handwritten": false
+  },
+  "entries[38].start_time": {
+   "value": "07:30",
+   "status": "present",
+   "page": 0,
+   "box": [
+    925.8,
+    560.0,
+    966.2,
+    583.9
+   ],
+   "handwritten": true
+  },
+  "entries[38].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[38].position_no": {
+   "value": "032110",
+   "status": "present",
+   "page": 0,
+   "box": [
+    914.3,
+    310.0,
+    959.8,
+    324.6
+   ],
+   "handwritten": false
+  },
+  "entries[38].service": {
+   "value": "Injektion s.c.",
+   "status": "present",
+   "page": 0,
+   "box": [
+    914.3,
+    310.0,
+    959.8,
+    324.6
+   ],
+   "handwritten": false
+  },
+  "entries[38].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[38].staff_initials": {
+   "value": "AW",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1071.9,
+    558.4,
+    1105.0,
+    583.2
+   ],
+   "handwritten": true
+  },
+  "entries[38].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[38].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1071.9,
+    558.4,
+    1105.0,
+    583.2
+   ],
+   "handwritten": false
+  },
+  "entries[39].date": {
+   "value": "2026-10-10",
+   "status": "present",
+   "page": 0,
+   "box": [
+    212.1,
+    566.9,
+    252.2,
+    581.4
+   ],
+   "handwritten": false
+  },
+  "entries[39].start_time": {
+   "value": "07:30",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1210.7,
+    559.2,
+    1250.8,
+    582.9
+   ],
+   "handwritten": true
+  },
+  "entries[39].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[39].position_no": {
+   "value": "032120",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1175.3,
+    308.7,
+    1221.9,
+    323.3
+   ],
+   "handwritten": false
+  },
+  "entries[39].service": {
+   "value": "Blutzuckermessung",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1175.3,
+    308.7,
+    1221.9,
+    323.3
+   ],
+   "handwritten": false
+  },
+  "entries[39].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[39].staff_initials": {
+   "value": "AW",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1357.4,
+    558.9,
+    1389.7,
+    582.3
+   ],
+   "handwritten": true
+  },
+  "entries[39].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[39].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1357.4,
+    558.9,
+    1389.7,
+    582.3
+   ],
+   "handwritten": false
+  },
+  "entries[40].date": {
+   "value": "2026-10-11",
+   "status": "present",
+   "page": 0,
+   "box": [
+    213.9,
+    590.5,
+    252.9,
+    605.0
+   ],
+   "handwritten": false
+  },
+  "entries[40].start_time": {
+   "value": "07:34",
+   "status": "present",
+   "page": 0,
+   "box": [
+    362.5,
+    585.2,
+    403.1,
+    610.1
+   ],
+   "handwritten": true
+  },
+  "entries[40].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[40].position_no": {
+   "value": "032101",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[40].service": {
+   "value": "Medikamentengabe",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[40].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[40].staff_initials": {
+   "value": "AW",
+   "status": "present",
+   "page": 0,
+   "box": [
+    507.6,
+    585.5,
+    539.9,
+    609.9
+   ],
+   "handwritten": true
+  },
+  "entries[40].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[40].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    507.6,
+    585.5,
+    539.9,
+    609.9
+   ],
+   "handwritten": false
+  },
+  "entries[41].date": {
+   "value": "2026-10-11",
+   "status": "present",
+   "page": 0,
+   "box": [
+    213.9,
+    590.5,
+    252.9,
+    605.0
+   ],
+   "handwritten": false
+  },
+  "entries[41].start_time": {
+   "value": "18:05",
+   "status": "present",
+   "page": 0,
+   "box": [
+    643.7,
+    584.1,
+    686.1,
+    608.7
+   ],
+   "handwritten": true
+  },
+  "entries[41].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[41].position_no": {
+   "value": "032101",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[41].service": {
+   "value": "Medikamentengabe",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[41].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[41].staff_initials": {
+   "value": "SB",
+   "status": "present",
+   "page": 0,
+   "box": [
+    795.0,
+    584.9,
+    817.6,
+    608.0
+   ],
+   "handwritten": true
+  },
+  "entries[41].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[41].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    795.0,
+    584.9,
+    817.6,
+    608.0
+   ],
+   "handwritten": false
+  },
+  "entries[42].date": {
+   "value": "2026-10-11",
+   "status": "present",
+   "page": 0,
+   "box": [
+    213.9,
+    590.5,
+    252.9,
+    605.0
+   ],
+   "handwritten": false
+  },
+  "entries[42].start_time": {
+   "value": "07:34",
+   "status": "present",
+   "page": 0,
+   "box": [
+    927.8,
+    583.9,
+    968.3,
+    607.9
+   ],
+   "handwritten": true
+  },
+  "entries[42].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[42].position_no": {
+   "value": "032110",
+   "status": "present",
+   "page": 0,
+   "box": [
+    914.3,
+    310.0,
+    959.8,
+    324.6
+   ],
+   "handwritten": false
+  },
+  "entries[42].service": {
+   "value": "Injektion s.c.",
+   "status": "present",
+   "page": 0,
+   "box": [
+    914.3,
+    310.0,
+    959.8,
+    324.6
+   ],
+   "handwritten": false
+  },
+  "entries[42].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[42].staff_initials": {
+   "value": "AW",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1074.4,
+    584.0,
+    1106.5,
+    607.5
+   ],
+   "handwritten": true
+  },
+  "entries[42].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[42].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1074.4,
+    584.0,
+    1106.5,
+    607.5
+   ],
+   "handwritten": false
+  },
+  "entries[43].date": {
+   "value": "2026-10-11",
+   "status": "present",
+   "page": 0,
+   "box": [
+    213.9,
+    590.5,
+    252.9,
+    605.0
+   ],
+   "handwritten": false
+  },
+  "entries[43].start_time": {
+   "value": "07:34",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1213.0,
+    583.5,
+    1252.9,
+    607.3
+   ],
+   "handwritten": true
+  },
+  "entries[43].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[43].position_no": {
+   "value": "032120",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1175.3,
+    308.7,
+    1221.9,
+    323.3
+   ],
+   "handwritten": false
+  },
+  "entries[43].service": {
+   "value": "Blutzuckermessung",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1175.3,
+    308.7,
+    1221.9,
+    323.3
+   ],
+   "handwritten": false
+  },
+  "entries[43].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[43].staff_initials": {
+   "value": "AW",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1359.5,
+    582.9,
+    1392.4,
+    607.2
+   ],
+   "handwritten": true
+  },
+  "entries[43].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[43].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1359.5,
+    582.9,
+    1392.4,
+    607.2
+   ],
+   "handwritten": false
+  },
+  "entries[44].date": {
+   "value": "2026-10-12",
+   "status": "present",
+   "page": 0,
+   "box": [
+    215.7,
+    615.3,
+    258.0,
+    629.9
+   ],
+   "handwritten": false
+  },
+  "entries[44].start_time": {
+   "value": "07:25",
+   "status": "present",
+   "page": 0,
+   "box": [
+    360.9,
+    608.0,
+    407.7,
+    635.4
+   ],
+   "handwritten": true
+  },
+  "entries[44].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[44].position_no": {
+   "value": "032101",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[44].service": {
+   "value": "Medikamentengabe",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[44].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[44].staff_initials": {
+   "value": "SB",
+   "status": "present",
+   "page": 0,
+   "box": [
+    513.1,
+    609.5,
+    537.1,
+    633.7
+   ],
+   "handwritten": true
+  },
+  "entries[44].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[44].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    513.1,
+    609.5,
+    537.1,
+    633.7
+   ],
+   "handwritten": false
+  },
+  "entries[45].date": {
+   "value": "2026-10-12",
+   "status": "present",
+   "page": 0,
+   "box": [
+    215.7,
+    615.3,
+    258.0,
+    629.9
+   ],
+   "handwritten": false
+  },
+  "entries[45].start_time": {
+   "value": "18:05",
+   "status": "present",
+   "page": 0,
+   "box": [
+    645.6,
+    609.3,
+    689.2,
+    634.6
+   ],
+   "handwritten": true
+  },
+  "entries[45].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[45].position_no": {
+   "value": "032101",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[45].service": {
+   "value": "Medikamentengabe",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[45].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[45].staff_initials": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": [
+    790.5,
+    608.6,
+    826.3,
+    630.5
+   ],
+   "handwritten": true
+  },
+  "entries[45].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[45].initials_state": {
+   "value": "absent",
+   "status": "present",
+   "page": 0,
+   "box": [
+    790.5,
+    608.6,
+    826.3,
+    630.5
+   ],
+   "handwritten": false
+  },
+  "entries[46].date": {
+   "value": "2026-10-12",
+   "status": "present",
+   "page": 0,
+   "box": [
+    215.7,
+    615.3,
+    258.0,
+    629.9
+   ],
+   "handwritten": false
+  },
+  "entries[46].start_time": {
+   "value": "07:25",
+   "status": "present",
+   "page": 0,
+   "box": [
+    926.9,
+    607.9,
+    973.7,
+    633.3
+   ],
+   "handwritten": true
+  },
+  "entries[46].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[46].position_no": {
+   "value": "032110",
+   "status": "present",
+   "page": 0,
+   "box": [
+    914.3,
+    310.0,
+    959.8,
+    324.6
+   ],
+   "handwritten": false
+  },
+  "entries[46].service": {
+   "value": "Injektion s.c.",
+   "status": "present",
+   "page": 0,
+   "box": [
+    914.3,
+    310.0,
+    959.8,
+    324.6
+   ],
+   "handwritten": false
+  },
+  "entries[46].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[46].staff_initials": {
+   "value": "SB",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1080.6,
+    608.1,
+    1104.8,
+    634.0
+   ],
+   "handwritten": true
+  },
+  "entries[46].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[46].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1080.6,
+    608.1,
+    1104.8,
+    634.0
+   ],
+   "handwritten": false
+  },
+  "entries[47].date": {
+   "value": "2026-10-12",
+   "status": "present",
+   "page": 0,
+   "box": [
+    215.7,
+    615.3,
+    258.0,
+    629.9
+   ],
+   "handwritten": false
+  },
+  "entries[47].start_time": {
+   "value": "07:25",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1211.2,
+    607.2,
+    1258.8,
+    632.6
+   ],
+   "handwritten": true
+  },
+  "entries[47].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[47].position_no": {
+   "value": "032120",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1175.3,
+    308.7,
+    1221.9,
+    323.3
+   ],
+   "handwritten": false
+  },
+  "entries[47].service": {
+   "value": "Blutzuckermessung",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1175.3,
+    308.7,
+    1221.9,
+    323.3
+   ],
+   "handwritten": false
+  },
+  "entries[47].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[47].staff_initials": {
+   "value": "SB",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1365.9,
+    607.6,
+    1390.4,
+    632.3
+   ],
+   "handwritten": true
+  },
+  "entries[47].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[47].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1365.9,
+    607.6,
+    1390.4,
+    632.3
+   ],
+   "handwritten": false
+  },
+  "entries[48].date": {
+   "value": "2026-10-13",
+   "status": "present",
+   "page": 0,
+   "box": [
+    217.6,
+    641.5,
+    253.9,
+    656.0
+   ],
+   "handwritten": false
+  },
+  "entries[48].start_time": {
+   "value": "07:25",
+   "status": "present",
+   "page": 0,
+   "box": [
+    363.2,
+    637.2,
+    409.4,
+    661.8
+   ],
+   "handwritten": true
+  },
+  "entries[48].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[48].position_no": {
+   "value": "032101",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[48].service": {
+   "value": "Medikamentengabe",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[48].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[48].staff_initials": {
+   "value": "SB",
+   "status": "present",
+   "page": 0,
+   "box": [
+    516.2,
+    636.8,
+    539.1,
+    661.1
+   ],
+   "handwritten": true
+  },
+  "entries[48].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[48].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    516.2,
+    636.8,
+    539.1,
+    661.1
+   ],
+   "handwritten": false
+  },
+  "entries[49].date": {
+   "value": "2026-10-13",
+   "status": "present",
+   "page": 0,
+   "box": [
+    217.6,
+    641.5,
+    253.9,
+    656.0
+   ],
+   "handwritten": false
+  },
+  "entries[49].start_time": {
+   "value": "18:15",
+   "status": "present",
+   "page": 0,
+   "box": [
+    646.1,
+    634.4,
+    691.2,
+    659.6
+   ],
+   "handwritten": true
+  },
+  "entries[49].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[49].position_no": {
+   "value": "032101",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[49].service": {
+   "value": "Medikamentengabe",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[49].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[49].staff_initials": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": [
+    792.7,
+    634.8,
+    828.6,
+    656.8
+   ],
+   "handwritten": true
+  },
+  "entries[49].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[49].initials_state": {
+   "value": "absent",
+   "status": "present",
+   "page": 0,
+   "box": [
+    792.7,
+    634.8,
+    828.6,
+    656.8
+   ],
+   "handwritten": false
+  },
+  "entries[50].date": {
+   "value": "2026-10-13",
+   "status": "present",
+   "page": 0,
+   "box": [
+    217.6,
+    641.5,
+    253.9,
+    656.0
+   ],
+   "handwritten": false
+  },
+  "entries[50].start_time": {
+   "value": "07:25",
+   "status": "present",
+   "page": 0,
+   "box": [
+    929.5,
+    632.7,
+    975.9,
+    660.1
+   ],
+   "handwritten": true
+  },
+  "entries[50].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[50].position_no": {
+   "value": "032110",
+   "status": "present",
+   "page": 0,
+   "box": [
+    914.3,
+    310.0,
+    959.8,
+    324.6
+   ],
+   "handwritten": false
+  },
+  "entries[50].service": {
+   "value": "Injektion s.c.",
+   "status": "present",
+   "page": 0,
+   "box": [
+    914.3,
+    310.0,
+    959.8,
+    324.6
+   ],
+   "handwritten": false
+  },
+  "entries[50].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[50].staff_initials": {
+   "value": "SB",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1082.8,
+    634.3,
+    1107.2,
+    658.9
+   ],
+   "handwritten": true
+  },
+  "entries[50].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[50].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1082.8,
+    634.3,
+    1107.2,
+    658.9
+   ],
+   "handwritten": false
+  },
+  "entries[51].date": {
+   "value": "2026-10-13",
+   "status": "present",
+   "page": 0,
+   "box": [
+    217.6,
+    641.5,
+    253.9,
+    656.0
+   ],
+   "handwritten": false
+  },
+  "entries[51].start_time": {
+   "value": "07:25",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1213.4,
+    633.7,
+    1261.5,
+    659.8
+   ],
+   "handwritten": true
+  },
+  "entries[51].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[51].position_no": {
+   "value": "032120",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1175.3,
+    308.7,
+    1221.9,
+    323.3
+   ],
+   "handwritten": false
+  },
+  "entries[51].service": {
+   "value": "Blutzuckermessung",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1175.3,
+    308.7,
+    1221.9,
+    323.3
+   ],
+   "handwritten": false
+  },
+  "entries[51].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[51].staff_initials": {
+   "value": "SB",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1368.7,
+    634.5,
+    1392.4,
+    658.1
+   ],
+   "handwritten": true
+  },
+  "entries[51].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[51].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1368.7,
+    634.5,
+    1392.4,
+    658.1
+   ],
+   "handwritten": false
+  },
+  "entries[52].date": {
+   "value": "2026-10-14",
+   "status": "present",
+   "page": 0,
+   "box": [
+    219.4,
+    666.4,
+    257.2,
+    680.9
+   ],
+   "handwritten": false
+  },
+  "entries[52].start_time": {
+   "value": "07:31",
+   "status": "present",
+   "page": 0,
+   "box": [
+    369.8,
+    662.1,
+    407.1,
+    686.3
+   ],
+   "handwritten": true
+  },
+  "entries[52].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[52].position_no": {
+   "value": "032101",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[52].service": {
+   "value": "Medikamentengabe",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[52].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[52].staff_initials": {
+   "value": "AW",
+   "status": "present",
+   "page": 0,
+   "box": [
+    513.8,
+    661.8,
+    545.3,
+    685.9
+   ],
+   "handwritten": true
+  },
+  "entries[52].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[52].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    513.8,
+    661.8,
+    545.3,
+    685.9
+   ],
+   "handwritten": false
+  },
+  "entries[53].date": {
+   "value": "2026-10-14",
+   "status": "present",
+   "page": 0,
+   "box": [
+    219.4,
+    666.4,
+    257.2,
+    680.9
+   ],
+   "handwritten": false
+  },
+  "entries[53].start_time": {
+   "value": "17:59",
+   "status": "present",
+   "page": 0,
+   "box": [
+    652.0,
+    660.0,
+    690.3,
+    684.3
+   ],
+   "handwritten": true
+  },
+  "entries[53].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[53].position_no": {
+   "value": "032101",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[53].service": {
+   "value": "Medikamentengabe",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[53].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[53].staff_initials": {
+   "value": "AW",
+   "status": "present",
+   "page": 0,
+   "box": [
+    797.1,
+    661.0,
+    829.7,
+    686.5
+   ],
+   "handwritten": true
+  },
+  "entries[53].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[53].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    797.1,
+    661.0,
+    829.7,
+    686.5
+   ],
+   "handwritten": false
+  },
+  "entries[54].date": {
+   "value": "2026-10-14",
+   "status": "present",
+   "page": 0,
+   "box": [
+    219.4,
+    666.4,
+    257.2,
+    680.9
+   ],
+   "handwritten": false
+  },
+  "entries[54].start_time": {
+   "value": "07:31",
+   "status": "present",
+   "page": 0,
+   "box": [
+    936.1,
+    660.1,
+    973.8,
+    684.3
+   ],
+   "handwritten": true
+  },
+  "entries[54].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[54].position_no": {
+   "value": "032110",
+   "status": "present",
+   "page": 0,
+   "box": [
+    914.3,
+    310.0,
+    959.8,
+    324.6
+   ],
+   "handwritten": false
+  },
+  "entries[54].service": {
+   "value": "Injektion s.c.",
+   "status": "present",
+   "page": 0,
+   "box": [
+    914.3,
+    310.0,
+    959.8,
+    324.6
+   ],
+   "handwritten": false
+  },
+  "entries[54].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[54].staff_initials": {
+   "value": "AW",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1081.4,
+    660.3,
+    1113.3,
+    683.6
+   ],
+   "handwritten": true
+  },
+  "entries[54].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[54].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1081.4,
+    660.3,
+    1113.3,
+    683.6
+   ],
+   "handwritten": false
+  },
+  "entries[55].date": {
+   "value": "2026-10-14",
+   "status": "present",
+   "page": 0,
+   "box": [
+    219.4,
+    666.4,
+    257.2,
+    680.9
+   ],
+   "handwritten": false
+  },
+  "entries[55].start_time": {
+   "value": "07:31",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1220.8,
+    659.0,
+    1259.4,
+    682.9
+   ],
+   "handwritten": true
+  },
+  "entries[55].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[55].position_no": {
+   "value": "032120",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1175.3,
+    308.7,
+    1221.9,
+    323.3
+   ],
+   "handwritten": false
+  },
+  "entries[55].service": {
+   "value": "Blutzuckermessung",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1175.3,
+    308.7,
+    1221.9,
+    323.3
+   ],
+   "handwritten": false
+  },
+  "entries[55].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[55].staff_initials": {
+   "value": "AW",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1366.4,
+    658.4,
+    1399.2,
+    683.4
+   ],
+   "handwritten": true
+  },
+  "entries[55].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[55].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1366.4,
+    658.4,
+    1399.2,
+    683.4
+   ],
+   "handwritten": false
+  },
+  "entries[56].date": {
+   "value": "2026-10-15",
+   "status": "present",
+   "page": 0,
+   "box": [
+    221.1,
+    690.1,
+    262.0,
+    704.6
+   ],
+   "handwritten": false
+  },
+  "entries[56].start_time": {
+   "value": "07:20",
+   "status": "present",
+   "page": 0,
+   "box": [
+    365.2,
+    685.8,
+    415.1,
+    709.3
+   ],
+   "handwritten": true
+  },
+  "entries[56].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[56].position_no": {
+   "value": "032101",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[56].service": {
+   "value": "Medikamentengabe",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[56].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[56].staff_initials": {
+   "value": "JR",
+   "status": "present",
+   "page": 0,
+   "box": [
+    519.1,
+    685.1,
+    544.0,
+    709.2
+   ],
+   "handwritten": true
+  },
+  "entries[56].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[56].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    519.1,
+    685.1,
+    544.0,
+    709.2
+   ],
+   "handwritten": false
+  },
+  "entries[57].date": {
+   "value": "2026-10-15",
+   "status": "present",
+   "page": 0,
+   "box": [
+    221.1,
+    690.1,
+    262.0,
+    704.6
+   ],
+   "handwritten": false
+  },
+  "entries[57].start_time": {
+   "value": "17:55",
+   "status": "present",
+   "page": 0,
+   "box": [
+    649.5,
+    682.7,
+    696.6,
+    708.6
+   ],
+   "handwritten": true
+  },
+  "entries[57].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[57].position_no": {
+   "value": "032101",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[57].service": {
+   "value": "Medikamentengabe",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[57].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[57].staff_initials": {
+   "value": "JR",
+   "status": "present",
+   "page": 0,
+   "box": [
+    801.7,
+    683.3,
+    827.4,
+    709.5
+   ],
+   "handwritten": true
+  },
+  "entries[57].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[57].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    801.7,
+    683.3,
+    827.4,
+    709.5
+   ],
+   "handwritten": false
+  },
+  "entries[58].date": {
+   "value": "2026-10-15",
+   "status": "present",
+   "page": 0,
+   "box": [
+    221.1,
+    690.1,
+    262.0,
+    704.6
+   ],
+   "handwritten": false
+  },
+  "entries[58].start_time": {
+   "value": "07:20",
+   "status": "present",
+   "page": 0,
+   "box": [
+    931.1,
+    683.9,
+    982.5,
+    708.8
+   ],
+   "handwritten": true
+  },
+  "entries[58].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[58].position_no": {
+   "value": "032110",
+   "status": "present",
+   "page": 0,
+   "box": [
+    914.3,
+    310.0,
+    959.8,
+    324.6
+   ],
+   "handwritten": false
+  },
+  "entries[58].service": {
+   "value": "Injektion s.c.",
+   "status": "present",
+   "page": 0,
+   "box": [
+    914.3,
+    310.0,
+    959.8,
+    324.6
+   ],
+   "handwritten": false
+  },
+  "entries[58].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[58].staff_initials": {
+   "value": "JR",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1085.9,
+    681.1,
+    1112.3,
+    707.2
+   ],
+   "handwritten": true
+  },
+  "entries[58].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[58].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1085.9,
+    681.1,
+    1112.3,
+    707.2
+   ],
+   "handwritten": false
+  },
+  "entries[59].date": {
+   "value": "2026-10-15",
+   "status": "present",
+   "page": 0,
+   "box": [
+    221.1,
+    690.1,
+    262.0,
+    704.6
+   ],
+   "handwritten": false
+  },
+  "entries[59].start_time": {
+   "value": "07:20",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1216.3,
+    682.7,
+    1268.0,
+    708.1
+   ],
+   "handwritten": true
+  },
+  "entries[59].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[59].position_no": {
+   "value": "032120",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1175.3,
+    308.7,
+    1221.9,
+    323.3
+   ],
+   "handwritten": false
+  },
+  "entries[59].service": {
+   "value": "Blutzuckermessung",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1175.3,
+    308.7,
+    1221.9,
+    323.3
+   ],
+   "handwritten": false
+  },
+  "entries[59].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[59].staff_initials": {
+   "value": "JR",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1372.0,
+    681.7,
+    1397.9,
+    707.8
+   ],
+   "handwritten": true
+  },
+  "entries[59].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[59].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1372.0,
+    681.7,
+    1397.9,
+    707.8
+   ],
+   "handwritten": false
+  },
+  "entries[60].date": {
+   "value": "2026-10-16",
+   "status": "present",
+   "page": 0,
+   "box": [
+    222.9,
+    715.0,
+    259.3,
+    729.6
+   ],
+   "handwritten": false
+  },
+  "entries[60].start_time": {
+   "value": "07:10",
+   "status": "present",
+   "page": 0,
+   "box": [
+    373.1,
+    710.7,
+    410.8,
+    734.3
+   ],
+   "handwritten": true
+  },
+  "entries[60].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[60].position_no": {
+   "value": "032101",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[60].service": {
+   "value": "Medikamentengabe",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[60].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[60].staff_initials": {
+   "value": "AW",
+   "status": "present",
+   "page": 0,
+   "box": [
+    517.5,
+    710.3,
+    549.1,
+    733.8
+   ],
+   "handwritten": true
+  },
+  "entries[60].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[60].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    517.5,
+    710.3,
+    549.1,
+    733.8
+   ],
+   "handwritten": false
+  },
+  "entries[61].date": {
+   "value": "2026-10-16",
+   "status": "present",
+   "page": 0,
+   "box": [
+    222.9,
+    715.0,
+    259.3,
+    729.6
+   ],
+   "handwritten": false
+  },
+  "entries[61].start_time": {
+   "value": "18:25",
+   "status": "present",
+   "page": 0,
+   "box": [
+    649.6,
+    708.9,
+    700.8,
+    734.6
+   ],
+   "handwritten": true
+  },
+  "entries[61].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[61].position_no": {
+   "value": "032101",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[61].service": {
+   "value": "Medikamentengabe",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[61].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[61].staff_initials": {
+   "value": "JR",
+   "status": "present",
+   "page": 0,
+   "box": [
+    804.4,
+    706.6,
+    829.4,
+    734.7
+   ],
+   "handwritten": true
+  },
+  "entries[61].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[61].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    804.4,
+    706.6,
+    829.4,
+    734.7
+   ],
+   "handwritten": false
+  },
+  "entries[62].date": {
+   "value": "2026-10-16",
+   "status": "present",
+   "page": 0,
+   "box": [
+    222.9,
+    715.0,
+    259.3,
+    729.6
+   ],
+   "handwritten": false
+  },
+  "entries[62].start_time": {
+   "value": "07:10",
+   "status": "present",
+   "page": 0,
+   "box": [
+    939.3,
+    708.6,
+    978.7,
+    733.8
+   ],
+   "handwritten": true
+  },
+  "entries[62].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[62].position_no": {
+   "value": "032110",
+   "status": "present",
+   "page": 0,
+   "box": [
+    914.3,
+    310.0,
+    959.8,
+    324.6
+   ],
+   "handwritten": false
+  },
+  "entries[62].service": {
+   "value": "Injektion s.c.",
+   "status": "present",
+   "page": 0,
+   "box": [
+    914.3,
+    310.0,
+    959.8,
+    324.6
+   ],
+   "handwritten": false
+  },
+  "entries[62].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[62].staff_initials": {
+   "value": "AW",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1084.9,
+    709.3,
+    1118.3,
+    734.1
+   ],
+   "handwritten": true
+  },
+  "entries[62].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[62].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1084.9,
+    709.3,
+    1118.3,
+    734.1
+   ],
+   "handwritten": false
+  },
+  "entries[63].date": {
+   "value": "2026-10-16",
+   "status": "present",
+   "page": 0,
+   "box": [
+    222.9,
+    715.0,
+    259.3,
+    729.6
+   ],
+   "handwritten": false
+  },
+  "entries[63].start_time": {
+   "value": "07:10",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1225.2,
+    707.7,
+    1263.6,
+    732.4
+   ],
+   "handwritten": true
+  },
+  "entries[63].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[63].position_no": {
+   "value": "032120",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1175.3,
+    308.7,
+    1221.9,
+    323.3
+   ],
+   "handwritten": false
+  },
+  "entries[63].service": {
+   "value": "Blutzuckermessung",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1175.3,
+    308.7,
+    1221.9,
+    323.3
+   ],
+   "handwritten": false
+  },
+  "entries[63].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[63].staff_initials": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": [
+    1369.1,
+    707.4,
+    1405.6,
+    729.5
+   ],
+   "handwritten": true
+  },
+  "entries[63].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[63].initials_state": {
+   "value": "absent",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1369.1,
+    707.4,
+    1405.6,
+    729.5
+   ],
+   "handwritten": false
+  },
+  "entries[64].date": {
+   "value": "2026-10-17",
+   "status": "present",
+   "page": 0,
+   "box": [
+    224.7,
+    740.0,
+    264.9,
+    754.6
+   ],
+   "handwritten": false
+  },
+  "entries[64].start_time": {
+   "value": "07:35",
+   "status": "present",
+   "page": 0,
+   "box": [
+    371.1,
+    735.1,
+    416.7,
+    759.8
+   ],
+   "handwritten": true
+  },
+  "entries[64].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[64].position_no": {
+   "value": "032101",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[64].service": {
+   "value": "Medikamentengabe",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[64].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[64].staff_initials": {
+   "value": "SB",
+   "status": "present",
+   "page": 0,
+   "box": [
+    523.7,
+    735.5,
+    547.2,
+    758.8
+   ],
+   "handwritten": true
+  },
+  "entries[64].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[64].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    523.7,
+    735.5,
+    547.2,
+    758.8
+   ],
+   "handwritten": false
+  },
+  "entries[65].date": {
+   "value": "2026-10-17",
+   "status": "present",
+   "page": 0,
+   "box": [
+    224.7,
+    740.0,
+    264.9,
+    754.6
+   ],
+   "handwritten": false
+  },
+  "entries[65].start_time": {
+   "value": "18:00",
+   "status": "present",
+   "page": 0,
+   "box": [
+    655.4,
+    735.0,
+    698.7,
+    759.2
+   ],
+   "handwritten": true
+  },
+  "entries[65].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[65].position_no": {
+   "value": "032101",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[65].service": {
+   "value": "Medikamentengabe",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[65].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[65].staff_initials": {
+   "value": "SB",
+   "status": "present",
+   "page": 0,
+   "box": [
+    807.5,
+    734.3,
+    831.4,
+    758.9
+   ],
+   "handwritten": true
+  },
+  "entries[65].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[65].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    807.5,
+    734.3,
+    831.4,
+    758.9
+   ],
+   "handwritten": false
+  },
+  "entries[66].date": {
+   "value": "2026-10-17",
+   "status": "present",
+   "page": 0,
+   "box": [
+    224.7,
+    740.0,
+    264.9,
+    754.6
+   ],
+   "handwritten": false
+  },
+  "entries[66].start_time": {
+   "value": "07:35",
+   "status": "present",
+   "page": 0,
+   "box": [
+    938.4,
+    734.7,
+    984.5,
+    758.9
+   ],
+   "handwritten": true
+  },
+  "entries[66].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[66].position_no": {
+   "value": "032110",
+   "status": "present",
+   "page": 0,
+   "box": [
+    914.3,
+    310.0,
+    959.8,
+    324.6
+   ],
+   "handwritten": false
+  },
+  "entries[66].service": {
+   "value": "Injektion s.c.",
+   "status": "present",
+   "page": 0,
+   "box": [
+    914.3,
+    310.0,
+    959.8,
+    324.6
+   ],
+   "handwritten": false
+  },
+  "entries[66].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[66].staff_initials": {
+   "value": "SB",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1092.4,
+    733.6,
+    1115.5,
+    758.2
+   ],
+   "handwritten": true
+  },
+  "entries[66].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[66].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1092.4,
+    733.6,
+    1115.5,
+    758.2
+   ],
+   "handwritten": false
+  },
+  "entries[67].date": {
+   "value": "2026-10-17",
+   "status": "present",
+   "page": 0,
+   "box": [
+    224.7,
+    740.0,
+    264.9,
+    754.6
+   ],
+   "handwritten": false
+  },
+  "entries[67].start_time": {
+   "value": "07:35",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1223.2,
+    732.9,
+    1270.2,
+    759.6
+   ],
+   "handwritten": true
+  },
+  "entries[67].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[67].position_no": {
+   "value": "032120",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1175.3,
+    308.7,
+    1221.9,
+    323.3
+   ],
+   "handwritten": false
+  },
+  "entries[67].service": {
+   "value": "Blutzuckermessung",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1175.3,
+    308.7,
+    1221.9,
+    323.3
+   ],
+   "handwritten": false
+  },
+  "entries[67].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[67].staff_initials": {
+   "value": "SB",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1378.1,
+    733.4,
+    1401.9,
+    757.9
+   ],
+   "handwritten": true
+  },
+  "entries[67].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[67].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1378.1,
+    733.4,
+    1401.9,
+    757.9
+   ],
+   "handwritten": false
+  },
+  "entries[68].date": {
+   "value": "2026-10-18",
+   "status": "present",
+   "page": 0,
+   "box": [
+    226.5,
+    763.8,
+    266.6,
+    778.3
+   ],
+   "handwritten": false
+  },
+  "entries[68].start_time": {
+   "value": "07:45",
+   "status": "present",
+   "page": 0,
+   "box": [
+    373.6,
+    758.0,
+    417.9,
+    784.9
+   ],
+   "handwritten": true
+  },
+  "entries[68].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[68].position_no": {
+   "value": "032101",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[68].service": {
+   "value": "Medikamentengabe",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[68].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[68].staff_initials": {
+   "value": "SB",
+   "status": "present",
+   "page": 0,
+   "box": [
+    525.1,
+    758.9,
+    548.4,
+    782.4
+   ],
+   "handwritten": true
+  },
+  "entries[68].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[68].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    525.1,
+    758.9,
+    548.4,
+    782.4
+   ],
+   "handwritten": false
+  },
+  "entries[69].date": {
+   "value": "2026-10-18",
+   "status": "present",
+   "page": 0,
+   "box": [
+    226.5,
+    763.8,
+    266.6,
+    778.3
+   ],
+   "handwritten": false
+  },
+  "entries[69].start_time": {
+   "value": "18:22",
+   "status": "present",
+   "page": 0,
+   "box": [
+    659.0,
+    758.7,
+    699.0,
+    782.7
+   ],
+   "handwritten": true
+  },
+  "entries[69].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[69].position_no": {
+   "value": "032101",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[69].service": {
+   "value": "Medikamentengabe",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[69].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[69].staff_initials": {
+   "value": "AW",
+   "status": "present",
+   "page": 0,
+   "box": [
+    804.8,
+    758.7,
+    837.4,
+    782.7
+   ],
+   "handwritten": true
+  },
+  "entries[69].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[69].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    804.8,
+    758.7,
+    837.4,
+    782.7
+   ],
+   "handwritten": false
+  },
+  "entries[70].date": {
+   "value": "2026-10-18",
+   "status": "present",
+   "page": 0,
+   "box": [
+    226.5,
+    763.8,
+    266.6,
+    778.3
+   ],
+   "handwritten": false
+  },
+  "entries[70].start_time": {
+   "value": "07:45",
+   "status": "present",
+   "page": 0,
+   "box": [
+    941.2,
+    757.8,
+    985.8,
+    783.5
+   ],
+   "handwritten": true
+  },
+  "entries[70].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[70].position_no": {
+   "value": "032110",
+   "status": "present",
+   "page": 0,
+   "box": [
+    914.3,
+    310.0,
+    959.8,
+    324.6
+   ],
+   "handwritten": false
+  },
+  "entries[70].service": {
+   "value": "Injektion s.c.",
+   "status": "present",
+   "page": 0,
+   "box": [
+    914.3,
+    310.0,
+    959.8,
+    324.6
+   ],
+   "handwritten": false
+  },
+  "entries[70].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[70].staff_initials": {
+   "value": "SB",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1094.4,
+    758.1,
+    1117.8,
+    781.3
+   ],
+   "handwritten": true
+  },
+  "entries[70].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[70].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1094.4,
+    758.1,
+    1117.8,
+    781.3
+   ],
+   "handwritten": false
+  },
+  "entries[71].date": {
+   "value": "2026-10-18",
+   "status": "present",
+   "page": 0,
+   "box": [
+    226.5,
+    763.8,
+    266.6,
+    778.3
+   ],
+   "handwritten": false
+  },
+  "entries[71].start_time": {
+   "value": "07:45",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1226.5,
+    756.9,
+    1271.5,
+    783.1
+   ],
+   "handwritten": true
+  },
+  "entries[71].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[71].position_no": {
+   "value": "032120",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1175.3,
+    308.7,
+    1221.9,
+    323.3
+   ],
+   "handwritten": false
+  },
+  "entries[71].service": {
+   "value": "Blutzuckermessung",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1175.3,
+    308.7,
+    1221.9,
+    323.3
+   ],
+   "handwritten": false
+  },
+  "entries[71].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[71].staff_initials": {
+   "value": "SB",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1380.1,
+    756.5,
+    1403.6,
+    780.4
+   ],
+   "handwritten": true
+  },
+  "entries[71].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[71].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1380.1,
+    756.5,
+    1403.6,
+    780.4
+   ],
+   "handwritten": false
+  },
+  "entries[72].date": {
+   "value": "2026-10-19",
+   "status": "present",
+   "page": 0,
+   "box": [
+    228.2,
+    787.5,
+    270.6,
+    802.1
+   ],
+   "handwritten": false
+  },
+  "entries[72].start_time": {
+   "value": "07:45",
+   "status": "present",
+   "page": 0,
+   "box": [
+    376.0,
+    782.5,
+    418.9,
+    807.5
+   ],
+   "handwritten": true
+  },
+  "entries[72].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[72].position_no": {
+   "value": "032101",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[72].service": {
+   "value": "Medikamentengabe",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[72].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[72].staff_initials": {
+   "value": "AW",
+   "status": "present",
+   "page": 0,
+   "box": [
+    523.4,
+    783.0,
+    554.8,
+    806.0
+   ],
+   "handwritten": true
+  },
+  "entries[72].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[72].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    523.4,
+    783.0,
+    554.8,
+    806.0
+   ],
+   "handwritten": false
+  },
+  "entries[73].date": {
+   "value": "2026-10-19",
+   "status": "present",
+   "page": 0,
+   "box": [
+    228.2,
+    787.5,
+    270.6,
+    802.1
+   ],
+   "handwritten": false
+  },
+  "entries[73].start_time": {
+   "value": "18:00",
+   "status": "present",
+   "page": 0,
+   "box": [
+    657.0,
+    781.0,
+    705.1,
+    806.5
+   ],
+   "handwritten": true
+  },
+  "entries[73].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[73].position_no": {
+   "value": "032101",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[73].service": {
+   "value": "Medikamentengabe",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[73].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[73].staff_initials": {
+   "value": "JR",
+   "status": "present",
+   "page": 0,
+   "box": [
+    810.1,
+    780.1,
+    836.9,
+    806.0
+   ],
+   "handwritten": true
+  },
+  "entries[73].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[73].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    810.1,
+    780.1,
+    836.9,
+    806.0
+   ],
+   "handwritten": false
+  },
+  "entries[74].date": {
+   "value": "2026-10-19",
+   "status": "present",
+   "page": 0,
+   "box": [
+    228.2,
+    787.5,
+    270.6,
+    802.1
+   ],
+   "handwritten": false
+  },
+  "entries[74].start_time": {
+   "value": "07:45",
+   "status": "present",
+   "page": 0,
+   "box": [
+    944.1,
+    782.0,
+    986.9,
+    805.8
+   ],
+   "handwritten": true
+  },
+  "entries[74].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[74].position_no": {
+   "value": "032110",
+   "status": "present",
+   "page": 0,
+   "box": [
+    914.3,
+    310.0,
+    959.8,
+    324.6
+   ],
+   "handwritten": false
+  },
+  "entries[74].service": {
+   "value": "Injektion s.c.",
+   "status": "present",
+   "page": 0,
+   "box": [
+    914.3,
+    310.0,
+    959.8,
+    324.6
+   ],
+   "handwritten": false
+  },
+  "entries[74].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[74].staff_initials": {
+   "value": "AW",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1091.6,
+    781.4,
+    1124.8,
+    805.7
+   ],
+   "handwritten": true
+  },
+  "entries[74].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[74].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1091.6,
+    781.4,
+    1124.8,
+    805.7
+   ],
+   "handwritten": false
+  },
+  "entries[75].date": {
+   "value": "2026-10-19",
+   "status": "present",
+   "page": 0,
+   "box": [
+    228.2,
+    787.5,
+    270.6,
+    802.1
+   ],
+   "handwritten": false
+  },
+  "entries[75].start_time": {
+   "value": "07:45",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1229.4,
+    780.6,
+    1273.7,
+    805.4
+   ],
+   "handwritten": true
+  },
+  "entries[75].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[75].position_no": {
+   "value": "032120",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1175.3,
+    308.7,
+    1221.9,
+    323.3
+   ],
+   "handwritten": false
+  },
+  "entries[75].service": {
+   "value": "Blutzuckermessung",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1175.3,
+    308.7,
+    1221.9,
+    323.3
+   ],
+   "handwritten": false
+  },
+  "entries[75].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[75].staff_initials": {
+   "value": "AW",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1378.1,
+    781.0,
+    1410.9,
+    805.5
+   ],
+   "handwritten": true
+  },
+  "entries[75].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[75].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1378.1,
+    781.0,
+    1410.9,
+    805.5
+   ],
+   "handwritten": false
+  },
+  "entries[76].date": {
+   "value": "2026-10-20",
+   "status": "present",
+   "page": 0,
+   "box": [
+    229.9,
+    811.3,
+    266.4,
+    825.9
+   ],
+   "handwritten": false
+  },
+  "entries[76].start_time": {
+   "value": "07:35",
+   "status": "present",
+   "page": 0,
+   "box": [
+    376.7,
+    807.2,
+    421.9,
+    831.5
+   ],
+   "handwritten": true
+  },
+  "entries[76].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[76].position_no": {
+   "value": "032101",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[76].service": {
+   "value": "Medikamentengabe",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[76].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[76].staff_initials": {
+   "value": "SB",
+   "status": "present",
+   "page": 0,
+   "box": [
+    529.5,
+    805.8,
+    552.4,
+    831.7
+   ],
+   "handwritten": true
+  },
+  "entries[76].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[76].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    529.5,
+    805.8,
+    552.4,
+    831.7
+   ],
+   "handwritten": false
+  },
+  "entries[77].date": {
+   "value": "2026-10-20",
+   "status": "present",
+   "page": 0,
+   "box": [
+    229.9,
+    811.3,
+    266.4,
+    825.9
+   ],
+   "handwritten": false
+  },
+  "entries[77].start_time": {
+   "value": "18:02",
+   "status": "present",
+   "page": 0,
+   "box": [
+    663.6,
+    806.1,
+    702.1,
+    829.8
+   ],
+   "handwritten": true
+  },
+  "entries[77].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[77].position_no": {
+   "value": "032101",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[77].service": {
+   "value": "Medikamentengabe",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[77].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[77].staff_initials": {
+   "value": "AW",
+   "status": "present",
+   "page": 0,
+   "box": [
+    809.1,
+    804.6,
+    841.2,
+    829.1
+   ],
+   "handwritten": true
+  },
+  "entries[77].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[77].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    809.1,
+    804.6,
+    841.2,
+    829.1
+   ],
+   "handwritten": false
+  },
+  "entries[78].date": {
+   "value": "2026-10-20",
+   "status": "present",
+   "page": 0,
+   "box": [
+    229.9,
+    811.3,
+    266.4,
+    825.9
+   ],
+   "handwritten": false
+  },
+  "entries[78].start_time": {
+   "value": "07:35",
+   "status": "present",
+   "page": 0,
+   "box": [
+    944.3,
+    805.9,
+    991.8,
+    830.8
+   ],
+   "handwritten": true
+  },
+  "entries[78].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[78].position_no": {
+   "value": "032110",
+   "status": "present",
+   "page": 0,
+   "box": [
+    914.3,
+    310.0,
+    959.8,
+    324.6
+   ],
+   "handwritten": false
+  },
+  "entries[78].service": {
+   "value": "Injektion s.c.",
+   "status": "present",
+   "page": 0,
+   "box": [
+    914.3,
+    310.0,
+    959.8,
+    324.6
+   ],
+   "handwritten": false
+  },
+  "entries[78].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[78].staff_initials": {
+   "value": "SB",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1098.3,
+    806.1,
+    1122.0,
+    830.2
+   ],
+   "handwritten": true
+  },
+  "entries[78].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[78].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1098.3,
+    806.1,
+    1122.0,
+    830.2
+   ],
+   "handwritten": false
+  },
+  "entries[79].date": {
+   "value": "2026-10-20",
+   "status": "present",
+   "page": 0,
+   "box": [
+    229.9,
+    811.3,
+    266.4,
+    825.9
+   ],
+   "handwritten": false
+  },
+  "entries[79].start_time": {
+   "value": "07:35",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1229.7,
+    805.9,
+    1276.5,
+    829.8
+   ],
+   "handwritten": true
+  },
+  "entries[79].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[79].position_no": {
+   "value": "032120",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1175.3,
+    308.7,
+    1221.9,
+    323.3
+   ],
+   "handwritten": false
+  },
+  "entries[79].service": {
+   "value": "Blutzuckermessung",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1175.3,
+    308.7,
+    1221.9,
+    323.3
+   ],
+   "handwritten": false
+  },
+  "entries[79].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[79].staff_initials": {
+   "value": "SB",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1384.7,
+    805.0,
+    1408.8,
+    829.9
+   ],
+   "handwritten": true
+  },
+  "entries[79].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[79].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1384.7,
+    805.0,
+    1408.8,
+    829.9
+   ],
+   "handwritten": false
+  },
+  "entries[80].date": {
+   "value": "2026-10-21",
+   "status": "present",
+   "page": 0,
+   "box": [
+    231.6,
+    835.2,
+    269.6,
+    849.7
+   ],
+   "handwritten": false
+  },
+  "entries[80].start_time": {
+   "value": "07:30",
+   "status": "present",
+   "page": 0,
+   "box": [
+    378.3,
+    830.1,
+    424.7,
+    854.3
+   ],
+   "handwritten": true
+  },
+  "entries[80].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[80].position_no": {
+   "value": "032101",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[80].service": {
+   "value": "Medikamentengabe",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[80].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[80].staff_initials": {
+   "value": "SB",
+   "status": "present",
+   "page": 0,
+   "box": [
+    531.4,
+    830.4,
+    554.2,
+    854.2
+   ],
+   "handwritten": true
+  },
+  "entries[80].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[80].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    531.4,
+    830.4,
+    554.2,
+    854.2
+   ],
+   "handwritten": false
+  },
+  "entries[81].date": {
+   "value": "2026-10-21",
+   "status": "present",
+   "page": 0,
+   "box": [
+    231.6,
+    835.2,
+    269.6,
+    849.7
+   ],
+   "handwritten": false
+  },
+  "entries[81].start_time": {
+   "value": "18:25",
+   "status": "present",
+   "page": 0,
+   "box": [
+    659.2,
+    829.4,
+    710.1,
+    855.1
+   ],
+   "handwritten": true
+  },
+  "entries[81].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[81].position_no": {
+   "value": "032101",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[81].service": {
+   "value": "Medikamentengabe",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[81].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[81].staff_initials": {
+   "value": "JR",
+   "status": "present",
+   "page": 0,
+   "box": [
+    814.8,
+    830.4,
+    839.3,
+    853.5
+   ],
+   "handwritten": true
+  },
+  "entries[81].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[81].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    814.8,
+    830.4,
+    839.3,
+    853.5
+   ],
+   "handwritten": false
+  },
+  "entries[82].date": {
+   "value": "2026-10-21",
+   "status": "present",
+   "page": 0,
+   "box": [
+    231.6,
+    835.2,
+    269.6,
+    849.7
+   ],
+   "handwritten": false
+  },
+  "entries[82].start_time": {
+   "value": "07:30",
+   "status": "present",
+   "page": 0,
+   "box": [
+    946.3,
+    829.1,
+    993.0,
+    855.4
+   ],
+   "handwritten": true
+  },
+  "entries[82].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[82].position_no": {
+   "value": "032110",
+   "status": "present",
+   "page": 0,
+   "box": [
+    914.3,
+    310.0,
+    959.8,
+    324.6
+   ],
+   "handwritten": false
+  },
+  "entries[82].service": {
+   "value": "Injektion s.c.",
+   "status": "present",
+   "page": 0,
+   "box": [
+    914.3,
+    310.0,
+    959.8,
+    324.6
+   ],
+   "handwritten": false
+  },
+  "entries[82].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[82].staff_initials": {
+   "value": "SB",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1100.6,
+    828.4,
+    1124.1,
+    853.3
+   ],
+   "handwritten": true
+  },
+  "entries[82].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[82].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1100.6,
+    828.4,
+    1124.1,
+    853.3
+   ],
+   "handwritten": false
+  },
+  "entries[83].date": {
+   "value": "2026-10-21",
+   "status": "present",
+   "page": 0,
+   "box": [
+    231.6,
+    835.2,
+    269.6,
+    849.7
+   ],
+   "handwritten": false
+  },
+  "entries[83].start_time": {
+   "value": "07:30",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1231.9,
+    829.0,
+    1279.5,
+    854.8
+   ],
+   "handwritten": true
+  },
+  "entries[83].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[83].position_no": {
+   "value": "032120",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1175.3,
+    308.7,
+    1221.9,
+    323.3
+   ],
+   "handwritten": false
+  },
+  "entries[83].service": {
+   "value": "Blutzuckermessung",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1175.3,
+    308.7,
+    1221.9,
+    323.3
+   ],
+   "handwritten": false
+  },
+  "entries[83].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[83].staff_initials": {
+   "value": "SB",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1387.1,
+    829.7,
+    1411.1,
+    856.2
+   ],
+   "handwritten": true
+  },
+  "entries[83].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[83].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1387.1,
+    829.7,
+    1411.1,
+    856.2
+   ],
+   "handwritten": false
+  },
+  "entries[84].date": {
+   "value": "2026-10-22",
+   "status": "present",
+   "page": 0,
+   "box": [
+    233.4,
+    859.0,
+    274.4,
+    873.6
+   ],
+   "handwritten": false
+  },
+  "entries[84].start_time": {
+   "value": "07:25",
+   "status": "present",
+   "page": 0,
+   "box": [
+    377.4,
+    854.1,
+    429.4,
+    878.9
+   ],
+   "handwritten": true
+  },
+  "entries[84].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[84].position_no": {
+   "value": "032101",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[84].service": {
+   "value": "Medikamentengabe",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[84].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[84].staff_initials": {
+   "value": "JR",
+   "status": "present",
+   "page": 0,
+   "box": [
+    532.2,
+    854.7,
+    557.0,
+    878.4
+   ],
+   "handwritten": true
+  },
+  "entries[84].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[84].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    532.2,
+    854.7,
+    557.0,
+    878.4
+   ],
+   "handwritten": false
+  },
+  "entries[85].date": {
+   "value": "2026-10-22",
+   "status": "present",
+   "page": 0,
+   "box": [
+    233.4,
+    859.0,
+    274.4,
+    873.6
+   ],
+   "handwritten": false
+  },
+  "entries[85].start_time": {
+   "value": "17:55",
+   "status": "present",
+   "page": 0,
+   "box": [
+    664.7,
+    853.0,
+    708.8,
+    878.5
+   ],
+   "handwritten": true
+  },
+  "entries[85].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[85].position_no": {
+   "value": "032101",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[85].service": {
+   "value": "Medikamentengabe",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[85].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[85].staff_initials": {
+   "value": "AW",
+   "status": "present",
+   "page": 0,
+   "box": [
+    813.1,
+    852.9,
+    845.8,
+    877.5
+   ],
+   "handwritten": true
+  },
+  "entries[85].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[85].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    813.1,
+    852.9,
+    845.8,
+    877.5
+   ],
+   "handwritten": false
+  },
+  "entries[86].date": {
+   "value": "2026-10-22",
+   "status": "present",
+   "page": 0,
+   "box": [
+    233.4,
+    859.0,
+    274.4,
+    873.6
+   ],
+   "handwritten": false
+  },
+  "entries[86].start_time": {
+   "value": "07:25",
+   "status": "present",
+   "page": 0,
+   "box": [
+    945.6,
+    851.4,
+    998.7,
+    879.8
+   ],
+   "handwritten": true
+  },
+  "entries[86].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[86].position_no": {
+   "value": "032110",
+   "status": "present",
+   "page": 0,
+   "box": [
+    914.3,
+    310.0,
+    959.8,
+    324.6
+   ],
+   "handwritten": false
+  },
+  "entries[86].service": {
+   "value": "Injektion s.c.",
+   "status": "present",
+   "page": 0,
+   "box": [
+    914.3,
+    310.0,
+    959.8,
+    324.6
+   ],
+   "handwritten": false
+  },
+  "entries[86].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[86].staff_initials": {
+   "value": "JR",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1101.8,
+    853.5,
+    1127.7,
+    878.8
+   ],
+   "handwritten": true
+  },
+  "entries[86].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[86].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1101.8,
+    853.5,
+    1127.7,
+    878.8
+   ],
+   "handwritten": false
+  },
+  "entries[87].date": {
+   "value": "2026-10-22",
+   "status": "present",
+   "page": 0,
+   "box": [
+    233.4,
+    859.0,
+    274.4,
+    873.6
+   ],
+   "handwritten": false
+  },
+  "entries[87].start_time": {
+   "value": "07:25",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1231.1,
+    853.2,
+    1285.4,
+    878.7
+   ],
+   "handwritten": true
+  },
+  "entries[87].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[87].position_no": {
+   "value": "032120",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1175.3,
+    308.7,
+    1221.9,
+    323.3
+   ],
+   "handwritten": false
+  },
+  "entries[87].service": {
+   "value": "Blutzuckermessung",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1175.3,
+    308.7,
+    1221.9,
+    323.3
+   ],
+   "handwritten": false
+  },
+  "entries[87].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[87].staff_initials": {
+   "value": "JR",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1387.8,
+    852.4,
+    1413.7,
+    876.6
+   ],
+   "handwritten": true
+  },
+  "entries[87].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[87].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1387.8,
+    852.4,
+    1413.7,
+    876.6
+   ],
+   "handwritten": false
+  },
+  "entries[88].date": {
+   "value": "2026-10-23",
+   "status": "present",
+   "page": 0,
+   "box": [
+    235.1,
+    882.9,
+    271.6,
+    897.5
+   ],
+   "handwritten": false
+  },
+  "entries[88].start_time": {
+   "value": "07:35",
+   "status": "present",
+   "page": 0,
+   "box": [
+    383.4,
+    878.0,
+    426.7,
+    902.6
+   ],
+   "handwritten": true
+  },
+  "entries[88].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[88].position_no": {
+   "value": "032101",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[88].service": {
+   "value": "Medikamentengabe",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[88].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[88].staff_initials": {
+   "value": "AW",
+   "status": "present",
+   "page": 0,
+   "box": [
+    530.8,
+    878.6,
+    562.5,
+    902.2
+   ],
+   "handwritten": true
+  },
+  "entries[88].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[88].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    530.8,
+    878.6,
+    562.5,
+    902.2
+   ],
+   "handwritten": false
+  },
+  "entries[89].date": {
+   "value": "2026-10-23",
+   "status": "present",
+   "page": 0,
+   "box": [
+    235.1,
+    882.9,
+    271.6,
+    897.5
+   ],
+   "handwritten": false
+  },
+  "entries[89].start_time": {
+   "value": "18:24",
+   "status": "present",
+   "page": 0,
+   "box": [
+    669.7,
+    877.8,
+    707.7,
+    903.3
+   ],
+   "handwritten": true
+  },
+  "entries[89].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[89].position_no": {
+   "value": "032101",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[89].service": {
+   "value": "Medikamentengabe",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[89].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[89].staff_initials": {
+   "value": "AW",
+   "status": "present",
+   "page": 0,
+   "box": [
+    815.1,
+    877.8,
+    847.0,
+    901.6
+   ],
+   "handwritten": true
+  },
+  "entries[89].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[89].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    815.1,
+    877.8,
+    847.0,
+    901.6
+   ],
+   "handwritten": false
+  },
+  "entries[90].date": {
+   "value": "2026-10-23",
+   "status": "present",
+   "page": 0,
+   "box": [
+    235.1,
+    882.9,
+    271.6,
+    897.5
+   ],
+   "handwritten": false
+  },
+  "entries[90].start_time": {
+   "value": "07:35",
+   "status": "present",
+   "page": 0,
+   "box": [
+    952.2,
+    878.1,
+    995.2,
+    901.5
+   ],
+   "handwritten": true
+  },
+  "entries[90].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[90].position_no": {
+   "value": "032110",
+   "status": "present",
+   "page": 0,
+   "box": [
+    914.3,
+    310.0,
+    959.8,
+    324.6
+   ],
+   "handwritten": false
+  },
+  "entries[90].service": {
+   "value": "Injektion s.c.",
+   "status": "present",
+   "page": 0,
+   "box": [
+    914.3,
+    310.0,
+    959.8,
+    324.6
+   ],
+   "handwritten": false
+  },
+  "entries[90].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[90].staff_initials": {
+   "value": "AW",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1100.7,
+    877.6,
+    1133.2,
+    901.3
+   ],
+   "handwritten": true
+  },
+  "entries[90].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[90].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1100.7,
+    877.6,
+    1133.2,
+    901.3
+   ],
+   "handwritten": false
+  },
+  "entries[91].date": {
+   "value": "2026-10-23",
+   "status": "present",
+   "page": 0,
+   "box": [
+    235.1,
+    882.9,
+    271.6,
+    897.5
+   ],
+   "handwritten": false
+  },
+  "entries[91].start_time": {
+   "value": "07:35",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1238.2,
+    876.4,
+    1282.3,
+    902.2
+   ],
+   "handwritten": true
+  },
+  "entries[91].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[91].position_no": {
+   "value": "032120",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1175.3,
+    308.7,
+    1221.9,
+    323.3
+   ],
+   "handwritten": false
+  },
+  "entries[91].service": {
+   "value": "Blutzuckermessung",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1175.3,
+    308.7,
+    1221.9,
+    323.3
+   ],
+   "handwritten": false
+  },
+  "entries[91].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[91].staff_initials": {
+   "value": "AW",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1387.4,
+    877.7,
+    1420.0,
+    901.3
+   ],
+   "handwritten": true
+  },
+  "entries[91].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[91].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1387.4,
+    877.7,
+    1420.0,
+    901.3
+   ],
+   "handwritten": false
+  },
+  "entries[92].date": {
+   "value": "2026-10-24",
+   "status": "present",
+   "page": 0,
+   "box": [
+    236.9,
+    906.7,
+    277.1,
+    921.3
+   ],
+   "handwritten": false
+  },
+  "entries[92].start_time": {
+   "value": "07:30",
+   "status": "present",
+   "page": 0,
+   "box": [
+    383.6,
+    902.3,
+    429.8,
+    927.9
+   ],
+   "handwritten": true
+  },
+  "entries[92].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[92].position_no": {
+   "value": "032101",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[92].service": {
+   "value": "Medikamentengabe",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[92].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[92].staff_initials": {
+   "value": "SB",
+   "status": "present",
+   "page": 0,
+   "box": [
+    536.2,
+    902.6,
+    560.0,
+    926.4
+   ],
+   "handwritten": true
+  },
+  "entries[92].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[92].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    536.2,
+    902.6,
+    560.0,
+    926.4
+   ],
+   "handwritten": false
+  },
+  "entries[93].date": {
+   "value": "2026-10-24",
+   "status": "present",
+   "page": 0,
+   "box": [
+    236.9,
+    906.7,
+    277.1,
+    921.3
+   ],
+   "handwritten": false
+  },
+  "entries[93].start_time": {
+   "value": "18:07",
+   "status": "present",
+   "page": 0,
+   "box": [
+    667.1,
+    902.4,
+    714.5,
+    927.9
+   ],
+   "handwritten": true
+  },
+  "entries[93].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[93].position_no": {
+   "value": "032101",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[93].service": {
+   "value": "Medikamentengabe",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[93].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[93].staff_initials": {
+   "value": "JR",
+   "status": "present",
+   "page": 0,
+   "box": [
+    820.4,
+    901.0,
+    845.9,
+    924.9
+   ],
+   "handwritten": true
+  },
+  "entries[93].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[93].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    820.4,
+    901.0,
+    845.9,
+    924.9
+   ],
+   "handwritten": false
+  },
+  "entries[94].date": {
+   "value": "2026-10-24",
+   "status": "present",
+   "page": 0,
+   "box": [
+    236.9,
+    906.7,
+    277.1,
+    921.3
+   ],
+   "handwritten": false
+  },
+  "entries[94].start_time": {
+   "value": "07:30",
+   "status": "present",
+   "page": 0,
+   "box": [
+    952.3,
+    901.7,
+    999.8,
+    927.3
+   ],
+   "handwritten": true
+  },
+  "entries[94].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[94].position_no": {
+   "value": "032110",
+   "status": "present",
+   "page": 0,
+   "box": [
+    914.3,
+    310.0,
+    959.8,
+    324.6
+   ],
+   "handwritten": false
+  },
+  "entries[94].service": {
+   "value": "Injektion s.c.",
+   "status": "present",
+   "page": 0,
+   "box": [
+    914.3,
+    310.0,
+    959.8,
+    324.6
+   ],
+   "handwritten": false
+  },
+  "entries[94].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[94].staff_initials": {
+   "value": "SB",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1107.2,
+    900.7,
+    1130.6,
+    925.1
+   ],
+   "handwritten": true
+  },
+  "entries[94].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[94].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1107.2,
+    900.7,
+    1130.6,
+    925.1
+   ],
+   "handwritten": false
+  },
+  "entries[95].date": {
+   "value": "2026-10-24",
+   "status": "present",
+   "page": 0,
+   "box": [
+    236.9,
+    906.7,
+    277.1,
+    921.3
+   ],
+   "handwritten": false
+  },
+  "entries[95].start_time": {
+   "value": "07:30",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1238.6,
+    901.9,
+    1285.7,
+    926.6
+   ],
+   "handwritten": true
+  },
+  "entries[95].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[95].position_no": {
+   "value": "032120",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1175.3,
+    308.7,
+    1221.9,
+    323.3
+   ],
+   "handwritten": false
+  },
+  "entries[95].service": {
+   "value": "Blutzuckermessung",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1175.3,
+    308.7,
+    1221.9,
+    323.3
+   ],
+   "handwritten": false
+  },
+  "entries[95].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[95].staff_initials": {
+   "value": "SB",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1394.3,
+    901.8,
+    1417.3,
+    924.7
+   ],
+   "handwritten": true
+  },
+  "entries[95].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[95].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1394.3,
+    901.8,
+    1417.3,
+    924.7
+   ],
+   "handwritten": false
+  },
+  "entries[96].date": {
+   "value": "2026-10-25",
+   "status": "present",
+   "page": 0,
+   "box": [
+    238.6,
+    930.6,
+    278.9,
+    945.3
+   ],
+   "handwritten": false
+  },
+  "entries[96].start_time": {
+   "value": "07:30",
+   "status": "present",
+   "page": 0,
+   "box": [
+    383.0,
+    925.4,
+    433.6,
+    949.3
+   ],
+   "handwritten": true
+  },
+  "entries[96].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[96].position_no": {
+   "value": "032101",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[96].service": {
+   "value": "Medikamentengabe",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[96].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[96].staff_initials": {
+   "value": "JR",
+   "status": "present",
+   "page": 0,
+   "box": [
+    537.5,
+    925.9,
+    562.5,
+    949.6
+   ],
+   "handwritten": true
+  },
+  "entries[96].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[96].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    537.5,
+    925.9,
+    562.5,
+    949.6
+   ],
+   "handwritten": false
+  },
+  "entries[97].date": {
+   "value": "2026-10-25",
+   "status": "present",
+   "page": 0,
+   "box": [
+    238.6,
+    930.6,
+    278.9,
+    945.3
+   ],
+   "handwritten": false
+  },
+  "entries[97].start_time": {
+   "value": "07:30",
+   "status": "present",
+   "page": 0,
+   "box": [
+    667.3,
+    923.0,
+    718.8,
+    950.8
+   ],
+   "handwritten": true
+  },
+  "entries[97].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[97].position_no": {
+   "value": "032101",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[97].service": {
+   "value": "Medikamentengabe",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[97].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[97].staff_initials": {
+   "value": "JR",
+   "status": "present",
+   "page": 0,
+   "box": [
+    822.7,
+    926.3,
+    848.3,
+    951.3
+   ],
+   "handwritten": true
+  },
+  "entries[97].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[97].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    822.7,
+    926.3,
+    848.3,
+    951.3
+   ],
+   "handwritten": false
+  },
+  "entries[98].date": {
+   "value": "2026-10-25",
+   "status": "present",
+   "page": 0,
+   "box": [
+    238.6,
+    930.6,
+    278.9,
+    945.3
+   ],
+   "handwritten": false
+  },
+  "entries[98].start_time": {
+   "value": "07:30",
+   "status": "present",
+   "page": 0,
+   "box": [
+    950.9,
+    922.9,
+    1003.5,
+    952.3
+   ],
+   "handwritten": true
+  },
+  "entries[98].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[98].position_no": {
+   "value": "032110",
+   "status": "present",
+   "page": 0,
+   "box": [
+    914.3,
+    310.0,
+    959.8,
+    324.6
+   ],
+   "handwritten": false
+  },
+  "entries[98].service": {
+   "value": "Injektion s.c.",
+   "status": "present",
+   "page": 0,
+   "box": [
+    914.3,
+    310.0,
+    959.8,
+    324.6
+   ],
+   "handwritten": false
+  },
+  "entries[98].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[98].staff_initials": {
+   "value": "JR",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1108.6,
+    925.3,
+    1133.6,
+    949.0
+   ],
+   "handwritten": true
+  },
+  "entries[98].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[98].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1108.6,
+    925.3,
+    1133.6,
+    949.0
+   ],
+   "handwritten": false
+  },
+  "entries[99].date": {
+   "value": "2026-10-25",
+   "status": "present",
+   "page": 0,
+   "box": [
+    238.6,
+    930.6,
+    278.9,
+    945.3
+   ],
+   "handwritten": false
+  },
+  "entries[99].start_time": {
+   "value": "07:30",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1238.1,
+    924.5,
+    1290.2,
+    949.9
+   ],
+   "handwritten": true
+  },
+  "entries[99].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[99].position_no": {
+   "value": "032120",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1175.3,
+    308.7,
+    1221.9,
+    323.3
+   ],
+   "handwritten": false
+  },
+  "entries[99].service": {
+   "value": "Blutzuckermessung",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1175.3,
+    308.7,
+    1221.9,
+    323.3
+   ],
+   "handwritten": false
+  },
+  "entries[99].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[99].staff_initials": {
+   "value": "JR",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1395.4,
+    925.8,
+    1421.4,
+    950.2
+   ],
+   "handwritten": true
+  },
+  "entries[99].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[99].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1395.4,
+    925.8,
+    1421.4,
+    950.2
+   ],
+   "handwritten": false
+  },
+  "entries[100].date": {
+   "value": "2026-10-26",
+   "status": "present",
+   "page": 0,
+   "box": [
+    240.4,
+    955.8,
+    283.0,
+    970.4
+   ],
+   "handwritten": false
+  },
+  "entries[100].start_time": {
+   "value": "07:14",
+   "status": "present",
+   "page": 0,
+   "box": [
+    391.8,
+    951.6,
+    429.0,
+    976.9
+   ],
+   "handwritten": true
+  },
+  "entries[100].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[100].position_no": {
+   "value": "032101",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[100].service": {
+   "value": "Medikamentengabe",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[100].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[100].staff_initials": {
+   "value": "AW",
+   "status": "present",
+   "page": 0,
+   "box": [
+    536.5,
+    951.4,
+    568.7,
+    975.0
+   ],
+   "handwritten": true
+  },
+  "entries[100].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[100].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    536.5,
+    951.4,
+    568.7,
+    975.0
+   ],
+   "handwritten": false
+  },
+  "entries[101].date": {
+   "value": "2026-10-26",
+   "status": "present",
+   "page": 0,
+   "box": [
+    240.4,
+    955.8,
+    283.0,
+    970.4
+   ],
+   "handwritten": false
+  },
+  "entries[101].start_time": {
+   "value": "18:20",
+   "status": "present",
+   "page": 0,
+   "box": [
+    674.7,
+    951.6,
+    714.2,
+    976.0
+   ],
+   "handwritten": true
+  },
+  "entries[101].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[101].position_no": {
+   "value": "032101",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[101].service": {
+   "value": "Medikamentengabe",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[101].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[101].staff_initials": {
+   "value": "AW",
+   "status": "present",
+   "page": 0,
+   "box": [
+    821.1,
+    950.8,
+    853.5,
+    976.9
+   ],
+   "handwritten": true
+  },
+  "entries[101].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[101].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    821.1,
+    950.8,
+    853.5,
+    976.9
+   ],
+   "handwritten": false
+  },
+  "entries[102].date": {
+   "value": "2026-10-26",
+   "status": "present",
+   "page": 0,
+   "box": [
+    240.4,
+    955.8,
+    283.0,
+    970.4
+   ],
+   "handwritten": false
+  },
+  "entries[102].start_time": {
+   "value": "07:14",
+   "status": "present",
+   "page": 0,
+   "box": [
+    955.7,
+    950.1,
+    1003.5,
+    976.9
+   ],
+   "handwritten": true
+  },
+  "entries[102].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[102].position_no": {
+   "value": "032110",
+   "status": "present",
+   "page": 0,
+   "box": [
+    914.3,
+    310.0,
+    959.8,
+    324.6
+   ],
+   "handwritten": false
+  },
+  "entries[102].service": {
+   "value": "Injektion s.c.",
+   "status": "present",
+   "page": 0,
+   "box": [
+    914.3,
+    310.0,
+    959.8,
+    324.6
+   ],
+   "handwritten": false
+  },
+  "entries[102].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[102].staff_initials": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": [
+    1104.9,
+    950.2,
+    1141.3,
+    972.4
+   ],
+   "handwritten": true
+  },
+  "entries[102].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[102].initials_state": {
+   "value": "absent",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1104.9,
+    950.2,
+    1141.3,
+    972.4
+   ],
+   "handwritten": false
+  },
+  "entries[103].date": {
+   "value": "2026-10-26",
+   "status": "present",
+   "page": 0,
+   "box": [
+    240.4,
+    955.8,
+    283.0,
+    970.4
+   ],
+   "handwritten": false
+  },
+  "entries[103].start_time": {
+   "value": "07:14",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1247.7,
+    950.3,
+    1286.2,
+    974.7
+   ],
+   "handwritten": true
+  },
+  "entries[103].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[103].position_no": {
+   "value": "032120",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1175.3,
+    308.7,
+    1221.9,
+    323.3
+   ],
+   "handwritten": false
+  },
+  "entries[103].service": {
+   "value": "Blutzuckermessung",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1175.3,
+    308.7,
+    1221.9,
+    323.3
+   ],
+   "handwritten": false
+  },
+  "entries[103].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[103].staff_initials": {
+   "value": "AW",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1394.0,
+    951.0,
+    1426.8,
+    975.1
+   ],
+   "handwritten": true
+  },
+  "entries[103].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[103].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1394.0,
+    951.0,
+    1426.8,
+    975.1
+   ],
+   "handwritten": false
+  },
+  "entries[104].date": {
+   "value": "2026-10-27",
+   "status": "present",
+   "page": 0,
+   "box": [
+    242.3,
+    981.0,
+    278.8,
+    995.7
+   ],
+   "handwritten": false
+  },
+  "entries[104].start_time": {
+   "value": "07:45",
+   "status": "present",
+   "page": 0,
+   "box": [
+    386.7,
+    976.4,
+    438.2,
+    1003.5
+   ],
+   "handwritten": true
+  },
+  "entries[104].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[104].position_no": {
+   "value": "032101",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[104].service": {
+   "value": "Medikamentengabe",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[104].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[104].staff_initials": {
+   "value": "JR",
+   "status": "present",
+   "page": 0,
+   "box": [
+    541.1,
+    975.5,
+    566.5,
+    999.6
+   ],
+   "handwritten": true
+  },
+  "entries[104].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[104].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    541.1,
+    975.5,
+    566.5,
+    999.6
+   ],
+   "handwritten": false
+  },
+  "entries[105].date": {
+   "value": "2026-10-27",
+   "status": "present",
+   "page": 0,
+   "box": [
+    242.3,
+    981.0,
+    278.8,
+    995.7
+   ],
+   "handwritten": false
+  },
+  "entries[105].start_time": {
+   "value": "18:15",
+   "status": "present",
+   "page": 0,
+   "box": [
+    677.4,
+    976.8,
+    715.7,
+    1000.9
+   ],
+   "handwritten": true
+  },
+  "entries[105].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[105].position_no": {
+   "value": "032101",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[105].service": {
+   "value": "Medikamentengabe",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[105].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[105].staff_initials": {
+   "value": "AW",
+   "status": "present",
+   "page": 0,
+   "box": [
+    823.3,
+    975.5,
+    855.3,
+    1000.0
+   ],
+   "handwritten": true
+  },
+  "entries[105].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[105].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    823.3,
+    975.5,
+    855.3,
+    1000.0
+   ],
+   "handwritten": false
+  },
+  "entries[106].date": {
+   "value": "2026-10-27",
+   "status": "present",
+   "page": 0,
+   "box": [
+    242.3,
+    981.0,
+    278.8,
+    995.7
+   ],
+   "handwritten": false
+  },
+  "entries[106].start_time": {
+   "value": "07:45",
+   "status": "present",
+   "page": 0,
+   "box": [
+    955.5,
+    975.4,
+    1009.8,
+    1002.0
+   ],
+   "handwritten": true
+  },
+  "entries[106].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[106].position_no": {
+   "value": "032110",
+   "status": "present",
+   "page": 0,
+   "box": [
+    914.3,
+    310.0,
+    959.8,
+    324.6
+   ],
+   "handwritten": false
+  },
+  "entries[106].service": {
+   "value": "Injektion s.c.",
+   "status": "present",
+   "page": 0,
+   "box": [
+    914.3,
+    310.0,
+    959.8,
+    324.6
+   ],
+   "handwritten": false
+  },
+  "entries[106].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[106].staff_initials": {
+   "value": "JR",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1112.6,
+    975.2,
+    1138.7,
+    999.7
+   ],
+   "handwritten": true
+  },
+  "entries[106].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[106].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1112.6,
+    975.2,
+    1138.7,
+    999.7
+   ],
+   "handwritten": false
+  },
+  "entries[107].date": {
+   "value": "2026-10-27",
+   "status": "present",
+   "page": 0,
+   "box": [
+    242.3,
+    981.0,
+    278.8,
+    995.7
+   ],
+   "handwritten": false
+  },
+  "entries[107].start_time": {
+   "value": "07:45",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1242.9,
+    974.9,
+    1294.8,
+    1000.1
+   ],
+   "handwritten": true
+  },
+  "entries[107].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[107].position_no": {
+   "value": "032120",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1175.3,
+    308.7,
+    1221.9,
+    323.3
+   ],
+   "handwritten": false
+  },
+  "entries[107].service": {
+   "value": "Blutzuckermessung",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1175.3,
+    308.7,
+    1221.9,
+    323.3
+   ],
+   "handwritten": false
+  },
+  "entries[107].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[107].staff_initials": {
+   "value": "JR",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1399.6,
+    976.7,
+    1425.4,
+    1001.3
+   ],
+   "handwritten": true
+  },
+  "entries[107].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[107].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1399.6,
+    976.7,
+    1425.4,
+    1001.3
+   ],
+   "handwritten": false
+  },
+  "entries[108].date": {
+   "value": "2026-10-28",
+   "status": "present",
+   "page": 0,
+   "box": [
+    244.0,
+    1005.0,
+    282.1,
+    1019.6
+   ],
+   "handwritten": false
+  },
+  "entries[108].start_time": {
+   "value": "07:25",
+   "status": "present",
+   "page": 0,
+   "box": [
+    387.9,
+    1000.3,
+    440.0,
+    1025.5
+   ],
+   "handwritten": true
+  },
+  "entries[108].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[108].position_no": {
+   "value": "032101",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[108].service": {
+   "value": "Medikamentengabe",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[108].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[108].staff_initials": {
+   "value": "JR",
+   "status": "present",
+   "page": 0,
+   "box": [
+    542.9,
+    998.8,
+    569.7,
+    1025.3
+   ],
+   "handwritten": true
+  },
+  "entries[108].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[108].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    542.9,
+    998.8,
+    569.7,
+    1025.3
+   ],
+   "handwritten": false
+  },
+  "entries[109].date": {
+   "value": "2026-10-28",
+   "status": "present",
+   "page": 0,
+   "box": [
+    244.0,
+    1005.0,
+    282.1,
+    1019.6
+   ],
+   "handwritten": false
+  },
+  "entries[109].start_time": {
+   "value": "18:00",
+   "status": "present",
+   "page": 0,
+   "box": [
+    674.5,
+    999.9,
+    722.9,
+    1024.8
+   ],
+   "handwritten": true
+  },
+  "entries[109].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[109].position_no": {
+   "value": "032101",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[109].service": {
+   "value": "Medikamentengabe",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[109].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[109].staff_initials": {
+   "value": "JR",
+   "status": "present",
+   "page": 0,
+   "box": [
+    828.6,
+    999.4,
+    853.9,
+    1024.2
+   ],
+   "handwritten": true
+  },
+  "entries[109].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[109].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    828.6,
+    999.4,
+    853.9,
+    1024.2
+   ],
+   "handwritten": false
+  },
+  "entries[110].date": {
+   "value": "2026-10-28",
+   "status": "present",
+   "page": 0,
+   "box": [
+    244.0,
+    1005.0,
+    282.1,
+    1019.6
+   ],
+   "handwritten": false
+  },
+  "entries[110].start_time": {
+   "value": "07:25",
+   "status": "present",
+   "page": 0,
+   "box": [
+    958.4,
+    999.0,
+    1010.2,
+    1023.6
+   ],
+   "handwritten": true
+  },
+  "entries[110].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[110].position_no": {
+   "value": "032110",
+   "status": "present",
+   "page": 0,
+   "box": [
+    914.3,
+    310.0,
+    959.8,
+    324.6
+   ],
+   "handwritten": false
+  },
+  "entries[110].service": {
+   "value": "Injektion s.c.",
+   "status": "present",
+   "page": 0,
+   "box": [
+    914.3,
+    310.0,
+    959.8,
+    324.6
+   ],
+   "handwritten": false
+  },
+  "entries[110].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[110].staff_initials": {
+   "value": "JR",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1114.9,
+    1000.7,
+    1140.4,
+    1025.7
+   ],
+   "handwritten": true
+  },
+  "entries[110].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[110].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1114.9,
+    1000.7,
+    1140.4,
+    1025.7
+   ],
+   "handwritten": false
+  },
+  "entries[111].date": {
+   "value": "2026-10-28",
+   "status": "present",
+   "page": 0,
+   "box": [
+    244.0,
+    1005.0,
+    282.1,
+    1019.6
+   ],
+   "handwritten": false
+  },
+  "entries[111].start_time": {
+   "value": "07:25",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1245.1,
+    998.2,
+    1297.5,
+    1025.6
+   ],
+   "handwritten": true
+  },
+  "entries[111].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[111].position_no": {
+   "value": "032120",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1175.3,
+    308.7,
+    1221.9,
+    323.3
+   ],
+   "handwritten": false
+  },
+  "entries[111].service": {
+   "value": "Blutzuckermessung",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1175.3,
+    308.7,
+    1221.9,
+    323.3
+   ],
+   "handwritten": false
+  },
+  "entries[111].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[111].staff_initials": {
+   "value": "JR",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1401.6,
+    1000.1,
+    1427.8,
+    1025.3
+   ],
+   "handwritten": true
+  },
+  "entries[111].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[111].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1401.6,
+    1000.1,
+    1427.8,
+    1025.3
+   ],
+   "handwritten": false
+  },
+  "entries[112].date": {
+   "value": "2026-10-29",
+   "status": "present",
+   "page": 0,
+   "box": [
+    245.7,
+    1029.0,
+    286.9,
+    1043.6
+   ],
+   "handwritten": false
+  },
+  "entries[112].start_time": {
+   "value": "07:18",
+   "status": "present",
+   "page": 0,
+   "box": [
+    393.8,
+    1023.9,
+    438.1,
+    1049.7
+   ],
+   "handwritten": true
+  },
+  "entries[112].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[112].position_no": {
+   "value": "032101",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[112].service": {
+   "value": "Medikamentengabe",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[112].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[112].staff_initials": {
+   "value": "SB",
+   "status": "present",
+   "page": 0,
+   "box": [
+    546.6,
+    1025.1,
+    569.7,
+    1050.1
+   ],
+   "handwritten": true
+  },
+  "entries[112].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[112].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    546.6,
+    1025.1,
+    569.7,
+    1050.1
+   ],
+   "handwritten": false
+  },
+  "entries[113].date": {
+   "value": "2026-10-29",
+   "status": "present",
+   "page": 0,
+   "box": [
+    245.7,
+    1029.0,
+    286.9,
+    1043.6
+   ],
+   "handwritten": false
+  },
+  "entries[113].start_time": {
+   "value": "18:05",
+   "status": "present",
+   "page": 0,
+   "box": [
+    679.3,
+    1024.0,
+    721.9,
+    1049.9
+   ],
+   "handwritten": true
+  },
+  "entries[113].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[113].position_no": {
+   "value": "032101",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[113].service": {
+   "value": "Medikamentengabe",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[113].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[113].staff_initials": {
+   "value": "SB",
+   "status": "present",
+   "page": 0,
+   "box": [
+    831.7,
+    1023.7,
+    854.8,
+    1047.9
+   ],
+   "handwritten": true
+  },
+  "entries[113].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[113].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    831.7,
+    1023.7,
+    854.8,
+    1047.9
+   ],
+   "handwritten": false
+  },
+  "entries[114].date": {
+   "value": "2026-10-29",
+   "status": "present",
+   "page": 0,
+   "box": [
+    245.7,
+    1029.0,
+    286.9,
+    1043.6
+   ],
+   "handwritten": false
+  },
+  "entries[114].start_time": {
+   "value": "07:18",
+   "status": "present",
+   "page": 0,
+   "box": [
+    964.2,
+    1024.8,
+    1008.9,
+    1049.7
+   ],
+   "handwritten": true
+  },
+  "entries[114].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[114].position_no": {
+   "value": "032110",
+   "status": "present",
+   "page": 0,
+   "box": [
+    914.3,
+    310.0,
+    959.8,
+    324.6
+   ],
+   "handwritten": false
+  },
+  "entries[114].service": {
+   "value": "Injektion s.c.",
+   "status": "present",
+   "page": 0,
+   "box": [
+    914.3,
+    310.0,
+    959.8,
+    324.6
+   ],
+   "handwritten": false
+  },
+  "entries[114].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[114].staff_initials": {
+   "value": "SB",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1118.1,
+    1025.1,
+    1142.1,
+    1050.7
+   ],
+   "handwritten": true
+  },
+  "entries[114].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[114].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1118.1,
+    1025.1,
+    1142.1,
+    1050.7
+   ],
+   "handwritten": false
+  },
+  "entries[115].date": {
+   "value": "2026-10-29",
+   "status": "present",
+   "page": 0,
+   "box": [
+    245.7,
+    1029.0,
+    286.9,
+    1043.6
+   ],
+   "handwritten": false
+  },
+  "entries[115].start_time": {
+   "value": "07:18",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1251.1,
+    1025.1,
+    1296.3,
+    1051.7
+   ],
+   "handwritten": true
+  },
+  "entries[115].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[115].position_no": {
+   "value": "032120",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1175.3,
+    308.7,
+    1221.9,
+    323.3
+   ],
+   "handwritten": false
+  },
+  "entries[115].service": {
+   "value": "Blutzuckermessung",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1175.3,
+    308.7,
+    1221.9,
+    323.3
+   ],
+   "handwritten": false
+  },
+  "entries[115].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[115].staff_initials": {
+   "value": "SB",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1405.4,
+    1024.9,
+    1429.6,
+    1049.2
+   ],
+   "handwritten": true
+  },
+  "entries[115].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[115].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1405.4,
+    1024.9,
+    1429.6,
+    1049.2
+   ],
+   "handwritten": false
+  },
+  "entries[116].date": {
+   "value": "2026-10-30",
+   "status": "present",
+   "page": 0,
+   "box": [
+    247.5,
+    1053.0,
+    284.1,
+    1067.7
+   ],
+   "handwritten": false
+  },
+  "entries[116].start_time": {
+   "value": "07:38",
+   "status": "present",
+   "page": 0,
+   "box": [
+    394.2,
+    1049.1,
+    441.2,
+    1076.0
+   ],
+   "handwritten": true
+  },
+  "entries[116].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[116].position_no": {
+   "value": "032101",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[116].service": {
+   "value": "Medikamentengabe",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[116].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[116].staff_initials": {
+   "value": "SB",
+   "status": "present",
+   "page": 0,
+   "box": [
+    547.9,
+    1048.1,
+    571.6,
+    1073.5
+   ],
+   "handwritten": true
+  },
+  "entries[116].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[116].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    547.9,
+    1048.1,
+    571.6,
+    1073.5
+   ],
+   "handwritten": false
+  },
+  "entries[117].date": {
+   "value": "2026-10-30",
+   "status": "present",
+   "page": 0,
+   "box": [
+    247.5,
+    1053.0,
+    284.1,
+    1067.7
+   ],
+   "handwritten": false
+  },
+  "entries[117].start_time": {
+   "value": "18:25",
+   "status": "present",
+   "page": 0,
+   "box": [
+    681.4,
+    1048.3,
+    723.4,
+    1073.0
+   ],
+   "handwritten": true
+  },
+  "entries[117].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[117].position_no": {
+   "value": "032101",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[117].service": {
+   "value": "Medikamentengabe",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[117].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[117].staff_initials": {
+   "value": "AW",
+   "status": "present",
+   "page": 0,
+   "box": [
+    829.3,
+    1049.2,
+    861.6,
+    1072.9
+   ],
+   "handwritten": true
+  },
+  "entries[117].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[117].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    829.3,
+    1049.2,
+    861.6,
+    1072.9
+   ],
+   "handwritten": false
+  },
+  "entries[118].date": {
+   "value": "2026-10-30",
+   "status": "present",
+   "page": 0,
+   "box": [
+    247.5,
+    1053.0,
+    284.1,
+    1067.7
+   ],
+   "handwritten": false
+  },
+  "entries[118].start_time": {
+   "value": "07:38",
+   "status": "present",
+   "page": 0,
+   "box": [
+    965.6,
+    1048.1,
+    1011.6,
+    1072.7
+   ],
+   "handwritten": true
+  },
+  "entries[118].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[118].position_no": {
+   "value": "032110",
+   "status": "present",
+   "page": 0,
+   "box": [
+    914.3,
+    310.0,
+    959.8,
+    324.6
+   ],
+   "handwritten": false
+  },
+  "entries[118].service": {
+   "value": "Injektion s.c.",
+   "status": "present",
+   "page": 0,
+   "box": [
+    914.3,
+    310.0,
+    959.8,
+    324.6
+   ],
+   "handwritten": false
+  },
+  "entries[118].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[118].staff_initials": {
+   "value": "SB",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1120.1,
+    1048.5,
+    1143.7,
+    1072.8
+   ],
+   "handwritten": true
+  },
+  "entries[118].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[118].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1120.1,
+    1048.5,
+    1143.7,
+    1072.8
+   ],
+   "handwritten": false
+  },
+  "entries[119].date": {
+   "value": "2026-10-30",
+   "status": "present",
+   "page": 0,
+   "box": [
+    247.5,
+    1053.0,
+    284.1,
+    1067.7
+   ],
+   "handwritten": false
+  },
+  "entries[119].start_time": {
+   "value": "07:38",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1252.1,
+    1048.1,
+    1299.4,
+    1075.7
+   ],
+   "handwritten": true
+  },
+  "entries[119].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[119].position_no": {
+   "value": "032120",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1175.3,
+    308.7,
+    1221.9,
+    323.3
+   ],
+   "handwritten": false
+  },
+  "entries[119].service": {
+   "value": "Blutzuckermessung",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1175.3,
+    308.7,
+    1221.9,
+    323.3
+   ],
+   "handwritten": false
+  },
+  "entries[119].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[119].staff_initials": {
+   "value": "SB",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1408.1,
+    1048.7,
+    1431.9,
+    1072.8
+   ],
+   "handwritten": true
+  },
+  "entries[119].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[119].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1408.1,
+    1048.7,
+    1431.9,
+    1072.8
+   ],
+   "handwritten": false
+  },
+  "entries[120].date": {
+   "value": "2026-10-31",
+   "status": "present",
+   "page": 0,
+   "box": [
+    249.3,
+    1078.3,
+    289.8,
+    1093.0
+   ],
+   "handwritten": false
+  },
+  "entries[120].start_time": {
+   "value": "07:20",
+   "status": "present",
+   "page": 0,
+   "box": [
+    396.2,
+    1073.7,
+    443.1,
+    1098.9
+   ],
+   "handwritten": true
+  },
+  "entries[120].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[120].position_no": {
+   "value": "032101",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[120].service": {
+   "value": "Medikamentengabe",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[120].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[120].staff_initials": {
+   "value": "SB",
+   "status": "present",
+   "page": 0,
+   "box": [
+    550.3,
+    1073.3,
+    573.5,
+    1097.5
+   ],
+   "handwritten": true
+  },
+  "entries[120].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[120].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    550.3,
+    1073.3,
+    573.5,
+    1097.5
+   ],
+   "handwritten": false
+  },
+  "entries[121].date": {
+   "value": "2026-10-31",
+   "status": "present",
+   "page": 0,
+   "box": [
+    249.3,
+    1078.3,
+    289.8,
+    1093.0
+   ],
+   "handwritten": false
+  },
+  "entries[121].start_time": {
+   "value": "18:20",
+   "status": "present",
+   "page": 0,
+   "box": [
+    679.4,
+    1071.6,
+    729.9,
+    1099.0
+   ],
+   "handwritten": true
+  },
+  "entries[121].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[121].position_no": {
+   "value": "032101",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[121].service": {
+   "value": "Medikamentengabe",
+   "status": "present",
+   "page": 0,
+   "box": [
+    469.8,
+    312.3,
+    515.8,
+    326.8
+   ],
+   "handwritten": false
+  },
+  "entries[121].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[121].staff_initials": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": [
+    829.3,
+    1073.3,
+    865.5,
+    1095.6
+   ],
+   "handwritten": true
+  },
+  "entries[121].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[121].initials_state": {
+   "value": "absent",
+   "status": "present",
+   "page": 0,
+   "box": [
+    829.3,
+    1073.3,
+    865.5,
+    1095.6
+   ],
+   "handwritten": false
+  },
+  "entries[122].date": {
+   "value": "2026-10-31",
+   "status": "present",
+   "page": 0,
+   "box": [
+    249.3,
+    1078.3,
+    289.8,
+    1093.0
+   ],
+   "handwritten": false
+  },
+  "entries[122].start_time": {
+   "value": "07:20",
+   "status": "present",
+   "page": 0,
+   "box": [
+    967.2,
+    1074.0,
+    1014.9,
+    1099.7
+   ],
+   "handwritten": true
+  },
+  "entries[122].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[122].position_no": {
+   "value": "032110",
+   "status": "present",
+   "page": 0,
+   "box": [
+    914.3,
+    310.0,
+    959.8,
+    324.6
+   ],
+   "handwritten": false
+  },
+  "entries[122].service": {
+   "value": "Injektion s.c.",
+   "status": "present",
+   "page": 0,
+   "box": [
+    914.3,
+    310.0,
+    959.8,
+    324.6
+   ],
+   "handwritten": false
+  },
+  "entries[122].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[122].staff_initials": {
+   "value": "SB",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1122.5,
+    1074.2,
+    1146.3,
+    1098.2
+   ],
+   "handwritten": true
+  },
+  "entries[122].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[122].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1122.5,
+    1074.2,
+    1146.3,
+    1098.2
+   ],
+   "handwritten": false
+  },
+  "entries[123].date": {
+   "value": "2026-10-31",
+   "status": "present",
+   "page": 0,
+   "box": [
+    249.3,
+    1078.3,
+    289.8,
+    1093.0
+   ],
+   "handwritten": false
+  },
+  "entries[123].start_time": {
+   "value": "07:20",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1254.3,
+    1074.0,
+    1302.8,
+    1099.4
+   ],
+   "handwritten": true
+  },
+  "entries[123].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[123].position_no": {
+   "value": "032120",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1175.3,
+    308.7,
+    1221.9,
+    323.3
+   ],
+   "handwritten": false
+  },
+  "entries[123].service": {
+   "value": "Blutzuckermessung",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1175.3,
+    308.7,
+    1221.9,
+    323.3
+   ],
+   "handwritten": false
+  },
+  "entries[123].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[123].staff_initials": {
+   "value": "SB",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1410.4,
+    1073.9,
+    1434.3,
+    1098.9
+   ],
+   "handwritten": true
+  },
+  "entries[123].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[123].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1410.4,
+    1073.9,
+    1434.3,
+    1098.9
+   ],
+   "handwritten": false
+  },
+  "entries[#]": {
+   "value": 124,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "provider_ik": {
+   "value": "469960557",
+   "status": "present",
+   "page": 0,
+   "box": [
+    705.1,
+    213.8,
+    814.0,
+    235.8
+   ],
+   "handwritten": false
+  },
+  "month": {
+   "value": "2026-10",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1059.9,
+    211.9,
+    1145.6,
+    233.8
+   ],
+   "handwritten": false
+  },
+  "approval_ref": {
+   "value": "HKP-2026-808842",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1416.5,
+    209.3,
+    1599.0,
+    231.9
+   ],
+   "handwritten": false
+  },
+  "patient_name": {
+   "value": "Unertl, Theresia",
+   "status": "present",
+   "page": 0,
+   "box": [
+    192.7,
+    267.3,
+    383.6,
+    289.7
+   ],
+   "handwritten": false
+  },
+  "kvnr": {
+   "value": "L771158141",
+   "status": "present",
+   "page": 0,
+   "box": [
+    709.3,
+    265.0,
+    830.3,
+    287.0
+   ],
+   "handwritten": false
+  },
+  "payer_name": {
+   "value": "AOK Bayern",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1064.5,
+    263.1,
+    1186.2,
+    285.2
+   ],
+   "handwritten": false
+  },
+  "responsible_nurse": {
+   "value": "Monika Kraus",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1421.4,
+    261.0,
+    1567.9,
+    283.3
+   ],
+   "handwritten": false
+  },
+  "patient_signature_date": {
+   "value": "2026-10-31",
+   "status": "present",
+   "page": 0,
+   "box": [
+    562.2,
+    1176.0,
+    658.7,
+    1213.3
+   ],
+   "handwritten": true
+  },
+  "missing_signature_reason": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": [
+    949.1,
+    1131.8,
+    996.9,
+    1154.2
+   ],
+   "handwritten": true
+  },
+  "doc_type": {
+   "value": "visit_log_sgbv",
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "patient_signature": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    512.7,
+    1116.2,
+    678.0,
+    1211.6
+   ],
+   "handwritten": false
+  },
+  "provider_signature": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1482.4,
+    1112.8,
+    1700.2,
+    1217.0
+   ],
+   "handwritten": false
+  }
+ },
+ "regions": {
+  "patient_signature": {
+   "page": 0,
+   "box": [
+    512.7,
+    1116.2,
+    678.0,
+    1211.6
+   ],
+   "state": "present"
+  },
+  "provider_signature": {
+   "page": 0,
+   "box": [
+    1482.4,
+    1112.8,
+    1700.2,
+    1217.0
+   ],
+   "state": "present"
+  }
+ },
+ "defects": [
+  "D03",
+  "D05",
+  "D18"
+ ],
+ "synthetic": true
+}

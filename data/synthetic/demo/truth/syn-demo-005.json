@@ -1,0 +1,260 @@
+{
+ "doc_id": "syn-demo-005",
+ "doc_type": "approval_letter",
+ "variant": "clean",
+ "seed": 1830939960,
+ "patient_id": "p08",
+ "month": "2026-10",
+ "pages": [
+  {
+   "index": 0,
+   "image": "../pages/syn-demo-005.png",
+   "width": 1241,
+   "height": 1755
+  }
+ ],
+ "fields": {
+  "payer_name": {
+   "value": "AOK Bayern",
+   "status": "present",
+   "page": 0,
+   "box": [
+    106.3,
+    109.4,
+    326.7,
+    150.0
+   ],
+   "handwritten": false
+  },
+  "payer_ik": {
+   "value": "109990018",
+   "status": "present",
+   "page": 0,
+   "box": [
+    874.0,
+    306.2,
+    957.4,
+    325.0
+   ],
+   "handwritten": false
+  },
+  "letter_date": {
+   "value": "2026-10-05",
+   "status": "present",
+   "page": 0,
+   "box": [
+    874.0,
+    250.8,
+    957.4,
+    269.6
+   ],
+   "handwritten": false
+  },
+  "approval_ref": {
+   "value": "HKP-2026-264313",
+   "status": "present",
+   "page": 0,
+   "box": [
+    874.0,
+    278.5,
+    1012.0,
+    297.3
+   ],
+   "handwritten": false
+  },
+  "patient_name": {
+   "value": "Loibl, Johanna",
+   "status": "present",
+   "page": 0,
+   "box": [
+    125.6,
+    599.3,
+    254.2,
+    621.2
+   ],
+   "handwritten": false
+  },
+  "kvnr": {
+   "value": "S925815007",
+   "status": "present",
+   "page": 0,
+   "box": [
+    125.6,
+    654.1,
+    237.8,
+    676.0
+   ],
+   "handwritten": false
+  },
+  "provider_name": {
+   "value": "Pflegedienst Sonnenschein GmbH",
+   "status": "present",
+   "page": 0,
+   "box": [
+    106.3,
+    286.4,
+    408.7,
+    308.3
+   ],
+   "handwritten": false
+  },
+  "provider_ik": {
+   "value": "469960557",
+   "status": "present",
+   "page": 0,
+   "box": [
+    874.0,
+    333.9,
+    957.4,
+    352.7
+   ],
+   "handwritten": false
+  },
+  "prescription_issue_date": {
+   "value": "2026-09-29",
+   "status": "present",
+   "page": 0,
+   "box": [
+    620.1,
+    654.1,
+    719.1,
+    676.0
+   ],
+   "handwritten": false
+  },
+  "decision": {
+   "value": "approved",
+   "status": "present",
+   "page": 0,
+   "box": [
+    945.4,
+    759.8,
+    1045.4,
+    781.7
+   ],
+   "handwritten": false
+  },
+  "period_from": {
+   "value": "2026-10-01",
+   "status": "present",
+   "page": 0,
+   "box": [
+    461.5,
+    787.2,
+    560.5,
+    809.0
+   ],
+   "handwritten": false
+  },
+  "period_to": {
+   "value": "2026-12-15",
+   "status": "present",
+   "page": 0,
+   "box": [
+    596.8,
+    787.2,
+    695.8,
+    809.0
+   ],
+   "handwritten": false
+  },
+  "approved_items[0].frequency.count": {
+   "value": 3,
+   "status": "present",
+   "page": 0,
+   "box": [
+    717.5,
+    874.3,
+    837.8,
+    894.7
+   ],
+   "handwritten": false
+  },
+  "approved_items[0].frequency.per": {
+   "value": "week",
+   "status": "present",
+   "page": 0,
+   "box": [
+    717.5,
+    874.3,
+    837.8,
+    894.7
+   ],
+   "handwritten": false
+  },
+  "approved_items[0].position_no": {
+   "value": "032151",
+   "status": "present",
+   "page": 0,
+   "box": [
+    115.1,
+    874.3,
+    176.3,
+    894.7
+   ],
+   "handwritten": false
+  },
+  "approved_items[0].description": {
+   "value": "Wundversorgung, chron. Wunde",
+   "status": "present",
+   "page": 0,
+   "box": [
+    233.2,
+    874.3,
+    496.4,
+    894.7
+   ],
+   "handwritten": false
+  },
+  "approved_items[0].valid_from": {
+   "value": "2026-10-01",
+   "status": "present",
+   "page": 0,
+   "box": [
+    882.9,
+    874.3,
+    974.6,
+    894.7
+   ],
+   "handwritten": false
+  },
+  "approved_items[0].valid_to": {
+   "value": "2026-12-15",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1012.8,
+    874.3,
+    1104.5,
+    894.7
+   ],
+   "handwritten": false
+  },
+  "approved_items[#]": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "rejected_items[#]": {
+   "value": 0,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "doc_type": {
+   "value": "approval_letter",
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  }
+ },
+ "regions": {},
+ "defects": [
+  "D20"
+ ],
+ "synthetic": true
+}

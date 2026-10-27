@@ -1,0 +1,339 @@
+{
+ "doc_id": "syn-demo-004",
+ "doc_type": "muster12",
+ "variant": "photo",
+ "seed": 1776668605,
+ "patient_id": "p08",
+ "month": "2026-10",
+ "pages": [
+  {
+   "index": 0,
+   "image": "../pages/syn-demo-004.jpg",
+   "width": 1414,
+   "height": 2000
+  }
+ ],
+ "fields": {
+  "payer_name": {
+   "value": "AOK Bayern",
+   "status": "present",
+   "page": 0,
+   "box": [
+    195.4,
+    270.8,
+    310.6,
+    312.3
+   ],
+   "handwritten": true
+  },
+  "patient_name": {
+   "value": "Loibl, Johanna",
+   "status": "present",
+   "page": 0,
+   "box": [
+    191.6,
+    344.0,
+    324.3,
+    388.8
+   ],
+   "handwritten": true
+  },
+  "patient_dob": {
+   "value": "1944-05-21",
+   "status": "present",
+   "page": 0,
+   "box": [
+    736.4,
+    290.0,
+    837.6,
+    331.2
+   ],
+   "handwritten": true
+  },
+  "payer_ik": {
+   "value": "109990018",
+   "status": "present",
+   "page": 0,
+   "box": [
+    188.8,
+    426.0,
+    282.9,
+    464.2
+   ],
+   "handwritten": true
+  },
+  "kvnr": {
+   "value": "S925815007",
+   "status": "present",
+   "page": 0,
+   "box": [
+    456.3,
+    395.8,
+    573.5,
+    437.6
+   ],
+   "handwritten": true
+  },
+  "bsnr": {
+   "value": "712020561",
+   "status": "present",
+   "page": 0,
+   "box": [
+    185.6,
+    501.1,
+    287.1,
+    540.4
+   ],
+   "handwritten": true
+  },
+  "lanr": {
+   "value": "626385001",
+   "status": "present",
+   "page": 0,
+   "box": [
+    454.2,
+    475.8,
+    558.0,
+    515.2
+   ],
+   "handwritten": true
+  },
+  "issue_date": {
+   "value": "2026-09-29",
+   "status": "present",
+   "page": 0,
+   "box": [
+    732.8,
+    448.9,
+    841.9,
+    490.2
+   ],
+   "handwritten": true
+  },
+  "period_from": {
+   "value": "2026-10-01",
+   "status": "present",
+   "page": 0,
+   "box": [
+    947.0,
+    402.3,
+    1057.1,
+    444.3
+   ],
+   "handwritten": true
+  },
+  "period_to": {
+   "value": "2026-12-15",
+   "status": "present",
+   "page": 0,
+   "box": [
+    945.8,
+    444.9,
+    1057.5,
+    486.4
+   ],
+   "handwritten": true
+  },
+  "icd_codes": {
+   "value": [
+    "L97",
+    "L89.1"
+   ],
+   "status": "present",
+   "page": 0,
+   "box": [
+    182.8,
+    579.5,
+    275.3,
+    617.9
+   ],
+   "handwritten": true
+  },
+  "further_notes": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": [
+    157.2,
+    1183.0,
+    486.3,
+    1219.5
+   ],
+   "handwritten": false
+  },
+  "prescription_kind": {
+   "value": "folge",
+   "status": "present",
+   "page": 0,
+   "box": [
+    896.7,
+    314.8,
+    921.1,
+    345.5
+   ],
+   "handwritten": true
+  },
+  "accident": {
+   "value": false,
+   "status": "present",
+   "page": 0,
+   "box": [
+    896.2,
+    348.0,
+    920.7,
+    372.6
+   ],
+   "handwritten": true
+  },
+  "blank_prescription": {
+   "value": true,
+   "status": "present",
+   "page": 0,
+   "box": [
+    895.7,
+    375.5,
+    920.3,
+    405.5
+   ],
+   "handwritten": true
+  },
+  "measures[0].category": {
+   "value": "wundversorgung",
+   "status": "present",
+   "page": 0,
+   "box": [
+    162.6,
+    994.1,
+    186.1,
+    1022.8
+   ],
+   "handwritten": true
+  },
+  "measures[0].frequency": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": [
+    862.7,
+    951.3,
+    933.6,
+    977.7
+   ],
+   "handwritten": false
+  },
+  "measures[0].details": {
+   "value": "Ulcus cruris li. Unterschenkel 3 x 2 cm, Grad 2",
+   "status": "present",
+   "page": 0,
+   "box": [
+    399.9,
+    947.7,
+    895.4,
+    1011.5
+   ],
+   "handwritten": true
+  },
+  "measures[0].duration_from": {
+   "value": "2026-10-01",
+   "status": "present",
+   "page": 0,
+   "box": [
+    974.0,
+    937.9,
+    1088.7,
+    977.2
+   ],
+   "handwritten": true
+  },
+  "measures[0].duration_to": {
+   "value": "2026-12-15",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1112.5,
+    929.9,
+    1228.0,
+    969.9
+   ],
+   "handwritten": true
+  },
+  "measures[#]": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "corrections_present": {
+   "value": false,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "doc_type": {
+   "value": "muster12",
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "practice_stamp": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    212.3,
+    1217.8,
+    582.1,
+    1431.4
+   ],
+   "handwritten": false
+  },
+  "doctor_signature": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    891.7,
+    1267.9,
+    1007.7,
+    1361.2
+   ],
+   "handwritten": false
+  },
+  "corrections_initialled": {
+   "value": "absent",
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  }
+ },
+ "regions": {
+  "practice_stamp": {
+   "page": 0,
+   "box": [
+    212.3,
+    1217.8,
+    582.1,
+    1431.4
+   ],
+   "state": "present"
+  },
+  "doctor_signature": {
+   "page": 0,
+   "box": [
+    891.7,
+    1267.9,
+    1007.7,
+    1361.2
+   ],
+   "state": "present"
+  }
+ },
+ "defects": [
+  "D20"
+ ],
+ "synthetic": true
+}

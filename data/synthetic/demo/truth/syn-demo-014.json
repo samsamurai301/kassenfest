@@ -1,0 +1,494 @@
+{
+ "doc_id": "syn-demo-014",
+ "doc_type": "muster12",
+ "variant": "clean",
+ "seed": 3544546187,
+ "patient_id": "p09",
+ "month": "2026-10",
+ "pages": [
+  {
+   "index": 0,
+   "image": "../pages/syn-demo-014.png",
+   "width": 1241,
+   "height": 1755
+  }
+ ],
+ "fields": {
+  "payer_name": {
+   "value": "AOK Bayern",
+   "status": "present",
+   "page": 0,
+   "box": [
+    68.8,
+    80.9,
+    193.8,
+    104.3
+   ],
+   "handwritten": false
+  },
+  "patient_name": {
+   "value": "Unertl, Theresia",
+   "status": "present",
+   "page": 0,
+   "box": [
+    68.8,
+    169.8,
+    268.7,
+    193.2
+   ],
+   "handwritten": false
+  },
+  "patient_dob": {
+   "value": "1939-12-19",
+   "status": "present",
+   "page": 0,
+   "box": [
+    665.3,
+    169.8,
+    790.2,
+    193.2
+   ],
+   "handwritten": false
+  },
+  "payer_ik": {
+   "value": "109990018",
+   "status": "present",
+   "page": 0,
+   "box": [
+    68.8,
+    258.7,
+    181.2,
+    282.1
+   ],
+   "handwritten": false
+  },
+  "kvnr": {
+   "value": "L771158141",
+   "status": "present",
+   "page": 0,
+   "box": [
+    367.1,
+    258.7,
+    492.0,
+    282.1
+   ],
+   "handwritten": false
+  },
+  "bsnr": {
+   "value": "717620859",
+   "status": "present",
+   "page": 0,
+   "box": [
+    68.8,
+    347.6,
+    181.2,
+    371.0
+   ],
+   "handwritten": false
+  },
+  "lanr": {
+   "value": "824646001",
+   "status": "present",
+   "page": 0,
+   "box": [
+    367.1,
+    347.6,
+    479.5,
+    371.0
+   ],
+   "handwritten": false
+  },
+  "issue_date": {
+   "value": "2026-09-15",
+   "status": "present",
+   "page": 0,
+   "box": [
+    665.3,
+    347.6,
+    790.2,
+    371.0
+   ],
+   "handwritten": false
+  },
+  "period_from": {
+   "value": "2026-09-18",
+   "status": "present",
+   "page": 0,
+   "box": [
+    885.8,
+    318.6,
+    1010.7,
+    342.1
+   ],
+   "handwritten": false
+  },
+  "period_to": {
+   "value": "2026-12-02",
+   "status": "present",
+   "page": 0,
+   "box": [
+    885.8,
+    365.8,
+    1010.7,
+    389.3
+   ],
+   "handwritten": false
+  },
+  "icd_codes": {
+   "value": [
+    "I50.9",
+    "I10.00",
+    "E11.9"
+   ],
+   "status": "present",
+   "page": 0,
+   "box": [
+    70.0,
+    437.3,
+    319.8,
+    460.7
+   ],
+   "handwritten": false
+  },
+  "further_notes": {
+   "value": "Rücksprache bei Wundverschlechterung",
+   "status": "present",
+   "page": 0,
+   "box": [
+    70.0,
+    1124.0,
+    519.7,
+    1147.4
+   ],
+   "handwritten": false
+  },
+  "prescription_kind": {
+   "value": "folge",
+   "status": "present",
+   "page": 0,
+   "box": [
+    832.7,
+    207.7,
+    857.4,
+    232.5
+   ],
+   "handwritten": false
+  },
+  "accident": {
+   "value": false,
+   "status": "present",
+   "page": 0,
+   "box": [
+    832.7,
+    241.9,
+    857.4,
+    266.7
+   ],
+   "handwritten": false
+  },
+  "blank_prescription": {
+   "value": false,
+   "status": "present",
+   "page": 0,
+   "box": [
+    832.7,
+    276.1,
+    857.4,
+    300.9
+   ],
+   "handwritten": false
+  },
+  "measures[0].category": {
+   "value": "medikamentengabe",
+   "status": "present",
+   "page": 0,
+   "box": [
+    66.5,
+    630.5,
+    91.3,
+    655.3
+   ],
+   "handwritten": false
+  },
+  "measures[0].frequency.count": {
+   "value": 2,
+   "status": "present",
+   "page": 0,
+   "box": [
+    804.4,
+    632.7,
+    883.1,
+    653.0
+   ],
+   "handwritten": false
+  },
+  "measures[0].frequency.per": {
+   "value": "day",
+   "status": "present",
+   "page": 0,
+   "box": [
+    804.4,
+    632.7,
+    883.1,
+    653.0
+   ],
+   "handwritten": false
+  },
+  "measures[0].details": {
+   "value": "Bisoprolol 5 mg, Apixaban 5 mg",
+   "status": "present",
+   "page": 0,
+   "box": [
+    326.3,
+    632.7,
+    663.6,
+    653.0
+   ],
+   "handwritten": false
+  },
+  "measures[0].duration_from": {
+   "value": "2026-09-18",
+   "status": "present",
+   "page": 0,
+   "box": [
+    920.4,
+    632.7,
+    1032.8,
+    653.0
+   ],
+   "handwritten": false
+  },
+  "measures[0].duration_to": {
+   "value": "2026-12-02",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1056.2,
+    632.7,
+    1168.6,
+    653.0
+   ],
+   "handwritten": false
+  },
+  "measures[1].category": {
+   "value": "injektion",
+   "status": "present",
+   "page": 0,
+   "box": [
+    66.5,
+    698.4,
+    91.3,
+    723.2
+   ],
+   "handwritten": false
+  },
+  "measures[1].frequency.count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    804.4,
+    700.6,
+    883.1,
+    720.9
+   ],
+   "handwritten": false
+  },
+  "measures[1].frequency.per": {
+   "value": "day",
+   "status": "present",
+   "page": 0,
+   "box": [
+    804.4,
+    700.6,
+    883.1,
+    720.9
+   ],
+   "handwritten": false
+  },
+  "measures[1].details": {
+   "value": "Insulin Lantus 18 IE s.c.",
+   "status": "present",
+   "page": 0,
+   "box": [
+    326.3,
+    700.6,
+    607.4,
+    720.9
+   ],
+   "handwritten": false
+  },
+  "measures[1].duration_from": {
+   "value": "2026-09-18",
+   "status": "present",
+   "page": 0,
+   "box": [
+    920.4,
+    700.6,
+    1032.8,
+    720.9
+   ],
+   "handwritten": false
+  },
+  "measures[1].duration_to": {
+   "value": "2026-12-02",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1056.2,
+    700.6,
+    1168.6,
+    720.9
+   ],
+   "handwritten": false
+  },
+  "measures[2].category": {
+   "value": "blutzucker",
+   "status": "present",
+   "page": 0,
+   "box": [
+    66.5,
+    766.3,
+    91.3,
+    791.1
+   ],
+   "handwritten": false
+  },
+  "measures[2].frequency.count": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": [
+    804.4,
+    768.5,
+    883.1,
+    788.8
+   ],
+   "handwritten": false
+  },
+  "measures[2].frequency.per": {
+   "value": "day",
+   "status": "present",
+   "page": 0,
+   "box": [
+    804.4,
+    768.5,
+    883.1,
+    788.8
+   ],
+   "handwritten": false
+  },
+  "measures[2].details": {
+   "value": "BZ vor Insulingabe",
+   "status": "present",
+   "page": 0,
+   "box": [
+    326.3,
+    768.5,
+    528.7,
+    788.8
+   ],
+   "handwritten": false
+  },
+  "measures[2].duration_from": {
+   "value": "2026-09-18",
+   "status": "present",
+   "page": 0,
+   "box": [
+    920.4,
+    768.5,
+    1032.8,
+    788.8
+   ],
+   "handwritten": false
+  },
+  "measures[2].duration_to": {
+   "value": "2026-12-02",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1056.2,
+    768.5,
+    1168.6,
+    788.8
+   ],
+   "handwritten": false
+  },
+  "measures[#]": {
+   "value": 3,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "corrections_present": {
+   "value": false,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "doc_type": {
+   "value": "muster12",
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "practice_stamp": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    132.1,
+    1172.3,
+    519.8,
+    1392.1
+   ],
+   "handwritten": false
+  },
+  "doctor_signature": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    851.7,
+    1249.1,
+    947.9,
+    1316.4
+   ],
+   "handwritten": false
+  },
+  "corrections_initialled": {
+   "value": "absent",
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  }
+ },
+ "regions": {
+  "practice_stamp": {
+   "page": 0,
+   "box": [
+    132.1,
+    1172.3,
+    519.8,
+    1392.1
+   ],
+   "state": "present"
+  },
+  "doctor_signature": {
+   "page": 0,
+   "box": [
+    851.7,
+    1249.1,
+    947.9,
+    1316.4
+   ],
+   "state": "present"
+  }
+ },
+ "defects": [],
+ "synthetic": true
+}

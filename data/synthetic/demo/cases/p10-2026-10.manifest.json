@@ -1,0 +1,28 @@
+{
+ "case_id": "p10-2026-10",
+ "patient_id": "p10",
+ "patient_name": "Jäger, Renate",
+ "month": "2026-10",
+ "kind": "xi",
+ "hero": null,
+ "events": [
+  "stay"
+ ],
+ "defects": [
+  {
+   "id": "D20",
+   "rules": [],
+   "documents": [
+    "syn-demo-035",
+    "syn-demo-019"
+   ],
+   "note": "Clean patient-month",
+   "lines": []
+  }
+ ],
+ "documents": [
+  "syn-demo-019",
+  "syn-demo-035"
+ ],
+ "casefile": "p10-2026-10.json"
+}

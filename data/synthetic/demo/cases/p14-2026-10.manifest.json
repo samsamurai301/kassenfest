@@ -1,0 +1,218 @@
+{
+ "case_id": "p14-2026-10",
+ "patient_id": "p14",
+ "patient_name": "Kerscher, Max",
+ "month": "2026-10",
+ "kind": "hkp",
+ "hero": null,
+ "events": [],
+ "defects": [
+  {
+   "id": "D11",
+   "rules": [
+    "HKP-ERST-14D"
+   ],
+   "documents": [
+    "syn-demo-012"
+   ],
+   "note": "Erstverordnung covers 22 days",
+   "lines": []
+  },
+  {
+   "id": "D02",
+   "rules": [
+    "HKP-APPROVAL-EXISTS"
+   ],
+   "documents": [
+    "syn-demo-012",
+    "syn-demo-002"
+   ],
+   "note": "No Genehmigung for the Verordnung of 2026-10-08",
+   "lines": [
+    {
+     "date": "2026-10-08",
+     "time": "07:30",
+     "code": "032130",
+     "domain": "sgbv",
+     "document_id": "syn-demo-002",
+     "entry_index": 0
+    },
+    {
+     "date": "2026-10-09",
+     "time": "07:25",
+     "code": "032130",
+     "domain": "sgbv",
+     "document_id": "syn-demo-002",
+     "entry_index": 1
+    },
+    {
+     "date": "2026-10-10",
+     "time": "07:15",
+     "code": "032130",
+     "domain": "sgbv",
+     "document_id": "syn-demo-002",
+     "entry_index": 2
+    },
+    {
+     "date": "2026-10-11",
+     "time": "07:45",
+     "code": "032130",
+     "domain": "sgbv",
+     "document_id": "syn-demo-002",
+     "entry_index": 3
+    },
+    {
+     "date": "2026-10-12",
+     "time": "07:25",
+     "code": "032130",
+     "domain": "sgbv",
+     "document_id": "syn-demo-002",
+     "entry_index": 4
+    },
+    {
+     "date": "2026-10-13",
+     "time": "07:37",
+     "code": "032130",
+     "domain": "sgbv",
+     "document_id": "syn-demo-002",
+     "entry_index": 5
+    },
+    {
+     "date": "2026-10-14",
+     "time": "07:45",
+     "code": "032130",
+     "domain": "sgbv",
+     "document_id": "syn-demo-002",
+     "entry_index": 6
+    },
+    {
+     "date": "2026-10-15",
+     "time": "07:45",
+     "code": "032130",
+     "domain": "sgbv",
+     "document_id": "syn-demo-002",
+     "entry_index": 7
+    },
+    {
+     "date": "2026-10-16",
+     "time": "07:35",
+     "code": "032130",
+     "domain": "sgbv",
+     "document_id": "syn-demo-002",
+     "entry_index": 8
+    },
+    {
+     "date": "2026-10-17",
+     "time": "07:40",
+     "code": "032130",
+     "domain": "sgbv",
+     "document_id": "syn-demo-002",
+     "entry_index": 9
+    },
+    {
+     "date": "2026-10-18",
+     "time": "07:10",
+     "code": "032130",
+     "domain": "sgbv",
+     "document_id": "syn-demo-002",
+     "entry_index": 10
+    },
+    {
+     "date": "2026-10-19",
+     "time": "07:40",
+     "code": "032130",
+     "domain": "sgbv",
+     "document_id": "syn-demo-002",
+     "entry_index": 11
+    },
+    {
+     "date": "2026-10-20",
+     "time": "07:25",
+     "code": "032130",
+     "domain": "sgbv",
+     "document_id": "syn-demo-002",
+     "entry_index": 12
+    },
+    {
+     "date": "2026-10-21",
+     "time": "07:40",
+     "code": "032130",
+     "domain": "sgbv",
+     "document_id": "syn-demo-002",
+     "entry_index": 13
+    },
+    {
+     "date": "2026-10-22",
+     "time": "07:15",
+     "code": "032130",
+     "domain": "sgbv",
+     "document_id": "syn-demo-002",
+     "entry_index": 14
+    },
+    {
+     "date": "2026-10-23",
+     "time": "07:43",
+     "code": "032130",
+     "domain": "sgbv",
+     "document_id": "syn-demo-002",
+     "entry_index": 15
+    },
+    {
+     "date": "2026-10-24",
+     "time": "07:10",
+     "code": "032130",
+     "domain": "sgbv",
+     "document_id": "syn-demo-002",
+     "entry_index": 16
+    },
+    {
+     "date": "2026-10-25",
+     "time": "07:25",
+     "code": "032130",
+     "domain": "sgbv",
+     "document_id": "syn-demo-002",
+     "entry_index": 17
+    },
+    {
+     "date": "2026-10-26",
+     "time": "07:42",
+     "code": "032130",
+     "domain": "sgbv",
+     "document_id": "syn-demo-002",
+     "entry_index": 18
+    },
+    {
+     "date": "2026-10-27",
+     "time": "07:30",
+     "code": "032130",
+     "domain": "sgbv",
+     "document_id": "syn-demo-002",
+     "entry_index": 19
+    },
+    {
+     "date": "2026-10-28",
+     "time": "07:40",
+     "code": "032130",
+     "domain": "sgbv",
+     "document_id": "syn-demo-002",
+     "entry_index": 20
+    },
+    {
+     "date": "2026-10-29",
+     "time": "07:20",
+     "code": "032130",
+     "domain": "sgbv",
+     "document_id": "syn-demo-002",
+     "entry_index": 21
+    }
+   ]
+  }
+ ],
+ "documents": [
+  "syn-demo-002",
+  "syn-demo-012",
+  "syn-demo-020",
+  "syn-demo-029"
+ ],
+ "casefile": "p14-2026-10.json"
+}

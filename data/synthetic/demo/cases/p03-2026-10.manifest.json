@@ -1,0 +1,29 @@
+{
+ "case_id": "p03-2026-10",
+ "patient_id": "p03",
+ "patient_name": "Christl, Maria",
+ "month": "2026-10",
+ "kind": "hkp",
+ "hero": "Frau Christl",
+ "events": [],
+ "defects": [
+  {
+   "id": "D04",
+   "rules": [
+    "HKP-LN-SIGNATURE",
+    "XI-LN-SIGNATURE"
+   ],
+   "documents": [
+    "syn-demo-008"
+   ],
+   "note": "Leistungsnachweis not signed by the patient, no reason",
+   "lines": []
+  }
+ ],
+ "documents": [
+  "syn-demo-008",
+  "syn-demo-022",
+  "syn-demo-026"
+ ],
+ "casefile": "p03-2026-10.json"
+}

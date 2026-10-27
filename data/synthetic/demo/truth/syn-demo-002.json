@@ -1,0 +1,2422 @@
+{
+ "doc_id": "syn-demo-002",
+ "doc_type": "visit_log_sgbv",
+ "variant": "photo",
+ "seed": 31916956,
+ "patient_id": "p14",
+ "month": "2026-10",
+ "pages": [
+  {
+   "index": 0,
+   "image": "../pages/syn-demo-002.jpg",
+   "width": 2000,
+   "height": 1414
+  }
+ ],
+ "fields": {
+  "entries[0].date": {
+   "value": "2026-10-08",
+   "status": "present",
+   "page": 0,
+   "box": [
+    138.9,
+    559.1,
+    179.4,
+    574.5
+   ],
+   "handwritten": false
+  },
+  "entries[0].start_time": {
+   "value": "07:30",
+   "status": "present",
+   "page": 0,
+   "box": [
+    289.7,
+    552.1,
+    329.1,
+    576.9
+   ],
+   "handwritten": true
+  },
+  "entries[0].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[0].position_no": {
+   "value": "032130",
+   "status": "present",
+   "page": 0,
+   "box": [
+    240.2,
+    345.9,
+    286.2,
+    361.6
+   ],
+   "handwritten": false
+  },
+  "entries[0].service": {
+   "value": "Kompressionsstrümpfe anziehen",
+   "status": "present",
+   "page": 0,
+   "box": [
+    240.2,
+    345.9,
+    286.2,
+    361.6
+   ],
+   "handwritten": false
+  },
+  "entries[0].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[0].staff_initials": {
+   "value": "AW",
+   "status": "present",
+   "page": 0,
+   "box": [
+    438.7,
+    549.6,
+    469.1,
+    575.1
+   ],
+   "handwritten": true
+  },
+  "entries[0].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[0].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    438.7,
+    549.6,
+    469.1,
+    575.1
+   ],
+   "handwritten": false
+  },
+  "entries[1].date": {
+   "value": "2026-10-09",
+   "status": "present",
+   "page": 0,
+   "box": [
+    138.6,
+    583.4,
+    174.5,
+    598.7
+   ],
+   "handwritten": false
+  },
+  "entries[1].start_time": {
+   "value": "07:25",
+   "status": "present",
+   "page": 0,
+   "box": [
+    288.8,
+    577.1,
+    330.1,
+    601.5
+   ],
+   "handwritten": true
+  },
+  "entries[1].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[1].position_no": {
+   "value": "032130",
+   "status": "present",
+   "page": 0,
+   "box": [
+    240.2,
+    345.9,
+    286.2,
+    361.6
+   ],
+   "handwritten": false
+  },
+  "entries[1].service": {
+   "value": "Kompressionsstrümpfe anziehen",
+   "status": "present",
+   "page": 0,
+   "box": [
+    240.2,
+    345.9,
+    286.2,
+    361.6
+   ],
+   "handwritten": false
+  },
+  "entries[1].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[1].staff_initials": {
+   "value": "JR",
+   "status": "present",
+   "page": 0,
+   "box": [
+    443.6,
+    573.6,
+    464.3,
+    599.6
+   ],
+   "handwritten": true
+  },
+  "entries[1].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[1].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    443.6,
+    573.6,
+    464.3,
+    599.6
+   ],
+   "handwritten": false
+  },
+  "entries[2].date": {
+   "value": "2026-10-10",
+   "status": "present",
+   "page": 0,
+   "box": [
+    138.4,
+    607.6,
+    178.1,
+    622.9
+   ],
+   "handwritten": false
+  },
+  "entries[2].start_time": {
+   "value": "07:15",
+   "status": "present",
+   "page": 0,
+   "box": [
+    289.4,
+    601.2,
+    329.0,
+    626.0
+   ],
+   "handwritten": true
+  },
+  "entries[2].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[2].position_no": {
+   "value": "032130",
+   "status": "present",
+   "page": 0,
+   "box": [
+    240.2,
+    345.9,
+    286.2,
+    361.6
+   ],
+   "handwritten": false
+  },
+  "entries[2].service": {
+   "value": "Kompressionsstrümpfe anziehen",
+   "status": "present",
+   "page": 0,
+   "box": [
+    240.2,
+    345.9,
+    286.2,
+    361.6
+   ],
+   "handwritten": false
+  },
+  "entries[2].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[2].staff_initials": {
+   "value": "AW",
+   "status": "present",
+   "page": 0,
+   "box": [
+    437.9,
+    598.9,
+    469.5,
+    624.0
+   ],
+   "handwritten": true
+  },
+  "entries[2].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[2].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    437.9,
+    598.9,
+    469.5,
+    624.0
+   ],
+   "handwritten": false
+  },
+  "entries[3].date": {
+   "value": "2026-10-11",
+   "status": "present",
+   "page": 0,
+   "box": [
+    138.1,
+    631.9,
+    176.8,
+    647.1
+   ],
+   "handwritten": false
+  },
+  "entries[3].start_time": {
+   "value": "07:45",
+   "status": "present",
+   "page": 0,
+   "box": [
+    288.5,
+    625.6,
+    329.5,
+    651.8
+   ],
+   "handwritten": true
+  },
+  "entries[3].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[3].position_no": {
+   "value": "032130",
+   "status": "present",
+   "page": 0,
+   "box": [
+    240.2,
+    345.9,
+    286.2,
+    361.6
+   ],
+   "handwritten": false
+  },
+  "entries[3].service": {
+   "value": "Kompressionsstrümpfe anziehen",
+   "status": "present",
+   "page": 0,
+   "box": [
+    240.2,
+    345.9,
+    286.2,
+    361.6
+   ],
+   "handwritten": false
+  },
+  "entries[3].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[3].staff_initials": {
+   "value": "JR",
+   "status": "present",
+   "page": 0,
+   "box": [
+    442.8,
+    621.6,
+    463.6,
+    649.7
+   ],
+   "handwritten": true
+  },
+  "entries[3].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[3].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    442.8,
+    621.6,
+    463.6,
+    649.7
+   ],
+   "handwritten": false
+  },
+  "entries[4].date": {
+   "value": "2026-10-12",
+   "status": "present",
+   "page": 0,
+   "box": [
+    137.8,
+    656.1,
+    179.8,
+    671.4
+   ],
+   "handwritten": false
+  },
+  "entries[4].start_time": {
+   "value": "07:25",
+   "status": "present",
+   "page": 0,
+   "box": [
+    287.1,
+    649.6,
+    331.0,
+    674.7
+   ],
+   "handwritten": true
+  },
+  "entries[4].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[4].position_no": {
+   "value": "032130",
+   "status": "present",
+   "page": 0,
+   "box": [
+    240.2,
+    345.9,
+    286.2,
+    361.6
+   ],
+   "handwritten": false
+  },
+  "entries[4].service": {
+   "value": "Kompressionsstrümpfe anziehen",
+   "status": "present",
+   "page": 0,
+   "box": [
+    240.2,
+    345.9,
+    286.2,
+    361.6
+   ],
+   "handwritten": false
+  },
+  "entries[4].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[4].staff_initials": {
+   "value": "AW",
+   "status": "present",
+   "page": 0,
+   "box": [
+    437.1,
+    648.9,
+    468.2,
+    673.5
+   ],
+   "handwritten": true
+  },
+  "entries[4].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[4].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    437.1,
+    648.9,
+    468.2,
+    673.5
+   ],
+   "handwritten": false
+  },
+  "entries[5].date": {
+   "value": "2026-10-13",
+   "status": "present",
+   "page": 0,
+   "box": [
+    137.5,
+    680.5,
+    173.4,
+    695.6
+   ],
+   "handwritten": false
+  },
+  "entries[5].start_time": {
+   "value": "07:37",
+   "status": "present",
+   "page": 0,
+   "box": [
+    285.1,
+    673.6,
+    331.6,
+    699.2
+   ],
+   "handwritten": true
+  },
+  "entries[5].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[5].position_no": {
+   "value": "032130",
+   "status": "present",
+   "page": 0,
+   "box": [
+    240.2,
+    345.9,
+    286.2,
+    361.6
+   ],
+   "handwritten": false
+  },
+  "entries[5].service": {
+   "value": "Kompressionsstrümpfe anziehen",
+   "status": "present",
+   "page": 0,
+   "box": [
+    240.2,
+    345.9,
+    286.2,
+    361.6
+   ],
+   "handwritten": false
+  },
+  "entries[5].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[5].staff_initials": {
+   "value": "MK",
+   "status": "present",
+   "page": 0,
+   "box": [
+    439.8,
+    672.1,
+    465.5,
+    698.0
+   ],
+   "handwritten": true
+  },
+  "entries[5].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[5].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    439.8,
+    672.1,
+    465.5,
+    698.0
+   ],
+   "handwritten": false
+  },
+  "entries[6].date": {
+   "value": "2026-10-14",
+   "status": "present",
+   "page": 0,
+   "box": [
+    137.3,
+    704.7,
+    174.7,
+    719.9
+   ],
+   "handwritten": false
+  },
+  "entries[6].start_time": {
+   "value": "07:45",
+   "status": "present",
+   "page": 0,
+   "box": [
+    287.7,
+    698.3,
+    328.5,
+    723.9
+   ],
+   "handwritten": true
+  },
+  "entries[6].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[6].position_no": {
+   "value": "032130",
+   "status": "present",
+   "page": 0,
+   "box": [
+    240.2,
+    345.9,
+    286.2,
+    361.6
+   ],
+   "handwritten": false
+  },
+  "entries[6].service": {
+   "value": "Kompressionsstrümpfe anziehen",
+   "status": "present",
+   "page": 0,
+   "box": [
+    240.2,
+    345.9,
+    286.2,
+    361.6
+   ],
+   "handwritten": false
+  },
+  "entries[6].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[6].staff_initials": {
+   "value": "JR",
+   "status": "present",
+   "page": 0,
+   "box": [
+    442.2,
+    696.7,
+    462.4,
+    721.7
+   ],
+   "handwritten": true
+  },
+  "entries[6].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[6].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    442.2,
+    696.7,
+    462.4,
+    721.7
+   ],
+   "handwritten": false
+  },
+  "entries[7].date": {
+   "value": "2026-10-15",
+   "status": "present",
+   "page": 0,
+   "box": [
+    137.0,
+    729.0,
+    177.5,
+    744.1
+   ],
+   "handwritten": false
+  },
+  "entries[7].start_time": {
+   "value": "07:45",
+   "status": "present",
+   "page": 0,
+   "box": [
+    286.3,
+    722.6,
+    329.6,
+    748.7
+   ],
+   "handwritten": true
+  },
+  "entries[7].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[7].position_no": {
+   "value": "032130",
+   "status": "present",
+   "page": 0,
+   "box": [
+    240.2,
+    345.9,
+    286.2,
+    361.6
+   ],
+   "handwritten": false
+  },
+  "entries[7].service": {
+   "value": "Kompressionsstrümpfe anziehen",
+   "status": "present",
+   "page": 0,
+   "box": [
+    240.2,
+    345.9,
+    286.2,
+    361.6
+   ],
+   "handwritten": false
+  },
+  "entries[7].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[7].staff_initials": {
+   "value": "MK",
+   "status": "present",
+   "page": 0,
+   "box": [
+    440.1,
+    722.0,
+    464.5,
+    745.8
+   ],
+   "handwritten": true
+  },
+  "entries[7].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[7].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    440.1,
+    722.0,
+    464.5,
+    745.8
+   ],
+   "handwritten": false
+  },
+  "entries[8].date": {
+   "value": "2026-10-16",
+   "status": "present",
+   "page": 0,
+   "box": [
+    136.7,
+    753.3,
+    172.6,
+    768.4
+   ],
+   "handwritten": false
+  },
+  "entries[8].start_time": {
+   "value": "07:35",
+   "status": "present",
+   "page": 0,
+   "box": [
+    288.0,
+    747.0,
+    328.4,
+    772.8
+   ],
+   "handwritten": true
+  },
+  "entries[8].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[8].position_no": {
+   "value": "032130",
+   "status": "present",
+   "page": 0,
+   "box": [
+    240.2,
+    345.9,
+    286.2,
+    361.6
+   ],
+   "handwritten": false
+  },
+  "entries[8].service": {
+   "value": "Kompressionsstrümpfe anziehen",
+   "status": "present",
+   "page": 0,
+   "box": [
+    240.2,
+    345.9,
+    286.2,
+    361.6
+   ],
+   "handwritten": false
+  },
+  "entries[8].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[8].staff_initials": {
+   "value": "JR",
+   "status": "present",
+   "page": 0,
+   "box": [
+    442.4,
+    746.8,
+    462.2,
+    771.1
+   ],
+   "handwritten": true
+  },
+  "entries[8].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[8].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    442.4,
+    746.8,
+    462.2,
+    771.1
+   ],
+   "handwritten": false
+  },
+  "entries[9].date": {
+   "value": "2026-10-17",
+   "status": "present",
+   "page": 0,
+   "box": [
+    136.5,
+    777.5,
+    176.2,
+    792.7
+   ],
+   "handwritten": false
+  },
+  "entries[9].start_time": {
+   "value": "07:40",
+   "status": "present",
+   "page": 0,
+   "box": [
+    285.6,
+    771.6,
+    329.8,
+    796.9
+   ],
+   "handwritten": true
+  },
+  "entries[9].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[9].position_no": {
+   "value": "032130",
+   "status": "present",
+   "page": 0,
+   "box": [
+    240.2,
+    345.9,
+    286.2,
+    361.6
+   ],
+   "handwritten": false
+  },
+  "entries[9].service": {
+   "value": "Kompressionsstrümpfe anziehen",
+   "status": "present",
+   "page": 0,
+   "box": [
+    240.2,
+    345.9,
+    286.2,
+    361.6
+   ],
+   "handwritten": false
+  },
+  "entries[9].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[9].staff_initials": {
+   "value": "MK",
+   "status": "present",
+   "page": 0,
+   "box": [
+    439.6,
+    770.9,
+    464.4,
+    795.0
+   ],
+   "handwritten": true
+  },
+  "entries[9].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[9].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    439.6,
+    770.9,
+    464.4,
+    795.0
+   ],
+   "handwritten": false
+  },
+  "entries[10].date": {
+   "value": "2026-10-18",
+   "status": "present",
+   "page": 0,
+   "box": [
+    136.2,
+    801.8,
+    175.9,
+    817.0
+   ],
+   "handwritten": false
+  },
+  "entries[10].start_time": {
+   "value": "07:10",
+   "status": "present",
+   "page": 0,
+   "box": [
+    285.7,
+    795.4,
+    328.8,
+    821.9
+   ],
+   "handwritten": true
+  },
+  "entries[10].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[10].position_no": {
+   "value": "032130",
+   "status": "present",
+   "page": 0,
+   "box": [
+    240.2,
+    345.9,
+    286.2,
+    361.6
+   ],
+   "handwritten": false
+  },
+  "entries[10].service": {
+   "value": "Kompressionsstrümpfe anziehen",
+   "status": "present",
+   "page": 0,
+   "box": [
+    240.2,
+    345.9,
+    286.2,
+    361.6
+   ],
+   "handwritten": false
+  },
+  "entries[10].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[10].staff_initials": {
+   "value": "MK",
+   "status": "present",
+   "page": 0,
+   "box": [
+    439.0,
+    794.6,
+    464.2,
+    820.2
+   ],
+   "handwritten": true
+  },
+  "entries[10].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[10].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    439.0,
+    794.6,
+    464.2,
+    820.2
+   ],
+   "handwritten": false
+  },
+  "entries[11].date": {
+   "value": "2026-10-19",
+   "status": "present",
+   "page": 0,
+   "box": [
+    135.9,
+    826.1,
+    177.9,
+    841.2
+   ],
+   "handwritten": false
+  },
+  "entries[11].start_time": {
+   "value": "07:40",
+   "status": "present",
+   "page": 0,
+   "box": [
+    285.3,
+    819.7,
+    328.7,
+    844.9
+   ],
+   "handwritten": true
+  },
+  "entries[11].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[11].position_no": {
+   "value": "032130",
+   "status": "present",
+   "page": 0,
+   "box": [
+    240.2,
+    345.9,
+    286.2,
+    361.6
+   ],
+   "handwritten": false
+  },
+  "entries[11].service": {
+   "value": "Kompressionsstrümpfe anziehen",
+   "status": "present",
+   "page": 0,
+   "box": [
+    240.2,
+    345.9,
+    286.2,
+    361.6
+   ],
+   "handwritten": false
+  },
+  "entries[11].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[11].staff_initials": {
+   "value": "MK",
+   "status": "present",
+   "page": 0,
+   "box": [
+    438.4,
+    820.0,
+    463.5,
+    843.8
+   ],
+   "handwritten": true
+  },
+  "entries[11].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[11].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    438.4,
+    820.0,
+    463.5,
+    843.8
+   ],
+   "handwritten": false
+  },
+  "entries[12].date": {
+   "value": "2026-10-20",
+   "status": "present",
+   "page": 0,
+   "box": [
+    135.6,
+    850.5,
+    171.6,
+    865.5
+   ],
+   "handwritten": false
+  },
+  "entries[12].start_time": {
+   "value": "07:25",
+   "status": "present",
+   "page": 0,
+   "box": [
+    285.5,
+    845.1,
+    327.4,
+    870.0
+   ],
+   "handwritten": true
+  },
+  "entries[12].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[12].position_no": {
+   "value": "032130",
+   "status": "present",
+   "page": 0,
+   "box": [
+    240.2,
+    345.9,
+    286.2,
+    361.6
+   ],
+   "handwritten": false
+  },
+  "entries[12].service": {
+   "value": "Kompressionsstrümpfe anziehen",
+   "status": "present",
+   "page": 0,
+   "box": [
+    240.2,
+    345.9,
+    286.2,
+    361.6
+   ],
+   "handwritten": false
+  },
+  "entries[12].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[12].staff_initials": {
+   "value": "JR",
+   "status": "present",
+   "page": 0,
+   "box": [
+    441.0,
+    844.6,
+    461.2,
+    870.3
+   ],
+   "handwritten": true
+  },
+  "entries[12].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[12].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    441.0,
+    844.6,
+    461.2,
+    870.3
+   ],
+   "handwritten": false
+  },
+  "entries[13].date": {
+   "value": "2026-10-21",
+   "status": "present",
+   "page": 0,
+   "box": [
+    135.4,
+    874.8,
+    172.8,
+    889.8
+   ],
+   "handwritten": false
+  },
+  "entries[13].start_time": {
+   "value": "07:40",
+   "status": "present",
+   "page": 0,
+   "box": [
+    288.0,
+    869.3,
+    326.0,
+    894.2
+   ],
+   "handwritten": true
+  },
+  "entries[13].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[13].position_no": {
+   "value": "032130",
+   "status": "present",
+   "page": 0,
+   "box": [
+    240.2,
+    345.9,
+    286.2,
+    361.6
+   ],
+   "handwritten": false
+  },
+  "entries[13].service": {
+   "value": "Kompressionsstrümpfe anziehen",
+   "status": "present",
+   "page": 0,
+   "box": [
+    240.2,
+    345.9,
+    286.2,
+    361.6
+   ],
+   "handwritten": false
+  },
+  "entries[13].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[13].staff_initials": {
+   "value": "JR",
+   "status": "present",
+   "page": 0,
+   "box": [
+    441.3,
+    869.1,
+    460.9,
+    893.8
+   ],
+   "handwritten": true
+  },
+  "entries[13].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[13].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    441.3,
+    869.1,
+    460.9,
+    893.8
+   ],
+   "handwritten": false
+  },
+  "entries[14].date": {
+   "value": "2026-10-22",
+   "status": "present",
+   "page": 0,
+   "box": [
+    135.1,
+    899.1,
+    175.6,
+    914.1
+   ],
+   "handwritten": false
+  },
+  "entries[14].start_time": {
+   "value": "07:15",
+   "status": "present",
+   "page": 0,
+   "box": [
+    286.6,
+    893.2,
+    326.3,
+    917.9
+   ],
+   "handwritten": true
+  },
+  "entries[14].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[14].position_no": {
+   "value": "032130",
+   "status": "present",
+   "page": 0,
+   "box": [
+    240.2,
+    345.9,
+    286.2,
+    361.6
+   ],
+   "handwritten": false
+  },
+  "entries[14].service": {
+   "value": "Kompressionsstrümpfe anziehen",
+   "status": "present",
+   "page": 0,
+   "box": [
+    240.2,
+    345.9,
+    286.2,
+    361.6
+   ],
+   "handwritten": false
+  },
+  "entries[14].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[14].staff_initials": {
+   "value": "AW",
+   "status": "present",
+   "page": 0,
+   "box": [
+    435.0,
+    892.7,
+    466.3,
+    917.5
+   ],
+   "handwritten": true
+  },
+  "entries[14].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[14].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    435.0,
+    892.7,
+    466.3,
+    917.5
+   ],
+   "handwritten": false
+  },
+  "entries[15].date": {
+   "value": "2026-10-23",
+   "status": "present",
+   "page": 0,
+   "box": [
+    134.8,
+    923.4,
+    170.8,
+    938.4
+   ],
+   "handwritten": false
+  },
+  "entries[15].start_time": {
+   "value": "07:43",
+   "status": "present",
+   "page": 0,
+   "box": [
+    286.0,
+    917.4,
+    326.9,
+    942.5
+   ],
+   "handwritten": true
+  },
+  "entries[15].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[15].position_no": {
+   "value": "032130",
+   "status": "present",
+   "page": 0,
+   "box": [
+    240.2,
+    345.9,
+    286.2,
+    361.6
+   ],
+   "handwritten": false
+  },
+  "entries[15].service": {
+   "value": "Kompressionsstrümpfe anziehen",
+   "status": "present",
+   "page": 0,
+   "box": [
+    240.2,
+    345.9,
+    286.2,
+    361.6
+   ],
+   "handwritten": false
+  },
+  "entries[15].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[15].staff_initials": {
+   "value": "JR",
+   "status": "present",
+   "page": 0,
+   "box": [
+    439.9,
+    916.8,
+    460.0,
+    942.1
+   ],
+   "handwritten": true
+  },
+  "entries[15].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[15].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    439.9,
+    916.8,
+    460.0,
+    942.1
+   ],
+   "handwritten": false
+  },
+  "entries[16].date": {
+   "value": "2026-10-24",
+   "status": "present",
+   "page": 0,
+   "box": [
+    134.5,
+    947.7,
+    174.3,
+    962.7
+   ],
+   "handwritten": false
+  },
+  "entries[16].start_time": {
+   "value": "07:10",
+   "status": "present",
+   "page": 0,
+   "box": [
+    287.3,
+    942.6,
+    324.3,
+    967.3
+   ],
+   "handwritten": true
+  },
+  "entries[16].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[16].position_no": {
+   "value": "032130",
+   "status": "present",
+   "page": 0,
+   "box": [
+    240.2,
+    345.9,
+    286.2,
+    361.6
+   ],
+   "handwritten": false
+  },
+  "entries[16].service": {
+   "value": "Kompressionsstrümpfe anziehen",
+   "status": "present",
+   "page": 0,
+   "box": [
+    240.2,
+    345.9,
+    286.2,
+    361.6
+   ],
+   "handwritten": false
+  },
+  "entries[16].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[16].staff_initials": {
+   "value": "AW",
+   "status": "present",
+   "page": 0,
+   "box": [
+    434.5,
+    941.9,
+    465.3,
+    967.2
+   ],
+   "handwritten": true
+  },
+  "entries[16].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[16].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    434.5,
+    941.9,
+    465.3,
+    967.2
+   ],
+   "handwritten": false
+  },
+  "entries[17].date": {
+   "value": "2026-10-25",
+   "status": "present",
+   "page": 0,
+   "box": [
+    134.3,
+    972.1,
+    174.1,
+    987.1
+   ],
+   "handwritten": false
+  },
+  "entries[17].start_time": {
+   "value": "07:25",
+   "status": "present",
+   "page": 0,
+   "box": [
+    283.0,
+    966.7,
+    328.2,
+    991.7
+   ],
+   "handwritten": true
+  },
+  "entries[17].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[17].position_no": {
+   "value": "032130",
+   "status": "present",
+   "page": 0,
+   "box": [
+    240.2,
+    345.9,
+    286.2,
+    361.6
+   ],
+   "handwritten": false
+  },
+  "entries[17].service": {
+   "value": "Kompressionsstrümpfe anziehen",
+   "status": "present",
+   "page": 0,
+   "box": [
+    240.2,
+    345.9,
+    286.2,
+    361.6
+   ],
+   "handwritten": false
+  },
+  "entries[17].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[17].staff_initials": {
+   "value": "MK",
+   "status": "present",
+   "page": 0,
+   "box": [
+    437.2,
+    966.6,
+    462.4,
+    991.0
+   ],
+   "handwritten": true
+  },
+  "entries[17].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[17].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    437.2,
+    966.6,
+    462.4,
+    991.0
+   ],
+   "handwritten": false
+  },
+  "entries[18].date": {
+   "value": "2026-10-26",
+   "status": "present",
+   "page": 0,
+   "box": [
+    134.0,
+    996.4,
+    176.1,
+    1011.4
+   ],
+   "handwritten": false
+  },
+  "entries[18].start_time": {
+   "value": "07:42",
+   "status": "present",
+   "page": 0,
+   "box": [
+    283.6,
+    991.2,
+    327.6,
+    1015.8
+   ],
+   "handwritten": true
+  },
+  "entries[18].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[18].position_no": {
+   "value": "032130",
+   "status": "present",
+   "page": 0,
+   "box": [
+    240.2,
+    345.9,
+    286.2,
+    361.6
+   ],
+   "handwritten": false
+  },
+  "entries[18].service": {
+   "value": "Kompressionsstrümpfe anziehen",
+   "status": "present",
+   "page": 0,
+   "box": [
+    240.2,
+    345.9,
+    286.2,
+    361.6
+   ],
+   "handwritten": false
+  },
+  "entries[18].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[18].staff_initials": {
+   "value": "MK",
+   "status": "present",
+   "page": 0,
+   "box": [
+    437.4,
+    991.1,
+    462.3,
+    1016.6
+   ],
+   "handwritten": true
+  },
+  "entries[18].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[18].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    437.4,
+    991.1,
+    462.3,
+    1016.6
+   ],
+   "handwritten": false
+  },
+  "entries[19].date": {
+   "value": "2026-10-27",
+   "status": "present",
+   "page": 0,
+   "box": [
+    133.7,
+    1020.8,
+    169.7,
+    1035.7
+   ],
+   "handwritten": false
+  },
+  "entries[19].start_time": {
+   "value": "07:30",
+   "status": "present",
+   "page": 0,
+   "box": [
+    282.2,
+    1015.6,
+    327.9,
+    1040.0
+   ],
+   "handwritten": true
+  },
+  "entries[19].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[19].position_no": {
+   "value": "032130",
+   "status": "present",
+   "page": 0,
+   "box": [
+    240.2,
+    345.9,
+    286.2,
+    361.6
+   ],
+   "handwritten": false
+  },
+  "entries[19].service": {
+   "value": "Kompressionsstrümpfe anziehen",
+   "status": "present",
+   "page": 0,
+   "box": [
+    240.2,
+    345.9,
+    286.2,
+    361.6
+   ],
+   "handwritten": false
+  },
+  "entries[19].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[19].staff_initials": {
+   "value": "MK",
+   "status": "present",
+   "page": 0,
+   "box": [
+    437.1,
+    1015.1,
+    462.0,
+    1039.6
+   ],
+   "handwritten": true
+  },
+  "entries[19].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[19].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    437.1,
+    1015.1,
+    462.0,
+    1039.6
+   ],
+   "handwritten": false
+  },
+  "entries[20].date": {
+   "value": "2026-10-28",
+   "status": "present",
+   "page": 0,
+   "box": [
+    133.5,
+    1045.1,
+    170.9,
+    1060.1
+   ],
+   "handwritten": false
+  },
+  "entries[20].start_time": {
+   "value": "07:40",
+   "status": "present",
+   "page": 0,
+   "box": [
+    283.2,
+    1040.6,
+    326.7,
+    1064.8
+   ],
+   "handwritten": true
+  },
+  "entries[20].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[20].position_no": {
+   "value": "032130",
+   "status": "present",
+   "page": 0,
+   "box": [
+    240.2,
+    345.9,
+    286.2,
+    361.6
+   ],
+   "handwritten": false
+  },
+  "entries[20].service": {
+   "value": "Kompressionsstrümpfe anziehen",
+   "status": "present",
+   "page": 0,
+   "box": [
+    240.2,
+    345.9,
+    286.2,
+    361.6
+   ],
+   "handwritten": false
+  },
+  "entries[20].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[20].staff_initials": {
+   "value": "MK",
+   "status": "present",
+   "page": 0,
+   "box": [
+    436.8,
+    1040.6,
+    461.6,
+    1064.2
+   ],
+   "handwritten": true
+  },
+  "entries[20].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[20].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    436.8,
+    1040.6,
+    461.6,
+    1064.2
+   ],
+   "handwritten": false
+  },
+  "entries[21].date": {
+   "value": "2026-10-29",
+   "status": "present",
+   "page": 0,
+   "box": [
+    133.2,
+    1069.5,
+    173.7,
+    1084.4
+   ],
+   "handwritten": false
+  },
+  "entries[21].start_time": {
+   "value": "07:20",
+   "status": "present",
+   "page": 0,
+   "box": [
+    284.4,
+    1064.8,
+    324.6,
+    1089.3
+   ],
+   "handwritten": true
+  },
+  "entries[21].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[21].position_no": {
+   "value": "032130",
+   "status": "present",
+   "page": 0,
+   "box": [
+    240.2,
+    345.9,
+    286.2,
+    361.6
+   ],
+   "handwritten": false
+  },
+  "entries[21].service": {
+   "value": "Kompressionsstrümpfe anziehen",
+   "status": "present",
+   "page": 0,
+   "box": [
+    240.2,
+    345.9,
+    286.2,
+    361.6
+   ],
+   "handwritten": false
+  },
+  "entries[21].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[21].staff_initials": {
+   "value": "AW",
+   "status": "present",
+   "page": 0,
+   "box": [
+    433.7,
+    1065.1,
+    464.3,
+    1088.8
+   ],
+   "handwritten": true
+  },
+  "entries[21].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[21].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    433.7,
+    1065.1,
+    464.3,
+    1088.8
+   ],
+   "handwritten": false
+  },
+  "entries[22].date": {
+   "value": "2026-10-30",
+   "status": "present",
+   "page": 0,
+   "box": [
+    132.9,
+    1093.9,
+    168.9,
+    1108.7
+   ],
+   "handwritten": false
+  },
+  "entries[22].start_time": {
+   "value": "07:25",
+   "status": "present",
+   "page": 0,
+   "box": [
+    281.5,
+    1087.5,
+    327.3,
+    1113.8
+   ],
+   "handwritten": true
+  },
+  "entries[22].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[22].position_no": {
+   "value": "032130",
+   "status": "present",
+   "page": 0,
+   "box": [
+    240.2,
+    345.9,
+    286.2,
+    361.6
+   ],
+   "handwritten": false
+  },
+  "entries[22].service": {
+   "value": "Kompressionsstrümpfe anziehen",
+   "status": "present",
+   "page": 0,
+   "box": [
+    240.2,
+    345.9,
+    286.2,
+    361.6
+   ],
+   "handwritten": false
+  },
+  "entries[22].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[22].staff_initials": {
+   "value": "MK",
+   "status": "present",
+   "page": 0,
+   "box": [
+    436.3,
+    1089.0,
+    461.4,
+    1114.2
+   ],
+   "handwritten": true
+  },
+  "entries[22].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[22].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    436.3,
+    1089.0,
+    461.4,
+    1114.2
+   ],
+   "handwritten": false
+  },
+  "entries[23].date": {
+   "value": "2026-10-31",
+   "status": "present",
+   "page": 0,
+   "box": [
+    132.6,
+    1118.2,
+    172.4,
+    1133.1
+   ],
+   "handwritten": false
+  },
+  "entries[23].start_time": {
+   "value": "07:21",
+   "status": "present",
+   "page": 0,
+   "box": [
+    287.0,
+    1112.6,
+    320.4,
+    1138.7
+   ],
+   "handwritten": true
+  },
+  "entries[23].end_time": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[23].position_no": {
+   "value": "032130",
+   "status": "present",
+   "page": 0,
+   "box": [
+    240.2,
+    345.9,
+    286.2,
+    361.6
+   ],
+   "handwritten": false
+  },
+  "entries[23].service": {
+   "value": "Kompressionsstrümpfe anziehen",
+   "status": "present",
+   "page": 0,
+   "box": [
+    240.2,
+    345.9,
+    286.2,
+    361.6
+   ],
+   "handwritten": false
+  },
+  "entries[23].quantity": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[23].staff_initials": {
+   "value": "JR",
+   "status": "present",
+   "page": 0,
+   "box": [
+    438.6,
+    1114.2,
+    458.1,
+    1137.4
+   ],
+   "handwritten": true
+  },
+  "entries[23].employee_no": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "entries[23].initials_state": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    438.6,
+    1114.2,
+    458.1,
+    1137.4
+   ],
+   "handwritten": false
+  },
+  "entries[#]": {
+   "value": 24,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "provider_ik": {
+   "value": "469960557",
+   "status": "present",
+   "page": 0,
+   "box": [
+    675.5,
+    235.3,
+    787.0,
+    259.9
+   ],
+   "handwritten": false
+  },
+  "month": {
+   "value": "2026-10",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1034.6,
+    228.3,
+    1122.8,
+    252.7
+   ],
+   "handwritten": false
+  },
+  "approval_ref": {
+   "value": "KKH-G-0836518",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1434.5,
+    218.4,
+    1601.4,
+    244.6
+   ],
+   "handwritten": false
+  },
+  "patient_name": {
+   "value": "Kerscher, Max",
+   "status": "present",
+   "page": 0,
+   "box": [
+    144.0,
+    298.4,
+    301.3,
+    323.6
+   ],
+   "handwritten": false
+  },
+  "kvnr": {
+   "value": "D723768442",
+   "status": "present",
+   "page": 0,
+   "box": [
+    675.0,
+    288.7,
+    799.0,
+    313.5
+   ],
+   "handwritten": false
+  },
+  "payer_name": {
+   "value": "KKH Kaufmännische Krankenkasse",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1034.3,
+    276.7,
+    1414.2,
+    306.7
+   ],
+   "handwritten": false
+  },
+  "responsible_nurse": {
+   "value": "Monika Kraus",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1434.2,
+    273.3,
+    1588.3,
+    299.1
+   ],
+   "handwritten": false
+  },
+  "patient_signature_date": {
+   "value": "2026-10-31",
+   "status": "present",
+   "page": 0,
+   "box": [
+    440.7,
+    1217.1,
+    570.1,
+    1254.2
+   ],
+   "handwritten": true
+  },
+  "missing_signature_reason": {
+   "value": null,
+   "status": "empty",
+   "page": 0,
+   "box": [
+    840.3,
+    1171.4,
+    887.8,
+    1194.4
+   ],
+   "handwritten": true
+  },
+  "doc_type": {
+   "value": "visit_log_sgbv",
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "patient_signature": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    402.3,
+    1160.7,
+    548.6,
+    1247.1
+   ],
+   "handwritten": false
+  },
+  "provider_signature": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1399.4,
+    1171.3,
+    1612.1,
+    1240.6
+   ],
+   "handwritten": false
+  }
+ },
+ "regions": {
+  "patient_signature": {
+   "page": 0,
+   "box": [
+    402.3,
+    1160.7,
+    548.6,
+    1247.1
+   ],
+   "state": "present"
+  },
+  "provider_signature": {
+   "page": 0,
+   "box": [
+    1399.4,
+    1171.3,
+    1612.1,
+    1240.6
+   ],
+   "state": "present"
+  }
+ },
+ "defects": [
+  "D02"
+ ],
+ "synthetic": true
+}

@@ -1,0 +1,352 @@
+{
+ "doc_id": "syn-demo-017",
+ "doc_type": "muster12",
+ "variant": "photo",
+ "seed": 2763222691,
+ "patient_id": "p04",
+ "month": "2026-10",
+ "pages": [
+  {
+   "index": 0,
+   "image": "../pages/syn-demo-017.jpg",
+   "width": 1414,
+   "height": 2000
+  }
+ ],
+ "fields": {
+  "payer_name": {
+   "value": "AOK Bayern",
+   "status": "present",
+   "page": 0,
+   "box": [
+    140.3,
+    198.4,
+    276.9,
+    230.7
+   ],
+   "handwritten": false
+  },
+  "patient_name": {
+   "value": "Dengler, Franz",
+   "status": "present",
+   "page": 0,
+   "box": [
+    139.9,
+    291.7,
+    329.8,
+    325.6
+   ],
+   "handwritten": false
+  },
+  "patient_dob": {
+   "value": "1938-08-23",
+   "status": "present",
+   "page": 0,
+   "box": [
+    768.2,
+    324.0,
+    894.1,
+    353.7
+   ],
+   "handwritten": false
+  },
+  "payer_ik": {
+   "value": "109990018",
+   "status": "present",
+   "page": 0,
+   "box": [
+    139.5,
+    384.3,
+    261.7,
+    413.9
+   ],
+   "handwritten": false
+  },
+  "kvnr": {
+   "value": "A144611140",
+   "status": "present",
+   "page": 0,
+   "box": [
+    459.1,
+    398.8,
+    589.5,
+    428.3
+   ],
+   "handwritten": false
+  },
+  "bsnr": {
+   "value": "719097089",
+   "status": "present",
+   "page": 0,
+   "box": [
+    139.2,
+    476.2,
+    260.9,
+    505.0
+   ],
+   "handwritten": false
+  },
+  "lanr": {
+   "value": "283320323",
+   "status": "present",
+   "page": 0,
+   "box": [
+    457.6,
+    488.8,
+    574.7,
+    516.9
+   ],
+   "handwritten": false
+  },
+  "issue_date": {
+   "value": "2026-10-01",
+   "status": "present",
+   "page": 0,
+   "box": [
+    763.2,
+    500.9,
+    888.4,
+    528.8
+   ],
+   "handwritten": false
+  },
+  "period_from": {
+   "value": "2026-10-01",
+   "status": "present",
+   "page": 0,
+   "box": [
+    982.4,
+    481.4,
+    1104.3,
+    509.0
+   ],
+   "handwritten": false
+  },
+  "period_to": {
+   "value": "2026-10-14",
+   "status": "present",
+   "page": 0,
+   "box": [
+    980.8,
+    527.4,
+    1102.4,
+    554.6
+   ],
+   "handwritten": false
+  },
+  "icd_codes": {
+   "value": [
+    "I50.9",
+    "I10.00"
+   ],
+   "status": "present",
+   "page": 0,
+   "box": [
+    140.1,
+    568.4,
+    314.7,
+    598.0
+   ],
+   "handwritten": false
+  },
+  "further_notes": {
+   "value": "Bitte BZ-Werte dokumentieren",
+   "status": "present",
+   "page": 0,
+   "box": [
+    137.3,
+    1249.0,
+    498.9,
+    1275.5
+   ],
+   "handwritten": false
+  },
+  "prescription_kind": {
+   "value": "erst",
+   "status": "present",
+   "page": 0,
+   "box": [
+    935.2,
+    336.3,
+    960.5,
+    362.0
+   ],
+   "handwritten": false
+  },
+  "accident": {
+   "value": false,
+   "status": "present",
+   "page": 0,
+   "box": [
+    932.9,
+    403.9,
+    958.2,
+    429.3
+   ],
+   "handwritten": false
+  },
+  "blank_prescription": {
+   "value": false,
+   "status": "present",
+   "page": 0,
+   "box": [
+    931.8,
+    437.5,
+    957.0,
+    462.9
+   ],
+   "handwritten": false
+  },
+  "measures[0].category": {
+   "value": "medikamentengabe",
+   "status": "present",
+   "page": 0,
+   "box": [
+    135.4,
+    764.6,
+    162.2,
+    790.1
+   ],
+   "handwritten": false
+  },
+  "measures[0].frequency.count": {
+   "value": 2,
+   "status": "present",
+   "page": 0,
+   "box": [
+    892.5,
+    782.6,
+    969.6,
+    803.6
+   ],
+   "handwritten": false
+  },
+  "measures[0].frequency.per": {
+   "value": "day",
+   "status": "present",
+   "page": 0,
+   "box": [
+    892.5,
+    782.6,
+    969.6,
+    803.6
+   ],
+   "handwritten": false
+  },
+  "measures[0].details": {
+   "value": "Metformin 1000 mg, Ramipril 5 mg",
+   "status": "present",
+   "page": 0,
+   "box": [
+    410.7,
+    772.6,
+    776.7,
+    799.8
+   ],
+   "handwritten": false
+  },
+  "measures[0].duration_from": {
+   "value": "2026-10-01",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1004.8,
+    785.0,
+    1112.9,
+    806.4
+   ],
+   "handwritten": false
+  },
+  "measures[0].duration_to": {
+   "value": "2026-10-14",
+   "status": "present",
+   "page": 0,
+   "box": [
+    1134.2,
+    787.7,
+    1240.5,
+    808.9
+   ],
+   "handwritten": false
+  },
+  "measures[#]": {
+   "value": 1,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "corrections_present": {
+   "value": false,
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "doc_type": {
+   "value": "muster12",
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  },
+  "practice_stamp": {
+   "value": "absent",
+   "status": "present",
+   "page": 0,
+   "box": [
+    138.8,
+    1308.6,
+    683.9,
+    1494.7
+   ],
+   "handwritten": false
+  },
+  "doctor_signature": {
+   "value": "present",
+   "status": "present",
+   "page": 0,
+   "box": [
+    921.1,
+    1356.8,
+    1005.5,
+    1421.6
+   ],
+   "handwritten": false
+  },
+  "corrections_initialled": {
+   "value": "absent",
+   "status": "present",
+   "page": 0,
+   "box": null,
+   "handwritten": false
+  }
+ },
+ "regions": {
+  "practice_stamp": {
+   "page": 0,
+   "box": [
+    138.8,
+    1308.6,
+    683.9,
+    1494.7
+   ],
+   "state": "absent"
+  },
+  "doctor_signature": {
+   "page": 0,
+   "box": [
+    921.1,
+    1356.8,
+    1005.5,
+    1421.6
+   ],
+   "state": "present"
+  }
+ },
+ "defects": [
+  "D07",
+  "D09"
+ ],
+ "synthetic": true
+}
