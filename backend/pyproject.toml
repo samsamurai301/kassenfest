@@ -5,6 +5,7 @@ description = "Checks home-care bills (HKP / SGB XI) against the rules before th
 requires-python = ">=3.12"
 dependencies = [
     "fastapi>=0.162.0",
+    "holidays>=0.107",
     "httpx>=0.28.1",
     "meta-sam-parser>=0.1.0",
     "numpy>=2.5.4",
@@ -12,6 +13,7 @@ dependencies = [
     "pillow>=13.0.0",
     "pydantic>=2.14.1",
     "pydantic-settings>=2.16.1",
+    "pyyaml>=6.0.3",
     "uvicorn[standard]>=0.54.0",
 ]
 
