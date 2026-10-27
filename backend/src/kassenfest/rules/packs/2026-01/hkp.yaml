@@ -1,0 +1,250 @@
+# HKP rules (SGB V §37), docs/02 §2. Rule logic: kassenfest/rules/hkp.py.
+# valid_from is the legal effective date where docs/02 states one, else the pack start.
+
+- id: HKP-RX-REQUIRED
+  version: 1
+  valid_from: 2026-01-01
+  domain: hkp
+  severity: block
+  kasse_codes: ["42002", "42003"]
+  defects: [D01]
+  sources:
+    - "HKP-RL §3(4) (G-BA, i.d.F. 16.10.2025, in Kraft 12.12.2025)"
+    - https://www.g-ba.de/downloads/62-492-3999/HKP-RL_2025-10-16_iK-2025-12-12.pdf
+  evidence_required: [prescription.period_from, prescription.period_to, visit_log.entries]
+  message_de: "Keine Verordnung für {n_lines} abgerechnete Leistungen ({dates}, {amount}). Ohne gültige Verordnung zahlt die Kasse nicht."
+  message_en: "No prescription covers {n_lines} billed services ({dates}, {amount}). The Kasse won't pay without a valid prescription."
+  variants:
+    expired:
+      message_de: "Die Verordnung endete am {period_to}; {n_lines} Leistungen danach ({dates}, {amount}) sind nicht gedeckt."
+      message_en: "The prescription ended on {period_to}; {n_lines} services after that ({dates}, {amount}) are not covered."
+    not_prescribed:
+      message_de: "Position {codes} steht auf keiner gültigen Verordnung: {n_lines} Leistungen ({dates}, {amount})."
+      message_en: "Position {codes} is not on any valid prescription: {n_lines} services ({dates}, {amount})."
+
+- id: HKP-RX-SIGNED
+  version: 1
+  valid_from: 2026-01-01
+  domain: hkp
+  severity: block
+  defects: [D09]
+  sources:
+    - "Muster 12 (Vordruckvereinbarung, Anlage 2 BMV-Ä): Unterschrift und Vertragsarztstempel"
+    - https://www.kvb.de/fileadmin/kvb/Mitglieder/Verordnungen/VO-aktuell/2024-DS/KVB-VA-240220-SOP-HKP-Muster-12-Ausfuellhilfe.pdf
+  evidence_required: [prescription.doctor_signature, prescription.practice_stamp]
+  message_de: "Verordnung vom {issue_date} ohne {missing}: ungültig. Betroffen: {n_lines} Leistungen ({amount})."
+  message_en: "Prescription of {issue_date} has no {missing}, so it is invalid. Affected: {n_lines} services ({amount})."
+
+- id: HKP-ERST-14D
+  version: 1
+  valid_from: 2026-01-01
+  domain: hkp
+  severity: warn          # "soll"-rule, so warn rather than block
+  defects: [D11]
+  params:
+    max_days: 14          # inclusive day count, period_from..period_to
+  sources:
+    - "HKP-RL §5(1) (G-BA, i.d.F. 16.10.2025)"
+    - https://www.g-ba.de/downloads/62-492-3999/HKP-RL_2025-10-16_iK-2025-12-12.pdf
+  evidence_required: [prescription.kind, prescription.period_from, prescription.period_to]
+  message_de: "Erstverordnung über {days} Tage ({period_from}–{period_to}); vorgesehen sind höchstens {max_days} Tage. Leistungen nach dem {limit_end} können gekürzt werden: {n_lines} Leistungen ({amount})."
+  message_en: "Initial prescription runs {days} days ({period_from}–{period_to}); the guideline allows {max_days}. Services after {limit_end} may be cut: {n_lines} services ({amount})."
+
+- id: HKP-FOLGE-WINDOW
+  version: 1
+  valid_from: 2026-01-01
+  domain: hkp
+  severity: warn
+  defects: [D08]
+  params:
+    window_working_days: 3          # Folgeverordnung in the last 3 working days before expiry
+    proactive_lookahead_days: 14    # remind when a prescription ends within this many days after the month
+  sources:
+    - "HKP-RL §5(2) (G-BA, i.d.F. 16.10.2025)"
+    - https://www.g-ba.de/downloads/62-492-3999/HKP-RL_2025-10-16_iK-2025-12-12.pdf
+  evidence_required: [prescription.period_to, next_prescription.issue_date]
+  message_de: "Folgeverordnung für die Verordnung bis {period_to} prüfen (Zeitfenster {window_start}–{window_end})."
+  message_en: "Check the follow-up for the prescription ending {period_to} (window {window_start}–{window_end})."
+  variants:
+    missing_gap:
+      severity: block
+      kasse_codes: ["42003"]
+      message_de: "Keine Folgeverordnung: Die Verordnung endete am {period_to}, die Folgeverordnung hätte zwischen {window_start} und {window_end} ausgestellt werden sollen. {n_lines} Leistungen danach ({dates}, {amount}) sind nicht gedeckt."
+      message_en: "No follow-up prescription: the prescription ended on {period_to}; the follow-up should have been issued between {window_start} and {window_end}. {n_lines} services after that ({dates}, {amount}) are not covered."
+    due:
+      severity: info
+      message_de: "Verordnung läuft am {period_to} aus. Folgeverordnung beim Arzt anfordern: Ausstellung zwischen {window_start} und {window_end}."
+      message_en: "Prescription expires on {period_to}. Ask the doctor for the follow-up: to be issued between {window_start} and {window_end}."
+    early:
+      severity: info      # too early is a formal flaw, not a billing risk (docs/02 §8: decide warn or info)
+      message_de: "Folgeverordnung schon am {issue_date} ausgestellt, vor dem Zeitfenster {window_start}–{window_end} (Ablauf am {period_to}). Die Kasse kann das beanstanden."
+      message_en: "Follow-up issued on {issue_date}, before the window {window_start}–{window_end} (expiry {period_to}). The Kasse may object."
+    late:
+      message_de: "Folgeverordnung erst am {issue_date} ausgestellt, nach Ablauf am {period_to}. Rückwirkend verordnete Leistungen sind gefährdet: {n_lines} ({dates}, {amount})."
+      message_en: "Follow-up issued only on {issue_date}, after the prescription expired on {period_to}. Retroactively prescribed services are at risk: {n_lines} ({dates}, {amount})."
+    late_gap:
+      severity: block
+      kasse_codes: ["42003"]
+      message_de: "Folgeverordnung erst am {issue_date} ausgestellt; nach Ablauf am {period_to} bleibt eine Lücke: {n_lines} Leistungen ({dates}, {amount}) ohne Verordnung."
+      message_en: "Follow-up issued only on {issue_date}; after the expiry on {period_to} there is a gap: {n_lines} services ({dates}, {amount}) without a prescription."
+
+- id: HKP-SUBMIT-4WD
+  version: 2
+  valid_from: 2021-12-24          # G-BA 21.10.2021 changed 3 -> 4 working days
+  domain: hkp
+  severity: warn
+  defects: [D07]
+  params:
+    working_days_after_issue: 4   # Mon–Fri excl. statutory holidays of the provider's municipality
+  sources:
+    - "HKP-RL §6(5) (G-BA, i.d.F. 16.10.2025, in Kraft 12.12.2025)"
+    - https://www.g-ba.de/downloads/62-492-3999/HKP-RL_2025-10-16_iK-2025-12-12.pdf
+  evidence_required: [prescription.issue_date, prescription.submitted_to_payer_at]
+  message_de: "Verordnung vom {issue_date} ist erst am {submitted} bei der Kasse eingegangen (Frist: {deadline}, {n}. Arbeitstag nach Ausstellung; Feiertage dazwischen: {holidays}). Bis zur Genehmigung am {approval_date} keine vorläufige Kostenübernahme: {n_lines} Leistungen ({amount}) gefährdet."
+  message_en: "Prescription issued {issue_date} reached the payer on {submitted} (deadline {deadline}, working day {n} after issue; holidays in between: {holidays}). No provisional payment until the approval on {approval_date}: {n_lines} services ({amount}) at risk."
+  variants:
+    no_approval:
+      severity: block
+      message_de: "Verordnung vom {issue_date} ist erst am {submitted} bei der Kasse eingegangen (Frist: {deadline}, {n}. Arbeitstag nach Ausstellung; Feiertage dazwischen: {holidays}). Ohne Genehmigung keine Kostenübernahme: {n_lines} Leistungen ({amount}) gefährdet."
+      message_en: "Prescription issued {issue_date} reached the payer on {submitted} (deadline {deadline}, working day {n} after issue; holidays in between: {holidays}). Without an approval nothing is covered: {n_lines} services ({amount}) at risk."
+    no_proof:
+      severity: info
+      message_de: "Kein Nachweis, wann die Verordnung vom {issue_date} bei der Kasse einging (Frist: {deadline}). Faxbericht oder KIM-Quittung ablegen."
+      message_en: "No proof of when the prescription of {issue_date} reached the payer (deadline {deadline}). File the fax report or KIM receipt."
+
+- id: HKP-APPROVAL-EXISTS
+  version: 1
+  valid_from: 2026-01-01
+  domain: hkp
+  severity: block
+  kasse_codes: ["42002", "42003"]
+  defects: [D02]
+  sources:
+    - "HKP-RL §6(1), §6(5) (G-BA, i.d.F. 16.10.2025)"
+    - https://www.g-ba.de/downloads/62-492-3999/HKP-RL_2025-10-16_iK-2025-12-12.pdf
+  evidence_required: [approval.period_from, approval.period_to, approval.approval_ref]
+  message_de: "Keine Genehmigung der Kasse für {n_lines} Leistungen ({dates}, {amount}) und keine fristgerechte Einreichung für eine vorläufige Kostenübernahme."
+  message_en: "No approval from the Kasse for {n_lines} services ({dates}, {amount}), and no timely submission that would give provisional cover."
+  variants:
+    pending:
+      severity: warn
+      kasse_codes: []
+      message_de: "Genehmigung steht noch aus für {n_lines} Leistungen ({dates}, {amount}). Die Verordnung ging fristgerecht ein, die Kasse trägt die Kosten vorläufig."
+      message_en: "Approval still pending for {n_lines} services ({dates}, {amount}). The prescription arrived in time, so the Kasse covers them provisionally."
+    rejected:
+      kasse_codes: ["42002"]
+      message_de: "Die Kasse hat die Genehmigung abgelehnt: {n_lines} Leistungen ({dates}, {amount}) sind nicht gedeckt."
+      message_en: "The Kasse rejected the approval: {n_lines} services ({dates}, {amount}) are not covered."
+    no_ref:
+      severity: warn
+      kasse_codes: ["42004"]
+      message_de: "Genehmigung ohne Genehmigungskennzeichen für {n_lines} Leistungen ({dates}). Kennzeichen vor der Abrechnung nachtragen."
+      message_en: "Approval has no approval number for {n_lines} services ({dates}). Add it before billing."
+
+- id: HKP-APPROVAL-SCOPE
+  version: 1
+  valid_from: 2026-01-01
+  domain: hkp
+  severity: block
+  kasse_codes: ["43001"]
+  defects: [D03]
+  sources:
+    - "TA HKP 1.3.0 §10.1 (Genehmigte Leistungen und Mengen)"
+    - https://www.gkv-datenaustausch.de/media/dokumente/leistungserbringer_1/sonstige_leistungserbringer/technische_anlagen_aktuell_4/TA_HKP_1.3.0_20260625.pdf
+  evidence_required: [approval.approved_items, visit_log.entries]
+  message_de: "Abgerechnete Leistungen gehen über die Genehmigung hinaus: {n_lines} Leistungen ({dates}, {amount})."
+  message_en: "Billed services exceed the approval: {n_lines} services ({dates}, {amount})."
+  variants:
+    not_approved:
+      message_de: "Position {codes} ist nicht genehmigt (Teilgenehmigung?): {n_lines} Leistungen ({dates}, {amount})."
+      message_en: "Position {codes} is not approved (partial approval?): {n_lines} services ({dates}, {amount})."
+    excess:
+      message_de: "Position {code}: genehmigt {approved}, abgerechnet {excess_units} Einheiten mehr ({dates}, {amount})."
+      message_en: "Position {code}: approved {approved}, billed {excess_units} units more ({dates}, {amount})."
+
+- id: HKP-FREQ-RX
+  version: 1
+  valid_from: 2026-01-01
+  domain: hkp
+  severity: block
+  kasse_codes: ["43001"]
+  defects: [D10]
+  sources:
+    - "Muster 12 (Häufigkeit je Maßnahme); HKP-RL §5a (Blankoverordnung: n/a)"
+    - https://www.g-ba.de/downloads/62-492-3999/HKP-RL_2025-10-16_iK-2025-12-12.pdf
+  evidence_required: [prescription.measures.frequency, visit_log.entries]
+  message_de: "Verordnung vom {issue_date}: {service} {prescribed} verordnet, {excess_units} Einheiten mehr abgerechnet ({dates}, {amount})."
+  message_en: "Prescription of {issue_date}: {service} prescribed {prescribed}; {excess_units} units more billed ({dates}, {amount})."
+
+- id: HKP-LN-SIGNATURE
+  version: 1
+  valid_from: 2026-01-01
+  domain: hkp
+  # docs/02 says block; the demo story (docs/05 §4.4, D04) shows it orange: fixable
+  # before sending by getting the signature. Domain-review question.
+  severity: warn
+  defects: [D04]
+  sources:
+    - "Rahmenvertrag §132a SGB V Hamburg §30 [L]; TA HKP 1.3.0 §9.8 (Kennzeichen fehlende Unterschrift)"
+    - https://www.gkv-datenaustausch.de/media/dokumente/leistungserbringer_1/sonstige_leistungserbringer/technische_anlagen_aktuell_4/TA_HKP_1.3.0_20260625.pdf
+  evidence_required: [visit_log.patient_signature, visit_log.missing_signature_reason]
+  message_de: "Leistungsnachweis {month} ohne Unterschrift der versicherten Person und ohne Begründung: {n_lines} Leistungen ({amount}). Unterschrift einholen oder Kennzeichen 1–4 angeben."
+  message_en: "Visit record {month} has no patient signature and no reason: {n_lines} services ({amount}). Get the signature or give reason 1–4."
+  variants:
+    reason:
+      severity: info
+      message_de: "Leistungsnachweis {month} ohne Unterschrift, begründet: {reason}."
+      message_en: "Visit record {month} is unsigned with a reason: {reason}."
+
+- id: HKP-STAFF-INITIALS
+  version: 1
+  valid_from: 2026-01-01
+  domain: hkp
+  severity: warn
+  defects: [D05]
+  sources:
+    - "Rahmenempfehlungen nach §132a Abs. 1 SGB V (18.12.2023) §8: Handzeichen / Beschäftigtennummer je Leistung"
+    - https://www.gkv-spitzenverband.de/media/dokumente/krankenversicherung_1/ambulante_leistungen/haeusliche_krankenpflege/20231218_Rahmenempfehlungen_132a_Abs.1_SGB_V_zur_Versorgung_mit_haeuslicher_Krankenpflege.pdf
+  evidence_required: [visit_log.entries.staff_initials]
+  message_de: "{n_lines} Einträge ohne Handzeichen oder Beschäftigtennummer ({dates}, {amount}). Vor der Abrechnung nachtragen lassen."
+  message_en: "{n_lines} entries without staff initials or employee number ({dates}, {amount}). Have them added before billing."
+
+- id: HKP-DUPLICATE
+  version: 1
+  valid_from: 2026-01-01
+  domain: hkp
+  severity: block
+  kasse_codes: ["42007"]
+  defects: [D18]
+  sources:
+    - "TA HKP 1.3.0 §10.1 (Überschneidung mit bereits abgerechneten Leistungen)"
+    - https://www.gkv-datenaustausch.de/media/dokumente/leistungserbringer_1/sonstige_leistungserbringer/technische_anlagen_aktuell_4/TA_HKP_1.3.0_20260625.pdf
+  evidence_required: [visit_log.entries, prior_claims]
+  message_de: "{n_lines} doppelte Einträge (gleiche Position, gleicher Tag, gleiche Uhrzeit): {dates}, {amount}."
+  message_en: "{n_lines} duplicate entries (same position, day and time): {dates}, {amount}."
+  variants:
+    prior:
+      message_de: "{n_lines} Leistungen wurden bereits abgerechnet ({prior_claims}): {dates}, {amount}."
+      message_en: "{n_lines} services were already billed ({prior_claims}): {dates}, {amount}."
+
+- id: HKP-POSITION-PRICE
+  version: 1
+  valid_from: 2026-01-01
+  domain: hkp
+  severity: block
+  kasse_codes: ["44001", "44003"]
+  sources:
+    - "TA HKP 1.3.0 §10.1; Positionsnummernverzeichnis HKP (18.05.2026); Vergütung nach §132a SGB V (Preise illustrativ)"
+    - https://www.gkv-datenaustausch.de/media/dokumente/leistungserbringer_1/sonstige_leistungserbringer/positionsnummernverzeichnisse/Haeusliche-Krankenpflege_20260518.pdf
+  evidence_required: [visit_log.entries.position_no, tariff]
+  message_de: "Position oder Preis stimmt nicht mit dem Vertrag überein: {n_lines} Leistungen ({dates})."
+  message_en: "Position or price doesn't match the contract: {n_lines} services ({dates})."
+  variants:
+    unknown:
+      kasse_codes: ["44001"]
+      message_de: "Positionsnummer {codes} steht nicht im Vergütungsverzeichnis für den Leistungstag: {n_lines} Leistungen ({dates})."
+      message_en: "Position {codes} isn't in the tariff valid on the service date: {n_lines} services ({dates})."
+    price:
+      kasse_codes: ["44003"]
+      message_de: "Preis weicht vom Vertragspreis ab ({tariff}): {details}."
+      message_en: "Price differs from the contract tariff ({tariff}): {details}."

@@ -1,0 +1,38 @@
+# SGB XI rules, docs/02 §4. Rule logic: kassenfest/rules/sgbxi.py.
+# Amounts come from data/reference/sgbxi_amounts.yaml (version valid on the month's first day).
+
+- id: XI-36-BUDGET
+  version: 1
+  valid_from: 2026-01-01
+  domain: sgbxi
+  severity: warn
+  defects: [D12]
+  params:
+    # Pflegegrad change mid-month [L]/[N] (docs/02 §11.3):
+    # max_in_month (higher grade for the whole month) | start_of_month | prorate (daily share, rounded down)
+    pflegegrad_change_policy: max_in_month
+  sources:
+    - "§36, §120 Abs. 3–4 SGB XI"
+    - https://www.gesetze-im-internet.de/sgb_11/__36.html
+  evidence_required: [visit_log_sgbxi.pflegegrad, visit_log_sgbxi.entries, tariff]
+  message_de: "Sachleistungen von {total} übersteigen das Budget für Pflegegrad {pflegegrad} ({cap}) um {excess}. Den Rest als Eigenanteil privat abrechnen (vorher schriftliche Kosteninformation nach §120 SGB XI) oder das Sozialamt informieren."
+  message_en: "Care services of {total} exceed the Pflegegrad {pflegegrad} budget ({cap}) by {excess}. Invoice the rest privately as Eigenanteil (needs prior written cost information, §120 SGB XI) or notify the Sozialamt."
+
+- id: XI-LN-SIGNATURE
+  version: 1
+  valid_from: 2026-01-01
+  domain: sgbxi
+  # docs/02 says block; kept orange like HKP-LN-SIGNATURE (fixable before sending).
+  severity: warn
+  defects: [D04]
+  sources:
+    - "§105 SGB XI; Vereinbarung über Form und Inhalt der Abrechnungsunterlagen (05.10.2023)"
+    - https://www.gesetze-im-internet.de/sgb_11/__105.html
+  evidence_required: [visit_log_sgbxi.patient_signature]
+  message_de: "Leistungsnachweis {month} (Pflege) ohne Unterschrift der versicherten Person und ohne Begründung: {n_lines} Leistungen ({amount}). Unterschrift einholen."
+  message_en: "Care visit record {month} has no patient signature and no reason: {n_lines} services ({amount}). Get the signature."
+  variants:
+    reason:
+      severity: info
+      message_de: "Leistungsnachweis {month} (Pflege) ohne Unterschrift, begründet: {reason}."
+      message_en: "Care visit record {month} is unsigned with a reason: {reason}."

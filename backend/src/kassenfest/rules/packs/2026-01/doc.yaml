@@ -1,0 +1,26 @@
+# Document-quality rules, docs/02 §6. Rule logic: kassenfest/rules/doc.py.
+# DOC-READABLE runs per extracted document (engine.evaluate_document): CaseFile has no confidences.
+
+- id: DOC-READABLE
+  version: 1
+  valid_from: 2026-01-01
+  domain: doc
+  severity: warn
+  defects: [D19]
+  params:
+    min_confidence: 0.7
+    # flatten()-style paths; [*] matches any list index and everything below it
+    billing_fields:
+      muster12: [payer_ik, kvnr, lanr, issue_date, prescription_kind, blank_prescription,
+                 period_from, period_to, "measures[*]", doctor_signature, practice_stamp]
+      approval_letter: [kvnr, provider_ik, approval_ref, decision, period_from, period_to,
+                        "approved_items[*]"]
+      visit_log_sgbv: [provider_ik, kvnr, month, "entries[*]", patient_signature,
+                       missing_signature_reason]
+      visit_log_sgbxi: [provider_ik, kvnr, pflegegrad, month, "entries[*]", patient_signature]
+      hospital_letter: [kvnr, admission_date, admission_time, discharge_date, discharge_time]
+  sources:
+    - "Kassenfest ADR-6: unsichere Felder gehen in die Prüfung, nie automatisch grün"
+  evidence_required: [extraction.status, extraction.confidence]
+  message_de: "{n_fields} abrechnungsrelevante Felder unleserlich oder unsicher gelesen (Konfidenz unter {min_confidence}): {fields}. Bitte prüfen; nicht automatisch freigeben."
+  message_en: "{n_fields} billing-relevant fields are unreadable or read with low confidence (below {min_confidence}): {fields}. Check them by hand; never auto-approve."
