@@ -1,8 +1,7 @@
 """Every IK, KVNR, LANR and BSNR in the synthetic world comes from here.
 
-Check digits follow docs/03 §3.1 and belong to `kassenfest.rules.checkdigits`
-(rules-engine branch). Until that is on main, the import below points at a local copy
-with the same signatures; swapping is this one line.
+Check digits follow docs/03 §3.1 and come from `kassenfest.rules.checkdigits`, the same
+module the rules engine validates with. This module adds the synth-only numbers.
 
 Synthetic numbers with valid check digits can collide with real ones: every page that
 carries them also carries the synthetic watermark.
@@ -11,7 +10,7 @@ carries them also carries the synthetic watermark.
 import random
 import string
 
-from kassenfest.synth.checkdigits_fallback import (  # → kassenfest.rules.checkdigits
+from kassenfest.rules.checkdigits import (
     generate_bsnr,
     generate_ik,
     generate_kvnr,

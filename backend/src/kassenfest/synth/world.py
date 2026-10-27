@@ -61,10 +61,7 @@ def days(start: dt.date, end: dt.date) -> list[dt.date]:
 
 
 def sub_working_days(d: dt.date, n: int) -> dt.date:
-    while n > 0:
-        d -= dt.timedelta(days=1)
-        n -= catalog.is_working_day(d)
-    return d
+    return catalog.add_working_days(d, -n)
 
 
 # --- Cast --------------------------------------------------------------------------

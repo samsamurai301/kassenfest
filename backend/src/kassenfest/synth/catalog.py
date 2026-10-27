@@ -1,15 +1,24 @@
 """Fixed vocabulary of the synthetic world: Kassen, services, prices, names, places.
 
-Payer IKs, HKP Positionsnummern, Leistungskomplexe and prices mirror
-`data/reference/*.yaml` from the rules-engine branch, so the rules engine prices and
-checks exactly what the generator bills. All IKs and every price are invented
+Payer IKs, HKP Positionsnummern, Leistungskomplexe, prices and the §36 caps come from
+`data/reference/*.yaml` via `kassenfest.rules.reference`, and working days from
+`kassenfest.rules.calendar`, so the rules engine prices and checks exactly what the
+generator bills. This module only adds what paperwork needs: letter layouts, addresses,
+reference-number formats, column labels. All IKs and every price are invented
 ("illustrative"); Kassen names are real, nothing else about them is.
 """
 
 import datetime as dt
 from dataclasses import dataclass
-from decimal import ROUND_HALF_UP, Decimal
 from typing import Literal
+
+from kassenfest.rules import calendar
+from kassenfest.rules.reference import load_reference, valid_on
+from kassenfest.rules.tariffs import hkp_price, lk_price
+
+REF = load_reference()
+PRICE_DAY = dt.date(2026, 10, 1)  # the billing month's tariff
+CALENDAR = calendar.calendar_for("BY", "Deggendorf")
 
 # --- Kassen ---------------------------------------------------------------------
 
@@ -29,25 +38,22 @@ class Kasse:
         return f"{self.name} – Pflegekasse"
 
 
+# short -> (letter style, postal address, Genehmigungskennzeichen format)
+_LETTERS = {
+    "AOK": ("a", ("Postfach 99 01 01", "94459 Deggendorf"), "HKP-{y}-{n:06d}"),
+    "TK": ("b", ("Postfach 99 02 02", "20999 Hamburg"), "TK/{y}/{n:07d}"),
+    "BARMER": ("b", ("Postfach 99 03 03", "42999 Wuppertal"), "B-HKP {n:08d}"),
+    "DAK": ("b", ("Postfach 99 04 04", "20999 Hamburg"), "DAK-{n:09d}"),
+    "IKK": ("a", ("Postfach 99 05 05", "01999 Dresden"), "IKK.{y}.{n:06d}"),
+    "KKH": ("b", ("Postfach 99 06 06", "30999 Hannover"), "KKH-G-{n:07d}"),
+    "KBS": ("a", ("Postfach 99 09 09", "44999 Bochum"), "KN {y} {n:06d}"),
+}
 KASSEN = [
-    Kasse("AOK Bayern", "AOK", "109990018", "189990018", "a",
-          ("Postfach 99 01 01", "94459 Deggendorf"), "HKP-{y}-{n:06d}"),
-    Kasse("Techniker Krankenkasse", "TK", "109990029", "189990029", "b",
-          ("Postfach 99 02 02", "20999 Hamburg"), "TK/{y}/{n:07d}"),
-    Kasse("BARMER", "BARMER", "109990030", "189990030", "b",
-          ("Postfach 99 03 03", "42999 Wuppertal"), "B-HKP {n:08d}"),
-    Kasse("DAK-Gesundheit", "DAK", "109990041", "189990041", "b",
-          ("Postfach 99 04 04", "20999 Hamburg"), "DAK-{n:09d}"),
-    Kasse("IKK classic", "IKK", "109990052", "189990052", "a",
-          ("Postfach 99 05 05", "01999 Dresden"), "IKK.{y}.{n:06d}"),
-    Kasse("KKH Kaufmännische Krankenkasse", "KKH", "109990063", "189990063", "b",
-          ("Postfach 99 06 06", "30999 Hannover"), "KKH-G-{n:07d}"),
-    Kasse("Knappschaft", "KBS", "109990096", "189990096", "a",
-          ("Postfach 99 09 09", "44999 Bochum"), "KN {y} {n:06d}"),
-]  # fmt: skip
-KASSE_BY_IK = {
-    ik: k for k in KASSEN for ik in (k.krankenkasse_ik, k.pflegekasse_ik)
-}  # both roles of a Kasse map to it
+    Kasse(k.name, k.short, k.krankenkasse_ik, k.pflegekasse_ik, *_LETTERS[k.short])
+    for k in REF.kassen
+    if k.short in _LETTERS
+]
+KASSE_BY_IK = {ik: k for k in KASSEN for ik in (k.krankenkasse_ik, k.pflegekasse_ik)}
 
 # --- HKP (SGB V) services ------------------------------------------------------------
 
@@ -55,23 +61,22 @@ KASSE_BY_IK = {
 @dataclass(frozen=True)
 class HkpService:
     position_no: str
-    label: str  # as printed in the visit-log column header
+    label: str  # label_de, as printed in the visit-log column and on approval letters
     category: str  # extraction MeasureCategory
-    price_cents: int  # HKP-BY-2026-01, illustrative
+    price_cents: int
 
 
-HKP_SERVICES = {
-    s.position_no: s
-    for s in [
-        HkpService("032101", "Medikamentengabe", "medikamentengabe", 790),
-        HkpService("032110", "Injektion s.c.", "injektion", 840),
-        HkpService("032120", "Blutzuckermessung", "blutzucker", 520),
-        HkpService("032130", "Kompressionsstrümpfe anziehen", "kompression", 890),
-        HkpService("032140", "Kompressionsverband anlegen", "kompression", 1340),
-        HkpService("032151", "Wundversorgung, chron. Wunde", "wundversorgung", 2190),
-    ]
-}
-HKP_TARIFF = "HKP-BY-2026-01"
+def _hkp(position_no: str) -> HkpService:
+    pos = REF.hkp_positions[position_no]
+    price = hkp_price(REF, position_no, PRICE_DAY)
+    assert pos.category and price, position_no
+    return HkpService(position_no, pos.label_de, pos.category, price.unit_cents)
+
+
+# The positions the world uses: one per measure category, so a Verordnung's frequency
+# for a category is the frequency of exactly one position.
+HKP_SERVICES = {p: _hkp(p) for p in ("032101", "032110", "032120", "032130", "032140", "032151")}
+HKP_TARIFF = valid_on(REF.hkp_tariffs, PRICE_DAY).version  # type: ignore[union-attr]
 
 # Details the doctor writes next to a measure on Muster 12.
 MEASURE_DETAILS = {
@@ -99,64 +104,35 @@ MEASURE_DETAILS = {
 
 # --- SGB XI Leistungskomplexe ---------------------------------------------------------
 
-PUNKTWERT_EUR = Decimal("0.0947")  # XI-BY-2026-01, illustrative
-XI_TARIFF = "XI-BY-2026-01"
-
 
 @dataclass(frozen=True)
 class Leistungskomplex:
     code: str
     label: str
     points: int
-
-    @property
-    def price_cents(self) -> int:
-        cents = Decimal(self.points) * PUNKTWERT_EUR * 100
-        return int(cents.quantize(Decimal(1), rounding=ROUND_HALF_UP))
+    price_cents: int
 
 
 LK = {
-    lk.code: lk
-    for lk in [
-        Leistungskomplex("LK01", "Ganzkörperwäsche", 420),
-        Leistungskomplex("LK02", "Teilwäsche", 250),
-        Leistungskomplex("LK03", "Hilfe bei Ausscheidungen", 180),
-        Leistungskomplex("LK04", "Hilfe bei der Nahrungsaufnahme", 250),
-        Leistungskomplex("LK05", "Lagern und Betten", 100),
-        Leistungskomplex("LK06", "Mobilisation", 150),
-        Leistungskomplex("LK07", "An- und Auskleiden", 120),
-        Leistungskomplex("LK10", "Reinigen der Wohnung", 400),
-        Leistungskomplex("LK12", "Einkaufen", 250),
-        Leistungskomplex("LK13", "Zubereitung einer warmen Mahlzeit", 300),
-    ]
+    code: Leistungskomplex(code, lk.label_de, lk.points, lk_price(REF, code, PRICE_DAY).unit_cents)  # type: ignore[union-attr]
+    for code, lk in REF.leistungskomplexe.items()
 }
+XI_TARIFF = valid_on(REF.punktwerte, PRICE_DAY).version  # type: ignore[union-attr]
 
-# §36 Pflegesachleistung per month, SGBXI-2026-01 (unchanged from 2025).
-SACHLEISTUNG_CAP_CENTS = {1: 0, 2: 79600, 3: 149700, 4: 185900, 5: 229900}
-ENTLASTUNG_45B_CENTS = 13100
+_AMOUNTS = REF.amounts_on(PRICE_DAY)
+SACHLEISTUNG_CAP_CENTS = dict(_AMOUNTS.sachleistung_36_cents)
+ENTLASTUNG_45B_CENTS = _AMOUNTS.entlastungsbetrag_45b_cents
 
 # --- Calendar -----------------------------------------------------------------------
 
-# Bavarian statutory holidays 2026 incl. Mariä Himmelfahrt (Deggendorf is a Catholic
-# municipality). Enough for Sep–Nov 2026 billing; the rules engine has the real calendar.
-HOLIDAYS_BY_2026 = {
-    dt.date(2026, 1, 1), dt.date(2026, 1, 6), dt.date(2026, 4, 3), dt.date(2026, 4, 6),
-    dt.date(2026, 5, 1), dt.date(2026, 5, 14), dt.date(2026, 5, 25), dt.date(2026, 6, 4),
-    dt.date(2026, 8, 15), dt.date(2026, 10, 3), dt.date(2026, 11, 1),
-    dt.date(2026, 12, 25), dt.date(2026, 12, 26),
-}  # fmt: skip
-
 
 def is_working_day(d: dt.date) -> bool:
-    return d.weekday() < 5 and d not in HOLIDAYS_BY_2026
+    return CALENDAR.is_working_day(d)
 
 
 def add_working_days(d: dt.date, n: int) -> dt.date:
-    """The n-th working day after d (n >= 1); n <= 0 returns d itself."""
-    while n > 0:
-        d += dt.timedelta(days=1)
-        n -= is_working_day(d)
-    return d
+    """The n-th working day after d; negative n goes back."""
+    return CALENDAR.add_working_days(d, n)
 
 
 # --- People and places ----------------------------------------------------------------
