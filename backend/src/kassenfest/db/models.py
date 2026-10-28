@@ -37,7 +37,7 @@ class Document(SQLModel, table=True):
     classification_confidence: float | None = None
     synthetic_watermark: bool | None = None
     patient_id: str | None = Field(default=None, index=True)
-    status: str = "queued"  # queued | processing | done | error
+    status: str = "queued"  # queued | processing | done | error | superseded
     error: str | None = None
     created_at: datetime = Field(default_factory=_now)
 

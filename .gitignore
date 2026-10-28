@@ -19,3 +19,7 @@ data/synthetic/*
 
 # os
 .DS_Store
+
+# local Claude Code tooling
+.claude/launch.json
+.claude/worktrees/

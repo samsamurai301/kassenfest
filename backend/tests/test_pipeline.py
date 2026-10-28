@@ -1,3 +1,4 @@
+import datetime as dt
 import io
 
 import numpy as np
@@ -11,7 +12,9 @@ from kassenfest.llm.client import MetaModelClient
 from kassenfest.pipeline.pages import MAX_SIDE, to_pages
 from kassenfest.pipeline.runner import Pipeline
 from kassenfest.pipeline.validate import validate
+from kassenfest.schemas.domain import Patient, Provider
 from kassenfest.schemas.extraction import Muster12, VisitLogSGBV
+from kassenfest.schemas.records import MasterData
 from kassenfest.storage import BlobStore
 from kassenfest.vision.image import PageImage
 from kassenfest.vision.ink import disagrees, ink_ratio
@@ -230,6 +233,39 @@ async def test_pipeline_stores_document_extraction_and_evidence_boxes(pipeline_e
     assert Muster12.model_validate(ext.data).kvnr.value == "A123456780"
 
 
+async def test_reprocessing_a_file_supersedes_the_earlier_run_and_links_it(pipeline_env):
+    transport, settings, engine, blobs = pipeline_env
+    records = MasterData(
+        month="2026-10",
+        provider=Provider(name="Pflegedienst", ik="469960557", municipality="Deggendorf"),
+        patients=[
+            Patient(
+                id="p1",
+                name="Muster, Erika",
+                dob=dt.date(1940, 1, 1),
+                kvnr="A123456780",
+                insurance=[],
+            )
+        ],
+        physicians=[],
+        payers=[],
+        hospital={},
+    )
+    events = []
+    client = MetaModelClient(settings, transport=transport)
+    pipeline = Pipeline(client, engine, blobs, events.append, records)
+    image = _png(Image.new("RGB", (200, 500), "white"))
+
+    await pipeline.ingest([("m12.png", image)])
+    await pipeline.ingest([("m12 again.png", image)])
+
+    with session_scope(engine) as s:
+        docs = s.exec(select(Document)).all()
+        assert sorted(d.status for d in docs) == ["done", "superseded"]
+        assert {d.patient_id for d in docs} == {"p1"}
+    assert ("linked", "p1 by kvnr") in [(e.step, e.detail) for e in events]
+
+
 async def test_pipeline_marks_a_failed_document_and_keeps_going(pipeline_env):
     transport, settings, engine, blobs = pipeline_env
     transport.chat_content = lambda kwargs: {"not": "valid"}
@@ -253,3 +289,11 @@ async def test_refine_keeps_model_box_when_sam_grows_it(make_settings):
     located = await refine(client, [page], "doctor_signature", 0, rough)
     assert located.source == "muse"
     assert located.box == (120.0, 350.0, 180.0, 400.0)
+
+
+def test_validate_makes_malformed_identifiers_unreadable():
+    doc = _muster12(payer_ik=_field("10990018"), kvnr=_field("A 123456780"))
+    assert validate(doc) == ["payer_ik: unexpected format '10990018'"]
+    assert doc.payer_ik.value is None and doc.payer_ik.status == "unreadable"
+    assert doc.kvnr.value == "A123456780"
+    assert validate(doc) == []  # idempotent: safe to re-run on stored extractions

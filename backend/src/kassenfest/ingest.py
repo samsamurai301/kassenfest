@@ -8,6 +8,7 @@ from kassenfest.config import Settings
 from kassenfest.db import Document, Extraction, Localization, create_db, session_scope
 from kassenfest.llm.client import MetaModelClient
 from kassenfest.pipeline.runner import Event, Pipeline
+from kassenfest.schemas.records import MasterData
 from kassenfest.storage import BlobStore
 
 SUFFIXES = {".png", ".jpg", ".jpeg", ".webp", ".heic", ".heif", ".pdf"}
@@ -37,7 +38,14 @@ async def run(settings: Settings, paths: list[str], label: str | None) -> int:
             names[e.document_id] = e.detail.split(":")[0]
         print(f"  {names.get(e.document_id, e.document_id):<36} {e.step:<10} {e.detail}")
 
-    pipeline = Pipeline(MetaModelClient(settings), engine, BlobStore(settings.blob_dir), show)
+    records = None
+    if settings.records_path.exists():
+        records = MasterData.model_validate_json(settings.records_path.read_text())
+    else:
+        print(f"no records at {settings.records_path}: documents stay unlinked")
+    pipeline = Pipeline(
+        MetaModelClient(settings), engine, BlobStore(settings.blob_dir), show, records
+    )
     batch_id = await pipeline.ingest([(f.name, f.read_bytes()) for f in files], label=label)
 
     with session_scope(engine) as s:
@@ -49,6 +57,7 @@ async def run(settings: Settings, paths: list[str], label: str | None) -> int:
             issues = ext.issues if ext else []
             print(
                 f"  {d.filename:<36} {d.status:<6} {d.doc_type or '-':<16} "
+                f"{d.patient_id or 'unlinked':<9} "
                 f"issues {len(issues)}  boxes {len(locs)}"
                 + (f"  error: {d.error}" if d.error else "")
             )

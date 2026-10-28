@@ -1,8 +1,7 @@
-"""Runs uploaded files through ingest -> classify -> extract -> validate -> localize.
+"""Runs uploaded files through ingest -> classify -> extract -> validate -> link -> localize.
 
-Linking to patients and evaluating rules plug in after this once the synth world
-and rules engine land (docs/05 §5, Fri/Sat). Every step emits an Event, which the
-CLI prints and the API will stream over SSE.
+Rules run over the whole month afterwards (`pipeline.month`), from what this stores.
+Every step emits an Event, which the CLI prints and the API will stream over SSE.
 """
 
 import asyncio
@@ -11,6 +10,7 @@ from collections.abc import Callable
 from dataclasses import dataclass
 
 from sqlalchemy import Engine
+from sqlmodel import select
 
 from kassenfest.db import Batch, Document, Extraction, Localization, Page, session_scope
 from kassenfest.llm.client import MetaModelClient, ReasoningEffort
@@ -21,10 +21,12 @@ from kassenfest.llm.prompts import (
     EXTRACT_VERSION,
     extract_user,
 )
+from kassenfest.pipeline.link import link
 from kassenfest.pipeline.localize import localize_marks
 from kassenfest.pipeline.pages import to_pages
 from kassenfest.pipeline.validate import validate
 from kassenfest.schemas.extraction import EXTRACTION_SCHEMAS, Classification
+from kassenfest.schemas.records import MasterData
 from kassenfest.storage import BlobStore
 from kassenfest.vision.image import PageImage
 
@@ -42,7 +44,7 @@ _EXT = {"image/png": "png", "image/jpeg": "jpg", "image/webp": "webp", "image/gi
 @dataclass
 class Event:
     document_id: str
-    step: str  # stored | classified | extracted | localized | done | error
+    step: str  # stored | classified | extracted | linked | localized | done | error
     detail: str = ""
 
 
@@ -53,8 +55,9 @@ class Pipeline:
         engine: Engine,
         blobs: BlobStore,
         on_event: Callable[[Event], None] | None = None,
+        records: MasterData | None = None,
     ):
-        self.client, self.engine, self.blobs = client, engine, blobs
+        self.client, self.engine, self.blobs, self.records = client, engine, blobs, records
         self.on_event = on_event or (lambda _: None)
 
     async def ingest(self, files: list[tuple[str, bytes]], label: str | None = None) -> str:
@@ -129,6 +132,11 @@ class Pipeline:
             if len({p.doc_type for p in cls.parsed.pages}) > 1:
                 issues.append("pages classified as different document types; check the scan")
             self.on_event(Event(doc_id, "extracted", f"{len(issues)} issue(s)"))
+            if self.records is not None:
+                found = link(doc, self.records)
+                issues += found.issues
+                self._set(doc_id, patient_id=found.patient_id)
+                self.on_event(Event(doc_id, "linked", f"{found.patient_id} by {found.method}"))
 
             located, mark_issues = await localize_marks(self.client, pages, doc)
             issues += mark_issues
@@ -162,10 +170,27 @@ class Pipeline:
                 Event(doc_id, "localized", ", ".join(f"{x.field_path}:{x.source}" for x in located))
             )
             self._set(doc_id, status="done")
+            self._supersede(doc_id)
             self.on_event(Event(doc_id, "done"))
         except Exception as exc:  # one bad page must not stop the batch
             self._set(doc_id, status="error", error=f"{type(exc).__name__}: {exc}")
             self.on_event(Event(doc_id, "error", str(exc)))
+
+    def _supersede(self, doc_id: str) -> None:
+        """The same file processed again replaces its earlier run (no double billing)."""
+        with session_scope(self.engine) as s:
+            doc = s.get(Document, doc_id)
+            assert doc is not None
+            older = s.exec(
+                select(Document).where(
+                    Document.source_sha256 == doc.source_sha256,
+                    Document.id != doc_id,
+                    Document.status == "done",
+                )
+            )
+            for old in older:
+                old.status = "superseded"
+                s.add(old)
 
     def _set(self, doc_id: str, **values: object) -> None:
         with session_scope(self.engine) as s:

@@ -1,7 +1,9 @@
 """Deterministic clean-up of an extraction before anything downstream trusts it.
 
-Formats are normalized in place (dates, billing month, times) and every problem is
-recorded as an issue instead of being silently fixed or dropped. Which fields are
+Formats are normalized in place (dates, billing month, times, identifiers) and every
+problem is recorded as an issue instead of being silently fixed or dropped. A value that
+cannot be what is on the paper (31.02., a 9-digit IK read with 8 digits) becomes
+"unreadable": downstream it is a gap, and DOC-READABLE sends the page to a human. Which fields are
 dates or months is read from the schema's own field descriptions, so the rules
 here cannot drift from the contract.
 """
@@ -98,8 +100,9 @@ def _walk(obj: BaseModel, path: str, issues: list[str]) -> None:
             if name in _FORMATS and isinstance(raw, str):
                 compact = raw.replace(" ", "").upper()
                 value.value = compact
-                if not _FORMATS[name].fullmatch(compact):
+                if not _FORMATS[name].fullmatch(compact):  # a digit lost or a letter misread
                     issues.append(f"{here}: unexpected format {raw!r}")
+                    value.value, value.status = None, "unreadable"
         elif isinstance(value, str) and kind:
             cleaned = _clean(value, kind)
             if cleaned is None:
