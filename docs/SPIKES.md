@@ -156,3 +156,25 @@ Result: 3 review flags, all the same document (seed 05) where Muse Spark puts th
 - **D19 (blurred photo)** was read with confidence ≥ 0.85, overconfident, but both 9-digit IKs came back with 8 digits. `validate` now makes a value that can't be on the paper `unreadable`, and DOC-READABLE sends the page to a human. Check digits stay out of this: a wrong number in the provider's records (D16) is read correctly and must stay readable for MD-KVNR-CHECK.
 - **DOC-READABLE also fires on 3 visit logs** for rows the model itself rated 0.55–0.65; on Christl's log those are exactly the rows with the misread times. Honest review flags, not noise.
 - **Evidence boxes are the weak part.** Field boxes served to the viewer vs. truth: median IoU 0.54 scan, 0.48 clean, 0.27 photo, 0.07 fax (54% ≥ 0.3 overall). Centres are within 2–36 px; the rest is a per-page perspective warp and cell-sized boxes against tight text boxes. 4 signature boxes on photos/faxes sit 50–130 px off the ink, so the ink check flags them for review. Next: SAM refine for every field a finding cites (decision 4 above), measured with the same script.
+
+### Evidence boxes, same day: grid rows and batched SAM refine (`kassenfest eval-boxes`)
+
+Most evidence is visit-log rows (220 of 256 evidence items in the month), and the row boxes were the real problem. Muse Spark's rows drift down a 31-row grid: right at the top, a row or more off by the bottom, and every row one off on two photos. Only **29%** of rows contained their own entry's ink. SAM can't fix that: refining a box on the wrong row tightens the wrong row's ink.
+
+**Rows → the printed grid** (`vision/grid.py`): find the horizontal ruling lines in narrow strips (each strip on its own, so tilted photos still line up), take the longest regularly spaced run, count the day rows up from the table's bottom line, and tighten to the pen ink inside the day's band, within the model's columns. Rejected (model box kept) when the grid isn't clean or disagrees with the model by more than 3 rows. **No model call.**
+
+**Fields → SAM refine, batched** (`pipeline/evidence.py`): up to 16 boxes per SAM call, so every read field costs about one call per page, $0.12 for the month. A padded retry for boxes on blank paper was tested and dropped: median IoU 0.12 → 0.21, but fewer boxes ≥ 0.3 (27% → 23%) and 25 got worse.
+
+| served boxes vs truth | before | after |
+|---|---|---|
+| visit-log rows on the right entry, scans | 24% | **100%** (193/193) |
+| visit-log rows on the right entry, photos | 32% | **99%** (369/373) |
+| fields, median IoU (≥ 0.3), clean | 0.48 (69%) | **0.72** (73%) |
+| fields, scan | 0.53 (76%) | **0.64** (77%) |
+| fields, photo | 0.27 (45%) | 0.31 (51%) |
+| fields, fax | 0.07 (28%) | 0.04 (40%) |
+| fields, all 518 | 0.34 (54%) | **0.44** (58%) |
+
+Findings are unchanged (14/14 cases still match the truth), and a fresh replay rebuild (`LLM_MODE=replay kassenfest ingest`) reproduces every box with no cache miss: the refine requests depend on the extraction alone.
+
+**Still weak:** text fields on photos and faxes where Muse Spark's box misses the ink entirely (e.g. Frau Albers' "bis 14.10.2026", drawn just below the handwriting); SAM rightly refuses to refine blank paper. Candidate fix: re-ask Muse Spark on a crop around the box for the few cited fields SAM couldn't tighten. SGB XI logs (days as columns) have no row boxes at all yet.
