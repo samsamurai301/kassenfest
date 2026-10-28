@@ -530,6 +530,13 @@ export interface components {
             llm_mode: "live" | "record" | "replay";
             /** Api Key Configured */
             api_key_configured: boolean;
+            /**
+             * Data Source
+             * @enum {string}
+             */
+            data_source: "fixtures" | "pipeline";
+            /** Month */
+            month: string;
         };
         /** Holiday */
         Holiday: {
@@ -1059,7 +1066,7 @@ export interface operations {
     patient_timeline_api_patients__patient_id__timeline_get: {
         parameters: {
             query?: {
-                month?: string;
+                month?: string | null;
             };
             header?: never;
             path: {
@@ -1132,13 +1139,14 @@ export interface operations {
         };
         requestBody?: never;
         responses: {
-            /** @description The page as PNG */
+            /** @description The page image */
             200: {
                 headers: {
                     [name: string]: unknown;
                 };
                 content: {
                     "image/png": unknown;
+                    "image/jpeg": unknown;
                 };
             };
             /** @description Validation Error */

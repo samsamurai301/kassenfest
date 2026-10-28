@@ -1,16 +1,19 @@
-"""Fixture data for the web screens until the pipeline lands.
+"""Fixture data for the web screens: served until the pipeline has processed a document
+(or always, with API_SOURCE=fixtures).
 
 The demo month of docs/05 §4.4: Pflegedienst Sonnenschein GmbH, Deggendorf, October
 2026, with the five hero patients (Albers … Eder) and five background patients (Fink …
-Jäger). Everything is built from the shared schemas, so the pipeline can replace this
-module behind the same endpoints. All people, IDs and documents are synthetic; prices
-are illustrative.
+Jäger). Everything is built from the shared schemas, so the pipeline's world (`api.live`)
+sits behind the same endpoints. All people, IDs and documents are synthetic; prices are
+illustrative.
 """
 
 import datetime as dt
+import mimetypes
 from collections.abc import Callable, Iterable
 from dataclasses import dataclass, field
 from functools import cache
+from pathlib import Path
 from typing import Literal
 
 from kassenfest.api import pages
@@ -189,8 +192,20 @@ def euro_de(cents: int) -> str:
 
 @dataclass
 class World:
-    """Everything the fixture endpoints serve, indexed the way the routes need it."""
+    """Everything the endpoints serve, indexed the way the routes need it.
 
+    The defaults describe the fixture month; `api.live` fills one from the pipeline.
+    """
+
+    source: Literal["fixtures", "pipeline"] = "fixtures"
+    month: str = MONTH
+    as_of: dt.date = AS_OF
+    provider: Provider = field(default_factory=lambda: PROVIDER)
+    payers: dict[str, Payer] = field(default_factory=lambda: dict(PAYERS))
+    physicians: dict[str, Physician] = field(default_factory=lambda: dict(PHYSICIANS))
+    code_labels: dict[str, str] = field(default_factory=lambda: dict(CODE_LABELS))
+    holidays: dict[dt.date, str] = field(default_factory=lambda: dict(HOLIDAYS))
+    tariff_note: str = TARIFF_NOTE
     patients: dict[str, Patient] = field(default_factory=dict)
     prescriptions: list[Prescription] = field(default_factory=list)
     approvals: list[Approval] = field(default_factory=list)
@@ -201,7 +216,21 @@ class World:
     documents: dict[str, DocumentInfo] = field(default_factory=dict)
     document_fields: dict[str, list[DocumentField]] = field(default_factory=dict)
     page_images: dict[str, list[pages.Page]] = field(default_factory=dict)
+    page_files: dict[str, list[Path]] = field(default_factory=dict)
+    """Pipeline documents: the stored page images on disk."""
     actions: list[Action] = field(default_factory=list)
+
+    def page_image(self, document_id: str, index: int) -> tuple[bytes, str] | None:
+        """(image bytes, media type) of one page, or None."""
+        if document_id in self.page_files:
+            files = self.page_files[document_id]
+            if not 0 <= index < len(files):
+                return None
+            media = mimetypes.guess_type(files[index].name)[0] or "application/octet-stream"
+            return files[index].read_bytes(), media
+        if not 0 <= index < len(self.page_images.get(document_id, [])):
+            return None
+        return page_png(document_id, index), "image/png"
 
     def visit_log(
         self,

@@ -1,13 +1,16 @@
-"""Read-only endpoints behind the web screens, served from fixtures for now.
+"""Read-only endpoints behind the web screens.
 
-The pipeline replaces `fixtures.world()` later; the response models stay the same.
+They serve one `World`: the pipeline's evaluated month once it has processed documents
+(`api.live`), the hand-built fixtures before that or when API_SOURCE=fixtures.
 """
 
 import datetime as dt
+from typing import Annotated
 
-from fastapi import APIRouter, HTTPException, Response
+from fastapi import APIRouter, Depends, HTTPException, Response
 
-from kassenfest.api import fixtures
+from kassenfest.api import fixtures, live
+from kassenfest.api.fixtures import World
 from kassenfest.api.models import (
     ActionList,
     BoardCard,
@@ -18,6 +21,7 @@ from kassenfest.api.models import (
     PatientTimeline,
     StatusTotal,
 )
+from kassenfest.config import get_settings
 from kassenfest.schemas.domain import Claim
 from kassenfest.schemas.findings import ClaimStatus, Finding, claim_status
 
@@ -27,14 +31,34 @@ STATUS_ORDER: tuple[ClaimStatus, ...] = ("red", "orange", "green")
 SEVERITY_RANK = {"block": 0, "warn": 1, "info": 2}
 
 
-def _month(month: str) -> fixtures.World:
-    if month != fixtures.MONTH:
-        raise HTTPException(404, f"No bills for {month} yet: the demo month is {fixtures.MONTH}")
+def current_world() -> World:
+    settings = get_settings()
+    if settings.api_source != "fixtures":
+        w = live.pipeline_world(settings)
+        if w is not None:
+            return w
+        if settings.api_source == "pipeline":
+            raise HTTPException(503, "The pipeline has not processed any documents yet")
     return fixtures.world()
 
 
-def _claim_findings(w: fixtures.World, claim_id: str) -> list[Finding]:
-    found = [f for f in w.findings if f.claim_id == claim_id]
+Current = Annotated[World, Depends(current_world)]
+
+
+def _month(w: World, month: str) -> World:
+    if month != w.month:
+        raise HTTPException(404, f"No bills for {month} yet: the month on file is {w.month}")
+    return w
+
+
+def _claim_findings(w: World, claim: Claim) -> list[Finding]:
+    """The claim's own findings, and claim-less ones that hit any of its lines."""
+    lines = {line.id for line in claim.lines}
+    found = [
+        f
+        for f in w.findings
+        if f.claim_id == claim.id or (f.claim_id is None and lines & set(f.claim_line_ids))
+    ]
     return sorted(found, key=lambda f: (SEVERITY_RANK[f.severity], -f.amount_at_risk_cents))
 
 
@@ -52,18 +76,18 @@ def at_risk_cents(claim: Claim, findings: list[Finding]) -> int:
 
 
 @router.get("/months/{month}/board")
-def month_board(month: str) -> MonthBoard:
-    w = _month(month)
+def month_board(month: str, world: Current) -> MonthBoard:
+    w = _month(world, month)
     cards = []
     for claim in w.claims.values():
-        findings = _claim_findings(w, claim.id)
+        findings = _claim_findings(w, claim)
         patient = w.patients[claim.patient_id]
         cards.append(
             BoardCard(
                 claim_id=claim.id,
                 patient_id=patient.id,
                 patient_name=patient.name,
-                payer=fixtures.PAYERS[claim.payer_ik],
+                payer=w.payers[claim.payer_ik],
                 domain=claim.domain,
                 status=claim_status(findings),
                 total_cents=claim.total_cents,
@@ -85,8 +109,8 @@ def month_board(month: str) -> MonthBoard:
     ]
     return MonthBoard(
         month=month,
-        as_of=fixtures.AS_OF,
-        provider=fixtures.PROVIDER,
+        as_of=w.as_of,
+        provider=w.provider,
         total_cents=sum(c.total_cents for c in cards),
         at_risk_cents=sum(c.at_risk_cents for c in cards),
         by_status=by_status,
@@ -95,39 +119,38 @@ def month_board(month: str) -> MonthBoard:
 
 
 @router.get("/months/{month}/actions")
-def month_actions(month: str) -> ActionList:
-    w = _month(month)
+def month_actions(month: str, world: Current) -> ActionList:
+    w = _month(world, month)
     actions = sorted(w.actions, key=lambda a: (a.due_date, -a.amount_cents))
-    return ActionList(month=month, as_of=fixtures.AS_OF, actions=actions)
+    return ActionList(month=month, as_of=w.as_of, actions=actions)
 
 
 @router.get("/claims/{claim_id}")
-def claim_detail(claim_id: str) -> ClaimDetail:
-    w = fixtures.world()
+def claim_detail(claim_id: str, w: Current) -> ClaimDetail:
     claim = w.claims.get(claim_id)
     if claim is None:
         raise HTTPException(404, f"Unknown claim {claim_id}")
-    findings = _claim_findings(w, claim_id)
+    findings = _claim_findings(w, claim)
     doc_ids = {e.document_id for f in findings for e in f.evidence}
     doc_ids |= {d.id for d in w.documents.values() if d.patient_id == claim.patient_id}
     return ClaimDetail(
         claim=claim,
-        as_of=fixtures.AS_OF,
+        as_of=w.as_of,
         status=claim_status(findings),
         at_risk_cents=at_risk_cents(claim, findings),
         patient=w.patients[claim.patient_id],
-        payer=fixtures.PAYERS[claim.payer_ik],
+        payer=w.payers[claim.payer_ik],
         findings=findings,
         documents=[w.documents[d] for d in sorted(doc_ids)],
         actions=[a for a in w.actions if a.claim_id == claim_id],
-        code_labels={line.code: fixtures.CODE_LABELS[line.code] for line in claim.lines},
-        tariff_note=fixtures.TARIFF_NOTE,
+        code_labels={line.code: w.code_labels.get(line.code, line.code) for line in claim.lines},
+        tariff_note=w.tariff_note,
     )
 
 
 @router.get("/patients/{patient_id}/timeline")
-def patient_timeline(patient_id: str, month: str = fixtures.MONTH) -> PatientTimeline:
-    w = _month(month)
+def patient_timeline(patient_id: str, w: Current, month: str | None = None) -> PatientTimeline:
+    month = _month(w, month or w.month).month
     patient = w.patients.get(patient_id)
     if patient is None:
         raise HTTPException(404, f"Unknown patient {patient_id}")
@@ -141,9 +164,13 @@ def patient_timeline(patient_id: str, month: str = fixtures.MONTH) -> PatientTim
         month=month,
         first_day=first,
         last_day=last,
-        holidays=[Holiday(date=d, name=n) for d, n in fixtures.HOLIDAYS.items()],
-        physicians=[fixtures.PHYSICIANS[rx.physician_lanr] for rx in prescriptions],
-        payers=[fixtures.PAYERS[c.payer_ik] for c in claims],
+        holidays=[Holiday(date=d, name=n) for d, n in w.holidays.items()],
+        physicians=[
+            w.physicians[lanr]
+            for lanr in dict.fromkeys(rx.physician_lanr for rx in prescriptions)
+            if lanr in w.physicians
+        ],
+        payers=[w.payers[ik] for ik in dict.fromkeys(c.payer_ik for c in claims)],
         prescriptions=prescriptions,
         approvals=[a for a in w.approvals if a.patient_id == patient_id],
         stays=[s for s in w.stays if s.patient_id == patient_id],
@@ -151,13 +178,12 @@ def patient_timeline(patient_id: str, month: str = fixtures.MONTH) -> PatientTim
         claims=claims,
         findings=[f for f in w.findings if f.patient_id == patient_id],
         documents=[d for d in w.documents.values() if d.patient_id == patient_id],
-        code_labels=fixtures.CODE_LABELS,
+        code_labels=w.code_labels,
     )
 
 
 @router.get("/documents/{document_id}")
-def document_detail(document_id: str) -> DocumentDetail:
-    w = fixtures.world()
+def document_detail(document_id: str, w: Current) -> DocumentDetail:
     doc = w.documents.get(document_id)
     if doc is None:
         raise HTTPException(404, f"Unknown document {document_id}")
@@ -173,14 +199,13 @@ def document_detail(document_id: str) -> DocumentDetail:
 @router.get(
     "/documents/{document_id}/pages/{index}",
     response_class=Response,
-    responses={200: {"content": {"image/png": {}}, "description": "The page as PNG"}},
+    responses={
+        200: {"content": {"image/png": {}, "image/jpeg": {}}, "description": "The page image"}
+    },
 )
-def document_page(document_id: str, index: int) -> Response:
-    pages = fixtures.world().page_images.get(document_id, [])
-    if not 0 <= index < len(pages):
+def document_page(document_id: str, index: int, w: Current) -> Response:
+    image = w.page_image(document_id, index)
+    if image is None:
         raise HTTPException(404, f"No page {index} in document {document_id}")
-    return Response(
-        fixtures.page_png(document_id, index),
-        media_type="image/png",
-        headers={"Cache-Control": "public, max-age=600"},
-    )
+    data, media_type = image
+    return Response(data, media_type=media_type, headers={"Cache-Control": "public, max-age=600"})

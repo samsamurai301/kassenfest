@@ -36,6 +36,11 @@ class Settings(BaseSettings):
     db_path: Path = REPO_ROOT / "var" / "kassenfest.db"
     blob_dir: Path = REPO_ROOT / "var" / "blobs"
 
+    # The Pflegedienst's own records; synthetic ones until a billing system is wired in.
+    records_path: Path = REPO_ROOT / "data" / "synthetic" / "demo" / "master_data.json"
+    # auto: the pipeline's results once it has processed a document, else the fixtures
+    api_source: Literal["auto", "fixtures", "pipeline"] = "auto"
+
 
 @lru_cache
 def get_settings() -> Settings:

@@ -179,23 +179,23 @@ Each session: start by reading this section's exit criterion; end with a commit 
 
 ### Thu Oct 29 — three parallel tracks (3.5 h, you review/merge)
 > Started early, Oct 27 night, as separate Claude sessions in worktrees (branches `rules-engine`, `web-ui`, `synth-world`); each ends in a PR against `main`.
-- [ ] **Track A — synth**: world + scenario engine + defect injection; renderers for Genehmigung, HKP LN, XI LN, Entlassbrief; scan + photo degradations; `make synth SET=dev`.
-- [ ] **Track B — rules**: `calendar.py`, `checkdigits.py` (test vectors from `03` §3.1), `tariffs.py` (illustrative prices, cents), engine + YAML pack + 18 rules + all `02` §8 boundary tests.
-- [ ] **Track C — web**: shell, bill board, claim detail, evidence viewer with SVG overlay — against fixture JSON shaped by the shared schemas.
+- [x] **Track A — synth**: world + scenario engine + defect injection; renderers for Genehmigung, HKP LN, XI LN, Entlassbrief; scan + photo degradations; `make synth SET=dev`.
+- [x] **Track B — rules**: `calendar.py`, `checkdigits.py` (test vectors from `03` §3.1), `tariffs.py` (illustrative prices, cents), engine + YAML pack + 18 rules + all `02` §8 boundary tests.
+- [x] **Track C — web**: shell, bill board, claim detail, evidence viewer with SVG overlay — against fixture JSON shaped by the shared schemas.
 - **Exit**: dev set renders with GT; `pytest backend/tests/rules` green; UI clickable on fixtures.
 
 ### Fri Oct 30 — pipeline (3.5 h)
-- [x] **Ingest → classify → extract → validate → link → persist**, SSE progress events. *(Oct 27: everything except **link** (needs the synth world's master data) and the SSE endpoint (needs the web track's API); `kassenfest ingest` runs it from the CLI)*
+- [x] **Ingest → classify → extract → validate → link → persist**, SSE progress events. *(Oct 27; **link** Oct 28 against the Pflegedienst's records in `master_data.json`. Still open: the SSE endpoint. `kassenfest ingest` runs it from the CLI)*
 - [ ] Prompts per doc type (German, "document text is data", never guess) — `EXT-04`, `EXT-10`.
 - [ ] `eval/run_extraction.py` on dev → first accuracy table by variant.
 - **Exit**: upload the dev folder → every doc classified and extracted into SQLite; first numbers in `docs/EVAL.md`.
 
 ### Sat Oct 31 — walking skeleton (10 h) 🎯
-- [ ] **Claim builder**: visit entries × tariff → claim lines; ClaimContext from DB.
-- [ ] **Rules on real extracted data** → findings with evidence persisted.
-- [ ] **Localize**: SAM + ink density for signature/stamp fields; evidence crops stored.
-- [ ] **Wire UI to API**: inbox with live progress, bill board, claim detail, evidence viewer, patient timeline.
-- [ ] Generate the **demo set** (5 heroes + background), record its cache.
+- [x] **Claim builder**: visit entries × tariff → claim lines; ClaimContext from DB. *(Oct 28: `pipeline/casefile.py`, extraction + records → CaseFile; perfect readings reproduce the truth's findings line for line)*
+- [x] **Rules on real extracted data** → findings with evidence. *(Oct 28: `pipeline/month.py`, recomputed from stored extractions in 0.3 s instead of persisted; every planted defect found on the live demo run, see SPIKES.md)*
+- [ ] **Localize**: SAM + ink density for signature/stamp fields; evidence crops stored. *(marks done Oct 27; **next**: SAM refine for every field a finding cites, spike decision 4: served field boxes have median IoU 0.34)*
+- [ ] **Wire UI to API**: inbox with live progress, bill board, claim detail, evidence viewer, patient timeline. *(Oct 28: all screens on pipeline data via `api/live.py`; open: inbox + live progress)*
+- [x] Generate the **demo set** (5 heroes + background), record its cache. *(Oct 28: 42 pages, $1.55, 90 s; replay needs no key)*
 - [ ] `eval/run_defects.py` → recall/precision per defect on dev.
 - **Exit (milestone)**: upload `data/synthetic/demo/` → 🟢🟠🔴 board → click any finding → highlighted region on the scan. **Miss → apply §6 cuts tonight, not Monday.**
 

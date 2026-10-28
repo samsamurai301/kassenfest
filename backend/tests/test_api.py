@@ -6,7 +6,9 @@ from PIL import Image
 
 from kassenfest.api.app import app
 from kassenfest.api.fixtures import MONTH, ik, kvnr, world
+from kassenfest.api.routes import current_world
 
+app.dependency_overrides[current_world] = world  # the fixture month, whatever is in var/
 client = TestClient(app)
 
 

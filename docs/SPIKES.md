@@ -133,3 +133,26 @@ The distributions overlap, while the model's own present/absent call was right *
 - **Stamps found by SAM's `"stamp"` concept skip the ink veto**: pale, speckled stamp ink on photos scores ~0.002 even inside the true box.
 
 Result: 3 review flags, all the same document (seed 05) where Muse Spark puts the doctor's signature box on blank paper in every variant — a genuine localization miss, now routed to a human instead of drawn wrong. Present marks never trigger findings; the evidence the demo shows is the **empty** field box, which is unaffected.
+
+---
+
+## 2026-10-28 — walking skeleton on the demo set
+
+`kassenfest ingest data/synthetic/demo/pages`: 42 pages (14 patient-months, 16 defect kinds planted) through classify → extract → validate → link → localize, then `pipeline/month.py` builds one CaseFile per patient and runs the rules. **$1.55** for 141 calls, **90 s** wall time; `LLM_MODE=replay` reproduces it with no API key.
+
+**Case builder first, model second.** Perfect readings (`synth.oracle`) through link → case builder → rules give *exactly* the truth's findings: same rules, severities and billed lines in all 14 cases (`tests/test_casefile.py`). Facts a page can't show come from the Pflegedienst's records, as in real life: the fax server's send reports (when a Verordnung reached the Kasse, HKP-SUBMIT-4WD), claims already sent (HKP-DUPLICATE), and the death date (Kennzeichen 1 on an unsigned SGB XI log, a box that form doesn't have).
+
+**Live readings:**
+
+| | result |
+|---|---|
+| classification | 42/42 |
+| patient link | 42/42 (40 by KVNR; 2 by name + birth date after a misread KVNR) |
+| claims | 15/15 with the truth's line count and total |
+| block/warn rules per case | 14/14 cases identical to the rules on the truth |
+| affected lines | identical except 5 rules where a misread handwritten time (07:11 → 07:08) moves a line; no finding changes |
+| demo story | Albers 🔴 Brandl 🔴 Christl 🟠 Dengler 🔴 Eder 🟢🟢 |
+
+- **D19 (blurred photo)** was read with confidence ≥ 0.85, overconfident, but both 9-digit IKs came back with 8 digits. `validate` now makes a value that can't be on the paper `unreadable`, and DOC-READABLE sends the page to a human. Check digits stay out of this: a wrong number in the provider's records (D16) is read correctly and must stay readable for MD-KVNR-CHECK.
+- **DOC-READABLE also fires on 3 visit logs** for rows the model itself rated 0.55–0.65; on Christl's log those are exactly the rows with the misread times. Honest review flags, not noise.
+- **Evidence boxes are the weak part.** Field boxes served to the viewer vs. truth: median IoU 0.54 scan, 0.48 clean, 0.27 photo, 0.07 fax (54% ≥ 0.3 overall). Centres are within 2–36 px; the rest is a per-page perspective warp and cell-sized boxes against tight text boxes. 4 signature boxes on photos/faxes sit 50–130 px off the ink, so the ink check flags them for review. Next: SAM refine for every field a finding cites (decision 4 above), measured with the same script.
