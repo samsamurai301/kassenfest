@@ -762,7 +762,7 @@ def price_cents(rec: Rec) -> int:
     )
 
 
-def _prior_claims(world: World, tl: Timeline) -> list[Claim]:
+def prior_claims(world: World, tl: Timeline) -> list[Claim]:
     claims = []
     for domain in ("sgbv", "sgbxi"):
         recs = sorted(
@@ -898,5 +898,5 @@ def case_file(world: World, tl: Timeline, doc_ids: dict[str, str] | None = None)
         approvals=approvals,
         visit_logs=logs,
         stays=stays,
-        prior_claims=_prior_claims(world, tl),
+        prior_claims=prior_claims(world, tl),
     )

@@ -11,7 +11,14 @@ from kassenfest.rules import run
 from kassenfest.rules.engine import pack_for
 from kassenfest.schemas.paths import flatten
 from kassenfest.synth import catalog, identifiers
-from kassenfest.synth.generate import OUT_ROOT, SETS, case_manifest, coverage, plan_set
+from kassenfest.synth.generate import (
+    OUT_ROOT,
+    SETS,
+    case_manifest,
+    coverage,
+    master_data,
+    plan_set,
+)
 from kassenfest.synth.render import templates
 from kassenfest.synth.scenarios import TIER_A
 from kassenfest.synth.world import MONTH_END, MONTH_START, case_file
@@ -190,6 +197,8 @@ def test_committed_demo_set_is_current():
         assert (root / "cases" / f"{case.case_id}.json").read_text() == expected, case.case_id
         manifest = case_manifest(case).model_dump_json(indent=1) + "\n"
         assert (root / "cases" / f"{case.case_id}.manifest.json").read_text() == manifest
+    records = master_data(plan).model_dump_json(indent=1) + "\n"
+    assert (root / "master_data.json").read_text() == records
 
 
 # --- Documents ----------------------------------------------------------------------------

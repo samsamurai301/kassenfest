@@ -15,7 +15,7 @@ Variants: bad_photo 1, clean 5, fax 5, photo 18, scan 13.
 | `truth/<doc_id>.json` | `GroundTruth`: field values, pixel boxes, mark regions, defect labels |
 | `cases/<case_id>.json` | `CaseFile` truth for one patient-month |
 | `cases/<case_id>.manifest.json` | defects with rules, documents and affected visit-log lines |
-| `master_data.json` | the Pflegedienst's own records (staff, patients, doctors, Kassen) |
+| `master_data.json` | the Pflegedienst's records: staff, patients, doctors, Kassen, faxes, claims |
 | `manifest.json` | all of the above in one index, plus coverage |
 
 ## Hero patients

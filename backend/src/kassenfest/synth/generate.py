@@ -4,7 +4,8 @@
     truth/<doc_id>.json           GroundTruth per document (boxes in the degraded page's pixels)
     cases/<case_id>.json          CaseFile truth per patient-month (rules on truth vs. extraction)
     cases/<case_id>.manifest.json defect labels with documents and affected lines
-    master_data.json              what the Pflegedienst knows: staff, patients, doctors, Kassen
+    master_data.json              what the Pflegedienst knows: staff, patients, doctors, Kassen,
+                                  fax send reports, claims already sent
     manifest.json                 documents, cases and defect coverage
 
 Document ids are numbered in a seeded shuffle, so neither the id nor the page footer
@@ -24,8 +25,9 @@ from pydantic import BaseModel
 
 from kassenfest.config import REPO_ROOT
 from kassenfest.schemas.common import DocType
-from kassenfest.schemas.domain import Patient, Payer, Physician, Provider
+from kassenfest.schemas.domain import Payer
 from kassenfest.schemas.ground_truth import DefectId, Variant
+from kassenfest.schemas.records import FaxReport, MasterData
 from kassenfest.synth import catalog
 from kassenfest.synth.degrade import VARIANTS, Degraded, fax
 from kassenfest.synth.documents import ground_truth, render_document
@@ -47,6 +49,7 @@ from kassenfest.synth.world import (
     World,
     build_world,
     case_file,
+    prior_claims,
     visit_order,
 )
 
@@ -145,18 +148,6 @@ class SetManifest(BaseModel):
     coverage: dict[str, int]  # patient-months per defect
     coverage_docs: dict[str, int]  # documents per defect
     variants: dict[str, int]
-
-
-class MasterData(BaseModel):
-    """The Pflegedienst's own records (KVNRs as typed into its software)."""
-
-    synthetic: Literal[True] = True
-    month: str
-    provider: Provider
-    patients: list[Patient]
-    physicians: list[Physician]
-    payers: list[Payer]
-    hospital: dict[str, str]
 
 
 # --- Planning (no rendering) -----------------------------------------------------------------
@@ -288,6 +279,18 @@ def master_data(plan: SetPlan) -> MasterData:
         physicians=[d.domain() for d in plan.world.doctors],
         payers=kassen,
         hospital={"name": catalog.HOSPITAL_NAME, "location_code": plan.world.hospital_id},
+        fax_reports=[
+            FaxReport(
+                patient_id=c.timeline.record.id,
+                issue_date=rx.issue_date,
+                physician_lanr=rx.physician_lanr,
+                sent_on=rx.submitted_to_payer_at,
+            )
+            for c in plan.cases
+            for rx in c.timeline.prescriptions
+            if rx.submitted_to_payer_at
+        ],
+        billed=[claim for c in plan.cases for claim in prior_claims(plan.world, c.timeline)],
     )
 
 
@@ -445,7 +448,7 @@ Variants: {", ".join(f"{k} {v}" for k, v in manifest.variants.items())}.
 | `truth/<doc_id>.json` | `GroundTruth`: field values, pixel boxes, mark regions, defect labels |
 | `cases/<case_id>.json` | `CaseFile` truth for one patient-month |
 | `cases/<case_id>.manifest.json` | defects with rules, documents and affected visit-log lines |
-| `master_data.json` | the Pflegedienst's own records (staff, patients, doctors, Kassen) |
+| `master_data.json` | the Pflegedienst's records: staff, patients, doctors, Kassen, faxes, claims |
 | `manifest.json` | all of the above in one index, plus coverage |
 
 ## Hero patients
