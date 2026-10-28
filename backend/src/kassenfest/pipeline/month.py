@@ -36,6 +36,8 @@ class StoredDoc:
     issues: list[str]
     boxes: dict[str, tuple[int, PixelBox]] = field(default_factory=dict)
     """field path → (page, pixel box)."""
+    localized: set[str] = field(default_factory=set)
+    """Paths whose box came from SAM or the grid, not straight from the model."""
     link: Link | None = None
 
     @property
@@ -107,6 +109,8 @@ def load_docs(engine: Engine) -> list[StoredDoc]:
                 stored.boxes = field_boxes(stored.extraction, pages)
                 for loc in s.exec(select(Localization).where(Localization.document_id == doc.id)):
                     stored.boxes[loc.field_path] = (loc.page, tuple(loc.box))  # type: ignore[arg-type]
+                    if loc.source != "muse":
+                        stored.localized.add(loc.field_path)
             s.expunge_all()
             out.append(stored)
     return out
@@ -115,18 +119,25 @@ def load_docs(engine: Engine) -> list[StoredDoc]:
 _LAST_STEP = re.compile(r"(^|\.)[^.\[]+$|\[\d+\]$")
 
 
-def boxed(evidence: Evidence, docs: dict[str, StoredDoc]) -> Evidence:
-    """Fill in the pixel box: the field's own, else its row's ('entries[3].start_time')."""
-    doc = docs.get(evidence.document_id)
-    path = evidence.field_path
-    if evidence.box is not None or doc is None:
-        return evidence
+def box_key(doc: StoredDoc, path: str | None) -> str | None:
+    """The path whose box stands for `path`: its own, else its row's ('entries[3].start_time')."""
     while path:
         if path in doc.boxes:
-            page, box = doc.boxes[path]
-            return evidence.model_copy(update={"page": page, "box": box})
+            return path
         path = _LAST_STEP.sub("", path)
-    return evidence
+    return None
+
+
+def boxed(evidence: Evidence, docs: dict[str, StoredDoc]) -> Evidence:
+    """Fill in the pixel box, if the evidence has none yet."""
+    doc = docs.get(evidence.document_id)
+    if evidence.box is not None or doc is None:
+        return evidence
+    key = box_key(doc, evidence.field_path)
+    if key is None:
+        return evidence
+    page, box = doc.boxes[key]
+    return evidence.model_copy(update={"page": page, "box": box})
 
 
 def evaluate_month(engine: Engine, records: MasterData, month: str) -> Month:

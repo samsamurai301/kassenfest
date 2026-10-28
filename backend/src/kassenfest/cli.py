@@ -2,7 +2,7 @@ import argparse
 import asyncio
 import sys
 
-from kassenfest.config import Settings
+from kassenfest.config import REPO_ROOT, Settings
 
 
 def main() -> None:
@@ -19,10 +19,26 @@ def main() -> None:
     ingest.add_argument("paths", nargs="+", help="images, PDFs or folders of them")
     ingest.add_argument("--label", help="name for this batch")
     ingest.add_argument("--mode", choices=["live", "record", "replay"], help="override LLM_MODE")
+    evidence = sub.add_parser("evidence", help="tighten evidence boxes of stored documents")
+    evidence.add_argument("--mode", choices=["live", "record", "replay"], help="override LLM_MODE")
+    eval_boxes = sub.add_parser("eval-boxes", help="score evidence boxes against ground truth")
+    eval_boxes.add_argument(
+        "--truth", default=str(REPO_ROOT / "data/synthetic/demo/truth"), help="truth folder"
+    )
     synth = sub.add_parser("synth", help="generate a synthetic document set with ground truth")
     synth.add_argument("--set", required=True, choices=["demo", "dev", "test"], dest="set_name")
     synth.add_argument("--out", help="output directory (default data/synthetic/<set>)")
     args = parser.parse_args()
+
+    if args.command == "eval-boxes":  # no model calls
+        from pathlib import Path
+
+        from kassenfest.db import create_db
+        from kassenfest.eval import boxes
+
+        engine = create_db(Settings().db_path)
+        print(boxes.report(boxes.score(engine, Path(args.truth))))
+        return
 
     if args.command == "synth":  # no model calls, no settings
         from kassenfest.synth import generate
@@ -46,5 +62,9 @@ def main() -> None:
             from kassenfest import ingest as ingest_mod
 
             sys.exit(asyncio.run(ingest_mod.run(settings, args.paths, args.label)))
+        if args.command == "evidence":
+            from kassenfest import ingest as ingest_mod
+
+            sys.exit(asyncio.run(ingest_mod.evidence(settings)))
     except (CacheMiss, RuntimeError) as exc:
         sys.exit(f"error: {exc}")

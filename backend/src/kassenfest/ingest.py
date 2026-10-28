@@ -7,6 +7,7 @@ from sqlmodel import select
 from kassenfest.config import Settings
 from kassenfest.db import Document, Extraction, Localization, create_db, session_scope
 from kassenfest.llm.client import MetaModelClient
+from kassenfest.pipeline.evidence import tighten_evidence
 from kassenfest.pipeline.runner import Event, Pipeline
 from kassenfest.schemas.records import MasterData
 from kassenfest.storage import BlobStore
@@ -23,6 +24,18 @@ def collect(paths: list[str]) -> list[Path]:
         elif p.suffix.lower() in SUFFIXES:
             files.append(p)
     return files
+
+
+async def evidence(settings: Settings) -> int:
+    """Tighten the evidence boxes of every stored document (also run after every ingest)."""
+    engine = create_db(settings.db_path)
+    client, blobs = MetaModelClient(settings), BlobStore(settings.blob_dir)
+    done = await tighten_evidence(client, engine, blobs)
+    print(
+        f"evidence: {done.rows} visit-log rows on the form grid, "
+        f"{done.fields}/{done.candidates} fields tightened by SAM"
+    )
+    return 0
 
 
 async def run(settings: Settings, paths: list[str], label: str | None) -> int:
@@ -47,6 +60,7 @@ async def run(settings: Settings, paths: list[str], label: str | None) -> int:
         MetaModelClient(settings), engine, BlobStore(settings.blob_dir), show, records
     )
     batch_id = await pipeline.ingest([(f.name, f.read_bytes()) for f in files], label=label)
+    await evidence(settings)
 
     with session_scope(engine) as s:
         docs = s.exec(select(Document).where(Document.batch_id == batch_id)).all()

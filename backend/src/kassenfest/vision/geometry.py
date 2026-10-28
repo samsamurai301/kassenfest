@@ -3,8 +3,11 @@ Box = tuple[float, float, float, float]
 
 
 def from_norm1000(box: Box, width: int, height: int) -> Box:
-    """Muse Spark returns boxes on a 0–1000 grid and may overshoot slightly; clamp to the image."""
+    """Muse Spark returns boxes on a 0–1000 grid; it may overshoot slightly or swap corners.
+    Clamp to the image and put the corners in order."""
     x0, y0, x1, y1 = (min(max(v, 0.0), 1000.0) for v in box)
+    x0, x1 = sorted((x0, x1))
+    y0, y1 = sorted((y0, y1))
     return (x0 * width / 1000, y0 * height / 1000, x1 * width / 1000, y1 * height / 1000)
 
 

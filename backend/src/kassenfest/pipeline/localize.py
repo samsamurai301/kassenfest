@@ -3,6 +3,9 @@
 - stamps: SAM concept "stamp" (18/18 hits), matched to the model's box
 - signatures and text fields: Muse Spark box -> SAM box refine (+0.15-0.20 IoU)
 - empty marks: the model's box of the empty field, plus an ink-ratio second opinion
+
+Fields that findings cite are refined the same way once the month is evaluated
+(`pipeline.evidence`), batched up to 16 boxes per SAM call.
 """
 
 import asyncio
@@ -23,7 +26,7 @@ class Located:
     field_path: str
     page: int
     box: PixelBox
-    source: Literal["muse", "sam_refine", "sam_concept"]
+    source: Literal["muse", "sam_refine", "sam_concept", "grid"]
     confidence: float | None = None
     ink_ratio: float | None = None
 
@@ -41,6 +44,12 @@ def _area(b: PixelBox) -> float:
     return max(0.0, b[2] - b[0]) * max(0.0, b[3] - b[1])
 
 
+def _plausible(page: PageImage, refined: PixelBox, rough: PixelBox) -> bool:
+    return _area(refined) <= MAX_GROWTH * _area(rough) and (
+        ink_ratio(page, refined) >= PRESENT_BUT_BLANK
+    )
+
+
 async def refine(
     client: MetaModelClient, pages: list[PageImage], path: str, page_index: int, box: Box1000
 ) -> Located:
@@ -49,12 +58,29 @@ async def refine(
     page = pages[min(page_index, len(pages) - 1)]
     rough = _px(box, page)
     result = await client.segment(page, boxes=[rough], prompt_id="localize.refine")
-    if result.segments:
+    if result.segments and _plausible(page, result.segments[0].box, rough):
         seg = result.segments[0]
-        plausible = _area(seg.box) <= MAX_GROWTH * _area(rough)
-        if plausible and ink_ratio(page, seg.box) >= PRESENT_BUT_BLANK:
-            return Located(path, page_index, seg.box, "sam_refine", seg.confidence)
+        return Located(path, page_index, seg.box, "sam_refine", seg.confidence)
     return Located(path, page_index, rough, "muse")
+
+
+async def refine_boxes(
+    client: MetaModelClient, page: PageImage, page_index: int, rough: dict[str, PixelBox]
+) -> list[Located]:
+    """SAM refine for many boxes on one page, 16 per call; only the boxes SAM tightened."""
+    items = list(rough.items())
+    out = []
+    for start in range(0, len(items), 16):
+        chunk = items[start : start + 16]
+        result = await client.segment(
+            page, boxes=[box for _, box in chunk], prompt_id="evidence.refine"
+        )
+        by_id = {str(seg.object_id): seg for seg in result.segments}
+        for i, (path, box) in enumerate(chunk, start=1):
+            seg = by_id.get(str(i))
+            if seg is not None and _plausible(page, seg.box, box):
+                out.append(Located(path, page_index, seg.box, "sam_refine", seg.confidence))
+    return out
 
 
 async def _stamp(

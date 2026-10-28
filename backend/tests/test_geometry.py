@@ -5,6 +5,7 @@ from kassenfest.vision.geometry import from_norm1000, iou
 
 def test_norm1000_scales_to_pixels_and_clamps_overshoot():
     assert from_norm1000((0, 500, 1001, 1000), width=2000, height=800) == (0, 400, 2000, 800)
+    assert from_norm1000((500, 0, 250, 1000), width=1000, height=1000) == (250, 0, 500, 1000)
 
 
 def test_iou():

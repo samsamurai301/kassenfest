@@ -1,0 +1,125 @@
+"""Tight evidence boxes for stored documents, run after every batch (docs/SPIKES.md, 2026-10-28).
+
+- SGB V visit-log rows: the day's band between the form's ruling lines, tightened to the
+  pen ink (`vision.grid`). The model's own row boxes drift by a row or more down the page.
+- every field that was read: Muse Spark's box refined by SAM 3.1, 16 boxes per call, so
+  about one call per page, with the guards used for marks (`pipeline.localize`).
+  Spike decision 4 said "every field a finding cites"; batching makes all of them cheap,
+  and the document viewer lists them all.
+
+Results are stored as Localization rows, which `pipeline.month` prefers over the model's
+boxes. Running it again replaces them (from the cache: the requests don't change).
+"""
+
+import asyncio
+import calendar
+import io
+from collections import defaultdict
+from dataclasses import dataclass
+
+import numpy as np
+from PIL import Image
+from sqlalchemy import Engine
+from sqlmodel import col, delete
+
+from kassenfest.db import Localization, session_scope
+from kassenfest.llm.client import MetaModelClient
+from kassenfest.pipeline.localize import Located, refine_boxes
+from kassenfest.pipeline.month import StoredDoc, field_boxes, load_docs
+from kassenfest.schemas.common import Extracted, PixelBox
+from kassenfest.schemas.extraction import VisitLogSGBV
+from kassenfest.storage import BlobStore
+from kassenfest.vision.grid import snap_rows
+from kassenfest.vision.image import PageImage
+
+
+@dataclass
+class Tightened:
+    rows: int = 0
+    """Visit-log rows placed on the form's grid."""
+    fields: int = 0
+    """Fields tightened by SAM."""
+    candidates: int = 0
+    """Fields sent to SAM."""
+
+
+def _page(blobs: BlobStore, doc: StoredDoc, index: int) -> PageImage:
+    return PageImage.from_path(blobs.path(doc.pages[index].blob_key))
+
+
+def grid_rows(doc: StoredDoc, page: PageImage) -> list[Located]:
+    """Every row of a one-page SGB V Leistungsnachweis, snapped to the printed grid."""
+    log = doc.extraction
+    if not isinstance(log, VisitLogSGBV) or len(doc.pages) != 1:
+        return []
+    model = field_boxes(log, doc.pages)  # the model's own boxes, not an earlier snap
+    rows = {}
+    for i, entry in enumerate(log.entries):
+        path = f"entries[{i}]"
+        if path in model and entry.date and len(entry.date) == 10 and entry.date[8:].isdigit():
+            rows[path] = (int(entry.date[8:]), model[path][1])
+    month = log.month.value or (log.entries[0].date[:7] if log.entries else None)
+    if not rows or not month:
+        return []
+    year, mon = map(int, month.split("-"))
+    rgb = np.array(Image.open(io.BytesIO(page.data)).convert("RGB"))
+    snapped = snap_rows(rgb, rows, calendar.monthrange(year, mon)[1])
+    return [Located(path, 0, box, "grid") for path, box in snapped.items()]
+
+
+def to_refine(doc: StoredDoc) -> dict[int, dict[str, PixelBox]]:
+    """page → path → model box for every top-level field that was read.
+
+    Decided by the extraction alone, never by earlier runs, so the same document always
+    sends the same SAM requests and a replay finds them in the cache. Marks are refined
+    at ingest (`localize_marks`).
+    """
+    out: dict[int, dict[str, PixelBox]] = defaultdict(dict)
+    for key, (page, box) in field_boxes(doc.extraction, doc.pages).items():
+        item = getattr(doc.extraction, key, None)
+        if isinstance(item, Extracted) and item.status == "present":
+            out[page][key] = box
+    return out
+
+
+def _store(engine: Engine, located: dict[str, list[Located]]) -> None:
+    with session_scope(engine) as s:
+        for doc_id, items in located.items():
+            paths = [x.field_path for x in items]
+            s.exec(
+                delete(Localization).where(
+                    col(Localization.document_id) == doc_id,
+                    col(Localization.field_path).in_(paths),
+                )
+            )
+            for x in items:
+                s.add(
+                    Localization(
+                        document_id=doc_id,
+                        page=x.page,
+                        field_path=x.field_path,
+                        source=x.source,
+                        box=list(x.box),
+                        confidence=x.confidence,
+                    )
+                )
+
+
+async def _one(client: MetaModelClient, blobs: BlobStore, doc: StoredDoc) -> list[Located]:
+    found = []
+    if doc.document.doc_type == "visit_log_sgbv":
+        found += grid_rows(doc, _page(blobs, doc, 0))
+    for index, boxes in to_refine(doc).items():
+        found += await refine_boxes(client, _page(blobs, doc, index), index, boxes)
+    return found
+
+
+async def tighten_evidence(client: MetaModelClient, engine: Engine, blobs: BlobStore) -> Tightened:
+    docs = [d for d in load_docs(engine) if d.extraction is not None]
+    results = await asyncio.gather(*(_one(client, blobs, d) for d in docs))
+    report = Tightened(candidates=sum(len(b) for d in docs for b in to_refine(d).values()))
+    for found in results:
+        report.rows += sum(x.source == "grid" for x in found)
+        report.fields += sum(x.source == "sam_refine" for x in found)
+    _store(engine, {d.document.id: found for d, found in zip(docs, results, strict=True)})
+    return report

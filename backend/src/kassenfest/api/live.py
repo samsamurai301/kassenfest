@@ -14,7 +14,7 @@ from sqlmodel import select
 from kassenfest.api.fixtures import World
 from kassenfest.api.models import DocumentField, DocumentInfo, PageInfo
 from kassenfest.config import Settings
-from kassenfest.db import Document, Extraction, create_db, session_scope
+from kassenfest.db import Document, create_db, session_scope
 from kassenfest.pipeline.link import value
 from kassenfest.pipeline.month import Month, StoredDoc, evaluate_month
 from kassenfest.rules.calendar import calendar_for
@@ -276,10 +276,11 @@ def pipeline_world(settings: Settings) -> World | None:
     """The pipeline's month, or None before it has processed anything."""
     if not settings.db_path.exists():
         return None
-    engine = _engine(settings.db_path)
-    with session_scope(engine) as s:
+    with session_scope(_engine(settings.db_path)) as s:
         done = s.exec(select(func.count()).where(Document.status == "done")).one()
-        latest = s.exec(select(func.max(Extraction.created_at))).one()
     if not done:
         return None
-    return _cached(settings.db_path, settings.records_path, settings.blob_dir, (done, latest))
+    # Every commit touches the SQLite file (no WAL), so its mtime covers new documents,
+    # extractions and boxes alike; the records' mtime covers edits to the records.
+    stamp = (settings.db_path.stat().st_mtime_ns, settings.records_path.stat().st_mtime_ns)
+    return _cached(settings.db_path, settings.records_path, settings.blob_dir, stamp)
