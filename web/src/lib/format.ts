@@ -15,11 +15,14 @@ const dayMonth = fmt({ day: 'numeric', month: 'short' })
 const weekdayDayMonth = fmt({ weekday: 'short', day: 'numeric', month: 'short' })
 const fullDate = fmt({ day: 'numeric', month: 'short', year: 'numeric' })
 const monthYear = fmt({ month: 'long', year: 'numeric' })
+const dayMonthTime = fmt({ day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' })
 
 export const shortDate = (iso: string) => dayMonth.format(day(iso))
 export const weekdayDate = (iso: string) => weekdayDayMonth.format(day(iso))
 export const longDate = (iso: string) => fullDate.format(day(iso))
 export const monthName = (month: string) => monthYear.format(day(`${month}-01`))
+/** A moment (ISO datetime with zone) in local time, e.g. '28 Oct, 17:41'. */
+export const dateTime = (iso: string) => dayMonthTime.format(new Date(iso))
 
 /** '07:30:00' -> '07:30' */
 export const clock = (time: string | null | undefined) => (time ? time.slice(0, 5) : '')

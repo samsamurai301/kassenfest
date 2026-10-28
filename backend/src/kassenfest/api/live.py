@@ -220,21 +220,21 @@ def build_world(engine: Engine, records: MasterData, blob_dir: Path) -> World:
 
 
 @lru_cache(maxsize=4)
-def _engine(db_path: Path) -> Engine:
+def db_engine(db_path: Path) -> Engine:
     return create_db(db_path)
 
 
 @lru_cache(maxsize=2)
 def _cached(db_path: Path, records_path: Path, blob_dir: Path, stamp: tuple) -> World:
     records = MasterData.model_validate_json(records_path.read_text())
-    return build_world(_engine(db_path), records, blob_dir)
+    return build_world(db_engine(db_path), records, blob_dir)
 
 
 def pipeline_world(settings: Settings) -> World | None:
     """The pipeline's month, or None before it has processed anything."""
     if not settings.db_path.exists():
         return None
-    with session_scope(_engine(settings.db_path)) as s:
+    with session_scope(db_engine(settings.db_path)) as s:
         done = s.exec(select(func.count()).where(Document.status == "done")).one()
     if not done:
         return None

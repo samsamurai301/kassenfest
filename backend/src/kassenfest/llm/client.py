@@ -165,6 +165,9 @@ class MetaModelClient:
         now = datetime.now(UTC).isoformat(timespec="seconds")
 
         if mode != "live" and (entry := self._cache.get(key)) is not None:
+            if self.settings.llm_replay_pace > 0:
+                async with self._sem:  # paced like the live call, concurrency limit included
+                    await asyncio.sleep(entry.latency_ms / 1000 * self.settings.llm_replay_pace)
             self._log.append(CallRecord(now, entry.model, prompt_id, key, True, 0, entry.cost_usd))
             return entry.response, CallMeta(key, cache_hit=True, cost_usd=0.0, latency_ms=0)
         if mode == "replay":

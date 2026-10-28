@@ -175,3 +175,56 @@ class PatientTimeline(BaseModel):
     findings: list[Finding]
     documents: list[DocumentInfo]
     code_labels: dict[str, str]
+
+
+# --- Inbox -----------------------------------------------------------------------
+
+PipelineStep = Literal["stored", "classified", "extracted", "linked", "localized", "done", "error"]
+DocumentStatus = Literal["queued", "processing", "done", "error", "superseded"]
+BatchPhase = Literal["reading", "evidence", "done", "interrupted"]
+"""reading documents → tightening evidence boxes → done; interrupted: the server stopped."""
+
+
+class InboxDocument(BaseModel):
+    """One uploaded file and how far the pipeline has got with it."""
+
+    id: str
+    filename: str
+    status: DocumentStatus
+    step: PipelineStep = Field(description="The last step reached")
+    detail: str = Field("", description="What that step found, e.g. 'muster12'")
+    doc_type: DocType | None
+    patient_id: str | None
+    patient_name: str | None
+    pages: int
+    issues: list[str] = Field(description="What the reader flagged for a human to check")
+    error: str | None
+
+
+class BatchSummary(BaseModel):
+    id: str
+    label: str | None
+    created_at: dt.datetime
+    phase: BatchPhase
+    files: int
+    done: int = Field(description="Documents read (including ones a later upload replaced)")
+    failed: int
+
+
+class BatchDetail(BatchSummary):
+    documents: list[InboxDocument]
+
+
+class BatchList(BaseModel):
+    batches: list[BatchSummary] = Field(description="Newest first")
+
+
+class BatchEvent(BaseModel):
+    """One server-sent event on /api/batches/{id}/events (the JSON in its data line)."""
+
+    seq: int
+    batch_id: str
+    kind: Literal["document", "phase"]
+    phase: BatchPhase
+    document: InboxDocument | None = Field(None, description="The document after this step")
+    detail: str = ""

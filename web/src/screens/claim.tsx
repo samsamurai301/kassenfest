@@ -15,7 +15,7 @@ import { clock, domainLabel, money, monthName, plural, weekdayDate } from '@/lib
 import { Link } from '@/lib/router'
 import { cn } from '@/lib/utils'
 
-const DOC_TYPE: Record<DocumentInfo['doc_type'], string> = {
+export const DOC_TYPE: Record<DocumentInfo['doc_type'], string> = {
   muster12: 'Verordnung (Muster 12)',
   approval_letter: 'Genehmigung',
   visit_log_sgbv: 'Leistungsnachweis SGB V',

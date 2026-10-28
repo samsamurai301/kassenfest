@@ -1,7 +1,7 @@
 """Runs uploaded files through ingest -> classify -> extract -> validate -> link -> localize.
 
 Rules run over the whole month afterwards (`pipeline.month`), from what this stores.
-Every step emits an Event, which the CLI prints and the API will stream over SSE.
+Every step emits an Event, which the CLI prints and the API streams over SSE (`api.inbox`).
 """
 
 import asyncio
@@ -62,19 +62,41 @@ class Pipeline:
 
     async def ingest(self, files: list[tuple[str, bytes]], label: str | None = None) -> str:
         """Store every file and its pages, then process all documents concurrently."""
+        batch_id = self.new_batch(label)
+        stored = await self.store(batch_id, files)
+        await self.process_all(stored)
+        return batch_id
+
+    def new_batch(self, label: str | None = None) -> str:
         with session_scope(self.engine) as s:
             batch = Batch(label=label)
             s.add(batch)
-        jobs = []
+        return batch.id
+
+    async def store(
+        self, batch_id: str, files: list[tuple[str, bytes]]
+    ) -> list[tuple[str, list[PageImage]]]:
+        """Keep each file and its pages: (document id, pages) for what can be read.
+
+        A file that isn't an image or PDF becomes a document in error; the rest go on.
+        """
+        stored = []
         for filename, data in files:
-            pages = await asyncio.to_thread(to_pages, data, filename)
             ext = filename.rsplit(".", 1)[-1] if "." in filename else "bin"
+            try:
+                pages = await asyncio.to_thread(to_pages, data, filename)
+            except Exception as exc:
+                pages, error = [], f"Can't open this file as an image or PDF ({type(exc).__name__})"
+            else:
+                error = None
             with session_scope(self.engine) as s:
                 doc = Document(
-                    batch_id=batch.id,
+                    batch_id=batch_id,
                     filename=filename,
                     source_sha256=hashlib.sha256(data).hexdigest(),
                     source_key=self.blobs.put(data, ext),
+                    status="error" if error else "queued",
+                    error=error,
                 )
                 s.add(doc)
                 for i, page in enumerate(pages):
@@ -88,10 +110,15 @@ class Pipeline:
                             height=page.height,
                         )
                     )
+            if error:
+                self.on_event(Event(doc.id, "error", f"{filename}: {error}"))
+                continue
             self.on_event(Event(doc.id, "stored", f"{filename}: {len(pages)} page(s)"))
-            jobs.append(self.process(doc.id, pages))
-        await asyncio.gather(*jobs)
-        return batch.id
+            stored.append((doc.id, pages))
+        return stored
+
+    async def process_all(self, stored: list[tuple[str, list[PageImage]]]) -> None:
+        await asyncio.gather(*(self.process(doc_id, pages) for doc_id, pages in stored))
 
     async def process(self, doc_id: str, pages: list[PageImage]) -> None:
         try:

@@ -18,6 +18,7 @@ import asyncio
 import calendar
 import io
 from collections import defaultdict
+from collections.abc import Collection
 from dataclasses import dataclass
 
 import numpy as np
@@ -155,8 +156,15 @@ async def _one(client: MetaModelClient, blobs: BlobStore, doc: StoredDoc) -> lis
     return found
 
 
-async def tighten_evidence(client: MetaModelClient, engine: Engine, blobs: BlobStore) -> Tightened:
-    docs = [d for d in load_docs(engine) if d.extraction is not None]
+async def tighten_evidence(
+    client: MetaModelClient, engine: Engine, blobs: BlobStore, only: Collection[str] | None = None
+) -> Tightened:
+    """Tight boxes for every stored document, or only for the documents in `only`."""
+    docs = [
+        d
+        for d in load_docs(engine)
+        if d.extraction is not None and (only is None or d.document.id in only)
+    ]
     results = await asyncio.gather(*(_one(client, blobs, d) for d in docs))
     report = Tightened(candidates=sum(len(b) for d in docs for b in to_refine(d).values()))
     for d, found in zip(docs, results, strict=True):

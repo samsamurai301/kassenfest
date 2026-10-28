@@ -32,6 +32,9 @@ class Settings(BaseSettings):
     llm_max_concurrency: int = 8
     llm_timeout_s: float = 180.0
     llm_max_retries: int = 4
+    # Wait this share of each cached call's recorded latency before answering from the cache,
+    # so a replayed demo shows the pace of a live run (0 = answer at once)
+    llm_replay_pace: float = 0.0
 
     db_path: Path = REPO_ROOT / "var" / "kassenfest.db"
     blob_dir: Path = REPO_ROOT / "var" / "blobs"

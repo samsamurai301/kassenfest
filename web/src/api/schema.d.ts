@@ -106,6 +106,65 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/batches": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** List Batches */
+        get: operations["list_batches_api_batches_get"];
+        put?: never;
+        /**
+         * Upload Batch
+         * @description Store the files and start reading them; follow along on /batches/{id}/events.
+         */
+        post: operations["upload_batch_api_batches_post"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/batches/{batch_id}": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** Batch Detail */
+        get: operations["batch_detail_api_batches__batch_id__get"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/batches/{batch_id}/events": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /**
+         * Batch Events
+         * @description Server-sent events while this process reads the batch: past ones first, then live.
+         *     Ends after the 'done' phase, or at once for a batch that isn't being read.
+         */
+        get: operations["batch_events_api_batches__batch_id__events_get"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/health": {
         parameters: {
             query?: never;
@@ -239,6 +298,95 @@ export interface components {
              */
             valid_to: string;
         };
+        /** BatchDetail */
+        BatchDetail: {
+            /** Id */
+            id: string;
+            /** Label */
+            label: string | null;
+            /**
+             * Created At
+             * Format: date-time
+             */
+            created_at: string;
+            /**
+             * Phase
+             * @enum {string}
+             */
+            phase: "reading" | "evidence" | "done" | "interrupted";
+            /** Files */
+            files: number;
+            /**
+             * Done
+             * @description Documents read (including ones a later upload replaced)
+             */
+            done: number;
+            /** Failed */
+            failed: number;
+            /** Documents */
+            documents: components["schemas"]["InboxDocument"][];
+        };
+        /**
+         * BatchEvent
+         * @description One server-sent event on /api/batches/{id}/events (the JSON in its data line).
+         */
+        BatchEvent: {
+            /** Seq */
+            seq: number;
+            /** Batch Id */
+            batch_id: string;
+            /**
+             * Kind
+             * @enum {string}
+             */
+            kind: "document" | "phase";
+            /**
+             * Phase
+             * @enum {string}
+             */
+            phase: "reading" | "evidence" | "done" | "interrupted";
+            /** @description The document after this step */
+            document?: components["schemas"]["InboxDocument"] | null;
+            /**
+             * Detail
+             * @default
+             */
+            detail: string;
+        };
+        /** BatchList */
+        BatchList: {
+            /**
+             * Batches
+             * @description Newest first
+             */
+            batches: components["schemas"]["BatchSummary"][];
+        };
+        /** BatchSummary */
+        BatchSummary: {
+            /** Id */
+            id: string;
+            /** Label */
+            label: string | null;
+            /**
+             * Created At
+             * Format: date-time
+             */
+            created_at: string;
+            /**
+             * Phase
+             * @enum {string}
+             */
+            phase: "reading" | "evidence" | "done" | "interrupted";
+            /** Files */
+            files: number;
+            /**
+             * Done
+             * @description Documents read (including ones a later upload replaced)
+             */
+            done: number;
+            /** Failed */
+            failed: number;
+        };
         /** BoardCard */
         BoardCard: {
             /** Claim Id */
@@ -267,6 +415,13 @@ export interface components {
             /** Finding Count */
             finding_count: number;
             top_finding: components["schemas"]["Finding"] | null;
+        };
+        /** Body_upload_batch_api_batches_post */
+        Body_upload_batch_api_batches_post: {
+            /** Files */
+            files: string[];
+            /** Label */
+            label?: string | null;
         };
         /** Claim */
         Claim: {
@@ -547,6 +702,48 @@ export interface components {
             date: string;
             /** Name */
             name: string;
+        };
+        /**
+         * InboxDocument
+         * @description One uploaded file and how far the pipeline has got with it.
+         */
+        InboxDocument: {
+            /** Id */
+            id: string;
+            /** Filename */
+            filename: string;
+            /**
+             * Status
+             * @enum {string}
+             */
+            status: "queued" | "processing" | "done" | "error" | "superseded";
+            /**
+             * Step
+             * @description The last step reached
+             * @enum {string}
+             */
+            step: "stored" | "classified" | "extracted" | "linked" | "localized" | "done" | "error";
+            /**
+             * Detail
+             * @description What that step found, e.g. 'muster12'
+             * @default
+             */
+            detail: string;
+            /** Doc Type */
+            doc_type: ("muster12" | "approval_letter" | "visit_log_sgbv" | "visit_log_sgbxi" | "hospital_letter" | "other") | null;
+            /** Patient Id */
+            patient_id: string | null;
+            /** Patient Name */
+            patient_name: string | null;
+            /** Pages */
+            pages: number;
+            /**
+             * Issues
+             * @description What the reader flagged for a human to check
+             */
+            issues: string[];
+            /** Error */
+            error: string | null;
         };
         /** InsurancePeriod */
         InsurancePeriod: {
@@ -1147,6 +1344,121 @@ export interface operations {
                 content: {
                     "image/png": unknown;
                     "image/jpeg": unknown;
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    list_batches_api_batches_get: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["BatchList"];
+                };
+            };
+        };
+    };
+    upload_batch_api_batches_post: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "multipart/form-data": components["schemas"]["Body_upload_batch_api_batches_post"];
+            };
+        };
+        responses: {
+            /** @description Successful Response */
+            202: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["BatchDetail"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    batch_detail_api_batches__batch_id__get: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                batch_id: string;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["BatchDetail"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    batch_events_api_batches__batch_id__events_get: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                batch_id: string;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description text/event-stream, one BatchEvent per event */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["BatchEvent"];
                 };
             };
             /** @description Validation Error */

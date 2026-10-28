@@ -205,7 +205,7 @@ kassenfest/
 - [ ] `SYN-10` P2 Corrections/overwrites on forms (crossed-out dates, Tipp-Ex) as hard cases.
 
 ### 3.4 Ingestion & preprocessing
-- [ ] `ING-01` P0 Upload API (multipart, multi-file, ZIP) + inbox UI with per-file status (SSE).
+- [x] `ING-01` P0 Upload API (multipart, multi-file, ZIP) + inbox UI with per-file status (SSE).
 - [ ] `ING-02` P0 HEIC/JPEG/PNG/PDF → normalized PNG pages (vision service: pdf2image/PyMuPDF, pillow-heif).
 - [ ] `ING-03` P0 Deskew + auto-rotate + perspective correction (OpenCV document-corner detection; reuse your GreyChess homography experience).
 - [ ] `ING-04` P1 Quality gate: blur (Laplacian variance), glare, resolution → "re-photograph" warning.

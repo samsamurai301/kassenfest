@@ -32,10 +32,11 @@ function Mark() {
   )
 }
 
-type Section = 'bills' | 'actions' | null
+type Section = 'inbox' | 'bills' | 'actions' | null
 
 export function Shell({ section, children }: { section: Section; children: ReactNode }) {
   const nav: { id: Section; label: string; to: string }[] = [
+    { id: 'inbox', label: 'Inbox', to: '/inbox' },
     { id: 'bills', label: 'Bills', to: `/months/${DEMO_MONTH}` },
     { id: 'actions', label: 'Actions', to: `/months/${DEMO_MONTH}/actions` },
   ]
@@ -43,7 +44,7 @@ export function Shell({ section, children }: { section: Section; children: React
     <div className="flex min-h-svh flex-col">
       <header className="sticky top-0 z-30 border-b bg-sheet/95 backdrop-blur">
         <div className="mx-auto flex h-14 max-w-[1360px] items-center gap-8 px-4 sm:px-6">
-          <Link to={nav[0].to} className="flex items-center gap-2 rounded-md">
+          <Link to={`/months/${DEMO_MONTH}`} className="flex items-center gap-2 rounded-md">
             <Mark />
             <span className="text-[18px] font-bold tracking-[-0.01em]">Kassenfest</span>
           </Link>

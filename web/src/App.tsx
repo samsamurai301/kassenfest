@@ -5,6 +5,7 @@ import { ActionsScreen } from '@/screens/actions'
 import { BoardScreen } from '@/screens/board'
 import { ClaimScreen } from '@/screens/claim'
 import { EvidenceScreen } from '@/screens/evidence'
+import { InboxScreen } from '@/screens/inbox'
 import { TimelineScreen } from '@/screens/timeline'
 
 export default function App() {
@@ -14,6 +15,13 @@ export default function App() {
     if (path === '/') navigate(`/months/${DEMO_MONTH}`, { replace: true })
   }, [path])
 
+  if (path === '/inbox') {
+    return (
+      <Shell section="inbox">
+        <InboxScreen selected={query.get('batch')} />
+      </Shell>
+    )
+  }
   let params: Record<string, string> | null
   if ((params = match('/months/:month', path))) {
     return (

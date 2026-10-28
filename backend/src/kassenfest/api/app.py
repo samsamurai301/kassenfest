@@ -3,11 +3,13 @@ from typing import Literal
 from fastapi import FastAPI
 from pydantic import BaseModel
 
+from kassenfest.api import inbox
 from kassenfest.api.routes import Current, router
 from kassenfest.config import LlmMode, get_settings
 
 app = FastAPI(title="Kassenfest API", version="0.1.0")
 app.include_router(router)
+app.include_router(inbox.router)
 
 
 class Health(BaseModel):
