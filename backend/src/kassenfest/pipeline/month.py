@@ -2,8 +2,8 @@
 
 Nothing here calls a model, so the month is recomputed in well under a second whenever
 a rule, the records or the case builder change. Evidence from the rules names a field;
-this is where it gets the pixel box the viewer draws: SAM's box for marks, else the
-model's box for the field or for its row.
+this is where it gets the pixel box the viewer draws: the tightened box stored for the
+field (`pipeline.evidence`), else the model's box for the field or for its row.
 """
 
 import datetime as dt
@@ -36,8 +36,8 @@ class StoredDoc:
     issues: list[str]
     boxes: dict[str, tuple[int, PixelBox]] = field(default_factory=dict)
     """field path → (page, pixel box)."""
-    localized: set[str] = field(default_factory=set)
-    """Paths whose box came from SAM or the grid, not straight from the model."""
+    sources: dict[str, str] = field(default_factory=dict)
+    """field path → where its stored box came from (`Localization.source`)."""
     link: Link | None = None
 
     @property
@@ -109,8 +109,7 @@ def load_docs(engine: Engine) -> list[StoredDoc]:
                 stored.boxes = field_boxes(stored.extraction, pages)
                 for loc in s.exec(select(Localization).where(Localization.document_id == doc.id)):
                     stored.boxes[loc.field_path] = (loc.page, tuple(loc.box))  # type: ignore[arg-type]
-                    if loc.source != "muse":
-                        stored.localized.add(loc.field_path)
+                    stored.sources[loc.field_path] = loc.source
             s.expunge_all()
             out.append(stored)
     return out

@@ -33,7 +33,8 @@ async def evidence(settings: Settings) -> int:
     done = await tighten_evidence(client, engine, blobs)
     print(
         f"evidence: {done.rows} visit-log rows on the form grid, "
-        f"{done.fields}/{done.candidates} fields tightened by SAM"
+        f"{done.fields}/{done.candidates} fields tightened by SAM, "
+        f"{done.found}/{done.asked} more found on a crop"
     )
     return 0
 

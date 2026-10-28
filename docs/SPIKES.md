@@ -178,3 +178,46 @@ Most evidence is visit-log rows (220 of 256 evidence items in the month), and th
 Findings are unchanged (14/14 cases still match the truth), and a fresh replay rebuild (`LLM_MODE=replay kassenfest ingest`) reproduces every box with no cache miss: the refine requests depend on the extraction alone.
 
 **Still weak:** text fields on photos and faxes where Muse Spark's box misses the ink entirely (e.g. Frau Albers' "bis 14.10.2026", drawn just below the handwriting); SAM rightly refuses to refine blank paper. Candidate fix: re-ask Muse Spark on a crop around the box for the few cited fields SAM couldn't tighten. SGB XI logs (days as columns) have no row boxes at all yet.
+
+### Crop re-ask, same day: what SAM couldn't tighten
+
+After the SAM pass, 134 read fields with a truth box still had the model's own box (median IoU 0.12): mostly text and signatures on photos and faxes, where Muse Spark's box sits next to the ink. Each now gets a second question (`find_on_crops` in `pipeline/localize.py`). Muse Spark looks at a crop around its first box (1.5 box heights or 6% of the page up and down, half a box or 4% sideways) and boxes the value it already read. SAM then refines that box. It costs one Muse call per field (about $0.004), plus batched SAM.
+
+On those 134 fields:
+
+| variant | median IoU | ≥ 0.3 | better / worse |
+|---|---|---|---|
+| model's box | 0.12 | 28% | |
+| crop at its natural size (~350 px), usual SAM guards | 0.27 | 49% | 53 / 22 |
+| crop upscaled to ~1000 px, usual SAM guards | 0.52 | 69% | 73 / 5 |
+| upscaled, SAM may grow the box 2×, no ink check | **0.63** | **83%** | 108 / 11 |
+
+- **Upscaling is what works.** On a small crop, Muse's box missed the value by about a text line a quarter of the time (Frau Albers' date was boxed between "vom" and "bis").
+- **No ink check on this path.** `ink_ratio` reads 0.000 inside tight text boxes on most photo pages, because its 31 px median-blur paper estimate sees mostly ink. It threw away good boxes, e.g. SAM's 0.79 on 017's issue date. It stays unchanged for marks, whose boxes are larger and where it is calibrated.
+- **The read-back doesn't work as a guard.** The answer's `text` didn't separate good boxes from bad: Muse reads the right value even when its box is a line off. It stays in the schema only because the measured requests include it.
+
+Whole month, served boxes for all 518 fields with a truth box (the model's own boxes: 0.34, 54% ≥ 0.3):
+
+| median IoU (≥ 0.3) | before the crop re-ask | after |
+|---|---|---|
+| clean | 0.72 (73%) | **0.78** (79%) |
+| scan | 0.64 (77%) | **0.71** (82%) |
+| photo | 0.31 (51%) | **0.56** (70%) |
+| fax | 0.04 (40%) | **0.50** (62%) |
+| bad photo | 0.01 (25%) | 0.18 (42%) |
+| all 518 | 0.44 (58%) | **0.61** (73%) |
+
+**Cited fields:**
+
+| Field | Before (IoU) | After (IoU) |
+|---|---|---|
+| Frau Albers' "bis 14.10.2026" | 0.00 | 0.80 |
+| 017's issue date | 0.59 | 0.79 |
+| The fax KVNR | 0.35 | 0.86 |
+| The bad photo's IK | 0.00 | 0.31 (0.68 with single-box SAM calls in the experiment) |
+
+The 7 signatures that SAM missed at ingest went from about 0 to 0.43–0.98 in the experiment.
+
+The Muse calls ($0.51) were recorded during the experiment and replayed by the pipeline; the batched SAM calls cost $0.07. Findings and the board are unchanged. A fresh replay rebuild reproduces all 1,099 stored boxes exactly.
+
+**Still weak:** 11 fields got worse, where Muse pointed at a neighbouring value on the crop (a payer name, the label line above a KVNR). No cheap guard tells those apart. SGB XI rows still have no boxes.

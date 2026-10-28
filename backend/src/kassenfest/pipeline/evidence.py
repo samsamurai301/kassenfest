@@ -6,6 +6,9 @@
   about one call per page, with the guards used for marks (`pipeline.localize`).
   Spike decision 4 said "every field a finding cites"; batching makes all of them cheap,
   and the document viewer lists them all.
+- what SAM couldn't tighten (mostly on photos and faxes, where the model's box misses the
+  ink), unreadable fields, and inked marks SAM missed at ingest: Muse Spark again, on an
+  upscaled crop around its box, then SAM on the box it found. One call per field.
 
 Results are stored as Localization rows, which `pipeline.month` prefers over the model's
 boxes. Running it again replaces them (from the cache: the requests don't change).
@@ -24,9 +27,10 @@ from sqlmodel import col, delete
 
 from kassenfest.db import Localization, session_scope
 from kassenfest.llm.client import MetaModelClient
-from kassenfest.pipeline.localize import Located, refine_boxes
+from kassenfest.llm.prompts import as_written, find_user
+from kassenfest.pipeline.localize import Located, find_on_crops, refine_boxes
 from kassenfest.pipeline.month import StoredDoc, field_boxes, load_docs
-from kassenfest.schemas.common import Extracted, PixelBox
+from kassenfest.schemas.common import Extracted, Mark, PixelBox
 from kassenfest.schemas.extraction import VisitLogSGBV
 from kassenfest.storage import BlobStore
 from kassenfest.vision.grid import snap_rows
@@ -41,6 +45,10 @@ class Tightened:
     """Fields tightened by SAM."""
     candidates: int = 0
     """Fields sent to SAM."""
+    found: int = 0
+    """Fields found again on a crop."""
+    asked: int = 0
+    """Fields asked again on a crop."""
 
 
 def _page(blobs: BlobStore, doc: StoredDoc, index: int) -> PageImage:
@@ -82,6 +90,37 @@ def to_refine(doc: StoredDoc) -> dict[int, dict[str, PixelBox]]:
     return out
 
 
+SAM_AT_INGEST = ("sam_refine", "sam_concept")
+
+
+def to_find(doc: StoredDoc, tightened: set[str]) -> dict[int, dict[str, tuple[PixelBox, str]]]:
+    """page → path → (model box, question) for every value that was read but has no tight
+    box: fields SAM left alone in this run (`tightened` are the ones it did), unreadable
+    fields, and inked marks that SAM missed at ingest.
+
+    Like `to_refine`, decided by the extraction and SAM's answers, which come from the
+    cache on a replay. A mark found on a crop before is asked again, from the cache.
+    """
+    out: dict[int, dict[str, tuple[PixelBox, str]]] = defaultdict(dict)
+    doc_type = doc.document.doc_type or ""
+    for key, (page, box) in field_boxes(doc.extraction, doc.pages).items():
+        item = getattr(doc.extraction, key, None)
+        if isinstance(item, Extracted) and item.status != "empty" and key not in tightened:
+            reads = as_written(item.value) if item.status == "present" else None
+            out[page][key] = (box, find_user(doc_type, key, reads))
+        elif (
+            isinstance(item, Mark)
+            and item.state != "absent"
+            and doc.sources.get(key) not in SAM_AT_INGEST
+        ):
+            out[page][key] = (box, find_user(doc_type, key, None, mark=True))
+    return out
+
+
+def _tightened(found: list[Located]) -> set[str]:
+    return {x.field_path for x in found if x.source == "sam_refine"}
+
+
 def _store(engine: Engine, located: dict[str, list[Located]]) -> None:
     with session_scope(engine) as s:
         for doc_id, items in located.items():
@@ -111,6 +150,8 @@ async def _one(client: MetaModelClient, blobs: BlobStore, doc: StoredDoc) -> lis
         found += grid_rows(doc, _page(blobs, doc, 0))
     for index, boxes in to_refine(doc).items():
         found += await refine_boxes(client, _page(blobs, doc, index), index, boxes)
+    for index, asks in to_find(doc, _tightened(found)).items():
+        found += await find_on_crops(client, _page(blobs, doc, index), index, asks)
     return found
 
 
@@ -118,8 +159,10 @@ async def tighten_evidence(client: MetaModelClient, engine: Engine, blobs: BlobS
     docs = [d for d in load_docs(engine) if d.extraction is not None]
     results = await asyncio.gather(*(_one(client, blobs, d) for d in docs))
     report = Tightened(candidates=sum(len(b) for d in docs for b in to_refine(d).values()))
-    for found in results:
+    for d, found in zip(docs, results, strict=True):
         report.rows += sum(x.source == "grid" for x in found)
         report.fields += sum(x.source == "sam_refine" for x in found)
+        report.found += sum(x.source in ("crop", "crop_sam") for x in found)
+        report.asked += sum(len(a) for a in to_find(d, _tightened(found)).values())
     _store(engine, {d.document.id: found for d, found in zip(docs, results, strict=True)})
     return report

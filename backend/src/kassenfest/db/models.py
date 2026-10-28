@@ -72,7 +72,7 @@ class Localization(SQLModel, table=True):
     document_id: str = Field(foreign_key="document.id", index=True)
     page: int = 0
     field_path: str
-    source: str  # muse | sam_refine | sam_concept | grid
+    source: str  # muse | sam_refine | sam_concept | grid | crop | crop_sam
     box: list[float] = Field(sa_column=Column(JSON))
     confidence: float | None = None
     ink_ratio: float | None = Field(default=None, description="Dark-pixel share inside the box")

@@ -193,7 +193,7 @@ Each session: start by reading this section's exit criterion; end with a commit 
 ### Sat Oct 31 — walking skeleton (10 h) 🎯
 - [x] **Claim builder**: visit entries × tariff → claim lines; ClaimContext from DB. *(Oct 28: `pipeline/casefile.py`, extraction + records → CaseFile; perfect readings reproduce the truth's findings line for line)*
 - [x] **Rules on real extracted data** → findings with evidence. *(Oct 28: `pipeline/month.py`, recomputed from stored extractions in 0.3 s instead of persisted; every planted defect found on the live demo run, see SPIKES.md)*
-- [x] **Localize**: SAM + ink density for signature/stamp fields; evidence boxes stored. *(marks Oct 27; Oct 28: visit-log rows snapped to the printed grid, 99% on the right entry, and every read field SAM-refined in batches, see SPIKES.md. Open: fields on photos/faxes where the model's box misses the ink; SGB XI rows)*
+- [x] **Localize**: SAM + ink density for signature/stamp fields; evidence boxes stored. *(marks Oct 27; Oct 28: visit-log rows snapped to the printed grid, 99% on the right entry, every read field SAM-refined in batches, and what SAM can't tighten re-asked on an upscaled crop: fields median IoU 0.34 → 0.61, see SPIKES.md. Open: SGB XI rows)*
 - [ ] **Wire UI to API**: inbox with live progress, bill board, claim detail, evidence viewer, patient timeline. *(Oct 28: all screens on pipeline data via `api/live.py`; open: inbox + live progress)*
 - [x] Generate the **demo set** (5 heroes + background), record its cache. *(Oct 28: 42 pages, $1.55, 90 s; replay needs no key)*
 - [ ] `eval/run_defects.py` → recall/precision per defect on dev.
