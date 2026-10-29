@@ -113,6 +113,7 @@ class VisitLogContent(BaseModel):
     patient_signature_date: dt.date | None = None
     missing_signature_reason: Literal["1", "2", "3", "4"] | None = None
     provider_signed: bool = True
+    one_hand: bool = False  # every entry in one hand and pen (subtle defect S10)
 
 
 class ApprovedLine(BaseModel):
@@ -184,6 +185,7 @@ class VisitLogXIContent(BaseModel):
     patient_signed: bool = True
     patient_signature_date: dt.date | None = None
     provider_signed: bool = True
+    one_hand: bool = False  # every entry in one hand and pen (subtle defect S10)
 
 
 class HospitalLetterContent(BaseModel):
@@ -405,7 +407,7 @@ def build_muster12(c: Muster12Content, style: Style) -> tuple[dict[str, Any], Tr
 def build_visit_log_sgbv(c: VisitLogContent, style: Style) -> tuple[dict[str, Any], TruthSpec]:
     rng = style.rng
     office = style.hand(INKS["black"])
-    nurses = [style.hand() for _ in c.staff]
+    nurses = [style.hand()] * len(c.staff) if c.one_hand else [style.hand() for _ in c.staff]
     truth = TruthSpec()
     days = calendar.monthrange(c.year, c.month)[1]
 
@@ -636,7 +638,7 @@ def build_approval_letter(
 
 def build_visit_log_sgbxi(c: VisitLogXIContent, style: Style) -> tuple[dict[str, Any], TruthSpec]:
     rng = style.rng
-    nurses = [style.hand() for _ in c.staff]
+    nurses = [style.hand()] * len(c.staff) if c.one_hand else [style.hand() for _ in c.staff]
     truth = TruthSpec()
     days = calendar.monthrange(c.year, c.month)[1]
 

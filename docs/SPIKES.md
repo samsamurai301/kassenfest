@@ -286,3 +286,16 @@ Greetings are neutral ("Guten Tag Dr. Markus Ederer,"), because the records don'
 - Kasse addresses are generic ("Leistungsabteilung"), and the records have no fax numbers.
 - No deadlines yet for Entlastungsbetrag carry-over or limitation (AGT-03, partly done).
 - The model's commentary in the trace switches between German and English.
+
+---
+
+## 2026-10-29 — Auditor eval with subtle defects (AUD-05)
+
+`kassenfest synth --set audit` seeds 10 kinds of defect that no rule checks, two bills each, next to 5 clean controls. `kassenfest eval-auditor` reads every page perfectly, lets the auditor attack all 25 bills (all green on the rules) and scores each objection. Full numbers are in [EVAL.md](EVAL.md). One run cost $2.31, and the replay costs $0.
+
+- **The auditor caught 12/20** seeded defects, and **7/20 reached a person**.
+- **Nothing false reached the board:** all 6 upheld objections were real. Two of them were a simplification in our own generator: when two approvals cover the month, the synthetic Leistungsnachweis prints only the newer one's Genehmigungskennzeichen.
+- **Inventions:** about one per bill, mostly misread handwritten times and "a Pflegehilfskraft may not do this". The resolver dismissed all of them.
+- **The weak spot is the resolver, not the auditor.** It dismissed 5 correct catches: another person's Versicherten-Nr. or a wrong date of birth on the Verordnung, called "most likely misread" because the other documents agree; and evening doses 4–14 minutes after the morning ones, because HKP-DUPLICATE needs the same minute.
+- **Missed by both:** a retroactive Erstverordnung and Medikamentengabe without drug names. Both are unimplemented P1 rules in the catalog (HKP-RX-NO-RETRO, HKP-RX-CONTENT). Identical visit times all month and a whole log in one hand were missed too.
+- **Caveat:** the eval's word patterns were tightened after reading every objection by hand. The auditor and resolver were not changed on this set, so a fix should be measured on a fresh seed.

@@ -266,7 +266,7 @@ kassenfest/
 - [x] `AUD-02` P0 Resolver: for each objection → if it cites a rule, re-run that rule; if it cites a fact, check against extracted fields/evidence; mark `upheld` / `dismissed (reason)`.
 - [x] `AUD-03` P0 Loop: up to N rounds (e.g. 2); claim status = 🟢 only if no upheld objection.
 - [x] `AUD-04` P1 "Debate" UI: objections, evidence crops, verdicts.
-- [ ] `AUD-05` P1 Auditor eval: seeded "subtle" defects the rules engine doesn't cover (e.g. Handzeichen pattern identical on all days, implausible visit times, same pen/ink for a whole month) → measure catches vs hallucinations.
+- [x] `AUD-05` P1 Auditor eval: seeded "subtle" defects the rules engine doesn't cover (e.g. Handzeichen pattern identical on all days, implausible visit times, same pen/ink for a whole month) → measure catches vs hallucinations. *(Oct 29: `synth/subtle.py` + `kassenfest eval-auditor`; 12/20 caught, 7/20 reached a person, every upheld objection real; see EVAL.md)*
 - [ ] `AUD-06` P2 Different model temperature/persona per payer.
 
 ### 3.10 Receivables (open payments)
@@ -298,7 +298,7 @@ kassenfest/
 - [ ] `EVL-01` P0 Extraction metrics per field and doc type (exact match, normalized match for dates/names, F1 for list fields), split by clean/fax/photo/real-handwriting.
 - [ ] `EVL-02` P0 Defect detection: per defect type recall/precision vs seeded labels.
 - [ ] `EVL-03` P1 Localization IoU / hit rate (center of mask inside GT box).
-- [ ] `EVL-04` P1 Auditor: valid catches, invalid objections, rounds needed.
+- [ ] `EVL-04` P1 Auditor: valid catches, invalid objections, rounds needed. *(Oct 29, on subtle defects: EVAL.md; still open on the test set's Tier-A defects)*
 - [ ] `EVL-05` P1 Latency + cost per document and per claim.
 - [ ] `EVL-06` P1 Regression run in CI on a 10-doc smoke set.
 

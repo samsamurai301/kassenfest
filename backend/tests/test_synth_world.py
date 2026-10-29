@@ -108,7 +108,7 @@ def test_rules_engine_on_truth_fires_exactly_the_injected_defects(name):
                 assert fired[d] == mine, (case.case_id, d)
 
 
-@pytest.mark.parametrize("name", ["demo", "dev", "test"])
+@pytest.mark.parametrize("name", ["demo", "dev", "test", "audit"])
 def test_world_invariants(name):
     plan, cases = planned(name)
     for case, cf in cases:

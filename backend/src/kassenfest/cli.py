@@ -27,12 +27,18 @@ def main() -> None:
     fix = sub.add_parser("fix", help="let the fixer agent draft the actions for open findings")
     fix.add_argument("patients", nargs="*", help="patient ids (default: every patient due)")
     fix.add_argument("--mode", choices=["live", "record", "replay"], help="override LLM_MODE")
+    eval_auditor = sub.add_parser(
+        "eval-auditor", help="seeded subtle defects: what the auditor catches and invents"
+    )
+    eval_auditor.add_argument("--mode", choices=["live", "record", "replay"], help="LLM_MODE")
     eval_boxes = sub.add_parser("eval-boxes", help="score evidence boxes against ground truth")
     eval_boxes.add_argument(
         "--truth", default=str(REPO_ROOT / "data/synthetic/demo/truth"), help="truth folder"
     )
     synth = sub.add_parser("synth", help="generate a synthetic document set with ground truth")
-    synth.add_argument("--set", required=True, choices=["demo", "dev", "test"], dest="set_name")
+    synth.add_argument(
+        "--set", required=True, choices=["demo", "dev", "test", "audit"], dest="set_name"
+    )
     synth.add_argument("--out", help="output directory (default data/synthetic/<set>)")
     args = parser.parse_args()
 
@@ -80,5 +86,11 @@ def main() -> None:
             from kassenfest import ingest as ingest_mod
 
             sys.exit(asyncio.run(ingest_mod.fix(settings, args.patients)))
+        if args.command == "eval-auditor":
+            from kassenfest.eval import auditor
+
+            report = asyncio.run(auditor.run(settings))
+            print(auditor.details(report), "\n")
+            print(auditor.markdown(report))
     except (CacheMiss, RuntimeError) as exc:
         sys.exit(f"error: {exc}")

@@ -15,8 +15,9 @@ Variant = Literal["clean", "scan", "fax", "photo", "bad_photo", "real_handwritin
 DefectId = Literal[
     "D01", "D02", "D03", "D04", "D05", "D06", "D07", "D08", "D09", "D10",
     "D11", "D12", "D13", "D14", "D15", "D16", "D17", "D18", "D19", "D20",
+    "S01", "S02", "S03", "S04", "S05", "S06", "S07", "S08", "S09", "S10",
 ]  # fmt: skip
-"""Seeded defects, docs/01 §4."""
+"""Seeded defects, docs/01 §4; S01–S10 are the subtle ones no rule checks (`synth.subtle`)."""
 
 
 class GTPage(BaseModel):

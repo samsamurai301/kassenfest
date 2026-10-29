@@ -16,7 +16,7 @@ from collections.abc import Callable
 
 from kassenfest.schemas.common import Frequency
 from kassenfest.schemas.ground_truth import DefectId
-from kassenfest.synth import catalog, identifiers
+from kassenfest.synth import catalog, identifiers, subtle
 from kassenfest.synth.paperwork import doc_keys
 from kassenfest.synth.world import (
     MONTH_END,
@@ -63,7 +63,7 @@ RULES: dict[DefectId, list[str]] = {
     "D18": ["HKP-DUPLICATE"],
     "D19": ["DOC-READABLE"],
     "D20": [],
-}
+} | {d: [] for d in subtle.SUBTLE}  # no rule checks the subtle ones: that is the point
 
 HKP_ONLY = {"D01", "D02", "D03", "D05", "D07", "D08", "D09", "D10", "D11", "D18"}
 CONFLICTS = [
@@ -466,6 +466,9 @@ def build_timeline(world: World, spec: PatientSpec) -> Timeline:
     for defect in ORDER:
         if defect in spec.defects:
             INJECT[defect](tl, random.Random(f"{world.seed}:{spec.key}:{defect}"))
+    for defect in spec.defects:
+        if defect in subtle.SUBTLE:
+            subtle.inject(tl, defect, random.Random(f"{world.seed}:{spec.key}:{defect}"))
     if not tl.labels:
         _label(tl, "D20", doc_keys(tl), "Clean patient-month")
     return tl
@@ -547,6 +550,36 @@ def demo_specs() -> list[PatientSpec]:
             params={"care_start": dt.date(YEAR, 10, 8)},
         ),
     ]  # fmt: skip
+
+
+def audit_specs(seed: int) -> list[PatientSpec]:
+    """The auditor eval (AUD-05): two patient-months per subtle defect, and 5 clean controls.
+
+    A seeded patient carries one subtle defect and nothing the rules catch, so every bill is
+    green and the auditor attacks it. Ids are shuffled: nothing in a bill's id names its defect.
+    """
+    plans = {"S05": [_plan(MED1, KOMP), _plan(MED2)], "S09": [_plan(MED2), _plan(MED2, KOMP)]}
+    cast: list[tuple[str, list[DefectId], dict]] = []
+    for defect in subtle.SUBTLE:
+        kinds = ["hkp", "hkp"] if defect in subtle.HKP_ONLY else ["hkp", "xi"]
+        for n, kind in enumerate(kinds):
+            extra: dict = {"hkp": plans[defect][n]} if defect in plans else {}
+            if defect == "S04":
+                extra["chain"] = "new_late"
+                extra["params"] = {"care_start": dt.date(YEAR, 10, (5, 12)[n])}
+            cast.append((kind, [defect], extra))
+    cast += [("hkp", [], {}), ("hkp", [], {}), ("hkp", [], {}), ("xi", [], {}), ("xi", [], {})]
+    random.Random(f"{seed}:audit").shuffle(cast)
+    return [
+        PatientSpec(
+            f"p{i:02d}",
+            kind,  # type: ignore[arg-type]
+            defects=defects,
+            pflegegrad=3 if kind == "xi" else None,
+            **extra,
+        )
+        for i, (kind, defects, extra) in enumerate(cast, 1)
+    ]
 
 
 def _feasible(spec: PatientSpec, defect: DefectId) -> bool:

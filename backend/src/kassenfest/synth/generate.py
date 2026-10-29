@@ -28,7 +28,7 @@ from kassenfest.schemas.common import DocType
 from kassenfest.schemas.domain import Payer
 from kassenfest.schemas.ground_truth import DefectId, Variant
 from kassenfest.schemas.records import FaxReport, MasterData
-from kassenfest.synth import catalog
+from kassenfest.synth import catalog, subtle
 from kassenfest.synth.degrade import VARIANTS, Degraded, fax
 from kassenfest.synth.documents import ground_truth, render_document
 from kassenfest.synth.paperwork import DocPlan, documents
@@ -37,6 +37,7 @@ from kassenfest.synth.scenarios import (
     RULES,
     TIER_A,
     assign_names,
+    audit_specs,
     build_timeline,
     demo_specs,
     random_specs,
@@ -53,7 +54,7 @@ from kassenfest.synth.world import (
     visit_order,
 )
 
-SetName = Literal["demo", "dev", "test"]
+SetName = Literal["demo", "dev", "test", "audit"]
 OUT_ROOT = REPO_ROOT / "data" / "synthetic"
 
 # Variant mix per document type; overall close to docs/03 §4.3. bad_photo only for D19.
@@ -78,6 +79,8 @@ class SetConfig:
     def cast(self) -> list[PatientSpec]:
         if self.name == "demo":
             specs = demo_specs()
+        elif self.name == "audit":
+            specs = audit_specs(self.seed)
         else:
             specs = random_specs(self.seed, self.patients, self.quota, self.clean)
         assign_names(specs, self.seed)
@@ -88,6 +91,8 @@ SETS: dict[SetName, SetConfig] = {
     "demo": SetConfig("demo", seed=4211, split="dev"),
     "dev": SetConfig("dev", seed=1001, split="dev", patients=19, quota=4, clean=4),
     "test": SetConfig("test", seed=2002, split="test", patients=19, quota=3, clean=3),
+    # The auditor eval: subtle defects no rule checks, and clean controls (AUD-05)
+    "audit": SetConfig("audit", seed=3003, split="test"),
 }
 
 
@@ -194,7 +199,9 @@ def plan_set(name: SetName) -> SetPlan:
     for spec in config.cast():
         tl = build_timeline(world, spec)
         case = Case(f"{spec.key}-{MONTH_STR}", tl)
-        for plan in documents(world, tl):
+        plans = documents(world, tl)
+        subtle.on_paper(plans, tl, world)
+        for plan in plans:
             seed = _seed(config.seed, spec.key, plan.key)
             mix = VARIANT_MIX[plan.doc_type]
             variant = (
@@ -259,10 +266,10 @@ def coverage(plan: SetPlan) -> tuple[dict[str, int], dict[str, int]]:
     by_doc = {d: 0 for d in TIER_A}
     for case in plan.cases:
         for d in {lab.defect for lab in case.timeline.labels}:
-            by_case[d] += 1
+            by_case[d] = by_case.get(d, 0) + 1
         for doc in case.docs:
             for d in doc.defects:
-                by_doc[d] += 1
+                by_doc[d] = by_doc.get(d, 0) + 1
     return by_case, by_doc
 
 
@@ -466,6 +473,10 @@ def coverage_table(manifest: SetManifest) -> str:
     for d in TIER_A:
         rules = ", ".join(f"`{r}`" for r in RULES[d]) or "— (clean)"
         rows.append(f"| {d} | {rules} | {manifest.coverage[d]} | {manifest.coverage_docs[d]} |")
+    for d, what in subtle.SUBTLE.items():
+        if manifest.coverage.get(d):
+            row = f"| {d} | none: {what} | {manifest.coverage[d]} | {manifest.coverage_docs[d]} |"
+            rows.append(row)
     return "\n".join(rows)
 
 
