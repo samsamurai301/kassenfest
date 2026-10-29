@@ -1,3 +1,4 @@
+import datetime as dt
 from functools import lru_cache
 from pathlib import Path
 from typing import Literal
@@ -43,6 +44,12 @@ class Settings(BaseSettings):
     records_path: Path = REPO_ROOT / "data" / "synthetic" / "demo" / "master_data.json"
     # auto: the pipeline's results once it has processed a document, else the fixtures
     api_source: Literal["auto", "fixtures", "pipeline"] = "auto"
+    # Pin "today" (TODAY=2026-11-02): countdowns and the fixer agent's deadlines count from
+    # it, so a replayed demo asks the model exactly what the recording did
+    today: dt.date | None = None
+
+    def as_of(self) -> dt.date:
+        return self.today or dt.date.today()
 
 
 @lru_cache

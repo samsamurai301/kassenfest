@@ -1,6 +1,5 @@
-"""`kassenfest ingest`, `evidence` and `audit`: the pipeline from the command line."""
+"""`kassenfest ingest`, `evidence`, `audit` and `fix`: the pipeline from the command line."""
 
-from datetime import date
 from pathlib import Path
 
 from sqlmodel import select
@@ -52,7 +51,7 @@ async def audit(settings: Settings, claim_ids: list[str]) -> int:
     engine = create_db(settings.db_path)
     client, blobs = MetaModelClient(settings), BlobStore(settings.blob_dir)
     month = evaluate_month(engine, records, records.month)
-    dossiers = due(month, engine, date.today(), claim_ids or None)
+    dossiers = due(month, engine, settings.as_of(), claim_ids or None)
     print(f"audit: {len(dossiers)} clean bills due")
     done = await audit_month(client, engine, blobs, records, dossiers=dossiers)
     latest = latest_audits(engine)
@@ -70,6 +69,41 @@ async def audit(settings: Settings, claim_ids: list[str]) -> int:
     print(
         f"\naudit: {done.audited} bills attacked, {done.objections} objections, "
         f"{done.upheld} upheld, {done.failed} failed, ${done.cost_usd:.3f}"
+    )
+    return 1 if done.failed else 0
+
+
+async def fix(settings: Settings, patient_ids: list[str]) -> int:
+    """Let the fixer agent draft the actions of every patient who is due (also after uploads)."""
+    from kassenfest.agents.fixer import actions, due, fix_month, latest_fixes
+    from kassenfest.pipeline.month import evaluate_month
+
+    if not settings.records_path.exists():
+        print(f"no records at {settings.records_path}: no bills to fix")
+        return 1
+    records = MasterData.model_validate_json(settings.records_path.read_text())
+    engine = create_db(settings.db_path)
+    client = MetaModelClient(settings)
+    month = evaluate_month(engine, records, records.month)
+    pending = due(month, engine, settings.as_of(), patient_ids or None)
+    print(f"fix: {len(pending)} patients due, today {settings.as_of():%d.%m.%Y}")
+    done = await fix_month(client, engine, records, pending=pending)
+    latest = latest_fixes(engine)
+    for b in pending:
+        f = latest[b.patient_id]
+        calls = sum(s["kind"] == "call" for s in f.steps)
+        rejected = sum(s["kind"] == "call" and not s.get("ok", True) for s in f.steps)
+        print(
+            f"\n{b.case.patient.name}: {len(b.findings)} findings, {calls} tool calls "
+            f"({rejected} sent back), ${f.cost_usd:.3f}" + (f": {f.error}" if f.error else "")
+        )
+        for a in actions(f):
+            print(f"  {a.due_date:%d.%m.} {a.kind:<24} {a.title}")
+        if f.note:
+            print(f"  note: {f.note}")
+    print(
+        f"\nfix: {done.patients} patients, {done.actions} actions, {done.failed} failed, "
+        f"${done.cost_usd:.3f}"
     )
     return 1 if done.failed else 0
 

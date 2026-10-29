@@ -24,6 +24,9 @@ def main() -> None:
     audit = sub.add_parser("audit", help="let the auditor agent attack the clean bills")
     audit.add_argument("claims", nargs="*", help="claim ids (default: every clean bill due)")
     audit.add_argument("--mode", choices=["live", "record", "replay"], help="override LLM_MODE")
+    fix = sub.add_parser("fix", help="let the fixer agent draft the actions for open findings")
+    fix.add_argument("patients", nargs="*", help="patient ids (default: every patient due)")
+    fix.add_argument("--mode", choices=["live", "record", "replay"], help="override LLM_MODE")
     eval_boxes = sub.add_parser("eval-boxes", help="score evidence boxes against ground truth")
     eval_boxes.add_argument(
         "--truth", default=str(REPO_ROOT / "data/synthetic/demo/truth"), help="truth folder"
@@ -73,5 +76,9 @@ def main() -> None:
             from kassenfest import ingest as ingest_mod
 
             sys.exit(asyncio.run(ingest_mod.audit(settings, args.claims)))
+        if args.command == "fix":
+            from kassenfest import ingest as ingest_mod
+
+            sys.exit(asyncio.run(ingest_mod.fix(settings, args.patients)))
     except (CacheMiss, RuntimeError) as exc:
         sys.exit(f"error: {exc}")

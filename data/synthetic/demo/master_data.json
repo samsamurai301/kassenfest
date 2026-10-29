@@ -6,6 +6,10 @@
   "ik": "469960557",
   "bundesland": "BY",
   "municipality": "Deggendorf",
+  "address": [
+   "Hengersberger Str. 18",
+   "94469 Deggendorf"
+  ],
   "staff": [
    {
     "employee_no": "436448642",
@@ -55,7 +59,8 @@
     "name": "Petra Mayerhofer",
     "qualification": "auszubildende"
    }
-  ]
+  ],
+  "billing_working_day": 5
  },
  "patients": [
   {
@@ -371,32 +376,62 @@
   {
    "name": "Dr. med. Sabine Hartl",
    "lanr": "143699701",
-   "bsnr": "718549302"
+   "bsnr": "718549302",
+   "address": [
+    "Praxis Dr. med. Sabine Hartl",
+    "Stadtplatz 12",
+    "94469 Deggendorf"
+   ]
   },
   {
    "name": "Dr. med. Thomas Rieger",
    "lanr": "283320323",
-   "bsnr": "719097089"
+   "bsnr": "719097089",
+   "address": [
+    "Praxis Dr. med. Thomas Rieger",
+    "Bahnhofstr. 3",
+    "94447 Plattling"
+   ]
   },
   {
    "name": "Dr. med. Ursula Fröhlich",
    "lanr": "824646001",
-   "bsnr": "717620859"
+   "bsnr": "717620859",
+   "address": [
+    "Praxis Dr. med. Ursula Fröhlich",
+    "Pfleggasse 7",
+    "94469 Deggendorf"
+   ]
   },
   {
    "name": "Dr. med. Markus Ederer",
    "lanr": "626385001",
-   "bsnr": "712020561"
+   "bsnr": "712020561",
+   "address": [
+    "Praxis Dr. med. Markus Ederer",
+    "Marktplatz 4",
+    "94491 Hengersberg"
+   ]
   },
   {
    "name": "Dr. med. Claudia Wenninger",
    "lanr": "239654923",
-   "bsnr": "715810901"
+   "bsnr": "715810901",
+   "address": [
+    "Praxis Dr. med. Claudia Wenninger",
+    "Klosterstr. 9",
+    "94526 Metten"
+   ]
   },
   {
    "name": "Dr. med. Florian Aschenbrenner",
    "lanr": "783581201",
-   "bsnr": "717989371"
+   "bsnr": "717989371",
+   "address": [
+    "Praxis Dr. med. Florian Aschenbrenner",
+    "Vorstadt 21",
+    "94486 Osterhofen"
+   ]
   }
  ],
  "payers": [

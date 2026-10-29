@@ -86,7 +86,12 @@ class Doctor:
         ]
 
     def domain(self) -> Physician:
-        return Physician(name=self.name, lanr=self.lanr, bsnr=self.bsnr)
+        return Physician(
+            name=self.name,
+            lanr=self.lanr,
+            bsnr=self.bsnr,
+            address=[f"Praxis {self.name}", self.street, " ".join(self.zip_town)],
+        )
 
 
 @dataclass
@@ -119,6 +124,7 @@ def build_world(seed: int) -> World:
         name=catalog.PROVIDER_NAME,
         ik=identifiers.generate_ik(rng, "46", "99"),
         municipality="Deggendorf",
+        address=list(catalog.PROVIDER_ADDRESS),
         staff=staff,
     )
     doctors = [

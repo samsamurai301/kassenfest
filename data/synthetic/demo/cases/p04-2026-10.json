@@ -5,6 +5,10 @@
   "ik": "469960557",
   "bundesland": "BY",
   "municipality": "Deggendorf",
+  "address": [
+   "Hengersberger Str. 18",
+   "94469 Deggendorf"
+  ],
   "staff": [
    {
     "employee_no": "436448642",
@@ -54,7 +58,8 @@
     "name": "Petra Mayerhofer",
     "qualification": "auszubildende"
    }
-  ]
+  ],
+  "billing_working_day": 5
  },
  "patient": {
   "id": "p04",
@@ -98,7 +103,12 @@
   "283320323": {
    "name": "Dr. med. Thomas Rieger",
    "lanr": "283320323",
-   "bsnr": "719097089"
+   "bsnr": "719097089",
+   "address": [
+    "Praxis Dr. med. Thomas Rieger",
+    "Bahnhofstr. 3",
+    "94447 Plattling"
+   ]
   }
  },
  "prescriptions": [

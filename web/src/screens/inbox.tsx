@@ -31,7 +31,7 @@ export function InboxScreen({ selected }: { selected: string | null }) {
   const batches = useBatches()
   const id = selected ?? batches.data?.batches[0]?.id ?? null
   const batch = useBatch(id)
-  const live = ['reading', 'evidence', 'audit'].includes(batch.data?.phase ?? '')
+  const live = ['reading', 'evidence', 'audit', 'actions'].includes(batch.data?.phase ?? '')
   useBatchEvents(id, live)
 
   if (batches.isError) return <LoadError error={batches.error} />
@@ -252,6 +252,13 @@ function Phase({ batch }: { batch: BatchDetail }) {
           The Kasse&rsquo;s auditor is attacking the clean bills…
         </p>
       )
+    case 'actions':
+      return (
+        <p className="flex items-center gap-2 text-[14px] font-semibold" role="status">
+          <LoaderCircle className="size-4 animate-spin text-stamp" aria-hidden />
+          Drafting the letters and tasks for the findings…
+        </p>
+      )
     case 'interrupted':
       return (
         <p className="flex items-center gap-2 text-[14px] font-semibold text-fixable">
@@ -405,7 +412,7 @@ function Earlier({ batches }: { batches: BatchSummary[] }) {
                 {plural(b.files, 'file')} · {b.done} read
                 {b.failed > 0 && `, ${b.failed} failed`}
                 {b.phase === 'interrupted' && ' · stopped'}
-                {['reading', 'evidence', 'audit'].includes(b.phase) && ' · reading now'}
+                {['reading', 'evidence', 'audit', 'actions'].includes(b.phase) && ' · reading now'}
               </span>
             </Link>
           </li>

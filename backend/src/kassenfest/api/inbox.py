@@ -1,11 +1,12 @@
 """The inbox: upload a batch of paperwork and watch the pipeline read it (docs/01 ING-01).
 
 POST /api/batches stores the files and answers at once. The batch is then read in the
-background (`Pipeline`), its evidence boxes tightened (`tighten_evidence`) and the clean
-bills attacked by the auditor agent (`api.audit`). Every
-step is an event, kept for the life of the process and streamed over SSE, so a page
-opened or reloaded mid-run first replays what it missed. When a batch is done the board
-shows it: the screens' World is rebuilt whenever the database changes (`api.live`).
+background (`Pipeline`), its evidence boxes tightened (`tighten_evidence`), the clean
+bills attacked by the auditor agent (`api.audit`) and the findings' letters drafted by the
+fixer agent (`api.fix`). Every step is an event, kept for the life of the process and
+streamed over SSE, so a page opened or reloaded mid-run first replays what it missed. When
+a batch is done the board shows it: the screens' World is rebuilt whenever the database
+changes (`api.live`).
 """
 
 import asyncio
@@ -24,6 +25,7 @@ from sqlmodel import col, select
 
 from kassenfest.api.audit import auditing
 from kassenfest.api.deps import Deps, RunDeps
+from kassenfest.api.fix import fixing
 from kassenfest.api.models import (
     BatchDetail,
     BatchEvent,
@@ -91,10 +93,12 @@ class Inbox:
             self._phase(batch_id, "evidence", "Tightening the evidence boxes")
             ids = {doc_id for doc_id, _ in stored}
             done = await tighten_evidence(deps.client, deps.engine, deps.blobs, only=ids)
-            audited = None
-            if deps.records is not None:  # no records, no bills to attack
+            audited = fixed = None
+            if deps.records is not None:  # no records, no bills to attack or fix
                 self._phase(batch_id, "audit", "The Kasse's auditor is attacking the clean bills")
                 audited = await auditing.run(deps)  # a failing audit is stored, not raised
+                self._phase(batch_id, "actions", "Drafting the letters and tasks for the findings")
+                fixed = await fixing.run(deps)  # likewise a failing draft
         except Exception as exc:  # what was read stays read; the batch must still end
             self._phase(batch_id, "done", f"Stopped early: {type(exc).__name__}: {exc}")
         else:
@@ -103,6 +107,11 @@ class Inbox:
                 detail += (
                     f"; {plural(audited.audited, 'clean bill')} attacked, "
                     f"{plural(audited.upheld, 'objection')} upheld"
+                )
+            if fixed is not None and fixed.patients:
+                detail += (
+                    f"; {plural(fixed.actions, 'action')} drafted for "
+                    f"{plural(fixed.patients, 'patient')}"
                 )
             self._phase(batch_id, "done", detail)
 

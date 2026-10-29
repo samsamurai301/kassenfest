@@ -5,6 +5,10 @@
   "ik": "469960557",
   "bundesland": "BY",
   "municipality": "Deggendorf",
+  "address": [
+   "Hengersberger Str. 18",
+   "94469 Deggendorf"
+  ],
   "staff": [
    {
     "employee_no": "436448642",
@@ -54,7 +58,8 @@
     "name": "Petra Mayerhofer",
     "qualification": "auszubildende"
    }
-  ]
+  ],
+  "billing_working_day": 5
  },
  "patient": {
   "id": "p12",
@@ -98,7 +103,12 @@
   "824646001": {
    "name": "Dr. med. Ursula Fröhlich",
    "lanr": "824646001",
-   "bsnr": "717620859"
+   "bsnr": "717620859",
+   "address": [
+    "Praxis Dr. med. Ursula Fröhlich",
+    "Pfleggasse 7",
+    "94469 Deggendorf"
+   ]
   }
  },
  "prescriptions": [

@@ -5,7 +5,6 @@ concluded is stored (`db.Audit`) and served with each claim (`api.live`).
 """
 
 import asyncio
-import datetime as dt
 from collections.abc import Collection
 
 from fastapi import APIRouter, HTTPException
@@ -30,7 +29,7 @@ class Auditing:
             return AuditSummary()
         async with self._lock:  # a bill is never attacked twice at once
             month = evaluate_month(deps.engine, deps.records, deps.records.month)
-            dossiers = due(month, deps.engine, dt.date.today(), claim_ids)
+            dossiers = due(month, deps.engine, deps.client.settings.as_of(), claim_ids)
             ids = {d.bill.claim.id for d in dossiers}
             self.running |= ids
             try:
@@ -70,7 +69,7 @@ async def audit_claim(claim_id: str, deps: RunDeps) -> AuditStatus:
         raise HTTPException(409, "The rules already object to this bill: fix it first")
     if claim_id in auditing.running:
         return AuditStatus(state="running")
-    if not due(month, deps.engine, dt.date.today(), [claim_id]):
+    if not due(month, deps.engine, deps.client.settings.as_of(), [claim_id]):
         return AuditStatus(state="done")  # nothing new for the auditor to see
     auditing.start(deps, [claim_id])
     return AuditStatus(state="running")

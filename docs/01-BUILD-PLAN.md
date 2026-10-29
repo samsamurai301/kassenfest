@@ -253,10 +253,10 @@ kassenfest/
 - [ ] `RUL-08` P2 Decision-table editor (e.g. GoRules ZEN/JDM) for non-developers.
 
 ### 3.8 Agent: fix problems (Muse Spark tool calling)
-- [ ] `AGT-01` P0 Tool definitions: `get_claim_findings`, `get_patient_context`, `get_document_evidence`, `compute_deadline`, `draft_letter(type, recipient, facts)`, `create_task`, `schedule_reminder`. Tools are thin wrappers over the API — the agent never writes DB state except drafts/tasks.
-- [ ] `AGT-02` P0 Letter templates (German, formal): Folgeverordnung request to doctor (fax/KIM style), request for missing doctor signature/stamp, patient/relative signature request for Leistungsnachweis, cover letter to Kasse for late-submitted Verordnung, Rückfrage on partial approval.
-- [ ] `AGT-03` P0 Deadline service: Verordnung submission deadline, Folgeverordnung window, Entlastungsbetrag carry-over expiry, billing/limitation deadlines → countdown chips + reminder list.
-- [ ] `AGT-04` P1 Agent run trace in UI (tool calls with inputs/outputs) — shows judges real tool use.
+- [x] `AGT-01` P0 Tool definitions: `get_claim_findings`, `get_patient_context`, `get_document_evidence`, `compute_deadline`, `draft_letter(type, recipient, facts)`, `create_task`, `schedule_reminder`. Tools are thin wrappers over the API — the agent never writes DB state except drafts/tasks. *(Oct 29: `agents/fixer.py` — get_claim_findings, get_patient_context, get_document, compute_deadline, draft_letter, create_action; refs instead of ids; drafts checked against the tool results)*
+- [x] `AGT-02` P0 Letter templates (German, formal): Folgeverordnung request to doctor (fax/KIM style), request for missing doctor signature/stamp, patient/relative signature request for Leistungsnachweis, cover letter to Kasse for late-submitted Verordnung, Rückfrage on partial approval. *(Oct 29: drafted by the agent, not templates: the tools add address, greeting and sign-off and check every date, amount and number)*
+- [ ] `AGT-03` P0 Deadline service: Verordnung submission deadline, Folgeverordnung window, Entlastungsbetrag carry-over expiry, billing/limitation deadlines → countdown chips + reminder list. *(Oct 29, partly: billing run, Verordnung submission, Folgeverordnung window, reply times in `compute_deadline`; Entlastungsbetrag and limitation still open)*
+- [x] `AGT-04` P1 Agent run trace in UI (tool calls with inputs/outputs) — shows judges real tool use. *(Oct 29: under each letter on the Actions screen)*
 - [ ] `AGT-05` P1 Export letter as PDF (pdf-lib) with provider letterhead; "copy for fax".
 - [ ] `AGT-06` P2 KIM / e-mail sending (out of scope for demo — drafts only).
 

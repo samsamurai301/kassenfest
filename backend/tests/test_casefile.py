@@ -4,6 +4,7 @@ A perfect reader (synth.oracle) must give exactly the findings the rules give on
 truth: then every difference on live data is a reading error, not a building error.
 """
 
+import datetime as dt
 from collections import Counter
 from functools import cache
 
@@ -26,6 +27,7 @@ from kassenfest.synth.generate import OUT_ROOT
 from kassenfest.synth.oracle import perfect_extraction
 
 DEMO = OUT_ROOT / "demo"
+AS_OF = dt.date(2026, 11, 2)
 pytestmark = pytest.mark.skipif(not (DEMO / "manifest.json").exists(), reason="no demo set")
 
 
@@ -163,7 +165,7 @@ def test_evidence_gets_its_rows_box_when_the_cell_has_none(stored_month):
 
 
 def test_the_board_tells_the_demo_story_from_the_pipeline(stored_month, tmp_path):
-    world = build_world(stored_month, records(), tmp_path / "blobs")
+    world = build_world(stored_month, records(), tmp_path / "blobs", AS_OF)
     before = dict(app.dependency_overrides)
     app.dependency_overrides[current_world] = lambda: world
     try:

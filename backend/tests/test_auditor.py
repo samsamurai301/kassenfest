@@ -272,7 +272,7 @@ async def test_audits_are_stored_once_per_state_and_upheld_ones_become_findings(
     assert finding.evidence[0].document_id == rx.document.id
     assert (finding.rule_id, finding.severity, finding.claim_id) == ("AUDITOR", "warn", eder.id)
 
-    world = build_world(stored_month, records(), tmp_path / "blobs")
+    world = build_world(stored_month, records(), tmp_path / "blobs", AS_OF)
     assert world.audits[eder.id].state == "done" and world.audits[eder.id].upheld == 1
     assert world.audits["C-p01-2026-10-sgbv"].state == "not_needed"
     assert world.audits["C-p05-2026-10-sgbxi"].state == "pending"

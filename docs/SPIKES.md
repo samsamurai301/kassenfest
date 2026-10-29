@@ -250,3 +250,39 @@ There are at most 2 rounds. Round 2 shows the auditor the verdicts and stops whe
 - **One hallucination came from a dossier gap.** v3 claimed LK12 was billed under §36 although its lines are §45b, because the line table didn't show the funding. v4 shows it, and the resolver checks funding against the Leistungsnachweis row.
 - **Replayable.** The prompt calls documents D1, D2… instead of their random ids, so a fresh ingest of the same pages hits the cache. The audit's fingerprint (what the auditor saw, plus the prompt and resolver versions and the document ids) says when a bill is due again. A re-upload of one page re-audits only the bills that use it.
 - **Still open:** AUD-05 (seeded subtle defects to measure catches against hallucinations). The Genehmigung's approval-number box sits on the date line above it: a Muse box one line off that SAM tightened onto the wrong text.
+
+---
+
+## 2026-10-29 — The fixer agent, first month
+
+Muse Spark works out, per patient with open findings, what has to happen before the bills go out, and drafts it (`agents/fixer.py`, `kassenfest fix`). It's a tool loop (`tool_choice` is "auto" only on this API), and the tools are its only way in and out:
+
+- **Reading:** `get_claim_findings`, `get_patient_context` and `get_document` hand out facts under short refs: F1 for a finding, D1 for a document, A1 for a doctor, K1 for a Kasse. The random ids stay out of the prompt, so a replay hits the cache.
+- **Deadlines:** `compute_deadline` gets every due date from the provider's working-day calendar: the billing run (5th working day of the next month), Verordnung submission (HKP-RL §6(5)), the Folgeverordnung window (§5(2)), or a reply time.
+- **Drafting:** `draft_letter` adds the address block from the records, a greeting and the sign-off. It sends a draft back if:
+  - it has a date, amount, time or long number that no tool result contains;
+  - it uses a ref, "Herr"/"Frau", or its own greeting or sign-off;
+  - its last sentence has no full stop.
+- **Filing:** `create_action` needs a computed deadline, an accepted draft and a recipient that fits the kind. The amount is summed from the findings, never written by the model.
+- **Coverage:** when the model stops with a finding uncovered, it is asked once to cover it or say why it needs nothing.
+
+Greetings are neutral ("Guten Tag Dr. Markus Ederer,"), because the records don't say how anyone is addressed.
+
+**Demo month, prompt v5, today pinned to Thu 05.11.2026:** 11 patients, 21 actions, 6 to 17 tool calls each. The 22 runs and spikes behind this cost $1.79 in all (308 calls, median 4.6 s), about $0.45 for a full month. Replay rebuilds every run from the cache for $0, with identical letters.
+
+**What each prompt version fixed:**
+- **v1:** an internal note quoted refs ("Verordnung D1"). A doctor letter talked about the bill and its money, and named the doctor in the third person. v2 says to write as "wir" to "Sie", keeps money out of doctor letters, and the check now rejects refs.
+- **v2:** told Helmut Fischer "you must pay €533.76" for October. A private Eigenanteil needs written cost information given before the care (§120 SGB XI), and the records don't show any. v3 has the office check that first, and has the patient informed about the coming months only. The action's amount was also wrong (€553.12, the sum of the over-budget lines instead of the €533.76 excess); amounts now take each finding's own amount at risk, and findings on the same lines are counted once.
+- **v3:** lines that can't be fixed before the billing run are held back with a bill correction (Dengler's stamp, Christl's signature). After a death, nothing is written to the patient (Pfeffer).
+- **v4:** Albers' subject asked for a "Folgeverordnung ab 15.10.2026", a retroactive Verordnung, which HKP-RL §3(4) rules out. It now asks for the care from now on. A Kasse letter had called the doctor's Verordnung "Ihre Verordnung".
+- **v5 (tools only):** the model once sent `findings` as the string "['F1', 'F2']", and the tool read it character by character. Strings are now accepted; wrongly typed arguments come back as problems instead of failing the run.
+
+**What the checks caught in the month:** 4 letters without a final full stop, each redrafted. In dry runs the check rejected an invented date, amount, time and approval number, a greeting and a "Frau". The coverage question fired for Dengler's late Verordnung, and the model answered correctly: the Kasse's approval of 13.10 already covers 01.10 to 14.10.
+
+**Today is pinned (`TODAY=2026-11-05`)** for the demo. Kerscher's Genehmigung is dated 05.11.2026, so an earlier "today" would have a letter from the future in the pile. Countdowns and the fixer's deadlines count from it, and the replayed prompts match the recording only with the same date.
+
+**Limits:**
+- The check proves a fact appears in a tool result, not that it is attributed right.
+- Kasse addresses are generic ("Leistungsabteilung"), and the records have no fax numbers.
+- No deadlines yet for Entlastungsbetrag carry-over or limitation (AGT-03, partly done).
+- The model's commentary in the trace switches between German and English.

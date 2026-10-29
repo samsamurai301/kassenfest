@@ -96,19 +96,22 @@ def _row(item: BaseModel) -> str:
     return ", ".join(f"{k} {_value(v)}" for k, v in values.items())
 
 
-def _fields(doc: StoredDoc) -> list[str]:
+def fields_read(
+    doc: StoredDoc, entries: str = "each line above names its row", indent: str = "  "
+) -> list[str]:
+    """Every field as the provider read it, one per line; visit-log entries only counted."""
     ext = doc.extraction
     assert ext is not None
     out = []
     for name in type(ext).model_fields:
         item = getattr(ext, name)
         if name == "entries":
-            out.append(f"  entries: {len(item)} rows; each line above names its row")
+            out.append(f"  entries: {len(item)} rows; {entries}")
         elif isinstance(item, list):
             out += [f"  {name}[{i}] ({ROWS[name]} {i + 1}): {_row(r)}" for i, r in enumerate(item)]
         elif isinstance(item, Extracted | Mark):
             out.append(f"  {name} ({LABELS.get(name, name)}): {_shown(item)}")
-    return out
+    return [line.replace("  ", indent, 1) for line in out]
 
 
 def _records(bill: Bill) -> list[str]:
@@ -191,7 +194,7 @@ def dossier(month: Month, claim: Claim, as_of: dt.date) -> Dossier:
         pages += [(d, p.index) for p in d.pages]
         shown = f"image {first}" if len(d.pages) == 1 else f"images {first}-{len(pages)}"
         text.append(f"Document D{k}, {shown}: {DOC_NAMES[d.document.doc_type or '']}.")
-        text += _fields(d)
+        text += fields_read(d)
         refs[f"D{k}"] = d.document.id
     notes = [f for f in bill.findings if f.severity == "info"]
     text += ["", "The provider's rule check found nothing to object to."]
@@ -278,6 +281,25 @@ def latest_audits(engine: Engine) -> dict[str, Audit]:
     with session_scope(engine) as s:
         rows = s.exec(select(Audit).order_by(col(Audit.created_at))).all()
     return {a.claim_id: a for a in rows}
+
+
+def current_audits(month: Month, engine: Engine, as_of: dt.date) -> dict[str, Audit]:
+    """Each clean bill's newest audit, where it is of the bill as it is now."""
+    latest = latest_audits(engine)
+    out = {}
+    for claim in month.claims.values():
+        audit = latest.get(claim.id)
+        if audit is None or not clean(month, claim):
+            continue
+        if audit.fingerprint == dossier(month, claim, as_of).fingerprint:
+            out[claim.id] = audit
+    return out
+
+
+def checked_findings(month: Month, audits: dict[str, Audit]) -> list[Finding]:
+    """The rules' findings and the objections the resolver upheld on these audits."""
+    upheld = [f for cid, a in audits.items() for f in upheld_findings(month.claims[cid], a)]
+    return month.findings + upheld
 
 
 def clean(month: Month, claim: Claim) -> bool:

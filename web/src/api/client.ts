@@ -31,6 +31,9 @@ export type PipelineStep = InboxDocument['step']
 export type ClaimAudit = Schemas['ClaimAudit']
 export type AuditStatus = Schemas['AuditStatus']
 export type ObjectionVerdict = Schemas['ObjectionVerdict']
+export type FixerStatus = Schemas['FixerStatus']
+export type FixRun = Schemas['FixRun']
+export type FixStep = Schemas['FixStep']
 
 async function json<T>(res: Response): Promise<T> {
   if (!res.ok) {
@@ -45,6 +48,10 @@ const get = async <T,>(path: string) => json<T>(await fetch(path))
 async function startAudit(claimId: string): Promise<AuditStatus> {
   const path = `/api/claims/${encodeURIComponent(claimId)}/audit`
   return json<AuditStatus>(await fetch(path, { method: 'POST' }))
+}
+
+async function draftActions(month: string): Promise<FixerStatus> {
+  return json<FixerStatus>(await fetch(`/api/months/${month}/actions/draft`, { method: 'POST' }))
 }
 
 async function upload(files: File[], label?: string): Promise<BatchDetail> {
@@ -64,8 +71,10 @@ export const api = {
     get<PatientTimeline>(`/api/patients/${encodeURIComponent(patientId)}/timeline`),
   batches: () => get<BatchList>('/api/batches'),
   batch: (id: string) => get<BatchDetail>(`/api/batches/${encodeURIComponent(id)}`),
+  fixRun: (id: string) => get<FixRun>(`/api/fix-runs/${encodeURIComponent(id)}`),
   upload,
   startAudit,
+  draftActions,
 }
 
 export const pageImageUrl = (documentId: string, page: number) =>
@@ -74,7 +83,30 @@ export const pageImageUrl = (documentId: string, page: number) =>
 export const useBoard = (month: string) =>
   useQuery({ queryKey: ['board', month], queryFn: () => api.board(month) })
 export const useActions = (month: string) =>
-  useQuery({ queryKey: ['actions', month], queryFn: () => api.actions(month) })
+  useQuery({
+    queryKey: ['actions', month],
+    queryFn: () => api.actions(month),
+    // While the fixer drafts, look again until its actions are in.
+    refetchInterval: (query) => (query.state.data?.fixer.state === 'running' ? 2000 : false),
+  })
+
+/** Let the fixer draft the actions for findings without a current draft; the list then polls. */
+export function useDraftActions(month: string) {
+  const queryClient = useQueryClient()
+  return useMutation({
+    mutationFn: () => api.draftActions(month),
+    onSuccess: () => queryClient.invalidateQueries({ queryKey: ['actions', month] }),
+  })
+}
+
+/** How the fixer drafted an action: every tool call of its run. Runs never change. */
+export const useFixRun = (id: string | null | undefined) =>
+  useQuery({
+    queryKey: ['fix-run', id],
+    queryFn: () => api.fixRun(id!),
+    enabled: !!id,
+    staleTime: Infinity,
+  })
 export const useClaim = (id: string) =>
   useQuery({
     queryKey: ['claim', id],

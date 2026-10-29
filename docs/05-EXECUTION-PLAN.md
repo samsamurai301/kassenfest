@@ -200,7 +200,7 @@ Each session: start by reading this section's exit criterion; end with a commit 
 - **Exit (milestone)**: upload `data/synthetic/demo/` → 🟢🟠🔴 board → click any finding → highlighted region on the scan. **Miss → apply §6 cuts tonight, not Monday.**
 
 ### Sun Nov 1 — agents (10 h)
-- [ ] **Fixer agent**: tools `get_claim_findings`, `get_patient_context`, `compute_deadline`, `draft_letter`, `create_action`; German letter drafts; deadlines + countdowns; trace view.
+- [x] **Fixer agent**: tools `get_claim_findings`, `get_patient_context`, `compute_deadline`, `draft_letter`, `create_action`; German letter drafts; deadlines + countdowns; trace view. *(Oct 29: `agents/fixer.py`, runs after every upload and on demand; drafts checked against the tool results; trace under each letter. First month: 21 actions for 11 patients, see SPIKES.md)*
 - [x] **Auditor + resolver**: Kasse-code vocabulary + FACT/INFO, evidence crops as image input, ≤ 2 rounds, verdicts persisted; debate panel. *(Oct 29: `agents/auditor.py` + `agents/resolver.py`; runs after every upload and on demand per bill; full pages as images; debate panel on the bill screen. First month: 7 objections, 1 upheld, see SPIKES.md)*
 - [ ] Prompt iteration on the worst dev-set fields (dev only!).
 - [ ] Optional: 30-min real-handwriting session (§4.2).

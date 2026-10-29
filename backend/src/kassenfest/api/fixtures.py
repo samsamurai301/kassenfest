@@ -18,13 +18,14 @@ from typing import Literal
 
 from kassenfest.api import pages
 from kassenfest.api.models import (
-    Action,
     ClaimAudit,
     DocumentField,
     DocumentInfo,
-    Letter,
+    FixerStatus,
+    FixRun,
     PageInfo,
 )
+from kassenfest.schemas.actions import Action, Letter
 from kassenfest.schemas.common import DocType, FieldStatus, Frequency, PixelBox
 from kassenfest.schemas.domain import (
     Approval,
@@ -108,9 +109,10 @@ PROVIDER = Provider(
     name="Pflegedienst Sonnenschein GmbH",
     ik=ik("46999401"),
     municipality="Deggendorf",
+    address=["Bahnhofstraße 12", "94469 Deggendorf"],
     staff=[KOELBL, HOFBAUER, WIMMER, ZELLNER, BRUNNER, REITER],
 )
-PROVIDER_ADDRESS = "Bahnhofstraße 12, 94469 Deggendorf"
+PROVIDER_ADDRESS = ", ".join(PROVIDER.address)
 PROVIDER_STAMP = (PROVIDER.name, PROVIDER_ADDRESS, f"IK {PROVIDER.ik}")
 SIGN_OFF = "Mit freundlichen Grüßen\n\nMaria Kölbl\nPflegedienstleitung\n" + PROVIDER.name
 
@@ -228,6 +230,9 @@ class World:
     actions: list[Action] = field(default_factory=list)
     audits: dict[str, ClaimAudit] = field(default_factory=dict)
     """Pipeline claims: what the auditor agent made of each (fixtures have none)."""
+    fixer: FixerStatus = field(default_factory=lambda: FixerStatus(state="unavailable"))
+    fix_runs: dict[str, FixRun] = field(default_factory=dict)
+    """Pipeline actions: the fixer agent's runs they came from, by id."""
 
     def page_image(self, document_id: str, index: int) -> tuple[bytes, str] | None:
         """(image bytes, media type) of one page, or None."""

@@ -27,7 +27,11 @@ class Provider(BaseModel):
     ik: str
     bundesland: str = "BY"
     municipality: str = Field(description="Drives the holiday calendar, e.g. Mariä Himmelfahrt")
+    address: list[str] = Field(default=[], description="Street and town, for letterheads")
     staff: list[Staff] = []
+    billing_working_day: int = Field(
+        default=5, description="A month's bills go out on this working day of the next month"
+    )
 
 
 class Payer(BaseModel):
@@ -42,6 +46,7 @@ class Physician(BaseModel):
     name: str
     lanr: str
     bsnr: str
+    address: list[str] = Field(default=[], description="Practice address lines, for letters")
 
 
 class PflegegradPeriod(BaseModel):

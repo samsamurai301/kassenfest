@@ -11,9 +11,19 @@ from pathlib import Path
 from sqlalchemy import Engine, func
 from sqlmodel import select
 
-from kassenfest.agents.auditor import clean, dossier, latest_audits, upheld_findings, verdicts
+from kassenfest.agents.auditor import checked_findings, clean, current_audits, verdicts
+from kassenfest.agents.fixer import actions, briefs, latest_fixes
 from kassenfest.api.fixtures import World
-from kassenfest.api.models import AuditRound, ClaimAudit, DocumentField, DocumentInfo, PageInfo
+from kassenfest.api.models import (
+    AuditRound,
+    ClaimAudit,
+    DocumentField,
+    DocumentInfo,
+    FixerStatus,
+    FixRun,
+    FixStep,
+    PageInfo,
+)
 from kassenfest.config import Settings
 from kassenfest.db import Document, create_db, session_scope
 from kassenfest.pipeline.link import value
@@ -153,14 +163,14 @@ def _holidays(records: MasterData) -> dict[dt.date, str]:
     }
 
 
-def build_world(engine: Engine, records: MasterData, blob_dir: Path) -> World:
+def build_world(engine: Engine, records: MasterData, blob_dir: Path, as_of: dt.date) -> World:
     month = evaluate_month(engine, records, records.month)
     blobs = BlobStore(blob_dir)
     ref = load_reference()
     w = World(
         source="pipeline",
         month=records.month,
-        as_of=dt.date.today(),
+        as_of=as_of,
         provider=records.provider,
         payers={p.ik: p for p in records.payers},
         physicians={p.lanr: p for p in records.physicians},
@@ -179,6 +189,7 @@ def build_world(engine: Engine, records: MasterData, blob_dir: Path) -> World:
     w.claims = month.claims
     w.findings = month.findings
     _audits(w, engine, month, ref)
+    _fixes(w, engine, month)
     for doc in month.docs.values():
         d = doc.document
         w.documents[d.id] = DocumentInfo(
@@ -197,14 +208,14 @@ def build_world(engine: Engine, records: MasterData, blob_dir: Path) -> World:
 def _audits(w: World, engine: Engine, month: Month, ref: Reference) -> None:
     """Each clean bill's audit, if it is of the bill as it is now; upheld objections become
     findings, so the board shows them."""
-    latest = latest_audits(engine)
+    current = current_audits(month, engine, w.as_of)
     labels = {code: info.label_en for code, info in ref.kasse_codes.items()}
     for claim in w.claims.values():
         if not clean(month, claim):
             w.audits[claim.id] = ClaimAudit(state="not_needed")
             continue
-        audit = latest.get(claim.id)
-        if audit is None or audit.fingerprint != dossier(month, claim, w.as_of).fingerprint:
+        audit = current.get(claim.id)
+        if audit is None:
             w.audits[claim.id] = ClaimAudit(state="pending", code_labels=labels)
             continue
         rounds = verdicts(audit)
@@ -221,7 +232,41 @@ def _audits(w: World, engine: Engine, month: Month, ref: Reference) -> None:
             error=audit.error,
             code_labels=labels,
         )
-        w.findings += upheld_findings(claim, audit)
+    w.findings = checked_findings(month, current)
+
+
+def _fixes(w: World, engine: Engine, month: Month) -> None:
+    """Each patient's actions, if the fixer drafted them for the findings as they are now
+    (upheld audit objections included, so this runs after `_audits`)."""
+    latest = latest_fixes(engine)
+    due = []
+    for pid, b in briefs(month, w.findings, w.as_of).items():
+        fix = latest.get(pid)
+        if fix is None or fix.fingerprint != b.fingerprint or fix.error:
+            due.append(b.case.patient.name)
+            continue
+        filed = actions(fix)
+        w.actions += filed
+        w.fix_runs[fix.id] = FixRun(
+            id=fix.id,
+            patient_id=pid,
+            patient_name=b.case.patient.name,
+            created_at=fix.created_at.replace(tzinfo=dt.UTC),  # SQLite drops the zone
+            as_of=fix.as_of,
+            model=fix.model,
+            steps=[FixStep.model_validate(s) for s in fix.steps],
+            note=fix.note,
+            error=fix.error,
+            refs=fix.refs,
+            actions=[a.id for a in filed],
+        )
+    models = {r.model for r in w.fix_runs.values()}
+    w.fixer = FixerStatus(
+        state="pending" if due else "done",
+        due=due,
+        drafted=len(w.fix_runs),
+        model=models.pop() if len(models) == 1 else None,
+    )
 
 
 @lru_cache(maxsize=4)
@@ -230,9 +275,11 @@ def db_engine(db_path: Path) -> Engine:
 
 
 @lru_cache(maxsize=2)
-def _cached(db_path: Path, records_path: Path, blob_dir: Path, stamp: tuple) -> World:
+def _cached(
+    db_path: Path, records_path: Path, blob_dir: Path, as_of: dt.date, stamp: tuple
+) -> World:
     records = MasterData.model_validate_json(records_path.read_text())
-    return build_world(db_engine(db_path), records, blob_dir)
+    return build_world(db_engine(db_path), records, blob_dir, as_of)
 
 
 def pipeline_world(settings: Settings) -> World | None:
@@ -246,4 +293,5 @@ def pipeline_world(settings: Settings) -> World | None:
     # Every commit touches the SQLite file (no WAL), so its mtime covers new documents,
     # extractions and boxes alike; the records' mtime covers edits to the records.
     stamp = (settings.db_path.stat().st_mtime_ns, settings.records_path.stat().st_mtime_ns)
-    return _cached(settings.db_path, settings.records_path, settings.blob_dir, stamp)
+    as_of = settings.as_of()
+    return _cached(settings.db_path, settings.records_path, settings.blob_dir, as_of, stamp)

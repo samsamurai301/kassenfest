@@ -7,8 +7,8 @@ setup: ## install backend + web dependencies
 	cd backend && uv sync
 	cd web && pnpm install
 
-api: ## FastAPI on :8000 with reload
-	cd backend && uv run uvicorn kassenfest.api.app:app --reload --port 8000
+api: ## FastAPI on :8000 with reload; today pinned to the demo's date (TODAY=… to change)
+	cd backend && TODAY=$(or $(TODAY),2026-11-05) uv run uvicorn kassenfest.api.app:app --reload --port 8000
 
 web: ## Vite dev server on :5173 (proxies /api to :8000)
 	cd web && pnpm dev

@@ -38,6 +38,26 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/fix-runs/{run_id}": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /**
+         * Fix Run
+         * @description Every step of the fixer agent's run that filed some of the month's actions.
+         */
+        get: operations["fix_run_api_fix_runs__run_id__get"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/claims/{claim_id}": {
         parameters: {
             query?: never;
@@ -185,6 +205,26 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/months/{month}/actions/draft": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * Draft Actions
+         * @description Let the fixer draft the actions of every patient whose findings have no current draft.
+         */
+        post: operations["draft_actions_api_months__month__actions_draft_post"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/health": {
         parameters: {
             query?: never;
@@ -214,7 +254,7 @@ export interface components {
              * Kind
              * @enum {string}
              */
-            kind: "folgeverordnung_request" | "stamp_request" | "signature_request" | "kasse_letter" | "eigenanteil_notice" | "claim_correction" | "staff_followup";
+            kind: "folgeverordnung_request" | "stamp_request" | "prescription_change" | "signature_request" | "kasse_letter" | "eigenanteil_notice" | "claim_correction" | "staff_followup";
             /** Title */
             title: string;
             /**
@@ -246,6 +286,11 @@ export interface components {
              */
             status: "draft" | "open";
             letter: components["schemas"]["Letter"];
+            /**
+             * Run Id
+             * @description The fixer agent's run that filed it, if any
+             */
+            run_id?: string | null;
         };
         /** ActionList */
         ActionList: {
@@ -257,8 +302,10 @@ export interface components {
              * @description 'Today' in the demo world; countdowns count from here
              */
             as_of: string;
+            provider: components["schemas"]["Provider"];
             /** Actions */
             actions: components["schemas"]["Action"][];
+            fixer: components["schemas"]["FixerStatus"];
         };
         /**
          * Approval
@@ -363,7 +410,7 @@ export interface components {
              * Phase
              * @enum {string}
              */
-            phase: "reading" | "evidence" | "audit" | "done" | "interrupted";
+            phase: "reading" | "evidence" | "audit" | "actions" | "done" | "interrupted";
             /** Files */
             files: number;
             /**
@@ -394,7 +441,7 @@ export interface components {
              * Phase
              * @enum {string}
              */
-            phase: "reading" | "evidence" | "audit" | "done" | "interrupted";
+            phase: "reading" | "evidence" | "audit" | "actions" | "done" | "interrupted";
             /** @description The document after this step */
             document?: components["schemas"]["InboxDocument"] | null;
             /**
@@ -426,7 +473,7 @@ export interface components {
              * Phase
              * @enum {string}
              */
-            phase: "reading" | "evidence" | "audit" | "done" | "interrupted";
+            phase: "reading" | "evidence" | "audit" | "actions" | "done" | "interrupted";
             /** Files */
             files: number;
             /**
@@ -759,6 +806,107 @@ export interface components {
              */
             amount_at_risk_cents: number;
         };
+        /**
+         * FixRun
+         * @description How the fixer agent drafted one patient's actions: every step, in order.
+         */
+        FixRun: {
+            /** Id */
+            id: string;
+            /** Patient Id */
+            patient_id: string;
+            /** Patient Name */
+            patient_name: string;
+            /**
+             * Created At
+             * Format: date-time
+             */
+            created_at: string;
+            /**
+             * As Of
+             * Format: date
+             * @description 'Today' for the run
+             */
+            as_of: string;
+            /** Model */
+            model: string;
+            /** Steps */
+            steps: components["schemas"]["FixStep"][];
+            /** Note */
+            note: string | null;
+            /** Error */
+            error: string | null;
+            /**
+             * Refs
+             * @description F1 -> finding id, D1 -> document id
+             */
+            refs: {
+                [key: string]: string;
+            };
+            /**
+             * Actions
+             * @description The actions it filed, in order
+             */
+            actions: string[];
+        };
+        /** FixStep */
+        FixStep: {
+            /** Turn */
+            turn: number;
+            /**
+             * Kind
+             * @enum {string}
+             */
+            kind: "call" | "say" | "nudge";
+            /** Tool */
+            tool?: string | null;
+            /** Args */
+            args?: {
+                [key: string]: unknown;
+            } | null;
+            /** Result */
+            result?: {
+                [key: string]: unknown;
+            } | null;
+            /**
+             * Text
+             * @default
+             */
+            text: string;
+            /**
+             * Ok
+             * @default true
+             */
+            ok: boolean;
+        };
+        /** FixerStatus */
+        FixerStatus: {
+            /**
+             * State
+             * @enum {string}
+             */
+            state: "done" | "pending" | "running" | "unavailable";
+            /**
+             * Due
+             * @description Patients whose findings have no current draft
+             * @default []
+             */
+            due: string[];
+            /**
+             * Running
+             * @description Patients the agent is drafting for right now
+             * @default []
+             */
+            running: string[];
+            /**
+             * Drafted
+             * @description Patients drafted for their findings as they are
+             * @default 0
+             */
+            drafted: number;
+            /** Model */
+            model?: string | null;
+        };
         /** Frequency */
         Frequency: {
             /**
@@ -1089,6 +1237,12 @@ export interface components {
             lanr: string;
             /** Bsnr */
             bsnr: string;
+            /**
+             * Address
+             * @description Practice address lines, for letters
+             * @default []
+             */
+            address: string[];
         };
         /** PrescribedService */
         PrescribedService: {
@@ -1182,10 +1336,22 @@ export interface components {
              */
             municipality: string;
             /**
+             * Address
+             * @description Street and town, for letterheads
+             * @default []
+             */
+            address: string[];
+            /**
              * Staff
              * @default []
              */
             staff: components["schemas"]["Staff"][];
+            /**
+             * Billing Working Day
+             * @description A month's bills go out on this working day of the next month
+             * @default 5
+             */
+            billing_working_day: number;
         };
         /** Staff */
         Staff: {
@@ -1387,6 +1553,37 @@ export interface operations {
                 };
                 content: {
                     "application/json": components["schemas"]["ActionList"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    fix_run_api_fix_runs__run_id__get: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                run_id: string;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["FixRun"];
                 };
             };
             /** @description Validation Error */
@@ -1661,6 +1858,37 @@ export interface operations {
                 };
                 content: {
                     "application/json": components["schemas"]["AuditStatus"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    draft_actions_api_months__month__actions_draft_post: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                month: string;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            202: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["FixerStatus"];
                 };
             };
             /** @description Validation Error */

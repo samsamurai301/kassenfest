@@ -39,6 +39,35 @@ class ChatResult[T: BaseModel]:
 
 
 @dataclass
+class ToolCall:
+    id: str
+    name: str
+    arguments: str
+    """JSON, as the model wrote it: may not parse."""
+
+
+@dataclass
+class ToolTurn:
+    content: str
+    calls: list[ToolCall]
+    meta: CallMeta
+
+    def message(self) -> dict[str, Any]:
+        """The assistant message to send back on the next turn."""
+        out: dict[str, Any] = {"role": "assistant", "content": self.content}
+        if self.calls:
+            out["tool_calls"] = [
+                {
+                    "id": c.id,
+                    "type": "function",
+                    "function": {"name": c.name, "arguments": c.arguments},
+                }
+                for c in self.calls
+            ]
+        return out
+
+
+@dataclass
 class SegmentResult:
     segments: list[Segment]
     raw_output: str
@@ -116,6 +145,39 @@ class MetaModelClient:
         )
         raw = response["choices"][0]["message"]["content"]
         return ChatResult(parsed=schema.model_validate_json(raw), raw_content=raw, meta=meta)
+
+    async def chat_tools(
+        self,
+        *,
+        prompt_id: str,
+        messages: Sequence[dict[str, Any]],
+        tools: Sequence[dict[str, Any]],
+        reasoning_effort: ReasoningEffort = "medium",
+    ) -> ToolTurn:
+        """One turn of a tool loop: the model's next message, with any tool calls in it.
+
+        `tool_choice` only takes "auto" on this API, so the caller decides what to do when
+        the model answers in prose instead."""
+        model = self.settings.muse_model
+        request = {
+            "model": model,
+            "messages": list(messages),
+            "tools": list(tools),
+            "tool_choice": "auto",
+            "reasoning_effort": reasoning_effort,
+        }
+        response, meta = await self._call(
+            prompt_id,
+            request,
+            lambda: self.transport.chat.completions.create(**request),
+            lambda r: chat_cost(model, r.get("usage")),
+        )
+        message = response["choices"][0]["message"]
+        calls = [
+            ToolCall(c["id"], c["function"]["name"], c["function"].get("arguments") or "{}")
+            for c in message.get("tool_calls") or []
+        ]
+        return ToolTurn(message.get("content") or "", calls, meta)
 
     async def segment(
         self,

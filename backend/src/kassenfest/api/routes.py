@@ -11,6 +11,7 @@ from fastapi import APIRouter, Depends, HTTPException, Response
 
 from kassenfest.api import fixtures, live
 from kassenfest.api.audit import auditing
+from kassenfest.api.fix import fixing
 from kassenfest.api.fixtures import World
 from kassenfest.api.models import (
     ActionList,
@@ -19,6 +20,8 @@ from kassenfest.api.models import (
     ClaimAudit,
     ClaimDetail,
     DocumentDetail,
+    FixerStatus,
+    FixRun,
     Holiday,
     MonthBoard,
     PatientTimeline,
@@ -120,11 +123,29 @@ def month_board(month: str, world: Current) -> MonthBoard:
     )
 
 
+def fixer_status(w: World) -> FixerStatus:
+    running = [p.name for pid, p in w.patients.items() if pid in fixing.running]
+    if w.fixer.state == "unavailable" or not running:
+        return w.fixer
+    return w.fixer.model_copy(update={"state": "running", "running": sorted(running)})
+
+
 @router.get("/months/{month}/actions")
 def month_actions(month: str, world: Current) -> ActionList:
     w = _month(world, month)
     actions = sorted(w.actions, key=lambda a: (a.due_date, -a.amount_cents))
-    return ActionList(month=month, as_of=w.as_of, actions=actions)
+    return ActionList(
+        month=month, as_of=w.as_of, provider=w.provider, actions=actions, fixer=fixer_status(w)
+    )
+
+
+@router.get("/fix-runs/{run_id}")
+def fix_run(run_id: str, w: Current) -> FixRun:
+    """Every step of the fixer agent's run that filed some of the month's actions."""
+    run = w.fix_runs.get(run_id)
+    if run is None:
+        raise HTTPException(404, f"No fixer run {run_id} behind the current actions")
+    return run
 
 
 @router.get("/claims/{claim_id}")

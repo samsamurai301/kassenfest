@@ -5,10 +5,11 @@ these only bundle it per screen and add what the UI needs to draw it.
 """
 
 import datetime as dt
-from typing import Literal
+from typing import Any, Literal
 
 from pydantic import BaseModel, Field
 
+from kassenfest.schemas.actions import Action
 from kassenfest.schemas.common import DocType, FieldStatus, PixelBox
 from kassenfest.schemas.domain import (
     Approval,
@@ -92,45 +93,54 @@ class DocumentDetail(BaseModel):
 
 # --- Actions ---------------------------------------------------------------------
 
-ActionKind = Literal[
-    "folgeverordnung_request",
-    "stamp_request",
-    "signature_request",
-    "kasse_letter",
-    "eigenanteil_notice",
-    "claim_correction",
-    "staff_followup",
-]
+
+FixerState = Literal["done", "pending", "running", "unavailable"]
+"""pending: some patient's findings have no draft for their current state ·
+unavailable: fixture data, the actions are hand-written."""
 
 
-class Letter(BaseModel):
-    """A drafted letter or note (German); never sent by Kassenfest itself."""
+class FixerStatus(BaseModel):
+    state: FixerState
+    due: list[str] = Field([], description="Patients whose findings have no current draft")
+    running: list[str] = Field([], description="Patients the agent is drafting for right now")
+    drafted: int = Field(0, description="Patients drafted for their findings as they are")
+    model: str | None = None
 
-    channel: Literal["fax", "post", "handover", "internal"]
-    recipient: list[str] = Field(description="Address block, one line per item")
-    subject: str
-    body: str
+
+class FixStep(BaseModel):
+    turn: int
+    kind: Literal["call", "say", "nudge"]
+    """call: a tool call and its result · say: the model's words · nudge: our reminder that a
+    finding has no action yet."""
+    tool: str | None = None
+    args: dict[str, Any] | None = None
+    result: dict[str, Any] | None = None
+    text: str = ""
+    ok: bool = True
 
 
-class Action(BaseModel):
+class FixRun(BaseModel):
+    """How the fixer agent drafted one patient's actions: every step, in order."""
+
     id: str
-    kind: ActionKind
-    title: str
-    why: str = Field(description="One English sentence: what goes wrong if nobody acts")
     patient_id: str
     patient_name: str
-    claim_id: str | None
-    finding_ids: list[str]
-    due_date: dt.date
-    amount_cents: int = Field(description="Money on the linked findings")
-    status: Literal["draft", "open"]
-    letter: Letter
+    created_at: dt.datetime
+    as_of: dt.date = Field(description="'Today' for the run")
+    model: str
+    steps: list[FixStep]
+    note: str | None
+    error: str | None
+    refs: dict[str, str] = Field(description="F1 -> finding id, D1 -> document id")
+    actions: list[str] = Field(description="The actions it filed, in order")
 
 
 class ActionList(BaseModel):
     month: str
     as_of: dt.date = Field(description="'Today' in the demo world; countdowns count from here")
+    provider: Provider
     actions: list[Action]
+    fixer: FixerStatus
 
 
 # --- Board and claim ------------------------------------------------------------
@@ -213,9 +223,9 @@ class PatientTimeline(BaseModel):
 
 PipelineStep = Literal["stored", "classified", "extracted", "linked", "localized", "done", "error"]
 DocumentStatus = Literal["queued", "processing", "done", "error", "superseded"]
-BatchPhase = Literal["reading", "evidence", "audit", "done", "interrupted"]
-"""reading documents → tightening evidence boxes → the auditor attacks the clean bills → done;
-interrupted: the server stopped."""
+BatchPhase = Literal["reading", "evidence", "audit", "actions", "done", "interrupted"]
+"""reading documents → tightening evidence boxes → the auditor attacks the clean bills → the
+fixer drafts the actions → done; interrupted: the server stopped."""
 
 
 class InboxDocument(BaseModel):

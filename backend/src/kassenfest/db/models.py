@@ -4,7 +4,7 @@ Extractions are stored as the model returned them (JSON); typed facts are rebuil
 from them, so changing a normalizer never needs a migration.
 """
 
-from datetime import UTC, datetime
+from datetime import UTC, date, datetime
 from typing import Any
 from uuid import uuid4
 
@@ -89,6 +89,27 @@ class Audit(SQLModel, table=True):
         default_factory=list, sa_column=Column(JSON), description="Per round: verdicts"
     )
     repeats: int = Field(default=0, description="Objections dropped as repeats")
+    error: str | None = None
+    cost_usd: float = 0.0
+    created_at: datetime = Field(default_factory=_now)
+
+
+class Fix(SQLModel, table=True):
+    """The fixer agent's run for one patient: the actions it filed and every step to them."""
+
+    id: str = Field(default_factory=lambda: _id("fix"), primary_key=True)
+    patient_id: str = Field(index=True)
+    fingerprint: str = Field(index=True, description="sha256 of everything the fixer saw")
+    model: str
+    as_of: date = Field(description="'Today' for the run: its deadlines count from here")
+    steps: list[Any] = Field(
+        default_factory=list, sa_column=Column(JSON), description="Tool calls, words, nudges"
+    )
+    actions: list[Any] = Field(default_factory=list, sa_column=Column(JSON))
+    refs: dict[str, str] = Field(
+        default_factory=dict, sa_column=Column(JSON), description="F1/D1 refs → ids"
+    )
+    note: str | None = Field(default=None, description="The agent's closing words")
     error: str | None = None
     cost_usd: float = 0.0
     created_at: datetime = Field(default_factory=_now)
