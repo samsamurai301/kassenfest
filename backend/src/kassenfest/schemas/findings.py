@@ -72,22 +72,35 @@ def claim_status(findings: list[Finding]) -> ClaimStatus:
 
 class Objection(Strict):
     code: KasseCode | Literal["FACT", "INFO"] = Field(
-        description="A Kasse rejection code; FACT for a concrete document fact; "
-        "INFO for a soft suspicion that may never block"
+        description="A Kasse rejection code; FACT for a field on a page that makes the bill "
+        "wrong; INFO for a soft suspicion that may never block"
     )
-    claim_line_ids: list[str] = Field(description="Affected claim lines; empty = whole claim")
+    claim_line_ids: list[str] = Field(
+        description="Affected line ids, e.g. '#3'; empty = whole bill"
+    )
     document_id: str | None = Field(description="Required for FACT")
-    page: int | None
-    field_path: str | None = Field(description="Required for FACT, e.g. 'period_to'")
-    statement: str = Field(description="One sentence, as the Kasse would write it")
+    page: int | None = Field(description="0-based page of that document")
+    field_path: str | None = Field(description="Required for FACT: a path from the field list")
+    reads: str | None = Field(
+        description="Required for FACT: what that field on the page shows, exactly as written; "
+        "'' if it is blank"
+    )
+    statement: str = Field(description="One sentence in German, as the Kasse would write it")
+    statement_en: str = Field(description="The same sentence in English")
 
 
 class AuditorOutput(Strict):
     objections: list[Objection]
 
 
+Verdict = Literal["upheld", "dismissed", "noted"]
+"""upheld: a rule or record check confirms it · dismissed: checked, unfounded ·
+noted: an INFO suspicion, shown to a human, never blocks."""
+
+
 class ObjectionVerdict(BaseModel):
     objection: Objection
-    verdict: Literal["upheld", "dismissed"]
-    reason: str
-    rule_ids_checked: list[str] = []
+    verdict: Verdict
+    reason: str = Field(description="English: what the resolver checked and found")
+    checked: list[str] = Field(default=[], description="Rule ids and record checks it ran")
+    evidence: list[Evidence] = []

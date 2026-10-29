@@ -11,7 +11,8 @@ from PIL import Image
 
 from kassenfest.api import inbox as inbox_mod
 from kassenfest.api.app import app
-from kassenfest.api.inbox import Deps, Inbox, Run, run_deps, unpack
+from kassenfest.api.deps import Deps, run_deps
+from kassenfest.api.inbox import Inbox, Run, unpack
 from kassenfest.db import Batch, Document, create_db, session_scope
 from kassenfest.llm.client import MetaModelClient
 from kassenfest.storage import BlobStore

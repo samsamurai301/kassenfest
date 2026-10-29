@@ -20,8 +20,9 @@ from kassenfest.pipeline.link import Link, link
 from kassenfest.pipeline.validate import validate
 from kassenfest.rules.engine import EngineResult, evaluate_document, run
 from kassenfest.rules.reference import load_reference
+from kassenfest.rules.tariffs import claim_id
 from kassenfest.schemas.common import Extracted, Mark, PixelBox
-from kassenfest.schemas.domain import CaseFile
+from kassenfest.schemas.domain import CaseFile, Claim
 from kassenfest.schemas.extraction import EXTRACTION_SCHEMAS, Located
 from kassenfest.schemas.findings import Evidence, Finding
 from kassenfest.schemas.records import MasterData
@@ -38,6 +39,8 @@ class StoredDoc:
     """field path → (page, pixel box)."""
     sources: dict[str, str] = field(default_factory=dict)
     """field path → where its stored box came from (`Localization.source`)."""
+    ink: dict[str, float] = field(default_factory=dict)
+    """field path → dark-pixel share inside its stored box, where measured."""
     link: Link | None = None
 
     @property
@@ -53,7 +56,25 @@ class Month:
     cases: dict[str, CaseFile]
     results: dict[str, EngineResult]
     findings: list[Finding]
-    """Case and document findings, evidence boxed."""
+    """Case and document findings, evidence boxed, each on the claim it concerns."""
+
+    @property
+    def claims(self) -> dict[str, Claim]:
+        return {c.id: c for r in self.results.values() for c in r.claims}
+
+
+SEVERITY_RANK = {"block": 0, "warn": 1, "info": 2}
+
+
+def claim_findings(claim: Claim, findings: list[Finding]) -> list[Finding]:
+    """The claim's own findings, and claim-less ones that hit any of its lines; worst first."""
+    lines = {line.id for line in claim.lines}
+    found = [
+        f
+        for f in findings
+        if f.claim_id == claim.id or (f.claim_id is None and lines & set(f.claim_line_ids))
+    ]
+    return sorted(found, key=lambda f: (SEVERITY_RANK[f.severity], -f.amount_at_risk_cents))
 
 
 def field_boxes(doc: BaseModel, pages: list[Page]) -> dict[str, tuple[int, PixelBox]]:
@@ -110,6 +131,8 @@ def load_docs(engine: Engine) -> list[StoredDoc]:
                 for loc in s.exec(select(Localization).where(Localization.document_id == doc.id)):
                     stored.boxes[loc.field_path] = (loc.page, tuple(loc.box))  # type: ignore[arg-type]
                     stored.sources[loc.field_path] = loc.source
+                    if loc.ink_ratio is not None:
+                        stored.ink[loc.field_path] = loc.ink_ratio
             s.expunge_all()
             out.append(stored)
     return out
@@ -137,6 +160,28 @@ def boxed(evidence: Evidence, docs: dict[str, StoredDoc]) -> Evidence:
         return evidence
     page, box = doc.boxes[key]
     return evidence.model_copy(update={"page": page, "box": box})
+
+
+def assign_claims(
+    cases: dict[str, CaseFile],
+    results: dict[str, EngineResult],
+    docs: dict[str, StoredDoc],
+    findings: list[Finding],
+) -> list[Finding]:
+    """Document findings (no lines) go on the claim their document feeds: a visit log on its
+    own claim, a Verordnung or Genehmigung on the patient's HKP claim."""
+    by_log = {log.document_id: claim_id(log) for case in cases.values() for log in case.visit_logs}
+    hkp = {pid: c.id for pid, r in results.items() for c in r.claims if c.domain == "sgbv"}
+    out = []
+    for f in findings:
+        if f.claim_id is None and not f.claim_line_ids and f.evidence:
+            doc = docs.get(f.evidence[0].document_id)
+            target = by_log.get(f.evidence[0].document_id)
+            if target is None and doc and doc.document.doc_type in ("muster12", "approval_letter"):
+                target = hkp.get(f.patient_id)
+            f = f.model_copy(update={"claim_id": target})
+        out.append(f)
+    return out
 
 
 def evaluate_month(engine: Engine, records: MasterData, month: str) -> Month:
@@ -169,4 +214,5 @@ def evaluate_month(engine: Engine, records: MasterData, month: str) -> Month:
     findings = [
         f.model_copy(update={"evidence": [boxed(e, docs) for e in f.evidence]}) for f in findings
     ]
+    findings = assign_claims(built.cases, results, docs, findings)
     return Month(month, records, docs, built.cases, results, findings)

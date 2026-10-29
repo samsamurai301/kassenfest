@@ -1,5 +1,6 @@
-"""`kassenfest ingest`: run files through the pipeline from the command line."""
+"""`kassenfest ingest`, `evidence` and `audit`: the pipeline from the command line."""
 
+from datetime import date
 from pathlib import Path
 
 from sqlmodel import select
@@ -37,6 +38,40 @@ async def evidence(settings: Settings) -> int:
         f"{done.found}/{done.asked} more found on a crop"
     )
     return 0
+
+
+async def audit(settings: Settings, claim_ids: list[str]) -> int:
+    """Let the auditor agent attack the clean bills that are due (also run after every upload)."""
+    from kassenfest.agents.auditor import audit_month, due, latest_audits, verdicts
+    from kassenfest.pipeline.month import evaluate_month
+
+    if not settings.records_path.exists():
+        print(f"no records at {settings.records_path}: no bills to audit")
+        return 1
+    records = MasterData.model_validate_json(settings.records_path.read_text())
+    engine = create_db(settings.db_path)
+    client, blobs = MetaModelClient(settings), BlobStore(settings.blob_dir)
+    month = evaluate_month(engine, records, records.month)
+    dossiers = due(month, engine, date.today(), claim_ids or None)
+    print(f"audit: {len(dossiers)} clean bills due")
+    done = await audit_month(client, engine, blobs, records, dossiers=dossiers)
+    latest = latest_audits(engine)
+    for d in dossiers:
+        a = latest[d.bill.claim.id]
+        print(
+            f"\n{d.bill.claim.id} ({d.bill.case.patient.name})"
+            + (f": {a.error}" if a.error else "")
+        )
+        for n, round_ in enumerate(verdicts(a), 1):
+            for v in round_:
+                o = v.objection
+                print(f"  round {n} {o.code:<5} {v.verdict:<9} {o.statement_en}")
+                print(f"  {'':<22}{v.reason}")
+    print(
+        f"\naudit: {done.audited} bills attacked, {done.objections} objections, "
+        f"{done.upheld} upheld, {done.failed} failed, ${done.cost_usd:.3f}"
+    )
+    return 1 if done.failed else 0
 
 
 async def run(settings: Settings, paths: list[str], label: str | None) -> int:

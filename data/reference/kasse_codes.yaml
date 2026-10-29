@@ -1,0 +1,60 @@
+# Kasse rejection codes (TA HKP 10.1 / TA5), the auditor agent's only blocking vocabulary
+# (docs/02 §9). Codes as published; the labels are our short paraphrases, not the
+# official wording. Which rules and record checks re-examine each code:
+# kassenfest/agents/resolver.py.
+source: "TA HKP 1.3.0 Anlage 10.1 / TA5 Fehlerkatalog (Rückweisungsgründe)"
+codes:
+  "41002":
+    label_de: Kein gültiger Versicherungsschutz im Leistungszeitraum
+    label_en: No valid insurance in the period
+  "41003":
+    label_de: Leistungsanspruch ruht (z. B. stationärer Aufenthalt)
+    label_en: Entitlement suspended (e.g. an inpatient stay)
+  "42002":
+    label_de: Keine Genehmigung
+    label_en: No approval
+  "42003":
+    label_de: Keine Genehmigung für den Abrechnungszeitraum
+    label_en: No approval for the billing period
+  "42004":
+    label_de: Genehmigungskennzeichen ungültig oder fehlt
+    label_en: Approval number invalid or missing
+  "42005":
+    label_de: HKP während Kurzzeitpflege oder vollstationärer Pflege
+    label_en: Home nursing during short-term or full inpatient care
+  "42006":
+    label_de: Genehmigung für ein anderes IK erteilt
+    label_en: Approval issued to another IK
+  "42007":
+    label_de: Überschneidung mit einer bereits abgerechneten Leistung
+    label_en: Overlaps a bill already sent
+  "42008":
+    label_de: Außerhalb der Verjährungsfrist
+    label_en: Outside the limitation period
+  "42009":
+    label_de: Kostenerstattung gewählt
+    label_en: Patient chose reimbursement (Kostenerstattung)
+  "43001":
+    label_de: Menge überschreitet die Genehmigung
+    label_en: Quantity exceeds the approval
+  "43002":
+    label_de: Positionen stimmen nicht mit dem Leistungsnachweis überein
+    label_en: Positions don't match the Leistungsnachweis
+  "43003":
+    label_de: Kein anerkannter Pflegegrad
+    label_en: No recognised Pflegegrad
+  "43004":
+    label_de: Leistung passt nicht zum Pflegegrad
+    label_en: Service doesn't match the Pflegegrad
+  "43005":
+    label_de: Fehlende Qualifikation der Pflegekraft
+    label_en: Staff lack the qualification
+  "44001":
+    label_de: Positionsnummer falsch
+    label_en: Wrong position number
+  "44003":
+    label_de: Preis falsch
+    label_en: Wrong price
+  "44004":
+    label_de: Sonn- oder Feiertagszuschlag mehrfach je Einsatz
+    label_en: Sunday or holiday surcharge billed more than once per visit

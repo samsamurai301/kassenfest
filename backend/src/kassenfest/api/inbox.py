@@ -1,7 +1,8 @@
 """The inbox: upload a batch of paperwork and watch the pipeline read it (docs/01 ING-01).
 
 POST /api/batches stores the files and answers at once. The batch is then read in the
-background (`Pipeline`) and its evidence boxes tightened (`tighten_evidence`). Every
+background (`Pipeline`), its evidence boxes tightened (`tighten_evidence`) and the clean
+bills attacked by the auditor agent (`api.audit`). Every
 step is an event, kept for the life of the process and streamed over SSE, so a page
 opened or reloaded mid-run first replays what it missed. When a batch is done the board
 shows it: the screens' World is rebuilt whenever the database changes (`api.live`).
@@ -13,16 +14,16 @@ import zipfile
 from collections.abc import AsyncIterator
 from dataclasses import dataclass, field
 from datetime import UTC
-from functools import lru_cache
 from pathlib import Path
 from typing import Annotated
 
-from fastapi import APIRouter, Depends, Form, HTTPException, UploadFile
+from fastapi import APIRouter, Form, HTTPException, UploadFile
 from fastapi.responses import StreamingResponse
-from sqlalchemy import Engine, func
+from sqlalchemy import func
 from sqlmodel import col, select
 
-from kassenfest.api.live import db_engine
+from kassenfest.api.audit import auditing
+from kassenfest.api.deps import Deps, RunDeps
 from kassenfest.api.models import (
     BatchDetail,
     BatchEvent,
@@ -32,14 +33,10 @@ from kassenfest.api.models import (
     InboxDocument,
     PipelineStep,
 )
-from kassenfest.config import get_settings
 from kassenfest.db import Batch, Document, Extraction, Page, session_scope
 from kassenfest.ingest import SUFFIXES
-from kassenfest.llm.client import MetaModelClient
 from kassenfest.pipeline.evidence import tighten_evidence
 from kassenfest.pipeline.runner import Event, Pipeline
-from kassenfest.schemas.records import MasterData
-from kassenfest.storage import BlobStore
 from kassenfest.vision.image import PageImage
 
 router = APIRouter(prefix="/api")
@@ -49,34 +46,8 @@ KEEPALIVE_S = 15.0
 RECENT_BATCHES = 10
 
 
-@dataclass
-class Deps:
-    """What reading a batch needs: a dependency, so tests can swap in a fake model."""
-
-    client: MetaModelClient
-    engine: Engine
-    blobs: BlobStore
-    records: MasterData | None
-
-
-@lru_cache(maxsize=1)
-def _client() -> MetaModelClient:
-    return MetaModelClient(get_settings())  # one client: one concurrency limit for all runs
-
-
-@lru_cache(maxsize=2)
-def _records(path: Path, mtime_ns: int) -> MasterData:
-    return MasterData.model_validate_json(path.read_text())
-
-
-def run_deps() -> Deps:
-    settings = get_settings()
-    path = settings.records_path
-    records = _records(path, path.stat().st_mtime_ns) if path.exists() else None
-    return Deps(_client(), db_engine(settings.db_path), BlobStore(settings.blob_dir), records)
-
-
-RunDeps = Annotated[Deps, Depends(run_deps)]
+def plural(n: int, one: str) -> str:
+    return f"{n} {one}" if n == 1 else f"{n} {one}s"
 
 
 # --- Batches being read --------------------------------------------------------------
@@ -120,11 +91,20 @@ class Inbox:
             self._phase(batch_id, "evidence", "Tightening the evidence boxes")
             ids = {doc_id for doc_id, _ in stored}
             done = await tighten_evidence(deps.client, deps.engine, deps.blobs, only=ids)
+            audited = None
+            if deps.records is not None:  # no records, no bills to attack
+                self._phase(batch_id, "audit", "The Kasse's auditor is attacking the clean bills")
+                audited = await auditing.run(deps)  # a failing audit is stored, not raised
         except Exception as exc:  # what was read stays read; the batch must still end
             self._phase(batch_id, "done", f"Stopped early: {type(exc).__name__}: {exc}")
         else:
-            fields = done.fields + done.found
-            self._phase(batch_id, "done", f"{done.rows} visit rows and {fields} fields boxed")
+            detail = f"{done.rows} visit rows and {done.fields + done.found} fields boxed"
+            if audited is not None:
+                detail += (
+                    f"; {plural(audited.audited, 'clean bill')} attacked, "
+                    f"{plural(audited.upheld, 'objection')} upheld"
+                )
+            self._phase(batch_id, "done", detail)
 
     def _emit(self, batch_id: str, run: Run, **values: object) -> None:
         event = BatchEvent(seq=len(run.events) + 1, batch_id=batch_id, phase=run.phase, **values)

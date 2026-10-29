@@ -1,4 +1,4 @@
-import { useQuery, useQueryClient } from '@tanstack/react-query'
+import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
 import { useEffect } from 'react'
 import type { components } from './schema'
 
@@ -28,6 +28,9 @@ export type BatchDetail = Schemas['BatchDetail']
 export type BatchEvent = Schemas['BatchEvent']
 export type InboxDocument = Schemas['InboxDocument']
 export type PipelineStep = InboxDocument['step']
+export type ClaimAudit = Schemas['ClaimAudit']
+export type AuditStatus = Schemas['AuditStatus']
+export type ObjectionVerdict = Schemas['ObjectionVerdict']
 
 async function json<T>(res: Response): Promise<T> {
   if (!res.ok) {
@@ -38,6 +41,11 @@ async function json<T>(res: Response): Promise<T> {
 }
 
 const get = async <T,>(path: string) => json<T>(await fetch(path))
+
+async function startAudit(claimId: string): Promise<AuditStatus> {
+  const path = `/api/claims/${encodeURIComponent(claimId)}/audit`
+  return json<AuditStatus>(await fetch(path, { method: 'POST' }))
+}
 
 async function upload(files: File[], label?: string): Promise<BatchDetail> {
   const form = new FormData()
@@ -57,6 +65,7 @@ export const api = {
   batches: () => get<BatchList>('/api/batches'),
   batch: (id: string) => get<BatchDetail>(`/api/batches/${encodeURIComponent(id)}`),
   upload,
+  startAudit,
 }
 
 export const pageImageUrl = (documentId: string, page: number) =>
@@ -67,7 +76,21 @@ export const useBoard = (month: string) =>
 export const useActions = (month: string) =>
   useQuery({ queryKey: ['actions', month], queryFn: () => api.actions(month) })
 export const useClaim = (id: string) =>
-  useQuery({ queryKey: ['claim', id], queryFn: () => api.claim(id) })
+  useQuery({
+    queryKey: ['claim', id],
+    queryFn: () => api.claim(id),
+    // While the auditor attacks the bill, look again until it has its verdicts.
+    refetchInterval: (query) => (query.state.data?.audit.state === 'running' ? 2000 : false),
+  })
+
+/** Let the auditor attack a clean bill; the claim then polls until the verdicts are in. */
+export function useStartAudit(claimId: string) {
+  const queryClient = useQueryClient()
+  return useMutation({
+    mutationFn: () => api.startAudit(claimId),
+    onSuccess: () => queryClient.invalidateQueries({ queryKey: ['claim', claimId] }),
+  })
+}
 export const useDocument = (id: string) =>
   useQuery({ queryKey: ['document', id], queryFn: () => api.document(id) })
 export const useTimeline = (patientId: string) =>

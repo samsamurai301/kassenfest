@@ -8,6 +8,7 @@ import {
   type Severity,
   useClaim,
 } from '@/api/client'
+import { AuditPanel } from '@/components/audit'
 import { DueChip, FindingCard } from '@/components/finding'
 import { DEMO_MONTH, LoadError, Loading, Page } from '@/components/shell'
 import { SEVERITY_ORDER, SeverityMark, StatusBadge, STATUS } from '@/components/status'
@@ -36,13 +37,14 @@ export function ClaimScreen({ id }: { id: string }) {
 function ClaimView({ detail }: { detail: ClaimDetail }) {
   const { claim, patient, payer, findings } = detail
   const [activeId, setActiveId] = useState<string | null>(null)
+  const [objectionLines, setObjectionLines] = useState<string[] | null>(null)
   const docs = useMemo(
     () => Object.fromEntries(detail.documents.map((d) => [d.id, d])),
     [detail.documents],
   )
   const worst = useMemo(() => worstSeverityByLine(findings), [findings])
   const active = findings.find((f) => f.id === activeId)
-  const highlighted = new Set(active?.claim_line_ids ?? [])
+  const highlighted = new Set(objectionLines ?? active?.claim_line_ids ?? [])
   const risky = detail.at_risk_cents > 0
   const tone = STATUS[detail.status]
 
@@ -99,8 +101,10 @@ function ClaimView({ detail }: { detail: ClaimDetail }) {
             </h2>
             {findings.length === 0 ? (
               <p className="mt-2 max-w-[60ch] text-graphite">
-                Every line passed the rules for {monthName(claim.month)}. This bill is ready to
-                send.
+                Every line passed the rules for {monthName(claim.month)}
+                {detail.audit.state === 'done'
+                  ? ', and the auditor found nothing that holds up. This bill is ready to send.'
+                  : '. This bill is ready to send.'}
               </p>
             ) : (
               <div className="mt-3 flex flex-col gap-3">
@@ -116,6 +120,14 @@ function ClaimView({ detail }: { detail: ClaimDetail }) {
               </div>
             )}
           </section>
+
+          <AuditPanel
+            claimId={claim.id}
+            audit={detail.audit}
+            lines={claim.lines}
+            docs={docs}
+            onLines={setObjectionLines}
+          />
 
           {detail.actions.length > 0 && (
             <section aria-labelledby="fix-title">

@@ -11,15 +11,15 @@ from pathlib import Path
 from sqlalchemy import Engine, func
 from sqlmodel import select
 
+from kassenfest.agents.auditor import clean, dossier, latest_audits, upheld_findings, verdicts
 from kassenfest.api.fixtures import World
-from kassenfest.api.models import DocumentField, DocumentInfo, PageInfo
+from kassenfest.api.models import AuditRound, ClaimAudit, DocumentField, DocumentInfo, PageInfo
 from kassenfest.config import Settings
 from kassenfest.db import Document, create_db, session_scope
 from kassenfest.pipeline.link import value
 from kassenfest.pipeline.month import Month, StoredDoc, evaluate_month
 from kassenfest.rules.calendar import calendar_for
-from kassenfest.rules.reference import load_reference
-from kassenfest.rules.tariffs import claim_id
+from kassenfest.rules.reference import Reference, load_reference
 from kassenfest.schemas.common import Extracted, Mark
 from kassenfest.schemas.extraction import (
     ApprovedItem,
@@ -29,8 +29,7 @@ from kassenfest.schemas.extraction import (
     RejectedItem,
     VisitEntry,
 )
-from kassenfest.schemas.findings import Finding
-from kassenfest.schemas.labels import LABELS
+from kassenfest.schemas.labels import LABELS, ROWS
 from kassenfest.schemas.records import MasterData
 from kassenfest.storage import BlobStore
 
@@ -38,12 +37,6 @@ TARIFF_NOTE = (
     "Prices come from data/reference: illustrative demo values, not a real §132a or §89 contract."
 )
 
-ROWS = {
-    "measures": "Maßnahme",
-    "approved_items": "Genehmigt",
-    "rejected_items": "Abgelehnt",
-    "entries": "Zeile",
-}
 _MARK_STATUS = {"present": "present", "absent": "empty", "unclear": "unreadable"}
 
 
@@ -149,25 +142,6 @@ def _month(ym: str | None) -> str:
     return dt.date.fromisoformat(f"{ym}-01").strftime("%B") if ym else "unknown month"
 
 
-def _assign_claims(month: Month, findings: list[Finding]) -> list[Finding]:
-    """Document findings (no lines) go on the claim their document feeds: a visit log on its
-    own claim, a Verordnung or Genehmigung on the patient's HKP claim."""
-    by_log = {
-        log.document_id: claim_id(log) for case in month.cases.values() for log in case.visit_logs
-    }
-    hkp = {pid: c.id for pid, r in month.results.items() for c in r.claims if c.domain == "sgbv"}
-    out = []
-    for f in findings:
-        if f.claim_id is None and not f.claim_line_ids and f.evidence:
-            doc = month.docs.get(f.evidence[0].document_id)
-            target = by_log.get(f.evidence[0].document_id)
-            if target is None and doc and doc.document.doc_type in ("muster12", "approval_letter"):
-                target = hkp.get(f.patient_id)
-            f = f.model_copy(update={"claim_id": target})
-        out.append(f)
-    return out
-
-
 def _holidays(records: MasterData) -> dict[dt.date, str]:
     cal = calendar_for(records.provider.bundesland, records.provider.municipality)
     first = dt.date.fromisoformat(f"{records.month}-01")
@@ -202,8 +176,9 @@ def build_world(engine: Engine, records: MasterData, blob_dir: Path) -> World:
         w.approvals += case.approvals
         w.stays += case.stays
         w.visit_logs += case.visit_logs
-    w.claims = {c.id: c for r in month.results.values() for c in r.claims}
-    w.findings = _assign_claims(month, month.findings)
+    w.claims = month.claims
+    w.findings = month.findings
+    _audits(w, engine, month, ref)
     for doc in month.docs.values():
         d = doc.document
         w.documents[d.id] = DocumentInfo(
@@ -217,6 +192,36 @@ def build_world(engine: Engine, records: MasterData, blob_dir: Path) -> World:
         w.document_fields[d.id] = document_fields(doc)
         w.page_files[d.id] = [blobs.path(p.blob_key) for p in doc.pages]
     return w
+
+
+def _audits(w: World, engine: Engine, month: Month, ref: Reference) -> None:
+    """Each clean bill's audit, if it is of the bill as it is now; upheld objections become
+    findings, so the board shows them."""
+    latest = latest_audits(engine)
+    labels = {code: info.label_en for code, info in ref.kasse_codes.items()}
+    for claim in w.claims.values():
+        if not clean(month, claim):
+            w.audits[claim.id] = ClaimAudit(state="not_needed")
+            continue
+        audit = latest.get(claim.id)
+        if audit is None or audit.fingerprint != dossier(month, claim, w.as_of).fingerprint:
+            w.audits[claim.id] = ClaimAudit(state="pending", code_labels=labels)
+            continue
+        rounds = verdicts(audit)
+        flat = [v.verdict for r in rounds for v in r]
+        w.audits[claim.id] = ClaimAudit(
+            state="error" if audit.error else "done",
+            upheld=flat.count("upheld"),
+            dismissed=flat.count("dismissed"),
+            noted=flat.count("noted"),
+            created_at=audit.created_at.replace(tzinfo=dt.UTC),  # SQLite drops the zone
+            model=audit.model,
+            rounds=[AuditRound(round=i, verdicts=r) for i, r in enumerate(rounds, 1)],
+            repeats=audit.repeats,
+            error=audit.error,
+            code_labels=labels,
+        )
+        w.findings += upheld_findings(claim, audit)
 
 
 @lru_cache(maxsize=4)

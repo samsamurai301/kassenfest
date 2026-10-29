@@ -17,7 +17,14 @@ from pathlib import Path
 from typing import Literal
 
 from kassenfest.api import pages
-from kassenfest.api.models import Action, DocumentField, DocumentInfo, Letter, PageInfo
+from kassenfest.api.models import (
+    Action,
+    ClaimAudit,
+    DocumentField,
+    DocumentInfo,
+    Letter,
+    PageInfo,
+)
 from kassenfest.schemas.common import DocType, FieldStatus, Frequency, PixelBox
 from kassenfest.schemas.domain import (
     Approval,
@@ -219,6 +226,8 @@ class World:
     page_files: dict[str, list[Path]] = field(default_factory=dict)
     """Pipeline documents: the stored page images on disk."""
     actions: list[Action] = field(default_factory=list)
+    audits: dict[str, ClaimAudit] = field(default_factory=dict)
+    """Pipeline claims: what the auditor agent made of each (fixtures have none)."""
 
     def page_image(self, document_id: str, index: int) -> tuple[bytes, str] | None:
         """(image bytes, media type) of one page, or None."""

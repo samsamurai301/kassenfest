@@ -35,11 +35,13 @@ export function EvidenceScreen({
   page,
   findingId,
   claimId,
+  fieldPath = null,
 }: {
   id: string
   page: number
   findingId: string | null
   claimId: string | null
+  fieldPath?: string | null
 }) {
   const doc = useDocument(id)
   if (doc.isPending) return <Loading what="the document" />
@@ -50,6 +52,7 @@ export function EvidenceScreen({
       detail={doc.data}
       page={page}
       initialFinding={findingId}
+      initialField={fieldPath}
       claimId={claimId}
     />
   )
@@ -59,11 +62,13 @@ function EvidenceView({
   detail,
   page,
   initialFinding,
+  initialField,
   claimId,
 }: {
   detail: DocumentDetail
   page: number
   initialFinding: string | null
+  initialField: string | null
   claimId: string | null
 }) {
   const { document: doc, findings } = detail
@@ -72,7 +77,16 @@ function EvidenceView({
   const [active, setActive] = useState<string | null>(initialFinding)
   const [hovered, setHovered] = useState<string | null>(null)
   const [field, setField] = useState<DocumentField | null>(null)
-  const [focus, setFocus] = useState(() => focusFor(marks, initialFinding))
+  // A link may point at one field (the auditor's debate does): outlined until another is chosen.
+  const pinned = useMemo(
+    () => detail.fields.find((f) => f.path === initialField && f.page === page) ?? null,
+    [detail.fields, initialField, page],
+  )
+  const [focus, setFocus] = useState(
+    () =>
+      focusFor(marks, initialFinding) ??
+      (pinned ? { box: pinned.box as PixelBox, seq: Date.now() } : null),
+  )
 
   const shown = hovered ?? active
   const claim = claimId ?? detail.claim_ids[0] ?? null
@@ -90,7 +104,7 @@ function EvidenceView({
         height={size.height}
         marks={marks}
         shown={shown}
-        field={field}
+        field={field ?? pinned}
         focus={focus}
         onHover={setHovered}
         onSelect={select}

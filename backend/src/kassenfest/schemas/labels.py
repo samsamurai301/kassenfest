@@ -43,3 +43,21 @@ LABELS = {
     "hkp_prescription_days": "HKP-Tage verordnet",
     "physician_signature": "Unterschrift Arzt",
 }
+
+ROWS = {
+    "measures": "Maßnahme",
+    "approved_items": "Genehmigt",
+    "rejected_items": "Abgelehnt",
+    "entries": "Zeile",
+}
+"""List fields: the label of one row, numbered from 1."""
+
+
+def field_label(path: str) -> str:
+    """'period_to' -> 'bis'; 'entries[3].start_time' -> 'Zeile 4, start_time'."""
+    head, _, rest = path.partition(".")
+    name, _, index = head.partition("[")
+    if index and name in ROWS:
+        row = f"{ROWS[name]} {int(index.rstrip(']')) + 1}"
+        return f"{row}, {LABELS.get(rest, rest)}" if rest else row
+    return LABELS.get(path, path)

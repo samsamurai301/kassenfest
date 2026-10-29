@@ -1,5 +1,11 @@
-import { Info } from 'lucide-react'
-import { type BoardCard, type ClaimStatus, type MonthBoard, useBoard } from '@/api/client'
+import { Info, ShieldCheck } from 'lucide-react'
+import {
+  type AuditStatus,
+  type BoardCard,
+  type ClaimStatus,
+  type MonthBoard,
+  useBoard,
+} from '@/api/client'
 import { RuleId } from '@/components/finding'
 import { LoadError, Loading, Page } from '@/components/shell'
 import { STATUS, StatusBadge } from '@/components/status'
@@ -193,6 +199,31 @@ function BillCard({ card }: { card: BoardCard }) {
           )}
         </div>
       )}
+
+      {!finding && auditLine(card.audit) && (
+        <p className="mt-3 flex items-center gap-1.5 border-t pt-3 text-[13.5px] text-graphite">
+          <ShieldCheck className="size-4 shrink-0 text-stamp" aria-hidden />
+          {auditLine(card.audit)}
+        </p>
+      )}
     </Link>
   )
+}
+
+function auditLine(audit: AuditStatus) {
+  const objections = audit.dismissed + audit.noted
+  switch (audit.state) {
+    case 'done':
+      return objections === 0
+        ? 'The Kasse\u2019s auditor found nothing to object to'
+        : `Survived the auditor: ${plural(objections, 'objection')} answered`
+    case 'running':
+      return 'The Kasse\u2019s auditor is checking it…'
+    case 'pending':
+      return 'Not attacked by the auditor yet'
+    case 'error':
+      return 'The auditor\u2019s last attack failed'
+    default:
+      return null
+  }
 }

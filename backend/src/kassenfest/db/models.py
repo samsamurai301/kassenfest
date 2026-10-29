@@ -76,3 +76,19 @@ class Localization(SQLModel, table=True):
     box: list[float] = Field(sa_column=Column(JSON))
     confidence: float | None = None
     ink_ratio: float | None = Field(default=None, description="Dark-pixel share inside the box")
+
+
+class Audit(SQLModel, table=True):
+    """The Kasse auditor agent's attack on one clean bill, and the resolver's verdicts."""
+
+    id: str = Field(default_factory=lambda: _id("aud"), primary_key=True)
+    claim_id: str = Field(index=True)
+    fingerprint: str = Field(index=True, description="sha256 of everything the auditor saw")
+    model: str
+    rounds: list[Any] = Field(
+        default_factory=list, sa_column=Column(JSON), description="Per round: verdicts"
+    )
+    repeats: int = Field(default=0, description="Objections dropped as repeats")
+    error: str | None = None
+    cost_usd: float = 0.0
+    created_at: datetime = Field(default_factory=_now)

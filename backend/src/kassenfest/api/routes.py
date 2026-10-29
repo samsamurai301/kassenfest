@@ -10,10 +10,13 @@ from typing import Annotated
 from fastapi import APIRouter, Depends, HTTPException, Response
 
 from kassenfest.api import fixtures, live
+from kassenfest.api.audit import auditing
 from kassenfest.api.fixtures import World
 from kassenfest.api.models import (
     ActionList,
+    AuditStatus,
     BoardCard,
+    ClaimAudit,
     ClaimDetail,
     DocumentDetail,
     Holiday,
@@ -22,13 +25,13 @@ from kassenfest.api.models import (
     StatusTotal,
 )
 from kassenfest.config import get_settings
+from kassenfest.pipeline.month import claim_findings
 from kassenfest.schemas.domain import Claim
 from kassenfest.schemas.findings import ClaimStatus, Finding, claim_status
 
 router = APIRouter(prefix="/api")
 
 STATUS_ORDER: tuple[ClaimStatus, ...] = ("red", "orange", "green")
-SEVERITY_RANK = {"block": 0, "warn": 1, "info": 2}
 
 
 def current_world() -> World:
@@ -51,15 +54,11 @@ def _month(w: World, month: str) -> World:
     return w
 
 
-def _claim_findings(w: World, claim: Claim) -> list[Finding]:
-    """The claim's own findings, and claim-less ones that hit any of its lines."""
-    lines = {line.id for line in claim.lines}
-    found = [
-        f
-        for f in w.findings
-        if f.claim_id == claim.id or (f.claim_id is None and lines & set(f.claim_line_ids))
-    ]
-    return sorted(found, key=lambda f: (SEVERITY_RANK[f.severity], -f.amount_at_risk_cents))
+def claim_audit(w: World, claim_id: str) -> ClaimAudit:
+    audit = w.audits.get(claim_id, ClaimAudit(state="unavailable"))
+    if claim_id in auditing.running:
+        return audit.model_copy(update={"state": "running"})
+    return audit
 
 
 def at_risk_cents(claim: Claim, findings: list[Finding]) -> int:
@@ -80,7 +79,7 @@ def month_board(month: str, world: Current) -> MonthBoard:
     w = _month(world, month)
     cards = []
     for claim in w.claims.values():
-        findings = _claim_findings(w, claim)
+        findings = claim_findings(claim, w.findings)
         patient = w.patients[claim.patient_id]
         cards.append(
             BoardCard(
@@ -95,6 +94,9 @@ def month_board(month: str, world: Current) -> MonthBoard:
                 line_count=len(claim.lines),
                 finding_count=len(findings),
                 top_finding=findings[0] if findings else None,
+                audit=AuditStatus.model_validate(
+                    claim_audit(w, claim.id).model_dump(include=set(AuditStatus.model_fields))
+                ),
             )
         )
     cards.sort(key=lambda c: (STATUS_ORDER.index(c.status), -c.at_risk_cents, c.patient_name))
@@ -130,7 +132,7 @@ def claim_detail(claim_id: str, w: Current) -> ClaimDetail:
     claim = w.claims.get(claim_id)
     if claim is None:
         raise HTTPException(404, f"Unknown claim {claim_id}")
-    findings = _claim_findings(w, claim)
+    findings = claim_findings(claim, w.findings)
     doc_ids = {e.document_id for f in findings for e in f.evidence}
     doc_ids |= {d.id for d in w.documents.values() if d.patient_id == claim.patient_id}
     return ClaimDetail(
@@ -145,6 +147,7 @@ def claim_detail(claim_id: str, w: Current) -> ClaimDetail:
         actions=[a for a in w.actions if a.claim_id == claim_id],
         code_labels={line.code: w.code_labels.get(line.code, line.code) for line in claim.lines},
         tariff_note=w.tariff_note,
+        audit=claim_audit(w, claim_id),
     )
 
 

@@ -52,6 +52,7 @@ export default function App() {
           page={Number(query.get('page') ?? 0)}
           findingId={query.get('finding')}
           claimId={query.get('claim')}
+          fieldPath={query.get('field')}
         />
       </Shell>
     )

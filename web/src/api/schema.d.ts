@@ -165,6 +165,26 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/claims/{claim_id}/audit": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * Audit Claim
+         * @description Let the auditor attack a clean bill that has no audit of its current state yet.
+         */
+        post: operations["audit_claim_api_claims__claim_id__audit_post"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/health": {
         parameters: {
             query?: never;
@@ -298,6 +318,36 @@ export interface components {
              */
             valid_to: string;
         };
+        /** AuditRound */
+        AuditRound: {
+            /** Round */
+            round: number;
+            /** Verdicts */
+            verdicts: components["schemas"]["ObjectionVerdict"][];
+        };
+        /** AuditStatus */
+        AuditStatus: {
+            /**
+             * State
+             * @enum {string}
+             */
+            state: "not_needed" | "pending" | "running" | "done" | "error" | "unavailable";
+            /**
+             * Upheld
+             * @default 0
+             */
+            upheld: number;
+            /**
+             * Dismissed
+             * @default 0
+             */
+            dismissed: number;
+            /**
+             * Noted
+             * @default 0
+             */
+            noted: number;
+        };
         /** BatchDetail */
         BatchDetail: {
             /** Id */
@@ -313,7 +363,7 @@ export interface components {
              * Phase
              * @enum {string}
              */
-            phase: "reading" | "evidence" | "done" | "interrupted";
+            phase: "reading" | "evidence" | "audit" | "done" | "interrupted";
             /** Files */
             files: number;
             /**
@@ -344,7 +394,7 @@ export interface components {
              * Phase
              * @enum {string}
              */
-            phase: "reading" | "evidence" | "done" | "interrupted";
+            phase: "reading" | "evidence" | "audit" | "done" | "interrupted";
             /** @description The document after this step */
             document?: components["schemas"]["InboxDocument"] | null;
             /**
@@ -376,7 +426,7 @@ export interface components {
              * Phase
              * @enum {string}
              */
-            phase: "reading" | "evidence" | "done" | "interrupted";
+            phase: "reading" | "evidence" | "audit" | "done" | "interrupted";
             /** Files */
             files: number;
             /**
@@ -415,6 +465,7 @@ export interface components {
             /** Finding Count */
             finding_count: number;
             top_finding: components["schemas"]["Finding"] | null;
+            audit: components["schemas"]["AuditStatus"];
         };
         /** Body_upload_batch_api_batches_post */
         Body_upload_batch_api_batches_post: {
@@ -448,6 +499,57 @@ export interface components {
             /** Total Cents */
             readonly total_cents: number;
         };
+        /**
+         * ClaimAudit
+         * @description The Kasse auditor agent's attack on a clean bill and the resolver's verdicts.
+         */
+        ClaimAudit: {
+            /**
+             * State
+             * @enum {string}
+             */
+            state: "not_needed" | "pending" | "running" | "done" | "error" | "unavailable";
+            /**
+             * Upheld
+             * @default 0
+             */
+            upheld: number;
+            /**
+             * Dismissed
+             * @default 0
+             */
+            dismissed: number;
+            /**
+             * Noted
+             * @default 0
+             */
+            noted: number;
+            /** Created At */
+            created_at?: string | null;
+            /** Model */
+            model?: string | null;
+            /**
+             * Rounds
+             * @default []
+             */
+            rounds: components["schemas"]["AuditRound"][];
+            /**
+             * Repeats
+             * @description Objections dropped because they were raised before
+             * @default 0
+             */
+            repeats: number;
+            /** Error */
+            error?: string | null;
+            /**
+             * Code Labels
+             * @description Kasse rejection code -> English label
+             * @default {}
+             */
+            code_labels: {
+                [key: string]: string;
+            };
+        };
         /** ClaimDetail */
         ClaimDetail: {
             claim: components["schemas"]["Claim"];
@@ -480,6 +582,7 @@ export interface components {
             };
             /** Tariff Note */
             tariff_note: string;
+            audit: components["schemas"]["ClaimAudit"];
         };
         /** ClaimLine */
         ClaimLine: {
@@ -797,6 +900,74 @@ export interface components {
             by_status: components["schemas"]["StatusTotal"][];
             /** Cards */
             cards: components["schemas"]["BoardCard"][];
+        };
+        /** Objection */
+        Objection: {
+            /**
+             * Code
+             * @description A Kasse rejection code; FACT for a field on a page that makes the bill wrong; INFO for a soft suspicion that may never block
+             */
+            code: ("41002" | "41003" | "42002" | "42003" | "42004" | "42005" | "42006" | "42007" | "42008" | "42009" | "43001" | "43002" | "43003" | "43004" | "43005" | "44001" | "44003" | "44004") | ("FACT" | "INFO");
+            /**
+             * Claim Line Ids
+             * @description Affected line ids, e.g. '#3'; empty = whole bill
+             */
+            claim_line_ids: string[];
+            /**
+             * Document Id
+             * @description Required for FACT
+             */
+            document_id: string | null;
+            /**
+             * Page
+             * @description 0-based page of that document
+             */
+            page: number | null;
+            /**
+             * Field Path
+             * @description Required for FACT: a path from the field list
+             */
+            field_path: string | null;
+            /**
+             * Reads
+             * @description Required for FACT: what that field on the page shows, exactly as written; '' if it is blank
+             */
+            reads: string | null;
+            /**
+             * Statement
+             * @description One sentence in German, as the Kasse would write it
+             */
+            statement: string;
+            /**
+             * Statement En
+             * @description The same sentence in English
+             */
+            statement_en: string;
+        };
+        /** ObjectionVerdict */
+        ObjectionVerdict: {
+            objection: components["schemas"]["Objection"];
+            /**
+             * Verdict
+             * @enum {string}
+             */
+            verdict: "upheld" | "dismissed" | "noted";
+            /**
+             * Reason
+             * @description English: what the resolver checked and found
+             */
+            reason: string;
+            /**
+             * Checked
+             * @description Rule ids and record checks it ran
+             * @default []
+             */
+            checked: string[];
+            /**
+             * Evidence
+             * @default []
+             */
+            evidence: components["schemas"]["Evidence"][];
         };
         /** PageInfo */
         PageInfo: {
@@ -1459,6 +1630,37 @@ export interface operations {
                 };
                 content: {
                     "application/json": components["schemas"]["BatchEvent"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    audit_claim_api_claims__claim_id__audit_post: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                claim_id: string;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            202: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["AuditStatus"];
                 };
             };
             /** @description Validation Error */

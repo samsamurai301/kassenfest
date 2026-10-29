@@ -41,23 +41,25 @@ export function evidenceHref(ev: Evidence, finding: Finding) {
   return `/documents/${encodeURIComponent(ev.document_id)}?${params}`
 }
 
+/** A crop of the page around one evidence box, linking to the viewer. */
 export function EvidenceThumb({
   ev,
-  finding,
   doc,
+  href,
+  stroke,
 }: {
   ev: Evidence
-  finding: Finding
   doc: DocumentInfo
+  href: string
+  stroke: string
 }) {
   const page = doc.pages[ev.page ?? 0]
   if (!ev.box || !page) return null
   const box = ev.box as PixelBox
   const [x, y, w, h] = cropViewBox(box, page)
-  const stroke = SEVERITY[finding.severity].stroke
   return (
     <Link
-      to={evidenceHref(ev, finding)}
+      to={href}
       className="group/thumb block w-[188px] shrink-0 rounded-md focus-visible:outline-offset-4"
       title={`Open ${doc.title}`}
     >
@@ -179,7 +181,13 @@ export function FindingCard({
       {showEvidence && evidence.length > 0 && docs && (
         <div className="mt-4 flex gap-3 overflow-x-auto pb-1">
           {evidence.map((ev, i) => (
-            <EvidenceThumb key={i} ev={ev} finding={finding} doc={docs[ev.document_id]} />
+            <EvidenceThumb
+              key={i}
+              ev={ev}
+              doc={docs[ev.document_id]}
+              href={evidenceHref(ev, finding)}
+              stroke={SEVERITY[finding.severity].stroke}
+            />
           ))}
         </div>
       )}

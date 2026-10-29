@@ -31,7 +31,7 @@ export function InboxScreen({ selected }: { selected: string | null }) {
   const batches = useBatches()
   const id = selected ?? batches.data?.batches[0]?.id ?? null
   const batch = useBatch(id)
-  const live = batch.data?.phase === 'reading' || batch.data?.phase === 'evidence'
+  const live = ['reading', 'evidence', 'audit'].includes(batch.data?.phase ?? '')
   useBatchEvents(id, live)
 
   if (batches.isError) return <LoadError error={batches.error} />
@@ -245,6 +245,13 @@ function Phase({ batch }: { batch: BatchDetail }) {
           All read. Marking the evidence on the pages…
         </p>
       )
+    case 'audit':
+      return (
+        <p className="flex items-center gap-2 text-[14px] font-semibold" role="status">
+          <LoaderCircle className="size-4 animate-spin text-stamp" aria-hidden />
+          The Kasse&rsquo;s auditor is attacking the clean bills…
+        </p>
+      )
     case 'interrupted':
       return (
         <p className="flex items-center gap-2 text-[14px] font-semibold text-fixable">
@@ -398,7 +405,7 @@ function Earlier({ batches }: { batches: BatchSummary[] }) {
                 {plural(b.files, 'file')} · {b.done} read
                 {b.failed > 0 && `, ${b.failed} failed`}
                 {b.phase === 'interrupted' && ' · stopped'}
-                {(b.phase === 'reading' || b.phase === 'evidence') && ' · reading now'}
+                {['reading', 'evidence', 'audit'].includes(b.phase) && ' · reading now'}
               </span>
             </Link>
           </li>

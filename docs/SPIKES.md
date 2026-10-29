@@ -221,3 +221,32 @@ The 7 signatures that SAM missed at ingest went from about 0 to 0.43–0.98 in t
 The Muse calls ($0.51) were recorded during the experiment and replayed by the pipeline; the batched SAM calls cost $0.07. Findings and the board are unchanged. A fresh replay rebuild reproduces all 1,099 stored boxes exactly.
 
 **Still weak:** 11 fields got worse, where Muse pointed at a neighbouring value on the crop (a payer name, the label line above a KVNR). No cheap guard tells those apart. SGB XI rows still have no boxes.
+
+---
+
+## 2026-10-29 — The auditor agent and its resolver, first month
+
+Muse Spark plays the Kasse's Prüfer against every bill the rules pass (`agents/auditor.py`). It sees the bill's lines, the provider's records, the paperwork as page images and the provider's reading of each field. It may object only with the 18 Kasse rejection codes, a FACT about a field on a page, or an INFO suspicion (`reasoning_effort=high`, structured output). Every objection goes to the resolver (`agents/resolver.py`), which needs no model:
+
+- **A Kasse code** is re-examined by the rules it maps to (docs/02 §9) and by record checks for what no rule covers yet: insurance periods, the IK on the Genehmigung, Pflegegrad, staff, limitation, funding.
+- **A FACT** with our own reading was already used by the rules. A different reading is tried out: the patient's month is rebuilt with it and every rule runs again. It is upheld only if the outcome would change, and a mark dispute is settled by the measured ink.
+- **INFO** is noted, never upheld.
+
+There are at most 2 rounds. Round 2 shows the auditor the verdicts and stops when nothing new comes back. Upheld objections become `warn` findings, so the bill turns orange.
+
+**Prompt v1 was too lenient.** "An empty list is the right answer for a bill in order" (added after the S1 spike, where it objected to an empty claim) made it return nothing for Frau Eder, after 4,559 reasoning tokens. It missed that our reading of her Verordnung's Versicherten-Nr. differs from the records. v2+ gives it a checklist and says unfounded points are dismissed cheaply, at most 6 per round. With the resolver in place, the auditor is tuned to catch everything and the resolver keeps the precision.
+
+**Demo month, 5 clean bills, prompt v4 (`kassenfest audit`):** 7 objections, 1 upheld, 4 dismissed, 2 noted. $0.10–0.15 per bill, 25–80 s per call.
+
+| Bill | Objection | Verdict, and why |
+|---|---|---|
+| Eder SGB V | 41002: the Verordnung shows M108879567, not her H108879567 | **dismissed**: name and date of birth match, the Kasse's own Genehmigung approves this Verordnung, and three other documents carry H108879567. It is our misreading of a handwritten H (truth: H108879567). |
+| Eder SGB V / XI | 41003: hospital stay from 13 Oct | **dismissed**: the visits on 13 Oct were at 07:30 and 06:54, before the 11:30 admission |
+| Eder SGB XI | 43005: Handzeichen PMa is a trainee | **dismissed**: PMa is on the staff list, and the contract tables set no qualification per position |
+| Weiß SGB V | 42004: the Leistungsnachweis says HKP-2026-627224, the Genehmigung HKP-2026-527224 | **upheld**: the bill must carry the number the Kasse issued. The truth has 627224 on both, so we misread the Genehmigung (6 → 5). The bill would have gone out with a wrong number. |
+| Eder XI, Jäger XI | INFO: signed on 30 Oct, before the month ended | **noted** |
+
+- **Two gaps the auditor found in the rule pack:** the Versicherten-Nr. on a document against the records, and the Genehmigungskennzeichen on the Leistungsnachweis against the Genehmigung. Both are now resolver checks; they could become rules.
+- **One hallucination came from a dossier gap.** v3 claimed LK12 was billed under §36 although its lines are §45b, because the line table didn't show the funding. v4 shows it, and the resolver checks funding against the Leistungsnachweis row.
+- **Replayable.** The prompt calls documents D1, D2… instead of their random ids, so a fresh ingest of the same pages hits the cache. The audit's fingerprint (what the auditor saw, plus the prompt and resolver versions and the document ids) says when a bill is due again. A re-upload of one page re-audits only the bills that use it.
+- **Still open:** AUD-05 (seeded subtle defects to measure catches against hallucinations). The Genehmigung's approval-number box sits on the date line above it: a Muse box one line off that SAM tightened onto the wrong text.

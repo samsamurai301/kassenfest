@@ -22,7 +22,37 @@ from kassenfest.schemas.domain import (
     Stay,
     VisitLog,
 )
-from kassenfest.schemas.findings import ClaimStatus, Finding
+from kassenfest.schemas.findings import ClaimStatus, Finding, ObjectionVerdict
+
+# --- Auditor --------------------------------------------------------------------
+
+AuditState = Literal["not_needed", "pending", "running", "done", "error", "unavailable"]
+"""not_needed: the rules already object · pending: clean, not audited in its current state ·
+unavailable: fixture data, nothing to audit."""
+
+
+class AuditStatus(BaseModel):
+    state: AuditState
+    upheld: int = 0
+    dismissed: int = 0
+    noted: int = 0
+
+
+class AuditRound(BaseModel):
+    round: int
+    verdicts: list[ObjectionVerdict]
+
+
+class ClaimAudit(AuditStatus):
+    """The Kasse auditor agent's attack on a clean bill and the resolver's verdicts."""
+
+    created_at: dt.datetime | None = None
+    model: str | None = None
+    rounds: list[AuditRound] = []
+    repeats: int = Field(0, description="Objections dropped because they were raised before")
+    error: str | None = None
+    code_labels: dict[str, str] = Field({}, description="Kasse rejection code -> English label")
+
 
 # --- Documents -------------------------------------------------------------------
 
@@ -118,6 +148,7 @@ class BoardCard(BaseModel):
     line_count: int
     finding_count: int
     top_finding: Finding | None
+    audit: AuditStatus
 
 
 class StatusTotal(BaseModel):
@@ -149,6 +180,7 @@ class ClaimDetail(BaseModel):
     actions: list[Action]
     code_labels: dict[str, str] = Field(description="Positionsnummer / LK -> German label")
     tariff_note: str
+    audit: ClaimAudit
 
 
 # --- Timeline --------------------------------------------------------------------
@@ -181,8 +213,9 @@ class PatientTimeline(BaseModel):
 
 PipelineStep = Literal["stored", "classified", "extracted", "linked", "localized", "done", "error"]
 DocumentStatus = Literal["queued", "processing", "done", "error", "superseded"]
-BatchPhase = Literal["reading", "evidence", "done", "interrupted"]
-"""reading documents → tightening evidence boxes → done; interrupted: the server stopped."""
+BatchPhase = Literal["reading", "evidence", "audit", "done", "interrupted"]
+"""reading documents → tightening evidence boxes → the auditor attacks the clean bills → done;
+interrupted: the server stopped."""
 
 
 class InboxDocument(BaseModel):

@@ -1,4 +1,5 @@
-"""Loads the versioned reference tables in data/reference/ (payers, tariffs, SGB XI amounts)."""
+"""Loads the versioned reference tables in data/reference/ (payers, tariffs, SGB XI amounts,
+Kasse rejection codes)."""
 
 import datetime as dt
 from collections.abc import Sequence
@@ -68,6 +69,11 @@ class Punktwert(BaseModel):
     punktwert_eur: Decimal
 
 
+class KasseCodeInfo(BaseModel):
+    label_de: str
+    label_en: str
+
+
 class SgbxiAmounts(BaseModel):
     version: str
     valid_from: dt.date
@@ -92,6 +98,7 @@ class Reference:
     leistungskomplexe: dict[str, Leistungskomplex]
     punktwerte: list[Punktwert]
     sgbxi_amounts: list[SgbxiAmounts]
+    kasse_codes: dict[str, KasseCodeInfo]
 
     def amounts_on(self, day: dt.date, version: str | None = None) -> SgbxiAmounts:
         """Statutory amounts for `day`; drafts only when named explicitly."""
@@ -126,6 +133,7 @@ def load_reference(directory: Path = REFERENCE_DIR) -> Reference:
     hkp = _read(directory / "hkp_services.yaml")
     lk = _read(directory / "sgbxi_lk_bayern.yaml")
     amounts = _read(directory / "sgbxi_amounts.yaml")
+    codes = _read(directory / "kasse_codes.yaml")
     return Reference(
         kassen=[Kasse.model_validate(k) for k in payers["kassen"]],
         hkp_positions={k: HkpPosition.model_validate(v) for k, v in hkp["positions"].items()},
@@ -135,4 +143,5 @@ def load_reference(directory: Path = REFERENCE_DIR) -> Reference:
         },
         punktwerte=[Punktwert.model_validate(p) for p in lk["punktwerte"]],
         sgbxi_amounts=[SgbxiAmounts.model_validate(a) for a in amounts["versions"]],
+        kasse_codes={k: KasseCodeInfo.model_validate(v) for k, v in codes["codes"].items()},
     )

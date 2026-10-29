@@ -261,11 +261,11 @@ kassenfest/
 - [ ] `AGT-06` P2 KIM / e-mail sending (out of scope for demo — drafts only).
 
 ### 3.9 Auditor agent ("Prüfer der Kasse")
-- [ ] `AUD-01` P0 Auditor system prompt: role = strict Krankenkasse/MD billing auditor; goal = find any reason to reject or cut the claim; must cite `rule_id` or a concrete document fact with page reference; output JSON objections via `response_format: json_schema` (not tool calls, because `tool_choice` can't be forced); `reasoning_effort: high`. Follow Meta's cookbook "Multi-agent orchestration" recipe.
-- [ ] `AUD-01b` P0 Give the auditor the **official Kasse rejection codes** (TA HKP 10.1 / TA5: 41002, 41003, 42002–42009, 43001–43005, 44001–44004) as its *only* vocabulary, plus `FACT` with document/page/field. Map codes → rules (`02-RULES-CATALOG.md` §9). Soft "experience" signals (identical Handzeichen, impossible travel times) may only be raised as `info`.
-- [ ] `AUD-02` P0 Resolver: for each objection → if it cites a rule, re-run that rule; if it cites a fact, check against extracted fields/evidence; mark `upheld` / `dismissed (reason)`.
-- [ ] `AUD-03` P0 Loop: up to N rounds (e.g. 2); claim status = 🟢 only if no upheld objection.
-- [ ] `AUD-04` P1 "Debate" UI: objections, evidence crops, verdicts.
+- [x] `AUD-01` P0 Auditor system prompt: role = strict Krankenkasse/MD billing auditor; goal = find any reason to reject or cut the claim; must cite `rule_id` or a concrete document fact with page reference; output JSON objections via `response_format: json_schema` (not tool calls, because `tool_choice` can't be forced); `reasoning_effort: high`. Follow Meta's cookbook "Multi-agent orchestration" recipe.
+- [x] `AUD-01b` P0 Give the auditor the **official Kasse rejection codes** (TA HKP 10.1 / TA5: 41002, 41003, 42002–42009, 43001–43005, 44001–44004) as its *only* vocabulary, plus `FACT` with document/page/field. Map codes → rules (`02-RULES-CATALOG.md` §9). Soft "experience" signals (identical Handzeichen, impossible travel times) may only be raised as `info`.
+- [x] `AUD-02` P0 Resolver: for each objection → if it cites a rule, re-run that rule; if it cites a fact, check against extracted fields/evidence; mark `upheld` / `dismissed (reason)`.
+- [x] `AUD-03` P0 Loop: up to N rounds (e.g. 2); claim status = 🟢 only if no upheld objection.
+- [x] `AUD-04` P1 "Debate" UI: objections, evidence crops, verdicts.
 - [ ] `AUD-05` P1 Auditor eval: seeded "subtle" defects the rules engine doesn't cover (e.g. Handzeichen pattern identical on all days, implausible visit times, same pen/ink for a whole month) → measure catches vs hallucinations.
 - [ ] `AUD-06` P2 Different model temperature/persona per payer.
 
